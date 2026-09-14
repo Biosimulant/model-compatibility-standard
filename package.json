@@ -2,6 +2,10 @@
   "name": "@biosimulant/model-compatibility-standard",
   "version": "0.1.0-alpha.1",
   "description": "Schemas, profiles, fixtures, and reference validation for the BioSimulant Model Compatibility Standard",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Biosimulant/model-compatibility-standard.git"
+  },
   "license": "Apache-2.0",
   "private": false,
   "type": "module",
@@ -17,7 +21,8 @@
     "build:spec": "python3 scripts/build_standard.py --check",
     "build": "npm run build:spec && tsc -p typescript/tsconfig.json",
     "test": "npm run build && node --test typescript/test/*.test.mjs",
-    "prepack": "npm test"
+    "prepack": "npm test",
+    "prepare": "npm run build"
   },
   "dependencies": {
     "ajv": "^8.17.1",
