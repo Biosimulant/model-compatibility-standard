@@ -418,18 +418,21 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
         "schema_version": {"const": "0.1"}, "ref": {"type": "string", "format": "uri"},
         "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
         "source": {"type": "object"}, "target": {"type": "object"},
+        "state": {"enum": ["reviewed", "revoked"]},
+        "loss_score": {"type": "number", "minimum": 0},
+        "execution_cost": {"type": "number", "minimum": 0},
         "preconditions": {"type": "array", "items": {"$ref": "rule.schema.json"}},
         "evidence": {"type": "array", "items": {"type": "object"}},
         "release": {"type": "object"}, "limitations": {"type": "array", "items": {"type": "string"}},
     }
     adapter = simple(
         "adapter-capability", "Adapter Capability",
-        ["schema_version", "ref", "sha256", "source", "target", "transformation_class", "information_loss", "release"],
+        ["schema_version", "ref", "sha256", "source", "target", "state", "transformation_class", "information_loss", "release"],
         {**capability_properties, "transformation_class": {"enum": ["representation", "unit", "identifier", "normalization", "projection", "aggregation"]}, "information_loss": {"enum": ["none", "bounded", "lossy"]}},
     )
     inference = simple(
         "inference-capability", "Inference Capability",
-        ["schema_version", "ref", "sha256", "source", "target", "inferred_modality", "assumptions", "uncertainty", "release"],
+        ["schema_version", "ref", "sha256", "source", "target", "state", "inferred_modality", "assumptions", "uncertainty", "release"],
         {**capability_properties, "inferred_modality": {"type": "string"}, "assumptions": {"type": "array", "items": {"type": "string"}}, "uncertainty": {"type": "object"}},
     )
     plan = simple(

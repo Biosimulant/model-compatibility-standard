@@ -15,6 +15,10 @@
       },
       "type": "array"
     },
+    "execution_cost": {
+      "minimum": 0,
+      "type": "number"
+    },
     "inferred_modality": {
       "type": "string"
     },
@@ -23,6 +27,10 @@
         "type": "string"
       },
       "type": "array"
+    },
+    "loss_score": {
+      "minimum": 0,
+      "type": "number"
     },
     "preconditions": {
       "items": {
@@ -47,6 +55,12 @@
     "source": {
       "type": "object"
     },
+    "state": {
+      "enum": [
+        "reviewed",
+        "revoked"
+      ]
+    },
     "target": {
       "type": "object"
     },
@@ -60,6 +74,7 @@
     "sha256",
     "source",
     "target",
+    "state",
     "inferred_modality",
     "assumptions",
     "uncertainty",

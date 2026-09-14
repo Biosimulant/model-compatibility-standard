@@ -1,5 +1,5 @@
 {
-  "bundle_sha256": "sha256:2ccbd569f5f9037bc094644292ee7f824ba7228172fe17b5ca2882fbed2bdf12",
+  "bundle_sha256": "sha256:6948f4fd6d4544fca469a19092fd3ba50ecf1f14678ae519f1c8818a3cb6aee3",
   "canonicalization": "RFC8785",
   "counts": {
     "item_definitions": 266,
@@ -6569,8 +6569,8 @@
     },
     {
       "path": "schemas/adapter-capability.schema.json",
-      "sha256": "sha256:8957ab2936db04dd97681728acd7d53f28b9127f29c3d2b83d3081e26cde4b4d",
-      "size_bytes": 1403
+      "sha256": "sha256:ed0a509c52cf57d02868099e8ecd261862ff406cda46272fb8973b96188d0f17",
+      "size_bytes": 1644
     },
     {
       "path": "schemas/catalogue.schema.json",
@@ -6604,8 +6604,8 @@
     },
     {
       "path": "schemas/inference-capability.schema.json",
-      "sha256": "sha256:66c0247bcb54d4941fdf1832a7a5c28c7384e7a8bee8c7a4237a29e67059ca5f",
-      "size_bytes": 1325
+      "sha256": "sha256:36938f99a8c275757c82dc6a4d4ae67f6c0b23affa8c1ad9e0d1a9a11a0d396e",
+      "size_bytes": 1566
     },
     {
       "path": "schemas/manifest-extension.schema.json",

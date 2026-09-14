@@ -5,6 +5,7 @@ from .canonical import canonical_bytes, digest
 from .compare import compare_contracts
 from .locks import build_compatibility_lock
 from .normalization import normalize_contract, normalize_manifest
+from .resolution import ResolutionLimits, resolve_contracts
 from .validation import ValidationFinding, validate_contract, validate_manifest, validate_object
 
 __all__ = [
@@ -17,6 +18,8 @@ __all__ = [
     "get_bundle",
     "normalize_contract",
     "normalize_manifest",
+    "ResolutionLimits",
+    "resolve_contracts",
     "validate_contract",
     "validate_manifest",
     "validate_object",

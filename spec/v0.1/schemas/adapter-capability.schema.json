@@ -9,6 +9,10 @@
       },
       "type": "array"
     },
+    "execution_cost": {
+      "minimum": 0,
+      "type": "number"
+    },
     "information_loss": {
       "enum": [
         "none",
@@ -21,6 +25,10 @@
         "type": "string"
       },
       "type": "array"
+    },
+    "loss_score": {
+      "minimum": 0,
+      "type": "number"
     },
     "preconditions": {
       "items": {
@@ -45,6 +53,12 @@
     "source": {
       "type": "object"
     },
+    "state": {
+      "enum": [
+        "reviewed",
+        "revoked"
+      ]
+    },
     "target": {
       "type": "object"
     },
@@ -65,6 +79,7 @@
     "sha256",
     "source",
     "target",
+    "state",
     "transformation_class",
     "information_loss",
     "release"
