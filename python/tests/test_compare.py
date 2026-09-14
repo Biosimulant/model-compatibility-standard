@@ -1,4 +1,4 @@
-from biosimulant_model_compatibility_standard import compare_contracts, digest
+from biosimulant_model_compatibility_standard import canonical_bytes, compare_contracts, digest, get_bundle
 
 
 def test_canonical_digest_is_order_independent_for_object_keys():
@@ -31,3 +31,14 @@ def test_lossless_unit_conversion_is_visible():
     report = compare_contracts(source, target)
     assert report["status"] == "LOSSLESS_CONVERSION_AVAILABLE"
     assert report["policy_decision"] == "ALLOW"
+
+
+def test_committed_cross_language_golden_vectors():
+    bundle = get_bundle()
+    canonical = bundle.read_json("fixtures/golden/canonicalization.json")
+    for case in canonical["cases"]:
+        assert canonical_bytes(case["input"]).decode("utf-8") == case["canonical"]
+        assert digest(case["input"]) == case["sha256"]
+    comparisons = bundle.read_json("fixtures/golden/comparison-statuses.json")
+    for case in comparisons["cases"]:
+        assert compare_contracts(case["source"], case["target"])["status"] == case["status"]

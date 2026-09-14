@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import test from "node:test";
 
-import { compareContracts, digest, getBundle, parseYaml, validateContract, validateManifest } from "../dist/index.js";
+import { canonicalJson, compareContracts, digest, getBundle, parseYaml, validateContract, validateManifest } from "../dist/index.js";
 
 test("bundle exposes all catalogue entries", () => {
   const bundle = getBundle();
@@ -37,4 +37,17 @@ test("digests and primary statuses are deterministic", () => {
   assert.equal(compareContracts(null, contract).status, "UNKNOWN");
   assert.equal(compareContracts({ measurement: { unit: "nM" } }, { measurement: { unit: "uM" } }).status, "LOSSLESS_CONVERSION_AVAILABLE");
   assert.equal(compareContracts({ biological_context: { compartment: "extracellular" } }, { biological_context: { compartment: "intracellular" } }).status, "INCOMPATIBLE");
+});
+
+test("committed cross-language golden vectors match", () => {
+  const bundle = getBundle();
+  const canonical = bundle.readJson("fixtures/golden/canonicalization.json");
+  for (const entry of canonical.cases) {
+    assert.equal(canonicalJson(entry.input), entry.canonical, entry.name);
+    assert.equal(digest(entry.input), entry.sha256, entry.name);
+  }
+  const comparisons = bundle.readJson("fixtures/golden/comparison-statuses.json");
+  for (const entry of comparisons.cases) {
+    assert.equal(compareContracts(entry.source, entry.target).status, entry.status, entry.name);
+  }
 });

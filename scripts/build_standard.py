@@ -611,6 +611,32 @@ def build(root: Path) -> None:
     write_json(root, "catalogue/items.json", {"schema_version": "0.1", "standard": STANDARD, "items": enriched_items})
     write_json(root, "catalogue/item-packs.json", {"schema_version": "0.1", "standard": STANDARD, "item_packs": packs})
 
+    canonical_cases = [
+        {"name": "object-key-order", "input": {"z": 1, "a": {"b": True, "a": None}}},
+        {"name": "unicode-and-arrays", "input": {"label": "β-cell", "values": [3, 2, 1]}},
+    ]
+    for case in canonical_cases:
+        canonical = json.dumps(case["input"], ensure_ascii=False, separators=(",", ":"), sort_keys=True)
+        case["canonical"] = canonical
+        case["sha256"] = "sha256:" + hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+    write_json(
+        root,
+        "fixtures/golden/canonicalization.json",
+        {"canonicalization": "RFC8785", "cases": canonical_cases},
+    )
+    write_json(
+        root,
+        "fixtures/golden/comparison-statuses.json",
+        {
+            "cases": [
+                {"name": "exact", "source": {"semantic": {"concept": "concentration"}}, "target": {"semantic": {"concept": "concentration"}}, "status": "EXACT"},
+                {"name": "missing-contract", "source": None, "target": {"semantic": {"concept": "concentration"}}, "status": "UNKNOWN"},
+                {"name": "lossless-unit", "source": {"measurement": {"unit": "nM"}}, "target": {"measurement": {"unit": "uM"}}, "status": "LOSSLESS_CONVERSION_AVAILABLE"},
+                {"name": "context-contradiction", "source": {"biological_context": {"compartment": "extracellular"}}, "target": {"biological_context": {"compartment": "intracellular"}}, "status": "INCOMPATIBLE"},
+            ]
+        },
+    )
+
     for definition in definitions:
         write_json(root, f"profiles/{definition['domain']}/{definition['name']}/v0.1.json", definition)
         valid_contract: dict[str, Any] = {}

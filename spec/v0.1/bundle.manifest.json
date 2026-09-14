@@ -1,5 +1,5 @@
 {
-  "bundle_sha256": "sha256:fe737a079260b26b39f35721ba9ed474954a7d36a703d3cf93f9cad438a74de1",
+  "bundle_sha256": "sha256:2ccbd569f5f9037bc094644292ee7f824ba7228172fe17b5ca2882fbed2bdf12",
   "canonicalization": "RFC8785",
   "counts": {
     "item_definitions": 266,
@@ -31,6 +31,16 @@
       "path": "examples/legacy-model.yaml",
       "sha256": "sha256:28385bb381ff32f693f41db5f1e7f65a803f74c197edbf0ed12504e8aa1126df",
       "size_bytes": 218
+    },
+    {
+      "path": "fixtures/golden/canonicalization.json",
+      "sha256": "sha256:8868da050481cdaaf5fc1267fc36fbd3e2949c4679073548d1e130d8b21ffe3d",
+      "size_bytes": 686
+    },
+    {
+      "path": "fixtures/golden/comparison-statuses.json",
+      "sha256": "sha256:63b5d978e347382e40b74c12ef4acc829d7e4cdc9ea7b7c4040da7dbbe207d2f",
+      "size_bytes": 1028
     },
     {
       "path": "fixtures/profiles/cardiopulmonary-renal/arrhythmia-event.json",
