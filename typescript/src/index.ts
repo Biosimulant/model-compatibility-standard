@@ -32,8 +32,8 @@ export interface ValidationFinding {
 
 export interface CompatibilityFinding {
   dimension: string;
-  state: "compatible" | "incompatible" | "unknown";
-  severity: "error" | "info";
+  state: TechnicalStatus;
+  severity: "error" | "warning" | "info";
   reason_code: string;
   explanation: string;
   evidence?: JsonValue;
@@ -42,10 +42,11 @@ export interface CompatibilityFinding {
 export interface CompatibilityReport {
   schema_version: "0.1";
   standard: typeof STANDARD;
+  bundle_sha256: string;
+  source: JsonObject;
+  target: JsonObject;
   status: TechnicalStatus;
   policy_decision: "ALLOW" | "APPROVAL_REQUIRED" | "BLOCK";
-  source_contract_digest: string | null;
-  target_contract_digest: string | null;
   findings: CompatibilityFinding[];
   digest: string;
 }
@@ -189,6 +190,16 @@ export function validateContract(contract: JsonObject, profileRefs: string[] = [
   return findings;
 }
 
+export function validateObject(instance: JsonValue, schemaName: string, bundle = getBundle()): ValidationFinding[] {
+  const ajv = validator(bundle);
+  const normalizedName = schemaName.endsWith(".json") ? schemaName : `${schemaName}.json`;
+  if (!bundle.schemaFiles().includes(normalizedName)) throw new Error(`Unknown standard schema: ${schemaName}`);
+  const schema = bundle.readJson(`schemas/${normalizedName}`);
+  const check = ajv.getSchema(schema.$id as string)!;
+  check(instance);
+  return schemaFindings(check.errors);
+}
+
 export function validateManifest(manifest: JsonObject, bundle = getBundle()): ValidationFinding[] {
   if (!("compatibility" in manifest)) return [];
   const ajv = validator(bundle);
@@ -217,8 +228,8 @@ export function validateManifest(manifest: JsonObject, bundle = getBundle()): Va
   return findings;
 }
 
-function finding(dimension: string, state: "compatible" | "incompatible" | "unknown", reason: string, explanation: string, evidence?: JsonValue): CompatibilityFinding {
-  return { dimension, state, severity: state === "incompatible" ? "error" : "info", reason_code: reason, explanation, ...(evidence === undefined ? {} : { evidence }) };
+function finding(dimension: string, state: TechnicalStatus, reason: string, explanation: string, evidence?: JsonValue): CompatibilityFinding {
+  return { dimension, state, severity: state === "INCOMPATIBLE" ? "error" : "info", reason_code: reason, explanation, ...(evidence === undefined ? {} : { evidence }) };
 }
 
 function rulesFor(refs: string[], bundle: Bundle): JsonObject[] {
@@ -256,10 +267,10 @@ export function compareContracts(source: JsonObject | null, target: JsonObject |
   let findings: CompatibilityFinding[];
   if (source === null || target === null) {
     status = "UNKNOWN";
-    findings = [finding("contract", "unknown", "BMCS_CONTRACT_NOT_DECLARED", "Compatibility metadata is not declared on both ports.")];
+    findings = [finding("contract", "UNKNOWN", "BMCS_CONTRACT_NOT_DECLARED", "Compatibility metadata is not declared on both ports.")];
   } else if (digest(source) === digest(target)) {
     status = "EXACT";
-    findings = [finding("contract", "compatible", "BMCS_EXACT_CONTRACT", "Canonical contract digests are identical.")];
+    findings = [finding("contract", "EXACT", "BMCS_EXACT_CONTRACT", "Canonical contract digests are identical.")];
   } else {
     const refs = options.targetProfileRefs?.length ? options.targetProfileRefs : options.sourceProfileRefs ?? [];
     let rules = refs.length ? rulesFor(refs, bundle) : [];
@@ -277,23 +288,24 @@ export function compareContracts(source: JsonObject | null, target: JsonObject |
       if (left === undefined || right === undefined) {
         if (rule.missing === "ignore") continue;
         unknown = true;
-        findings.push(finding(dimension, "unknown", "BMCS_REQUIRED_EVIDENCE_MISSING", `Evidence is missing for ${rule.target}.`));
+        findings.push(finding(dimension, "UNKNOWN", "BMCS_REQUIRED_EVIDENCE_MISSING", `Evidence is missing for ${rule.target}.`));
         continue;
       }
       const [compatible, transformation] = compareValue(rule.operator as string, left, right, bundle);
-      if (transformation === "unsupported") { unknown = true; findings.push(finding(dimension, "unknown", "BMCS_OPERATOR_REQUIRES_SNAPSHOT", `${rule.operator} requires pinned external evidence.`)); }
-      else if (compatible) { conversion = transformation ?? conversion; findings.push(finding(dimension, "compatible", "BMCS_RULE_SATISFIED", `${rule.operator} comparison passed.`)); }
-      else { incompatible = true; findings.push(finding(dimension, "incompatible", rule.reason_code as string, `${rule.operator} comparison failed.`, { source: left, target: right })); }
+      if (transformation === "unsupported") { unknown = true; findings.push(finding(dimension, "UNKNOWN", "BMCS_OPERATOR_REQUIRES_SNAPSHOT", `${rule.operator} requires pinned external evidence.`)); }
+      else if (compatible) { conversion = transformation ?? conversion; findings.push(finding(dimension, "DIRECT_COMPATIBLE", "BMCS_RULE_SATISFIED", `${rule.operator} comparison passed.`)); }
+      else { incompatible = true; findings.push(finding(dimension, "INCOMPATIBLE", rule.reason_code as string, `${rule.operator} comparison failed.`, { source: left, target: right })); }
     }
     status = incompatible ? "INCOMPATIBLE" : unknown ? "UNKNOWN" : conversion === "none" ? "LOSSLESS_CONVERSION_AVAILABLE" : conversion ? "LOSSY_CONVERSION_REQUIRES_APPROVAL" : "DIRECT_COMPATIBLE";
   }
   const partial = {
     schema_version: "0.1" as const,
     standard: STANDARD as typeof STANDARD,
+    bundle_sha256: bundle.manifest.bundle_sha256 as string,
+    source: { contract_digest: source ? digest(source) : null, profile_refs: [...new Set(options.sourceProfileRefs ?? [])].sort() },
+    target: { contract_digest: target ? digest(target) : null, profile_refs: [...new Set(options.targetProfileRefs ?? [])].sort() },
     status,
     policy_decision: (["LOSSY_CONVERSION_REQUIRES_APPROVAL", "INFERENCE_MODEL_REQUIRED", "CONDITIONAL"].includes(status) ? "APPROVAL_REQUIRED" : ["INCOMPATIBLE", "UNKNOWN"].includes(status) ? "BLOCK" : "ALLOW") as "ALLOW" | "APPROVAL_REQUIRED" | "BLOCK",
-    source_contract_digest: source ? digest(source) : null,
-    target_contract_digest: target ? digest(target) : null,
     findings,
   };
   return { ...partial, digest: digest(partial) };

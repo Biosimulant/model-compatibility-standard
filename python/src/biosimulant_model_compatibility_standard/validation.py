@@ -41,6 +41,21 @@ def _schema_errors(instance: Any, schema_name: str, bundle: Bundle) -> list[Vali
     return findings
 
 
+def validate_object(
+    instance: Any,
+    schema_name: str,
+    *,
+    bundle: Bundle | None = None,
+) -> list[ValidationFinding]:
+    """Validate any public standard object with the named bundled schema."""
+
+    active = bundle or get_bundle()
+    normalized_name = schema_name if schema_name.endswith(".json") else f"{schema_name}.json"
+    if normalized_name not in active.schema_index:
+        raise KeyError(f"Unknown standard schema: {schema_name}")
+    return _schema_errors(instance, normalized_name, active)
+
+
 def validate_contract(
     contract: dict[str, Any],
     profile_refs: Iterable[str] = (),

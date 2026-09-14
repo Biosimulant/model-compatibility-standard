@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import test from "node:test";
 
-import { canonicalJson, compareContracts, digest, getBundle, parseYaml, validateContract, validateManifest } from "../dist/index.js";
+import { canonicalJson, compareContracts, digest, getBundle, parseYaml, validateContract, validateManifest, validateObject } from "../dist/index.js";
 
 test("bundle exposes all catalogue entries", () => {
   const bundle = getBundle();
@@ -33,7 +33,9 @@ test("legacy and opted-in examples validate", () => {
 test("digests and primary statuses are deterministic", () => {
   assert.equal(digest({ b: 2, a: 1 }), digest({ a: 1, b: 2 }));
   const contract = { semantic: { concept: "concentration" } };
-  assert.equal(compareContracts(contract, contract).status, "EXACT");
+  const exact = compareContracts(contract, contract);
+  assert.equal(exact.status, "EXACT");
+  assert.deepEqual(validateObject(exact, "compatibility-report.schema.json"), []);
   assert.equal(compareContracts(null, contract).status, "UNKNOWN");
   assert.equal(compareContracts({ measurement: { unit: "nM" } }, { measurement: { unit: "uM" } }).status, "LOSSLESS_CONVERSION_AVAILABLE");
   assert.equal(compareContracts({ biological_context: { compartment: "extracellular" } }, { biological_context: { compartment: "intracellular" } }).status, "INCOMPATIBLE");

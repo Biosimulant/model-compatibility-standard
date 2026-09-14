@@ -1,4 +1,10 @@
-from biosimulant_model_compatibility_standard import canonical_bytes, compare_contracts, digest, get_bundle
+from biosimulant_model_compatibility_standard import (
+    canonical_bytes,
+    compare_contracts,
+    digest,
+    get_bundle,
+    validate_object,
+)
 
 
 def test_canonical_digest_is_order_independent_for_object_keys():
@@ -10,6 +16,7 @@ def test_exact_contract():
     report = compare_contracts(contract, dict(contract))
     assert report["status"] == "EXACT"
     assert report["policy_decision"] == "ALLOW"
+    assert validate_object(report, "compatibility-report.schema.json") == []
 
 
 def test_missing_contract_is_unknown_and_policy_blocked():

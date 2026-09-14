@@ -5,7 +5,7 @@ from .canonical import canonical_bytes, digest
 from .compare import compare_contracts
 from .locks import build_compatibility_lock
 from .normalization import normalize_contract, normalize_manifest
-from .validation import ValidationFinding, validate_contract, validate_manifest
+from .validation import ValidationFinding, validate_contract, validate_manifest, validate_object
 
 __all__ = [
     "Bundle",
@@ -19,6 +19,7 @@ __all__ = [
     "normalize_manifest",
     "validate_contract",
     "validate_manifest",
+    "validate_object",
 ]
 
 __version__ = "0.1.0a1"

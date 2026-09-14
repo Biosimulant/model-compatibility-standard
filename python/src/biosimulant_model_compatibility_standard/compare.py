@@ -14,7 +14,7 @@ def _finding(dimension: str, state: str, code: str, explanation: str, *, evidenc
     value = {
         "dimension": dimension,
         "state": state,
-        "severity": "error" if state == "incompatible" else "info",
+        "severity": "error" if state == "INCOMPATIBLE" else "info",
         "reason_code": code,
         "explanation": explanation,
     }
@@ -81,10 +81,10 @@ def compare_contracts(
     active = bundle or get_bundle()
     if source_contract is None or target_contract is None:
         status = "UNKNOWN"
-        findings = [_finding("contract", "unknown", "BMCS_CONTRACT_NOT_DECLARED", "Compatibility metadata is not declared on both ports.")]
+        findings = [_finding("contract", "UNKNOWN", "BMCS_CONTRACT_NOT_DECLARED", "Compatibility metadata is not declared on both ports.")]
     elif digest(source_contract) == digest(target_contract):
         status = "EXACT"
-        findings = [_finding("contract", "compatible", "BMCS_EXACT_CONTRACT", "Canonical contract digests are identical.")]
+        findings = [_finding("contract", "EXACT", "BMCS_EXACT_CONTRACT", "Canonical contract digests are identical.")]
     else:
         refs = list(target_profile_refs) or list(source_profile_refs)
         rules = _rules(refs, active) if refs else []
@@ -118,19 +118,19 @@ def compare_contracts(
                 if behavior == "ignore":
                     continue
                 unknown = True
-                findings.append(_finding(dimension, "unknown", "BMCS_REQUIRED_EVIDENCE_MISSING", f"Evidence is missing for {rule['target']}."))
+                findings.append(_finding(dimension, "UNKNOWN", "BMCS_REQUIRED_EVIDENCE_MISSING", f"Evidence is missing for {rule['target']}."))
                 continue
             compatible, transformation = _evaluate(rule["operator"], left, right, active)
             if transformation == "unsupported":
                 unknown = True
-                findings.append(_finding(dimension, "unknown", "BMCS_OPERATOR_REQUIRES_SNAPSHOT", f"{rule['operator']} requires pinned external evidence."))
+                findings.append(_finding(dimension, "UNKNOWN", "BMCS_OPERATOR_REQUIRES_SNAPSHOT", f"{rule['operator']} requires pinned external evidence."))
             elif compatible:
                 if transformation:
                     conversion = transformation
-                findings.append(_finding(dimension, "compatible", "BMCS_RULE_SATISFIED", f"{rule['operator']} comparison passed."))
+                findings.append(_finding(dimension, "DIRECT_COMPATIBLE", "BMCS_RULE_SATISFIED", f"{rule['operator']} comparison passed."))
             else:
                 incompatible = True
-                findings.append(_finding(dimension, "incompatible", rule.get("reason_code", "BMCS_VALUE_MISMATCH"), f"{rule['operator']} comparison failed.", evidence={"source": left, "target": right}))
+                findings.append(_finding(dimension, "INCOMPATIBLE", rule.get("reason_code", "BMCS_VALUE_MISMATCH"), f"{rule['operator']} comparison failed.", evidence={"source": left, "target": right}))
         if incompatible:
             status = "INCOMPATIBLE"
         elif unknown:
@@ -145,10 +145,17 @@ def compare_contracts(
     report = {
         "schema_version": "0.1",
         "standard": "https://biosimulant.com/standards/model-compatibility/v0.1",
+        "bundle_sha256": active.digest,
+        "source": {
+            "contract_digest": digest(source_contract) if source_contract is not None else None,
+            "profile_refs": sorted(set(source_profile_refs)),
+        },
+        "target": {
+            "contract_digest": digest(target_contract) if target_contract is not None else None,
+            "profile_refs": sorted(set(target_profile_refs)),
+        },
         "status": status,
         "policy_decision": "APPROVAL_REQUIRED" if status in {"LOSSY_CONVERSION_REQUIRES_APPROVAL", "INFERENCE_MODEL_REQUIRED", "CONDITIONAL"} else ("BLOCK" if status in {"INCOMPATIBLE", "UNKNOWN"} else "ALLOW"),
-        "source_contract_digest": digest(source_contract) if source_contract is not None else None,
-        "target_contract_digest": digest(target_contract) if target_contract is not None else None,
         "findings": findings,
     }
     report["digest"] = digest(report)
