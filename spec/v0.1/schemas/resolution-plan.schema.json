@@ -1,0 +1,74 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/resolution-plan.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "approvals": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "bundle_sha256": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "digest": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "edges": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "expires_at": {
+      "format": "date-time",
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "immutable_references": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "nodes": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "policy": {
+      "type": "object"
+    },
+    "reports": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "0.1"
+    },
+    "standard": {
+      "const": "https://biosimulant.com/standards/model-compatibility/v0.1"
+    }
+  },
+  "required": [
+    "schema_version",
+    "standard",
+    "bundle_sha256",
+    "nodes",
+    "edges",
+    "reports",
+    "policy",
+    "approvals",
+    "digest"
+  ],
+  "title": "Resolution Plan",
+  "type": "object"
+}

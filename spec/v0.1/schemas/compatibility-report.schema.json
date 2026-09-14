@@ -1,0 +1,80 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/compatibility-report.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bundle_sha256": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "digest": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "findings": {
+      "items": {
+        "$ref": "compatibility-finding.schema.json"
+      },
+      "type": "array"
+    },
+    "paths": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "policy_decision": {
+      "enum": [
+        "ALLOW",
+        "APPROVAL_REQUIRED",
+        "BLOCK"
+      ]
+    },
+    "quality_reference": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "schema_version": {
+      "const": "0.1"
+    },
+    "snapshots": {
+      "type": "object"
+    },
+    "source": {
+      "type": "object"
+    },
+    "standard": {
+      "const": "https://biosimulant.com/standards/model-compatibility/v0.1"
+    },
+    "status": {
+      "enum": [
+        "EXACT",
+        "DIRECT_COMPATIBLE",
+        "LOSSLESS_CONVERSION_AVAILABLE",
+        "LOSSY_CONVERSION_REQUIRES_APPROVAL",
+        "INFERENCE_MODEL_REQUIRED",
+        "CONDITIONAL",
+        "INCOMPATIBLE",
+        "UNKNOWN"
+      ]
+    },
+    "target": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "standard",
+    "bundle_sha256",
+    "source",
+    "target",
+    "status",
+    "policy_decision",
+    "findings",
+    "digest"
+  ],
+  "title": "Compatibility Report",
+  "type": "object"
+}

@@ -1,0 +1,5592 @@
+{
+  "items": [
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "unit-convertible",
+      "family": "existing-io",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "accepted_units",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "artifact",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.byte_size",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "artifact",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.compression",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "artifact",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.encryption",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "artifact",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.format",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "artifact",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.format_version",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "artifact",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.media_type",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "artifact",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.partitioning",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "artifact",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.schema_ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "artifact",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.schema_sha256",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "digest-equal",
+      "family": "artifact",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.sha256",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "artifact",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.staging",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.age",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.assay",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.cell_line",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.cell_type",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.cohort",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.compartment",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.confluence",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.culture_system",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.denominator",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": false,
+      "path": "biological_context.disease",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.geography",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": false,
+      "path": "biological_context.intervention",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.intervention.agent",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.intervention.dose",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.intervention.duration",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.intervention.route",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.intervention.schedule",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.lineage",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.medium",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.oxygen",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.passage",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.population",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.sampling_frame",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.sex",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.species",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.strain",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.stratum",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.substrate",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.tissue",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "constraints[]",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "constraints[].expected",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "constraints[]",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "constraints[].id",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "constraints[]",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "constraints[].inputs",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "constraints[]",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "constraints[].operator",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "constraints[]",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "constraints[].profile_ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "constraints[]",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "constraints[].reason",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "constraints[]",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "constraints[].remediation",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "constraints[]",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "constraints[].severity",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "existing-io",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "default",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "labels-equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].coordinates_ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].dynamic",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].labels_ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].labels_sha256",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].meaning",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].name",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].ordering",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].size",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "unit-convertible",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].unit",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.dose_axis",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.feature_axis",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.feature_labels_ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.feature_labels_sha256",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.orientation",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.origin",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.pixel_spacing",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.sample_axis",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.slice_thickness",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.spatial_axes",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "dimensions",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.time_axis",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "existing-io",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dtype",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "existing-io",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "emitted_unit",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "envelope",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "envelope.actual_context",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "envelope",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "envelope.artifact_ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "envelope",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "envelope.contract_sha256",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "envelope",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "envelope.observation_time",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "envelope",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "envelope.origin",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "envelope",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "envelope.produced_by",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "envelope",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "envelope.provenance",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "envelope",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "envelope.uncertainty",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "envelope",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "envelope.validation_results",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "envelope",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "envelope.value",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.ambiguity_handling",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.canonicalization",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.case_policy",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.coding_system",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.coding_version",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.deprecated_handling",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.edge_namespace",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.entity_type",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].cardinality",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "mapping-total",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].coverage",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].license",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].release",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].sha256",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].source_namespace",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].target_namespace",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.namespace",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.namespace_version",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.node_namespace",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.structure_hash",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.taxonomy_namespace",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.taxonomy_version",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.transcript_reference",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.unmapped_handling",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "identifiers",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.variant_notation",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "existing-io",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "kind",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "lifecycle",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.causality",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "lifecycle",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.consumption",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "lifecycle",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.evolutionary_time",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "lifecycle",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.freshness",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "lifecycle",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.interpolation",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "lifecycle",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.kind",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "lifecycle",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.observation_period",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "lifecycle",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.production",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "lifecycle",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.sampling",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "lifecycle",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.temporal_meaning",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "lifecycle",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.time_origin",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "lifecycle",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.time_unit",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "lifecycle",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.window",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.aggregation",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.baseline",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.batch_correction",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.calibration_ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.control",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.detection_limits",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.evolutionary_distance",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.normalization",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.quantity",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.rate_basis",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.reference_range",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.response_direction",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.scale",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.standardization",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.tolerance",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "unit-convertible",
+      "family": "measurement",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.unit",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "existing-io",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "name",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.absolute_tolerance",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.audit_ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.edge_evidence",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.estimation_method",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.evidence_refs",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.fit_method",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.generated_at",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.instrument",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.instrument_model",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.method",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.method_version",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.model_digest",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.observed_at",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.operator",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.parameter_digest",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.phylogenetic_method",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.processing_pipeline_ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.protocol_ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.protocol_version",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.random_seed",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.registration_ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.relative_tolerance",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.segmentation_method",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.software",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.software_version",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.solver",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.solver_version",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.source_ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.source_sha256",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.substitution_model",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.surveillance_system",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.transformation_chain",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "origin",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.type",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.alphabet",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.alternate_allele",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.canonicalization",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.channel_order",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.circularity",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.conformer_method",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.coordinate_system",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.directed",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.edge_schema",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.encoding",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.endianness",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.feature_space",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.formal_charge",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.hydrogen_policy",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.interval_convention",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.isotope_state",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.kind",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.layout",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.left_normalized",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.masking",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.multigraph",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.node_schema",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.normalization_tool",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.normalization_version",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.ordering",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.precision",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.protonation_state",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.quality_encoding",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.reference_allele",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.reference_assembly",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.reference_sequence",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.self_loops",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.sparsity",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.state_order",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.stereochemistry",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.strand",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.structure_format",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.tautomer_state",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.tree_format",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.weight_semantics",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "existing-io",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "required",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "existing-io",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "schema",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "security",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "security.classification",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "security",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "security.consent_scope",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "security",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": false,
+      "path": "security.data_use",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "security",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "security.deidentification",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "security",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "security.export_control",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "security",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "security.license",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "security",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "security.license_ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "security",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "security.redaction",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "security",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "security.residency",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "security",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "security.retention",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "security",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "security.workspace_boundary",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ancestral_state",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.cell_state",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.concept",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.consequence",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.endpoint",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.entity",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.intended_use",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.lineage",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.model_formalism",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_snapshot_ref",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_snapshot_sha256",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_terms",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_terms[].label",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_terms[].ontology",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_terms[].relation",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_terms[].uri",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_terms[].version",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.pk_parameter",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.process",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": false,
+      "path": "semantic.qualifiers",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.role",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.subject",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "term-equivalent",
+      "family": "semantic",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.variant_class",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "existing-io",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "shape",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "existing-io",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "signal_type",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.branch_support",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.censoring",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.confidence_level",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.distribution",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.edge_confidence",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.fit_quality",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.imputation",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.interval",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.kind",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.missingness",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.parameter_covariance",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.parameters",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.quality_flags",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.segmentation_confidence",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    },
+    {
+      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_operator": "equal",
+      "family": "uncertainty",
+      "json_schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "uncertainty.variance",
+      "requirement": "profile-dependent",
+      "value_type": "profile-defined JSON value"
+    }
+  ],
+  "schema_version": "0.1",
+  "standard": "https://biosimulant.com/standards/model-compatibility/v0.1"
+}

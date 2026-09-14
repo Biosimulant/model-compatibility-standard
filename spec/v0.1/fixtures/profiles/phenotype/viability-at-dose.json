@@ -1,0 +1,84 @@
+{
+  "cases": [
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "measurement": {
+          "quantity": "example-quantity",
+          "scale": "example-scale",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "example-concept",
+          "subject": "example-subject"
+        }
+      },
+      "name": "positive",
+      "valid": true
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "measurement": {
+          "quantity": "example-quantity",
+          "scale": "example-scale",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "subject": "example-subject"
+        }
+      },
+      "name": "negative-required-missing",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "name": "comparison-unknown",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "measurement": {
+          "quantity": "example-quantity",
+          "scale": "example-scale",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "subject": "example-subject"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "measurement": {
+          "quantity": "example-quantity",
+          "scale": "example-scale",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "example-concept",
+          "subject": "example-subject"
+        }
+      }
+    }
+  ],
+  "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/phenotype/viability-at-dose/v0.1"
+}

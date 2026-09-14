@@ -1,0 +1,478 @@
+{
+  "item_packs": [
+    {
+      "description": "Artifact media, serialization, schema, compression, integrity, and staging.",
+      "id": "artifact-format",
+      "items": [
+        "artifact.media_type",
+        "artifact.format",
+        "artifact.format_version",
+        "artifact.schema_ref",
+        "artifact.schema_sha256",
+        "artifact.compression",
+        "artifact.sha256",
+        "artifact.byte_size",
+        "artifact.staging",
+        "artifact.partitioning",
+        "artifact.encryption"
+      ]
+    },
+    {
+      "description": "Assay identity, protocol, instrument, calibration, controls, and evidence.",
+      "id": "assay-evidence",
+      "items": [
+        "biological_context.assay",
+        "origin.protocol_ref",
+        "origin.protocol_version",
+        "origin.instrument",
+        "origin.instrument_model",
+        "origin.software",
+        "origin.software_version",
+        "measurement.calibration_ref",
+        "measurement.control",
+        "uncertainty.quality_flags",
+        "origin.evidence_refs"
+      ]
+    },
+    {
+      "description": "Species, material, disease, intervention, assay, and compartment context.",
+      "id": "biological-context",
+      "items": [
+        "biological_context.species",
+        "biological_context.strain",
+        "biological_context.sex",
+        "biological_context.age",
+        "biological_context.tissue",
+        "biological_context.cell_type",
+        "biological_context.cell_line",
+        "biological_context.disease",
+        "biological_context.intervention",
+        "biological_context.assay",
+        "biological_context.cohort",
+        "biological_context.compartment"
+      ]
+    },
+    {
+      "description": "Cell identity, lineage, culture, passage, state, and environment.",
+      "id": "cell-context",
+      "items": [
+        "biological_context.cell_type",
+        "biological_context.cell_line",
+        "biological_context.lineage",
+        "biological_context.culture_system",
+        "biological_context.passage",
+        "biological_context.medium",
+        "biological_context.substrate",
+        "biological_context.oxygen",
+        "biological_context.confluence",
+        "semantic.cell_state"
+      ]
+    },
+    {
+      "description": "Clinical coding, population, consent, deidentification, and use restrictions.",
+      "id": "clinical-governance",
+      "items": [
+        "identifiers.coding_system",
+        "identifiers.coding_version",
+        "biological_context.cohort",
+        "biological_context.population",
+        "security.consent_scope",
+        "security.data_use",
+        "security.deidentification",
+        "security.residency",
+        "security.retention",
+        "origin.audit_ref",
+        "semantic.intended_use"
+      ]
+    },
+    {
+      "description": "Named axes, coordinates, labels, cardinality, and order.",
+      "id": "dimensioned-array",
+      "items": [
+        "dimensions.axes",
+        "dimensions.axes[].name",
+        "dimensions.axes[].meaning",
+        "dimensions.axes[].size",
+        "dimensions.axes[].unit",
+        "dimensions.axes[].labels_ref",
+        "dimensions.axes[].labels_sha256",
+        "dimensions.axes[].ordering",
+        "dimensions.axes[].coordinates_ref",
+        "dimensions.axes[].dynamic"
+      ]
+    },
+    {
+      "description": "Intervention, dose axis, endpoint, response direction, and fitted curve.",
+      "id": "dose-response",
+      "items": [
+        "biological_context.intervention.agent",
+        "biological_context.intervention.dose",
+        "biological_context.intervention.route",
+        "biological_context.intervention.duration",
+        "semantic.endpoint",
+        "measurement.baseline",
+        "measurement.response_direction",
+        "dimensions.dose_axis",
+        "dimensions.time_axis",
+        "origin.fit_method",
+        "uncertainty.fit_quality"
+      ]
+    },
+    {
+      "description": "Sample-by-feature matrices with exact feature universes and preprocessing.",
+      "id": "feature-matrix",
+      "items": [
+        "dimensions.sample_axis",
+        "dimensions.feature_axis",
+        "dimensions.feature_labels_ref",
+        "dimensions.feature_labels_sha256",
+        "representation.feature_space",
+        "representation.ordering",
+        "measurement.normalization",
+        "measurement.batch_correction",
+        "uncertainty.missingness",
+        "origin.processing_pipeline_ref"
+      ]
+    },
+    {
+      "description": "Typed nodes and edges, direction, weights, evidence, and identifier spaces.",
+      "id": "graph-network",
+      "items": [
+        "representation.node_schema",
+        "representation.edge_schema",
+        "representation.directed",
+        "representation.multigraph",
+        "representation.weight_semantics",
+        "representation.self_loops",
+        "identifiers.node_namespace",
+        "identifiers.edge_namespace",
+        "origin.edge_evidence",
+        "uncertainty.edge_confidence"
+      ]
+    },
+    {
+      "description": "Versioned identifiers and ambiguity-safe canonicalization.",
+      "id": "identifier-core",
+      "items": [
+        "identifiers.namespace",
+        "identifiers.namespace_version",
+        "identifiers.entity_type",
+        "identifiers.canonicalization",
+        "identifiers.mapping_refs",
+        "identifiers.ambiguity_handling",
+        "identifiers.unmapped_handling",
+        "identifiers.deprecated_handling",
+        "identifiers.case_policy"
+      ]
+    },
+    {
+      "description": "Pixels or voxels, channels, resolution, registration, and anatomical frame.",
+      "id": "imaging-spatial",
+      "items": [
+        "representation.coordinate_system",
+        "representation.channel_order",
+        "dimensions.spatial_axes",
+        "dimensions.pixel_spacing",
+        "dimensions.slice_thickness",
+        "dimensions.origin",
+        "dimensions.orientation",
+        "origin.registration_ref",
+        "origin.segmentation_method",
+        "uncertainty.segmentation_confidence"
+      ]
+    },
+    {
+      "description": "Exact source/target systems and immutable mapping evidence.",
+      "id": "mapping-capability",
+      "items": [
+        "identifiers.mapping_refs[].ref",
+        "identifiers.mapping_refs[].sha256",
+        "identifiers.mapping_refs[].source_namespace",
+        "identifiers.mapping_refs[].target_namespace",
+        "identifiers.mapping_refs[].coverage",
+        "identifiers.mapping_refs[].cardinality",
+        "identifiers.mapping_refs[].release",
+        "identifiers.mapping_refs[].license"
+      ]
+    },
+    {
+      "description": "Quantity, units, scale, normalization, and analytical limits.",
+      "id": "measurement-core",
+      "items": [
+        "measurement.quantity",
+        "measurement.unit",
+        "measurement.scale",
+        "measurement.normalization",
+        "measurement.baseline",
+        "measurement.reference_range",
+        "measurement.detection_limits",
+        "measurement.calibration_ref",
+        "measurement.aggregation",
+        "measurement.tolerance"
+      ]
+    },
+    {
+      "description": "Chemical or macromolecular identity, stereochemistry, charge, and conformer state.",
+      "id": "molecular-structure",
+      "items": [
+        "semantic.entity",
+        "representation.structure_format",
+        "representation.stereochemistry",
+        "representation.protonation_state",
+        "representation.tautomer_state",
+        "representation.formal_charge",
+        "representation.isotope_state",
+        "representation.conformer_method",
+        "representation.hydrogen_policy",
+        "identifiers.structure_hash"
+      ]
+    },
+    {
+      "description": "Pinned controlled terms and safe directional subsumption.",
+      "id": "ontology-terms",
+      "items": [
+        "semantic.ontology_terms[].uri",
+        "semantic.ontology_terms[].ontology",
+        "semantic.ontology_terms[].version",
+        "semantic.ontology_terms[].label",
+        "semantic.ontology_terms[].relation",
+        "semantic.ontology_snapshot_ref",
+        "semantic.ontology_snapshot_sha256"
+      ]
+    },
+    {
+      "description": "Exposure, sampling, compartment, and PK parameter definitions.",
+      "id": "pharmacokinetics",
+      "items": [
+        "biological_context.compartment",
+        "biological_context.intervention.route",
+        "biological_context.intervention.schedule",
+        "lifecycle.sampling",
+        "measurement.quantity",
+        "measurement.unit",
+        "semantic.pk_parameter",
+        "origin.estimation_method",
+        "uncertainty.parameter_covariance"
+      ]
+    },
+    {
+      "description": "Population strata, geography, denominator, sampling frame, and rates.",
+      "id": "population-context",
+      "items": [
+        "biological_context.population",
+        "biological_context.geography",
+        "biological_context.stratum",
+        "biological_context.denominator",
+        "biological_context.sampling_frame",
+        "measurement.rate_basis",
+        "measurement.standardization",
+        "lifecycle.observation_period",
+        "origin.surveillance_system",
+        "uncertainty.interval"
+      ]
+    },
+    {
+      "description": "Existing model.yaml io structure incorporated into the normalized contract.",
+      "id": "port-structure",
+      "items": [
+        "name",
+        "signal_type",
+        "kind",
+        "dtype",
+        "shape",
+        "schema",
+        "emitted_unit",
+        "accepted_units",
+        "required",
+        "default"
+      ]
+    },
+    {
+      "description": "How a value was obtained and from which immutable evidence.",
+      "id": "provenance-origin",
+      "items": [
+        "origin.type",
+        "origin.source_ref",
+        "origin.source_sha256",
+        "origin.method",
+        "origin.method_version",
+        "origin.transformation_chain",
+        "origin.observed_at",
+        "origin.generated_at",
+        "origin.operator"
+      ]
+    },
+    {
+      "description": "Encoding and logical representation.",
+      "id": "representation-core",
+      "items": [
+        "representation.kind",
+        "representation.encoding",
+        "representation.layout",
+        "representation.feature_space",
+        "representation.ordering",
+        "representation.sparsity",
+        "representation.canonicalization",
+        "representation.precision",
+        "representation.endianness"
+      ]
+    },
+    {
+      "description": "Actual runtime context, value/artifact binding, provenance, and observation time.",
+      "id": "runtime-envelope",
+      "items": [
+        "envelope.contract_sha256",
+        "envelope.value",
+        "envelope.artifact_ref",
+        "envelope.actual_context",
+        "envelope.origin",
+        "envelope.uncertainty",
+        "envelope.provenance",
+        "envelope.observation_time",
+        "envelope.produced_by",
+        "envelope.validation_results"
+      ]
+    },
+    {
+      "description": "Classification, license, consent, residency, and workspace policy inputs.",
+      "id": "security-policy",
+      "items": [
+        "security.classification",
+        "security.license",
+        "security.license_ref",
+        "security.consent_scope",
+        "security.data_use",
+        "security.residency",
+        "security.workspace_boundary",
+        "security.export_control",
+        "security.retention",
+        "security.redaction"
+      ]
+    },
+    {
+      "description": "Primary biological or computational meaning.",
+      "id": "semantic-core",
+      "items": [
+        "semantic.concept",
+        "semantic.subject",
+        "semantic.process",
+        "semantic.role",
+        "semantic.endpoint",
+        "semantic.qualifiers",
+        "semantic.ontology_terms"
+      ]
+    },
+    {
+      "description": "Sequence alphabet, strand, coordinates, and reference assembly.",
+      "id": "sequence-coordinate",
+      "items": [
+        "representation.alphabet",
+        "representation.strand",
+        "representation.coordinate_system",
+        "representation.reference_assembly",
+        "representation.reference_sequence",
+        "representation.interval_convention",
+        "representation.circularity",
+        "representation.masking",
+        "representation.quality_encoding"
+      ]
+    },
+    {
+      "description": "Model formalism, solver, tolerances, stochastic seed, and state ordering.",
+      "id": "simulation-reproducibility",
+      "items": [
+        "semantic.model_formalism",
+        "representation.state_order",
+        "lifecycle.time_unit",
+        "lifecycle.time_origin",
+        "origin.solver",
+        "origin.solver_version",
+        "origin.absolute_tolerance",
+        "origin.relative_tolerance",
+        "origin.random_seed",
+        "origin.parameter_digest",
+        "origin.model_digest"
+      ]
+    },
+    {
+      "description": "Taxonomy, lineage, phylogenetic method, evolutionary time, and confidence.",
+      "id": "taxonomy-evolution",
+      "items": [
+        "identifiers.taxonomy_namespace",
+        "identifiers.taxonomy_version",
+        "semantic.lineage",
+        "semantic.ancestral_state",
+        "representation.tree_format",
+        "measurement.evolutionary_distance",
+        "lifecycle.evolutionary_time",
+        "origin.phylogenetic_method",
+        "origin.substitution_model",
+        "uncertainty.branch_support"
+      ]
+    },
+    {
+      "description": "State/event lifecycle, temporal interpretation, sampling, and freshness.",
+      "id": "temporal-lifecycle",
+      "items": [
+        "lifecycle.kind",
+        "lifecycle.consumption",
+        "lifecycle.production",
+        "lifecycle.temporal_meaning",
+        "lifecycle.time_origin",
+        "lifecycle.time_unit",
+        "lifecycle.sampling",
+        "lifecycle.interpolation",
+        "lifecycle.freshness",
+        "lifecycle.window",
+        "lifecycle.causality"
+      ]
+    },
+    {
+      "description": "Uncertainty, confidence, quality flags, missingness, and censoring.",
+      "id": "uncertainty-quality",
+      "items": [
+        "uncertainty.kind",
+        "uncertainty.distribution",
+        "uncertainty.parameters",
+        "uncertainty.variance",
+        "uncertainty.interval",
+        "uncertainty.confidence_level",
+        "uncertainty.quality_flags",
+        "uncertainty.missingness",
+        "uncertainty.censoring",
+        "uncertainty.imputation"
+      ]
+    },
+    {
+      "description": "Declarative, allowlisted validation without executable expressions.",
+      "id": "validation-constraints",
+      "items": [
+        "constraints[].id",
+        "constraints[].operator",
+        "constraints[].inputs",
+        "constraints[].expected",
+        "constraints[].severity",
+        "constraints[].reason",
+        "constraints[].remediation",
+        "constraints[].profile_ref"
+      ]
+    },
+    {
+      "description": "Normalized variant identity and consequence semantics.",
+      "id": "variant-identity",
+      "items": [
+        "semantic.variant_class",
+        "representation.reference_allele",
+        "representation.alternate_allele",
+        "representation.left_normalized",
+        "representation.normalization_tool",
+        "representation.normalization_version",
+        "identifiers.variant_notation",
+        "identifiers.transcript_reference",
+        "semantic.consequence"
+      ]
+    }
+  ],
+  "schema_version": "0.1",
+  "standard": "https://biosimulant.com/standards/model-compatibility/v0.1"
+}

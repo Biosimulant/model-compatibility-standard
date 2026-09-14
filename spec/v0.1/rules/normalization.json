@@ -1,0 +1,11 @@
+{
+  "canonicalization": "RFC8785",
+  "set_like_paths": [
+    "/contract/profile_refs",
+    "/contract/semantic/qualifiers",
+    "/contract/biological_context/disease",
+    "/contract/biological_context/intervention",
+    "/contract/security/data_use"
+  ],
+  "standard": "https://biosimulant.com/standards/model-compatibility/v0.1"
+}

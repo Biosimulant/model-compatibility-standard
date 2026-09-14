@@ -1,0 +1,70 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/inference-capability.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "assumptions": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "evidence": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "inferred_modality": {
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "preconditions": {
+      "items": {
+        "$ref": "rule.schema.json"
+      },
+      "type": "array"
+    },
+    "ref": {
+      "format": "uri",
+      "type": "string"
+    },
+    "release": {
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "0.1"
+    },
+    "sha256": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "source": {
+      "type": "object"
+    },
+    "target": {
+      "type": "object"
+    },
+    "uncertainty": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "schema_version",
+    "ref",
+    "sha256",
+    "source",
+    "target",
+    "inferred_modality",
+    "assumptions",
+    "uncertainty",
+    "release"
+  ],
+  "title": "Inference Capability",
+  "type": "object"
+}

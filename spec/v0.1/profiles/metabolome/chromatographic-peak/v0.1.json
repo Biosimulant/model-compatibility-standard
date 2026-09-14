@@ -1,0 +1,139 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/chromatographic-peak/v0.1",
+  "$schema": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/profile-definition.schema.json",
+  "allowed": {},
+  "applies_to": [
+    "record",
+    "artifact"
+  ],
+  "comparison_rules": [
+    {
+      "missing": "unknown",
+      "operator": "term-equivalent",
+      "reason_code": "BMCS_VALUE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/semantic/concept",
+      "target": "/contract/semantic/concept"
+    },
+    {
+      "missing": "unknown",
+      "operator": "term-equivalent",
+      "reason_code": "BMCS_VALUE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/semantic/subject",
+      "target": "/contract/semantic/subject"
+    },
+    {
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_VALUE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/kind",
+      "target": "/contract/representation/kind"
+    },
+    {
+      "missing": "unknown",
+      "operator": "context-compatible",
+      "reason_code": "BMCS_VALUE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/biological_context/species",
+      "target": "/contract/biological_context/species"
+    }
+  ],
+  "compatibility_notes": "Direct compatibility requires every target-required item to be satisfied; missing required evidence returns UNKNOWN; transformations must be explicit, versioned capabilities.",
+  "description": "Compatibility contract for chromatographic peak values in the metabolome and flux domain.",
+  "domain": "metabolome",
+  "domain_label": "Metabolome and flux",
+  "extends": [],
+  "fixed": {},
+  "item_packs": [
+    "semantic-core",
+    "identifier-core",
+    "measurement-core",
+    "biological-context",
+    "assay-evidence",
+    "temporal-lifecycle",
+    "uncertainty-quality",
+    "graph-network"
+  ],
+  "label": "Chromatographic Peak",
+  "name": "chromatographic-peak",
+  "profile_id": "metabolome/chromatographic-peak@0.1",
+  "release_eligible": false,
+  "requirements": [
+    {
+      "level": "required",
+      "path": "semantic.concept",
+      "schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      }
+    },
+    {
+      "level": "required",
+      "path": "semantic.subject",
+      "schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.kind",
+      "schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      }
+    },
+    {
+      "level": "required",
+      "path": "biological_context.species",
+      "schema": {
+        "type": [
+          "string",
+          "number",
+          "integer",
+          "boolean",
+          "array",
+          "object",
+          "null"
+        ]
+      }
+    }
+  ],
+  "review": {
+    "reviewed_at": null,
+    "reviewer": null,
+    "sources": [],
+    "status": "candidate"
+  },
+  "scientific_claim": "This profile describes interface compatibility only and does not establish scientific validity, fitness for purpose, or regulatory suitability.",
+  "stage": "WAVE_2",
+  "transformation_policy": {
+    "inference": "approval",
+    "lossless": "allow",
+    "lossy": "approval"
+  },
+  "version": "0.1.0"
+}

@@ -1,0 +1,66 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/compatibility-finding.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "dimension": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "object"
+    },
+    "explanation": {
+      "type": "string"
+    },
+    "reason_code": {
+      "pattern": "^BMCS_[A-Z0-9_]+$",
+      "type": "string"
+    },
+    "remediation": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "severity": {
+      "enum": [
+        "info",
+        "warning",
+        "error"
+      ]
+    },
+    "source_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "state": {
+      "enum": [
+        "EXACT",
+        "DIRECT_COMPATIBLE",
+        "LOSSLESS_CONVERSION_AVAILABLE",
+        "LOSSY_CONVERSION_REQUIRES_APPROVAL",
+        "INFERENCE_MODEL_REQUIRED",
+        "CONDITIONAL",
+        "INCOMPATIBLE",
+        "UNKNOWN"
+      ]
+    },
+    "target_path": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "required": [
+    "dimension",
+    "state",
+    "severity",
+    "reason_code",
+    "explanation"
+  ],
+  "title": "Compatibility Finding",
+  "type": "object"
+}

@@ -1,0 +1,25 @@
+{
+  "reason_codes": {
+    "BMCS_CONDITION_UNRESOLVED": "A declared compatibility precondition is unresolved.",
+    "BMCS_CONTRACT_NOT_DECLARED": "Compatibility metadata is not declared on both ports.",
+    "BMCS_DIGEST_MISMATCH": "Resolved content does not match its declared digest.",
+    "BMCS_DIRECT": "The producer guarantee satisfies the consumer without transformation.",
+    "BMCS_EXACT": "Normalized producer and consumer contracts are identical.",
+    "BMCS_EXACT_CONTRACT": "Canonical contract digests are identical.",
+    "BMCS_INFERENCE_PATH": "The selected path requires scientific inference.",
+    "BMCS_LOSSY_PATH": "The selected path loses or ambiguously maps information.",
+    "BMCS_OPERATOR_REQUIRES_SNAPSHOT": "The operator requires a pinned external evidence snapshot.",
+    "BMCS_PROFILE_NOT_IMPORTED": "A port binds a profile absent from the manifest import list.",
+    "BMCS_PROFILE_NOT_REVIEWED": "The profile lacks completed scientific review evidence.",
+    "BMCS_PROFILE_UNRESOLVED": "A referenced profile is absent from the installed bundle.",
+    "BMCS_PROFILE_VALUE_INVALID": "A value does not satisfy a profile requirement.",
+    "BMCS_REFERENCE_CYCLE": "Profile or contract inheritance contains a cycle.",
+    "BMCS_REQUIRED_EVIDENCE_MISSING": "Evidence required for comparison is missing.",
+    "BMCS_REQUIRED_MISSING": "A target-required item is absent from available evidence.",
+    "BMCS_RULE_SATISFIED": "A declarative compatibility comparison rule passed.",
+    "BMCS_SCHEMA_INVALID": "The document does not conform to its JSON Schema.",
+    "BMCS_UNIT_CONVERSION": "A declared lossless unit conversion is available.",
+    "BMCS_VALUE_MISMATCH": "A required producer value does not satisfy the consumer value."
+  },
+  "standard": "https://biosimulant.com/standards/model-compatibility/v0.1"
+}

@@ -1,0 +1,68 @@
+{
+  "cases": [
+    {
+      "contract": {
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "example-concept",
+          "subject": "example-subject"
+        }
+      },
+      "name": "positive",
+      "valid": true
+    },
+    {
+      "contract": {
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "subject": "example-subject"
+        }
+      },
+      "name": "negative-required-missing",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "name": "comparison-unknown",
+      "source": {
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "subject": "example-subject"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "example-concept",
+          "subject": "example-subject"
+        }
+      }
+    }
+  ],
+  "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/chemical-structure/v0.1"
+}

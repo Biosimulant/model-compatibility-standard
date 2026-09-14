@@ -1,0 +1,216 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/profile-definition.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "$id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "$schema": {
+      "format": "uri",
+      "type": "string"
+    },
+    "allowed": {
+      "type": "object"
+    },
+    "applies_to": {
+      "items": {
+        "enum": [
+          "scalar",
+          "array",
+          "record",
+          "event",
+          "artifact"
+        ]
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "comparison_rules": {
+      "items": {
+        "$ref": "rule.schema.json"
+      },
+      "type": "array"
+    },
+    "compatibility_notes": {
+      "type": "string"
+    },
+    "description": {
+      "minLength": 20,
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "domain_label": {
+      "type": "string"
+    },
+    "extends": {
+      "items": {
+        "format": "uri",
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "fixed": {
+      "type": "object"
+    },
+    "item_packs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "label": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "profile_id": {
+      "pattern": "^[a-z0-9-]+/[a-z0-9-]+@0\\.1$",
+      "type": "string"
+    },
+    "release_eligible": {
+      "type": "boolean"
+    },
+    "requirements": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "level": {
+            "enum": [
+              "required",
+              "conditional",
+              "recommended",
+              "optional"
+            ]
+          },
+          "path": {
+            "pattern": "^[a-z]",
+            "type": "string"
+          },
+          "schema": {
+            "type": "object"
+          },
+          "when": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "path",
+          "level"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "review": {
+      "additionalProperties": false,
+      "properties": {
+        "reviewed_at": {
+          "format": "date",
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "sources": {
+          "items": {
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "status": {
+          "enum": [
+            "candidate",
+            "draft",
+            "reviewed",
+            "deprecated",
+            "revoked"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "sources"
+      ],
+      "type": "object"
+    },
+    "scientific_claim": {
+      "minLength": 20,
+      "type": "string"
+    },
+    "stage": {
+      "enum": [
+        "CURRENT",
+        "FOUNDATION",
+        "V0.1_PILOT",
+        "WAVE_2",
+        "CONTROLLED",
+        "DEFERRED"
+      ]
+    },
+    "transformation_policy": {
+      "additionalProperties": false,
+      "properties": {
+        "inference": {
+          "enum": [
+            "approval",
+            "block"
+          ]
+        },
+        "lossless": {
+          "enum": [
+            "allow",
+            "block"
+          ]
+        },
+        "lossy": {
+          "enum": [
+            "approval",
+            "block"
+          ]
+        }
+      },
+      "required": [
+        "lossless",
+        "lossy",
+        "inference"
+      ],
+      "type": "object"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "$id",
+    "profile_id",
+    "version",
+    "domain",
+    "name",
+    "label",
+    "description",
+    "stage",
+    "review",
+    "applies_to",
+    "item_packs",
+    "requirements",
+    "comparison_rules",
+    "transformation_policy",
+    "scientific_claim"
+  ],
+  "title": "Compatibility Profile Definition",
+  "type": "object"
+}

@@ -1,0 +1,29 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "biosimulant-model-compatibility-standard"
+version = "0.1.0a1"
+description = "Schemas, profiles, fixtures, and reference validation for the BioSimulant Model Compatibility Standard"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "Apache-2.0" }
+dependencies = [
+  "jsonschema[format]>=4.23,<5",
+  "PyYAML>=6,<7",
+  "rfc8785>=0.1,<1",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8,<10"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["python/src/biosimulant_model_compatibility_standard"]
+
+[tool.hatch.build.targets.wheel.force-include]
+"spec/v0.1" = "biosimulant_model_compatibility_standard/spec/v0.1"
+
+[tool.pytest.ini_options]
+testpaths = ["python/tests"]
+addopts = "-q"

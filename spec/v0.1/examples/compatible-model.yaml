@@ -1,0 +1,30 @@
+schema_version: "2.0"
+standard: other
+compatibility:
+  standard: https://biosimulant.com/standards/model-compatibility/v0.1
+  profiles:
+    - ref: https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/gene-expression-counts/v0.1
+      sha256: sha256:43690f436481a283d8449028485099209f8b487d6d198d560b68dcd0525a27b3
+biosim:
+  entrypoint: src.model:Model
+  communication_step: 1.0
+io:
+  inputs:
+    - name: expression
+      signal_type: array
+      dtype: float32
+      shape: ["*"]
+      contract:
+        profile_refs:
+          - https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/gene-expression-counts/v0.1
+        semantic:
+          concept: gene_expression
+          subject: biological_sample
+        representation:
+          kind: dense_vector
+        identifiers:
+          namespace: ensembl-gene
+          namespace_version: release-pinned
+        biological_context:
+          species: NCBITaxon:9606
+  outputs: []
