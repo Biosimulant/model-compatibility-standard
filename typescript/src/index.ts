@@ -579,6 +579,10 @@ export function compareContracts(source: JsonObject | null, target: JsonObject |
     }
     status = incompatible ? "INCOMPATIBLE" : unknown ? "UNKNOWN" : conversion === "none" ? "LOSSLESS_CONVERSION_AVAILABLE" : conversion ? "LOSSY_CONVERSION_REQUIRES_APPROVAL" : "DIRECT_COMPATIBLE";
   }
+  const snapshotRefs = {
+    ontology: [...snapshots.ontology.entries()].sort(([left], [right]) => left.localeCompare(right)).map(([ref, value]) => ({ ref, sha256: value.sha256 })),
+    mappings: [...snapshots.mappings.entries()].sort(([left], [right]) => left.localeCompare(right)).map(([ref, value]) => ({ ref, sha256: value.sha256 })),
+  };
   const partial = {
     schema_version: "0.1" as const,
     standard: STANDARD as typeof STANDARD,
@@ -588,6 +592,7 @@ export function compareContracts(source: JsonObject | null, target: JsonObject |
     status,
     policy_decision: (["LOSSY_CONVERSION_REQUIRES_APPROVAL", "INFERENCE_MODEL_REQUIRED", "CONDITIONAL"].includes(status) ? "APPROVAL_REQUIRED" : ["INCOMPATIBLE", "UNKNOWN"].includes(status) ? "BLOCK" : "ALLOW") as "ALLOW" | "APPROVAL_REQUIRED" | "BLOCK",
     findings,
+    ...((snapshotRefs.ontology.length || snapshotRefs.mappings.length) ? { snapshots: snapshotRefs } : {}),
   };
   return { ...partial, digest: digest(partial) };
 }
@@ -702,7 +707,7 @@ function technicalStatus(path: JsonObject[]): TechnicalStatus {
   return "LOSSLESS_CONVERSION_AVAILABLE";
 }
 
-function resolutionPlan(source: JsonObject, target: JsonObject, path: JsonObject[], policy: JsonObject, bundle: Bundle): JsonObject {
+function resolutionPlan(source: JsonObject, target: JsonObject, path: JsonObject[], policy: JsonObject, bundle: Bundle, snapshots: ComparisonSnapshots): JsonObject {
   const nodes: JsonObject[] = [{ id: "source", kind: "contract", contract_digest: digest(source) }];
   const edges: JsonObject[] = [];
   let previous = "source";
@@ -715,7 +720,13 @@ function resolutionPlan(source: JsonObject, target: JsonObject, path: JsonObject
   });
   nodes.push({ id: "target", kind: "contract", contract_digest: digest(target) });
   edges.push({ from: previous, to: "target" });
-  const terminal = compareContracts(path.length ? path[path.length - 1].target as JsonObject : source, target, { bundle });
+  const terminal = compareContracts(path.length ? path[path.length - 1].target as JsonObject : source, target, { bundle, snapshots });
+  const ontologySnapshots = verifiedSnapshots(snapshots.ontology);
+  const mappingSnapshots = verifiedSnapshots(snapshots.mappings);
+  const snapshotReferences = [
+    ...[...ontologySnapshots.entries()].sort(([left], [right]) => left.localeCompare(right)).map(([ref, value]) => ({ kind: "ontology_snapshot", ref, sha256: value.sha256 })),
+    ...[...mappingSnapshots.entries()].sort(([left], [right]) => left.localeCompare(right)).map(([ref, value]) => ({ kind: "mapping_snapshot", ref, sha256: value.sha256 })),
+  ];
   const status: TechnicalStatus = path.length ? technicalStatus(path) : "DIRECT_COMPATIBLE";
   const partial: JsonObject = {
     schema_version: "0.1",
@@ -726,19 +737,24 @@ function resolutionPlan(source: JsonObject, target: JsonObject, path: JsonObject
     reports: [{ digest: terminal.digest, status: terminal.status }],
     policy: { ...policy, decision: policyDecision(status, policy) },
     approvals: [],
-    immutable_references: path.map((item) => ({ ref: item.ref, sha256: item.sha256 })),
+    immutable_references: [...path.map((item) => ({ ref: item.ref, sha256: item.sha256 })), ...snapshotReferences],
   };
   return { ...partial, digest: digest(partial) };
 }
 
-export function resolveContracts(source: JsonObject | null, target: JsonObject | null, capabilities: JsonObject[] = [], options: { policy?: JsonObject; limits?: Partial<ResolutionLimits>; bundle?: Bundle } = {}): JsonObject {
+export function resolveContracts(source: JsonObject | null, target: JsonObject | null, capabilities: JsonObject[] = [], options: { policy?: JsonObject; limits?: Partial<ResolutionLimits>; bundle?: Bundle; snapshots?: ComparisonSnapshots } = {}): JsonObject {
   const bundle = options.bundle ?? getBundle();
   const policy = options.policy ?? {};
+  const snapshots = options.snapshots ?? {};
+  const verified = {
+    ontology: verifiedSnapshots(snapshots.ontology),
+    mappings: verifiedSnapshots(snapshots.mappings),
+  };
   const limits = { ...DEFAULT_RESOLUTION_LIMITS, ...(options.limits ?? {}) };
-  const direct = compareContracts(source, target, { bundle });
+  const direct = compareContracts(source, target, { bundle, snapshots });
   const report = direct as unknown as JsonObject;
   if (!source || !target) return { resolution: "UNRESOLVED", report, reason: "UNKNOWN_CONTRACT" };
-  if (["EXACT", "DIRECT_COMPATIBLE"].includes(direct.status)) return { resolution: "RESOLVED", report, plan: resolutionPlan(source, target, [], policy, bundle) };
+  if (["EXACT", "DIRECT_COMPATIBLE"].includes(direct.status)) return { resolution: "RESOLVED", report, plan: resolutionPlan(source, target, [], policy, bundle, snapshots) };
   if (direct.status === "INCOMPATIBLE" && !capabilities.length) return { resolution: "UNRESOLVED", report, reason: "NO_CAPABILITY_PATH" };
 
   const reviewed: JsonObject[] = [];
@@ -760,7 +776,7 @@ export function resolveContracts(source: JsonObject | null, target: JsonObject |
   while (queue.length && examined < limits.maxExaminedEdges) {
     queue.sort((left, right) => compareCosts(left.cost, right.cost));
     const current = queue.shift()!;
-    const terminal = compareContracts(current.contract, target, { bundle });
+    const terminal = compareContracts(current.contract, target, { bundle, snapshots });
     if (["EXACT", "DIRECT_COMPATIBLE"].includes(terminal.status)) {
       candidates.push(current);
       continue;
@@ -769,7 +785,21 @@ export function resolveContracts(source: JsonObject | null, target: JsonObject |
     for (const capability of bySource.get(digest(current.contract)) ?? []) {
       examined += 1;
       if (examined > limits.maxExaminedEdges) break;
-      if (Array.isArray(capability.preconditions) && capability.preconditions.length) continue;
+      let preconditionsMet = true;
+      for (const rule of (capability.preconditions ?? []) as JsonObject[]) {
+        const left = getPointer({ contract: current.contract }, rule.source as string);
+        const right = getPointer({ contract: capability.source as JsonObject }, rule.target as string);
+        if (left === undefined || right === undefined) {
+          if (rule.missing !== "ignore") { preconditionsMet = false; break; }
+          continue;
+        }
+        const [compatible, resultKind] = compareValue(rule, left, right, bundle, verified);
+        if (!compatible || resultKind === "invalid" || resultKind === "unsupported") {
+          preconditionsMet = false;
+          break;
+        }
+      }
+      if (!preconditionsMet) continue;
       const path = [...current.path, capability];
       if (path.filter((item) => capabilityKind(item) === "inference").length > limits.maxInferences) continue;
       const next = capability.target as JsonObject;
@@ -785,7 +815,7 @@ export function resolveContracts(source: JsonObject | null, target: JsonObject |
   if (!candidates.length) return { resolution: "UNRESOLVED", report, reason: examined >= limits.maxExaminedEdges ? "SEARCH_LIMIT_EXCEEDED" : "NO_CAPABILITY_PATH" };
   candidates.sort((left, right) => compareCosts(left.cost, right.cost));
   const equal = candidates.filter((item) => compareCosts(item.cost, candidates[0].cost, false) === 0);
-  const plans = equal.map((item) => resolutionPlan(source, target, item.path, policy, bundle));
+  const plans = equal.map((item) => resolutionPlan(source, target, item.path, policy, bundle, snapshots));
   return plans.length > 1
     ? { resolution: "AMBIGUOUS", report, candidate_plans: plans, reason: "EQUAL_COST_SCIENTIFIC_PATHS" }
     : { resolution: "RESOLVED", report, plan: plans[0] };

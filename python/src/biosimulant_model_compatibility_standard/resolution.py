@@ -9,8 +9,9 @@ from typing import Any, Iterable
 
 from .bundle import Bundle, get_bundle
 from .canonical import digest
-from .compare import compare_contracts
+from .compare import _evaluate, _verified_snapshots, compare_contracts
 from .constants import STANDARD
+from .pointers import MISSING, get_pointer
 from .validation import validate_object
 
 _LOSS_RANK = {"none": 0, "bounded": 1, "lossy": 2}
@@ -82,6 +83,8 @@ def _plan(
     *,
     policy: dict[str, Any],
     bundle: Bundle,
+    ontology_snapshots: tuple[dict[str, Any], ...],
+    mapping_snapshots: tuple[dict[str, Any], ...],
 ) -> dict[str, Any]:
     source_digest = digest(source)
     target_digest = digest(target)
@@ -111,7 +114,17 @@ def _plan(
         path[-1]["target"] if path else source,
         target,
         bundle=bundle,
+        ontology_snapshots=ontology_snapshots,
+        mapping_snapshots=mapping_snapshots,
     )
+    snapshot_references = [
+        {"kind": kind, "ref": item["ref"], "sha256": item["sha256"]}
+        for kind, values in (
+            ("ontology_snapshot", ontology_snapshots),
+            ("mapping_snapshot", mapping_snapshots),
+        )
+        for item in values
+    ]
     partial = {
         "schema_version": "0.1",
         "standard": STANDARD,
@@ -123,7 +136,8 @@ def _plan(
         "approvals": [],
         "immutable_references": [
             {"ref": item["ref"], "sha256": item["sha256"]} for item in path
-        ],
+        ]
+        + snapshot_references,
     }
     return {**partial, "digest": digest(partial)}
 
@@ -136,6 +150,8 @@ def resolve_contracts(
     policy: dict[str, Any] | None = None,
     limits: ResolutionLimits | None = None,
     bundle: Bundle | None = None,
+    ontology_snapshots: Iterable[dict[str, Any]] = (),
+    mapping_snapshots: Iterable[dict[str, Any]] = (),
 ) -> dict[str, Any]:
     """Plan how to connect a source contract to a target.
 
@@ -144,12 +160,34 @@ def resolve_contracts(
     """
 
     active = bundle or get_bundle()
+    ontology_values = tuple(
+        value for _, value in sorted(_verified_snapshots(ontology_snapshots).items())
+    )
+    mapping_values = tuple(
+        value for _, value in sorted(_verified_snapshots(mapping_snapshots).items())
+    )
+    ontology_index = _verified_snapshots(ontology_values)
+    mapping_index = _verified_snapshots(mapping_values)
     active_policy = dict(policy or {})
-    direct = compare_contracts(source, target, bundle=active)
+    direct = compare_contracts(
+        source,
+        target,
+        bundle=active,
+        ontology_snapshots=ontology_values,
+        mapping_snapshots=mapping_values,
+    )
     if source is None or target is None:
         return {"resolution": "UNRESOLVED", "report": direct, "reason": "UNKNOWN_CONTRACT"}
     if direct["status"] in {"EXACT", "DIRECT_COMPATIBLE"}:
-        plan = _plan(source, target, (), policy=active_policy, bundle=active)
+        plan = _plan(
+            source,
+            target,
+            (),
+            policy=active_policy,
+            bundle=active,
+            ontology_snapshots=ontology_values,
+            mapping_snapshots=mapping_values,
+        )
         return {"resolution": "RESOLVED", "report": direct, "plan": plan}
     if direct["status"] == "INCOMPATIBLE" and not capabilities:
         return {"resolution": "UNRESOLVED", "report": direct, "reason": "NO_CAPABILITY_PATH"}
@@ -186,7 +224,13 @@ def resolve_contracts(
 
     while queue and examined < bounds.max_examined_edges:
         path_cost, _, contract, path = heapq.heappop(queue)
-        terminal = compare_contracts(contract, target, bundle=active)
+        terminal = compare_contracts(
+            contract,
+            target,
+            bundle=active,
+            ontology_snapshots=ontology_values,
+            mapping_snapshots=mapping_values,
+        )
         if terminal["status"] in {"EXACT", "DIRECT_COMPATIBLE"}:
             candidates.append((path_cost, path))
             continue
@@ -196,7 +240,29 @@ def resolve_contracts(
             examined += 1
             if examined > bounds.max_examined_edges:
                 break
-            if capability.get("preconditions"):
+            wrapped_current = {"contract": contract}
+            wrapped_declared = {"contract": capability["source"]}
+            preconditions_met = True
+            for rule in capability.get("preconditions", []):
+                left = get_pointer(wrapped_current, rule["source"])
+                right = get_pointer(wrapped_declared, rule["target"])
+                if left is MISSING or right is MISSING:
+                    if rule.get("missing", "unknown") != "ignore":
+                        preconditions_met = False
+                        break
+                    continue
+                compatible, result_kind = _evaluate(
+                    rule,
+                    left,
+                    right,
+                    active,
+                    ontology_snapshots=ontology_index,
+                    mapping_snapshots=mapping_index,
+                )
+                if not compatible or result_kind in {"invalid", "unsupported"}:
+                    preconditions_met = False
+                    break
+            if not preconditions_met:
                 continue
             new_path = (*path, capability)
             if sum(_capability_kind(item) == "inference" for item in new_path) > bounds.max_inferences:
@@ -218,7 +284,18 @@ def resolve_contracts(
     candidates.sort(key=lambda item: item[0])
     best_cost = candidates[0][0][:-1]
     equal = [path for cost_value, path in candidates if cost_value[:-1] == best_cost]
-    plans = [_plan(source, target, path, policy=active_policy, bundle=active) for path in equal]
+    plans = [
+        _plan(
+            source,
+            target,
+            path,
+            policy=active_policy,
+            bundle=active,
+            ontology_snapshots=ontology_values,
+            mapping_snapshots=mapping_values,
+        )
+        for path in equal
+    ]
     if len(plans) > 1:
         return {
             "resolution": "AMBIGUOUS",

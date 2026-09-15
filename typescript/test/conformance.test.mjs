@@ -151,6 +151,29 @@ test("TypeScript resolver exposes adapters, ambiguity, and revocation", () => {
   assert.equal(resolveContracts(source, target, [first]).resolution, "UNRESOLVED");
 });
 
+test("TypeScript resolver checks preconditions and pins snapshots", () => {
+  const source = { semantic: { concept: "source" } };
+  const target = { semantic: { concept: "target" } };
+  const capability = adapter("https://biosimulant.com/adapters/precondition/1.0.0", source, target);
+  capability.preconditions = [{
+    source: "/contract/semantic/concept",
+    target: "/contract/semantic/concept",
+    operator: "equal",
+    missing: "incompatible",
+    reason_code: "BMCS_PRECONDITION_FAILED",
+  }];
+  assert.equal(resolveContracts(source, target, [capability]).resolution, "RESOLVED");
+  capability.preconditions[0].operator = "not-equal";
+  assert.equal(resolveContracts(source, target, [capability]).resolution, "UNRESOLVED");
+
+  const contract = { semantic: { concept: "concentration" } };
+  const unsigned = { ref: "https://biosimulant.com/snapshots/test-ontology/1.0.0", equivalences: [] };
+  const snapshot = { ...unsigned, sha256: digest(unsigned) };
+  const resolved = resolveContracts(contract, contract, [], { snapshots: { ontology: [snapshot] } });
+  assert.deepEqual(resolved.report.snapshots.ontology, [{ ref: snapshot.ref, sha256: snapshot.sha256 }]);
+  assert.ok(resolved.plan.immutable_references.some((item) => item.kind === "ontology_snapshot" && item.ref === snapshot.ref && item.sha256 === snapshot.sha256));
+});
+
 test("resource limits fail closed with a stable reason code", () => {
   const real = getBundle();
   const limited = new Bundle(real.root, { ...real.limits, maxDepth: 2 });

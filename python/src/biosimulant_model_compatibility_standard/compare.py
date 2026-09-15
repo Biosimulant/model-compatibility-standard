@@ -317,5 +317,17 @@ def compare_contracts(
         "policy_decision": "APPROVAL_REQUIRED" if status in {"LOSSY_CONVERSION_REQUIRES_APPROVAL", "INFERENCE_MODEL_REQUIRED", "CONDITIONAL"} else ("BLOCK" if status in {"INCOMPATIBLE", "UNKNOWN"} else "ALLOW"),
         "findings": findings,
     }
+    snapshot_refs = {
+        "ontology": [
+            {"ref": ref, "sha256": value["sha256"]}
+            for ref, value in sorted(ontology_index.items())
+        ],
+        "mappings": [
+            {"ref": ref, "sha256": value["sha256"]}
+            for ref, value in sorted(mapping_index.items())
+        ],
+    }
+    if snapshot_refs["ontology"] or snapshot_refs["mappings"]:
+        report["snapshots"] = snapshot_refs
     report["digest"] = digest(report)
     return report

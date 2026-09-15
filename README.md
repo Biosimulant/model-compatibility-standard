@@ -17,7 +17,7 @@ Python and TypeScript.
 
 ## Status
 
-`0.1.0-alpha.3` is an engineering release candidate. The schemas and validators
+`0.1.0-alpha.4` is an engineering release candidate. The schemas and validators
 are conformance-tested, but the catalogue is not GA until its scientific review
 gate is complete.
 
@@ -63,11 +63,11 @@ that a model is scientifically valid or clinically safe.
 The packages aren't on PyPI or npm yet. Install from a tagged release on GitHub:
 
 ```bash
-pip install "biosimulant-model-compatibility-standard @ git+https://github.com/Biosimulant/model-compatibility-standard@v0.1.0-alpha.3"
+pip install "biosimulant-model-compatibility-standard @ git+https://github.com/Biosimulant/model-compatibility-standard@v0.1.0-alpha.4"
 ```
 
 ```bash
-npm install github:Biosimulant/model-compatibility-standard#v0.1.0-alpha.3
+npm install github:Biosimulant/model-compatibility-standard#v0.1.0-alpha.4
 ```
 
 The npm install builds the package, which runs a small Python 3 script. Python 3

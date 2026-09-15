@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+- Resolver preconditions now run in Python and TypeScript instead of being
+  skipped.
+- Compatibility reports and plans now record every verified ontology and
+  identifier-mapping snapshot that affected the result.
+- The Python package now includes a `py.typed` marker for typed consumers.
+
 - Added TypeScript normalization, compatibility locks and deterministic graph
   resolution with the same cost ordering, ambiguity and revocation behavior as
   Python.
