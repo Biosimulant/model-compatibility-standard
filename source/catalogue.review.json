@@ -1,5 +1,5 @@
 {
-  "$schema": "BioSimulant_Model_Compatibility_Profile_Catalogue.schema.json",
+  "$schema": "Biosimulant_Model_Compatibility_Profile_Catalogue.schema.json",
   "$id": "https://biosimulant.com/standards/model-compatibility/catalogues/profiles/v0.1",
   "catalogue_version": "0.1.0-draft",
   "standard": "https://biosimulant.com/standards/model-compatibility/v0.1",

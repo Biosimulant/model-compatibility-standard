@@ -209,7 +209,7 @@ def contract_schema(items: list[dict[str, Any]]) -> dict[str, Any]:
     return {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$id": f"{STANDARD}/schemas/port-contract.schema.json",
-        "title": "BioSimulant Port Contract",
+        "title": "Biosimulant Port Contract",
         "type": "object",
         "properties": object_properties,
         "additionalProperties": False,
@@ -696,7 +696,7 @@ def build(root: Path) -> None:
             data = path.read_bytes()
             files.append({"path": path.relative_to(root).as_posix(), "sha256": "sha256:" + hashlib.sha256(data).hexdigest(), "size_bytes": len(data)})
     manifest_without_digest = {
-        "schema_version": "0.1", "standard": STANDARD, "release": "0.1.0-alpha.1",
+        "schema_version": "0.1", "standard": STANDARD, "release": "0.1.0-alpha.2",
         "canonicalization": "RFC8785", "files": files,
         "counts": {"profiles": 650, "item_definitions": 266, "item_packs": 30},
         "ga_ready": False,

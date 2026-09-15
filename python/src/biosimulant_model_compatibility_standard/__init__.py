@@ -1,4 +1,4 @@
-"""Reference implementation for the BioSimulant Model Compatibility Standard."""
+"""Reference implementation for the Biosimulant Model Compatibility Standard."""
 
 from .bundle import Bundle, get_bundle
 from .canonical import canonical_bytes, digest
@@ -25,4 +25,4 @@ __all__ = [
     "validate_object",
 ]
 
-__version__ = "0.1.0a1"
+__version__ = "0.1.0a2"

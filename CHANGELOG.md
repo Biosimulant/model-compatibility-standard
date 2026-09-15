@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.0-alpha.2 — Agent integration foundation
+
+- Correct the canonical product spelling to **Biosimulant** across public metadata.
+- Preserve the immutable `0.1.0-alpha.1` release and publish this correction as a new bundle.
+
 ## 0.1.0-alpha.1 — implementation draft
 
 - Established the canonical JSON Schema Draft 2020-12 bundle.

@@ -1,6 +1,6 @@
 # Governance
 
-BioSimulant maintains this standard in public. Specification releases use
+Biosimulant maintains this standard in public. Specification releases use
 semantic versioning; every released schema, profile, rule bundle, and fixture
 is immutable and content-addressed.
 

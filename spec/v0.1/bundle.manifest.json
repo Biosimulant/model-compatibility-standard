@@ -1,5 +1,5 @@
 {
-  "bundle_sha256": "sha256:6948f4fd6d4544fca469a19092fd3ba50ecf1f14678ae519f1c8818a3cb6aee3",
+  "bundle_sha256": "sha256:ab4aef8d1eb732df01192df5b3dafac2cc9906c32b295c5ec88441071b834cbe",
   "canonicalization": "RFC8785",
   "counts": {
     "item_definitions": 266,
@@ -6614,7 +6614,7 @@
     },
     {
       "path": "schemas/port-contract.schema.json",
-      "sha256": "sha256:0dcb58cda90905cb48d9bde0449a16be9b6b7ff6bffdfa1fbc84df7ce1cdcdb3",
+      "sha256": "sha256:ce0f1a815a3bbcc6452990676c87b438f263358334fa28860bee96916dd42382",
       "size_bytes": 51070
     },
     {
@@ -6647,7 +6647,7 @@
     "Every profile requires authoritative scientific sources and named domain-review approval."
   ],
   "ga_ready": false,
-  "release": "0.1.0-alpha.1",
+  "release": "0.1.0-alpha.2",
   "schema_version": "0.1",
   "standard": "https://biosimulant.com/standards/model-compatibility/v0.1"
 }

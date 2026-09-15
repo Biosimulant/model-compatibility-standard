@@ -1,9 +1,9 @@
-# BioSimulant Model Compatibility Standard
+# Biosimulant Model Compatibility Standard
 
 Open, versioned schemas, profiles, rules, conformance fixtures, and reference
 validators for compatibility between executable biological model ports.
 
-The standard is additive to BioSimulant `model.yaml` schema `2.0`. Models that
+The standard is additive to Biosimulant `model.yaml` schema `2.0`. Models that
 do not declare a `compatibility` block keep their existing behavior.
 
 ## Status
