@@ -75,6 +75,10 @@ REASON_CODES = {
     "BMCS_EXACT_CONTRACT": "The two contracts are identical.",
     "BMCS_REQUIRED_EVIDENCE_MISSING": "Information needed for the comparison is missing.",
     "BMCS_OPERATOR_REQUIRES_SNAPSHOT": "This check needs pinned ontology or mapping data, which isn't available.",
+    "BMCS_OPERATOR_INPUT_INVALID": "A comparison operator received invalid or unsafe input.",
+    "BMCS_RESOURCE_LIMIT_EXCEEDED": "The document exceeds a validator safety limit.",
+    "BMCS_REFINEMENT_WITHOUT_BASE": "An accepted representation declares a contract without a common input contract.",
+    "BMCS_REFINEMENT_WEAKENS_CONTRACT": "An accepted representation changes a common input invariant.",
     "BMCS_RULE_SATISFIED": "A comparison rule passed.",
 }
 
@@ -702,7 +706,7 @@ def build(root: Path) -> None:
             data = path.read_bytes()
             files.append({"path": path.relative_to(root).as_posix(), "sha256": "sha256:" + hashlib.sha256(data).hexdigest(), "size_bytes": len(data)})
     manifest_without_digest = {
-        "schema_version": "0.1", "standard": STANDARD, "release": "0.1.0-alpha.2",
+        "schema_version": "0.1", "standard": STANDARD, "release": "0.1.0-alpha.3",
         "canonicalization": "RFC8785", "files": files,
         "counts": {"profiles": 650, "item_definitions": 266, "item_packs": 30},
         "ga_ready": False,

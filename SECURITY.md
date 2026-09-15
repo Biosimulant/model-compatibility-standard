@@ -9,18 +9,20 @@ of opening a public issue.
   download a `$ref`, a profile or any other URL.
 - Comparison rules are data. A profile can't run code, templates, shell
   commands, Python or JavaScript.
+- `Bundle.verify_integrity()` in Python and `Bundle.verifyIntegrity()` in
+  TypeScript check every installed file's size and sha256, as well as the bundle
+  manifest's own digest.
+- Both implementations reject excessive document size, nesting, node count,
+  string size, array size, object size, profile references and comparison rules
+  using the same defaults. Applications may select stricter limits.
+- The `pattern` operator accepts a deliberately small, bounded regular-expression
+  subset and rejects lookarounds, backreferences and stacked quantifiers.
 
-## What they don't do yet
+## Service responsibilities
 
-- They don't check installed files against the sha256 values in
-  `spec/v0.1/bundle.manifest.json`. In a source checkout,
-  `python3 scripts/build_standard.py --check` confirms the files match what the
-  build produces.
-- They don't limit document size, nesting depth, or the number of references or
-  rules. Only the Python resolver limits its search (see `ResolutionLimits`).
-
-If you run the validators on untrusted input, enforce your own size and time
-limits around them.
+Services must still enforce request-body limits, authentication, tenant-aware
+cache keys, rate limits, execution timeouts and resolver concurrency. Library
+limits are defense in depth, not a replacement for service controls.
 
 ## Services built on this standard
 

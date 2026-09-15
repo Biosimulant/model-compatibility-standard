@@ -3,11 +3,15 @@
 from __future__ import annotations
 
 import json
+import hashlib
 from dataclasses import dataclass
 from functools import cached_property, lru_cache
 from importlib.resources import files
 from pathlib import Path
 from typing import Any, Iterator
+
+from .canonical import digest
+from .security import DEFAULT_RESOURCE_LIMITS, ResourceLimitError, ResourceLimits, ensure_json_limits
 
 
 def _spec_root() -> Any:
@@ -21,11 +25,25 @@ def _spec_root() -> Any:
 @dataclass(frozen=True)
 class Bundle:
     root: Any
+    limits: ResourceLimits = DEFAULT_RESOURCE_LIMITS
+
+    def _target(self, relative_path: str) -> Any:
+        parts = Path(relative_path).parts
+        if not parts or Path(relative_path).is_absolute() or ".." in parts:
+            raise ValueError(f"Bundle path must be relative and contained in the bundle: {relative_path}")
+        return self.root.joinpath(*parts)
 
     def read_json(self, relative_path: str) -> Any:
-        target = self.root.joinpath(relative_path)
-        with target.open("r", encoding="utf-8") as stream:
-            return json.load(stream)
+        target = self._target(relative_path)
+        data = target.read_bytes()
+        if len(data) > self.limits.max_document_bytes:
+            raise ResourceLimitError(
+                f"Bundle file {relative_path} is {len(data)} bytes; the limit is "
+                f"{self.limits.max_document_bytes} bytes."
+            )
+        value = json.loads(data)
+        ensure_json_limits(value, limits=self.limits)
+        return value
 
     @cached_property
     def manifest(self) -> dict[str, Any]:
@@ -69,6 +87,31 @@ class Bundle:
     def profiles(self) -> Iterator[dict[str, Any]]:
         for ref in sorted(self.profile_index):
             yield self.profile(ref)
+
+    def verify_integrity(self) -> None:
+        """Verify every released file and the bundle manifest's own digest."""
+
+        manifest = self.manifest
+        declared_digest = manifest.get("bundle_sha256")
+        unsigned = {key: value for key, value in manifest.items() if key != "bundle_sha256"}
+        if declared_digest != digest(unsigned):
+            raise ValueError("The bundle manifest digest does not match its contents.")
+
+        seen: set[str] = set()
+        for entry in manifest.get("files", []):
+            relative_path = entry.get("path")
+            if not isinstance(relative_path, str) or relative_path in seen:
+                raise ValueError("The bundle manifest contains an invalid or duplicate file path.")
+            seen.add(relative_path)
+            target = self._target(relative_path)
+            if not target.is_file():
+                raise ValueError(f"Bundle file is missing: {relative_path}")
+            data = target.read_bytes()
+            if len(data) != entry.get("size_bytes"):
+                raise ValueError(f"Bundle file size does not match the manifest: {relative_path}")
+            actual = "sha256:" + hashlib.sha256(data).hexdigest()
+            if actual != entry.get("sha256"):
+                raise ValueError(f"Bundle file digest does not match the manifest: {relative_path}")
 
 
 @lru_cache(maxsize=1)

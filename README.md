@@ -17,7 +17,9 @@ Python and TypeScript.
 
 ## Status
 
-`0.1.0-alpha.2` is an early draft, and breaking changes are likely before 1.0.
+`0.1.0-alpha.3` is an engineering release candidate. The schemas and validators
+are conformance-tested, but the catalogue is not GA until its scientific review
+gate is complete.
 
 All 650 profiles can be checked by machine, but none has finished scientific
 review yet: 591 are `candidate` and 59 are `draft`. See
@@ -61,11 +63,11 @@ that a model is scientifically valid or clinically safe.
 The packages aren't on PyPI or npm yet. Install from a tagged release on GitHub:
 
 ```bash
-pip install "biosimulant-model-compatibility-standard @ git+https://github.com/Biosimulant/model-compatibility-standard@v0.1.0-alpha.2"
+pip install "biosimulant-model-compatibility-standard @ git+https://github.com/Biosimulant/model-compatibility-standard@v0.1.0-alpha.3"
 ```
 
 ```bash
-npm install github:Biosimulant/model-compatibility-standard#v0.1.0-alpha.2
+npm install github:Biosimulant/model-compatibility-standard#v0.1.0-alpha.3
 ```
 
 The npm install builds the package, which runs a small Python 3 script. Python 3
@@ -107,23 +109,31 @@ What each package provides:
 | Validate any object against a bundled schema | `validate_object` | `validateObject` |
 | Compare two contracts | `compare_contracts` | `compareContracts` |
 | Canonical JSON and sha256 digest | `canonical_bytes`, `digest` | `canonicalJson`, `digest` |
-| Sort set-like fields before hashing | `normalize_contract`, `normalize_manifest` | not yet |
-| Plan a conversion path | `resolve_contracts`, `ResolutionLimits` | not yet |
-| Build `compatibility.lock.json` | `build_compatibility_lock` | not yet |
+| Sort set-like fields before hashing | `normalize_contract`, `normalize_manifest` | `normalizeContract`, `normalizeManifest` |
+| Plan a conversion path | `resolve_contracts`, `ResolutionLimits` | `resolveContracts`, `ResolutionLimits` |
+| Build `compatibility.lock.json` | `build_compatibility_lock` | `buildCompatibilityLock` |
+| Verify the installed bundle | `Bundle.verify_integrity` | `Bundle.verifyIntegrity` |
 
 The [Biosimulant docs](https://docs.biosimulant.com/standards/model-compatibility)
 show a full `model.yaml` example and the profile catalogue.
 
-## Not implemented yet
+For agent integrations, [MCP and Agent Skill Integration](INTEGRATIONS.md)
+defines the Biosimulant Agent Gateway tools, OAuth scopes, approval boundary,
+and strict managed-run sequence. MCP is an authenticated product interface;
+skills are optional guidance and do not change permissions or compatibility
+decisions.
 
-- Python treats `term-equivalent` and `same-dimension` as plain equality. It
-  returns `UNKNOWN` for `pattern`, `term-subsumes`, `mapping-total` and
-  `mapping-bijective`, because they need pinned ontology or mapping data.
-- TypeScript also lacks `in`, `not-in` and `range`, doesn't validate
-  `accepted_profiles` contracts, and has no normalization, resolution or locks.
-- Neither package checks installed files against the sha256 values in
-  `bundle.manifest.json`, or limits document size or nesting. See
-  [SECURITY.md](SECURITY.md).
+## Remaining GA gate
+
+Both implementations now support the complete operator vocabulary. Ontology
+and identifier-mapping operators fail closed with `UNKNOWN` unless the caller
+supplies the exact digest-pinned snapshot named by the rule. They also enforce
+the same document limits, accepted-profile refinement rules, normalization,
+locks, resolution order and bundle integrity checks.
+
+The remaining release blocker is scientific rather than a missing validator
+feature: every public profile still needs authoritative sources and independent
+review. See [PROFILE_REVIEW.md](PROFILE_REVIEW.md).
 
 ## Repository layout
 

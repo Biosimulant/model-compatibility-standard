@@ -8,20 +8,17 @@ from typing import Any
 from .bundle import Bundle, get_bundle
 from .canonical import digest
 from .constants import STANDARD
-from .validation import validate_manifest
+from .normalization import normalize_manifest
 
 
 def build_compatibility_lock(manifest: dict[str, Any], *, bundle: Bundle | None = None) -> dict[str, Any]:
     active = bundle or get_bundle()
-    findings = validate_manifest(manifest, bundle=active)
-    if findings:
-        messages = "; ".join(f"{item.path}: {item.message}" for item in findings)
-        raise ValueError(f"The manifest's compatibility block is invalid: {messages}")
+    normalized = normalize_manifest(manifest, bundle=active)
 
-    imports = sorted(manifest.get("compatibility", {}).get("profiles", []), key=lambda item: item["ref"])
+    imports = sorted(normalized.get("compatibility", {}).get("profiles", []), key=lambda item: item["ref"])
     contracts = []
     for direction in ("inputs", "outputs"):
-        for port in manifest.get("io", {}).get(direction, []):
+        for port in normalized.get("io", {}).get(direction, []):
             if "contract" in port:
                 value = deepcopy(port["contract"])
                 contracts.append({

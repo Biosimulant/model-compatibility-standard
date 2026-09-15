@@ -16,3 +16,14 @@ def test_lock_is_repeatable_and_leaves_manifest_unchanged():
     assert manifest == original
     assert first["bundle_sha256"] == bundle.digest
     assert first["digest"].startswith("sha256:")
+
+
+def test_lock_digests_normalized_set_like_contract_fields():
+    bundle = get_bundle()
+    manifest = yaml.safe_load((Path(bundle.root) / "examples" / "compatible-model.yaml").read_text())
+    contract = manifest["io"]["inputs"][0]["contract"]
+    contract["semantic"]["qualifiers"] = ["z", "a"]
+    first = build_compatibility_lock(manifest)
+    contract["semantic"]["qualifiers"] = ["a", "z"]
+    second = build_compatibility_lock(manifest)
+    assert first == second

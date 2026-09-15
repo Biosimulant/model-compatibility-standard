@@ -2,6 +2,18 @@
 
 ## Unreleased
 
+- Added TypeScript normalization, compatibility locks and deterministic graph
+  resolution with the same cost ordering, ambiguity and revocation behavior as
+  Python.
+- Implemented the complete declarative operator vocabulary in both languages.
+  Ontology and mapping operations require an exact content-verified snapshot.
+- Added fail-closed resource limits and installed-bundle integrity verification
+  in both packages.
+- Accepted-profile contracts are now validated as refinements and cannot change
+  common input invariants.
+- Added a cross-language conformance process that compares normalized contracts,
+  locks, reports, plans and all resulting digests byte-for-byte.
+
 - Rewrote the README and the other docs in plain language, and made them match
   what the code actually does, including a list of what isn't implemented yet.
 - Reworded the text inside the spec: profile descriptions, notes and disclaimers,
