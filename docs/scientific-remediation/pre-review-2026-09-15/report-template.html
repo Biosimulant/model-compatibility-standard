@@ -1,0 +1,799 @@
+<title>BMCS v0.1 Referee Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=JetBrains+Mono:wght@400;600&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap">
+<style>
+:root {
+  --ground: #F3F5F1;
+  --surface: #FBFCFA;
+  --ink: #17201B;
+  --muted: #55615A;
+  --faint: #7C8781;
+  --rule: #D6DCD4;
+  --rule-strong: #AEB8AC;
+  --accent: #2946B8;
+  --accent-soft: #E2E7F7;
+  --block: #B42318;
+  --block-soft: #FBE6E3;
+  --change: #8A5000;
+  --change-soft: #F7ECD6;
+  --pass: #1B6E42;
+  --pass-soft: #DFF0E5;
+  --neutral-soft: #E6EAE4;
+  --code: #E8ECE6;
+  --f-display: "Archivo", "Arial Narrow", "Helvetica Neue", system-ui, sans-serif;
+  --f-body: "Source Serif 4", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --step--1: 0.8125rem;
+  --step-0: 1rem;
+  --step-1: 1.1875rem;
+  --step-2: 1.5rem;
+  --step-3: 2rem;
+  --step-4: clamp(2.25rem, 1.4rem + 3.2vw, 3.625rem);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --ground: #0E1310;
+    --surface: #151C18;
+    --ink: #E3E8E3;
+    --muted: #9AA59E;
+    --faint: #75807A;
+    --rule: #28322C;
+    --rule-strong: #46524A;
+    --accent: #9CB0FF;
+    --accent-soft: #1D2544;
+    --block: #FF8B7B;
+    --block-soft: #3A1612;
+    --change: #F2BD5C;
+    --change-soft: #32250D;
+    --pass: #70D29B;
+    --pass-soft: #10301E;
+    --neutral-soft: #1D2521;
+    --code: #1B231F;
+  }
+}
+:root[data-theme="dark"] {
+  --ground: #0E1310;
+  --surface: #151C18;
+  --ink: #E3E8E3;
+  --muted: #9AA59E;
+  --faint: #75807A;
+  --rule: #28322C;
+  --rule-strong: #46524A;
+  --accent: #9CB0FF;
+  --accent-soft: #1D2544;
+  --block: #FF8B7B;
+  --block-soft: #3A1612;
+  --change: #F2BD5C;
+  --change-soft: #32250D;
+  --pass: #70D29B;
+  --pass-soft: #10301E;
+  --neutral-soft: #1D2521;
+  --code: #1B231F;
+}
+
+* { box-sizing: border-box; }
+html { font-size: 100%; scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--f-body);
+  font-size: 1.0625rem;
+  line-height: 1.58;
+  padding-inline: clamp(16px, 4vw, 48px);
+  padding-block: 0 96px;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-underline-offset: 2px; }
+a:focus-visible, button:focus-visible, select:focus-visible, input:focus-visible, summary:focus-visible, [tabindex]:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+code, .mono { font-family: var(--f-mono); font-size: 0.84em; }
+code { background: var(--code); padding: 0.05em 0.35em; border-radius: 3px; overflow-wrap: anywhere; }
+
+.label {
+  font-family: var(--f-display);
+  font-variation-settings: "wdth" 78;
+  font-weight: 650;
+  font-size: var(--step--1);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 188px minmax(0, 1fr);
+  gap: clamp(28px, 4vw, 56px);
+}
+.index {
+  position: sticky;
+  top: 0;
+  align-self: start;
+  padding-block: 40px 24px;
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.index ol { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 2px; }
+.index a {
+  display: block;
+  padding: 5px 8px 5px 10px;
+  border-left: 2px solid var(--rule);
+  color: var(--muted);
+  text-decoration: none;
+  font-family: var(--f-display);
+  font-variation-settings: "wdth" 88;
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+.index a:hover { color: var(--ink); border-left-color: var(--rule-strong); }
+.index .sub a { padding-left: 22px; font-family: var(--f-mono); font-size: 0.75rem; }
+.index .sub a b { font-weight: 600; color: var(--ink); margin-right: 6px; }
+
+main { min-width: 0; padding-block: 40px 0; display: grid; gap: 88px; }
+section { display: grid; gap: 22px; scroll-margin-top: 20px; }
+h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; color: var(--ink); }
+h1 {
+  font-size: var(--step-4);
+  font-variation-settings: "wdth" 72;
+  font-weight: 760;
+  line-height: 1.0;
+  letter-spacing: -0.012em;
+  max-width: 17ch;
+}
+h2 {
+  font-size: var(--step-3);
+  font-variation-settings: "wdth" 80;
+  font-weight: 720;
+  line-height: 1.08;
+}
+h3 { font-size: var(--step-1); font-variation-settings: "wdth" 90; font-weight: 680; line-height: 1.2; }
+p { margin: 0; max-width: 66ch; }
+.prose { display: grid; gap: 14px; }
+.lede { font-size: var(--step-1); line-height: 1.5; color: var(--ink); max-width: 60ch; }
+
+/* ---------- masthead ---------- */
+.masthead { display: grid; gap: 26px; }
+.verdicts { display: grid; gap: 14px; max-width: 760px; }
+.bar { display: flex; height: 18px; border-radius: 3px; overflow: hidden; background: var(--neutral-soft); }
+.bar span { display: block; height: 100%; }
+.bar .b { background: var(--block); }
+.bar .c { background: var(--change); }
+.legend { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.legend div { display: grid; gap: 2px; border-top: 1px solid var(--rule); padding-top: 10px; }
+.legend .n {
+  font-family: var(--f-display);
+  font-variation-settings: "wdth" 70;
+  font-weight: 760;
+  font-size: var(--step-3);
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.legend .k { font-family: var(--f-mono); font-size: 0.72rem; color: var(--muted); overflow-wrap: anywhere; }
+.legend .swatch { display: inline-block; width: 9px; height: 9px; border-radius: 2px; margin-right: 6px; vertical-align: 1px; }
+
+.status {
+  border: 1px solid var(--rule-strong);
+  background: var(--surface);
+  padding: 20px 22px;
+  display: grid;
+  gap: 14px;
+  max-width: 900px;
+}
+.status dl { display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: 10px 20px; margin: 0; }
+.status dt { font-family: var(--f-display); font-variation-settings: "wdth" 85; font-weight: 650; font-size: 0.92rem; color: var(--ink); }
+.status dd { margin: 0; font-size: 0.97rem; color: var(--ink); }
+
+/* ---------- chips ---------- */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--f-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  padding: 2px 7px;
+  border-radius: 3px;
+  white-space: nowrap;
+  line-height: 1.5;
+}
+.chip.block { background: var(--block-soft); color: var(--block); }
+.chip.change { background: var(--change-soft); color: var(--change); }
+.chip.pass { background: var(--pass-soft); color: var(--pass); }
+.chip.neutral { background: var(--neutral-soft); color: var(--muted); }
+.chip.accent { background: var(--accent-soft); color: var(--accent); }
+
+/* ---------- tables ---------- */
+.scroll { overflow-x: auto; border-top: 1px solid var(--rule-strong); }
+table { border-collapse: collapse; width: 100%; font-size: 0.95rem; }
+th {
+  text-align: left;
+  font-family: var(--f-display);
+  font-variation-settings: "wdth" 80;
+  font-weight: 650;
+  font-size: var(--step--1);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding: 10px 12px 8px 0;
+  border-bottom: 1px solid var(--rule);
+  vertical-align: bottom;
+}
+td { padding: 11px 12px 11px 0; border-bottom: 1px solid var(--rule); vertical-align: top; }
+td.mono, .engine td:first-child { font-family: var(--f-mono); font-size: 0.78rem; overflow-wrap: anywhere; }
+.engine td:nth-child(3) .chip, .engine td:nth-child(4) { white-space: normal; }
+.engine td:nth-child(4) { color: var(--pass); font-family: var(--f-display); font-variation-settings: "wdth" 88; font-weight: 600; }
+.engine .result { font-family: var(--f-mono); font-size: 0.74rem; font-weight: 600; color: var(--block); overflow-wrap: anywhere; }
+.engine { min-width: 760px; }
+
+/* ---------- concept decision ---------- */
+.decision {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  gap: 0;
+  border: 1px solid var(--rule-strong);
+  background: var(--surface);
+}
+.decision > div { padding: 22px 24px; display: grid; gap: 12px; align-content: start; }
+.decision > div + div { border-left: 1px solid var(--rule); }
+.decision .verdict-text {
+  font-family: var(--f-display);
+  font-variation-settings: "wdth" 82;
+  font-weight: 700;
+  font-size: var(--step-2);
+  line-height: 1.15;
+  text-wrap: balance;
+}
+.iri { display: grid; gap: 6px; }
+.iri code { display: block; padding: 8px 10px; font-size: 0.76rem; line-height: 1.5; }
+.iri .old { text-decoration: line-through; text-decoration-color: var(--block); color: var(--muted); }
+.options { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+.options li { display: grid; grid-template-columns: 84px minmax(0, 1fr); gap: 12px; font-size: 0.95rem; }
+
+/* ---------- systemic findings ---------- */
+.findings { display: grid; border-top: 1px solid var(--rule-strong); }
+details.finding { border-bottom: 1px solid var(--rule); }
+details.finding > summary {
+  list-style: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr) auto;
+  gap: 4px 16px;
+  padding: 16px 0;
+  align-items: baseline;
+}
+details.finding > summary::-webkit-details-marker { display: none; }
+details.finding > summary .fid { font-family: var(--f-mono); font-weight: 600; font-size: 0.9rem; color: var(--accent); }
+details.finding > summary h3 { font-size: 1.08rem; }
+details.finding > summary .applies { grid-column: 2 / 3; font-size: 0.86rem; color: var(--muted); }
+details.finding > summary::after {
+  content: "+";
+  grid-column: 3; grid-row: 2;
+  justify-self: end;
+  font-family: var(--f-mono);
+  color: var(--faint);
+}
+details.finding[open] > summary::after { content: "\2212"; }
+.fbody { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 12px 20px; padding: 0 0 22px 60px; }
+.fbody dt { font-family: var(--f-display); font-variation-settings: "wdth" 80; font-weight: 650; font-size: var(--step--1); letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.fbody dd { margin: 0; max-width: 70ch; font-size: 0.98rem; }
+.fbody dd.fieldpath { font-family: var(--f-mono); font-size: 0.8rem; overflow-wrap: anywhere; }
+.fbody dd.proposed { border-left: 2px solid var(--pass); padding-left: 12px; }
+.srcs { display: flex; flex-wrap: wrap; gap: 6px; }
+.srcs a { font-family: var(--f-mono); font-size: 0.72rem; text-decoration: none; background: var(--accent-soft); color: var(--accent); padding: 2px 7px; border-radius: 3px; }
+.srcs a:hover { text-decoration: underline; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+button.text {
+  font-family: var(--f-display); font-variation-settings: "wdth" 88; font-weight: 600; font-size: 0.88rem;
+  background: none; border: 1px solid var(--rule-strong); color: var(--ink); padding: 5px 12px; border-radius: 3px; cursor: pointer;
+}
+button.text:hover { border-color: var(--ink); }
+
+/* ---------- explorer ---------- */
+.controls { display: grid; grid-template-columns: minmax(0, 2fr) repeat(3, minmax(0, 1fr)); gap: 10px; align-items: end; }
+.controls label { display: grid; gap: 5px; }
+input[type="search"], select {
+  font: inherit;
+  font-family: var(--f-display);
+  font-variation-settings: "wdth" 92;
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--rule-strong);
+  border-radius: 3px;
+  padding: 8px 10px;
+  width: 100%;
+  min-width: 0;
+}
+.countline { font-family: var(--f-display); font-variation-settings: "wdth" 88; color: var(--muted); font-size: 0.95rem; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.countline b { color: var(--ink); font-variant-numeric: tabular-nums; }
+.strip-legend { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+
+.explorer { min-width: 720px; }
+.explorer tbody tr.row { cursor: pointer; }
+.explorer tbody tr.row:hover td { background: var(--surface); }
+.explorer tbody tr.row[aria-expanded="true"] td { background: var(--surface); border-bottom-color: transparent; }
+.explorer td.pid { font-family: var(--f-mono); font-size: 0.78rem; }
+.explorer td.pid .name { display: block; font-family: var(--f-display); font-variation-settings: "wdth" 90; font-size: 0.98rem; font-weight: 600; color: var(--ink); margin-bottom: 1px; }
+.explorer td.pid .dom { color: var(--muted); }
+.explorer td.fc { font-size: 0.88rem; color: var(--muted); }
+.explorer td.num { font-variant-numeric: tabular-nums; }
+.strip { display: inline-grid; grid-template-columns: repeat(13, 11px); gap: 2px; vertical-align: middle; }
+.cell { width: 11px; height: 11px; border: 1.5px solid var(--ink); border-radius: 1px; }
+.cell.I { background: var(--ink); }
+.cell.C { background: linear-gradient(135deg, var(--ink) 0 50%, transparent 50% 100%); }
+.cell.X { border-color: var(--rule-strong); background: transparent; }
+
+tr.detail > td { background: var(--surface); padding: 4px 20px 26px; }
+.dgrid { display: grid; gap: 26px; }
+.dgrid h4 {
+  margin: 0 0 10px;
+  font-family: var(--f-display); font-variation-settings: "wdth" 80; font-weight: 650; font-size: var(--step--1);
+  letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted);
+}
+.pf { border-left: 3px solid var(--change); padding: 4px 0 4px 16px; display: grid; gap: 8px; }
+.pf.blocking { border-left-color: var(--block); }
+.pf + .pf { margin-top: 16px; }
+.pf .head { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.pf .head strong { font-family: var(--f-display); font-variation-settings: "wdth" 88; font-size: 1.02rem; }
+.kv { display: grid; grid-template-columns: 92px minmax(0, 1fr); gap: 6px 16px; font-size: 0.95rem; }
+.kv dt { font-family: var(--f-display); font-variation-settings: "wdth" 80; font-weight: 650; font-size: 0.74rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); padding-top: 3px; }
+.kv dd { margin: 0; max-width: 72ch; }
+.kv dd.m { font-family: var(--f-mono); font-size: 0.8rem; overflow-wrap: anywhere; }
+.two { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 28px; }
+.mini { width: 100%; font-size: 0.9rem; }
+.mini td { padding: 7px 10px 7px 0; }
+.mini td:first-child { width: 42%; font-family: var(--f-display); font-variation-settings: "wdth" 90; }
+.mini td.note { color: var(--muted); font-size: 0.86rem; }
+.itemgroups { display: grid; gap: 8px; }
+.itemgroups details summary { cursor: pointer; font-family: var(--f-display); font-variation-settings: "wdth" 90; font-size: 0.95rem; }
+.itemgroups .paths { display: flex; flex-wrap: wrap; gap: 5px; padding: 8px 0 4px; }
+.itemgroups .paths code { font-size: 0.7rem; }
+.systemic-line { font-size: 0.93rem; color: var(--muted); }
+.systemic-line a { font-family: var(--f-mono); font-size: 0.8rem; }
+.more { justify-self: start; }
+
+/* ---------- rules & sources ---------- */
+.rules { min-width: 680px; }
+.rules td:first-child { font-family: var(--f-mono); font-size: 0.76rem; width: 34%; overflow-wrap: anywhere; }
+.rules td:nth-child(2) { width: 118px; }
+.rules td:last-child { font-size: 0.92rem; }
+.sources { min-width: 760px; }
+.sources td:first-child { font-family: var(--f-mono); font-size: 0.74rem; width: 150px; overflow-wrap: anywhere; }
+.sources td.ver { font-size: 0.86rem; color: var(--muted); }
+.sources td.pin { font-family: var(--f-mono); font-size: 0.72rem; color: var(--change); white-space: nowrap; }
+.sources tr:target td { background: var(--accent-soft); }
+
+.note { font-size: 0.93rem; color: var(--muted); max-width: 70ch; }
+.errata { display: grid; gap: 0; border-top: 1px solid var(--rule-strong); }
+.errata > div { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 4px 16px; padding: 14px 0; border-bottom: 1px solid var(--rule); align-items: baseline; }
+.errata .eid { font-family: var(--f-mono); font-weight: 600; color: var(--change); font-size: 0.85rem; }
+.errata h3 { font-size: 1.02rem; }
+.errata p { grid-column: 2; font-size: 0.95rem; }
+footer { border-top: 1px solid var(--rule-strong); padding-top: 18px; color: var(--muted); font-size: 0.9rem; }
+
+@media (max-width: 960px) {
+  .shell { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .index { position: static; max-height: none; padding-block: 24px 0; }
+  .index ol { display: flex; flex-wrap: wrap; gap: 6px; }
+  .index a { border-left: 0; border: 1px solid var(--rule); border-radius: 3px; padding: 4px 10px; }
+  .index .sub { display: none; }
+  main { padding-block: 28px 0; gap: 64px; }
+  .decision { grid-template-columns: minmax(0, 1fr); }
+  .decision > div + div { border-left: 0; border-top: 1px solid var(--rule); }
+  .controls { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .controls label:first-child { grid-column: 1 / -1; }
+  .two { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 560px) {
+  .legend { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .status dl { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .status dd { margin-bottom: 10px; }
+  .fbody { grid-template-columns: minmax(0, 1fr); padding-left: 0; gap: 4px; }
+  .fbody dd { margin-bottom: 10px; }
+  details.finding > summary { grid-template-columns: 38px minmax(0, 1fr); }
+  details.finding > summary .chip { grid-column: 2; justify-self: start; }
+  details.finding > summary::after { display: none; }
+  .controls { grid-template-columns: minmax(0, 1fr); }
+  .kv { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .kv dd { margin-bottom: 8px; }
+  tr.detail > td { padding: 4px 12px 22px; }
+}
+</style>
+
+<div class="shell">
+  <nav class="index" aria-label="Report sections">
+    <span class="label">Referee report</span>
+    <ol>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#corrections">Corrections</a></li>
+      <li><a href="#evidence">Engine evidence</a></li>
+      <li><a href="#concept">The #concept identifier</a></li>
+      <li><a href="#systemic">Systemic findings</a></li>
+      <li class="sub"><ol id="index-systemic"></ol></li>
+      <li><a href="#profiles">All 650 profiles</a></li>
+      <li><a href="#items">Candidate item rules</a></li>
+      <li><a href="#sources">Sources</a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <header class="masthead" id="summary">
+      <span class="label">Biosimulant Model Compatibility Standard &middot; v0.1 &middot; scientific review &middot; 15 September 2026</span>
+      <h1>None of the 650 profiles can be approved as published</h1>
+      <p class="lede">Every profile passes its tests in both implementations, and every packet digest matches its profile. The tests prove the rules run. They do not prove the rules are right, and running the engine on real scientific cases shows several rules returning the wrong answer in both directions.</p>
+
+      <div class="verdicts" aria-label="Verdict distribution">
+        <div class="bar" id="bar" role="img"></div>
+        <div class="legend" id="legend"></div>
+        <p class="note">This split is <strong>withdrawn as a verdict</strong> and kept only as an index of which profiles show which symptom. Nearly every defect comes from shared generator and comparison code, so the conclusion is simply that no profile can be approved until those foundations are fixed. See Corrections.</p>
+      </div>
+
+      <div class="status">
+        <span class="label">Status of this review</span>
+        <dl>
+          <dt>What this is</dt>
+          <dd>An independent pre-sign-off analysis and change request, produced by an AI assistant (Claude Opus 5) at the repository owner's request. It is <strong>not</strong> the named, domain-qualified scientific sign-off that <code>PROFILE_REVIEW.md</code> requires, and must not be recorded as one.</dd>
+          <dt>Scope</dt>
+          <dd>All 650 profiles. No assignment list exists in the repository, the packets or earlier sessions, and every profile comes from one generator, so the generator's rules were reviewed across all of them and representative profiles were run through the engine.</dd>
+          <dt>Evidence files</dt>
+          <dd>None written. Every profile carries at least one blocking change, and <code>source/reviews/&lt;domain&gt;/&lt;profile&gt;.json</code> may only be created after blocking changes are incorporated. Nothing under <code>spec/v0.1/</code> or <code>source/</code> was modified.</dd>
+          <dt>Digests</dt>
+          <dd>650 of 650 packet <code>profile_sha256</code> values reproduce from the profile definitions.</dd>
+          <dt>Source pinning</dt>
+          <dd>Every source below has a title, a DOI or permanent URL and a version. None is pinned by SHA-256 yet: pinning needs the exact bytes, which were not downloaded. The named reviewer must pin each one at sign-off.</dd>
+        </dl>
+      </div>
+    </header>
+
+    <section id="corrections" aria-labelledby="corrections-h">
+      <span class="label">Read the report with these corrections</span>
+      <h2 id="corrections-h">Corrections</h2>
+      <p>Raised in review of this report and accepted. The report stands as a fault report; these parts do not. The full list, with the design decisions each one opens, is in the remediation plan.</p>
+      <div class="errata" id="errata-list"></div>
+    </section>
+
+    <section id="evidence" aria-labelledby="evidence-h">
+      <span class="label">What the passing tests leave out</span>
+      <h2 id="evidence-h">The engine, run on cases a scientist would try</h2>
+      <p>Each row was executed against <code>compare_contracts</code> or <code>validate_contract</code> in the Python reference implementation. Red is what the standard returns today; green is the scientifically correct outcome.</p>
+      <div class="scroll">
+        <table class="engine">
+          <thead><tr><th>Profile</th><th>Case</th><th>Engine returns</th><th>Correct outcome</th><th>Finding</th></tr></thead>
+          <tbody id="engine-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="concept" aria-labelledby="concept-h">
+      <span class="label">Decision requested on the provisional identifier</span>
+      <h2 id="concept-h">What to do with <code>&hellip;/v0.1#concept</code></h2>
+      <div class="decision">
+        <div>
+          <span class="label">Decision</span>
+          <p class="verdict-text">Keep a Biosimulant-controlled term, re-mint it outside the versioned document, and require a mapping to external ontology terms.</p>
+          <div class="iri">
+            <span class="label">Today</span>
+            <code class="old">https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/firing-rate/v0.1#concept</code>
+            <span class="label">Proposed</span>
+            <code>https://biosimulant.com/standards/model-compatibility/terms/neuroscience/firing-rate</code>
+            <code>semantic.ontology_terms[]: { uri, ontology, version, relation: exact-match | broad-match | narrow-match }</code>
+          </div>
+        </div>
+        <div>
+          <span class="label">Options weighed</span>
+          <ul class="options">
+            <li><span class="chip block">Reject</span><span><strong>Keep as is.</strong> The equal rule is tautological, since validation already forces both contracts to hold the same constant. And because the IRI embeds <code>/v0.1</code>, every v0.1 port would be INCOMPATIBLE with a v0.2 port whose meaning is unchanged.</span></li>
+            <li><span class="chip block">Reject</span><span><strong>External identifier only.</strong> No ontology defines "a Biosimulant contract for firing rate". Forcing one would overstate equivalence and lose the contract boundary the profile exists to draw.</span></li>
+            <li><span class="chip pass">Adopt</span><span><strong>Controlled term plus mapping.</strong> The Biosimulant term keeps profile identity stable across versions; required <code>ontology_terms</code>, compared by subsumption against a pinned snapshot, carry the scientific meaning. With no snapshot the comparison returns UNKNOWN.</span></li>
+          </ul>
+          <div class="srcs"><a href="#src-obo-fp-003">obo-fp-003</a><a href="#src-w3c-cooluris">w3c-cooluris</a><a href="#src-bioregistry-2022">bioregistry-2022</a><a href="#src-obi-2016">obi-2016</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="systemic" aria-labelledby="systemic-h">
+      <span class="label">Apply to the generator, so they apply to every profile it emits</span>
+      <h2 id="systemic-h">Systemic findings</h2>
+      <p>Each finding gives the exact field, its current definition, the proposed definition, the reason, the supporting sources and the fixtures that must change. All changes belong in <code>source/catalogue.review.json</code> or <code>scripts/build_standard.py</code>, followed by regeneration.</p>
+      <div class="toolbar">
+        <button class="text" type="button" id="expand-all">Expand all</button>
+        <button class="text" type="button" id="collapse-all">Collapse all</button>
+      </div>
+      <div class="findings" id="systemic-list"></div>
+    </section>
+
+    <section id="profiles" aria-labelledby="profiles-h">
+      <span class="label">Verdict, findings, contract areas, fixtures and item decisions per profile</span>
+      <h2 id="profiles-h">All 650 profiles</h2>
+      <div class="prose">
+        <p><strong>BLOCK</strong> means the profile's own rules or fixtures certify a scientifically false result, such as a wrong unit, scale or axis structure, or an impossible conversion. Approving it would freeze that error into the conformance suite. <strong>CHANGES_REQUIRED</strong> means none of this profile's own fixtures certifies a false result, but the systemic blockers leave the contract too imprecise to approve.</p>
+      </div>
+      <div class="controls">
+        <label for="q"><span class="label">Search</span><input type="search" id="q" placeholder="Profile, label or field path, e.g. concentration" autocomplete="off"></label>
+        <label for="f-domain"><span class="label">Domain</span><select id="f-domain"><option value="">All domains</option></select></label>
+        <label for="f-verdict"><span class="label">Verdict</span><select id="f-verdict"><option value="">All verdicts</option><option>BLOCK</option><option>CHANGES_REQUIRED</option></select></label>
+        <label for="f-finding"><span class="label">Profile finding</span><select id="f-finding">
+          <option value="">Any</option>
+          <option value="P-MEAS">Unit or scale (P-MEAS)</option>
+          <option value="P-CONV">Conversion fixture (P-CONV)</option>
+          <option value="P-KG">g vs kg fixture (P-KG)</option>
+          <option value="P-AXES">Axes or representation (P-AXES)</option>
+          <option value="none">Systemic only</option>
+        </select></label>
+      </div>
+      <div class="countline">
+        <span id="count"></span>
+        <span class="strip-legend" aria-hidden="true">
+          <span class="label">Contract areas</span>
+          <span><span class="cell I" style="display:inline-block;vertical-align:-1px"></span> included</span>
+          <span><span class="cell C" style="display:inline-block;vertical-align:-1px"></span> conditional</span>
+          <span><span class="cell X" style="display:inline-block;vertical-align:-1px"></span> excluded</span>
+        </span>
+      </div>
+      <div class="scroll">
+        <table class="explorer">
+          <thead><tr><th>Profile</th><th>Verdict</th><th>Profile findings</th><th>Contract areas</th><th>Candidate items</th></tr></thead>
+          <tbody id="rows"></tbody>
+        </table>
+      </div>
+      <button class="text more" type="button" id="more">Show more</button>
+      <p class="systemic-line">Answers to every reviewer question in every packet, all 13 templates, are recorded per profile in <code>change-request.json</code>.</p>
+    </section>
+
+    <section id="items" aria-labelledby="items-h">
+      <span class="label">One rule per candidate item path, applied to every packet that lists it</span>
+      <h2 id="items-h">Candidate item rules</h2>
+      <p>The packets list 240 distinct candidate items, 20 to 79 per profile. Each path gets one decision below, and those decisions are applied in every packet that lists the path. <em>Conditional</em> names the condition that makes an item required. Excluded items carry their scientific reason.</p>
+      <div class="controls" style="grid-template-columns:minmax(0,2fr) minmax(0,1fr)">
+        <label for="rq"><span class="label">Filter paths</span><input type="search" id="rq" placeholder="e.g. measurement.unit" autocomplete="off"></label>
+        <label for="rd"><span class="label">Decision</span><select id="rd"><option value="">All decisions</option><option>required</option><option>conditional</option><option>recommended</option><option>optional</option><option>excluded</option></select></label>
+      </div>
+      <div class="scroll">
+        <table class="rules"><thead><tr><th>Item</th><th>Decision</th><th>Reason</th></tr></thead><tbody id="rule-rows"></tbody></table>
+      </div>
+    </section>
+
+    <section id="sources" aria-labelledby="sources-h">
+      <span class="label">Formal standards, maintained ontologies, databases, guidance and primary publications</span>
+      <h2 id="sources-h">Sources</h2>
+      <p>Pinned by <code>scripts/pin_sources.py</code>. Read the pinning column before relying on a digest: <em>document</em> pins the reviewed text, <em>citation metadata</em> pins only the Crossref record for the DOI, and licensed standards cannot be pinned here at all.</p>
+      <div class="scroll">
+        <table class="sources"><thead><tr><th>Id</th><th>Title</th><th>Version</th><th>SHA-256</th></tr></thead><tbody id="source-rows"></tbody></table>
+      </div>
+    </section>
+
+    <footer>
+      Approval of a profile would mean only that it gives a defensible and precise compatibility contract for its stated intended use. It would not mean that any model using it is scientifically valid, clinically safe or suitable for regulatory use.
+    </footer>
+  </main>
+</div>
+
+<script type="application/json" id="review-data">__REVIEW_DATA__</script>
+<script>
+(function () {
+  "use strict";
+  var D = JSON.parse(document.getElementById("review-data").textContent);
+  var esc = function (s) {
+    return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+    });
+  };
+  var byId = function (id) { return document.getElementById(id); };
+  var total = D.profiles.length;
+  var AREA_LABEL = {
+    structure: "Structure", semantic: "Scientific meaning", representation: "Representation",
+    dimensions: "Dimensions and feature order", identifiers: "Identifiers and versions",
+    measurement: "Quantity, unit, scale, normalisation, endpoint", biological_context: "Biological and experimental context",
+    lifecycle: "Time and lifecycle", origin: "Origin and provenance", uncertainty: "Uncertainty and missingness",
+    artifact: "Artifact format", constraints: "Cross-field constraints", security: "Security, consent, licensing, data use"
+  };
+  var DISP_CHIP = { included: "accent", conditional: "change", excluded: "neutral", required: "block", recommended: "pass", optional: "neutral" };
+  var STATUS_CHIP = { PASS: "pass", PARTIAL: "change", WEAK: "change", FAIL: "block", "N/A": "neutral" };
+  var srcLinks = function (ids) {
+    return '<span class="srcs">' + ids.map(function (i) { return '<a href="#src-' + esc(i) + '">' + esc(i) + "</a>"; }).join("") + "</span>";
+  };
+
+  /* summary */
+  var c = D.counts;
+  var segs = [["BLOCK", c.BLOCK || 0, "b", "var(--block)"], ["CHANGES_REQUIRED", c.CHANGES_REQUIRED || 0, "c", "var(--change)"],
+              ["APPROVE_WITH_NON_BLOCKING_COMMENTS", 0, "", "var(--pass)"], ["APPROVE", 0, "", "var(--pass)"]];
+  byId("bar").innerHTML = segs.filter(function (s) { return s[1]; }).map(function (s) {
+    return '<span class="' + s[2] + '" style="width:' + (100 * s[1] / total) + '%"></span>';
+  }).join("");
+  byId("bar").setAttribute("aria-label", segs.map(function (s) { return s[0] + " " + s[1]; }).join(", "));
+  byId("legend").innerHTML = segs.map(function (s) {
+    return '<div><span class="n">' + s[1] + '</span><span class="k"><span class="swatch" style="background:' + (s[1] ? s[3] : "var(--rule-strong)") + '"></span>' + esc(s[0]) + "</span></div>";
+  }).join("");
+
+  /* corrections */
+  byId("errata-list").innerHTML = (D.errata || []).map(function (e) {
+    return '<div><span class="eid">' + esc(e.id) + "</span><h3>" + esc(e.title) + "</h3><p>" + esc(e.detail) + "</p></div>";
+  }).join("");
+
+  /* engine evidence */
+  byId("engine-rows").innerHTML = D.engine.map(function (e) {
+    var refs = e.findings.split(/,\s*/).map(function (id) { return '<a class="mono" href="#' + id + '">' + id + "</a>"; }).join(" ");
+    return "<tr><td>" + esc(e.profile) + "</td><td>" + esc(e["case"]) + '</td><td><span class="result">' + esc(e.engine_result) + "</span></td><td>" + esc(e.scientifically_correct) + "</td><td>" + refs + "</td></tr>";
+  }).join("");
+
+  /* systemic findings */
+  var sysMap = {};
+  D.systemic.forEach(function (s) { sysMap[s.id] = s; });
+  byId("index-systemic").innerHTML = D.systemic.map(function (s) {
+    return '<li><a href="#' + s.id + '"><b>' + s.id + "</b>" + (s.severity === "blocking" ? "blocking" : "non-blocking") + "</a></li>";
+  }).join("");
+  byId("systemic-list").innerHTML = D.systemic.map(function (s, i) {
+    return '<details class="finding" id="' + s.id + '"' + (i === 0 ? " open" : "") + "><summary>" +
+      '<span class="fid">' + s.id + "</span><h3>" + esc(s.title) + "</h3>" +
+      '<span class="chip ' + (s.severity === "blocking" ? "block" : "change") + '">' + (s.severity === "blocking" ? "BLOCKING" : "NON-BLOCKING") + "</span>" +
+      '<span class="applies">Applies to ' + esc(s.applies) + "</span></summary>" +
+      '<dl class="fbody"><dt>Field</dt><dd class="fieldpath">' + esc(s.field) + "</dd>" +
+      "<dt>Current</dt><dd>" + esc(s.current) + "</dd>" +
+      '<dt>Proposed</dt><dd class="proposed">' + esc(s.proposed) + "</dd>" +
+      "<dt>Reason</dt><dd>" + esc(s.reason) + "</dd>" +
+      "<dt>Fixtures</dt><dd>" + esc(s.fixtures) + "</dd>" +
+      "<dt>Sources</dt><dd>" + srcLinks(s.sources) + "</dd></dl></details>";
+  }).join("");
+  var openFor = function (hash) {
+    var el = hash && document.getElementById(hash.slice(1));
+    if (el && el.tagName === "DETAILS") el.open = true;
+  };
+  window.addEventListener("hashchange", function () { openFor(location.hash); });
+  openFor(location.hash);
+  byId("expand-all").addEventListener("click", function () { document.querySelectorAll("details.finding").forEach(function (d) { d.open = true; }); });
+  byId("collapse-all").addEventListener("click", function () { document.querySelectorAll("details.finding").forEach(function (d) { d.open = false; }); });
+
+  /* explorer */
+  var domains = Array.from(new Set(D.profiles.map(function (p) { return p.d; }))).sort();
+  byId("f-domain").insertAdjacentHTML("beforeend", domains.map(function (d) { return "<option>" + esc(d) + "</option>"; }).join(""));
+  var PAGE = 40;
+  var shown = PAGE;
+  var filtered = D.profiles;
+
+  var findingSummary = function (p) {
+    if (!p.f.length) return '<span class="chip neutral">systemic only</span>';
+    return p.f.map(function (f) { return '<span class="chip ' + (f.severity === "blocking" ? "block" : "change") + '">' + esc(f.id) + "</span>"; }).join(" ");
+  };
+  var strip = function (p) {
+    return '<span class="strip" role="img" aria-label="' + D.areas.map(function (a, i) {
+      return AREA_LABEL[a] + ": " + ({ I: "included", C: "conditional", X: "excluded" })[p.a[i]];
+    }).join("; ") + '">' + p.a.split("").map(function (ch, i) {
+      return '<span class="cell ' + ch + '" title="' + AREA_LABEL[D.areas[i]] + '"></span>';
+    }).join("") + "</span>";
+  };
+  var applicableSystemic = function (p) {
+    var ids = ["S1", "S2", "S3", "S4", "S9", "S10", "S11"];
+    if (p.req.indexOf("biological_context.species") >= 0) ids.push("S5");
+    if (p.f.some(function (f) { return f.id === "P-MEAS" || f.id === "P-AXES"; })) ids.push("S6");
+    if (p.f.some(function (f) { return f.id === "P-CONV"; })) ids.push("S7");
+    if (p.f.some(function (f) { return f.id === "P-KG"; })) ids.push("S8");
+    if (p.req.indexOf("identifiers.namespace") >= 0 || p.req.indexOf("security.data_use") >= 0) ids.push("S12");
+    ids.push("S13", "S14");
+    return ids.sort(function (a, b) { return +a.slice(1) - +b.slice(1); });
+  };
+  var detail = function (p) {
+    var html = '<div class="dgrid">';
+    html += "<div><h4>Profile findings</h4>";
+    if (!p.f.length) {
+      html += "<p>No profile-specific finding. The verdict follows from the systemic blockers listed below.</p>";
+    } else {
+      html += p.f.map(function (f) {
+        return '<div class="pf ' + (f.severity === "blocking" ? "blocking" : "") + '"><div class="head"><span class="chip ' + (f.severity === "blocking" ? "block" : "change") + '">' + esc(f.id) + "</span><strong>" + esc(f.title) + "</strong></div>" +
+          '<dl class="kv"><dt>Field</dt><dd class="m">' + esc(f.field) + '</dd><dt>Current</dt><dd class="m">' + esc(f.current) + '</dd><dt>Proposed</dt><dd class="m">' + esc(f.proposed) + "</dd>" +
+          "<dt>Reason</dt><dd>" + esc(f.reason) + '</dd><dt>Fixtures</dt><dd class="m">' + f.fixtures.map(esc).join(", ") + "</dd><dt>Sources</dt><dd>" + srcLinks(f.sources) + "</dd></dl></div>";
+      }).join("");
+    }
+    html += '<p class="systemic-line" style="margin-top:14px">Systemic findings that apply: ' + applicableSystemic(p).map(function (id) {
+      return '<a href="#' + id + '">' + id + "</a>";
+    }).join(" &middot; ") + "</p></div>";
+
+    html += '<div class="two"><div><h4>Fixture audit</h4><table class="mini"><tbody>' + p.fx.map(function (x, i) {
+      return "<tr><td>" + esc(D.fx[i]) + '<div style="margin-top:4px"><span class="chip ' + STATUS_CHIP[x[0]] + '">' + esc(x[0]) + '</span></div></td><td class="note">' + esc(D.notes[x[1]]) + "</td></tr>";
+    }).join("") + "</tbody></table></div>";
+
+    html += '<div><h4>Contract areas</h4><table class="mini"><tbody>' + D.areas.map(function (a, i) {
+      var disp = ({ I: "included", C: "conditional", X: "excluded" })[p.a[i]];
+      return "<tr><td>" + esc(AREA_LABEL[a]) + '<div style="margin-top:4px"><span class="chip ' + DISP_CHIP[disp] + '">' + disp + '</span></div></td><td class="note">' + esc(D.notes[p.an[i]]) + "</td></tr>";
+    }).join("") + "</tbody></table></div></div>";
+
+    var groups = {};
+    p.it.forEach(function (idx) {
+      var disp = D.rules[idx][0];
+      (groups[disp] = groups[disp] || []).push(D.paths[idx]);
+    });
+    html += '<div><h4>Candidate items (' + p.it.length + ')</h4><div class="itemgroups">' + ["required", "conditional", "recommended", "optional", "excluded"].filter(function (g) { return groups[g]; }).map(function (g) {
+      return "<details><summary>" + '<span class="chip ' + DISP_CHIP[g] + '">' + g + "</span> " + groups[g].length + ' items</summary><div class="paths">' + groups[g].map(function (path) {
+        return "<code>" + esc(path) + "</code>";
+      }).join("") + "</div></details>";
+    }).join("") + '</div><p class="systemic-line" style="margin-top:8px">Each decision and its reason is listed under <a href="#items">Candidate item rules</a>.</p></div>';
+    return html + "</div>";
+  };
+
+  var render = function () {
+    var rows = filtered.slice(0, shown).map(function (p, i) {
+      var name = p.id.split("@")[0];
+      return '<tr class="row" tabindex="0" aria-expanded="false" data-i="' + i + '">' +
+        '<td class="pid"><span class="name">' + esc(p.l) + '</span><span class="dom">' + esc(name) + "</span></td>" +
+        '<td><span class="chip ' + (p.v === "BLOCK" ? "block" : "change") + '">' + p.v + "</span></td>" +
+        '<td class="fc">' + findingSummary(p) + "</td>" +
+        "<td>" + strip(p) + "</td>" +
+        '<td class="num fc">' + p.it.length + "</td></tr>";
+    });
+    byId("rows").innerHTML = rows.join("") || '<tr><td colspan="5">No profile matches these filters. Clear the search or choose another domain.</td></tr>';
+    byId("count").innerHTML = "<b>" + Math.min(shown, filtered.length) + "</b> shown of <b>" + filtered.length + "</b> matching &middot; " + total + " profiles in v0.1";
+    byId("more").hidden = shown >= filtered.length;
+  };
+  var toggle = function (tr) {
+    var open = tr.getAttribute("aria-expanded") === "true";
+    var next = tr.nextElementSibling;
+    if (open) {
+      if (next && next.classList.contains("detail")) next.remove();
+      tr.setAttribute("aria-expanded", "false");
+      return;
+    }
+    var p = filtered[+tr.getAttribute("data-i")];
+    tr.insertAdjacentHTML("afterend", '<tr class="detail"><td colspan="5">' + detail(p) + "</td></tr>");
+    tr.setAttribute("aria-expanded", "true");
+  };
+  byId("rows").addEventListener("click", function (e) {
+    if (e.target.closest("a, summary, details")) return;
+    var tr = e.target.closest("tr.row");
+    if (tr) toggle(tr);
+  });
+  byId("rows").addEventListener("keydown", function (e) {
+    var tr = e.target.closest("tr.row");
+    if (tr && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); toggle(tr); }
+  });
+  var applyFilters = function () {
+    var q = byId("q").value.trim().toLowerCase();
+    var dom = byId("f-domain").value;
+    var ver = byId("f-verdict").value;
+    var fnd = byId("f-finding").value;
+    filtered = D.profiles.filter(function (p) {
+      if (dom && p.d !== dom) return false;
+      if (ver && p.v !== ver) return false;
+      if (fnd === "none" && p.f.length) return false;
+      if (fnd && fnd !== "none" && !p.f.some(function (f) { return f.id === fnd; })) return false;
+      if (q) {
+        var hay = (p.id + " " + p.l + " " + p.req.join(" ")).toLowerCase();
+        if (hay.indexOf(q) < 0) return false;
+      }
+      return true;
+    });
+    shown = PAGE;
+    render();
+  };
+  ["q", "f-domain", "f-verdict", "f-finding"].forEach(function (id) {
+    byId(id).addEventListener(id === "q" ? "input" : "change", applyFilters);
+  });
+  byId("more").addEventListener("click", function () { shown += PAGE; render(); });
+  render();
+
+  /* rules */
+  var renderRules = function () {
+    var q = byId("rq").value.trim().toLowerCase();
+    var d = byId("rd").value;
+    byId("rule-rows").innerHTML = D.paths.map(function (path, i) {
+      var r = D.rules[i];
+      if (q && path.toLowerCase().indexOf(q) < 0) return "";
+      if (d && r[0] !== d) return "";
+      return "<tr><td>" + esc(path) + '</td><td><span class="chip ' + DISP_CHIP[r[0]] + '">' + r[0] + "</span></td><td>" + esc(r[1]) + "</td></tr>";
+    }).join("") || '<tr><td colspan="3">No item path matches. Try a shorter fragment such as "unit".</td></tr>';
+  };
+  byId("rq").addEventListener("input", renderRules);
+  byId("rd").addEventListener("change", renderRules);
+  renderRules();
+
+  /* sources */
+  byId("source-rows").innerHTML = D.sources.map(function (s) {
+    return '<tr id="src-' + esc(s.id) + '"><td>' + esc(s.id) + '</td><td><a href="' + esc(s.url) + '" rel="noopener" target="_blank">' + esc(s.title) + '</a><div class="label" style="margin-top:3px">' + esc(s.kind.replace(/-/g, " ")) + '</div></td><td class="ver">' + esc(s.version) + '</td><td class="pin">' + (s.sha256 ? esc(s.sha256.slice(0, 23)) + '&hellip;<div class="label" style="margin-top:3px">' + esc(String(s.pinned_as).replace(/-/g, " ")) + '</div>' : 'not pinned') + '</td></tr>';
+  }).join("");
+})();
+</script>

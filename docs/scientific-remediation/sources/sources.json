@@ -1,0 +1,537 @@
+{
+  "schema_version": "0.1",
+  "purpose": "Every source cited by the scientific review, with what to retrieve in order to pin it. scripts/pin_sources.py fetches each retrieval_url and records its SHA-256 in sources.lock.json.",
+  "retrieval_kinds": {
+    "document": "The reviewed document itself. Hashing it pins exactly what was read.",
+    "citation-metadata": "A Crossref record for a DOI. It pins the citation, not the article: paywalled articles cannot be retrieved here, and a reviewer with access must pin their own copy of the PDF.",
+    "landing-page": "A publisher or registry page for a document that cannot be downloaded without a licence. Pins where it lives, not what it says.",
+    "licensed": "Not retrievable at all without a licence agreement. The reviewer pins their licensed copy and records the terms."
+  },
+  "sources": [
+    {
+      "id": "ucum-2.2",
+      "title": "The Unified Code for Units of Measure (UCUM)",
+      "kind": "standard",
+      "version": "2.2, revision 2024-06-17",
+      "citation": "https://github.com/ucum-org/ucum/releases/tag/v2.2",
+      "retrieval_url": "https://raw.githubusercontent.com/ucum-org/ucum/main/ucum-essence.xml",
+      "retrieval_kind": "document"
+    },
+    {
+      "id": "si-brochure-9",
+      "title": "The International System of Units (SI), 9th edition",
+      "kind": "standard",
+      "version": "9th edition",
+      "citation": "https://doi.org/10.59161/AUEZ1291",
+      "retrieval_url": "https://www.bipm.org/documents/20126/41483022/SI-Brochure-9.pdf",
+      "retrieval_kind": "document"
+    },
+    {
+      "id": "vim-jcgm-200-2012",
+      "title": "International vocabulary of metrology (VIM), JCGM 200:2012",
+      "kind": "standard",
+      "version": "3rd edition, 2012",
+      "citation": "https://www.bipm.org/en/committees/jc/jcgm/publications",
+      "retrieval_url": "https://www.bipm.org/documents/20126/2071204/JCGM_200_2012.pdf",
+      "retrieval_kind": "document"
+    },
+    {
+      "id": "iso-80000-1-2022",
+      "title": "ISO 80000-1:2022 Quantities and units - Part 1: General",
+      "kind": "standard",
+      "version": "2022",
+      "citation": "https://www.iso.org/standard/76921.html",
+      "retrieval_url": null,
+      "retrieval_kind": "licensed",
+      "note": "ISO standards are paywalled and the ISO site refuses automated retrieval. The reviewer pins their licensed copy."
+    },
+    {
+      "id": "iso-20776-1-2019",
+      "title": "ISO 20776-1:2019 Broth micro-dilution reference method",
+      "kind": "standard",
+      "version": "2019",
+      "citation": "https://www.iso.org/standard/70464.html",
+      "retrieval_url": null,
+      "retrieval_kind": "licensed",
+      "note": "ISO standards are paywalled and the ISO site refuses automated retrieval. The reviewer pins their licensed copy."
+    },
+    {
+      "id": "stevens-1946",
+      "title": "On the Theory of Scales of Measurement",
+      "kind": "primary-publication",
+      "version": "Science 103(2684):677-680, 1946",
+      "citation": "https://doi.org/10.1126/science.103.2684.677",
+      "retrieval_url": "https://api.crossref.org/works/10.1126/science.103.2684.677",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "ncbitaxon-schoch-2020",
+      "title": "NCBI Taxonomy: a comprehensive update",
+      "kind": "database",
+      "version": "Database, 2020",
+      "citation": "https://doi.org/10.1093/database/baaa062",
+      "retrieval_url": "https://api.crossref.org/works/10.1093/database/baaa062",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "obo-fp-003",
+      "title": "OBO Foundry Principle 3: URI/Identifier Space",
+      "kind": "standard",
+      "version": "Principles v1.4",
+      "citation": "https://obofoundry.org/principles/fp-003-uris.html",
+      "retrieval_url": "https://obofoundry.org/principles/fp-003-uris.html",
+      "retrieval_kind": "document"
+    },
+    {
+      "id": "w3c-cooluris",
+      "title": "Cool URIs for the Semantic Web",
+      "kind": "standard",
+      "version": "W3C Note, 3 December 2008",
+      "citation": "https://www.w3.org/TR/cooluris/",
+      "retrieval_url": "https://www.w3.org/TR/cooluris/",
+      "retrieval_kind": "document"
+    },
+    {
+      "id": "bioregistry-2022",
+      "title": "Unifying the identification of biomedical entities with the Bioregistry",
+      "kind": "database",
+      "version": "Sci Data 9:714, 2022",
+      "citation": "https://doi.org/10.1038/s41597-022-01807-3",
+      "retrieval_url": "https://api.crossref.org/works/10.1038/s41597-022-01807-3",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "duo-2021",
+      "title": "The Data Use Ontology to streamline responsible access to human biomedical datasets",
+      "kind": "ontology",
+      "version": "Cell Genomics 1(2):100028, 2021",
+      "citation": "https://doi.org/10.1016/j.xgen.2021.100028",
+      "retrieval_url": "https://api.crossref.org/works/10.1016/j.xgen.2021.100028",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "duo-owl",
+      "title": "Data Use Ontology (DUO), OWL release",
+      "kind": "ontology",
+      "version": "current release at purl.obolibrary.org",
+      "citation": "http://purl.obolibrary.org/obo/duo.owl",
+      "retrieval_url": "https://purl.obolibrary.org/obo/duo.owl",
+      "retrieval_kind": "document"
+    },
+    {
+      "id": "uberon-2012",
+      "title": "Uberon, an integrative multi-species anatomy ontology",
+      "kind": "ontology",
+      "version": "Genome Biol 13:R5, 2012",
+      "citation": "https://doi.org/10.1186/gb-2012-13-1-r5",
+      "retrieval_url": "https://api.crossref.org/works/10.1186/gb-2012-13-1-r5",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "cl-2016",
+      "title": "The Cell Ontology 2016",
+      "kind": "ontology",
+      "version": "J Biomed Semantics 7:44, 2016",
+      "citation": "https://doi.org/10.1186/s13326-016-0088-7",
+      "retrieval_url": "https://api.crossref.org/works/10.1186/s13326-016-0088-7",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "obi-2016",
+      "title": "The Ontology for Biomedical Investigations",
+      "kind": "ontology",
+      "version": "PLoS ONE 11(4):e0154556, 2016",
+      "citation": "https://doi.org/10.1371/journal.pone.0154556",
+      "retrieval_url": "https://api.crossref.org/works/10.1371/journal.pone.0154556",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "uo-2012",
+      "title": "The Units Ontology",
+      "kind": "ontology",
+      "version": "Database, 2012",
+      "citation": "https://doi.org/10.1093/database/bas033",
+      "retrieval_url": "https://api.crossref.org/works/10.1093/database/bas033",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "edam-2013",
+      "title": "EDAM: an ontology of bioinformatics operations, data, topics and formats",
+      "kind": "ontology",
+      "version": "Bioinformatics 29(10):1325-1332, 2013",
+      "citation": "https://doi.org/10.1093/bioinformatics/btt113",
+      "retrieval_url": "https://api.crossref.org/works/10.1093/bioinformatics/btt113",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "iuphar-neubig-2003",
+      "title": "IUPHAR XXXVIII. Update on terms and symbols in quantitative pharmacology",
+      "kind": "standard",
+      "version": "Pharmacol Rev 55(4):597-606, 2003",
+      "citation": "https://doi.org/10.1124/pr.55.4.4",
+      "retrieval_url": "https://api.crossref.org/works/10.1124/pr.55.4.4",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "cheng-prusoff-1973",
+      "title": "Relationship between the inhibition constant and the concentration of inhibitor causing 50 per cent inhibition",
+      "kind": "primary-publication",
+      "version": "Biochem Pharmacol 22(23):3099-3108, 1973",
+      "citation": "https://doi.org/10.1016/0006-2952(73)90196-2",
+      "retrieval_url": "https://api.crossref.org/works/10.1016/0006-2952(73)90196-2",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "chembl-2024",
+      "title": "The ChEMBL Database in 2023",
+      "kind": "database",
+      "version": "Nucleic Acids Res 52(D1):D1180-D1192, 2024",
+      "citation": "https://doi.org/10.1093/nar/gkad1004",
+      "retrieval_url": "https://api.crossref.org/works/10.1093/nar/gkad1004",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "kdigo-2024-ckd",
+      "title": "KDIGO 2024 Clinical Practice Guideline for CKD",
+      "kind": "regulatory-guidance",
+      "version": "Kidney Int 105(4S):S117-S314, 2024",
+      "citation": "https://doi.org/10.1016/j.kint.2023.10.018",
+      "retrieval_url": "https://api.crossref.org/works/10.1016/j.kint.2023.10.018",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "ats-ers-spirometry-2019",
+      "title": "Standardization of Spirometry 2019 Update",
+      "kind": "regulatory-guidance",
+      "version": "Am J Respir Crit Care Med 200(8):e70-e88, 2019",
+      "citation": "https://doi.org/10.1164/rccm.201908-1590ST",
+      "retrieval_url": "https://api.crossref.org/works/10.1164/rccm.201908-1590ST",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "fda-bmv-2018",
+      "title": "Bioanalytical Method Validation: Guidance for Industry",
+      "kind": "regulatory-guidance",
+      "version": "May 2018",
+      "citation": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/bioanalytical-method-validation-guidance-industry",
+      "retrieval_url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/bioanalytical-method-validation-guidance-industry",
+      "retrieval_kind": "landing-page"
+    },
+    {
+      "id": "fda-hed-2005",
+      "title": "Estimating the Maximum Safe Starting Dose in Initial Clinical Trials for Therapeutics in Adult Healthy Volunteers",
+      "kind": "regulatory-guidance",
+      "version": "July 2005",
+      "citation": "https://www.fda.gov/media/72309/download",
+      "retrieval_url": "https://www.fda.gov/media/72309/download",
+      "retrieval_kind": "document"
+    },
+    {
+      "id": "mzml-2011",
+      "title": "mzML - a community standard for mass spectrometry data",
+      "kind": "standard",
+      "version": "Mol Cell Proteomics 10(1):R110.000133, 2011",
+      "citation": "https://doi.org/10.1074/mcp.R110.000133",
+      "retrieval_url": "https://api.crossref.org/works/10.1074/mcp.R110.000133",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "mztab-2014",
+      "title": "The mzTab data exchange format",
+      "kind": "standard",
+      "version": "Mol Cell Proteomics 13(10):2765-2775, 2014",
+      "citation": "https://doi.org/10.1074/mcp.O113.036681",
+      "retrieval_url": "https://api.crossref.org/works/10.1074/mcp.O113.036681",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "maxlfq-2014",
+      "title": "Accurate proteome-wide label-free quantification by delayed normalization and maximal peptide ratio extraction",
+      "kind": "primary-publication",
+      "version": "Mol Cell Proteomics 13(9):2513-2526, 2014",
+      "citation": "https://doi.org/10.1074/mcp.M113.031591",
+      "retrieval_url": "https://api.crossref.org/works/10.1074/mcp.M113.031591",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "goldbook-mr",
+      "title": "IUPAC Compendium of Chemical Terminology: relative molecular mass",
+      "kind": "standard",
+      "version": "Gold Book, online corrected version",
+      "citation": "https://doi.org/10.1351/goldbook.R05271",
+      "retrieval_url": "https://api.crossref.org/works/10.1351/goldbook.R05271",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "inchi-2015",
+      "title": "InChI, the IUPAC International Chemical Identifier",
+      "kind": "standard",
+      "version": "J Cheminform 7:23, 2015",
+      "citation": "https://doi.org/10.1186/s13321-015-0068-4",
+      "retrieval_url": "https://api.crossref.org/works/10.1186/s13321-015-0068-4",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "chebi-2016",
+      "title": "ChEBI in 2016",
+      "kind": "database",
+      "version": "Nucleic Acids Res 44(D1):D1214-D1219, 2016",
+      "citation": "https://doi.org/10.1093/nar/gkv1031",
+      "retrieval_url": "https://api.crossref.org/works/10.1093/nar/gkv1031",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "du-2010-mvalue",
+      "title": "Comparison of Beta-value and M-value methods for quantifying methylation levels",
+      "kind": "primary-publication",
+      "version": "BMC Bioinformatics 11:587, 2010",
+      "citation": "https://doi.org/10.1186/1471-2105-11-587",
+      "retrieval_url": "https://api.crossref.org/works/10.1186/1471-2105-11-587",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "cdc-epi-3ed",
+      "title": "Principles of Epidemiology in Public Health Practice, Lesson 3: Measures of Risk",
+      "kind": "regulatory-guidance",
+      "version": "3rd edition",
+      "citation": "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson3/section2.html",
+      "retrieval_url": "https://archive.cdc.gov/www_cdc_gov/csels/dsepd/ss1978/lesson3/section2.html",
+      "retrieval_kind": "document"
+    },
+    {
+      "id": "reed-muench-1938",
+      "title": "A simple method of estimating fifty per cent endpoints",
+      "kind": "primary-publication",
+      "version": "Am J Epidemiol 27(3):493-497, 1938",
+      "citation": "https://doi.org/10.1093/oxfordjournals.aje.a118408",
+      "retrieval_url": "https://api.crossref.org/works/10.1093/oxfordjournals.aje.a118408",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "who-is-antibody-2021",
+      "title": "WHO International Standard for anti-SARS-CoV-2 immunoglobulin",
+      "kind": "primary-publication",
+      "version": "Lancet 397(10282):1347-1348, 2021",
+      "citation": "https://doi.org/10.1016/S0140-6736(21)00527-4",
+      "retrieval_url": "https://api.crossref.org/works/10.1016/S0140-6736(21)00527-4",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "pgs-catalog-2021",
+      "title": "The Polygenic Score Catalog",
+      "kind": "database",
+      "version": "Nat Genet 53:420-425, 2021",
+      "citation": "https://doi.org/10.1038/s41588-021-00783-5",
+      "retrieval_url": "https://api.crossref.org/works/10.1038/s41588-021-00783-5",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "orth-2010-fba",
+      "title": "What is flux balance analysis?",
+      "kind": "primary-publication",
+      "version": "Nat Biotechnol 28:245-248, 2010",
+      "citation": "https://doi.org/10.1038/nbt.1614",
+      "retrieval_url": "https://api.crossref.org/works/10.1038/nbt.1614",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "wagner-2012-tpm",
+      "title": "Measurement of mRNA abundance using RNA-seq data: RPKM measure is inconsistent among samples",
+      "kind": "primary-publication",
+      "version": "Theory Biosci 131:281-285, 2012",
+      "citation": "https://doi.org/10.1007/s12064-012-0162-3",
+      "retrieval_url": "https://api.crossref.org/works/10.1007/s12064-012-0162-3",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "robinson-2010-tmm",
+      "title": "A scaling normalization method for differential expression analysis of RNA-seq data",
+      "kind": "primary-publication",
+      "version": "Genome Biol 11:R25, 2010",
+      "citation": "https://doi.org/10.1186/gb-2010-11-3-r25",
+      "retrieval_url": "https://api.crossref.org/works/10.1186/gb-2010-11-3-r25",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "svensson-2020-zeros",
+      "title": "Droplet scRNA-seq is not zero-inflated",
+      "kind": "primary-publication",
+      "version": "Nat Biotechnol 38:147-150, 2020",
+      "citation": "https://doi.org/10.1038/s41587-019-0379-5",
+      "retrieval_url": "https://api.crossref.org/works/10.1038/s41587-019-0379-5",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "gloor-2017",
+      "title": "Microbiome Datasets Are Compositional: And This Is Not Optional",
+      "kind": "primary-publication",
+      "version": "Front Microbiol 8:2224, 2017",
+      "citation": "https://doi.org/10.3389/fmicb.2017.02224",
+      "retrieval_url": "https://api.crossref.org/works/10.3389/fmicb.2017.02224",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "gtdb-2022",
+      "title": "GTDB: an ongoing census of bacterial and archaeal diversity",
+      "kind": "database",
+      "version": "Nucleic Acids Res 50(D1):D785-D794, 2022",
+      "citation": "https://doi.org/10.1093/nar/gkab776",
+      "retrieval_url": "https://api.crossref.org/works/10.1093/nar/gkab776",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "cellosaurus-2018",
+      "title": "The Cellosaurus, a Cell-Line Knowledge Resource",
+      "kind": "database",
+      "version": "J Biomol Tech 29(2):25-38, 2018",
+      "citation": "https://doi.org/10.7171/jbt.18-2902-002",
+      "retrieval_url": "https://api.crossref.org/works/10.7171/jbt.18-2902-002",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "lieberman-aiden-2009",
+      "title": "Comprehensive mapping of long-range interactions reveals folding principles of the human genome",
+      "kind": "primary-publication",
+      "version": "Science 326(5950):289-293, 2009",
+      "citation": "https://doi.org/10.1126/science.1181369",
+      "retrieval_url": "https://api.crossref.org/works/10.1126/science.1181369",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "vrs-2021",
+      "title": "The GA4GH Variation Representation Specification",
+      "kind": "standard",
+      "version": "Cell Genomics 1(2):100027, 2021",
+      "citation": "https://doi.org/10.1016/j.xgen.2021.100027",
+      "retrieval_url": "https://api.crossref.org/works/10.1016/j.xgen.2021.100027",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "spdi-2020",
+      "title": "SPDI: data model for variants and applications at NCBI",
+      "kind": "standard",
+      "version": "Bioinformatics 36(6):1902-1907, 2020",
+      "citation": "https://doi.org/10.1093/bioinformatics/btz856",
+      "retrieval_url": "https://api.crossref.org/works/10.1093/bioinformatics/btz856",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "hgvs-2016",
+      "title": "HGVS Recommendations for the Description of Sequence Variants: 2016 Update",
+      "kind": "standard",
+      "version": "Hum Mutat 37(6):564-569, 2016",
+      "citation": "https://doi.org/10.1002/humu.22981",
+      "retrieval_url": "https://api.crossref.org/works/10.1002/humu.22981",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "vcf-4.4",
+      "title": "The Variant Call Format Specification VCFv4.4",
+      "kind": "standard",
+      "version": "hts-specs, VCFv4.4",
+      "citation": "https://samtools.github.io/hts-specs/VCFv4.4.pdf",
+      "retrieval_url": "https://samtools.github.io/hts-specs/VCFv4.4.pdf",
+      "retrieval_kind": "document"
+    },
+    {
+      "id": "ensembl-2024",
+      "title": "Ensembl 2024",
+      "kind": "database",
+      "version": "Nucleic Acids Res 52(D1):D891-D899, 2024",
+      "citation": "https://doi.org/10.1093/nar/gkad1049",
+      "retrieval_url": "https://api.crossref.org/works/10.1093/nar/gkad1049",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "dicom-ps3.3",
+      "title": "DICOM PS3.3 Information Object Definitions",
+      "kind": "standard",
+      "version": "current edition",
+      "citation": "https://dicom.nema.org/medical/dicom/current/output/html/part03.html",
+      "retrieval_url": "https://dicom.nema.org/medical/dicom/current/output/chtml/part03/PS3.3.html",
+      "retrieval_kind": "document"
+    },
+    {
+      "id": "nifti-1",
+      "title": "NIfTI-1 Data Format (nifti1.h, the canonical header)",
+      "kind": "standard",
+      "version": "NIfTI-1",
+      "citation": "https://nifti.nimh.nih.gov/nifti-1",
+      "retrieval_url": "https://raw.githubusercontent.com/NIFTI-Imaging/nifti_clib/master/niftilib/nifti1.h",
+      "retrieval_kind": "document",
+      "note": "The nifti1.h header is the normative definition of the format, including the orientation fields."
+    },
+    {
+      "id": "boellaard-2015-suv",
+      "title": "FDG PET/CT: EANM procedure guidelines for tumour imaging: version 2.0",
+      "kind": "regulatory-guidance",
+      "version": "Eur J Nucl Med Mol Imaging 42:328-354, 2015",
+      "citation": "https://doi.org/10.1007/s00259-014-2961-x",
+      "retrieval_url": "https://api.crossref.org/works/10.1007/s00259-014-2961-x",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "bids-ieeg-2019",
+      "title": "iEEG-BIDS, extending the Brain Imaging Data Structure specification",
+      "kind": "standard",
+      "version": "Sci Data 6:102, 2019",
+      "citation": "https://doi.org/10.1038/s41597-019-0105-7",
+      "retrieval_url": "https://api.crossref.org/works/10.1038/s41597-019-0105-7",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "nwb-2022",
+      "title": "The Neurodata Without Borders ecosystem for neurophysiological data science",
+      "kind": "standard",
+      "version": "eLife 11:e78362, 2022",
+      "citation": "https://doi.org/10.7554/eLife.78362",
+      "retrieval_url": "https://api.crossref.org/works/10.7554/eLife.78362",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "sbml-l3-2020",
+      "title": "SBML Level 3: an extensible format for the exchange and reuse of biological models",
+      "kind": "standard",
+      "version": "Mol Syst Biol 16(8):e9110, 2020",
+      "citation": "https://doi.org/10.15252/msb.20199110",
+      "retrieval_url": "https://api.crossref.org/works/10.15252/msb.20199110",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "sedml-2011",
+      "title": "Reproducible computational biology experiments with SED-ML",
+      "kind": "standard",
+      "version": "BMC Syst Biol 5:198, 2011",
+      "citation": "https://doi.org/10.1186/1752-0509-5-198",
+      "retrieval_url": "https://api.crossref.org/works/10.1186/1752-0509-5-198",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "clark-2003-survival",
+      "title": "Survival Analysis Part I: Basic concepts and first analyses",
+      "kind": "primary-publication",
+      "version": "Br J Cancer 89:232-238, 2003",
+      "citation": "https://doi.org/10.1038/sj.bjc.6601118",
+      "retrieval_url": "https://api.crossref.org/works/10.1038/sj.bjc.6601118",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "lynch-2010-mutrate",
+      "title": "Evolution of the mutation rate",
+      "kind": "primary-publication",
+      "version": "Trends Genet 26(8):345-352, 2010",
+      "citation": "https://doi.org/10.1016/j.tig.2010.05.003",
+      "retrieval_url": "https://api.crossref.org/works/10.1016/j.tig.2010.05.003",
+      "retrieval_kind": "citation-metadata"
+    },
+    {
+      "id": "snomed-ct",
+      "title": "SNOMED CT International Edition",
+      "kind": "standard",
+      "version": "edition and version to be chosen",
+      "citation": "https://www.snomed.org/",
+      "retrieval_url": null,
+      "retrieval_kind": "licensed"
+    }
+  ]
+}

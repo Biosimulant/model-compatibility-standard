@@ -1,0 +1,214 @@
+{
+  "schema_version": "0.1",
+  "generated_at": "2026-09-15",
+  "bundle_sha256": "sha256:09809c71594f62b14bda6b375a2c7e066b72df8ee7a2b451bb1754a1df5e6b2b",
+  "profiles": 650,
+  "scenarios": {
+    "identical": "The same contract on both ports. Anything but EXACT is a bug.",
+    "required-missing-source": "A required field absent from the source. Absent evidence must be UNKNOWN.",
+    "required-missing-target": "The same field absent from the target instead. Must behave the same way.",
+    "required-value-differs": "A required field with a different value on each side. Should be INCOMPATIBLE.",
+    "unit-mismatch": "Both ports declare measurement.unit, mg against s. Different dimensions, so INCOMPATIBLE.",
+    "unit-convertible": "Both ports declare measurement.unit, g against kg. Same quantity, so a lossless conversion.",
+    "origin-mismatch": "Both ports declare origin.type, simulated against measured. Must not be a silent match.",
+    "namespace-mismatch": "Both ports declare an identifier namespace, ensembl.gene against hgnc.symbol.",
+    "species-any": "The source declares species 'any' against a specific target. Absent evidence, not contradiction."
+  },
+  "totals": {
+    "DIRECT_COMPATIBLE": 2254,
+    "INCOMPATIBLE": 1571,
+    "UNKNOWN": 1300,
+    "EXACT": 650
+  },
+  "per_scenario": {
+    "identical": {
+      "EXACT": 650
+    },
+    "required-missing-source": {
+      "UNKNOWN": 650
+    },
+    "required-missing-target": {
+      "UNKNOWN": 650
+    },
+    "required-value-differs": {
+      "INCOMPATIBLE": 650
+    },
+    "unit-mismatch": {
+      "DIRECT_COMPATIBLE": 526,
+      "INCOMPATIBLE": 124
+    },
+    "unit-convertible": {
+      "DIRECT_COMPATIBLE": 526,
+      "INCOMPATIBLE": 124
+    },
+    "origin-mismatch": {
+      "DIRECT_COMPATIBLE": 650
+    },
+    "namespace-mismatch": {
+      "DIRECT_COMPATIBLE": 552,
+      "INCOMPATIBLE": 98
+    },
+    "species-any": {
+      "INCOMPATIBLE": 575,
+      "NOT_APPLICABLE": 75
+    }
+  },
+  "per_domain": {
+    "cardiopulmonary-renal": {
+      "DIRECT_COMPATIBLE": 94,
+      "INCOMPATIBLE": 56,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "cell": {
+      "DIRECT_COMPATIBLE": 90,
+      "INCOMPATIBLE": 60,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "chemical": {
+      "DIRECT_COMPATIBLE": 92,
+      "UNKNOWN": 50,
+      "INCOMPATIBLE": 33,
+      "EXACT": 25
+    },
+    "clinical": {
+      "DIRECT_COMPATIBLE": 97,
+      "INCOMPATIBLE": 53,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "core": {
+      "DIRECT_COMPATIBLE": 92,
+      "UNKNOWN": 50,
+      "INCOMPATIBLE": 33,
+      "EXACT": 25
+    },
+    "developmental": {
+      "DIRECT_COMPATIBLE": 95,
+      "INCOMPATIBLE": 55,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "ecology": {
+      "DIRECT_COMPATIBLE": 87,
+      "INCOMPATIBLE": 63,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "epidemiology": {
+      "DIRECT_COMPATIBLE": 89,
+      "INCOMPATIBLE": 61,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "epigenome": {
+      "DIRECT_COMPATIBLE": 90,
+      "INCOMPATIBLE": 60,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "evolution": {
+      "DIRECT_COMPATIBLE": 83,
+      "INCOMPATIBLE": 67,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "genome": {
+      "DIRECT_COMPATIBLE": 88,
+      "INCOMPATIBLE": 62,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "imaging": {
+      "DIRECT_COMPATIBLE": 92,
+      "INCOMPATIBLE": 58,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "immunology": {
+      "DIRECT_COMPATIBLE": 82,
+      "INCOMPATIBLE": 68,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "lipidome-glycome": {
+      "DIRECT_COMPATIBLE": 78,
+      "INCOMPATIBLE": 72,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "metabolome": {
+      "INCOMPATIBLE": 82,
+      "DIRECT_COMPATIBLE": 68,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "microbiology": {
+      "DIRECT_COMPATIBLE": 80,
+      "INCOMPATIBLE": 70,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "multiomics": {
+      "DIRECT_COMPATIBLE": 87,
+      "INCOMPATIBLE": 63,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "neuroscience": {
+      "DIRECT_COMPATIBLE": 91,
+      "INCOMPATIBLE": 59,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "pharmacology": {
+      "DIRECT_COMPATIBLE": 78,
+      "INCOMPATIBLE": 72,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "phenotype": {
+      "DIRECT_COMPATIBLE": 84,
+      "INCOMPATIBLE": 66,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "physiology": {
+      "INCOMPATIBLE": 78,
+      "DIRECT_COMPATIBLE": 72,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "proteome": {
+      "DIRECT_COMPATIBLE": 78,
+      "INCOMPATIBLE": 72,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "simulation": {
+      "DIRECT_COMPATIBLE": 98,
+      "UNKNOWN": 50,
+      "INCOMPATIBLE": 27,
+      "EXACT": 25
+    },
+    "spatial": {
+      "DIRECT_COMPATIBLE": 94,
+      "INCOMPATIBLE": 56,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "transcriptome": {
+      "DIRECT_COMPATIBLE": 94,
+      "INCOMPATIBLE": 56,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    },
+    "virology": {
+      "DIRECT_COMPATIBLE": 81,
+      "INCOMPATIBLE": 69,
+      "UNKNOWN": 50,
+      "EXACT": 25
+    }
+  }
+}

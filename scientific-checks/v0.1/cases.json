@@ -1,0 +1,721 @@
+{
+  "schema_version": "0.1",
+  "title": "Scientific checks for the Biosimulant Model Compatibility Standard v0.1",
+  "purpose": "Language-neutral expectations about scientific outcomes, read by python/tests/test_scientific_checks.py and typescript/test/scientific-checks.test.mjs. A defect case states the scientifically correct outcome that the current release does not meet. A guard case states an outcome the current release already meets and that remediation must not break.",
+  "rules": [
+    "Only pin an outcome that is correct under every open design decision. When the correct outcome depends on a decision, assert the property that holds under all of its options (for example 'not a direct match') and name the decision.",
+    "Build contracts from a profile's generated positive fixture plus explicit patches, so each case shows exactly what differs.",
+    "When a defect is fixed, change its kind to guard in the same change. Strict expected-failure handling makes an unexpected pass fail the suite.",
+    "A case may set \"normalize\": true to compare normalised contracts, which is what the documented validation pipeline does before comparison."
+  ],
+  "strict_mode": "Set BMCS_SCIENTIFIC_STRICT=1 to run every defect as an ordinary failing test. GA requires the strict run to pass.",
+  "plan": "docs/scientific-remediation/REMEDIATION_PLAN.md",
+  "profile_ref_prefix": "https://biosimulant.com/standards/model-compatibility/profiles/",
+  "profile_ref_suffix": "/v0.1",
+  "unit_dimensions_note": "Test-only dimension classes for the unit spellings that appear in v0.1 fixtures and in these cases. Not a unit system: the release must adopt one (decision D1). An unclassified unit is reported as an offender so the table cannot silently hide one.",
+  "unit_dimensions": {
+    "1": "dimensionless",
+    "1/s": "1/time",
+    "/min": "1/time",
+    "Hz": "1/time",
+    "s": "time",
+    "min": "time",
+    "h": "time",
+    "g": "mass",
+    "kg": "mass",
+    "mg": "mass",
+    "mL": "volume",
+    "L": "volume",
+    "nM": "amount/volume",
+    "uM": "amount/volume",
+    "mM": "amount/volume",
+    "mol/L": "amount/volume",
+    "umol/L": "amount/volume",
+    "mg/L": "mass/volume",
+    "Cel": "temperature",
+    "K": "temperature",
+    "mm[Hg]": "pressure",
+    "kPa": "pressure",
+    "mV": "voltage",
+    "N": "force"
+  },
+  "cases": [
+    {
+      "id": "BMCS-SCI-001",
+      "kind": "defect",
+      "check": "compare",
+      "title": "Raw counts and log-normalised expression resolve as a direct match",
+      "profile": "transcriptome/single-cell-expression-matrix",
+      "source_patch": {
+        "measurement": {
+          "quantity": "read_count",
+          "scale": "count",
+          "unit": "1"
+        }
+      },
+      "target_patch": {
+        "measurement": {
+          "quantity": "log1p_normalized_expression",
+          "scale": "log",
+          "unit": "1"
+        }
+      },
+      "expect": {
+        "status_not_in": [
+          "EXACT",
+          "DIRECT_COMPATIBLE",
+          "LOSSLESS_CONVERSION_AVAILABLE"
+        ],
+        "policy_decision_not": "ALLOW"
+      },
+      "observed_at_review": {
+        "status": "DIRECT_COMPATIBLE",
+        "policy_decision": "ALLOW"
+      },
+      "why": "Library-size normalisation followed by log1p is a lossy, non-invertible transformation. Declared measurement fields that both ports supply are never compared because the profile does not require them.",
+      "conditions": "Both ports declare their measurement. When either port is silent the outcome is a separate question for D2.",
+      "decision": "D2",
+      "report_finding": "S3",
+      "sources": [
+        "robinson-2010-tmm",
+        "wagner-2012-tpm"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-002",
+      "kind": "defect",
+      "check": "compare",
+      "title": "Ensembl gene identifiers and HGNC symbols resolve as a direct match",
+      "profile": "transcriptome/single-cell-expression-matrix",
+      "source_patch": {
+        "identifiers": {
+          "namespace": "ensembl.gene",
+          "namespace_version": "114"
+        }
+      },
+      "target_patch": {
+        "identifiers": {
+          "namespace": "hgnc.symbol",
+          "namespace_version": "2026-09-01"
+        }
+      },
+      "expect": {
+        "status_not_in": [
+          "EXACT",
+          "DIRECT_COMPATIBLE",
+          "LOSSLESS_CONVERSION_AVAILABLE"
+        ],
+        "policy_decision_not": "ALLOW"
+      },
+      "observed_at_review": {
+        "status": "DIRECT_COMPATIBLE",
+        "policy_decision": "ALLOW"
+      },
+      "why": "Without a mapping, the two ports index different feature universes. Declared identifier fields that both ports supply are never compared.",
+      "conditions": "No mapping snapshot is supplied. A pinned mapping that is total over the declared feature universe and bijective can make a lossless result correct (D7). That case cannot be expressed in v0.1 and is not tested.",
+      "decision": "D2, D7",
+      "report_finding": "S3",
+      "sources": [
+        "ensembl-2024",
+        "bioregistry-2022"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-003",
+      "kind": "defect",
+      "check": "compare",
+      "title": "A value in mg and a value in s resolve as a direct match",
+      "profile": "core/scalar-quantity",
+      "source_patch": {
+        "measurement": {
+          "unit": "mg"
+        }
+      },
+      "target_patch": {
+        "measurement": {
+          "unit": "s"
+        }
+      },
+      "expect": {
+        "status": "INCOMPATIBLE"
+      },
+      "observed_at_review": {
+        "status": "DIRECT_COMPATIBLE",
+        "policy_decision": "ALLOW"
+      },
+      "why": "Mass and time are different dimensions, so declared units on both ports are a known contradiction whatever unit system is adopted.",
+      "conditions": "Both ports declare a unit.",
+      "decision": "D1, D2",
+      "report_finding": "S3, S4",
+      "sources": [
+        "vim-jcgm-200-2012",
+        "si-brochure-9"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-004",
+      "kind": "defect",
+      "check": "compare",
+      "title": "A firing rate converts from nM to uM without loss",
+      "profile": "neuroscience/firing-rate",
+      "source_patch": {
+        "measurement": {
+          "unit": "nM"
+        }
+      },
+      "target_patch": {
+        "measurement": {
+          "unit": "uM"
+        }
+      },
+      "expect": {
+        "status_not_in": [
+          "EXACT",
+          "DIRECT_COMPATIBLE",
+          "LOSSLESS_CONVERSION_AVAILABLE"
+        ]
+      },
+      "observed_at_review": {
+        "status": "LOSSLESS_CONVERSION_AVAILABLE",
+        "policy_decision": "ALLOW"
+      },
+      "why": "A firing rate is a frequency. Amount-of-substance concentration units are not units of that quantity, so no conversion between them can describe a firing rate.",
+      "conditions": "Whether this surfaces as a validation failure or an INCOMPATIBLE comparison is for D1; either satisfies the check.",
+      "decision": "D1",
+      "report_finding": "S4, S7",
+      "sources": [
+        "vim-jcgm-200-2012",
+        "ucum-2.2"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-005",
+      "kind": "defect",
+      "check": "validate",
+      "title": "A firing-rate contract in kg passes validation",
+      "profile": "neuroscience/firing-rate",
+      "source_patch": {
+        "measurement": {
+          "unit": "kg"
+        }
+      },
+      "expect": {
+        "error_findings": "at-least-one"
+      },
+      "observed_at_review": {
+        "error_findings": 0
+      },
+      "why": "The declared unit's dimension (mass) contradicts the profile's quantity (frequency).",
+      "conditions": "None.",
+      "decision": "D1",
+      "report_finding": "S4",
+      "sources": [
+        "vim-jcgm-200-2012",
+        "ucum-2.2"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-006",
+      "kind": "defect",
+      "check": "compare",
+      "title": "Body mass in g and kg is reported incompatible",
+      "profile": "physiology/body-mass",
+      "source_patch": {
+        "measurement": {
+          "unit": "g"
+        }
+      },
+      "target_patch": {
+        "measurement": {
+          "unit": "kg"
+        }
+      },
+      "expect": {
+        "status": "LOSSLESS_CONVERSION_AVAILABLE"
+      },
+      "observed_at_review": {
+        "status": "INCOMPATIBLE",
+        "policy_decision": "BLOCK"
+      },
+      "why": "Grams and kilograms are units of the same quantity related by an exact factor of 1000.",
+      "conditions": "None.",
+      "decision": "D1",
+      "report_finding": "S4, S8",
+      "sources": [
+        "si-brochure-9",
+        "ucum-2.2"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-007",
+      "kind": "defect",
+      "check": "compare",
+      "title": "Body temperature in Cel and K is reported incompatible",
+      "profile": "physiology/body-temperature",
+      "source_patch": {
+        "measurement": {
+          "unit": "Cel"
+        }
+      },
+      "target_patch": {
+        "measurement": {
+          "unit": "K"
+        }
+      },
+      "expect": {
+        "status": "LOSSLESS_CONVERSION_AVAILABLE"
+      },
+      "observed_at_review": {
+        "status": "INCOMPATIBLE",
+        "policy_decision": "BLOCK"
+      },
+      "why": "Body temperature is an absolute temperature. Celsius and kelvin values of an absolute temperature are related exactly by an offset of 273.15.",
+      "conditions": "Absolute temperatures only. A temperature difference converts with factor 1 and no offset and needs its own quantity kind (D1); that case is not expressible in v0.1 and is not tested.",
+      "decision": "D1",
+      "report_finding": "S4",
+      "sources": [
+        "si-brochure-9",
+        "ucum-2.2"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-008",
+      "kind": "defect",
+      "check": "compare",
+      "title": "Heart rate in 1/s and /min is reported incompatible",
+      "profile": "physiology/heart-rate",
+      "source_patch": {
+        "measurement": {
+          "unit": "1/s"
+        }
+      },
+      "target_patch": {
+        "measurement": {
+          "unit": "/min"
+        }
+      },
+      "expect": {
+        "status": "LOSSLESS_CONVERSION_AVAILABLE"
+      },
+      "observed_at_review": {
+        "status": "INCOMPATIBLE",
+        "policy_decision": "BLOCK"
+      },
+      "why": "Per second and per minute are units of the same quantity related by an exact factor of 60.",
+      "conditions": "None.",
+      "decision": "D1",
+      "report_finding": "S4",
+      "sources": [
+        "si-brochure-9",
+        "ucum-2.2"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-009",
+      "kind": "defect",
+      "check": "compare",
+      "title": "Plasma concentration in uM and mol/L is reported incompatible",
+      "profile": "pharmacology/plasma-concentration",
+      "source_patch": {
+        "measurement": {
+          "unit": "uM"
+        }
+      },
+      "target_patch": {
+        "measurement": {
+          "unit": "mol/L"
+        }
+      },
+      "expect": {
+        "status": "LOSSLESS_CONVERSION_AVAILABLE"
+      },
+      "observed_at_review": {
+        "status": "INCOMPATIBLE",
+        "policy_decision": "BLOCK"
+      },
+      "why": "Micromolar and moles per litre are units of the same amount-of-substance concentration related by an exact factor of 10^6.",
+      "conditions": "The spelling 'uM' is used because v0.1 fixtures use it. It is not a UCUM code: UCUM 2.2 (revision 2024-06-17) defines M only as the mega prefix and has no molar unit, so the UCUM spelling is umol/L. If D1 adopts UCUM, update this case in the same change.",
+      "decision": "D1",
+      "report_finding": "S4",
+      "sources": [
+        "si-brochure-9",
+        "ucum-2.2"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-010",
+      "kind": "defect",
+      "check": "compare",
+      "title": "An unspecified species connected to a human-only port is reported as a contradiction",
+      "profile": "neuroscience/firing-rate",
+      "source_patch": {
+        "biological_context": {
+          "species": "any"
+        }
+      },
+      "expect": {
+        "status_not_in": [
+          "INCOMPATIBLE"
+        ]
+      },
+      "observed_at_review": {
+        "status": "INCOMPATIBLE",
+        "policy_decision": "BLOCK"
+      },
+      "why": "'any' has no defined meaning yet. Under each candidate meaning - a wildcard, missing evidence, or species-independent content - the correct result is compatible or UNKNOWN, never a known contradiction.",
+      "conditions": "Which of those results is correct is for D5, which must define 'any' before a stronger assertion is added.",
+      "decision": "D5",
+      "report_finding": "S5",
+      "sources": [
+        "ncbitaxon-schoch-2020"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-011",
+      "kind": "defect",
+      "check": "fixture-invariant",
+      "invariant": "conversion-within-dimension",
+      "title": "Generated unit-conversion fixtures convert between units of another quantity",
+      "expect": {
+        "offenders": "none"
+      },
+      "observed_at_review": {
+        "offenders": 110
+      },
+      "why": "Every profile that requires a unit receives the same nM to uM fixture, including frequencies, times, masses and temperatures, and both implementations are tested to agree on it.",
+      "conditions": "Checks that the conversion's source unit, target unit and the positive fixture's unit share one dimension.",
+      "decision": "D9",
+      "report_finding": "S7",
+      "sources": [
+        "vim-jcgm-200-2012"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-012",
+      "kind": "defect",
+      "check": "fixture-invariant",
+      "invariant": "contradiction-cross-dimension",
+      "title": "Generated unit-contradiction fixtures pair units of the same quantity",
+      "expect": {
+        "offenders": "none"
+      },
+      "observed_at_review": {
+        "offenders": 6
+      },
+      "why": "The contradiction unit is hard-coded to kg, so every profile measured in g asserts that g and kg are incompatible.",
+      "conditions": "Checks that the two units in a contradiction fixture have different dimensions.",
+      "decision": "D9",
+      "report_finding": "S8",
+      "sources": [
+        "si-brochure-9"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-013",
+      "kind": "defect",
+      "check": "fixture-invariant",
+      "invariant": "probability-scale-dimensionless",
+      "title": "Generated positive fixtures put dimensional quantities on a probability scale",
+      "expect": {
+        "offenders": "none"
+      },
+      "observed_at_review": {
+        "offenders": 17
+      },
+      "why": "Scale values are chosen by substring matching on profile names ('concentration' contains 'ratio'), so concentrations and rates are declared as probabilities.",
+      "conditions": "Checks only that a probability is dimensionless. Whether a bounded fraction should be 'probability' or a separate 'proportion' is for D8.",
+      "decision": "D8, D9",
+      "report_finding": "S6",
+      "sources": [
+        "stevens-1946",
+        "vim-jcgm-200-2012"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-014",
+      "kind": "defect",
+      "check": "compare",
+      "title": "Variants on different reference assemblies resolve as a direct match",
+      "profile": "genome/single-nucleotide-variant",
+      "source_patch": {
+        "representation": {
+          "reference_assembly": "GRCh37"
+        }
+      },
+      "target_patch": {
+        "representation": {
+          "reference_assembly": "GRCh38"
+        }
+      },
+      "expect": {
+        "status_not_in": [
+          "EXACT",
+          "DIRECT_COMPATIBLE",
+          "LOSSLESS_CONVERSION_AVAILABLE"
+        ],
+        "policy_decision_not": "ALLOW"
+      },
+      "observed_at_review": {
+        "status": "DIRECT_COMPATIBLE",
+        "policy_decision": "ALLOW"
+      },
+      "why": "The same coordinates on GRCh37 and GRCh38 denote different genomic positions. Liftover is a transformation that can fail per position, so it is never a silent direct match.",
+      "conditions": "Both ports declare the assembly. Whether the correct result is INCOMPATIBLE or a declared lossy liftover is for D2 and D7; either satisfies this check.",
+      "decision": "D2, D7",
+      "report_finding": "S3",
+      "sources": [
+        "spdi-2020",
+        "vrs-2021"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-015",
+      "kind": "defect",
+      "check": "compare",
+      "title": "A simulated value satisfies a port that requires measured data",
+      "profile": "physiology/heart-rate",
+      "source_patch": {
+        "origin": {
+          "type": "simulated"
+        }
+      },
+      "target_patch": {
+        "origin": {
+          "type": "measured"
+        }
+      },
+      "expect": {
+        "status_not_in": [
+          "EXACT",
+          "DIRECT_COMPATIBLE",
+          "LOSSLESS_CONVERSION_AVAILABLE"
+        ],
+        "policy_decision_not": "ALLOW"
+      },
+      "observed_at_review": {
+        "status": "DIRECT_COMPATIBLE",
+        "policy_decision": "ALLOW"
+      },
+      "why": "Measured, simulated and inferred values must never substitute for one another without being visible. Both ports declare origin.type and the target asks for measured data, yet the field is never compared.",
+      "conditions": "Whether this surfaces as INCOMPATIBLE or as a policy refusal is for D12; either satisfies this check.",
+      "decision": "D2, D12",
+      "report_finding": "S3",
+      "sources": [
+        "obi-2016"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-101",
+      "kind": "guard",
+      "check": "compare",
+      "title": "An omitted species returns UNKNOWN",
+      "profile": "neuroscience/firing-rate",
+      "source_remove": [
+        "biological_context.species"
+      ],
+      "expect": {
+        "status": "UNKNOWN"
+      },
+      "why": "Absent evidence is not a contradiction. The D5 redesign must keep an omitted species distinct from a declared one.",
+      "conditions": "None.",
+      "decision": "D5",
+      "report_finding": "S5",
+      "sources": [
+        "ncbitaxon-schoch-2020"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-102",
+      "kind": "guard",
+      "check": "compare",
+      "title": "Body mass in kg and a unit of time stay incompatible",
+      "profile": "physiology/body-mass",
+      "source_patch": {
+        "measurement": {
+          "unit": "kg"
+        }
+      },
+      "target_patch": {
+        "measurement": {
+          "unit": "s"
+        }
+      },
+      "expect": {
+        "status": "INCOMPATIBLE"
+      },
+      "why": "Making g and kg convertible must not make every unit pair convertible.",
+      "conditions": "None.",
+      "decision": "D1",
+      "report_finding": "S4",
+      "sources": [
+        "si-brochure-9"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-103",
+      "kind": "guard",
+      "check": "compare",
+      "title": "A molar concentration still converts from nM to uM without loss",
+      "profile": "pharmacology/plasma-concentration",
+      "source_patch": {
+        "measurement": {
+          "unit": "nM"
+        }
+      },
+      "target_patch": {
+        "measurement": {
+          "unit": "uM"
+        }
+      },
+      "expect": {
+        "status": "LOSSLESS_CONVERSION_AVAILABLE"
+      },
+      "why": "The one conversion the current table gets right must survive the move to a real unit system.",
+      "conditions": "Update the spellings in the same change if D1 adopts UCUM codes.",
+      "decision": "D1",
+      "report_finding": "S4",
+      "sources": [
+        "si-brochure-9"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-104",
+      "kind": "guard",
+      "check": "compare",
+      "title": "Dense and sparse matrices without declared implicit-entry rules are not a lossless match",
+      "profile": "transcriptome/single-cell-expression-matrix",
+      "source_patch": {
+        "representation": {
+          "kind": "dense_vector"
+        }
+      },
+      "target_patch": {
+        "representation": {
+          "kind": "sparse_vector"
+        }
+      },
+      "expect": {
+        "status_not_in": [
+          "EXACT",
+          "DIRECT_COMPATIBLE",
+          "LOSSLESS_CONVERSION_AVAILABLE"
+        ]
+      },
+      "why": "Re-encoding dense as sparse is lossless only when the implicit entry's meaning (zero or missing), ordering, shape and dtype are declared equal. Nothing here declares them.",
+      "conditions": "When D6 makes those rules declarable, add a separate defect case for the fully declared lossless pair.",
+      "decision": "D6",
+      "report_finding": "S11",
+      "sources": [
+        "svensson-2020-zeros"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-105",
+      "kind": "guard",
+      "check": "compare",
+      "title": "Mass concentration and molar concentration are not a lossless match without a molar mass",
+      "profile": "metabolome/metabolite-concentration",
+      "source_patch": {
+        "measurement": {
+          "unit": "mg/L"
+        }
+      },
+      "target_patch": {
+        "measurement": {
+          "unit": "uM"
+        }
+      },
+      "expect": {
+        "status_not_in": [
+          "EXACT",
+          "DIRECT_COMPATIBLE",
+          "LOSSLESS_CONVERSION_AVAILABLE"
+        ]
+      },
+      "why": "Converting between mass and amount-of-substance concentration needs the analyte's molar mass, which is not part of either contract.",
+      "conditions": "A dimensional-analysis implementation must not treat this pair as convertible.",
+      "decision": "D1",
+      "report_finding": "S4",
+      "sources": [
+        "iso-80000-1-2022",
+        "goldbook-mr"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-106",
+      "kind": "guard",
+      "check": "compare",
+      "title": "Human and mouse species stay incompatible for a species-specific port",
+      "profile": "neuroscience/firing-rate",
+      "source_patch": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        }
+      },
+      "expect": {
+        "status": "INCOMPATIBLE"
+      },
+      "why": "A declared cross-species difference is a genuine contradiction for a species-specific contract. Taxonomic subsumption (D5) must not weaken it.",
+      "conditions": "None.",
+      "decision": "D5",
+      "report_finding": "S5",
+      "sources": [
+        "ncbitaxon-schoch-2020"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-107",
+      "kind": "guard",
+      "check": "compare",
+      "title": "A required field missing from the target also returns UNKNOWN",
+      "profile": "neuroscience/firing-rate",
+      "target_remove": [
+        "measurement.unit"
+      ],
+      "expect": {
+        "status": "UNKNOWN"
+      },
+      "why": "Absent evidence must behave the same whichever port is silent. The behaviour is correct today but no generated fixture covers the target side (S10).",
+      "conditions": "None.",
+      "decision": "D9",
+      "report_finding": "S10",
+      "sources": [
+        "vim-jcgm-200-2012"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-108",
+      "kind": "guard",
+      "check": "compare",
+      "normalize": true,
+      "title": "Reordering a set-like field does not change the result once contracts are normalised",
+      "profile": "clinical/diagnosis-code",
+      "source_patch": {
+        "security": {
+          "data_use": [
+            "DUO:0000042",
+            "DUO:0000006"
+          ]
+        }
+      },
+      "target_patch": {
+        "security": {
+          "data_use": [
+            "DUO:0000006",
+            "DUO:0000042"
+          ]
+        }
+      },
+      "expect": {
+        "status": "EXACT"
+      },
+      "why": "security.data_use is a set-like path, so element order carries no meaning. Whatever D12 decides about where normalisation runs, this must stay true.",
+      "conditions": "Applies to normalised contracts. On raw contracts compare_contracts is order-sensitive today; see erratum E9 in the remediation plan.",
+      "decision": "D12",
+      "report_finding": "S12",
+      "sources": [
+        "duo-2021"
+      ]
+    }
+  ]
+}

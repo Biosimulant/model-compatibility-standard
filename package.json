@@ -47,6 +47,7 @@
     "build:browser-data": "node scripts/build_browser_data.mjs",
     "build": "npm run build:spec && npm run build:browser-data && tsc -p typescript/tsconfig.json",
     "test": "npm run build && node --test typescript/test/*.test.mjs && node scripts/check_cross_language.mjs",
+    "test:scientific": "npm run build && BMCS_SCIENTIFIC_STRICT=1 python3 -m pytest python/tests/test_scientific_checks.py && BMCS_SCIENTIFIC_STRICT=1 node --test typescript/test/scientific-checks.test.mjs",
     "prepack": "npm test",
     "prepare": "npm run build"
   },
