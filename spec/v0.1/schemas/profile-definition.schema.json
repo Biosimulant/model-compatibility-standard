@@ -183,6 +183,15 @@
       ],
       "type": "object"
     },
+    "review_questions": {
+      "items": {
+        "minLength": 20,
+        "type": "string"
+      },
+      "minItems": 5,
+      "type": "array",
+      "uniqueItems": true
+    },
     "scientific_claim": {
       "minLength": 20,
       "type": "string"
@@ -196,6 +205,38 @@
         "CONTROLLED",
         "DEFERRED"
       ]
+    },
+    "technical_pre_review": {
+      "additionalProperties": false,
+      "properties": {
+        "checks": {
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "method_version": {
+          "const": "1.0"
+        },
+        "scientific_signoff_required": {
+          "const": true
+        },
+        "status": {
+          "enum": [
+            "ready-for-external-review",
+            "needs-work"
+          ]
+        }
+      },
+      "required": [
+        "status",
+        "method_version",
+        "checks",
+        "scientific_signoff_required"
+      ],
+      "type": "object"
     },
     "transformation_policy": {
       "additionalProperties": false,
@@ -245,7 +286,9 @@
     "requirements",
     "comparison_rules",
     "transformation_policy",
-    "scientific_claim"
+    "scientific_claim",
+    "technical_pre_review",
+    "review_questions"
   ],
   "title": "Compatibility Profile Definition",
   "type": "object"

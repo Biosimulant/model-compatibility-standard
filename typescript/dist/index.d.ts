@@ -1,3 +1,4 @@
+import { type UnitTable } from "./units.js";
 export declare const STANDARD = "https://biosimulant.com/standards/model-compatibility/v0.1";
 export type JsonValue = null | boolean | number | string | JsonValue[] | {
     [key: string]: JsonValue;
@@ -58,6 +59,8 @@ export declare class Bundle {
     profileSummary(ref: string): JsonObject | undefined;
     schemaFiles(): string[];
     unitConversions(): JsonObject[];
+    units(): UnitTable | undefined;
+    quantityKinds(): JsonObject;
     verifyIntegrity(): void;
 }
 export declare function getBundle(): Bundle;

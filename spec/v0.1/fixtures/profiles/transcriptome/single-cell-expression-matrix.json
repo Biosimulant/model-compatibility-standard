@@ -7,20 +7,102 @@
         },
         "dimensions": {
           "axes": [
-            "example-axes"
-          ]
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
         },
         "representation": {
-          "kind": "scalar",
-          "ordering": "example-ordering"
+          "kind": "dense_vector",
+          "ordering": "explicit"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
         }
       },
       "name": "positive",
       "valid": true
+    },
+    {
+      "name": "comparison-direct",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "origin": {
+          "type": "declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "DIRECT_COMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
     },
     {
       "contract": {
@@ -29,38 +111,169 @@
         },
         "dimensions": {
           "axes": [
-            "example-axes"
-          ]
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
         },
         "representation": {
-          "kind": "scalar",
-          "ordering": "example-ordering"
+          "kind": "dense_vector",
+          "ordering": "explicit"
         },
-        "semantic": {
-          "subject": "example-subject"
+        "semantic": {},
+        "uncertainty": {
+          "missingness": "example-missingness"
         }
       },
-      "name": "negative-required-missing",
+      "field": "semantic.concept",
+      "name": "negative-required-missing-semantic-concept",
       "reason_code": "BMCS_REQUIRED_MISSING",
       "valid": false
     },
     {
-      "name": "comparison-unknown",
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix-different"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "semantic.concept",
+      "name": "negative-value-invalid-semantic-concept",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-incompatible-semantic-concept",
+      "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "example-axes"
-          ]
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
         },
         "representation": {
-          "kind": "scalar",
-          "ordering": "example-ordering"
+          "kind": "dense_vector",
+          "ordering": "explicit"
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix-different"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-semantic-concept",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {},
+        "uncertainty": {
+          "missingness": "example-missingness"
         }
       },
       "status": "UNKNOWN",
@@ -70,17 +283,3081 @@
         },
         "dimensions": {
           "axes": [
-            "example-axes"
-          ]
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
         },
         "representation": {
-          "kind": "scalar",
-          "ordering": "example-ordering"
+          "kind": "dense_vector",
+          "ordering": "explicit"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
         }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-target-semantic-concept",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {},
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-required-missing-representation-kind",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "not-an-allowed-value",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-value-invalid-representation-kind",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-incompatible-representation-kind",
+      "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector-different",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-representation-kind",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-target-representation-kind",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "dimensions.axes",
+      "name": "negative-required-missing-dimensions-axes",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": "not-an-array",
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "dimensions.axes",
+      "name": "negative-value-invalid-dimensions-axes",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "dimensions.axes",
+      "name": "comparison-incompatible-dimensions-axes",
+      "reason_code": "BMCS_DIMENSIONS_AXES_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature",
+            "different"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "dimensions.axes",
+      "name": "comparison-unknown-dimensions-axes",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "dimensions.axes",
+      "name": "comparison-unknown-target-dimensions-axes",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "representation.ordering",
+      "name": "negative-required-missing-representation-ordering",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": 7
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "representation.ordering",
+      "name": "negative-value-invalid-representation-ordering",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.ordering",
+      "name": "comparison-incompatible-representation-ordering",
+      "reason_code": "BMCS_REPRESENTATION_ORDERING_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit-different"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "representation.ordering",
+      "name": "comparison-unknown-representation-ordering",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "representation.ordering",
+      "name": "comparison-unknown-target-representation-ordering",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {},
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "biological_context.species",
+      "name": "negative-required-missing-biological-context-species",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": 7
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "biological_context.species",
+      "name": "negative-value-invalid-biological-context-species",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-incompatible-biological-context-species",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_SPECIES_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-unknown-biological-context-species",
+      "source": {
+        "biological_context": {},
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-unknown-target-biological-context-species",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {},
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "dimensions.feature_labels_ref",
+      "name": "negative-required-missing-dimensions-feature-labels-ref",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": 7,
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "dimensions.feature_labels_ref",
+      "name": "negative-value-invalid-dimensions-feature-labels-ref",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "dimensions.feature_labels_ref",
+      "name": "comparison-incompatible-dimensions-feature-labels-ref",
+      "reason_code": "BMCS_DIMENSIONS_FEATURE_LABELS_REF_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref-different",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "dimensions.feature_labels_ref",
+      "name": "comparison-unknown-dimensions-feature-labels-ref",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "dimensions.feature_labels_ref",
+      "name": "comparison-unknown-target-dimensions-feature-labels-ref",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "dimensions.feature_labels_sha256",
+      "name": "negative-required-missing-dimensions-feature-labels-sha256",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": 7
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "dimensions.feature_labels_sha256",
+      "name": "negative-value-invalid-dimensions-feature-labels-sha256",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "dimensions.feature_labels_sha256",
+      "name": "comparison-incompatible-dimensions-feature-labels-sha256",
+      "reason_code": "BMCS_DIMENSIONS_FEATURE_LABELS_SHA256_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000-different"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "dimensions.feature_labels_sha256",
+      "name": "comparison-unknown-dimensions-feature-labels-sha256",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "dimensions.feature_labels_sha256",
+      "name": "comparison-unknown-target-dimensions-feature-labels-sha256",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "identifiers.namespace",
+      "name": "negative-required-missing-identifiers-namespace",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": 7,
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "identifiers.namespace",
+      "name": "negative-value-invalid-identifiers-namespace",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "identifiers.namespace",
+      "name": "comparison-incompatible-identifiers-namespace",
+      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace-different",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "identifiers.namespace",
+      "name": "comparison-unknown-identifiers-namespace",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "identifiers.namespace",
+      "name": "comparison-unknown-target-identifiers-namespace",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "identifiers.namespace_version",
+      "name": "negative-required-missing-identifiers-namespace-version",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": 7
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "identifiers.namespace_version",
+      "name": "negative-value-invalid-identifiers-namespace-version",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "identifiers.namespace_version",
+      "name": "comparison-incompatible-identifiers-namespace-version",
+      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version-different"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "identifiers.namespace_version",
+      "name": "comparison-unknown-identifiers-namespace-version",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "identifiers.namespace_version",
+      "name": "comparison-unknown-target-identifiers-namespace-version",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "measurement.quantity",
+      "name": "negative-required-missing-measurement-quantity",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": 7
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "measurement.quantity",
+      "name": "negative-value-invalid-measurement-quantity",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-incompatible-measurement-quantity",
+      "reason_code": "BMCS_MEASUREMENT_QUANTITY_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared-different"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-unknown-measurement-quantity",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-unknown-target-measurement-quantity",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "measurement.normalization",
+      "name": "negative-required-missing-measurement-normalization",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": 7,
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "field": "measurement.normalization",
+      "name": "negative-value-invalid-measurement-normalization",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.normalization",
+      "name": "comparison-incompatible-measurement-normalization",
+      "reason_code": "BMCS_MEASUREMENT_NORMALIZATION_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization-different",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "measurement.normalization",
+      "name": "comparison-unknown-measurement-normalization",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "measurement.normalization",
+      "name": "comparison-unknown-target-measurement-normalization",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {}
+      },
+      "field": "uncertainty.missingness",
+      "name": "negative-required-missing-uncertainty-missingness",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": 7
+        }
+      },
+      "field": "uncertainty.missingness",
+      "name": "negative-value-invalid-uncertainty-missingness",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "uncertainty.missingness",
+      "name": "comparison-incompatible-uncertainty-missingness",
+      "reason_code": "BMCS_UNCERTAINTY_MISSINGNESS_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness-different"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "uncertainty.missingness",
+      "name": "comparison-unknown-uncertainty-missingness",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {}
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      }
+    },
+    {
+      "field": "uncertainty.missingness",
+      "name": "comparison-unknown-target-uncertainty-missingness",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {
+          "missingness": "example-missingness"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "cell",
+            "feature"
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "measurement": {
+          "normalization": "example-normalization",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/single-cell-expression-matrix"
+        },
+        "uncertainty": {}
       }
     }
   ],

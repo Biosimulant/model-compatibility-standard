@@ -28,18 +28,10 @@ NS = "{http://unitsofmeasure.org/ucum-essence}"
 # Base dimensions in a fixed order, so a dimension is comparable as a plain list.
 DIMENSIONS = ["L", "T", "M", "A", "C", "Q", "F"]
 
-# Spellings v0.1 uses that UCUM does not define. UCUM has no molar unit: 'M' is the mega prefix,
-# so 'uM' parses as micro-mega. Until the fixtures migrate (decision D1), these map to the UCUM
-# spelling so existing contracts keep working, and each one is reported as deprecated.
-ALIASES = {
-    "M": "mol/L",
-    "nM": "nmol/L",
-    "uM": "umol/L",
-    "mM": "mmol/L",
-    "pM": "pmol/L",
-    "Da": "u",
-    "kDa": "ku",
-}
+# No aliases. UCUM has no molar unit -- 'M' is the mega prefix, so 'uM' parses as micro-mega --
+# and v0.1 has not been released, so the declarations use UCUM spellings (umol/L, nmol/L) directly
+# rather than carrying deprecated ones (decision D1).
+ALIASES: dict[str, str] = {}
 
 
 class Unresolved(Exception):
@@ -91,6 +83,10 @@ def parse(expression: str, lookup) -> tuple[float, list[int]]:
             return float(match.group("number")), zero()
         code, exponent = match.group("code"), int(match.group("exponent") or 1)
         factor, dimension = lookup(code)
+        trailing = TOKEN.match(text, position)
+        if trailing and trailing.group("annotation"):
+            # An annotation binds to the unit before it and carries no semantics.
+            position = trailing.end()
         return factor ** exponent, [value * exponent for value in dimension]
 
     def sequence() -> tuple[float, list[int]]:

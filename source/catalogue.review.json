@@ -51,7 +51,7 @@
   },
   "counts": {
     "profiles": 650,
-    "item_definitions": 266,
+    "item_definitions": 267,
     "item_packs": 30
   },
   "item_definitions": [
@@ -1020,6 +1020,13 @@
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
+    },
+    {
+      "path": "measurement.transform",
+      "family": "measurement",
+      "value_type": "profile-defined JSON value",
+      "requirement": "profile-dependent",
+      "comparison_effect": "Checked when the profile requires it or both contracts include it. A log2 and a log10 value of the same quantity are different numbers."
     },
     {
       "path": "measurement.unit",
@@ -2121,6 +2128,7 @@
         "measurement.quantity",
         "measurement.unit",
         "measurement.scale",
+        "measurement.transform",
         "measurement.normalization",
         "measurement.baseline",
         "measurement.reference_range",

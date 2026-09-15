@@ -1,0 +1,578 @@
+{
+  "candidate_recommended_items": [
+    "biological_context.age",
+    "biological_context.assay",
+    "biological_context.cell_line",
+    "biological_context.cell_type",
+    "biological_context.cohort",
+    "biological_context.compartment",
+    "biological_context.disease",
+    "biological_context.intervention",
+    "biological_context.sex",
+    "biological_context.strain",
+    "biological_context.tissue",
+    "dimensions.axes[].coordinates_ref",
+    "dimensions.axes[].dynamic",
+    "dimensions.axes[].labels_ref",
+    "dimensions.axes[].labels_sha256",
+    "dimensions.axes[].meaning",
+    "dimensions.axes[].name",
+    "dimensions.axes[].ordering",
+    "dimensions.axes[].size",
+    "dimensions.axes[].unit",
+    "dimensions.feature_axis",
+    "dimensions.sample_axis",
+    "identifiers.ambiguity_handling",
+    "identifiers.canonicalization",
+    "identifiers.case_policy",
+    "identifiers.deprecated_handling",
+    "identifiers.entity_type",
+    "identifiers.mapping_refs",
+    "identifiers.structure_hash",
+    "identifiers.unmapped_handling",
+    "measurement.aggregation",
+    "measurement.baseline",
+    "measurement.batch_correction",
+    "measurement.calibration_ref",
+    "measurement.control",
+    "measurement.detection_limits",
+    "measurement.normalization",
+    "measurement.quantity",
+    "measurement.reference_range",
+    "measurement.scale",
+    "measurement.tolerance",
+    "measurement.transform",
+    "measurement.unit",
+    "origin.evidence_refs",
+    "origin.instrument",
+    "origin.instrument_model",
+    "origin.processing_pipeline_ref",
+    "origin.protocol_ref",
+    "origin.protocol_version",
+    "origin.software",
+    "origin.software_version",
+    "representation.conformer_method",
+    "representation.feature_space",
+    "representation.formal_charge",
+    "representation.hydrogen_policy",
+    "representation.isotope_state",
+    "representation.protonation_state",
+    "representation.stereochemistry",
+    "representation.structure_format",
+    "representation.tautomer_state",
+    "semantic.endpoint",
+    "semantic.entity",
+    "semantic.ontology_terms",
+    "semantic.process",
+    "semantic.qualifiers",
+    "semantic.role",
+    "semantic.subject",
+    "uncertainty.missingness",
+    "uncertainty.quality_flags"
+  ],
+  "domain": "lipidome-glycome",
+  "fixture_groups": {
+    "direct": [
+      "comparison-direct"
+    ],
+    "incompatible": [
+      "comparison-incompatible-semantic-concept",
+      "comparison-incompatible-representation-kind",
+      "comparison-incompatible-dimensions-axes",
+      "comparison-incompatible-representation-ordering",
+      "comparison-incompatible-identifiers-namespace",
+      "comparison-incompatible-identifiers-namespace-version",
+      "comparison-incompatible-biological-context-species",
+      "comparison-incompatible-dimensions-feature-labels-ref",
+      "comparison-incompatible-dimensions-feature-labels-sha256"
+    ],
+    "invalid": [
+      "negative-value-invalid-semantic-concept",
+      "negative-value-invalid-representation-kind",
+      "negative-value-invalid-dimensions-axes",
+      "negative-value-invalid-representation-ordering",
+      "negative-value-invalid-identifiers-namespace",
+      "negative-value-invalid-identifiers-namespace-version",
+      "negative-value-invalid-biological-context-species",
+      "negative-value-invalid-dimensions-feature-labels-ref",
+      "negative-value-invalid-dimensions-feature-labels-sha256"
+    ],
+    "negative": [
+      "negative-required-missing-semantic-concept",
+      "negative-required-missing-representation-kind",
+      "negative-required-missing-dimensions-axes",
+      "negative-required-missing-representation-ordering",
+      "negative-required-missing-identifiers-namespace",
+      "negative-required-missing-identifiers-namespace-version",
+      "negative-required-missing-biological-context-species",
+      "negative-required-missing-dimensions-feature-labels-ref",
+      "negative-required-missing-dimensions-feature-labels-sha256"
+    ],
+    "positive": [
+      "positive"
+    ],
+    "transformations": [],
+    "unknown": [
+      "comparison-unknown-semantic-concept",
+      "comparison-unknown-representation-kind",
+      "comparison-unknown-dimensions-axes",
+      "comparison-unknown-representation-ordering",
+      "comparison-unknown-identifiers-namespace",
+      "comparison-unknown-identifiers-namespace-version",
+      "comparison-unknown-biological-context-species",
+      "comparison-unknown-dimensions-feature-labels-ref",
+      "comparison-unknown-dimensions-feature-labels-sha256",
+      "comparison-unknown-target-semantic-concept",
+      "comparison-unknown-target-representation-kind",
+      "comparison-unknown-target-dimensions-axes",
+      "comparison-unknown-target-representation-ordering",
+      "comparison-unknown-target-identifiers-namespace",
+      "comparison-unknown-target-identifiers-namespace-version",
+      "comparison-unknown-target-biological-context-species",
+      "comparison-unknown-target-dimensions-feature-labels-ref",
+      "comparison-unknown-target-dimensions-feature-labels-sha256"
+    ]
+  },
+  "fixture_names": [
+    "positive",
+    "comparison-direct",
+    "negative-required-missing-semantic-concept",
+    "negative-value-invalid-semantic-concept",
+    "comparison-incompatible-semantic-concept",
+    "comparison-unknown-semantic-concept",
+    "comparison-unknown-target-semantic-concept",
+    "negative-required-missing-representation-kind",
+    "negative-value-invalid-representation-kind",
+    "comparison-incompatible-representation-kind",
+    "comparison-unknown-representation-kind",
+    "comparison-unknown-target-representation-kind",
+    "negative-required-missing-dimensions-axes",
+    "negative-value-invalid-dimensions-axes",
+    "comparison-incompatible-dimensions-axes",
+    "comparison-unknown-dimensions-axes",
+    "comparison-unknown-target-dimensions-axes",
+    "negative-required-missing-representation-ordering",
+    "negative-value-invalid-representation-ordering",
+    "comparison-incompatible-representation-ordering",
+    "comparison-unknown-representation-ordering",
+    "comparison-unknown-target-representation-ordering",
+    "negative-required-missing-identifiers-namespace",
+    "negative-value-invalid-identifiers-namespace",
+    "comparison-incompatible-identifiers-namespace",
+    "comparison-unknown-identifiers-namespace",
+    "comparison-unknown-target-identifiers-namespace",
+    "negative-required-missing-identifiers-namespace-version",
+    "negative-value-invalid-identifiers-namespace-version",
+    "comparison-incompatible-identifiers-namespace-version",
+    "comparison-unknown-identifiers-namespace-version",
+    "comparison-unknown-target-identifiers-namespace-version",
+    "negative-required-missing-biological-context-species",
+    "negative-value-invalid-biological-context-species",
+    "comparison-incompatible-biological-context-species",
+    "comparison-unknown-biological-context-species",
+    "comparison-unknown-target-biological-context-species",
+    "negative-required-missing-dimensions-feature-labels-ref",
+    "negative-value-invalid-dimensions-feature-labels-ref",
+    "comparison-incompatible-dimensions-feature-labels-ref",
+    "comparison-unknown-dimensions-feature-labels-ref",
+    "comparison-unknown-target-dimensions-feature-labels-ref",
+    "negative-required-missing-dimensions-feature-labels-sha256",
+    "negative-value-invalid-dimensions-feature-labels-sha256",
+    "comparison-incompatible-dimensions-feature-labels-sha256",
+    "comparison-unknown-dimensions-feature-labels-sha256",
+    "comparison-unknown-target-dimensions-feature-labels-sha256"
+  ],
+  "internal_quality_errors": [],
+  "label": "Lipidomics Matrix",
+  "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
+  "profile_id": "lipidome-glycome/lipidomics-matrix@0.1",
+  "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/lipidomics-matrix/v0.1",
+  "profile_sha256": "sha256:3fcfe57522dc113feeba4462ec0154e2ca3119145497aad99871985cd6472162",
+  "proposed_allowed_values": {
+    "representation": {
+      "kind": [
+        "dense_vector",
+        "sparse_vector",
+        "matrix",
+        "tensor",
+        "array",
+        "artifact",
+        "file",
+        "record",
+        "table"
+      ]
+    }
+  },
+  "proposed_comparison_rules": [
+    {
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
+      "severity": "error",
+      "source": "/contract/semantic/concept",
+      "target": "/contract/semantic/concept"
+    },
+    {
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/kind",
+      "target": "/contract/representation/kind"
+    },
+    {
+      "missing": "unknown",
+      "operator": "labels-equal",
+      "reason_code": "BMCS_DIMENSIONS_AXES_MISMATCH",
+      "severity": "error",
+      "source": "/contract/dimensions/axes",
+      "target": "/contract/dimensions/axes"
+    },
+    {
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_ORDERING_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/ordering",
+      "target": "/contract/representation/ordering"
+    },
+    {
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/identifiers/namespace",
+      "target": "/contract/identifiers/namespace"
+    },
+    {
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
+      "severity": "error",
+      "source": "/contract/identifiers/namespace_version",
+      "target": "/contract/identifiers/namespace_version"
+    },
+    {
+      "missing": "unknown",
+      "operator": "context-compatible",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_SPECIES_MISMATCH",
+      "severity": "error",
+      "source": "/contract/biological_context/species",
+      "target": "/contract/biological_context/species"
+    },
+    {
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_DIMENSIONS_FEATURE_LABELS_REF_MISMATCH",
+      "severity": "error",
+      "source": "/contract/dimensions/feature_labels_ref",
+      "target": "/contract/dimensions/feature_labels_ref"
+    },
+    {
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_DIMENSIONS_FEATURE_LABELS_SHA256_MISMATCH",
+      "severity": "error",
+      "source": "/contract/dimensions/feature_labels_sha256",
+      "target": "/contract/dimensions/feature_labels_sha256"
+    },
+    {
+      "missing": "ignore",
+      "operator": "unit-convertible",
+      "reason_code": "BMCS_MEASUREMENT_UNIT_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/unit",
+      "target": "/contract/measurement/unit"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_SCALE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/scale",
+      "target": "/contract/measurement/scale"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_TRANSFORM_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/transform",
+      "target": "/contract/measurement/transform"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_QUANTITY_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/quantity",
+      "target": "/contract/measurement/quantity"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_NORMALIZATION_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/normalization",
+      "target": "/contract/measurement/normalization"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_BASELINE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/baseline",
+      "target": "/contract/measurement/baseline"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_AGGREGATION_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/aggregation",
+      "target": "/contract/measurement/aggregation"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_FEATURE_SPACE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/feature_space",
+      "target": "/contract/representation/feature_space"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_REFERENCE_ASSEMBLY_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/reference_assembly",
+      "target": "/contract/representation/reference_assembly"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_COORDINATE_SYSTEM_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/coordinate_system",
+      "target": "/contract/representation/coordinate_system"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_LIFECYCLE_TIME_UNIT_MISMATCH",
+      "severity": "error",
+      "source": "/contract/lifecycle/time_unit",
+      "target": "/contract/lifecycle/time_unit"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_LIFECYCLE_TEMPORAL_MEANING_MISMATCH",
+      "severity": "error",
+      "source": "/contract/lifecycle/temporal_meaning",
+      "target": "/contract/lifecycle/temporal_meaning"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_ORIGIN_TYPE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/origin/type",
+      "target": "/contract/origin/type"
+    },
+    {
+      "missing": "ignore",
+      "operator": "context-compatible",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_COMPARTMENT_MISMATCH",
+      "severity": "error",
+      "source": "/contract/biological_context/compartment",
+      "target": "/contract/biological_context/compartment"
+    }
+  ],
+  "proposed_fixed_values": {
+    "semantic": {
+      "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipidomics-matrix"
+    }
+  },
+  "proposed_requirements": [
+    {
+      "level": "required",
+      "path": "semantic.concept",
+      "schema": {
+        "const": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipidomics-matrix"
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.kind",
+      "schema": {
+        "enum": [
+          "dense_vector",
+          "sparse_vector",
+          "matrix",
+          "tensor",
+          "array",
+          "artifact",
+          "file",
+          "record",
+          "table"
+        ]
+      }
+    },
+    {
+      "level": "required",
+      "path": "dimensions.axes",
+      "schema": {
+        "items": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "coordinates_ref": {
+                  "format": "uri",
+                  "type": "string"
+                },
+                "dynamic": {
+                  "type": "boolean"
+                },
+                "labels_ref": {
+                  "format": "uri",
+                  "type": "string"
+                },
+                "labels_sha256": {
+                  "pattern": "^sha256:[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "meaning": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "name": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "ordering": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "size": {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "unit": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "type": "object"
+            }
+          ]
+        },
+        "minItems": 1,
+        "type": "array"
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.ordering",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "identifiers.namespace",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "identifiers.namespace_version",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "biological_context.species",
+      "schema": {
+        "anyOf": [
+          {
+            "const": "any"
+          },
+          {
+            "pattern": "^NCBITaxon:[1-9][0-9]*$"
+          }
+        ],
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "dimensions.feature_labels_ref",
+      "schema": {
+        "format": "uri",
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "dimensions.feature_labels_sha256",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    }
+  ],
+  "questions_for_reviewers": [
+    "Does the proposed concept identify Lipidomics Matrix narrowly enough to prevent a different scientific quantity from matching?",
+    "Are the allowed representations complete, and can any two allowed representations connect without an explicit adapter?",
+    "Which authoritative standards, ontologies, databases or primary publications support each required field and comparison rule?",
+    "Which missing value must return UNKNOWN, and which known contradiction must return INCOMPATIBLE?",
+    "Should quantity, unit, scale, normalization, baseline or endpoint be required for this profile?",
+    "Which identifier namespaces, releases, canonicalization rules and mapping-loss rules are permitted?",
+    "Are axis names, order, labels, coordinates and dynamic-size rules fully specified?",
+    "Which species, tissue, cell type, disease, intervention, assay, cohort or compartment fields are required or conditional?",
+    "What uses and scientific claims must this profile explicitly exclude?"
+  ],
+  "required_external_approvals": [
+    "named domain-qualified scientific reviewer",
+    "different named schema and compatibility reviewer",
+    "domain owner"
+  ],
+  "stage": "WAVE_2",
+  "technical_pre_review": {
+    "checks": [
+      "profile-definition-schema",
+      "typed-required-values",
+      "profile-specific-concept",
+      "representation-applicability",
+      "stable-field-level-reason-codes",
+      "positive-fixture",
+      "missing-required-fixture",
+      "invalid-value-fixture",
+      "direct-compatible-fixture",
+      "incompatible-fixture",
+      "unknown-fixture",
+      "python-typescript-parity"
+    ],
+    "method_version": "1.0",
+    "scientific_signoff_required": true,
+    "status": "ready-for-external-review"
+  }
+}

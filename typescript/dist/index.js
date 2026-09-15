@@ -6,6 +6,7 @@ import Ajv2020Import from "ajv/dist/2020.js";
 import addFormatsImport from "ajv-formats";
 import canonicalizeImport from "canonicalize";
 import YAML from "yaml";
+import { convertUnit, parseUnit } from "./units.js";
 export const STANDARD = "https://biosimulant.com/standards/model-compatibility/v0.1";
 const PROFILE_PREFIX = "https://biosimulant.com/standards/model-compatibility/profiles/";
 export const DEFAULT_RESOURCE_LIMITS = {
@@ -120,7 +121,28 @@ export class Bundle {
         return readdirSync(join(this.root, "schemas")).filter((name) => name.endsWith(".json")).sort();
     }
     unitConversions() {
-        return this.readJson("rules/unit-conversions.json").conversions;
+        try {
+            return this.readJson("rules/unit-conversions.json").conversions;
+        }
+        catch {
+            return [];
+        }
+    }
+    units() {
+        try {
+            return this.readJson("rules/units.json");
+        }
+        catch {
+            return undefined;
+        }
+    }
+    quantityKinds() {
+        try {
+            return (this.readJson("rules/quantity-kinds.json").kinds ?? {});
+        }
+        catch {
+            return {};
+        }
     }
     verifyIntegrity() {
         const manifest = this.manifest;
@@ -241,8 +263,113 @@ export function validateContract(contract, profileRefs = [], bundle = getBundle(
                 findings.push({ reason_code: "BMCS_PROFILE_VALUE_INVALID", message: `${path}: ${checkRequirement.errors?.[0]?.message ?? "value is invalid"}`, path: `/${path.replaceAll(".", "/")}`, severity: "error" });
             }
         }
+        findings.push(...unitFindings(bundle, profile, contract));
     }
     return findings;
+}
+/**
+ * Check a declared unit against the profile's quantity kind (decision D1).
+ *
+ * A unit alone does not identify a quantity: hertz and becquerel are both per second, and a
+ * Hounsfield unit is dimensionless like a bare ratio. Mirrors _unit_findings in the Python
+ * implementation.
+ */
+function normalised(contract, bundle) {
+    // A caller may pass a minimal bundle that carries only the profiles it needs.
+    if (contract === null)
+        return null;
+    try {
+        return normalizeContract(contract, bundle);
+    }
+    catch {
+        return contract;
+    }
+}
+/** A declared unit that cannot belong to the profile's quantity kind (decision D1). */
+function unitKindErrors(bundle, profile, contract) {
+    const table = typeof bundle.units === "function" ? bundle.units() : undefined;
+    const measurement = contract.measurement;
+    const unit = measurement?.unit;
+    const quantity = profile.fixed?.measurement?.quantity;
+    if (!table || typeof unit !== "string" || typeof quantity !== "string")
+        return [];
+    const kindId = quantity.split("/").pop();
+    const kinds = typeof bundle.quantityKinds === "function" ? bundle.quantityKinds() : {};
+    const kind = kinds[kindId];
+    if (!kind)
+        return [];
+    let declared;
+    try {
+        declared = parseUnit(unit, table);
+    }
+    catch {
+        return [];
+    }
+    const allowed = kind.allowed_units;
+    if (allowed?.length && !allowed.includes(unit))
+        return [`${unit} is not one of the units ${kindId} accepts`];
+    const canonical = kind.canonical_unit;
+    if (canonical) {
+        try {
+            const expected = parseUnit(canonical, table);
+            if (JSON.stringify(declared.dimension) !== JSON.stringify(expected.dimension)) {
+                return [`${unit} does not have the dimension of ${kindId} (${canonical})`];
+            }
+        }
+        catch {
+            return [];
+        }
+    }
+    return [];
+}
+function unitFindings(bundle, profile, contract) {
+    const table = typeof bundle.units === "function" ? bundle.units() : undefined;
+    const value = getDotted(contract, "measurement.unit");
+    if (!table || value === undefined || value === null)
+        return [];
+    const path = "/measurement/unit";
+    if (typeof value !== "string")
+        return [{ reason_code: "BMCS_UNIT_INVALID", message: "measurement.unit must be a UCUM expression.", path, severity: "error" }];
+    let declared;
+    try {
+        declared = parseUnit(value, table);
+    }
+    catch (error) {
+        return [{ reason_code: "BMCS_UNIT_INVALID", message: `measurement.unit: ${error.message}`, path, severity: "error" }];
+    }
+    const quantity = getDotted((profile.fixed ?? {}), "measurement.quantity");
+    if (typeof quantity !== "string")
+        return [];
+    const kindId = quantity.split("/").pop();
+    const kind = bundle.quantityKinds()[kindId];
+    if (!kind)
+        return [];
+    const allowed = kind.allowed_units;
+    if (allowed?.length && !allowed.includes(value)) {
+        return [{ reason_code: "BMCS_UNIT_NOT_ALLOWED", message: `measurement.unit: ${value} is not one of the units ${kindId} accepts (${allowed.join(", ")}).`, path, severity: "error" }];
+    }
+    const forbidden = new Set(kind.forbidden_unit_properties ?? []);
+    if (forbidden.size) {
+        for (const code of [...declared.codes].sort()) {
+            const property = table.units[code]?.property;
+            if (property && forbidden.has(property)) {
+                return [{ reason_code: "BMCS_UNIT_NOT_ALLOWED", message: `measurement.unit: ${code} measures ${property}, which ${kindId} does not.`, path, severity: "error" }];
+            }
+        }
+    }
+    const canonical = kind.canonical_unit;
+    if (canonical) {
+        try {
+            const expected = parseUnit(canonical, table);
+            if (JSON.stringify(declared.dimension) !== JSON.stringify(expected.dimension)) {
+                return [{ reason_code: "BMCS_UNIT_DIMENSION_MISMATCH", message: `measurement.unit: ${value} does not have the dimension of ${kindId} (${canonical}).`, path, severity: "error" }];
+            }
+        }
+        catch {
+            return [];
+        }
+    }
+    return [];
 }
 export function validateObject(instance, schemaName, bundle = getBundle()) {
     try {
@@ -473,7 +600,20 @@ function compareValue(rule, source, target, bundle, snapshots) {
     if (operator === "unit-convertible") {
         if (source === target)
             return [true, undefined];
-        const conversion = bundle.unitConversions().find((entry) => entry.from === source && entry.to === target);
+        const table = typeof bundle.units === "function" ? bundle.units() : undefined;
+        if (table) {
+            if (typeof source !== "string" || typeof target !== "string")
+                return [false, "invalid"];
+            try {
+                const conversion = convertUnit(source, target, table);
+                // Different dimensions are a contradiction; an unreadable or arbitrary unit is not decidable.
+                return conversion === null ? [false, undefined] : [true, "none"];
+            }
+            catch {
+                return [false, "unsupported"];
+            }
+        }
+        const conversion = (typeof bundle.unitConversions === "function" ? bundle.unitConversions() : []).find((entry) => entry.from === source && entry.to === target);
         return [conversion !== undefined, conversion?.loss];
     }
     if (operator === "range") {
@@ -497,8 +637,18 @@ function compareValue(rule, source, target, bundle, snapshots) {
             return [canonicalJson(source.dimension) === canonicalJson(target.dimension), undefined];
         return [false, "invalid"];
     }
-    if (operator === "context-compatible")
-        return [source === target || target === "any" || target === "unspecified" || target === null, undefined];
+    if (operator === "context-compatible") {
+        // A source that declares no context is absent evidence, not a contradiction (decision D5).
+        if (source === "any" || source === "unspecified") {
+            const open = target === null || target === undefined || target === "any" || target === "unspecified";
+            return open ? [true, undefined] : [false, "unsupported"];
+        }
+        // A context value is not always a scalar: an intervention is a list of applied interventions.
+        // Comparing those with === asks whether they are the same object, so two equal lists read as a
+        // contradiction. Compare by value, which is what the Python engine has always done.
+        const open = target === null || target === undefined || target === "any" || target === "unspecified";
+        return [canonicalJson(source) === canonicalJson(target) || open, undefined];
+    }
     if (operator === "term-equivalent" || operator === "term-subsumes") {
         if (canonicalJson(source) === canonicalJson(target))
             return [true, undefined];
@@ -517,6 +667,10 @@ function compareValue(rule, source, target, bundle, snapshots) {
 }
 export function compareContracts(source, target, options = {}) {
     const bundle = options.bundle ?? getBundle();
+    // Comparison normalises its own inputs, so a set-like field written in another order is not
+    // reported as a contradiction by a caller who skipped the normalisation stage (decision D12).
+    source = normalised(source, bundle);
+    target = normalised(target, bundle);
     const snapshots = { ontology: verifiedSnapshots(options.snapshots?.ontology), mappings: verifiedSnapshots(options.snapshots?.mappings) };
     let status;
     let findings;
@@ -541,6 +695,21 @@ export function compareContracts(source, target, options = {}) {
         }
         findings = [];
         let unknown = false, incompatible = false, conversion;
+        for (const ref of [...new Set([...(options.sourceProfileRefs ?? []), ...(options.targetProfileRefs ?? [])])]) {
+            let profile;
+            try {
+                profile = bundle.profile(ref);
+            }
+            catch {
+                continue;
+            }
+            for (const [side, contract] of [["source", source], ["target", target]]) {
+                for (const problem of unitKindErrors(bundle, profile, contract)) {
+                    incompatible = true;
+                    findings.push(finding("measurement", "INCOMPATIBLE", "BMCS_UNIT_DIMENSION_MISMATCH", `${side}: ${problem}`));
+                }
+            }
+        }
         for (const rule of rules) {
             const left = getPointer({ contract: source }, rule.source), right = getPointer({ contract: target }, rule.target);
             const dimension = rule.target.split("/")[2] ?? "contract";

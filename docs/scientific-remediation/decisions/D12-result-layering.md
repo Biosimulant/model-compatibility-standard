@@ -1,6 +1,6 @@
 # D12. Keeping technical status, policy and quality apart
 
-**Status:** Open. **Owner:** unassigned. **Decided:** — . **Approved by:** —
+**Status:** Decided: option (c) for v0.1. Implemented in part. **Owner:** unassigned. **Decided:** — . **Approved by:** —
 
 ## Question
 
@@ -62,4 +62,11 @@ a set-like field must not change the result once contracts are normalised.
 
 ## Decision
 
-_To be recorded._
+**Adopted: option (c) for v0.1** — `policy_decision` stays in the report as a documented default
+mapping, with the move to (b) reserved for the next major version.
+
+Implemented now: comparison normalises its own inputs in both engines, so a set-like field written
+in another order is no longer a contradiction for a caller who skipped the normalisation stage
+(erratum E9). Normalisation degrades gracefully when a caller supplies a minimal bundle.
+
+**Still open:** moving consent and data-use comparison out of the technical result.

@@ -28,13 +28,13 @@
       "name": "lossless-unit",
       "source": {
         "measurement": {
-          "unit": "nM"
+          "unit": "nmol/L"
         }
       },
       "status": "LOSSLESS_CONVERSION_AVAILABLE",
       "target": {
         "measurement": {
-          "unit": "uM"
+          "unit": "umol/L"
         }
       }
     },

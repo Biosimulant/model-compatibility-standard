@@ -13,9 +13,8 @@ A profile can move to `reviewed` only when it has all of the following:
 - A named scientific reviewer who didn't write the profile.
 - A different named schema reviewer who didn't write the profile.
 - Fixtures for a valid contract, a missing required field, a comparison with
-  missing information, and any conversions the profile allows. The generator
-  currently makes only the first three (`positive`, `negative-required-missing`
-  and `comparison-unknown`).
+  an invalid value, direct compatibility, a known incompatibility, missing
+  information, and any conversions the profile allows.
 - A clear intended-use statement and at least one important limitation.
 - A check that its rules only use operators listed in
   `spec/v0.1/rules/operators.json`.
@@ -25,12 +24,26 @@ Until that evidence exists, the build keeps each profile's recorded review
 status and sets `release_eligible` to `false`. Today that applies to all 650
 profiles.
 
+## Internal pre-review
+
+Every profile has a generated packet under
+`spec/v0.1/review-packets/<domain>/<profile-name>.json`. The packet contains the
+exact profile digest, proposed fixed and allowed values, required and
+recommended fields, comparison rules, fixture names, reviewer questions and
+the remaining approval roles.
+
+`spec/v0.1/catalogue/internal-validation.json` records the machine-checkable
+result for all 650 profiles. `ready-for-external-review` means that the profile
+is distinct, typed, schema-valid and fixture-backed in both implementations. It
+does not mean that its scientific choices have been approved.
+
 Review evidence is stored as one JSON file per profile under
 `source/reviews/<domain>/<profile-name>.json`. Use
 `source/reviews/profile-review.template.json`. The source schema and build check
-the required names, dates, sources, decisions and fixture review. This keeps
-domain work separate and avoids pretending that passing code tests is a
-scientific sign-off.
+the required names, dates, pinned sources, decisions and fixture review. A
+reviewer must include or explicitly exclude every contract section. This keeps
+domain work separate and avoids treating passing code tests as a scientific
+sign-off.
 
 The bundle calculates `ga_ready` from these files. It becomes `true` only when
 all 650 profiles have complete review evidence.

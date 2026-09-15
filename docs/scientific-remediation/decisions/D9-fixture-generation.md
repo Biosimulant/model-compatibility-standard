@@ -1,6 +1,6 @@
 # D9. Fixture generation
 
-**Status:** Open. **Owner:** unassigned. **Decided:** — . **Approved by:** —
+**Status:** Decided: option (b). Implemented. **Owner:** unassigned. **Decided:** — . **Approved by:** —
 
 ## Question
 
@@ -62,4 +62,19 @@ hand-written.
 
 ## Decision
 
-_To be recorded._
+**Adopted: option (b), every value comes from a reviewed declaration.** The substring heuristics are
+gone. `source/measurement-declarations.json` (124 profiles) and `source/structure-declarations.json`
+(90 profiles) now drive units, scales, transforms, axes and allowed representation kinds.
+
+Generated fixtures changed with them:
+
+- the conversion fixture converts within the profile's own dimension, or is omitted where no metric
+  alternative exists, instead of asserting nanomolar to micromolar for everything;
+- the contradiction fixture crosses a dimension, and its species contradiction differs from the
+  profile's own example;
+- each required field also gets a target-side UNKNOWN fixture;
+- snapshot-dependent operators get an UNKNOWN fixture rather than a false contradiction;
+- example values come from the catalogue's own schemas, so a number is never generated where the
+  schema says string, and digests and URIs are real.
+
+Settles BMCS-SCI-011, 012, 013 and the target-side coverage gap behind guard 107.

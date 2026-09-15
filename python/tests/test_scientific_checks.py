@@ -17,11 +17,23 @@ from typing import Any
 import pytest
 
 from biosimulant_model_compatibility_standard import compare_contracts, normalize_contract, validate_contract
+from biosimulant_model_compatibility_standard.units import UnitError, parse_unit
 
 ROOT = Path(__file__).resolve().parents[2]
 SUITE = json.loads((ROOT / "scientific-checks" / "v0.1" / "cases.json").read_text(encoding="utf-8"))
 FIXTURES = ROOT / "spec" / "v0.1" / "fixtures" / "profiles"
-DIMENSIONS: dict[str, str] = SUITE["unit_dimensions"]
+UNITS = json.loads((ROOT / "spec" / "v0.1" / "rules" / "units.json").read_text(encoding="utf-8"))
+
+
+def _dimension(unit: str | None) -> tuple[int, ...] | None:
+    """The dimension the standard's own UCUM table gives this unit, or None when it cannot say."""
+
+    if not isinstance(unit, str):
+        return None
+    try:
+        return parse_unit(unit, UNITS).dimension
+    except UnitError:
+        return None
 STRICT = os.environ.get("BMCS_SCIENTIFIC_STRICT") == "1"
 NOT_A_MATCH = "is not scientifically acceptable here"
 
@@ -65,17 +77,17 @@ def _offenders(invariant: str) -> list[str]:
             case = cases.get("comparison-lossless-unit-conversion")
             if case:
                 units = [case["source"]["measurement"]["unit"], case["target"]["measurement"]["unit"], unit]
-                dims = {DIMENSIONS.get(u) for u in units}
+                dims = {_dimension(u) for u in units}
                 if None in dims or len(dims) != 1:
                     offenders.append(f"{profile}: {units[0]} -> {units[1]} for a quantity in {unit}")
         elif invariant == "contradiction-cross-dimension":
             case = cases.get("comparison-incompatible-measurement-unit")
             if case:
                 left, right = case["source"]["measurement"]["unit"], case["target"]["measurement"]["unit"]
-                if DIMENSIONS.get(left) is None or DIMENSIONS.get(right) is None or DIMENSIONS[left] == DIMENSIONS[right]:
+                if _dimension(left) is None or _dimension(right) is None or _dimension(left) == _dimension(right):
                     offenders.append(f"{profile}: {left} vs {right} asserted INCOMPATIBLE")
         elif invariant == "probability-scale-dimensionless":
-            if scale == "probability" and DIMENSIONS.get(unit) != "dimensionless":
+            if scale == "probability" and _dimension(unit) != (0, 0, 0, 0, 0, 0, 0):
                 offenders.append(f"{profile}: probability scale with unit {unit}")
         else:
             raise ValueError(f"unknown invariant {invariant}")

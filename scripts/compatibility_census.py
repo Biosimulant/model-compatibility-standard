@@ -201,10 +201,11 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--baseline", type=Path, help="an earlier census JSON to compare against")
     parser.add_argument("--out", type=Path, default=OUT_DIR, help="output directory")
+    parser.add_argument("--label", default="", help="suffix for the snapshot filename, so a run cannot overwrite its own baseline")
     args = parser.parse_args()
     result = census()
     args.out.mkdir(parents=True, exist_ok=True)
-    stem = f"census-{result['generated_at']}"
+    stem = f"census-{result['generated_at']}{('-' + args.label) if args.label else ''}"
     (args.out / f"{stem}.json").write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
     report = render(result)
     if args.baseline:

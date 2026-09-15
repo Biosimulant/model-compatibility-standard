@@ -1,0 +1,121 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/profile-review-packet.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "candidate_recommended_items": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "domain": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "fixture_groups": {
+      "type": "object"
+    },
+    "fixture_names": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 6,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "internal_quality_errors": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "label": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "non_claim": {
+      "minLength": 20,
+      "type": "string"
+    },
+    "profile_id": {
+      "pattern": "^[a-z0-9-]+/[a-z0-9-]+@0\\.1$",
+      "type": "string"
+    },
+    "profile_ref": {
+      "format": "uri",
+      "type": "string"
+    },
+    "profile_sha256": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "proposed_allowed_values": {
+      "type": "object"
+    },
+    "proposed_comparison_rules": {
+      "items": {
+        "$ref": "rule.schema.json"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "proposed_fixed_values": {
+      "type": "object"
+    },
+    "proposed_requirements": {
+      "items": {
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "questions_for_reviewers": {
+      "items": {
+        "minLength": 20,
+        "type": "string"
+      },
+      "minItems": 5,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "required_external_approvals": {
+      "items": {
+        "type": "string"
+      },
+      "minItems": 3,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "stage": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "technical_pre_review": {
+      "type": "object"
+    }
+  },
+  "required": [
+    "profile_id",
+    "profile_ref",
+    "profile_sha256",
+    "label",
+    "domain",
+    "stage",
+    "technical_pre_review",
+    "proposed_fixed_values",
+    "proposed_allowed_values",
+    "proposed_requirements",
+    "proposed_comparison_rules",
+    "candidate_recommended_items",
+    "questions_for_reviewers",
+    "internal_quality_errors",
+    "required_external_approvals",
+    "fixture_names",
+    "fixture_groups",
+    "non_claim"
+  ],
+  "title": "Profile External Review Packet",
+  "type": "object"
+}

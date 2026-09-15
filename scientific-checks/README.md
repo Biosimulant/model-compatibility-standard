@@ -55,7 +55,7 @@ GA requires the strict run to pass. See
 Add `"normalize": true` to a `compare` case to normalise both contracts first, which is what the
 documented validation pipeline does before comparison.
 
-The `unit_dimensions` table is test-only. It classifies the unit spellings that appear in v0.1
-fixtures so the invariants can tell one quantity from another, and it is not a unit system: the
-release must adopt one (decision D1). An unclassified unit is reported as an offender rather than
-being ignored, so the table cannot hide a unit it does not know.
+The fixture invariants read `spec/v0.1/rules/units.json`, the UCUM table the standard itself
+publishes, rather than a table of their own (decision D1, now implemented). A check therefore cannot
+quietly disagree with the engine it is testing. A unit the table cannot parse is reported as an
+offender rather than ignored, so an unknown spelling never passes silently.

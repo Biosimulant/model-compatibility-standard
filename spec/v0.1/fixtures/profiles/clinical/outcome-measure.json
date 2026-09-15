@@ -15,12 +15,73 @@
           ]
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
         }
       },
       "name": "positive",
       "valid": true
+    },
+    {
+      "name": "comparison-direct",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "origin": {
+          "type": "declared"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "status": "DIRECT_COMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {}
+      },
+      "field": "semantic.concept",
+      "name": "negative-required-missing-semantic-concept",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
     },
     {
       "contract": {
@@ -37,15 +98,18 @@
           ]
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure-different"
         }
       },
-      "name": "negative-required-missing",
-      "reason_code": "BMCS_REQUIRED_MISSING",
+      "field": "semantic.concept",
+      "name": "negative-value-invalid-semantic-concept",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
       "valid": false
     },
     {
-      "name": "comparison-unknown",
+      "field": "semantic.concept",
+      "name": "comparison-incompatible-semantic-concept",
+      "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
@@ -60,7 +124,202 @@
           ]
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure-different"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-semantic-concept",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {}
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-target-semantic-concept",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {}
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {},
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-required-missing-representation-kind",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "not-an-allowed-value"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-value-invalid-representation-kind",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-incompatible-representation-kind",
+      "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar-different"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-representation-kind",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {},
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
         }
       },
       "status": "UNKNOWN",
@@ -78,8 +337,517 @@
           ]
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-target-representation-kind",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {},
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {},
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "field": "biological_context.species",
+      "name": "negative-required-missing-biological-context-species",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": 7
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "field": "biological_context.species",
+      "name": "negative-value-invalid-biological-context-species",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-incompatible-biological-context-species",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_SPECIES_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      }
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-unknown-biological-context-species",
+      "source": {
+        "biological_context": {},
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      }
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-unknown-target-biological-context-species",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {},
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "field": "security.data_use",
+      "name": "negative-required-missing-security-data-use",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": "not-an-array"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "field": "security.data_use",
+      "name": "negative-value-invalid-security-data-use",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "security.data_use",
+      "name": "comparison-incompatible-security-data-use",
+      "reason_code": "BMCS_SECURITY_DATA_USE_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use",
+            "different"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      }
+    },
+    {
+      "field": "security.data_use",
+      "name": "comparison-unknown-security-data-use",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      }
+    },
+    {
+      "field": "security.data_use",
+      "name": "comparison-unknown-target-security-data-use",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "field": "security.consent_scope",
+      "name": "negative-required-missing-security-consent-scope",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": 7,
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "field": "security.consent_scope",
+      "name": "negative-value-invalid-security-consent-scope",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "security.consent_scope",
+      "name": "comparison-incompatible-security-consent-scope",
+      "reason_code": "BMCS_SECURITY_CONSENT_SCOPE_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope-different",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      }
+    },
+    {
+      "field": "security.consent_scope",
+      "name": "comparison-unknown-security-consent-scope",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      }
+    },
+    {
+      "field": "security.consent_scope",
+      "name": "comparison-unknown-target-security-consent-scope",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "security": {
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/outcome-measure"
         }
       }
     }

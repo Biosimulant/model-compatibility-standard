@@ -6,8 +6,10 @@ import re
 from typing import Any, Iterable
 
 from .bundle import Bundle, get_bundle
+from .units import UnitError, convert_unit, parse_unit
 from .canonical import digest
 from .constants import STANDARD
+from .normalization import normalize_contract
 from .pointers import MISSING, get_pointer
 
 
@@ -25,8 +27,26 @@ def _finding(dimension: str, state: str, code: str, explanation: str, *, evidenc
 
 
 def _unit_conversion(source: Any, target: Any, bundle: Bundle) -> dict[str, Any] | None:
+    """How to convert one unit into another, or None when they measure different quantities.
+
+    A unit the table cannot interpret, and an arbitrary unit such as [IU] or [PFU] meeting a
+    different one, are reported as undecidable rather than as a match or a contradiction.
+    """
+
+    table = getattr(bundle, "units", None)
+    if table:
+        if not isinstance(source, str) or not isinstance(target, str):
+            return {"loss": "invalid"}
+        try:
+            conversion = convert_unit(source, target, table)
+        except UnitError:
+            return {"loss": "unsupported"}
+        if conversion is None:
+            return None
+        return {"from": source, "to": target, "factor": conversion.factor, "offset": conversion.offset,
+                "affine": conversion.affine, "loss": "none"}
     return next(
-        (entry for entry in bundle.unit_conversions if entry["from"] == source and entry["to"] == target),
+        (entry for entry in getattr(bundle, "unit_conversions", []) if entry["from"] == source and entry["to"] == target),
         None,
     )
 
@@ -183,6 +203,9 @@ def _evaluate(
         conversion = _unit_conversion(source, target, bundle)
         return conversion is not None, conversion and conversion["loss"]
     if operator == "context-compatible":
+        if source in ("any", "unspecified"):
+            # The source declares no context. That is absent evidence, not a contradiction (D5).
+            return (True, None) if target in (None, "any", "unspecified") else (False, "unsupported")
         return source == target or target in (None, "any", "unspecified"), None
     if operator in {"term-equivalent", "term-subsumes"}:
         if source == target:
@@ -201,6 +224,58 @@ def _evaluate(
             return False, "unsupported"
         return _mapping_matches(source, target, snapshot, bijective=operator == "mapping-bijective"), None
     return False, "unsupported"
+
+
+def _normalised(contract: Any, bundle: Bundle) -> Any:
+    """Normalise a contract for comparison, leaving it untouched when the bundle cannot say how.
+
+    A caller may pass a minimal bundle that carries only the profiles it needs.
+    """
+
+    if not isinstance(contract, dict):
+        return contract
+    try:
+        return normalize_contract(contract, bundle=bundle)
+    except (AttributeError, FileNotFoundError, KeyError):
+        return contract
+
+
+def _unit_kind_errors(bundle: Bundle, profile: dict[str, Any], contract: Any) -> list[str]:
+    """Report a declared unit that cannot belong to the profile's quantity kind.
+
+    Hertz and becquerel share a dimension, so a dimension check alone would convert a radioactivity
+    into a firing rate. Comparing contracts where one is internally inconsistent must not produce a
+    conversion (decision D1).
+    """
+
+    table = getattr(bundle, "units", None)
+    if not table or not isinstance(contract, dict):
+        return []
+    measurement = contract.get("measurement")
+    unit = measurement.get("unit") if isinstance(measurement, dict) else None
+    quantity = ((profile.get("fixed") or {}).get("measurement") or {}).get("quantity")
+    if not isinstance(unit, str) or not isinstance(quantity, str):
+        return []
+    kind_id = quantity.rsplit("/", 1)[-1]
+    kind = getattr(bundle, "quantity_kinds", {}).get(kind_id)
+    if not kind:
+        return []
+    try:
+        declared = parse_unit(unit, table)
+    except UnitError:
+        return []
+    allowed = kind.get("allowed_units")
+    if allowed and unit not in allowed:
+        return [f"{unit} is not one of the units {kind_id} accepts"]
+    canonical = kind.get("canonical_unit")
+    if canonical:
+        try:
+            expected = parse_unit(canonical, table)
+        except UnitError:
+            return []
+        if declared.dimension != expected.dimension:
+            return [f"{unit} does not have the dimension of {kind_id} ({canonical})"]
+    return []
 
 
 def _rules(profile_refs: Iterable[str], bundle: Bundle) -> list[dict[str, Any]]:
@@ -226,6 +301,10 @@ def compare_contracts(
     mapping_snapshots: Iterable[dict[str, Any]] = (),
 ) -> dict[str, Any]:
     active = bundle or get_bundle()
+    # Comparison normalises its own inputs, so a set-like field written in another order is not
+    # reported as a contradiction by a caller who skipped the normalisation stage (decision D12).
+    source_contract = _normalised(source_contract, active)
+    target_contract = _normalised(target_contract, active)
     ontology_index = _verified_snapshots(ontology_snapshots)
     mapping_index = _verified_snapshots(mapping_snapshots)
     if source_contract is None or target_contract is None:
@@ -256,6 +335,18 @@ def compare_contracts(
                         "missing": "unknown",
                         "reason_code": "BMCS_VALUE_MISMATCH",
                     })
+        for ref in dict.fromkeys(list(source_profile_refs) + list(target_profile_refs)):
+            try:
+                profile = active.profile(ref)
+            except (KeyError, AttributeError, FileNotFoundError):
+                continue
+            for side, contract in (("source", source_contract), ("target", target_contract)):
+                for problem in _unit_kind_errors(active, profile, contract):
+                    incompatible = True
+                    findings.append(
+                        _finding("measurement", "INCOMPATIBLE", "BMCS_UNIT_DIMENSION_MISMATCH", f"{side}: {problem}")
+                    )
+
         wrapped_source = {"contract": source_contract}
         wrapped_target = {"contract": target_contract}
         for rule in rules:

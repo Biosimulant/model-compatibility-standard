@@ -2,68 +2,1005 @@
   "cases": [
     {
       "contract": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
-          "unit": "1"
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
         },
         "representation": {
           "kind": "scalar"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
         }
       },
       "name": "positive",
       "valid": true
     },
     {
-      "contract": {
+      "name": "comparison-direct",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
-          "unit": "1"
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "origin": {
+          "type": "declared"
         },
         "representation": {
           "kind": "scalar"
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
         }
       },
-      "name": "negative-required-missing",
+      "status": "DIRECT_COMPATIBLE",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "contract": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {}
+      },
+      "field": "semantic.concept",
+      "name": "negative-required-missing-semantic-concept",
       "reason_code": "BMCS_REQUIRED_MISSING",
       "valid": false
     },
     {
-      "name": "comparison-unknown",
-      "source": {
+      "contract": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
-          "unit": "1"
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
         },
         "representation": {
           "kind": "scalar"
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time-different"
+        }
+      },
+      "field": "semantic.concept",
+      "name": "negative-value-invalid-semantic-concept",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-incompatible-semantic-concept",
+      "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time-different"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-semantic-concept",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {}
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-target-semantic-concept",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
         }
       },
       "status": "UNKNOWN",
       "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
-          "unit": "1"
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {}
+      }
+    },
+    {
+      "contract": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-required-missing-representation-kind",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "not-an-allowed-value"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-value-invalid-representation-kind",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-incompatible-representation-kind",
+      "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar-different"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
         },
         "representation": {
           "kind": "scalar"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-representation-kind",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-target-representation-kind",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "contract": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "field": "measurement.quantity",
+      "name": "negative-required-missing-measurement-quantity",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration-different",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "field": "measurement.quantity",
+      "name": "negative-value-invalid-measurement-quantity",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-incompatible-measurement-quantity",
+      "reason_code": "BMCS_MEASUREMENT_QUANTITY_MISMATCH",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration-different",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-unknown-measurement-quantity",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-unknown-target-measurement-quantity",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "contract": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "field": "measurement.unit",
+      "name": "negative-required-missing-measurement-unit",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": 7
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "field": "measurement.unit",
+      "name": "negative-value-invalid-measurement-unit",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.unit",
+      "name": "comparison-incompatible-measurement-unit",
+      "reason_code": "BMCS_UNIT_DIMENSION_MISMATCH",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "kg"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "field": "measurement.unit",
+      "name": "comparison-unknown-measurement-unit",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "field": "measurement.unit",
+      "name": "comparison-unknown-target-measurement-unit",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "contract": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "field": "measurement.scale",
+      "name": "negative-required-missing-measurement-scale",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "not-an-allowed-value",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "field": "measurement.scale",
+      "name": "negative-value-invalid-measurement-scale",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.scale",
+      "name": "comparison-incompatible-measurement-scale",
+      "reason_code": "BMCS_MEASUREMENT_SCALE_MISMATCH",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal-different",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "field": "measurement.scale",
+      "name": "comparison-unknown-measurement-scale",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "field": "measurement.scale",
+      "name": "comparison-unknown-target-measurement-scale",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "contract": {
+        "lifecycle": {},
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "field": "lifecycle.time_origin",
+      "name": "negative-required-missing-lifecycle-time-origin",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "lifecycle": {
+          "time_origin": 7
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "field": "lifecycle.time_origin",
+      "name": "negative-value-invalid-lifecycle-time-origin",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "lifecycle.time_origin",
+      "name": "comparison-incompatible-lifecycle-time-origin",
+      "reason_code": "BMCS_LIFECYCLE_TIME_ORIGIN_MISMATCH",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin-different"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "field": "lifecycle.time_origin",
+      "name": "comparison-unknown-lifecycle-time-origin",
+      "source": {
+        "lifecycle": {},
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "field": "lifecycle.time_origin",
+      "name": "comparison-unknown-target-lifecycle-time-origin",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "lifecycle": {},
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      }
+    },
+    {
+      "name": "comparison-lossless-unit-conversion",
+      "source": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "ms"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
+        }
+      },
+      "status": "LOSSLESS_CONVERSION_AVAILABLE",
+      "target": {
+        "lifecycle": {
+          "time_origin": "example-time-origin"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/simulation-time"
         }
       }
     }

@@ -3,79 +3,1411 @@
     {
       "contract": {
         "biological_context": {
-          "species": "NCBITaxon:9606"
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
         },
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
-          "unit": "1"
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
         },
         "representation": {
           "kind": "scalar"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
         }
       },
       "name": "positive",
       "valid": true
     },
     {
-      "contract": {
+      "name": "comparison-direct",
+      "source": {
         "biological_context": {
-          "species": "NCBITaxon:9606"
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
         },
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
-          "unit": "1"
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "origin": {
+          "type": "declared"
         },
         "representation": {
           "kind": "scalar"
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
         }
       },
-      "name": "negative-required-missing",
+      "status": "DIRECT_COMPATIBLE",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {}
+      },
+      "field": "semantic.concept",
+      "name": "negative-required-missing-semantic-concept",
       "reason_code": "BMCS_REQUIRED_MISSING",
       "valid": false
     },
     {
-      "name": "comparison-unknown",
-      "source": {
+      "contract": {
         "biological_context": {
-          "species": "NCBITaxon:9606"
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
         },
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
-          "unit": "1"
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
         },
         "representation": {
           "kind": "scalar"
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer-different"
+        }
+      },
+      "field": "semantic.concept",
+      "name": "negative-value-invalid-semantic-concept",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-incompatible-semantic-concept",
+      "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer-different"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-semantic-concept",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {}
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-target-semantic-concept",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
         }
       },
       "status": "UNKNOWN",
       "target": {
         "biological_context": {
-          "species": "NCBITaxon:9606"
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
         },
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
-          "unit": "1"
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {}
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-required-missing-representation-kind",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "not-an-allowed-value"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-value-invalid-representation-kind",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-incompatible-representation-kind",
+      "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar-different"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
         },
         "representation": {
           "kind": "scalar"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-representation-kind",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-target-representation-kind",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "field": "measurement.quantity",
+      "name": "negative-required-missing-measurement-quantity",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre-different",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "field": "measurement.quantity",
+      "name": "negative-value-invalid-measurement-quantity",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-incompatible-measurement-quantity",
+      "reason_code": "BMCS_MEASUREMENT_QUANTITY_MISMATCH",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre-different",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-unknown-measurement-quantity",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-unknown-target-measurement-quantity",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "field": "measurement.unit",
+      "name": "negative-required-missing-measurement-unit",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": 7
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "field": "measurement.unit",
+      "name": "negative-value-invalid-measurement-unit",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.unit",
+      "name": "comparison-incompatible-measurement-unit",
+      "reason_code": "BMCS_UNIT_DIMENSION_MISMATCH",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "measurement.unit",
+      "name": "comparison-unknown-measurement-unit",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "measurement.unit",
+      "name": "comparison-unknown-target-measurement-unit",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "field": "measurement.scale",
+      "name": "negative-required-missing-measurement-scale",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "not-an-allowed-value",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "field": "measurement.scale",
+      "name": "negative-value-invalid-measurement-scale",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.scale",
+      "name": "comparison-incompatible-measurement-scale",
+      "reason_code": "BMCS_MEASUREMENT_SCALE_MISMATCH",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal-different",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "measurement.scale",
+      "name": "comparison-unknown-measurement-scale",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "measurement.scale",
+      "name": "comparison-unknown-target-measurement-scale",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "field": "biological_context.species",
+      "name": "negative-required-missing-biological-context-species",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": 7
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "field": "biological_context.species",
+      "name": "negative-value-invalid-biological-context-species",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-incompatible-biological-context-species",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_SPECIES_MISMATCH",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:10090"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-unknown-biological-context-species",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-unknown-target-biological-context-species",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "field": "biological_context.assay",
+      "name": "negative-required-missing-biological-context-assay",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "assay": 7,
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "field": "biological_context.assay",
+      "name": "negative-value-invalid-biological-context-assay",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "biological_context.assay",
+      "name": "comparison-incompatible-biological-context-assay",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_ASSAY_MISMATCH",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay-different",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "biological_context.assay",
+      "name": "comparison-unknown-biological-context-assay",
+      "source": {
+        "biological_context": {
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "biological_context.assay",
+      "name": "comparison-unknown-target-biological-context-assay",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "assay": "example-assay",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "field": "biological_context.cell_line",
+      "name": "negative-required-missing-biological-context-cell-line",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": 7,
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "field": "biological_context.cell_line",
+      "name": "negative-value-invalid-biological-context-cell-line",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "biological_context.cell_line",
+      "name": "comparison-incompatible-biological-context-cell-line",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_CELL_LINE_MISMATCH",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line-different",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "biological_context.cell_line",
+      "name": "comparison-unknown-biological-context-cell-line",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      }
+    },
+    {
+      "field": "biological_context.cell_line",
+      "name": "comparison-unknown-target-biological-context-cell-line",
+      "source": {
+        "biological_context": {
+          "assay": "example-assay",
+          "cell_line": "example-cell-line",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "assay": "example-assay",
+          "species": "NCBITaxon:2697049"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
+          "scale": "nominal",
+          "unit": "[PFU]/mL"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/virology/infectious-titer"
         }
       }
     }

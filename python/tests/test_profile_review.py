@@ -13,6 +13,7 @@ build_standard = importlib.util.module_from_spec(SPEC)
 SPEC.loader.exec_module(build_standard)
 applicable_review_sections = build_standard.applicable_review_sections
 review_evidence_errors = build_standard.review_evidence_errors
+required_fixture_groups = build_standard.required_fixture_groups
 
 
 def test_review_template_matches_its_json_schema():
@@ -44,23 +45,22 @@ def _valid_evidence(profile):
                 "title": "Example authoritative source",
                 "kind": "standard",
                 "url": "https://example.org/source",
+                "version": "1.0",
+                "sha256": "sha256:" + ("1" * 64),
             }
         ],
         "intended_use": "Checks scalar quantity ports with an explicitly declared meaning.",
         "limitations": ["It does not prove that the producing model is scientifically valid."],
         "decisions": {
             section: {
+                "disposition": "included",
                 "rationale": f"The {section} fields are needed to compare this kind of port safely.",
+                "field_paths": [f"{section}.example"],
                 "source_ids": [source_id],
             }
             for section in applicable_review_sections(profile)
         },
-        "fixture_review": {
-            "positive": ["positive"],
-            "negative": ["negative-required-missing"],
-            "unknown": ["comparison-unknown"],
-            "transformations": [],
-        },
+        "fixture_review": required_fixture_groups(profile),
     }
 
 

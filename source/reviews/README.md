@@ -14,9 +14,12 @@ cannot express clearly:
 - the profile must exist in the catalogue;
 - the scientific and schema reviewers must be different people;
 - neither reviewer can be one of the profile authors;
-- every applicable contract section must have a decision and source;
+- every contract section must be included, conditional, or explicitly excluded,
+  with a decision and source;
 - every source used by a decision must exist in the same review file; and
-- positive, negative and `UNKNOWN` fixtures must have been checked.
+- each source must name a version and pin the reviewed bytes with SHA-256; and
+- positive, missing, invalid, direct, incompatible, `UNKNOWN`, and applicable
+  transformation fixtures must have been checked.
 
 Adding a name is not enough. The reviewer must check the actual profile rules,
 fixtures, intended use and limits. Do not use generated text as scientific

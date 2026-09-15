@@ -202,6 +202,7 @@
         "measurement.quantity",
         "measurement.unit",
         "measurement.scale",
+        "measurement.transform",
         "measurement.normalization",
         "measurement.baseline",
         "measurement.reference_range",

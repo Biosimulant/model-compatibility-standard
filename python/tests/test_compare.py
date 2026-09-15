@@ -33,8 +33,8 @@ def test_known_biological_contradiction_beats_unrelated_unknown():
 
 
 def test_lossless_unit_conversion_is_visible():
-    source = {"measurement": {"unit": "nM"}}
-    target = {"measurement": {"unit": "uM"}}
+    source = {"measurement": {"unit": "nmol/L"}}
+    target = {"measurement": {"unit": "umol/L"}}
     report = compare_contracts(source, target)
     assert report["status"] == "LOSSLESS_CONVERSION_AVAILABLE"
     assert report["policy_decision"] == "ALLOW"

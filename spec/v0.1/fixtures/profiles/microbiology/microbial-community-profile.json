@@ -3,59 +3,374 @@
     {
       "contract": {
         "biological_context": {
-          "species": "NCBITaxon:9606"
+          "species": "NCBITaxon:562"
         },
         "representation": {
-          "kind": "scalar"
+          "kind": "dense_vector"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
         }
       },
       "name": "positive",
       "valid": true
     },
     {
-      "contract": {
+      "name": "comparison-direct",
+      "source": {
         "biological_context": {
-          "species": "NCBITaxon:9606"
+          "species": "NCBITaxon:562"
+        },
+        "origin": {
+          "type": "declared"
         },
         "representation": {
-          "kind": "scalar"
+          "kind": "dense_vector"
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
         }
       },
-      "name": "negative-required-missing",
+      "status": "DIRECT_COMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {}
+      },
+      "field": "semantic.concept",
+      "name": "negative-required-missing-semantic-concept",
       "reason_code": "BMCS_REQUIRED_MISSING",
       "valid": false
     },
     {
-      "name": "comparison-unknown",
-      "source": {
+      "contract": {
         "biological_context": {
-          "species": "NCBITaxon:9606"
+          "species": "NCBITaxon:562"
         },
         "representation": {
-          "kind": "scalar"
+          "kind": "dense_vector"
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile-different"
+        }
+      },
+      "field": "semantic.concept",
+      "name": "negative-value-invalid-semantic-concept",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-incompatible-semantic-concept",
+      "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile-different"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-semantic-concept",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {}
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-target-semantic-concept",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
         }
       },
       "status": "UNKNOWN",
       "target": {
         "biological_context": {
-          "species": "NCBITaxon:9606"
+          "species": "NCBITaxon:562"
         },
         "representation": {
-          "kind": "scalar"
+          "kind": "dense_vector"
+        },
+        "semantic": {}
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-required-missing-representation-kind",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "not-an-allowed-value"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-value-invalid-representation-kind",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-incompatible-representation-kind",
+      "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "dense_vector-different"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-representation-kind",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-target-representation-kind",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {},
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      },
+      "field": "biological_context.species",
+      "name": "negative-required-missing-biological-context-species",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": 7
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      },
+      "field": "biological_context.species",
+      "name": "negative-value-invalid-biological-context-species",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-incompatible-biological-context-species",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_SPECIES_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      }
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-unknown-biological-context-species",
+      "source": {
+        "biological_context": {},
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      }
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-unknown-target-biological-context-species",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {},
+        "representation": {
+          "kind": "dense_vector"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/microbial-community-profile"
         }
       }
     }

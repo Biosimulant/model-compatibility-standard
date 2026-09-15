@@ -5,47 +5,50 @@ UNKNOWN. `scripts/compatibility_census.py` makes that measurable. It runs nine s
 every profile and tallies what the engine answers, so the effect of a change is a number.
 
 ```bash
-python3 scripts/compatibility_census.py
-python3 scripts/compatibility_census.py --baseline docs/scientific-remediation/measurements/census-2026-09-15.json
+python3 scripts/compatibility_census.py --label my-change
+python3 scripts/compatibility_census.py --label my-change \
+  --baseline docs/scientific-remediation/measurements/census-baseline-2026-09-15.json
 ```
 
-## Baseline, 15 September 2026
+Always pass `--label`, so a run cannot overwrite the snapshot it is being compared against.
 
-5,775 comparisons over 650 profiles, before any remediation.
+## Before and after the foundation fixes
 
-| Scenario | What the engine answers | What it should answer |
+5,775 comparisons over 650 profiles. The baseline is the release as reviewed; the second column is
+after decisions D1, D2, D5, D8, D9 and D12 were implemented.
+
+| Scenario | Before | After |
 |---|---|---|
-| `identical` | EXACT 650 | Correct |
-| `required-missing-source` | UNKNOWN 650 | Correct |
-| `required-missing-target` | UNKNOWN 650 | Correct, and until now untested (guard BMCS-SCI-107) |
-| `required-value-differs` | INCOMPATIBLE 650 | Correct |
-| `unit-mismatch` (mg vs s) | DIRECT_COMPATIBLE 526, INCOMPATIBLE 124 | INCOMPATIBLE 650 |
-| `unit-convertible` (g vs kg) | DIRECT_COMPATIBLE 526, INCOMPATIBLE 124 | A lossless conversion, 650 |
-| `origin-mismatch` (simulated vs measured) | DIRECT_COMPATIBLE 650 | Never a silent match |
-| `namespace-mismatch` (Ensembl vs HGNC) | DIRECT_COMPATIBLE 552, INCOMPATIBLE 98 | Mapping required, or UNKNOWN |
-| `species-any` | INCOMPATIBLE 575 | Not a contradiction |
+| `identical` | EXACT 650 | EXACT 650 |
+| `required-missing-source` | UNKNOWN 650 | UNKNOWN 650 |
+| `required-missing-target` | UNKNOWN 650 | UNKNOWN 650 |
+| `required-value-differs` | INCOMPATIBLE 650 | INCOMPATIBLE 650 |
+| `unit-mismatch` (mg vs s) | **DIRECT 526**, INCOMPATIBLE 124 | INCOMPATIBLE 650 |
+| `unit-convertible` (g vs kg) | **DIRECT 526**, **INCOMPATIBLE 124** | LOSSLESS 543, INCOMPATIBLE 107 |
+| `origin-mismatch` (simulated vs measured) | **DIRECT 650** | INCOMPATIBLE 650 |
+| `namespace-mismatch` (Ensembl vs HGNC) | **DIRECT 552**, INCOMPATIBLE 98 | INCOMPATIBLE 650 |
+| `species-any` | **INCOMPATIBLE 575** | UNKNOWN 575 |
 
-Two patterns run through this, and they are the same two defects seen from a different angle.
+Overall, DIRECT_COMPATIBLE fell from 39.0% to 0%, UNKNOWN rose from 22.5% to 32.5%, and
+INCOMPATIBLE rose from 27.2% to 46.9%. Bold entries are the wrong answers the review found.
 
-**The 526/124 split is decision D2.** The 124 profiles that require `measurement.unit` compare it;
-the other 526 ignore it even when both ports declare one. So `mg` against `s` passes for 526
-profiles, and the same split appears for identifiers at 552/98.
+### Reading the two-sided results
 
-**Where units are compared, they are compared wrongly.** For those 124 profiles, `g` against `kg`
-is INCOMPATIBLE — the same quantity, refused — while for the other 526 it is a silent pass. Both
-halves are wrong, in opposite directions. That is decision D1.
+**`unit-convertible` is 543 lossless and 107 incompatible, and both are correct.** The scenario
+forces grams against kilograms onto every profile. For the 543 that do not fix a quantity kind,
+that is a mass conversion and the engine finds it. For the other 107 — a firing rate, a temperature,
+a titre — grams is not a unit of what the profile measures, so the quantity-kind check refuses it
+before any conversion is considered. Refusing there is the behaviour BMCS-SCI-016 exists to protect.
 
-`origin-mismatch` is unanimous: all 650 profiles let a simulated value satisfy a port asking for
-measured data.
+**UNKNOWN rising is the point, not a regression.** Contracts that used to pass silently now say
+they do not carry enough evidence. The number to watch is whether it keeps climbing as more fields
+become required: that would mean over-requirement, and the census is how it would show up.
 
-## How to read a change
+## Files
 
-After each fix, re-run with `--baseline` pointing at the previous snapshot. The diff lists the
-statuses that moved. Two things to watch:
-
-- **UNKNOWN should rise, but not everywhere.** Requiring more context turns some silent passes into
-  honest UNKNOWNs. If it climbs toward the whole corpus, the requirements went too far.
-- **`identical` must stay EXACT 650.** If it moves, a fix broke the trivial case.
+- `census-baseline-2026-09-15.json` — the release as reviewed, before any fix.
+- `census-2026-09-15-after-remediation.json` and `.md` — after the foundation decisions landed.
+- `census-2026-09-15-after-d1-d2-d5-d8-d9.json` — an intermediate run, kept for the record.
 
 The scenarios are deliberately synthetic. A census over real manifests would be better evidence and
 needs a corpus that does not exist yet; this is the version that can run today.

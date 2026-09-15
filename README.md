@@ -21,9 +21,11 @@ Python and TypeScript.
 are conformance-tested, but the catalogue is not GA until its scientific review
 gate is complete.
 
-All 650 profiles can be checked by machine, but none has finished scientific
+All 650 profiles pass the internal schema and compatibility pre-review and have
+an individual external-review packet. None has finished independent scientific
 review yet: 591 are `candidate` and 59 are `draft`. See
-[PROFILE_REVIEW.md](PROFILE_REVIEW.md).
+[PROFILE_REVIEW.md](PROFILE_REVIEW.md) and
+[`spec/v0.1/catalogue/internal-validation.json`](spec/v0.1/catalogue/internal-validation.json).
 
 Compatibility checks whether two model interfaces fit together. It doesn't show
 that a model is scientifically valid or clinically safe.
@@ -165,7 +167,7 @@ under `source/reviews/`; the bundle calculates `ga_ready` from those files. See
 - `scripts/build_standard.py`: generates everything in `spec/v0.1/` from the
   catalogue.
 - `spec/v0.1/`: the generated specification: JSON Schemas, profiles, rules,
-  fixtures, examples and `bundle.manifest.json`, which lists every file with its
+  fixtures, external-review packets, examples and `bundle.manifest.json`, which lists every file with its
   sha256. **Don't edit these files by hand.** See [CONTRIBUTING.md](CONTRIBUTING.md).
 - `python/`: the Python package and its tests.
 - `typescript/`: the TypeScript package and its tests.

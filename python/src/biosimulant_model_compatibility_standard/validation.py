@@ -6,10 +6,11 @@ from dataclasses import asdict, dataclass
 from copy import deepcopy
 from typing import Any, Iterable
 
-from jsonschema import Draft202012Validator
+from jsonschema import Draft202012Validator, FormatChecker
 from referencing import Registry, Resource
 
 from .bundle import Bundle, get_bundle
+from .units import UnitError, parse_unit
 from .pointers import MISSING, get_dotted
 from .security import ResourceLimitError, ResourceLimits, ensure_json_limits
 
@@ -118,7 +119,7 @@ def validate_contract(
                     )
                 )
                 continue
-            for error in Draft202012Validator(requirement["schema"]).iter_errors(value):
+            for error in Draft202012Validator(requirement["schema"], format_checker=FormatChecker()).iter_errors(value):
                 findings.append(
                     ValidationFinding(
                         "BMCS_PROFILE_VALUE_INVALID",
@@ -126,7 +127,63 @@ def validate_contract(
                         "/" + requirement["path"].replace(".", "/"),
                     )
                 )
+        findings.extend(_unit_findings(active, profile, contract))
     return findings
+
+
+def _unit_findings(bundle: Bundle, profile: dict[str, Any], contract: dict[str, Any]) -> list[ValidationFinding]:
+    """Check a declared unit against the profile's quantity kind (decision D1).
+
+    A unit alone does not identify a quantity: hertz and becquerel are both per second, and a
+    Hounsfield unit is dimensionless like a bare ratio. The dimension has to match, and a kind may
+    refuse a unit whose UCUM property belongs to another quantity.
+    """
+
+    table = bundle.units
+    value = get_dotted(contract, "measurement.unit")
+    if not table or value is MISSING or value is None:
+        return []
+    path = "/measurement/unit"
+    if not isinstance(value, str):
+        return [ValidationFinding("BMCS_UNIT_INVALID", "measurement.unit must be a UCUM expression.", path)]
+    try:
+        declared = parse_unit(value, table)
+    except UnitError as error:
+        return [ValidationFinding("BMCS_UNIT_INVALID", f"measurement.unit: {error}", path)]
+    quantity = get_dotted(profile.get("fixed", {}), "measurement.quantity")
+    if quantity is MISSING or not isinstance(quantity, str):
+        return []
+    kind_id = quantity.rsplit("/", 1)[-1]
+    kind = bundle.quantity_kinds.get(kind_id)
+    if not kind:
+        return []
+    allowed = kind.get("allowed_units")
+    if allowed and value not in allowed:
+        return [ValidationFinding(
+            "BMCS_UNIT_NOT_ALLOWED",
+            f"measurement.unit: {value} is not one of the units {kind_id} accepts ({', '.join(allowed)}).",
+            path)]
+    forbidden = set(kind.get("forbidden_unit_properties", []))
+    if forbidden:
+        for code in sorted(declared.codes):
+            entry = table.get("units", {}).get(code, {})
+            if entry.get("property") in forbidden:
+                return [ValidationFinding(
+                    "BMCS_UNIT_NOT_ALLOWED",
+                    f"measurement.unit: {code} measures {entry.get('property')}, which {kind_id} does not.",
+                    path)]
+    canonical = kind.get("canonical_unit")
+    if canonical:
+        try:
+            expected = parse_unit(canonical, table)
+        except UnitError:
+            return []
+        if declared.dimension != expected.dimension:
+            return [ValidationFinding(
+                "BMCS_UNIT_DIMENSION_MISMATCH",
+                f"measurement.unit: {value} does not have the dimension of {kind_id} ({canonical}).",
+                path)]
+    return []
 
 
 def _merge_refinement(

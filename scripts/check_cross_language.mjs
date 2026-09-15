@@ -24,7 +24,7 @@ const manifest = {
   schema_version: "2.0",
   compatibility: { standard: "https://biosimulant.com/standards/model-compatibility/v0.1", profiles: [{ ref: profile.ref, sha256: profile.sha256 }] },
   io: {
-    inputs: [{ name: "expression", signal_type: "array", contract: { profile_refs: [profile.ref], semantic: { concept: "gene_expression", subject: "biological_sample", qualifiers: ["z", "a"] }, representation: { kind: "dense_vector" }, identifiers: { namespace: "ensembl-gene", namespace_version: "release-pinned" }, biological_context: { species: "NCBITaxon:9606" } } }],
+    inputs: [{ name: "expression", signal_type: "array", contract: { profile_refs: [profile.ref], semantic: { concept: "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/gene-expression-counts", qualifiers: ["z", "a"] }, representation: { kind: "dense_vector" }, identifiers: { namespace: "ensembl-gene", namespace_version: "release-pinned" }, biological_context: { species: "NCBITaxon:9606" } } }],
     outputs: [],
   },
 };

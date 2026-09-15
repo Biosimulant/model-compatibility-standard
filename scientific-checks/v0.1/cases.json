@@ -6,43 +6,17 @@
     "Only pin an outcome that is correct under every open design decision. When the correct outcome depends on a decision, assert the property that holds under all of its options (for example 'not a direct match') and name the decision.",
     "Build contracts from a profile's generated positive fixture plus explicit patches, so each case shows exactly what differs.",
     "When a defect is fixed, change its kind to guard in the same change. Strict expected-failure handling makes an unexpected pass fail the suite.",
-    "A case may set \"normalize\": true to compare normalised contracts, which is what the documented validation pipeline does before comparison."
+    "A case may set \"normalize\": true to compare normalised contracts, which is what the documented validation pipeline does before comparison.",
+    "A case that has been fixed keeps its observed_at_review record and gains fixed_by, so the suite shows both what the release used to do and which decision changed it."
   ],
   "strict_mode": "Set BMCS_SCIENTIFIC_STRICT=1 to run every defect as an ordinary failing test. GA requires the strict run to pass.",
   "plan": "docs/scientific-remediation/REMEDIATION_PLAN.md",
   "profile_ref_prefix": "https://biosimulant.com/standards/model-compatibility/profiles/",
   "profile_ref_suffix": "/v0.1",
-  "unit_dimensions_note": "Test-only dimension classes for the unit spellings that appear in v0.1 fixtures and in these cases. Not a unit system: the release must adopt one (decision D1). An unclassified unit is reported as an offender so the table cannot silently hide one.",
-  "unit_dimensions": {
-    "1": "dimensionless",
-    "1/s": "1/time",
-    "/min": "1/time",
-    "Hz": "1/time",
-    "s": "time",
-    "min": "time",
-    "h": "time",
-    "g": "mass",
-    "kg": "mass",
-    "mg": "mass",
-    "mL": "volume",
-    "L": "volume",
-    "nM": "amount/volume",
-    "uM": "amount/volume",
-    "mM": "amount/volume",
-    "mol/L": "amount/volume",
-    "umol/L": "amount/volume",
-    "mg/L": "mass/volume",
-    "Cel": "temperature",
-    "K": "temperature",
-    "mm[Hg]": "pressure",
-    "kPa": "pressure",
-    "mV": "voltage",
-    "N": "force"
-  },
   "cases": [
     {
       "id": "BMCS-SCI-001",
-      "kind": "defect",
+      "kind": "guard",
       "check": "compare",
       "title": "Raw counts and log-normalised expression resolve as a direct match",
       "profile": "transcriptome/single-cell-expression-matrix",
@@ -79,11 +53,13 @@
       "sources": [
         "robinson-2010-tmm",
         "wagner-2012-tpm"
-      ]
+      ],
+      "fixed_by": "D2",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-002",
-      "kind": "defect",
+      "kind": "guard",
       "check": "compare",
       "title": "Ensembl gene identifiers and HGNC symbols resolve as a direct match",
       "profile": "transcriptome/single-cell-expression-matrix",
@@ -118,11 +94,13 @@
       "sources": [
         "ensembl-2024",
         "bioregistry-2022"
-      ]
+      ],
+      "fixed_by": "D2",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-003",
-      "kind": "defect",
+      "kind": "guard",
       "check": "compare",
       "title": "A value in mg and a value in s resolve as a direct match",
       "profile": "core/scalar-quantity",
@@ -150,22 +128,24 @@
       "sources": [
         "vim-jcgm-200-2012",
         "si-brochure-9"
-      ]
+      ],
+      "fixed_by": "D1, D2",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-004",
-      "kind": "defect",
+      "kind": "guard",
       "check": "compare",
-      "title": "A firing rate converts from nM to uM without loss",
+      "title": "A firing rate converts between concentration units without loss",
       "profile": "neuroscience/firing-rate",
       "source_patch": {
         "measurement": {
-          "unit": "nM"
+          "unit": "umol/L"
         }
       },
       "target_patch": {
         "measurement": {
-          "unit": "uM"
+          "unit": "mmol/L"
         }
       },
       "expect": {
@@ -180,17 +160,19 @@
         "policy_decision": "ALLOW"
       },
       "why": "A firing rate is a frequency. Amount-of-substance concentration units are not units of that quantity, so no conversion between them can describe a firing rate.",
-      "conditions": "Whether this surfaces as a validation failure or an INCOMPATIBLE comparison is for D1; either satisfies the check.",
+      "conditions": "Both units are amount-of-substance concentrations, which the profile's quantity kind is not. Dimensional analysis alone accepts the conversion, so the quantity kind has to refuse it.",
       "decision": "D1",
       "report_finding": "S4, S7",
       "sources": [
         "vim-jcgm-200-2012",
         "ucum-2.2"
-      ]
+      ],
+      "fixed_by": "D1",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-005",
-      "kind": "defect",
+      "kind": "guard",
       "check": "validate",
       "title": "A firing-rate contract in kg passes validation",
       "profile": "neuroscience/firing-rate",
@@ -212,11 +194,13 @@
       "sources": [
         "vim-jcgm-200-2012",
         "ucum-2.2"
-      ]
+      ],
+      "fixed_by": "D1",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-006",
-      "kind": "defect",
+      "kind": "guard",
       "check": "compare",
       "title": "Body mass in g and kg is reported incompatible",
       "profile": "physiology/body-mass",
@@ -244,11 +228,13 @@
       "sources": [
         "si-brochure-9",
         "ucum-2.2"
-      ]
+      ],
+      "fixed_by": "D1",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-007",
-      "kind": "defect",
+      "kind": "guard",
       "check": "compare",
       "title": "Body temperature in Cel and K is reported incompatible",
       "profile": "physiology/body-temperature",
@@ -276,11 +262,13 @@
       "sources": [
         "si-brochure-9",
         "ucum-2.2"
-      ]
+      ],
+      "fixed_by": "D1",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-008",
-      "kind": "defect",
+      "kind": "guard",
       "check": "compare",
       "title": "Heart rate in 1/s and /min is reported incompatible",
       "profile": "physiology/heart-rate",
@@ -308,17 +296,19 @@
       "sources": [
         "si-brochure-9",
         "ucum-2.2"
-      ]
+      ],
+      "fixed_by": "D1",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-009",
-      "kind": "defect",
+      "kind": "guard",
       "check": "compare",
-      "title": "Plasma concentration in uM and mol/L is reported incompatible",
+      "title": "Plasma concentration in umol/L and mol/L is reported incompatible",
       "profile": "pharmacology/plasma-concentration",
       "source_patch": {
         "measurement": {
-          "unit": "uM"
+          "unit": "umol/L"
         }
       },
       "target_patch": {
@@ -334,17 +324,19 @@
         "policy_decision": "BLOCK"
       },
       "why": "Micromolar and moles per litre are units of the same amount-of-substance concentration related by an exact factor of 10^6.",
-      "conditions": "The spelling 'uM' is used because v0.1 fixtures use it. It is not a UCUM code: UCUM 2.2 (revision 2024-06-17) defines M only as the mega prefix and has no molar unit, so the UCUM spelling is umol/L. If D1 adopts UCUM, update this case in the same change.",
+      "conditions": "The same amount-of-substance concentration written with a different prefix.",
       "decision": "D1",
       "report_finding": "S4",
       "sources": [
         "si-brochure-9",
         "ucum-2.2"
-      ]
+      ],
+      "fixed_by": "D1",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-010",
-      "kind": "defect",
+      "kind": "guard",
       "check": "compare",
       "title": "An unspecified species connected to a human-only port is reported as a contradiction",
       "profile": "neuroscience/firing-rate",
@@ -368,11 +360,13 @@
       "report_finding": "S5",
       "sources": [
         "ncbitaxon-schoch-2020"
-      ]
+      ],
+      "fixed_by": "D5",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-011",
-      "kind": "defect",
+      "kind": "guard",
       "check": "fixture-invariant",
       "invariant": "conversion-within-dimension",
       "title": "Generated unit-conversion fixtures convert between units of another quantity",
@@ -388,11 +382,13 @@
       "report_finding": "S7",
       "sources": [
         "vim-jcgm-200-2012"
-      ]
+      ],
+      "fixed_by": "D9",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-012",
-      "kind": "defect",
+      "kind": "guard",
       "check": "fixture-invariant",
       "invariant": "contradiction-cross-dimension",
       "title": "Generated unit-contradiction fixtures pair units of the same quantity",
@@ -408,11 +404,13 @@
       "report_finding": "S8",
       "sources": [
         "si-brochure-9"
-      ]
+      ],
+      "fixed_by": "D9",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-013",
-      "kind": "defect",
+      "kind": "guard",
       "check": "fixture-invariant",
       "invariant": "probability-scale-dimensionless",
       "title": "Generated positive fixtures put dimensional quantities on a probability scale",
@@ -429,11 +427,13 @@
       "sources": [
         "stevens-1946",
         "vim-jcgm-200-2012"
-      ]
+      ],
+      "fixed_by": "D8, D9",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-014",
-      "kind": "defect",
+      "kind": "guard",
       "check": "compare",
       "title": "Variants on different reference assemblies resolve as a direct match",
       "profile": "genome/single-nucleotide-variant",
@@ -466,11 +466,13 @@
       "sources": [
         "spdi-2020",
         "vrs-2021"
-      ]
+      ],
+      "fixed_by": "D2",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-015",
-      "kind": "defect",
+      "kind": "guard",
       "check": "compare",
       "title": "A simulated value satisfies a port that requires measured data",
       "profile": "physiology/heart-rate",
@@ -502,11 +504,13 @@
       "report_finding": "S3",
       "sources": [
         "obi-2016"
-      ]
+      ],
+      "fixed_by": "D2",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-016",
-      "kind": "defect",
+      "kind": "guard",
       "check": "validate",
       "title": "A firing rate declared in becquerels passes validation",
       "profile": "neuroscience/firing-rate",
@@ -528,7 +532,9 @@
       "sources": [
         "ucum-2.2",
         "si-brochure-9"
-      ]
+      ],
+      "fixed_by": "D1",
+      "fixed_at": "2026-09-15"
     },
     {
       "id": "BMCS-SCI-101",
@@ -581,23 +587,23 @@
       "id": "BMCS-SCI-103",
       "kind": "guard",
       "check": "compare",
-      "title": "A molar concentration still converts from nM to uM without loss",
+      "title": "A molar concentration still converts between prefixes without loss",
       "profile": "pharmacology/plasma-concentration",
       "source_patch": {
         "measurement": {
-          "unit": "nM"
+          "unit": "nmol/L"
         }
       },
       "target_patch": {
         "measurement": {
-          "unit": "uM"
+          "unit": "umol/L"
         }
       },
       "expect": {
         "status": "LOSSLESS_CONVERSION_AVAILABLE"
       },
       "why": "The one conversion the current table gets right must survive the move to a real unit system.",
-      "conditions": "Update the spellings in the same change if D1 adopts UCUM codes.",
+      "conditions": "UCUM spellings; 'uM' and 'nM' are not UCUM codes and no longer appear in the standard.",
       "decision": "D1",
       "report_finding": "S4",
       "sources": [
@@ -648,7 +654,7 @@
       },
       "target_patch": {
         "measurement": {
-          "unit": "uM"
+          "unit": "umol/L"
         }
       },
       "expect": {
@@ -675,14 +681,14 @@
       "profile": "neuroscience/firing-rate",
       "source_patch": {
         "biological_context": {
-          "species": "NCBITaxon:10090"
+          "species": "NCBITaxon:9606"
         }
       },
       "expect": {
         "status": "INCOMPATIBLE"
       },
       "why": "A declared cross-species difference is a genuine contradiction for a species-specific contract. Taxonomic subsumption (D5) must not weaken it.",
-      "conditions": "None.",
+      "conditions": "The profile's example species is now mouse, so the source declares human.",
       "decision": "D5",
       "report_finding": "S5",
       "sources": [
@@ -741,6 +747,44 @@
       "report_finding": "S12",
       "sources": [
         "duo-2021"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-109",
+      "kind": "guard",
+      "check": "compare",
+      "title": "Two equal set-like context values are not a contradiction in either implementation",
+      "profile": "pharmacology/compound-dose",
+      "source_patch": {
+        "biological_context": {
+          "intervention": [
+            "compound-a",
+            "vehicle"
+          ]
+        },
+        "origin": {
+          "type": "declared"
+        }
+      },
+      "target_patch": {
+        "biological_context": {
+          "intervention": [
+            "compound-a",
+            "vehicle"
+          ]
+        }
+      },
+      "expect": {
+        "status": "DIRECT_COMPATIBLE"
+      },
+      "why": "Every biological_context item is compared with the shared context-compatible operator, and biological_context.intervention is the one context field whose value is an array rather than a string. TypeScript compared the two sides with ===, which for an array asks whether they are the same object, so two identical intervention lists were reported as a contradiction while Python, using value equality, called them a match. The two engines must give the same answer, and declaring the same interventions on both sides is not a contradiction.",
+      "conditions": "The source declares an origin the target omits, so the two contracts are not byte-identical and the comparison rules are actually evaluated; identical contracts short-circuit to EXACT and would never exercise the operator.",
+      "decision": "D5",
+      "report_finding": "none: found in Phase 1 by the cross-language conformance test, not in the pre-review",
+      "fixed_by": "D5",
+      "fixed_at": "2026-09-15",
+      "sources": [
+        "obi-2016"
       ]
     }
   ]

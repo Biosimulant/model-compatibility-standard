@@ -1,6 +1,6 @@
 # D5. Species and multi-organism context
 
-**Status:** Open. **Owner:** unassigned. **Decided:** — . **Approved by:** —
+**Status:** Decided in part. Implemented. **Owner:** unassigned. **Decided:** — . **Approved by:** —
 
 ## Question
 
@@ -59,4 +59,20 @@ requirement.
 
 ## Decision
 
-_To be recorded._
+**Adopted in part.** Implemented now:
+
+- A source declaring `any` or `unspecified` against a specific target returns UNKNOWN, not
+  INCOMPATIBLE. Absent evidence is not a contradiction. Settles BMCS-SCI-010.
+- `source/context-declarations.json` gives each domain a plausible example organism, so a microbial
+  community, a viral titre and an ecological abundance are no longer all labelled human.
+
+Also fixed here, because it belongs to the same operator: `context-compatible` is applied to every
+`biological_context` item, and `intervention` is the one whose value is an array. TypeScript compared
+the two sides with `===`, which for an array tests object identity, so two identical intervention
+lists were reported as a contradiction while Python called them a match. Both engines now compare by
+value, and `BMCS-SCI-109` guards it. The defect reached only the three pharmacology profiles that
+declare an intervention; the other eight context fields are strings and were never affected.
+
+**Still open:** taxonomic subsumption against a pinned NCBI Taxonomy snapshot, and the role-typed
+`biological_context.taxa[]` item for host-and-pathogen ports. Both need the snapshot infrastructure
+that D3, D4 and D7 also depend on.

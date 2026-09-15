@@ -3,67 +3,904 @@
     {
       "contract": {
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
-          "unit": "1"
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
         },
         "representation": {
+          "isotope_state": "example-isotope-state",
           "kind": "scalar"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
         }
       },
       "name": "positive",
       "valid": true
     },
     {
-      "contract": {
+      "name": "comparison-direct",
+      "source": {
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
-          "unit": "1"
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "origin": {
+          "type": "declared"
         },
         "representation": {
+          "isotope_state": "example-isotope-state",
           "kind": "scalar"
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
         }
       },
-      "name": "negative-required-missing",
+      "status": "DIRECT_COMPATIBLE",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "contract": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {}
+      },
+      "field": "semantic.concept",
+      "name": "negative-required-missing-semantic-concept",
       "reason_code": "BMCS_REQUIRED_MISSING",
       "valid": false
     },
     {
-      "name": "comparison-unknown",
-      "source": {
+      "contract": {
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
-          "unit": "1"
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
         },
         "representation": {
+          "isotope_state": "example-isotope-state",
           "kind": "scalar"
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight-different"
+        }
+      },
+      "field": "semantic.concept",
+      "name": "negative-value-invalid-semantic-concept",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-incompatible-semantic-concept",
+      "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight-different"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-semantic-concept",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {}
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-target-semantic-concept",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
         }
       },
       "status": "UNKNOWN",
       "target": {
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
-          "unit": "1"
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {}
+      }
+    },
+    {
+      "contract": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-required-missing-representation-kind",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "not-an-allowed-value"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-value-invalid-representation-kind",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-incompatible-representation-kind",
+      "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar-different"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-representation-kind",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-target-representation-kind",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "contract": {
+        "measurement": {
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "field": "measurement.quantity",
+      "name": "negative-required-missing-measurement-quantity",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass-different",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "field": "measurement.quantity",
+      "name": "negative-value-invalid-measurement-quantity",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-incompatible-measurement-quantity",
+      "reason_code": "BMCS_MEASUREMENT_QUANTITY_MISMATCH",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass-different",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-unknown-measurement-quantity",
+      "source": {
+        "measurement": {
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-unknown-target-measurement-quantity",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "measurement": {
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "contract": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "field": "measurement.unit",
+      "name": "negative-required-missing-measurement-unit",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": 7
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "field": "measurement.unit",
+      "name": "negative-value-invalid-measurement-unit",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.unit",
+      "name": "comparison-incompatible-measurement-unit",
+      "reason_code": "BMCS_UNIT_DIMENSION_MISMATCH",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "field": "measurement.unit",
+      "name": "comparison-unknown-measurement-unit",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "field": "measurement.unit",
+      "name": "comparison-unknown-target-measurement-unit",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "contract": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "field": "measurement.scale",
+      "name": "negative-required-missing-measurement-scale",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "not-an-allowed-value",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "field": "measurement.scale",
+      "name": "negative-value-invalid-measurement-scale",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.scale",
+      "name": "comparison-incompatible-measurement-scale",
+      "reason_code": "BMCS_MEASUREMENT_SCALE_MISMATCH",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal-different",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "field": "measurement.scale",
+      "name": "comparison-unknown-measurement-scale",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "field": "measurement.scale",
+      "name": "comparison-unknown-target-measurement-scale",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "contract": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
         },
         "representation": {
           "kind": "scalar"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "field": "representation.isotope_state",
+      "name": "negative-required-missing-representation-isotope-state",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": 7,
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "field": "representation.isotope_state",
+      "name": "negative-value-invalid-representation-isotope-state",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.isotope_state",
+      "name": "comparison-incompatible-representation-isotope-state",
+      "reason_code": "BMCS_REPRESENTATION_ISOTOPE_STATE_MISMATCH",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state-different",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "field": "representation.isotope_state",
+      "name": "comparison-unknown-representation-isotope-state",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "field": "representation.isotope_state",
+      "name": "comparison-unknown-target-representation-isotope-state",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      }
+    },
+    {
+      "name": "comparison-lossless-unit-conversion",
+      "source": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "mg/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
+        }
+      },
+      "status": "LOSSLESS_CONVERSION_AVAILABLE",
+      "target": {
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/molar-mass",
+          "scale": "nominal",
+          "unit": "g/mol"
+        },
+        "representation": {
+          "isotope_state": "example-isotope-state",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-weight"
         }
       }
     }

@@ -1,0 +1,443 @@
+{
+  "candidate_recommended_items": [
+    "biological_context.cohort",
+    "biological_context.denominator",
+    "biological_context.geography",
+    "biological_context.population",
+    "biological_context.sampling_frame",
+    "biological_context.stratum",
+    "identifiers.ambiguity_handling",
+    "identifiers.canonicalization",
+    "identifiers.case_policy",
+    "identifiers.coding_system",
+    "identifiers.coding_version",
+    "identifiers.deprecated_handling",
+    "identifiers.entity_type",
+    "identifiers.mapping_refs",
+    "identifiers.namespace",
+    "identifiers.namespace_version",
+    "identifiers.unmapped_handling",
+    "lifecycle.observation_period",
+    "measurement.aggregation",
+    "measurement.baseline",
+    "measurement.calibration_ref",
+    "measurement.detection_limits",
+    "measurement.normalization",
+    "measurement.quantity",
+    "measurement.rate_basis",
+    "measurement.reference_range",
+    "measurement.scale",
+    "measurement.standardization",
+    "measurement.tolerance",
+    "measurement.transform",
+    "measurement.unit",
+    "origin.audit_ref",
+    "origin.generated_at",
+    "origin.method",
+    "origin.method_version",
+    "origin.observed_at",
+    "origin.operator",
+    "origin.source_ref",
+    "origin.source_sha256",
+    "origin.surveillance_system",
+    "origin.transformation_chain",
+    "origin.type",
+    "security.classification",
+    "security.deidentification",
+    "security.export_control",
+    "security.license",
+    "security.license_ref",
+    "security.redaction",
+    "security.residency",
+    "security.retention",
+    "security.workspace_boundary",
+    "semantic.endpoint",
+    "semantic.intended_use",
+    "semantic.ontology_terms",
+    "semantic.process",
+    "semantic.qualifiers",
+    "semantic.role",
+    "semantic.subject",
+    "uncertainty.censoring",
+    "uncertainty.confidence_level",
+    "uncertainty.distribution",
+    "uncertainty.imputation",
+    "uncertainty.interval",
+    "uncertainty.kind",
+    "uncertainty.missingness",
+    "uncertainty.parameters",
+    "uncertainty.quality_flags",
+    "uncertainty.variance"
+  ],
+  "domain": "clinical",
+  "fixture_groups": {
+    "direct": [
+      "comparison-direct"
+    ],
+    "incompatible": [
+      "comparison-incompatible-semantic-concept",
+      "comparison-incompatible-representation-kind",
+      "comparison-incompatible-biological-context-species",
+      "comparison-incompatible-security-data-use",
+      "comparison-incompatible-security-consent-scope"
+    ],
+    "invalid": [
+      "negative-value-invalid-semantic-concept",
+      "negative-value-invalid-representation-kind",
+      "negative-value-invalid-biological-context-species",
+      "negative-value-invalid-security-data-use",
+      "negative-value-invalid-security-consent-scope"
+    ],
+    "negative": [
+      "negative-required-missing-semantic-concept",
+      "negative-required-missing-representation-kind",
+      "negative-required-missing-biological-context-species",
+      "negative-required-missing-security-data-use",
+      "negative-required-missing-security-consent-scope"
+    ],
+    "positive": [
+      "positive"
+    ],
+    "transformations": [],
+    "unknown": [
+      "comparison-unknown-semantic-concept",
+      "comparison-unknown-representation-kind",
+      "comparison-unknown-biological-context-species",
+      "comparison-unknown-security-data-use",
+      "comparison-unknown-security-consent-scope",
+      "comparison-unknown-target-semantic-concept",
+      "comparison-unknown-target-representation-kind",
+      "comparison-unknown-target-biological-context-species",
+      "comparison-unknown-target-security-data-use",
+      "comparison-unknown-target-security-consent-scope"
+    ]
+  },
+  "fixture_names": [
+    "positive",
+    "comparison-direct",
+    "negative-required-missing-semantic-concept",
+    "negative-value-invalid-semantic-concept",
+    "comparison-incompatible-semantic-concept",
+    "comparison-unknown-semantic-concept",
+    "comparison-unknown-target-semantic-concept",
+    "negative-required-missing-representation-kind",
+    "negative-value-invalid-representation-kind",
+    "comparison-incompatible-representation-kind",
+    "comparison-unknown-representation-kind",
+    "comparison-unknown-target-representation-kind",
+    "negative-required-missing-biological-context-species",
+    "negative-value-invalid-biological-context-species",
+    "comparison-incompatible-biological-context-species",
+    "comparison-unknown-biological-context-species",
+    "comparison-unknown-target-biological-context-species",
+    "negative-required-missing-security-data-use",
+    "negative-value-invalid-security-data-use",
+    "comparison-incompatible-security-data-use",
+    "comparison-unknown-security-data-use",
+    "comparison-unknown-target-security-data-use",
+    "negative-required-missing-security-consent-scope",
+    "negative-value-invalid-security-consent-scope",
+    "comparison-incompatible-security-consent-scope",
+    "comparison-unknown-security-consent-scope",
+    "comparison-unknown-target-security-consent-scope"
+  ],
+  "internal_quality_errors": [],
+  "label": "Adverse Event",
+  "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
+  "profile_id": "clinical/adverse-event@0.1",
+  "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/clinical/adverse-event/v0.1",
+  "profile_sha256": "sha256:49a1a3879cbc3e64e0cac60c24c747c47ec90464a98fdbe59d5f681730d47c1f",
+  "proposed_allowed_values": {
+    "representation": {
+      "kind": [
+        "event",
+        "record",
+        "table"
+      ]
+    }
+  },
+  "proposed_comparison_rules": [
+    {
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
+      "severity": "error",
+      "source": "/contract/semantic/concept",
+      "target": "/contract/semantic/concept"
+    },
+    {
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/kind",
+      "target": "/contract/representation/kind"
+    },
+    {
+      "missing": "unknown",
+      "operator": "context-compatible",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_SPECIES_MISMATCH",
+      "severity": "error",
+      "source": "/contract/biological_context/species",
+      "target": "/contract/biological_context/species"
+    },
+    {
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_SECURITY_DATA_USE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/security/data_use",
+      "target": "/contract/security/data_use"
+    },
+    {
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_SECURITY_CONSENT_SCOPE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/security/consent_scope",
+      "target": "/contract/security/consent_scope"
+    },
+    {
+      "missing": "ignore",
+      "operator": "unit-convertible",
+      "reason_code": "BMCS_MEASUREMENT_UNIT_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/unit",
+      "target": "/contract/measurement/unit"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_SCALE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/scale",
+      "target": "/contract/measurement/scale"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_TRANSFORM_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/transform",
+      "target": "/contract/measurement/transform"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_QUANTITY_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/quantity",
+      "target": "/contract/measurement/quantity"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_NORMALIZATION_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/normalization",
+      "target": "/contract/measurement/normalization"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_BASELINE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/baseline",
+      "target": "/contract/measurement/baseline"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_AGGREGATION_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/aggregation",
+      "target": "/contract/measurement/aggregation"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/identifiers/namespace",
+      "target": "/contract/identifiers/namespace"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
+      "severity": "error",
+      "source": "/contract/identifiers/namespace_version",
+      "target": "/contract/identifiers/namespace_version"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_ORDERING_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/ordering",
+      "target": "/contract/representation/ordering"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_FEATURE_SPACE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/feature_space",
+      "target": "/contract/representation/feature_space"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_REFERENCE_ASSEMBLY_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/reference_assembly",
+      "target": "/contract/representation/reference_assembly"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_COORDINATE_SYSTEM_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/coordinate_system",
+      "target": "/contract/representation/coordinate_system"
+    },
+    {
+      "missing": "ignore",
+      "operator": "labels-equal",
+      "reason_code": "BMCS_DIMENSIONS_AXES_MISMATCH",
+      "severity": "error",
+      "source": "/contract/dimensions/axes",
+      "target": "/contract/dimensions/axes"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_LIFECYCLE_TIME_UNIT_MISMATCH",
+      "severity": "error",
+      "source": "/contract/lifecycle/time_unit",
+      "target": "/contract/lifecycle/time_unit"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_LIFECYCLE_TEMPORAL_MEANING_MISMATCH",
+      "severity": "error",
+      "source": "/contract/lifecycle/temporal_meaning",
+      "target": "/contract/lifecycle/temporal_meaning"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_ORIGIN_TYPE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/origin/type",
+      "target": "/contract/origin/type"
+    },
+    {
+      "missing": "ignore",
+      "operator": "context-compatible",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_COMPARTMENT_MISMATCH",
+      "severity": "error",
+      "source": "/contract/biological_context/compartment",
+      "target": "/contract/biological_context/compartment"
+    }
+  ],
+  "proposed_fixed_values": {
+    "semantic": {
+      "concept": "https://biosimulant.com/standards/model-compatibility/terms/clinical/adverse-event"
+    }
+  },
+  "proposed_requirements": [
+    {
+      "level": "required",
+      "path": "semantic.concept",
+      "schema": {
+        "const": "https://biosimulant.com/standards/model-compatibility/terms/clinical/adverse-event"
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.kind",
+      "schema": {
+        "enum": [
+          "event",
+          "record",
+          "table"
+        ]
+      }
+    },
+    {
+      "level": "required",
+      "path": "biological_context.species",
+      "schema": {
+        "anyOf": [
+          {
+            "const": "any"
+          },
+          {
+            "pattern": "^NCBITaxon:[1-9][0-9]*$"
+          }
+        ],
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "security.data_use",
+      "schema": {
+        "items": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "minItems": 1,
+        "type": "array",
+        "uniqueItems": true
+      }
+    },
+    {
+      "level": "required",
+      "path": "security.consent_scope",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    }
+  ],
+  "questions_for_reviewers": [
+    "Does the proposed concept identify Adverse Event narrowly enough to prevent a different scientific quantity from matching?",
+    "Are the allowed representations complete, and can any two allowed representations connect without an explicit adapter?",
+    "Which authoritative standards, ontologies, databases or primary publications support each required field and comparison rule?",
+    "Which missing value must return UNKNOWN, and which known contradiction must return INCOMPATIBLE?",
+    "Should quantity, unit, scale, normalization, baseline or endpoint be required for this profile?",
+    "Does this profile need a versioned identifier namespace or an ordered feature universe?",
+    "Which species, tissue, cell type, disease, intervention, assay, cohort or compartment fields are required or conditional?",
+    "Are event/state meaning, observation time, sampling, window, freshness and interpolation rules complete?",
+    "What uses and scientific claims must this profile explicitly exclude?"
+  ],
+  "required_external_approvals": [
+    "named domain-qualified scientific reviewer",
+    "different named schema and compatibility reviewer",
+    "domain owner"
+  ],
+  "stage": "DEFERRED",
+  "technical_pre_review": {
+    "checks": [
+      "profile-definition-schema",
+      "typed-required-values",
+      "profile-specific-concept",
+      "representation-applicability",
+      "stable-field-level-reason-codes",
+      "positive-fixture",
+      "missing-required-fixture",
+      "invalid-value-fixture",
+      "direct-compatible-fixture",
+      "incompatible-fixture",
+      "unknown-fixture",
+      "python-typescript-parity"
+    ],
+    "method_version": "1.0",
+    "scientific_signoff_required": true,
+    "status": "ready-for-external-review"
+  }
+}

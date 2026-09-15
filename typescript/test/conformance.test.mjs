@@ -8,19 +8,31 @@ import { Bundle, buildCompatibilityLock, canonicalJson, compareContracts, digest
 test("bundle exposes all catalogue entries", () => {
   const bundle = getBundle();
   assert.equal(bundle.catalogue.counts.profiles, 650);
-  assert.equal(bundle.catalogue.counts.item_definitions, 266);
+  assert.equal(bundle.catalogue.counts.item_definitions, 267);
   assert.equal(bundle.catalogue.counts.item_packs, 30);
   bundle.verifyIntegrity();
 });
 
-test("positive, negative and unknown fixtures pass for every profile", () => {
+test("the full external-review fixture set passes for every profile", () => {
   const bundle = getBundle();
   for (const summary of bundle.catalogue.profiles) {
     const fixture = bundle.readJson(`fixtures/profiles/${summary.domain}/${summary.name}.json`);
-    const [positive, negative, unknown] = fixture.cases;
+    const cases = Object.fromEntries(fixture.cases.map((entry) => [entry.name, entry]));
+    const profile = bundle.profile(fixture.profile_ref);
+    const required = profile.requirements.filter((item) => item.level === "required");
+    const expectedCount = 2 + (5 * required.length) + Number(Object.keys(cases).some((name) => name.startsWith("comparison-lossless")));
+    assert.equal(fixture.cases.length, expectedCount, fixture.profile_ref);
+    const positive = cases.positive;
     assert.deepEqual(validateContract(positive.contract, [fixture.profile_ref]), [], fixture.profile_ref);
-    assert.ok(validateContract(negative.contract, [fixture.profile_ref]).some((item) => item.reason_code === negative.reason_code), fixture.profile_ref);
-    assert.equal(compareContracts(unknown.source, unknown.target, { targetProfileRefs: [fixture.profile_ref] }).status, unknown.status, fixture.profile_ref);
+    for (const entry of fixture.cases) {
+      if (entry.name.startsWith("negative-")) {
+        assert.ok(validateContract(entry.contract, [fixture.profile_ref]).some((item) => item.reason_code === entry.reason_code), `${fixture.profile_ref}: ${entry.name}`);
+      } else if (entry.name.startsWith("comparison-")) {
+        const report = compareContracts(entry.source, entry.target, { targetProfileRefs: [fixture.profile_ref] });
+        assert.equal(report.status, entry.status, `${fixture.profile_ref}: ${entry.name}`);
+        if (entry.reason_code) assert.ok(report.findings.some((item) => item.reason_code === entry.reason_code), `${fixture.profile_ref}: ${entry.name}`);
+      }
+    }
   }
 });
 
@@ -39,7 +51,9 @@ test("digest ignores key order and comparisons return the expected statuses", ()
   assert.equal(exact.status, "EXACT");
   assert.deepEqual(validateObject(exact, "compatibility-report.schema.json"), []);
   assert.equal(compareContracts(null, contract).status, "UNKNOWN");
-  assert.equal(compareContracts({ measurement: { unit: "nM" } }, { measurement: { unit: "uM" } }).status, "LOSSLESS_CONVERSION_AVAILABLE");
+  assert.equal(compareContracts({ measurement: { unit: "nmol/L" } }, { measurement: { unit: "umol/L" } }).status, "LOSSLESS_CONVERSION_AVAILABLE");
+  // uM is not a UCUM code: M is the mega prefix. An unreadable unit is undecidable, never a match.
+  assert.equal(compareContracts({ measurement: { unit: "nM" } }, { measurement: { unit: "uM" } }).status, "UNKNOWN");
   assert.equal(compareContracts({ biological_context: { compartment: "extracellular" } }, { biological_context: { compartment: "intracellular" } }).status, "INCOMPATIBLE");
 });
 
@@ -78,7 +92,7 @@ test("accepted profile contracts add details but cannot change common invariants
   const bundle = getBundle();
   const manifest = parseYaml(readFileSync(join(bundle.root, "examples/compatible-model.yaml"), "utf8"));
   const port = manifest.io.inputs[0];
-  port.accepted_profiles = [{ contract: { measurement: { unit: "count" } } }];
+  port.accepted_profiles = [{ contract: { measurement: { unit: "1" } } }];
   assert.deepEqual(validateManifest(manifest), []);
   port.accepted_profiles[0].contract = { biological_context: { species: "NCBITaxon:10090" } };
   assert.ok(validateManifest(manifest).some((item) => item.reason_code === "BMCS_REFINEMENT_WEAKENS_CONTRACT"));

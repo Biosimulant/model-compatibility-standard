@@ -7,125 +7,55 @@
       "additionalProperties": false,
       "properties": {
         "byte_size": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "minimum": 0,
+          "type": "integer"
         },
         "compression": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "encryption": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "format": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "format_version": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "media_type": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "partitioning": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "schema_ref": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "format": "uri",
+          "type": "string"
         },
         "schema_sha256": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
         },
         "sha256": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
         },
         "staging": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         }
       },
       "type": "object"
@@ -134,268 +64,145 @@
       "additionalProperties": false,
       "properties": {
         "age": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "assay": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "cell_line": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "cell_type": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "cohort": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "compartment": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "confluence": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "type": "number"
         },
         "culture_system": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "denominator": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "disease": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "items": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "minItems": 1,
+          "type": "array"
         },
         "geography": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "intervention": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "items": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "type": "object"
+              }
+            ]
+          },
+          "minItems": 1,
+          "type": "array"
         },
         "lineage": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "medium": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "oxygen": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "type": "number"
         },
         "passage": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "minimum": 0,
+          "type": "integer"
         },
         "population": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "sampling_frame": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "sex": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "species": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "anyOf": [
+            {
+              "const": "any"
+            },
+            {
+              "pattern": "^NCBITaxon:[1-9][0-9]*$"
+            }
+          ],
+          "type": "string"
         },
         "strain": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "stratum": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "substrate": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "tissue": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         }
       },
       "type": "object"
@@ -410,136 +217,114 @@
       "additionalProperties": false,
       "properties": {
         "axes": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "items": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "coordinates_ref": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "dynamic": {
+                    "type": "boolean"
+                  },
+                  "labels_ref": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "labels_sha256": {
+                    "pattern": "^sha256:[0-9a-f]{64}$",
+                    "type": "string"
+                  },
+                  "meaning": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "name": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "ordering": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "size": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "unit": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ],
+                "type": "object"
+              }
+            ]
+          },
+          "minItems": 1,
+          "type": "array"
         },
         "dose_axis": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "feature_axis": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "feature_labels_ref": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "format": "uri",
+          "type": "string"
         },
         "feature_labels_sha256": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "orientation": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "origin": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "pixel_spacing": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "sample_axis": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "slice_thickness": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "spatial_axes": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "time_axis": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         }
       },
       "type": "object"
@@ -554,64 +339,31 @@
             "integer",
             "boolean",
             "array",
-            "object",
-            "null"
+            "object"
           ]
         },
         "artifact_ref": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "format": "uri",
+          "type": "string"
         },
         "contract_sha256": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
         },
         "observation_time": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "origin": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "produced_by": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "provenance": {
           "type": [
@@ -620,8 +372,7 @@
             "integer",
             "boolean",
             "array",
-            "object",
-            "null"
+            "object"
           ]
         },
         "uncertainty": {
@@ -631,20 +382,17 @@
             "integer",
             "boolean",
             "array",
-            "object",
-            "null"
+            "object"
           ]
         },
         "validation_results": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
         },
         "value": {
           "type": [
@@ -653,8 +401,7 @@
             "integer",
             "boolean",
             "array",
-            "object",
-            "null"
+            "object"
           ]
         }
       },
@@ -670,202 +417,139 @@
       "additionalProperties": false,
       "properties": {
         "ambiguity_handling": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "canonicalization": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "case_policy": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "coding_system": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "coding_version": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "deprecated_handling": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "edge_namespace": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "entity_type": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "mapping_refs": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "cardinality": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "coverage": {
+                "maximum": 1,
+                "minimum": 0,
+                "type": "number"
+              },
+              "license": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "ref": {
+                "format": "uri",
+                "type": "string"
+              },
+              "release": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "sha256": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "source_namespace": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "target_namespace": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "ref",
+              "sha256",
+              "source_namespace",
+              "target_namespace",
+              "release"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array"
         },
         "namespace": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "namespace_version": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "node_namespace": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "structure_hash": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "taxonomy_namespace": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 64,
+          "pattern": "^[a-z][a-z0-9.\\-]*$",
+          "type": "string"
         },
         "taxonomy_version": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "transcript_reference": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "unmapped_handling": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "variant_notation": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         }
       },
       "type": "object"
@@ -874,147 +558,69 @@
       "additionalProperties": false,
       "properties": {
         "causality": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "consumption": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "evolutionary_time": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "freshness": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "interpolation": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "kind": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "observation_period": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "production": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "sampling": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "temporal_meaning": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "time_origin": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "time_unit": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 128,
+          "minLength": 1,
+          "type": "string"
         },
         "window": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         }
       },
       "type": "object"
@@ -1023,180 +629,98 @@
       "additionalProperties": false,
       "properties": {
         "aggregation": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "baseline": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "batch_correction": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "calibration_ref": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "format": "uri",
+          "type": "string"
         },
         "control": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "detection_limits": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "evolutionary_distance": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "normalization": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "quantity": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "rate_basis": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "reference_range": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "response_direction": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "scale": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
+          "enum": [
+            "nominal",
+            "ordinal",
+            "interval",
+            "ratio",
+            "proportion",
+            "probability",
+            "count"
           ]
         },
         "standardization": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "tolerance": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "transform": {
+          "enum": [
+            "identity",
+            "log2",
+            "log10",
+            "ln",
+            "logit"
           ]
         },
         "unit": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 128,
+          "minLength": 1,
+          "type": "string"
         }
       },
       "type": "object"
@@ -1205,367 +729,161 @@
       "additionalProperties": false,
       "properties": {
         "absolute_tolerance": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "type": "number"
         },
         "audit_ref": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "format": "uri",
+          "type": "string"
         },
         "edge_evidence": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "estimation_method": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "evidence_refs": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
         },
         "fit_method": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "generated_at": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "instrument": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "instrument_model": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "method": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "method_version": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "model_digest": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "observed_at": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "operator": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "parameter_digest": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "phylogenetic_method": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "processing_pipeline_ref": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "format": "uri",
+          "type": "string"
         },
         "protocol_ref": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "format": "uri",
+          "type": "string"
         },
         "protocol_version": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "random_seed": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "minimum": 0,
+          "type": "integer"
         },
         "registration_ref": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "format": "uri",
+          "type": "string"
         },
         "relative_tolerance": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "type": "number"
         },
         "segmentation_method": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "software": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "software_version": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "solver": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "solver_version": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "source_ref": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "format": "uri",
+          "type": "string"
         },
         "source_sha256": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
         },
         "substitution_model": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "surveillance_system": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "transformation_chain": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "minItems": 1,
+          "type": "array"
         },
         "type": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         }
       },
       "type": "object"
@@ -1586,444 +904,196 @@
       "additionalProperties": false,
       "properties": {
         "alphabet": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "alternate_allele": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "canonicalization": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "channel_order": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "circularity": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "conformer_method": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "coordinate_system": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "directed": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "type": "boolean"
         },
         "edge_schema": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "encoding": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "endianness": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "feature_space": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "formal_charge": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "hydrogen_policy": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "interval_convention": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "isotope_state": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "kind": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "layout": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "left_normalized": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "type": "boolean"
         },
         "masking": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "multigraph": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "type": "boolean"
         },
         "node_schema": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "normalization_tool": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "normalization_version": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "ordering": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "precision": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "protonation_state": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "quality_encoding": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "reference_allele": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "reference_assembly": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "reference_sequence": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "self_loops": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "type": "boolean"
         },
         "sparsity": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "state_order": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "stereochemistry": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "strand": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "structure_format": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "tautomer_state": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "tree_format": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "weight_semantics": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         }
       },
       "type": "object"
@@ -2032,125 +1102,65 @@
       "additionalProperties": false,
       "properties": {
         "classification": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
+          "enum": [
+            "public",
+            "internal",
+            "confidential",
+            "restricted"
           ]
         },
         "consent_scope": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "data_use": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
         },
         "deidentification": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "export_control": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "license": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "license_ref": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "format": "uri",
+          "type": "string"
         },
         "redaction": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "residency": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "retention": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "workspace_boundary": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         }
       },
       "type": "object"
@@ -2159,202 +1169,127 @@
       "additionalProperties": false,
       "properties": {
         "ancestral_state": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "cell_state": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "concept": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "consequence": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "endpoint": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "entity": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "intended_use": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "lineage": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "model_formalism": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "ontology_snapshot_ref": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "format": "uri",
+          "type": "string"
         },
         "ontology_snapshot_sha256": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "ontology_terms": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "ontology": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "relation": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "uri": {
+                "format": "uri",
+                "type": "string"
+              },
+              "version": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "uri",
+              "ontology",
+              "version"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array"
         },
         "pk_parameter": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "process": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "qualifiers": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
         },
         "role": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "subject": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "variant_class": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         }
       },
       "type": "object"
@@ -2367,169 +1302,78 @@
       "additionalProperties": false,
       "properties": {
         "branch_support": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "censoring": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "confidence_level": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "type": "number"
         },
         "distribution": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "edge_confidence": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "fit_quality": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "imputation": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "interval": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "kind": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "missingness": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "parameter_covariance": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "parameters": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "minItems": 1,
+          "type": "array"
         },
         "quality_flags": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
         },
         "segmentation_confidence": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
         },
         "variance": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object",
-            "null"
-          ]
+          "type": "number"
         }
       },
       "type": "object"

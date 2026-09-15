@@ -1,0 +1,212 @@
+{
+  "schema_version": "0.1",
+  "generated_at": "2026-09-15",
+  "bundle_sha256": "sha256:6ada5920b21886f55088ac382ca29204c4ca2713aaeb3b57c5624af406871d8d",
+  "profiles": 650,
+  "scenarios": {
+    "identical": "The same contract on both ports. Anything but EXACT is a bug.",
+    "required-missing-source": "A required field absent from the source. Absent evidence must be UNKNOWN.",
+    "required-missing-target": "The same field absent from the target instead. Must behave the same way.",
+    "required-value-differs": "A required field with a different value on each side. Should be INCOMPATIBLE.",
+    "unit-mismatch": "Both ports declare measurement.unit, mg against s. Different dimensions, so INCOMPATIBLE.",
+    "unit-convertible": "Both ports declare measurement.unit, g against kg. Same quantity, so a lossless conversion.",
+    "origin-mismatch": "Both ports declare origin.type, simulated against measured. Must not be a silent match.",
+    "namespace-mismatch": "Both ports declare an identifier namespace, ensembl.gene against hgnc.symbol.",
+    "species-any": "The source declares species 'any' against a specific target. Absent evidence, not contradiction."
+  },
+  "totals": {
+    "INCOMPATIBLE": 2707,
+    "UNKNOWN": 1875,
+    "EXACT": 650,
+    "LOSSLESS_CONVERSION_AVAILABLE": 543
+  },
+  "per_scenario": {
+    "identical": {
+      "EXACT": 650
+    },
+    "required-missing-source": {
+      "UNKNOWN": 650
+    },
+    "required-missing-target": {
+      "UNKNOWN": 650
+    },
+    "required-value-differs": {
+      "INCOMPATIBLE": 650
+    },
+    "unit-mismatch": {
+      "INCOMPATIBLE": 650
+    },
+    "unit-convertible": {
+      "LOSSLESS_CONVERSION_AVAILABLE": 543,
+      "INCOMPATIBLE": 107
+    },
+    "origin-mismatch": {
+      "INCOMPATIBLE": 650
+    },
+    "namespace-mismatch": {
+      "INCOMPATIBLE": 650
+    },
+    "species-any": {
+      "UNKNOWN": 575,
+      "NOT_APPLICABLE": 75
+    }
+  },
+  "per_domain": {
+    "cardiopulmonary-renal": {
+      "INCOMPATIBLE": 103,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 22
+    },
+    "cell": {
+      "INCOMPATIBLE": 104,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 21
+    },
+    "chemical": {
+      "INCOMPATIBLE": 100,
+      "UNKNOWN": 50,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 25
+    },
+    "clinical": {
+      "INCOMPATIBLE": 100,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 25
+    },
+    "core": {
+      "INCOMPATIBLE": 101,
+      "UNKNOWN": 50,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 24
+    },
+    "developmental": {
+      "INCOMPATIBLE": 101,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 24
+    },
+    "ecology": {
+      "INCOMPATIBLE": 104,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 21
+    },
+    "epidemiology": {
+      "INCOMPATIBLE": 105,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 20
+    },
+    "epigenome": {
+      "INCOMPATIBLE": 104,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 21
+    },
+    "evolution": {
+      "INCOMPATIBLE": 106,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 19
+    },
+    "genome": {
+      "INCOMPATIBLE": 101,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 24
+    },
+    "imaging": {
+      "INCOMPATIBLE": 103,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 22
+    },
+    "immunology": {
+      "INCOMPATIBLE": 107,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 18
+    },
+    "lipidome-glycome": {
+      "INCOMPATIBLE": 104,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 21
+    },
+    "metabolome": {
+      "INCOMPATIBLE": 109,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 16
+    },
+    "microbiology": {
+      "INCOMPATIBLE": 105,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 20
+    },
+    "multiomics": {
+      "INCOMPATIBLE": 103,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 22
+    },
+    "neuroscience": {
+      "INCOMPATIBLE": 104,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 21
+    },
+    "pharmacology": {
+      "INCOMPATIBLE": 109,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 16
+    },
+    "phenotype": {
+      "INCOMPATIBLE": 106,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 19
+    },
+    "physiology": {
+      "INCOMPATIBLE": 112,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 13
+    },
+    "proteome": {
+      "INCOMPATIBLE": 104,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 21
+    },
+    "simulation": {
+      "INCOMPATIBLE": 101,
+      "UNKNOWN": 50,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 24
+    },
+    "spatial": {
+      "INCOMPATIBLE": 103,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 22
+    },
+    "transcriptome": {
+      "INCOMPATIBLE": 101,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 24
+    },
+    "virology": {
+      "INCOMPATIBLE": 107,
+      "UNKNOWN": 75,
+      "EXACT": 25,
+      "LOSSLESS_CONVERSION_AVAILABLE": 18
+    }
+  }
+}

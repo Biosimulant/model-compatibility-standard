@@ -1,0 +1,41 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/internal-validation.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "counts": {
+      "type": "object"
+    },
+    "method_version": {
+      "const": "1.0"
+    },
+    "profiles": {
+      "items": {
+        "type": "object"
+      },
+      "maxItems": 650,
+      "minItems": 650,
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "0.1"
+    },
+    "scope": {
+      "minLength": 20,
+      "type": "string"
+    },
+    "standard": {
+      "const": "https://biosimulant.com/standards/model-compatibility/v0.1"
+    }
+  },
+  "required": [
+    "schema_version",
+    "standard",
+    "method_version",
+    "scope",
+    "counts",
+    "profiles"
+  ],
+  "title": "Profile Internal Validation Summary",
+  "type": "object"
+}

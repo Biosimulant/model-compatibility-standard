@@ -3,79 +3,1180 @@
     {
       "contract": {
         "biological_context": {
-          "species": "NCBITaxon:9606"
+          "species": "NCBITaxon:7227"
         },
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
           "unit": "1"
         },
         "representation": {
           "kind": "scalar"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
         }
       },
       "name": "positive",
       "valid": true
     },
     {
-      "contract": {
+      "name": "comparison-direct",
+      "source": {
         "biological_context": {
-          "species": "NCBITaxon:9606"
+          "species": "NCBITaxon:7227"
         },
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "origin": {
+          "type": "declared"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "DIRECT_COMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
           "unit": "1"
         },
         "representation": {
           "kind": "scalar"
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
         }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {}
       },
-      "name": "negative-required-missing",
+      "field": "semantic.concept",
+      "name": "negative-required-missing-semantic-concept",
       "reason_code": "BMCS_REQUIRED_MISSING",
       "valid": false
     },
     {
-      "name": "comparison-unknown",
-      "source": {
+      "contract": {
         "biological_context": {
-          "species": "NCBITaxon:9606"
+          "species": "NCBITaxon:7227"
         },
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
           "unit": "1"
         },
         "representation": {
           "kind": "scalar"
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value-different"
+        }
+      },
+      "field": "semantic.concept",
+      "name": "negative-value-invalid-semantic-concept",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-incompatible-semantic-concept",
+      "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value-different"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-semantic-concept",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {}
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-target-semantic-concept",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
         }
       },
       "status": "UNKNOWN",
       "target": {
         "biological_context": {
-          "species": "NCBITaxon:9606"
+          "species": "NCBITaxon:7227"
         },
         "measurement": {
-          "quantity": "example-quantity",
-          "scale": "example-scale",
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {}
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-required-missing-representation-kind",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "not-an-allowed-value"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-value-invalid-representation-kind",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-incompatible-representation-kind",
+      "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar-different"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
           "unit": "1"
         },
         "representation": {
           "kind": "scalar"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-representation-kind",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-target-representation-kind",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "field": "measurement.quantity",
+      "name": "negative-required-missing-measurement-quantity",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio-different",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "field": "measurement.quantity",
+      "name": "negative-value-invalid-measurement-quantity",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-incompatible-measurement-quantity",
+      "reason_code": "BMCS_MEASUREMENT_QUANTITY_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio-different",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-unknown-measurement-quantity",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "field": "measurement.quantity",
+      "name": "comparison-unknown-target-measurement-quantity",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "field": "measurement.unit",
+      "name": "negative-required-missing-measurement-unit",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": 7
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "field": "measurement.unit",
+      "name": "negative-value-invalid-measurement-unit",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.unit",
+      "name": "comparison-incompatible-measurement-unit",
+      "reason_code": "BMCS_UNIT_DIMENSION_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "s"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "field": "measurement.unit",
+      "name": "comparison-unknown-measurement-unit",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "field": "measurement.unit",
+      "name": "comparison-unknown-target-measurement-unit",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "field": "measurement.scale",
+      "name": "negative-required-missing-measurement-scale",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "not-an-allowed-value",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "field": "measurement.scale",
+      "name": "negative-value-invalid-measurement-scale",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.scale",
+      "name": "comparison-incompatible-measurement-scale",
+      "reason_code": "BMCS_MEASUREMENT_SCALE_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal-different",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "field": "measurement.scale",
+      "name": "comparison-unknown-measurement-scale",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "field": "measurement.scale",
+      "name": "comparison-unknown-target-measurement-scale",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {},
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "field": "biological_context.species",
+      "name": "negative-required-missing-biological-context-species",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": 7
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "field": "biological_context.species",
+      "name": "negative-value-invalid-biological-context-species",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-incompatible-biological-context-species",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_SPECIES_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-unknown-biological-context-species",
+      "source": {
+        "biological_context": {},
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-unknown-target-biological-context-species",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {},
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "field": "measurement.baseline",
+      "name": "negative-required-missing-measurement-baseline",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": 7,
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "field": "measurement.baseline",
+      "name": "negative-value-invalid-measurement-baseline",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.baseline",
+      "name": "comparison-incompatible-measurement-baseline",
+      "reason_code": "BMCS_MEASUREMENT_BASELINE_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline-different",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "field": "measurement.baseline",
+      "name": "comparison-unknown-measurement-baseline",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      }
+    },
+    {
+      "field": "measurement.baseline",
+      "name": "comparison-unknown-target-measurement-baseline",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "baseline": "example-baseline",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:7227"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/evolution/fitness-value"
         }
       }
     }

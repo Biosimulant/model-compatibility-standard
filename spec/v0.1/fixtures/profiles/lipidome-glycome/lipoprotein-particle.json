@@ -13,12 +13,67 @@
           "kind": "scalar"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
         }
       },
       "name": "positive",
       "valid": true
+    },
+    {
+      "name": "comparison-direct",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "declared"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "status": "DIRECT_COMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {}
+      },
+      "field": "semantic.concept",
+      "name": "negative-required-missing-semantic-concept",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
     },
     {
       "contract": {
@@ -33,15 +88,18 @@
           "kind": "scalar"
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle-different"
         }
       },
-      "name": "negative-required-missing",
-      "reason_code": "BMCS_REQUIRED_MISSING",
+      "field": "semantic.concept",
+      "name": "negative-value-invalid-semantic-concept",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
       "valid": false
     },
     {
-      "name": "comparison-unknown",
+      "field": "semantic.concept",
+      "name": "comparison-incompatible-semantic-concept",
+      "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
@@ -54,7 +112,182 @@
           "kind": "scalar"
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle-different"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-semantic-concept",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {}
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-target-semantic-concept",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {}
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-required-missing-representation-kind",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "not-an-allowed-value"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-value-invalid-representation-kind",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-incompatible-representation-kind",
+      "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar-different"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-representation-kind",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
         }
       },
       "status": "UNKNOWN",
@@ -70,8 +303,472 @@
           "kind": "scalar"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-target-representation-kind",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {},
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "field": "identifiers.namespace",
+      "name": "negative-required-missing-identifiers-namespace",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": 7,
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "field": "identifiers.namespace",
+      "name": "negative-value-invalid-identifiers-namespace",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "identifiers.namespace",
+      "name": "comparison-incompatible-identifiers-namespace",
+      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace-different",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      }
+    },
+    {
+      "field": "identifiers.namespace",
+      "name": "comparison-unknown-identifiers-namespace",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      }
+    },
+    {
+      "field": "identifiers.namespace",
+      "name": "comparison-unknown-target-identifiers-namespace",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "field": "identifiers.namespace_version",
+      "name": "negative-required-missing-identifiers-namespace-version",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": 7
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "field": "identifiers.namespace_version",
+      "name": "negative-value-invalid-identifiers-namespace-version",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "identifiers.namespace_version",
+      "name": "comparison-incompatible-identifiers-namespace-version",
+      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version-different"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      }
+    },
+    {
+      "field": "identifiers.namespace_version",
+      "name": "comparison-unknown-identifiers-namespace-version",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      }
+    },
+    {
+      "field": "identifiers.namespace_version",
+      "name": "comparison-unknown-target-identifiers-namespace-version",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {},
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "field": "biological_context.species",
+      "name": "negative-required-missing-biological-context-species",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": 7
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "field": "biological_context.species",
+      "name": "negative-value-invalid-biological-context-species",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-incompatible-biological-context-species",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_SPECIES_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      }
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-unknown-biological-context-species",
+      "source": {
+        "biological_context": {},
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      }
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-unknown-target-biological-context-species",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {},
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/lipoprotein-particle"
         }
       }
     }

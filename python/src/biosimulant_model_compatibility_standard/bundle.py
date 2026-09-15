@@ -74,7 +74,26 @@ class Bundle:
 
     @cached_property
     def unit_conversions(self) -> list[dict[str, Any]]:
-        return self.read_json("rules/unit-conversions.json")["conversions"]
+        try:
+            return self.read_json("rules/unit-conversions.json")["conversions"]
+        except (FileNotFoundError, KeyError):
+            return []
+
+    @cached_property
+    def units(self) -> dict[str, Any]:
+        """The UCUM table published with the bundle, empty when the release predates it."""
+
+        try:
+            return self.read_json("rules/units.json")
+        except FileNotFoundError:
+            return {}
+
+    @cached_property
+    def quantity_kinds(self) -> dict[str, Any]:
+        try:
+            return self.read_json("rules/quantity-kinds.json").get("kinds", {})
+        except FileNotFoundError:
+            return {}
 
     def profile(self, ref: str) -> dict[str, Any]:
         entry = self.profile_index.get(ref)

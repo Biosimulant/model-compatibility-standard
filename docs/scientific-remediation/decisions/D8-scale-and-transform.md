@@ -1,6 +1,6 @@
 # D8. Scale, value domain and transform
 
-**Status:** Open. **Owner:** unassigned. **Decided:** — . **Approved by:** —
+**Status:** Decided: option (b). Implemented. **Owner:** unassigned. **Decided:** — . **Approved by:** —
 
 ## Question
 
@@ -55,4 +55,11 @@ direct match.
 
 ## Decision
 
-_To be recorded._
+**Adopted: option (b), separate the level from the value domain and the transform.** Implemented:
+
+- `measurement.scale` now takes `nominal`, `ordinal`, `interval`, `ratio`, `proportion`, `probability`
+  or `count`. A proportion is a part of a declared whole, which is not the claim a probability makes.
+- `measurement.transform` is a new catalogue item taking `identity`, `log2`, `log10`, `ln` or
+  `logit`, so a log base is always explicit.
+- The 124 measurement declarations carry a reviewed level: 83 ratio, 18 interval, 10 proportion,
+  6 count, 5 ordinal, 2 nominal. Settles BMCS-SCI-013.

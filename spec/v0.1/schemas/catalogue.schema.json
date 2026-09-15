@@ -41,6 +41,9 @@
     },
     "status": {
       "type": "string"
+    },
+    "technical_pre_review_counts": {
+      "type": "object"
     }
   },
   "required": [

@@ -22,6 +22,7 @@ export interface Quantity {
   dimension: number[];
   offset: number;
   arbitraryCodes: string[];
+  codes: string[];
 }
 
 export interface Conversion {
@@ -40,6 +41,7 @@ export function parseUnit(expression: string, table: UnitTable): Quantity {
   const text = table.aliases?.[expression.trim()] ?? expression.trim();
   const width = table.dimensions.length;
   const arbitrary = new Set<string>();
+  const used = new Set<string>();
   const offsets: number[] = [];
   let position = 0;
   let components = 0;
@@ -73,6 +75,7 @@ export function parseUnit(expression: string, table: UnitTable): Quantity {
       }
     }
     if (!entry) throw new UnitError(`unknown unit code ${code}`);
+    used.add(code);
     if (entry.arbitrary) arbitrary.add(code);
     if (entry.offset) offsets.push(entry.offset);
     return [entry.factor, entry.dim];
@@ -93,6 +96,9 @@ export function parseUnit(expression: string, table: UnitTable): Quantity {
     const code = match[6], exponent = match[7] ? Number.parseInt(match[7], 10) : 1;
     components += 1;
     const [factor, dimension] = resolve(code);
+    const trailing = peek();
+    // An annotation binds to the unit before it and carries no semantics: g{DW} is grams.
+    if (trailing && trailing[4]) position = TOKEN.lastIndex;
     return [factor ** exponent, dimension.map((value) => value * exponent)];
   };
 
@@ -133,7 +139,7 @@ export function parseUnit(expression: string, table: UnitTable): Quantity {
     // meaning once the unit is combined with anything else.
     throw new UnitError(`${expression} combines an affine unit with other units`);
   }
-  return { factor, dimension, offset: offsets[0] ?? 0, arbitraryCodes: [...arbitrary].sort() };
+  return { factor, dimension, offset: offsets[0] ?? 0, arbitraryCodes: [...arbitrary].sort(), codes: [...used].sort() };
 }
 
 /**

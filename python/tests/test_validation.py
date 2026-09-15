@@ -13,7 +13,7 @@ from biosimulant_model_compatibility_standard import (
 )
 
 
-def test_positive_negative_and_unknown_fixtures_for_every_profile():
+def test_full_external_review_fixture_set_for_every_profile():
     bundle = get_bundle()
     fixture_root = Path(bundle.root) / "fixtures" / "profiles"
     files = sorted(fixture_root.rglob("*.json"))
@@ -21,12 +21,24 @@ def test_positive_negative_and_unknown_fixtures_for_every_profile():
     for path in files:
         fixture = json.loads(path.read_text())
         ref = fixture["profile_ref"]
-        positive, negative, unknown = fixture["cases"]
+        cases = {case["name"]: case for case in fixture["cases"]}
+        profile = bundle.profile(ref)
+        required = [item for item in profile["requirements"] if item["level"] == "required"]
+        expected_count = 2 + (5 * len(required)) + int(
+            any(case.startswith("comparison-lossless") for case in cases)
+        )
+        assert len(cases) == expected_count, ref
+        positive = cases["positive"]
         assert validate_contract(positive["contract"], [ref]) == [], ref
-        findings = validate_contract(negative["contract"], [ref])
-        assert any(item.reason_code == negative["reason_code"] for item in findings), ref
-        report = compare_contracts(unknown["source"], unknown["target"], target_profile_refs=[ref])
-        assert report["status"] == unknown["status"], ref
+        for name, case in cases.items():
+            if name.startswith("negative-"):
+                findings = validate_contract(case["contract"], [ref])
+                assert any(item.reason_code == case["reason_code"] for item in findings), f"{ref}: {name}"
+            elif name.startswith("comparison-"):
+                report = compare_contracts(case["source"], case["target"], target_profile_refs=[ref])
+                assert report["status"] == case["status"], f"{ref}: {name}"
+                if case.get("reason_code"):
+                    assert any(item["reason_code"] == case["reason_code"] for item in report["findings"]), f"{ref}: {name}"
 
 
 def test_manifest_without_compatibility_block_is_valid():
@@ -61,7 +73,7 @@ def test_accepted_profile_contract_may_add_but_not_change_common_invariants():
     bundle = get_bundle()
     manifest = yaml.safe_load((Path(bundle.root) / "examples" / "compatible-model.yaml").read_text())
     port = manifest["io"]["inputs"][0]
-    port["accepted_profiles"] = [{"contract": {"measurement": {"unit": "count"}}}]
+    port["accepted_profiles"] = [{"contract": {"measurement": {"unit": "1"}}}]
     assert validate_manifest(manifest) == []
 
     port["accepted_profiles"][0]["contract"] = {

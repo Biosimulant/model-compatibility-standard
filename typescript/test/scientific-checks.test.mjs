@@ -12,11 +12,23 @@ import { fileURLToPath } from "node:url";
 import test from "node:test";
 
 import { compareContracts, normalizeContract, validateContract } from "../dist/index.js";
+import { parseUnit, UnitError } from "../dist/units.js";
 
 const ROOT = fileURLToPath(new URL("../../", import.meta.url));
 const SUITE = JSON.parse(readFileSync(join(ROOT, "scientific-checks", "v0.1", "cases.json"), "utf8"));
 const FIXTURES = join(ROOT, "spec", "v0.1", "fixtures", "profiles");
-const DIMENSIONS = SUITE.unit_dimensions;
+const UNITS = JSON.parse(readFileSync(join(ROOT, "spec", "v0.1", "rules", "units.json"), "utf8"));
+
+/** The dimension the standard's own UCUM table gives this unit, or null when it cannot say. */
+function dimensionOf(unit) {
+  if (typeof unit !== "string") return null;
+  try {
+    return JSON.stringify(parseUnit(unit, UNITS).dimension);
+  } catch (error) {
+    if (error instanceof UnitError) return null;
+    throw error;
+  }
+}
 const STRICT = process.env.BMCS_SCIENTIFIC_STRICT === "1";
 const NOT_A_MATCH = "is not scientifically acceptable here";
 
@@ -57,19 +69,19 @@ function offenders(invariant) {
         const entry = cases["comparison-lossless-unit-conversion"];
         if (entry) {
           const units = [entry.source.measurement.unit, entry.target.measurement.unit, measurement.unit];
-          const dims = new Set(units.map((unit) => DIMENSIONS[unit]));
-          if (dims.has(undefined) || dims.size !== 1) found.push(`${profile}: ${units[0]} -> ${units[1]} for a quantity in ${measurement.unit}`);
+          const dims = new Set(units.map(dimensionOf));
+          if (dims.has(null) || dims.size !== 1) found.push(`${profile}: ${units[0]} -> ${units[1]} for a quantity in ${measurement.unit}`);
         }
       } else if (invariant === "contradiction-cross-dimension") {
         const entry = cases["comparison-incompatible-measurement-unit"];
         if (entry) {
           const [left, right] = [entry.source.measurement.unit, entry.target.measurement.unit];
-          if (DIMENSIONS[left] === undefined || DIMENSIONS[right] === undefined || DIMENSIONS[left] === DIMENSIONS[right]) {
+          if (dimensionOf(left) === null || dimensionOf(right) === null || dimensionOf(left) === dimensionOf(right)) {
             found.push(`${profile}: ${left} vs ${right} asserted INCOMPATIBLE`);
           }
         }
       } else if (invariant === "probability-scale-dimensionless") {
-        if (measurement.scale === "probability" && DIMENSIONS[measurement.unit] !== "dimensionless") {
+        if (measurement.scale === "probability" && dimensionOf(measurement.unit) !== JSON.stringify([0, 0, 0, 0, 0, 0, 0])) {
           found.push(`${profile}: probability scale with unit ${measurement.unit}`);
         }
       } else {

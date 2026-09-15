@@ -17,7 +17,8 @@
     }
   },
   "required": [
-    "ref"
+    "ref",
+    "sha256"
   ],
   "title": "Profile Reference",
   "type": "object"

@@ -7,20 +7,75 @@
         },
         "dimensions": {
           "axes": [
-            "example-axes"
+            "genomic_bin",
+            "genomic_bin"
           ]
         },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
         "representation": {
-          "kind": "scalar",
-          "ordering": "example-ordering"
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
         }
       },
       "name": "positive",
       "valid": true
+    },
+    {
+      "name": "comparison-direct",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "origin": {
+          "type": "declared"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "DIRECT_COMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
     },
     {
       "contract": {
@@ -29,38 +84,173 @@
         },
         "dimensions": {
           "axes": [
-            "example-axes"
+            "genomic_bin",
+            "genomic_bin"
           ]
         },
-        "representation": {
-          "kind": "scalar",
-          "ordering": "example-ordering"
+        "measurement": {
+          "normalization": "example-normalization"
         },
-        "semantic": {
-          "subject": "example-subject"
-        }
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {}
       },
-      "name": "negative-required-missing",
+      "field": "semantic.concept",
+      "name": "negative-required-missing-semantic-concept",
       "reason_code": "BMCS_REQUIRED_MISSING",
       "valid": false
     },
     {
-      "name": "comparison-unknown",
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map-different"
+        }
+      },
+      "field": "semantic.concept",
+      "name": "negative-value-invalid-semantic-concept",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-incompatible-semantic-concept",
+      "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "example-axes"
+            "genomic_bin",
+            "genomic_bin"
           ]
         },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
         "representation": {
-          "kind": "scalar",
-          "ordering": "example-ordering"
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
         },
         "semantic": {
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map-different"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-semantic-concept",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {}
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-target-semantic-concept",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
         }
       },
       "status": "UNKNOWN",
@@ -70,16 +260,1204 @@
         },
         "dimensions": {
           "axes": [
-            "example-axes"
+            "genomic_bin",
+            "genomic_bin"
           ]
         },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
         "representation": {
-          "kind": "scalar",
-          "ordering": "example-ordering"
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {}
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
         },
         "semantic": {
-          "concept": "example-concept",
-          "subject": "example-subject"
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-required-missing-representation-kind",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "not-an-allowed-value",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-value-invalid-representation-kind",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-incompatible-representation-kind",
+      "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector-different",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-representation-kind",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-target-representation-kind",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {},
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "field": "dimensions.axes",
+      "name": "negative-required-missing-dimensions-axes",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": "not-an-array"
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "field": "dimensions.axes",
+      "name": "negative-value-invalid-dimensions-axes",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "dimensions.axes",
+      "name": "comparison-incompatible-dimensions-axes",
+      "reason_code": "BMCS_DIMENSIONS_AXES_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin",
+            "different"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "field": "dimensions.axes",
+      "name": "comparison-unknown-dimensions-axes",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {},
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "field": "dimensions.axes",
+      "name": "comparison-unknown-target-dimensions-axes",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {},
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "field": "representation.ordering",
+      "name": "negative-required-missing-representation-ordering",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": 7,
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "field": "representation.ordering",
+      "name": "negative-value-invalid-representation-ordering",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.ordering",
+      "name": "comparison-incompatible-representation-ordering",
+      "reason_code": "BMCS_REPRESENTATION_ORDERING_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit-different",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "field": "representation.ordering",
+      "name": "comparison-unknown-representation-ordering",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "field": "representation.ordering",
+      "name": "comparison-unknown-target-representation-ordering",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {},
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "field": "biological_context.species",
+      "name": "negative-required-missing-biological-context-species",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": 7
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "field": "biological_context.species",
+      "name": "negative-value-invalid-biological-context-species",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-incompatible-biological-context-species",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_SPECIES_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-unknown-biological-context-species",
+      "source": {
+        "biological_context": {},
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "field": "biological_context.species",
+      "name": "comparison-unknown-target-biological-context-species",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {},
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "field": "representation.reference_assembly",
+      "name": "negative-required-missing-representation-reference-assembly",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": 7
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "field": "representation.reference_assembly",
+      "name": "negative-value-invalid-representation-reference-assembly",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.reference_assembly",
+      "name": "comparison-incompatible-representation-reference-assembly",
+      "reason_code": "BMCS_REPRESENTATION_REFERENCE_ASSEMBLY_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly-different"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "field": "representation.reference_assembly",
+      "name": "comparison-unknown-representation-reference-assembly",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "field": "representation.reference_assembly",
+      "name": "comparison-unknown-target-representation-reference-assembly",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {},
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "field": "measurement.normalization",
+      "name": "negative-required-missing-measurement-normalization",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": 7
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "field": "measurement.normalization",
+      "name": "negative-value-invalid-measurement-normalization",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "measurement.normalization",
+      "name": "comparison-incompatible-measurement-normalization",
+      "reason_code": "BMCS_MEASUREMENT_NORMALIZATION_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization-different"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "field": "measurement.normalization",
+      "name": "comparison-unknown-measurement-normalization",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {},
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      }
+    },
+    {
+      "field": "measurement.normalization",
+      "name": "comparison-unknown-target-measurement-normalization",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            "genomic_bin",
+            "genomic_bin"
+          ]
+        },
+        "measurement": {},
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/hic-contact-map"
         }
       }
     }

@@ -1,6 +1,6 @@
 # D1. Quantity kinds and units
 
-**Status:** Open. **Owner:** unassigned. **Decided:** — . **Approved by:** —
+**Status:** Decided: option (b). Implemented. **Owner:** unassigned. **Decided:** — . **Approved by:** —
 
 ## Question
 
@@ -96,4 +96,20 @@ Settles BMCS-SCI-003 to 009, 011 and 012. Must keep guards 102, 103 and 105 pass
 
 ## Decision
 
-_To be recorded._
+**Adopted: option (b), UCUM plus a quantity-kind registry.** Implemented on
+`scientific-review/phase-0`.
+
+- `source/vendor/ucum/ucum-essence.xml` is vendored and pinned; `scripts/build_ucum_table.py`
+  flattens it into `spec/v0.1/rules/units.json`, published with the bundle.
+- `source/quantity-kinds.json` declares 37 kinds, published as `spec/v0.1/rules/quantity-kinds.json`.
+  A kind fixes a dimension through its canonical unit and may forbid units whose UCUM property
+  belongs to another quantity, which is what separates hertz from becquerel.
+- `unit-convertible` is dimensional analysis in both engines, with affine units handled and
+  arbitrary units commensurable only with themselves.
+- Validation rejects a unit that cannot belong to the profile's quantity kind; comparison refuses to
+  convert between contracts where one is internally inconsistent.
+- **Spellings migrated, no aliases.** `uM`, `nM` and `mM` are not UCUM codes and no longer appear;
+  the declarations use `umol/L` and friends. v0.1 has not been released, so nothing carries a
+  deprecated spelling.
+
+Settles BMCS-SCI-003 to 009, 011, 012 and 016, all now guards.

@@ -1,0 +1,979 @@
+{
+  "schema_version": "0.1",
+  "note": "Reviewed measurement declarations, one entry per profile that carries a measured value. These replace the name-substring guessing in scripts/build_standard.py (decision D9), which produced concentrations on a probability scale and firing rates in 1/s converted from nanomolar. Each entry fixes the quantity kind (source/quantity-kinds.json), the canonical unit as a UCUM expression, and the measurement level. Prepared with AI assistance from the pre-review; every entry still needs its domain reviewer.",
+  "fields": {
+    "kind": "A quantity kind id from source/quantity-kinds.json.",
+    "unit": "The UCUM unit the profile's positive example declares. null means the port declares its own unit and the profile fixes only the kind.",
+    "scale": "nominal, ordinal, interval, ratio, proportion or count. A proportion is a part of a declared whole, which is not the same claim as a probability (decision D8).",
+    "transform": "Applied transform, with its base explicit. Absent means none.",
+    "requires": "Extra items this profile must require, beyond the unit, scale and quantity. Sub-paths of an array item (biological_context.intervention.route and the like) cannot be required on their own: the parent is a list, so a sub-path requirement would overwrite it. Requiring the intervention itself is the closest the v0.1 item model allows.",
+    "drop_measurement": "The profile should carry no measurement at all: the value is not a quantity."
+  },
+  "profiles": {
+    "cardiopulmonary-renal/ejection-fraction": {
+      "kind": "proportion",
+      "unit": "1",
+      "scale": "proportion"
+    },
+    "cardiopulmonary-renal/pressure-waveform": {
+      "kind": "pressure",
+      "unit": "mm[Hg]",
+      "scale": "ratio",
+      "requires": [
+        "lifecycle.time_unit",
+        "lifecycle.sampling"
+      ]
+    },
+    "cardiopulmonary-renal/ventricular-volume": {
+      "kind": "volume",
+      "unit": "mL",
+      "scale": "ratio"
+    },
+    "cell/growth-rate": {
+      "kind": "per-time-rate",
+      "unit": "1/h",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis"
+      ]
+    },
+    "cell/invasion-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "interval",
+      "requires": [
+        "biological_context.assay"
+      ]
+    },
+    "cell/migration-rate": {
+      "kind": "speed",
+      "unit": "um/min",
+      "scale": "ratio"
+    },
+    "cell/proliferation-rate": {
+      "kind": "per-time-rate",
+      "unit": "1/h",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis"
+      ]
+    },
+    "chemical/exact-mass": {
+      "kind": "atomic-mass",
+      "unit": "u",
+      "scale": "ratio",
+      "requires": [
+        "representation.isotope_state"
+      ]
+    },
+    "chemical/molecular-weight": {
+      "kind": "molar-mass",
+      "unit": "g/mol",
+      "scale": "ratio",
+      "requires": [
+        "representation.isotope_state"
+      ]
+    },
+    "core/bounded-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "interval"
+    },
+    "core/categorical-value": {
+      "drop_measurement": true,
+      "scale": "nominal"
+    },
+    "core/regular-time-series": {
+      "kind": "port-declared",
+      "unit": null,
+      "scale": "ratio",
+      "requires": [
+        "lifecycle.time_unit",
+        "lifecycle.time_origin",
+        "lifecycle.sampling",
+        "lifecycle.temporal_meaning"
+      ]
+    },
+    "core/irregular-time-series": {
+      "kind": "port-declared",
+      "unit": null,
+      "scale": "ratio",
+      "requires": [
+        "lifecycle.time_unit",
+        "lifecycle.time_origin",
+        "lifecycle.temporal_meaning",
+        "lifecycle.interpolation"
+      ]
+    },
+    "developmental/morphogen-concentration": {
+      "kind": "amount-concentration",
+      "unit": "nmol/L",
+      "scale": "ratio"
+    },
+    "ecology/biomass": {
+      "kind": "mass",
+      "unit": "g",
+      "scale": "ratio",
+      "requires": [
+        "measurement.normalization"
+      ]
+    },
+    "ecology/birth-rate": {
+      "kind": "per-time-rate",
+      "unit": "1/a",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis"
+      ]
+    },
+    "ecology/climate-time-series": {
+      "kind": "port-declared",
+      "unit": null,
+      "scale": "ratio",
+      "requires": [
+        "lifecycle.time_unit",
+        "lifecycle.sampling"
+      ]
+    },
+    "ecology/death-rate": {
+      "kind": "per-time-rate",
+      "unit": "1/a",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis"
+      ]
+    },
+    "ecology/predator-prey-rate": {
+      "kind": "per-time-rate",
+      "unit": "1/d",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis"
+      ]
+    },
+    "ecology/species-abundance": {
+      "kind": "count",
+      "unit": "1",
+      "scale": "count",
+      "requires": [
+        "measurement.normalization"
+      ]
+    },
+    "epidemiology/attack-rate": {
+      "kind": "proportion",
+      "unit": "1",
+      "scale": "proportion",
+      "requires": [
+        "biological_context.denominator",
+        "lifecycle.observation_period"
+      ]
+    },
+    "epidemiology/hospitalization-rate": {
+      "kind": "person-time-rate",
+      "unit": "/a{person}",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis",
+        "biological_context.denominator"
+      ]
+    },
+    "epidemiology/incidence-rate": {
+      "kind": "person-time-rate",
+      "unit": "/a{person}",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis",
+        "biological_context.denominator",
+        "lifecycle.observation_period"
+      ]
+    },
+    "epidemiology/mortality-rate": {
+      "kind": "person-time-rate",
+      "unit": "/a{person}",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis",
+        "biological_context.denominator"
+      ]
+    },
+    "epidemiology/recovery-rate": {
+      "kind": "per-time-rate",
+      "unit": "1/d",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis"
+      ]
+    },
+    "epigenome/dna-methylation-fraction": {
+      "kind": "proportion",
+      "unit": "1",
+      "scale": "proportion"
+    },
+    "epigenome/footprint-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "interval",
+      "requires": [
+        "origin.method",
+        "origin.method_version"
+      ]
+    },
+    "epigenome/methylation-beta-value": {
+      "kind": "proportion",
+      "unit": "1",
+      "scale": "proportion",
+      "requires": [
+        "measurement.normalization"
+      ]
+    },
+    "epigenome/methylation-m-value": {
+      "kind": "log-ratio",
+      "unit": "1",
+      "scale": "interval",
+      "transform": "log2",
+      "requires": [
+        "measurement.normalization"
+      ]
+    },
+    "evolution/adaptation-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "interval",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "evolution/divergence-time": {
+      "kind": "duration",
+      "unit": "a",
+      "scale": "ratio",
+      "requires": [
+        "origin.phylogenetic_method"
+      ]
+    },
+    "evolution/evolutionary-distance": {
+      "kind": "dimensionless-ratio",
+      "unit": "1",
+      "scale": "ratio",
+      "requires": [
+        "origin.substitution_model"
+      ]
+    },
+    "evolution/fitness-value": {
+      "kind": "dimensionless-ratio",
+      "unit": "1",
+      "scale": "ratio",
+      "requires": [
+        "measurement.baseline"
+      ]
+    },
+    "evolution/mutation-rate": {
+      "kind": "dimensionless-ratio",
+      "unit": "1",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis"
+      ]
+    },
+    "evolution/recombination-rate": {
+      "kind": "dimensionless-ratio",
+      "unit": "1",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis"
+      ]
+    },
+    "genome/polygenic-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "interval",
+      "requires": [
+        "identifiers.namespace",
+        "identifiers.namespace_version"
+      ]
+    },
+    "imaging/ct-volume": {
+      "kind": "xray-attenuation",
+      "unit": "[hnsf'U]",
+      "scale": "interval",
+      "requires": [
+        "dimensions.pixel_spacing",
+        "dimensions.slice_thickness",
+        "dimensions.orientation"
+      ]
+    },
+    "imaging/image-time-series": {
+      "kind": "port-declared",
+      "unit": null,
+      "scale": "ratio",
+      "requires": [
+        "lifecycle.time_unit",
+        "lifecycle.sampling"
+      ]
+    },
+    "imaging/mri-volume": {
+      "kind": "arbitrary-intensity",
+      "unit": "1",
+      "scale": "interval",
+      "requires": [
+        "dimensions.pixel_spacing",
+        "dimensions.slice_thickness",
+        "dimensions.orientation"
+      ]
+    },
+    "imaging/pet-volume": {
+      "kind": "activity-concentration",
+      "unit": "Bq/mL",
+      "scale": "ratio",
+      "requires": [
+        "dimensions.pixel_spacing",
+        "dimensions.slice_thickness",
+        "measurement.calibration_ref"
+      ]
+    },
+    "immunology/antibody-titer": {
+      "kind": "dilution-titre",
+      "unit": "1",
+      "scale": "ordinal",
+      "transform": "log2",
+      "requires": [
+        "biological_context.assay",
+        "semantic.entity"
+      ]
+    },
+    "immunology/chemokine-concentration": {
+      "kind": "mass-concentration",
+      "unit": "pg/mL",
+      "scale": "ratio"
+    },
+    "immunology/cytokine-concentration": {
+      "kind": "mass-concentration",
+      "unit": "pg/mL",
+      "scale": "ratio"
+    },
+    "immunology/exhaustion-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "interval",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "immunology/immune-cell-fraction": {
+      "kind": "proportion",
+      "unit": "1",
+      "scale": "proportion",
+      "requires": [
+        "biological_context.denominator"
+      ]
+    },
+    "immunology/inflammatory-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "interval",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "immunology/neutralization-titer": {
+      "kind": "dilution-titre",
+      "unit": "1",
+      "scale": "ordinal",
+      "transform": "log2",
+      "requires": [
+        "biological_context.assay",
+        "semantic.entity"
+      ]
+    },
+    "lipidome-glycome/glycan-abundance": {
+      "kind": "arbitrary-intensity",
+      "unit": "1",
+      "scale": "ratio",
+      "requires": [
+        "measurement.normalization"
+      ]
+    },
+    "lipidome-glycome/glycopeptide-abundance": {
+      "kind": "arbitrary-intensity",
+      "unit": "1",
+      "scale": "ratio",
+      "requires": [
+        "measurement.normalization"
+      ]
+    },
+    "lipidome-glycome/lipid-abundance": {
+      "kind": "arbitrary-intensity",
+      "unit": "1",
+      "scale": "ratio",
+      "requires": [
+        "measurement.normalization"
+      ]
+    },
+    "lipidome-glycome/lipid-concentration": {
+      "kind": "amount-concentration",
+      "unit": "umol/L",
+      "scale": "ratio",
+      "requires": [
+        "biological_context.compartment"
+      ]
+    },
+    "metabolome/isotope-tracer-fraction": {
+      "kind": "proportion",
+      "unit": "1",
+      "scale": "proportion"
+    },
+    "metabolome/mass-spectral-peak": {
+      "kind": "mass-to-charge-ratio",
+      "unit": "1",
+      "scale": "ratio"
+    },
+    "metabolome/mass-spectrum": {
+      "kind": "mass-to-charge-ratio",
+      "unit": "1",
+      "scale": "ratio"
+    },
+    "metabolome/metabolite-abundance": {
+      "kind": "arbitrary-intensity",
+      "unit": "1",
+      "scale": "ratio",
+      "requires": [
+        "measurement.normalization"
+      ]
+    },
+    "metabolome/metabolite-concentration": {
+      "kind": "amount-concentration",
+      "unit": "umol/L",
+      "scale": "ratio",
+      "requires": [
+        "biological_context.compartment",
+        "measurement.detection_limits"
+      ]
+    },
+    "metabolome/metabolite-consumption-rate": {
+      "kind": "molar-flux-per-biomass",
+      "unit": "mmol/(g{DW}.h)",
+      "scale": "ratio"
+    },
+    "metabolome/metabolite-production-rate": {
+      "kind": "molar-flux-per-biomass",
+      "unit": "mmol/(g{DW}.h)",
+      "scale": "ratio"
+    },
+    "metabolome/metabolite-time-series": {
+      "kind": "port-declared",
+      "unit": null,
+      "scale": "ratio",
+      "requires": [
+        "lifecycle.time_unit",
+        "lifecycle.sampling"
+      ]
+    },
+    "metabolome/pathway-metabolite-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "interval",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "metabolome/retention-time": {
+      "kind": "duration",
+      "unit": "min",
+      "scale": "ratio",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "microbiology/biofilm-biomass": {
+      "kind": "mass-per-area",
+      "unit": "g/cm2",
+      "scale": "ratio"
+    },
+    "microbiology/community-time-series": {
+      "kind": "port-declared",
+      "unit": null,
+      "scale": "ratio",
+      "requires": [
+        "lifecycle.time_unit",
+        "lifecycle.sampling"
+      ]
+    },
+    "microbiology/functional-abundance": {
+      "kind": "count",
+      "unit": "1",
+      "scale": "count",
+      "requires": [
+        "measurement.normalization",
+        "identifiers.namespace_version"
+      ]
+    },
+    "microbiology/microbial-growth-rate": {
+      "kind": "per-time-rate",
+      "unit": "1/h",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis"
+      ]
+    },
+    "microbiology/minimum-inhibitory-concentration": {
+      "kind": "mass-concentration",
+      "unit": "mg/L",
+      "scale": "ordinal",
+      "transform": "log2",
+      "requires": [
+        "biological_context.assay"
+      ]
+    },
+    "microbiology/taxonomic-abundance": {
+      "kind": "count",
+      "unit": "1",
+      "scale": "count",
+      "requires": [
+        "measurement.normalization",
+        "identifiers.taxonomy_namespace",
+        "identifiers.taxonomy_version"
+      ]
+    },
+    "multiomics/gene-set-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "interval",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "multiomics/integrated-embedding": {
+      "kind": "dimensionless-ratio",
+      "unit": "1",
+      "scale": "interval",
+      "requires": [
+        "origin.model_digest"
+      ]
+    },
+    "multiomics/pathway-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "interval",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "neuroscience/cognitive-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "ordinal",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "neuroscience/firing-rate": {
+      "kind": "frequency",
+      "unit": "Hz",
+      "scale": "ratio",
+      "requires": [
+        "lifecycle.window",
+        "semantic.entity"
+      ]
+    },
+    "neuroscience/neurotransmitter-concentration": {
+      "kind": "amount-concentration",
+      "unit": "umol/L",
+      "scale": "ratio",
+      "requires": [
+        "biological_context.compartment"
+      ]
+    },
+    "neuroscience/synaptic-weight": {
+      "kind": "dimensionless-ratio",
+      "unit": "1",
+      "scale": "ratio",
+      "requires": [
+        "semantic.model_formalism"
+      ]
+    },
+    "pharmacology/association-rate": {
+      "kind": "association-rate-constant",
+      "unit": "L/(mol.s)",
+      "scale": "ratio"
+    },
+    "pharmacology/binding-affinity": {
+      "kind": "amount-concentration",
+      "unit": "nmol/L",
+      "scale": "ratio",
+      "requires": [
+        "semantic.endpoint",
+        "biological_context.assay"
+      ]
+    },
+    "pharmacology/compound-dose": {
+      "kind": "dose-mass",
+      "unit": "mg",
+      "scale": "ratio",
+      "requires": [
+        "biological_context.intervention"
+      ]
+    },
+    "pharmacology/concentration-response-curve": {
+      "kind": "proportion",
+      "unit": "1",
+      "scale": "proportion",
+      "requires": [
+        "measurement.control",
+        "measurement.response_direction",
+        "biological_context.intervention"
+      ]
+    },
+    "pharmacology/dissociation-rate": {
+      "kind": "dissociation-rate-constant",
+      "unit": "1/s",
+      "scale": "ratio"
+    },
+    "pharmacology/dose-response-curve": {
+      "kind": "proportion",
+      "unit": "1",
+      "scale": "proportion",
+      "requires": [
+        "measurement.control",
+        "measurement.response_direction",
+        "biological_context.intervention"
+      ]
+    },
+    "pharmacology/dose-schedule": {
+      "drop_measurement": true,
+      "scale": "nominal"
+    },
+    "pharmacology/exposure-concentration": {
+      "kind": "amount-concentration",
+      "unit": "umol/L",
+      "scale": "ratio",
+      "requires": [
+        "biological_context.compartment"
+      ]
+    },
+    "pharmacology/plasma-concentration": {
+      "kind": "amount-concentration",
+      "unit": "umol/L",
+      "scale": "ratio",
+      "requires": [
+        "biological_context.compartment",
+        "measurement.detection_limits"
+      ]
+    },
+    "pharmacology/tissue-concentration": {
+      "kind": "amount-concentration",
+      "unit": "umol/L",
+      "scale": "ratio",
+      "requires": [
+        "biological_context.tissue",
+        "measurement.normalization"
+      ]
+    },
+    "pharmacology/volume-of-distribution": {
+      "kind": "volume",
+      "unit": "L",
+      "scale": "ratio",
+      "requires": [
+        "measurement.normalization"
+      ]
+    },
+    "phenotype/biomarker-value": {
+      "kind": "port-declared",
+      "unit": null,
+      "scale": "ratio",
+      "requires": [
+        "semantic.entity",
+        "biological_context.assay"
+      ]
+    },
+    "phenotype/functional-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "interval",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "phenotype/risk-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "interval",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "phenotype/survival-fraction": {
+      "kind": "proportion",
+      "unit": "1",
+      "scale": "proportion",
+      "requires": [
+        "measurement.baseline"
+      ]
+    },
+    "phenotype/symptom-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "ordinal",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "phenotype/time-to-event": {
+      "kind": "duration",
+      "unit": "d",
+      "scale": "ratio",
+      "requires": [
+        "uncertainty.censoring",
+        "lifecycle.time_origin",
+        "semantic.endpoint"
+      ]
+    },
+    "phenotype/trait-value": {
+      "kind": "port-declared",
+      "unit": null,
+      "scale": "ratio",
+      "requires": [
+        "semantic.entity"
+      ]
+    },
+    "phenotype/viability-at-dose": {
+      "kind": "proportion",
+      "unit": "1",
+      "scale": "proportion",
+      "requires": [
+        "measurement.control"
+      ]
+    },
+    "physiology/airflow-rate": {
+      "kind": "volumetric-flow",
+      "unit": "L/s",
+      "scale": "ratio"
+    },
+    "physiology/blood-pressure": {
+      "kind": "pressure",
+      "unit": "mm[Hg]",
+      "scale": "ratio",
+      "requires": [
+        "semantic.qualifiers"
+      ]
+    },
+    "physiology/body-mass": {
+      "kind": "mass",
+      "unit": "kg",
+      "scale": "ratio"
+    },
+    "physiology/body-temperature": {
+      "kind": "temperature",
+      "unit": "Cel",
+      "scale": "interval",
+      "requires": [
+        "biological_context.tissue"
+      ]
+    },
+    "physiology/electrolyte-concentration": {
+      "kind": "amount-concentration",
+      "unit": "mmol/L",
+      "scale": "ratio",
+      "requires": [
+        "biological_context.compartment"
+      ]
+    },
+    "physiology/glomerular-filtration-rate": {
+      "kind": "bsa-clearance",
+      "unit": "mL/min/{1.73_m2}",
+      "scale": "ratio",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "physiology/heart-rate": {
+      "kind": "frequency",
+      "unit": "/min",
+      "scale": "ratio"
+    },
+    "physiology/hormone-concentration": {
+      "kind": "amount-concentration",
+      "unit": "pmol/L",
+      "scale": "ratio",
+      "requires": [
+        "biological_context.compartment",
+        "semantic.entity"
+      ]
+    },
+    "physiology/lung-volume": {
+      "kind": "volume",
+      "unit": "L",
+      "scale": "ratio",
+      "requires": [
+        "semantic.qualifiers"
+      ]
+    },
+    "physiology/mean-arterial-pressure": {
+      "kind": "pressure",
+      "unit": "mm[Hg]",
+      "scale": "ratio",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "physiology/metabolic-rate": {
+      "kind": "power",
+      "unit": "W",
+      "scale": "ratio",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "physiology/physiological-time-series": {
+      "kind": "port-declared",
+      "unit": null,
+      "scale": "ratio",
+      "requires": [
+        "lifecycle.time_unit",
+        "lifecycle.sampling"
+      ]
+    },
+    "physiology/respiratory-rate": {
+      "kind": "frequency",
+      "unit": "/min",
+      "scale": "ratio"
+    },
+    "physiology/stroke-volume": {
+      "kind": "volume",
+      "unit": "mL",
+      "scale": "ratio"
+    },
+    "proteome/peptide-abundance": {
+      "kind": "arbitrary-intensity",
+      "unit": "1",
+      "scale": "ratio",
+      "requires": [
+        "measurement.normalization",
+        "uncertainty.missingness"
+      ]
+    },
+    "proteome/phosphoprotein-abundance": {
+      "kind": "arbitrary-intensity",
+      "unit": "1",
+      "scale": "ratio",
+      "requires": [
+        "measurement.normalization",
+        "uncertainty.missingness"
+      ]
+    },
+    "proteome/protein-abundance": {
+      "kind": "arbitrary-intensity",
+      "unit": "1",
+      "scale": "ratio",
+      "requires": [
+        "measurement.normalization",
+        "identifiers.ambiguity_handling",
+        "uncertainty.missingness"
+      ]
+    },
+    "proteome/secretion-rate": {
+      "kind": "amount-per-cell-per-time",
+      "unit": "pg/({cell}.h)",
+      "scale": "ratio"
+    },
+    "simulation/simulation-time": {
+      "kind": "duration",
+      "unit": "s",
+      "scale": "ratio",
+      "requires": [
+        "lifecycle.time_origin"
+      ]
+    },
+    "spatial/concentration-field": {
+      "kind": "amount-concentration",
+      "unit": "umol/L",
+      "scale": "ratio"
+    },
+    "spatial/distance-matrix": {
+      "kind": "length",
+      "unit": "um",
+      "scale": "ratio"
+    },
+    "spatial/spatial-abundance-map": {
+      "kind": "count",
+      "unit": "1",
+      "scale": "count",
+      "requires": [
+        "measurement.normalization"
+      ]
+    },
+    "transcriptome/small-rna-abundance": {
+      "kind": "count",
+      "unit": "1",
+      "scale": "count",
+      "requires": [
+        "measurement.normalization"
+      ]
+    },
+    "virology/immune-escape-score": {
+      "kind": "score",
+      "unit": "1",
+      "scale": "interval",
+      "requires": [
+        "origin.method"
+      ]
+    },
+    "virology/infection-rate": {
+      "kind": "per-time-rate",
+      "unit": "1/h",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis"
+      ]
+    },
+    "virology/infectious-titer": {
+      "kind": "infectious-titre",
+      "unit": "[PFU]/mL",
+      "scale": "ratio",
+      "requires": [
+        "biological_context.assay",
+        "biological_context.cell_line"
+      ]
+    },
+    "virology/replication-rate": {
+      "kind": "per-time-rate",
+      "unit": "1/h",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis"
+      ]
+    },
+    "virology/shedding-time-series": {
+      "kind": "port-declared",
+      "unit": null,
+      "scale": "ratio",
+      "requires": [
+        "lifecycle.time_unit",
+        "lifecycle.sampling"
+      ]
+    },
+    "virology/transmission-rate": {
+      "kind": "per-time-rate",
+      "unit": "1/d",
+      "scale": "ratio",
+      "requires": [
+        "measurement.rate_basis"
+      ]
+    },
+    "virology/viral-protein-abundance": {
+      "kind": "arbitrary-intensity",
+      "unit": "1",
+      "scale": "ratio",
+      "requires": [
+        "measurement.normalization"
+      ]
+    },
+    "virology/viral-transcript-abundance": {
+      "kind": "count",
+      "unit": "1",
+      "scale": "count",
+      "requires": [
+        "measurement.normalization"
+      ]
+    }
+  }
+}

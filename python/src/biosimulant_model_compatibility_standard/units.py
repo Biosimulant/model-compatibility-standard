@@ -41,6 +41,7 @@ class Quantity:
     dimension: tuple[int, ...]
     offset: float = 0.0
     arbitrary_codes: frozenset[str] = frozenset()
+    codes: frozenset[str] = frozenset()
 
     @property
     def dimensionless(self) -> bool:
@@ -57,7 +58,7 @@ class Conversion:
     lossless: bool = True
 
 
-def parse(expression: str, table: dict[str, Any]) -> Quantity:
+def parse_unit(expression: str, table: dict[str, Any]) -> Quantity:
     """Parse a UCUM expression against a flattened table. Raises UnitError when it cannot."""
     if not isinstance(expression, str) or not expression.strip():
         raise UnitError("empty unit")
@@ -66,6 +67,7 @@ def parse(expression: str, table: dict[str, Any]) -> Quantity:
     width = len(table["dimensions"])
     position = 0
     arbitrary: set[str] = set()
+    used: set[str] = set()
     offsets: list[float] = []
     components = 0
     operators = 0
@@ -81,6 +83,7 @@ def parse(expression: str, table: dict[str, Any]) -> Quantity:
                     break
         if entry is None:
             raise UnitError(f"unknown unit code {code!r}")
+        used.add(code)
         if entry.get("arbitrary"):
             arbitrary.add(code)
         if entry.get("offset"):
@@ -88,7 +91,7 @@ def parse(expression: str, table: dict[str, Any]) -> Quantity:
         return entry["factor"], entry["dim"]
 
     def component() -> tuple[float, list[int]]:
-        nonlocal position
+        nonlocal position, components
         match = TOKEN.match(text, position)
         if not match:
             raise UnitError(f"cannot parse {expression!r}")
@@ -108,9 +111,12 @@ def parse(expression: str, table: dict[str, Any]) -> Quantity:
             # A bare integer is a factor in its own right: 86400 is not 8 to the 6400th.
             return float(match.group("number")), [0] * width
         code, exponent = match.group("code"), int(match.group("exponent") or 1)
-        nonlocal components
         components += 1
         factor, dimension = resolve(code)
+        trailing = TOKEN.match(text, position)
+        if trailing and trailing.group("annotation"):
+            # An annotation binds to the unit before it and carries no semantics: g{DW} is grams.
+            position = trailing.end()
         return factor ** exponent, [value * exponent for value in dimension]
 
     def sequence() -> tuple[float, list[int]]:
@@ -146,10 +152,10 @@ def parse(expression: str, table: dict[str, Any]) -> Quantity:
         # Celsius converts on its own. A degree Celsius per minute does not: the offset has no
         # meaning once the unit is combined with anything else.
         raise UnitError(f"{expression!r} combines an affine unit with other units")
-    return Quantity(factor, tuple(dimension), offsets[0] if offsets else 0.0, frozenset(arbitrary))
+    return Quantity(factor, tuple(dimension), offsets[0] if offsets else 0.0, frozenset(arbitrary), frozenset(used))
 
 
-def convert(source: str, target: str, table: dict[str, Any]) -> Conversion | None:
+def convert_unit(source: str, target: str, table: dict[str, Any]) -> Conversion | None:
     """Return how to convert source into target, or None when the dimensions differ.
 
     Raises UnitError when the question cannot be decided: an unparseable code, or an arbitrary
@@ -157,7 +163,7 @@ def convert(source: str, target: str, table: dict[str, Any]) -> Conversion | Non
     """
     if source == target:
         return Conversion(1.0, 0.0, affine=False)
-    left, right = parse(source, table), parse(target, table)
+    left, right = parse_unit(source, table), parse_unit(target, table)
     if left.arbitrary_codes or right.arbitrary_codes:
         if left.arbitrary_codes != right.arbitrary_codes:
             raise UnitError("arbitrary units are commensurable only with themselves")

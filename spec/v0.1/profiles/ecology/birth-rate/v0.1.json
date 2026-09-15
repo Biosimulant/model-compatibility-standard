@@ -1,7 +1,20 @@
 {
   "$id": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/birth-rate/v0.1",
   "$schema": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/profile-definition.schema.json",
-  "allowed": {},
+  "allowed": {
+    "representation": {
+      "kind": [
+        "scalar",
+        "dense_vector",
+        "sparse_vector",
+        "matrix",
+        "tensor",
+        "array",
+        "record",
+        "table"
+      ]
+    }
+  },
   "applies_to": [
     "scalar",
     "array",
@@ -10,24 +23,16 @@
   "comparison_rules": [
     {
       "missing": "unknown",
-      "operator": "term-equivalent",
-      "reason_code": "BMCS_VALUE_MISMATCH",
+      "operator": "equal",
+      "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
       "severity": "error",
       "source": "/contract/semantic/concept",
       "target": "/contract/semantic/concept"
     },
     {
       "missing": "unknown",
-      "operator": "term-equivalent",
-      "reason_code": "BMCS_VALUE_MISMATCH",
-      "severity": "error",
-      "source": "/contract/semantic/subject",
-      "target": "/contract/semantic/subject"
-    },
-    {
-      "missing": "unknown",
       "operator": "equal",
-      "reason_code": "BMCS_VALUE_MISMATCH",
+      "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
       "source": "/contract/representation/kind",
       "target": "/contract/representation/kind"
@@ -35,7 +40,7 @@
     {
       "missing": "unknown",
       "operator": "equal",
-      "reason_code": "BMCS_VALUE_MISMATCH",
+      "reason_code": "BMCS_MEASUREMENT_QUANTITY_MISMATCH",
       "severity": "error",
       "source": "/contract/measurement/quantity",
       "target": "/contract/measurement/quantity"
@@ -43,7 +48,7 @@
     {
       "missing": "unknown",
       "operator": "unit-convertible",
-      "reason_code": "BMCS_VALUE_MISMATCH",
+      "reason_code": "BMCS_MEASUREMENT_UNIT_MISMATCH",
       "severity": "error",
       "source": "/contract/measurement/unit",
       "target": "/contract/measurement/unit"
@@ -51,7 +56,7 @@
     {
       "missing": "unknown",
       "operator": "equal",
-      "reason_code": "BMCS_VALUE_MISMATCH",
+      "reason_code": "BMCS_MEASUREMENT_SCALE_MISMATCH",
       "severity": "error",
       "source": "/contract/measurement/scale",
       "target": "/contract/measurement/scale"
@@ -59,10 +64,138 @@
     {
       "missing": "unknown",
       "operator": "context-compatible",
-      "reason_code": "BMCS_VALUE_MISMATCH",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_SPECIES_MISMATCH",
       "severity": "error",
       "source": "/contract/biological_context/species",
       "target": "/contract/biological_context/species"
+    },
+    {
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_RATE_BASIS_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/rate_basis",
+      "target": "/contract/measurement/rate_basis"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_TRANSFORM_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/transform",
+      "target": "/contract/measurement/transform"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_NORMALIZATION_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/normalization",
+      "target": "/contract/measurement/normalization"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_BASELINE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/baseline",
+      "target": "/contract/measurement/baseline"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_MEASUREMENT_AGGREGATION_MISMATCH",
+      "severity": "error",
+      "source": "/contract/measurement/aggregation",
+      "target": "/contract/measurement/aggregation"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/identifiers/namespace",
+      "target": "/contract/identifiers/namespace"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
+      "severity": "error",
+      "source": "/contract/identifiers/namespace_version",
+      "target": "/contract/identifiers/namespace_version"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_ORDERING_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/ordering",
+      "target": "/contract/representation/ordering"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_FEATURE_SPACE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/feature_space",
+      "target": "/contract/representation/feature_space"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_REFERENCE_ASSEMBLY_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/reference_assembly",
+      "target": "/contract/representation/reference_assembly"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_COORDINATE_SYSTEM_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/coordinate_system",
+      "target": "/contract/representation/coordinate_system"
+    },
+    {
+      "missing": "ignore",
+      "operator": "labels-equal",
+      "reason_code": "BMCS_DIMENSIONS_AXES_MISMATCH",
+      "severity": "error",
+      "source": "/contract/dimensions/axes",
+      "target": "/contract/dimensions/axes"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_LIFECYCLE_TIME_UNIT_MISMATCH",
+      "severity": "error",
+      "source": "/contract/lifecycle/time_unit",
+      "target": "/contract/lifecycle/time_unit"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_LIFECYCLE_TEMPORAL_MEANING_MISMATCH",
+      "severity": "error",
+      "source": "/contract/lifecycle/temporal_meaning",
+      "target": "/contract/lifecycle/temporal_meaning"
+    },
+    {
+      "missing": "ignore",
+      "operator": "equal",
+      "reason_code": "BMCS_ORIGIN_TYPE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/origin/type",
+      "target": "/contract/origin/type"
+    },
+    {
+      "missing": "ignore",
+      "operator": "context-compatible",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_COMPARTMENT_MISMATCH",
+      "severity": "error",
+      "source": "/contract/biological_context/compartment",
+      "target": "/contract/biological_context/compartment"
     }
   ],
   "compatibility_notes": "Two ports match only when every field the target port requires is satisfied. If required information is missing, the result is UNKNOWN. Any conversion between ports must be a declared, versioned transformation.",
@@ -70,7 +203,14 @@
   "domain": "ecology",
   "domain_label": "Ecology and communities",
   "extends": [],
-  "fixed": {},
+  "fixed": {
+    "measurement": {
+      "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate"
+    },
+    "semantic": {
+      "concept": "https://biosimulant.com/standards/model-compatibility/terms/ecology/birth-rate"
+    }
+  },
   "item_packs": [
     "semantic-core",
     "identifier-core",
@@ -89,44 +229,22 @@
       "level": "required",
       "path": "semantic.concept",
       "schema": {
-        "type": [
-          "string",
-          "number",
-          "integer",
-          "boolean",
-          "array",
-          "object",
-          "null"
-        ]
-      }
-    },
-    {
-      "level": "required",
-      "path": "semantic.subject",
-      "schema": {
-        "type": [
-          "string",
-          "number",
-          "integer",
-          "boolean",
-          "array",
-          "object",
-          "null"
-        ]
+        "const": "https://biosimulant.com/standards/model-compatibility/terms/ecology/birth-rate"
       }
     },
     {
       "level": "required",
       "path": "representation.kind",
       "schema": {
-        "type": [
-          "string",
-          "number",
-          "integer",
-          "boolean",
+        "enum": [
+          "scalar",
+          "dense_vector",
+          "sparse_vector",
+          "matrix",
+          "tensor",
           "array",
-          "object",
-          "null"
+          "record",
+          "table"
         ]
       }
     },
@@ -134,44 +252,30 @@
       "level": "required",
       "path": "measurement.quantity",
       "schema": {
-        "type": [
-          "string",
-          "number",
-          "integer",
-          "boolean",
-          "array",
-          "object",
-          "null"
-        ]
+        "const": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate"
       }
     },
     {
       "level": "required",
       "path": "measurement.unit",
       "schema": {
-        "type": [
-          "string",
-          "number",
-          "integer",
-          "boolean",
-          "array",
-          "object",
-          "null"
-        ]
+        "maxLength": 128,
+        "minLength": 1,
+        "type": "string"
       }
     },
     {
       "level": "required",
       "path": "measurement.scale",
       "schema": {
-        "type": [
-          "string",
-          "number",
-          "integer",
-          "boolean",
-          "array",
-          "object",
-          "null"
+        "enum": [
+          "nominal",
+          "ordinal",
+          "interval",
+          "ratio",
+          "proportion",
+          "probability",
+          "count"
         ]
       }
     },
@@ -179,15 +283,24 @@
       "level": "required",
       "path": "biological_context.species",
       "schema": {
-        "type": [
-          "string",
-          "number",
-          "integer",
-          "boolean",
-          "array",
-          "object",
-          "null"
-        ]
+        "anyOf": [
+          {
+            "const": "any"
+          },
+          {
+            "pattern": "^NCBITaxon:[1-9][0-9]*$"
+          }
+        ],
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "measurement.rate_basis",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
       }
     }
   ],
@@ -204,8 +317,39 @@
     "sources": [],
     "status": "candidate"
   },
+  "review_questions": [
+    "Does the proposed concept identify Birth Rate narrowly enough to prevent a different scientific quantity from matching?",
+    "Are the allowed representations complete, and can any two allowed representations connect without an explicit adapter?",
+    "Which authoritative standards, ontologies, databases or primary publications support each required field and comparison rule?",
+    "Which missing value must return UNKNOWN, and which known contradiction must return INCOMPATIBLE?",
+    "Are the quantity, unit, scale, normalization, baseline and endpoint definitions sufficient for this measurement?",
+    "Does this profile need a versioned identifier namespace or an ordered feature universe?",
+    "Should axes, labels, feature order, coordinates or artifact schema be required for non-scalar values?",
+    "Which species, tissue, cell type, disease, intervention, assay, cohort or compartment fields are required or conditional?",
+    "Are event/state meaning, observation time, sampling, window, freshness and interpolation rules complete?",
+    "What uses and scientific claims must this profile explicitly exclude?"
+  ],
   "scientific_claim": "This profile checks whether two model interfaces fit together. It doesn't show that a model is scientifically valid or clinically safe.",
   "stage": "WAVE_2",
+  "technical_pre_review": {
+    "checks": [
+      "profile-definition-schema",
+      "typed-required-values",
+      "profile-specific-concept",
+      "representation-applicability",
+      "stable-field-level-reason-codes",
+      "positive-fixture",
+      "missing-required-fixture",
+      "invalid-value-fixture",
+      "direct-compatible-fixture",
+      "incompatible-fixture",
+      "unknown-fixture",
+      "python-typescript-parity"
+    ],
+    "method_version": "1.0",
+    "scientific_signoff_required": true,
+    "status": "ready-for-external-review"
+  },
   "transformation_policy": {
     "inference": "approval",
     "lossless": "allow",

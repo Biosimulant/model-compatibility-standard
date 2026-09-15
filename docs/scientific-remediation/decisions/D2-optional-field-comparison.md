@@ -1,6 +1,6 @@
 # D2. Comparing fields both ports declare
 
-**Status:** Open. **Owner:** unassigned. **Decided:** — . **Approved by:** —
+**Status:** Decided: option (b). Implemented. **Owner:** unassigned. **Decided:** — . **Approved by:** —
 
 ## Question
 
@@ -58,4 +58,11 @@ Settles BMCS-SCI-001, 002, 003, 014 and 015.
 
 ## Decision
 
-_To be recorded._
+**Adopted: option (b), compare a defined list when both ports declare it.** Implemented as
+`COMPARED_WHEN_BOTH_DECLARE` in `scripts/build_standard.py`: every profile now emits rules with
+`missing: "ignore"` for unit, scale, transform, quantity, normalization, baseline, aggregation,
+identifier namespace and version, ordering, feature space, reference assembly, coordinate system,
+axes, time unit, temporal meaning, origin type and compartment.
+
+The published item semantics and the behaviour now agree. Settles BMCS-SCI-001, 002, 003, 014
+and 015.
