@@ -153,8 +153,21 @@ test("ontology and mapping operators require exact digest-pinned snapshots", () 
   const mappingUnsigned = { ref: "https://biosimulant.com/snapshots/test-mapping/v1", mappings: [{ source: "A", target: "1" }, { source: "B", target: "2" }] };
   const mapping = { ...mappingUnsigned, sha256: digest(mappingUnsigned) };
   const mappingParameters = { snapshot_ref: mapping.ref, snapshot_sha256: mapping.sha256 };
-  assert.equal(ruleReport("mapping-total", ["A", "B"], ["1", "2"], { parameters: mappingParameters, mappings: [mapping] }).status, "DIRECT_COMPATIBLE");
-  assert.equal(ruleReport("mapping-bijective", ["A", "B"], ["1", "2"], { parameters: mappingParameters, mappings: [mapping] }).status, "DIRECT_COMPATIBLE");
+  // A pinned mapping that is total and bijective loses nothing, but translating identifiers is still
+  // a conversion rather than a direct match (decision D7).
+  assert.equal(ruleReport("mapping-total", ["A", "B"], ["1", "2"], { parameters: mappingParameters, mappings: [mapping] }).status, "LOSSLESS_CONVERSION_AVAILABLE");
+  assert.equal(ruleReport("mapping-bijective", ["A", "B"], ["1", "2"], { parameters: mappingParameters, mappings: [mapping] }).status, "LOSSLESS_CONVERSION_AVAILABLE");
+
+  // A mapping that is total but merges two identifiers onto one is not reversible, so it needs
+  // approval rather than passing as a lossless translation.
+  const mergingUnsigned = { ref: "https://biosimulant.com/snapshots/test-merge/v1", mappings: [{ source: "A", target: "1" }, { source: "B", target: "1" }] };
+  const merging = { ...mergingUnsigned, sha256: digest(mergingUnsigned) };
+  const mergeParameters = { snapshot_ref: merging.ref, snapshot_sha256: merging.sha256 };
+  const merged = ruleReport("mapping-total", ["A", "B"], ["1"], { parameters: mergeParameters, mappings: [merging] });
+  assert.equal(merged.status, "LOSSY_CONVERSION_REQUIRES_APPROVAL");
+  assert.equal(merged.policy_decision, "APPROVAL_REQUIRED");
+  // The same merging snapshot cannot satisfy a bijective requirement at all.
+  assert.equal(ruleReport("mapping-bijective", ["A", "B"], ["1"], { parameters: mergeParameters, mappings: [merging] }).status, "INCOMPATIBLE");
 });
 
 function adapter(ref, source, target, loss = "none") {
@@ -220,4 +233,20 @@ test("resource limits fail closed with a stable reason code", () => {
   const real = getBundle();
   const limited = new Bundle(real.root, { ...real.limits, maxDepth: 2 });
   assert.deepEqual(validateContract({ semantic: { ontology_terms: [{ uri: "x" }] } }, [], limited).map((item) => item.reason_code), ["BMCS_RESOURCE_LIMIT_EXCEEDED"]);
+});
+
+
+test("the term registry is published and version independent", () => {
+  const bundle = getBundle();
+  const registry = bundle.readJson("catalogue/terms.json");
+  assert.equal(registry.count, 650);
+  assert.equal(registry.terms.length, 650);
+  const ids = registry.terms.map((term) => term.id);
+  assert.equal(new Set(ids).size, 650);
+  // A term must outlive the profile version that minted it, or a v0.2 profile would report every
+  // v0.1 port as incompatible even where the meaning is unchanged (decision D3).
+  assert.deepEqual(ids.filter((id) => id.includes("/v0.")), []);
+  assert.ok(registry.terms.every((term) => term.label && term.definition));
+  // External terms are an honest absence until a reviewer decides per profile (erratum E3).
+  assert.ok(registry.terms.every((term) => Array.isArray(term.external_terms) && term.external_terms.length === 0));
 });

@@ -1,5 +1,5 @@
 {
-  "bundle_sha256": "sha256:896bc1092bc596bcb17a6e5882a5bca551094b6a4dac69c3755738ca3d757104",
+  "bundle_sha256": "sha256:706aec619f74fd2bc5b47ee495af6276d2719da442ca15652a26ea037ae19e23",
   "canonicalization": "RFC8785",
   "counts": {
     "item_definitions": 266,
@@ -26,6 +26,11 @@
       "path": "catalogue/items.json",
       "sha256": "sha256:9101c0171389bdd8ae2579964840361c47046e58a229ae09a75f1dc5edeb355b",
       "size_bytes": 137537
+    },
+    {
+      "path": "catalogue/terms.json",
+      "sha256": "sha256:a543cd8e41e407de6358d65c7a9c775bbde493db5a6867dec5906c352d5796c1",
+      "size_bytes": 506163
     },
     {
       "path": "examples/compatible-model.yaml",

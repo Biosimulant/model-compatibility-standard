@@ -1,6 +1,6 @@
 # D3. Concept identity and external meaning
 
-**Status:** Open. **Owner:** unassigned. **Decided:** — . **Approved by:** —
+**Status:** Decided in part: option (b). Terms minted and published. **Owner:** unassigned. **Decided:** — . **Approved by:** —
 
 ## Question
 
@@ -56,4 +56,34 @@ its v0.2 successor must not be INCOMPATIBLE; a missing ontology snapshot must re
 
 ## Decision
 
-_To be recorded._
+**Adopted: option (b), a version-independent Biosimulant term with external terms attached where one
+exists.** The minting and the registry are implemented; deciding which profiles have a maintained
+external term is not, and stays per-profile review.
+
+Implemented:
+
+- The concept IRI is minted outside the versioned profile document, as
+  `.../terms/<domain>/<name>`. It no longer carries `/v0.1`, so a v0.2 profile does not report every
+  v0.1 port as incompatible when the meaning has not changed.
+- `spec/v0.1/catalogue/terms.json` publishes all 650 terms with a label, a definition, the domain,
+  the profile that mints the term, the profile version it was minted in, and a `term_version` that
+  moves independently of the profile version. Label and definition are the profile's own reviewed
+  text rather than anything newly invented.
+- The generator now rejects a `semantic.concept` that embeds a profile version. That check runs over
+  every profile through `internal_quality_errors`, which the bundle tests assert is empty, so the
+  version-independence this decision turns on cannot regress silently.
+
+The tautology this record opens with is unchanged and deliberate: validation fixes both contracts to
+the same constant, so the rule cannot fail between two valid contracts of the same profile. What the
+change buys is that the constant now means something stable across versions, and that there is a
+registry where a term's meaning can be stated, versioned and pointed at.
+
+**Still open, and deliberately so.** `semantic.ontology_terms` is not required. The pre-review's
+blanket "require it for all 650" was withdrawn as erratum E3, and the recommendation here is
+explicit that it applies only "where a maintained external term exists at the right granularity,
+decided per profile in the pilot". Every term therefore ships with an empty `external_terms`, which
+is an honest absence rather than a placeholder. Comparison by `term-equivalent` or `term-subsumes`
+already returns UNKNOWN without a pinned snapshot, so the engine behaves correctly in the meantime.
+
+The registry's ownership and deprecation policy, and whether terms resolve at a URL as well as in
+the bundle, are governance questions this record cannot answer on its own.

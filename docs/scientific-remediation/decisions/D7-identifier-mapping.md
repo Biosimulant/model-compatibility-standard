@@ -1,6 +1,6 @@
 # D7. Identifier mapping and loss
 
-**Status:** Open. **Owner:** unassigned. **Decided:** — . **Approved by:** —
+**Status:** Decided in part: option (c). Mapping loss implemented. **Owner:** unassigned. **Decided:** — . **Approved by:** —
 
 ## Question
 
@@ -56,4 +56,41 @@ be lossless; a partial mapping must require approval.
 
 ## Decision
 
-_To be recorded._
+**Adopted: option (c), decide from the mapping's declared properties.** The core is implemented.
+
+The operators already told total from bijective correctly; what they threw away was the answer.
+Both engines returned a bare boolean, so a pinned mapping surfaced as `DIRECT_COMPATIBLE` and a
+merging mapping was indistinguishable from a reversible one — the "the mapping is invisible" problem
+this decision was written about. They now report loss, and all four outcomes are pinned in both
+languages:
+
+| Mapping | Status | Policy |
+|---|---|---|
+| Pinned, total, bijective | `LOSSLESS_CONVERSION_AVAILABLE` | ALLOW |
+| Pinned, total, merges identifiers | `LOSSY_CONVERSION_REQUIRES_APPROVAL` | APPROVAL_REQUIRED |
+| Pinned, not total over the declared universe | `INCOMPATIBLE` | BLOCK |
+| No snapshot supplied | `UNKNOWN` | BLOCK |
+
+A bijective translation is lossless but it is still a *conversion*, not a direct match, which is why
+it reports `LOSSLESS_CONVERSION_AVAILABLE` rather than `DIRECT_COMPATIBLE`. This settles
+BMCS-SCI-002. The coverage lives in the operator tests of both languages rather than in a profile
+fixture, because a `compare` case in the scientific-checks file cannot carry a pinned snapshot.
+
+**Deferred: a namespace version change as a mapping.** The recommendation above says Ensembl 110 to
+114 is itself a mapping, and the reasoning is right — identifiers are retired and merged between
+releases, so calling two releases a flat contradiction asserts knowledge nobody has. It is not
+implemented, for a concrete reason: `mapping-total` requires list-valued feature universes and
+returns false immediately for anything else, while `identifiers.namespace_version` is a scalar
+string. Reusing it would give UNKNOWN when no snapshot exists, which is right by accident, and
+INCOMPATIBLE whenever a snapshot *is* pinned, which is wrong. Doing it properly needs a new operator
+and a release-transition snapshot format that does not exist yet. The change would also reach
+further than it looks: `identifiers.namespace` and `namespace_version` each carry 650 comparison
+rules, not the ~100 that require them, because `COMPARED_WHEN_BOTH_DECLARE` emits them everywhere,
+and roughly 101 generated fixtures would move from `comparison-incompatible-*` to
+`comparison-unknown-no-snapshot-*`.
+
+**Still open, and per-profile.** `identifiers.mapping_refs[]` becoming required wherever a mapping is
+applied stays review work: `mapping_refs`, `unmapped_handling` and `ambiguity_handling` are each
+required by exactly 2 of the 650 profiles today, and deciding which profiles apply a mapping is a
+judgement about each profile's data, not a rule a generator can derive. Publishing and pinning the
+mappings themselves is the same snapshot-ownership question D3, D4 and D5 all wait on.

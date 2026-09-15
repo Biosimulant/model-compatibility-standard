@@ -693,7 +693,13 @@ function compareValue(rule: JsonObject, source: JsonValue, target: JsonValue, bu
   if (operator === "mapping-total" || operator === "mapping-bijective") {
     const snapshot = snapshotFor(rule, snapshots.mappings);
     if (!snapshot) return [false, "unsupported"];
-    return [mappingMatches(source, target, snapshot, operator === "mapping-bijective"), undefined];
+    const bijective = operator === "mapping-bijective";
+    if (!mappingMatches(source, target, snapshot, bijective)) return [false, undefined];
+    // Decision D7. A pinned mapping that is total over the declared universe and bijective on it
+    // loses nothing, but it is still a conversion rather than a direct match. A mapping that is
+    // total without being bijective merges identifiers, which needs approval.
+    if (mappingMatches(source, target, snapshot, true)) return [true, "none"];
+    return [true, "identifier-merge"];
   }
   return [false, "unsupported"];
 }

@@ -1,6 +1,6 @@
 # D4. Subject and biological-context vocabulary
 
-**Status:** Open. **Owner:** unassigned. **Decided:** — . **Approved by:** —
+**Status:** Decided in part: option (b). Demotion implemented. **Owner:** unassigned. **Decided:** — . **Approved by:** —
 
 ## Question
 
@@ -56,4 +56,29 @@ term must satisfy a broader requirement; a missing snapshot must return UNKNOWN.
 
 ## Decision
 
-_To be recorded._
+**Adopted: option (b), CURIEs compared by subsumption against pinned snapshots — with the second
+constraint implemented now and the first waiting on snapshots.**
+
+Implemented: `semantic.subject` is no longer a required, compared field. It was required in all 650
+profiles as free text up to 4096 characters and compared with string equality, which failed in both
+directions at once — `blood_plasma` and `UBERON:0001969` compared unequal though they name the same
+specimen, while the generated placeholder `biological_sample` matched itself across plasma, CSF and
+tumour biopsy. Leaving a required field whose comparison is wrong is worse than not gating on it, so
+it is now declared-but-not-gating (`RETIRED_REQUIRED_ITEMS`) until it is term-bound.
+
+The related half of this decision landed under D5: a source declaring `any` or `unspecified` against
+a specific target is UNKNOWN rather than a contradiction, and each domain's generated example
+organism is now plausible for that domain instead of uniformly human.
+
+**Not implemented, and gated on the same snapshot question as D3, D5 and D7.** Subsumption against
+pinned UBERON, CL, OBI and MONDO snapshots needs those snapshots to be pinned, distributed and
+owned, and the licensing and ownership of that pinning is the sub-question this record opens with.
+Until then a differing subject is absent evidence, not a contradiction, which is what the demotion
+above delivers.
+
+**Per-profile, and therefore review work.** Which profiles should gate on the sampled entity at all
+is the first constraint in the recommendation — "only where the sampled entity changes the meaning
+of the value, decided per profile, not per domain". Deriving that from a profile's name or domain is
+the heuristic D9 abolished, so it belongs to the domain review waves. The same applies to replacing
+the placeholder subjects across 650 positive fixtures with real terms, and to whether core, chemical
+and simulation profiles drop the subject requirement entirely.

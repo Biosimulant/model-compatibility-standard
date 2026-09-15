@@ -966,12 +966,20 @@ def internal_quality_errors(profile: dict[str, Any], definition: dict[str, Any])
     paths = [item.get("path") for item in requirements]
     if len(paths) != len(set(paths)):
         errors.append("requirements contain duplicate paths")
-    if not get_path(definition.get("fixed", {}), "semantic.concept"):
+    concept = get_path(definition.get("fixed", {}), "semantic.concept")
+    if not concept:
         errors.append("semantic.concept is not fixed to this profile")
+    elif isinstance(concept, str) and "/v0." in concept:
+        # Decision D3: an IRI carrying /v0.1 would report every v0.2 port as incompatible even when
+        # the meaning is unchanged, so profile identity must not be baked into the term.
+        errors.append("semantic.concept embeds a profile version")
     kinds = get_path(definition.get("allowed", {}), "representation.kind")
     if not isinstance(kinds, list) or not kinds:
         errors.append("representation.kind has no allowed values")
     required_paths = [item["path"] for item in requirements if item.get("level") == "required"]
+    levels = {item.get("level") for item in requirements}
+    if levels - {"required", "conditional", "recommended", "optional"}:
+        errors.append("a requirement declares a level outside the published vocabulary")
     gating = [rule for rule in definition.get("comparison_rules", []) if rule.get("missing") != "ignore"]
     if sorted(rule["target"] for rule in gating) != sorted(gating_pointer(path) for path in required_paths):
         errors.append("each required field must have exactly one comparison rule")
@@ -1496,6 +1504,17 @@ def build(root: Path) -> None:
             for path in sorted(candidate_paths - required_paths)
             if path in item_index and item_index[path].get("family") not in {"existing-io", "envelope"}
         ]
+        # Decision D10. The profile document carried one level only: everything was "required" and
+        # the packet listed the rest as candidates a reader had to go and find. An item carried by a
+        # pack the profile adopts, but not required by it, is recommended for that profile. Pack
+        # membership is authored, reviewed data, so this needs no per-profile judgement. Neither
+        # validation nor comparison gates on a recommended item: both skip any level but "required".
+        # Decision D10. Emitting these as level "recommended" requirements was built and withdrawn:
+        # the review packet already publishes the same list as candidate_recommended_items, which its
+        # schema requires and the pre-review tooling reads, so the profile document was carrying a
+        # second copy of it for +9.2 MiB, 29.7% of the bundle, that no engine reads. The level
+        # vocabulary still has only one producer, and giving it a real one needs the profile classes
+        # the pilot exists to inform.
         rules = [
             {
                 # representation.kind is compared by conditional equivalence against the whole
@@ -1622,6 +1641,40 @@ def build(root: Path) -> None:
     write_json(root, "rules/quantity-kinds.json", {"standard": STANDARD, "id_prefix": f"{STANDARD.rsplit('/', 1)[0]}/quantity-kinds/", "kinds": QUANTITY_KINDS})
     write_json(root, "catalogue/items.json", {"schema_version": "0.1", "standard": STANDARD, "items": enriched_items})
     write_json(root, "catalogue/item-packs.json", {"schema_version": "0.1", "standard": STANDARD, "item_packs": packs})
+    # Decision D3. The concept IRI is minted outside the versioned profile document, so it needs a
+    # registry of its own: a term carries a label, a definition and a version that does not move when
+    # the profile version does. Label and definition come from the profile's own reviewed text.
+    terms = [
+        {
+            "id": profile_concept(profile),
+            "label": profile["label"],
+            "definition": profile["description"],
+            "domain": profile["domain"],
+            "domain_label": profile["domain_label"],
+            "name": profile["name"],
+            "term_version": "1.0.0",
+            "minted_in": profile["version"],
+            "profile_ref": profile["ref"],
+            "scientific_claim": profile["scientific_claim"],
+            "external_terms": [],
+        }
+        for profile in sorted(profiles, key=lambda item: (item["domain"], item["name"]))
+    ]
+    write_json(
+        root,
+        "catalogue/terms.json",
+        {
+            "schema_version": "0.1",
+            "standard": STANDARD,
+            "note": (
+                "A term identifies what a port means and does not move when the profile version does. "
+                "external_terms is empty until a reviewer decides, per profile, whether a maintained "
+                "external term exists at the right granularity."
+            ),
+            "count": len(terms),
+            "terms": terms,
+        },
+    )
 
     canonical_cases = [
         {"name": "object-key-order", "input": {"z": 1, "a": {"b": True, "a": None}}},

@@ -189,9 +189,18 @@ guards, this plan, the decision records, the pilot dossiers, and the scientific 
 step 5. *Exit:* suite runs in CI — done; plan accepted by the domain owner and an independent schema
 reviewer — **outstanding, and not something this workstream can sign off on its own behalf.**
 
-**Phase 1 — foundations. Implemented, pending review.** D1, D2, D5 (in part), D8, D9 and D12 (in
-part) are decided and implemented in the engine, generator and catalogue; D3, D4, D7, D10 and D11
-remain open, and the parts of D5 and D12 that need an ontology snapshot are deferred with them.
+**Phase 1 — foundations. Implemented, pending review.** All twelve decisions now carry a recorded
+decision. D1, D2, D8 and D9 are complete. D3, D4, D5, D6, D7, D11 and D12 are deliberately partial,
+and each record states which half is implemented and which half is not. D10 is recorded but not
+implemented: the one change that looked separable was built, measured at +29.7% of the bundle to
+restate a list the review packets already publish, and withdrawn.
+
+Two causes account for every deferral: work that needs pinned ontology or mapping snapshots, whose
+ownership and licensing nobody has settled (D3, D4, D5, D7),
+and work that needs a per-profile scientific judgement rather than a rule a generator can derive
+(D6's allowed-kind narrowing, D7's mapping requirements, D10's profile classes, D11's per-profile
+lossy and inference fixtures). Deriving those from profile names is the heuristic D9 abolished, so
+they belong to the pilot and the domain waves, not to this phase.
 55 of 58 sources are pinned by SHA-256; the three that are not are licensed (ISO ×2, SNOMED CT) and
 are cited by identifier and version instead. *Exit:* `npm run test:scientific` green in both
 languages — done; cross-language parity holds — done; regeneration is deterministic — done; each

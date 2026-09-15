@@ -73,3 +73,20 @@ def test_bundle_integrity_detects_tampering(tmp_path):
     target.write_bytes(target.read_bytes() + b"\n")
     with pytest.raises(ValueError, match="size does not match"):
         Bundle(root).verify_integrity()
+
+
+def test_term_registry_is_published_and_version_independent():
+    from biosimulant_model_compatibility_standard import get_bundle
+
+    bundle = get_bundle()
+    registry = bundle.read_json("catalogue/terms.json")
+    assert registry["count"] == 650
+    assert len(registry["terms"]) == 650
+    ids = [term["id"] for term in registry["terms"]]
+    assert len(set(ids)) == 650
+    # A term must outlive the profile version that minted it, or a v0.2 profile would report every
+    # v0.1 port as incompatible even where the meaning is unchanged (decision D3).
+    assert [term for term in ids if "/v0." in term] == []
+    assert all(term["label"] and term["definition"] for term in registry["terms"])
+    # External terms are an honest absence until a reviewer decides per profile (erratum E3).
+    assert all(term["external_terms"] == [] for term in registry["terms"])

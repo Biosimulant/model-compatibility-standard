@@ -256,7 +256,15 @@ def _evaluate(
         snapshot = _snapshot_for(rule, mapping_snapshots)
         if snapshot is None:
             return False, "unsupported"
-        return _mapping_matches(source, target, snapshot, bijective=operator == "mapping-bijective"), None
+        bijective = operator == "mapping-bijective"
+        if not _mapping_matches(source, target, snapshot, bijective=bijective):
+            return False, None
+        # Decision D7. A pinned mapping that is total over the declared universe and bijective on it
+        # loses nothing, but it is still a conversion rather than a direct match. A mapping that is
+        # total without being bijective merges identifiers, which needs approval.
+        if _mapping_matches(source, target, snapshot, bijective=True):
+            return True, "none"
+        return True, "identifier-merge"
     return False, "unsupported"
 
 

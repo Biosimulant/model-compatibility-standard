@@ -140,5 +140,21 @@ def test_pinned_ontology_and_mapping_snapshots_are_enforced():
     }
     mapping = {**mapping_unsigned, "sha256": digest(mapping_unsigned)}
     parameters = {"snapshot_ref": mapping["ref"], "snapshot_sha256": mapping["sha256"]}
-    assert _rule_report("mapping-total", ["A", "B"], ["1", "2"], parameters=parameters, mappings=[mapping])["status"] == "DIRECT_COMPATIBLE"
-    assert _rule_report("mapping-bijective", ["A", "B"], ["1", "2"], parameters=parameters, mappings=[mapping])["status"] == "DIRECT_COMPATIBLE"
+    # A pinned mapping that is total and bijective loses nothing, but translating identifiers is
+    # still a conversion rather than a direct match (decision D7).
+    assert _rule_report("mapping-total", ["A", "B"], ["1", "2"], parameters=parameters, mappings=[mapping])["status"] == "LOSSLESS_CONVERSION_AVAILABLE"
+    assert _rule_report("mapping-bijective", ["A", "B"], ["1", "2"], parameters=parameters, mappings=[mapping])["status"] == "LOSSLESS_CONVERSION_AVAILABLE"
+
+    # A mapping that is total but merges two identifiers onto one is not reversible, so it needs
+    # approval rather than passing as a lossless translation.
+    merging_unsigned = {
+        "ref": "https://biosimulant.com/snapshots/test-merge/v1",
+        "mappings": [{"source": "A", "target": "1"}, {"source": "B", "target": "1"}],
+    }
+    merging = {**merging_unsigned, "sha256": digest(merging_unsigned)}
+    merge_parameters = {"snapshot_ref": merging["ref"], "snapshot_sha256": merging["sha256"]}
+    merged = _rule_report("mapping-total", ["A", "B"], ["1"], parameters=merge_parameters, mappings=[merging])
+    assert merged["status"] == "LOSSY_CONVERSION_REQUIRES_APPROVAL"
+    assert merged["policy_decision"] == "APPROVAL_REQUIRED"
+    # The same merging snapshot cannot satisfy a bijective requirement at all.
+    assert _rule_report("mapping-bijective", ["A", "B"], ["1"], parameters=merge_parameters, mappings=[merging])["status"] == "INCOMPATIBLE"
