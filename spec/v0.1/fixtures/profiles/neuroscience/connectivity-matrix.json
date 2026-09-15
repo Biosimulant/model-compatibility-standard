@@ -7,8 +7,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -33,8 +39,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -58,8 +70,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -81,8 +99,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -106,8 +130,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -136,8 +166,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -158,8 +194,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -183,8 +225,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -203,8 +251,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -228,8 +282,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -250,8 +310,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -271,8 +337,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -297,8 +369,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -327,8 +405,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -349,8 +433,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -374,8 +464,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -395,8 +491,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -420,8 +522,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -442,8 +550,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -514,8 +628,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region",
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            },
             "different"
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
@@ -537,8 +657,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -580,8 +706,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -605,8 +737,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -646,8 +784,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -672,8 +816,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -702,8 +852,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -724,8 +880,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -749,8 +911,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -770,8 +938,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -795,8 +969,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -817,8 +997,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -837,8 +1023,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -864,8 +1056,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -894,8 +1092,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -916,8 +1120,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -939,8 +1149,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -961,8 +1177,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -986,8 +1208,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1006,8 +1234,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1029,8 +1263,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1055,8 +1295,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1085,8 +1331,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1107,8 +1359,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1132,8 +1390,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1153,8 +1417,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1178,8 +1448,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1200,8 +1476,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1222,8 +1504,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1248,8 +1536,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1278,8 +1572,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1300,8 +1600,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1325,8 +1631,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1346,8 +1658,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1371,8 +1689,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1393,8 +1717,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1415,8 +1745,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ]
         },
         "representation": {
@@ -1441,8 +1777,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": 7
         },
@@ -1471,8 +1813,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref-different"
         },
@@ -1493,8 +1841,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1518,8 +1872,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ]
         },
         "representation": {
@@ -1539,8 +1899,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1564,8 +1930,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1586,8 +1958,14 @@
         },
         "dimensions": {
           "axes": [
-            "region",
-            "region"
+            {
+              "meaning": "Source region or neuron",
+              "name": "region"
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": "region"
+            }
           ]
         },
         "representation": {
@@ -1600,6 +1978,70 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/neuroscience/connectivity-matrix"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Source region or neuron"
+            },
+            {
+              "meaning": "Target region or neuron"
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "representation": {
+          "directed": true,
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "weight_semantics": "example-weight-semantics"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/neuroscience/connectivity-matrix"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Source region or neuron",
+              "name": 7
+            },
+            {
+              "meaning": "Target region or neuron",
+              "name": 7
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "representation": {
+          "directed": true,
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "weight_semantics": "example-weight-semantics"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/neuroscience/connectivity-matrix"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/connectivity-matrix/v0.1"

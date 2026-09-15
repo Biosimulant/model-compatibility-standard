@@ -4,7 +4,9 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -23,7 +25,9 @@
       "source": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "origin": {
@@ -41,7 +45,9 @@
       "target": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -57,7 +63,9 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -75,7 +83,9 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -98,7 +108,9 @@
       "source": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -113,7 +125,9 @@
       "target": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -131,7 +145,9 @@
       "source": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -144,7 +160,9 @@
       "target": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -162,7 +180,9 @@
       "source": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -177,7 +197,9 @@
       "target": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -191,7 +213,9 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -210,7 +234,9 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -233,7 +259,9 @@
       "source": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -248,7 +276,9 @@
       "target": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -266,7 +296,9 @@
       "source": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -280,7 +312,9 @@
       "target": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -298,7 +332,9 @@
       "source": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -313,7 +349,9 @@
       "target": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -365,7 +403,9 @@
       "source": {
         "dimensions": {
           "axes": [
-            "axis",
+            {
+              "name": "axis"
+            },
             "different"
           ]
         },
@@ -381,7 +421,9 @@
       "target": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -410,7 +452,9 @@
       "target": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -428,7 +472,9 @@
       "source": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -455,7 +501,9 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -474,7 +522,9 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -497,7 +547,9 @@
       "source": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -512,7 +564,9 @@
       "target": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -530,7 +584,9 @@
       "source": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -544,7 +600,9 @@
       "target": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -562,7 +620,9 @@
       "source": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {
@@ -577,7 +637,9 @@
       "target": {
         "dimensions": {
           "axes": [
-            "axis"
+            {
+              "name": "axis"
+            }
           ]
         },
         "representation": {

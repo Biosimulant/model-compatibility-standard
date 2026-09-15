@@ -4,8 +4,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -33,8 +39,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -59,8 +71,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -85,8 +103,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -113,8 +137,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -146,8 +176,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -171,8 +207,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -199,8 +241,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -222,8 +270,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -250,8 +304,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -275,8 +335,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -299,8 +365,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -328,8 +400,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -361,8 +439,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -386,8 +470,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -414,8 +504,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -438,8 +534,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -466,8 +568,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -491,8 +599,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -572,8 +686,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable",
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            },
             "different"
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
@@ -598,8 +718,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -647,8 +773,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -675,8 +807,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -722,8 +860,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -751,8 +895,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -784,8 +934,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -809,8 +965,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -837,8 +999,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -861,8 +1029,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -889,8 +1063,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -914,8 +1094,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -939,8 +1125,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -968,8 +1160,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": 7,
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1001,8 +1199,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref-different",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1026,8 +1230,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1054,8 +1264,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -1078,8 +1294,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1106,8 +1328,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1131,8 +1359,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -1156,8 +1390,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1185,8 +1425,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": 7
@@ -1218,8 +1464,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000-different"
@@ -1243,8 +1495,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1271,8 +1529,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1295,8 +1559,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1323,8 +1593,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1348,8 +1624,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1373,8 +1655,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1402,8 +1690,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1435,8 +1729,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1460,8 +1760,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1488,8 +1794,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1512,8 +1824,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1540,8 +1858,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1565,8 +1889,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1590,8 +1920,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1619,8 +1955,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1652,8 +1994,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1677,8 +2025,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1705,8 +2059,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1729,8 +2089,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1757,8 +2123,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1782,8 +2154,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1807,8 +2185,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1835,8 +2219,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1868,8 +2258,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1893,8 +2289,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1921,8 +2323,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1944,8 +2352,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1972,8 +2386,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1997,8 +2417,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "time",
-            "state_variable"
+            {
+              "meaning": "Simulated time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": "state_variable"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -2016,6 +2442,76 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/state-trajectory"
         }
       }
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Simulated time point"
+            },
+            {
+              "meaning": "One state variable, with its own unit"
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "lifecycle": {
+          "time_origin": "example-time-origin",
+          "time_unit": "example-time-unit"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/state-trajectory"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Simulated time point",
+              "name": 7
+            },
+            {
+              "meaning": "One state variable, with its own unit",
+              "name": 7
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "lifecycle": {
+          "time_origin": "example-time-origin",
+          "time_unit": "example-time-unit"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/state-trajectory"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/simulation/state-trajectory/v0.1"

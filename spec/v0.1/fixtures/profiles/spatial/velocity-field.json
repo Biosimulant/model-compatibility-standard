@@ -7,9 +7,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -32,9 +41,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -56,9 +74,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -78,9 +105,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -102,9 +138,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -131,9 +176,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -152,9 +206,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -176,9 +239,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -195,9 +267,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -219,9 +300,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -240,9 +330,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -260,9 +359,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -285,9 +393,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -314,9 +431,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -335,9 +461,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -359,9 +494,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -379,9 +523,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -403,9 +556,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -424,9 +586,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -491,9 +662,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component",
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            },
             "different"
           ],
           "pixel_spacing": "example-pixel-spacing"
@@ -513,9 +693,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -553,9 +742,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -577,9 +775,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -615,9 +822,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -640,9 +856,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -669,9 +894,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -690,9 +924,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -714,9 +957,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -734,9 +986,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -758,9 +1019,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -779,9 +1049,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -798,9 +1077,18 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -824,9 +1112,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -853,9 +1150,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -874,9 +1180,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -896,9 +1211,18 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -917,9 +1241,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -941,9 +1274,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -960,9 +1302,18 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -982,9 +1333,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ]
         },
         "representation": {
@@ -1007,9 +1367,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": 7
         },
@@ -1036,9 +1405,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing-different"
         },
@@ -1057,9 +1435,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -1081,9 +1468,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ]
         },
         "representation": {
@@ -1101,9 +1497,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -1125,9 +1530,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -1146,9 +1560,18 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
-            "component"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": "component"
+            }
           ]
         },
         "representation": {
@@ -1159,6 +1582,73 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/spatial/velocity-field"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "First spatial axis"
+            },
+            {
+              "meaning": "Second spatial axis"
+            },
+            {
+              "meaning": "Vector component of the velocity"
+            }
+          ],
+          "pixel_spacing": "example-pixel-spacing"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/spatial/velocity-field"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "First spatial axis",
+              "name": 7
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": 7
+            },
+            {
+              "meaning": "Vector component of the velocity",
+              "name": 7
+            }
+          ],
+          "pixel_spacing": "example-pixel-spacing"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/spatial/velocity-field"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/velocity-field/v0.1"

@@ -7,8 +7,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -34,8 +40,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -60,8 +72,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -84,8 +102,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -110,8 +134,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -141,8 +171,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -164,8 +200,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -190,8 +232,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -211,8 +259,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -237,8 +291,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -260,8 +320,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -282,8 +348,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -309,8 +381,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -340,8 +418,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -363,8 +447,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -389,8 +479,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -411,8 +507,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -437,8 +539,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -460,8 +568,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -535,8 +649,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature",
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            },
             "different"
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
@@ -559,8 +679,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -604,8 +730,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -630,8 +762,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -673,8 +811,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -700,8 +844,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -731,8 +881,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -754,8 +910,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -780,8 +942,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -802,8 +970,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -828,8 +1002,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -851,8 +1031,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -872,8 +1058,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -900,8 +1092,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -931,8 +1129,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -954,8 +1158,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -978,8 +1188,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1001,8 +1217,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1027,8 +1249,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1048,8 +1276,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1072,8 +1306,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1098,8 +1338,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1129,8 +1375,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1152,8 +1404,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1178,8 +1436,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1199,8 +1463,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1225,8 +1495,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1248,8 +1524,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1270,8 +1552,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "measurement": {
@@ -1297,8 +1585,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": 7
         },
@@ -1328,8 +1622,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref-different"
         },
@@ -1351,8 +1651,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1377,8 +1683,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "measurement": {
@@ -1399,8 +1711,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1425,8 +1743,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1448,8 +1772,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "measurement": {
@@ -1463,6 +1793,72 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/multiomics/normalized-feature-matrix"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One biological sample"
+            },
+            {
+              "meaning": "One measured feature"
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/multiomics/normalized-feature-matrix"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One biological sample",
+              "name": 7
+            },
+            {
+              "meaning": "One measured feature",
+              "name": 7
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "measurement": {
+          "normalization": "example-normalization"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/multiomics/normalized-feature-matrix"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/normalized-feature-matrix/v0.1"

@@ -7,7 +7,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -33,7 +36,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -58,7 +64,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -81,7 +90,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -106,7 +118,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -136,7 +151,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -158,7 +176,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -183,7 +204,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -203,7 +227,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -228,7 +255,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -250,7 +280,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -271,7 +304,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -297,7 +333,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -327,7 +366,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -349,7 +391,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -374,7 +419,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -395,7 +443,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -420,7 +471,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -442,7 +496,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -516,7 +573,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature",
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            },
             "different"
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
@@ -539,7 +599,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -583,7 +646,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -608,7 +674,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -650,7 +719,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -676,7 +748,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -706,7 +781,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -728,7 +806,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -753,7 +834,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -774,7 +858,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -799,7 +886,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -821,7 +911,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -841,7 +934,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -868,7 +964,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -898,7 +997,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -920,7 +1022,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -943,7 +1048,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -965,7 +1073,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -990,7 +1101,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1010,7 +1124,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1033,7 +1150,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ]
         },
         "measurement": {
@@ -1059,7 +1179,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": 7
         },
@@ -1089,7 +1212,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref-different"
         },
@@ -1111,7 +1237,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1136,7 +1265,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ]
         },
         "measurement": {
@@ -1157,7 +1289,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1182,7 +1317,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1204,7 +1342,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ]
         },
         "measurement": {
@@ -1226,7 +1367,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1251,7 +1395,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1281,7 +1428,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1303,7 +1453,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1328,7 +1481,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1348,7 +1504,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1373,7 +1532,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1395,7 +1557,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene or transcript",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1408,6 +1573,65 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/fold-change-vector"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One gene or transcript"
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "measurement": {
+          "baseline": "example-baseline"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/fold-change-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One gene or transcript",
+              "name": 7
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "measurement": {
+          "baseline": "example-baseline"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/fold-change-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/fold-change-vector/v0.1"

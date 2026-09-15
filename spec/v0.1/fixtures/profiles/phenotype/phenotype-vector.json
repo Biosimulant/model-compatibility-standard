@@ -7,7 +7,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -30,7 +33,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -52,7 +58,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -72,7 +81,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -94,7 +106,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -121,7 +136,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -140,7 +158,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -162,7 +183,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -179,7 +203,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -201,7 +228,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -220,7 +250,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -238,7 +271,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -261,7 +297,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -288,7 +327,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -307,7 +349,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -329,7 +374,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -347,7 +395,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -369,7 +420,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -388,7 +442,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -453,7 +510,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature",
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            },
             "different"
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
@@ -473,7 +533,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -511,7 +574,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -533,7 +599,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -569,7 +638,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -592,7 +664,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -619,7 +694,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -638,7 +716,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -660,7 +741,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -678,7 +762,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -700,7 +787,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -719,7 +809,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -736,7 +829,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -760,7 +856,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -787,7 +886,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -806,7 +908,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -826,7 +931,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -845,7 +953,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -867,7 +978,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -884,7 +998,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -904,7 +1021,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -927,7 +1047,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": 7
         },
@@ -954,7 +1077,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref-different"
         },
@@ -973,7 +1099,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -995,7 +1124,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -1013,7 +1145,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1035,7 +1170,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1054,7 +1192,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One phenotype",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -1065,6 +1206,59 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/phenotype/phenotype-vector"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One phenotype"
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/phenotype/phenotype-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One phenotype",
+              "name": 7
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/phenotype/phenotype-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/phenotype/phenotype-vector/v0.1"

@@ -79,15 +79,30 @@ Generated fixtures changed with them:
 
 Settles BMCS-SCI-011, 012, 013 and the target-side coverage gap behind guard 107.
 
-**Follow-up, not yet done.** Two item-model problems were found while regenerating and are worked
-around rather than solved:
+**Follow-up, now done.** Two item-model problems were found while regenerating and were worked
+around at the time; the item model now handles them.
 
-- Per-axis requirements under `dimensions.axes[]` are **stripped**. Emitting a `requires` against an
-  array member wrote the requirement as a nested object and clobbered the axes array itself, so the
-  generator now drops them. A profile therefore cannot say "every axis must declare a coordinate
-  reference", which is a real expressiveness loss for image, volume and trajectory profiles.
-- The same defect hit `biological_context.intervention.*`, and those requirements are folded into
-  the parent item instead.
+A path through `[]` addresses every member of an array, end to end. `get_path`, `set_path` and
+`delete_path` apply it per member instead of stripping the marker and writing a dict over the array,
+which is what made a per-axis requirement destroy the axes it was describing. Validation checks the
+requirement once per member in both engines and names the member that failed. Comparison does not:
+a JSON Pointer cannot say "each element", and the array itself is already compared by the rule on
+the parent, so a member requirement is validated rather than compared. It therefore carries its two
+negative fixtures and none of the three comparison ones, the quality check agrees that it has no
+gating rule, and the fixture-count formula in both languages accounts for it.
 
-Both need an item model that can address a member of an array, which is a change to the item
-catalogue rather than to the generator.
+The precondition was publishing axes as objects. `dimensions.axes` was a list of bare names, and a
+per-axis requirement has nowhere to attach to a string. Axes now carry the `name` and `meaning` each
+declaration already stated, which the published fixtures had been discarding, and
+`dimensions.axes[].name` is required wherever a profile declares its axes: an axis that does not say
+what it is cannot be read, which is structural rather than a domain judgement. That covers 82
+profiles and 27 distinct axis names.
+
+One trap worth recording, because it is the same defect in a new guise: the first version had the
+member requirement overwrite the parent's reviewed names with a generic `example-name`, since the
+contract builder sets a value for every required path. A member requirement now fills only a field
+the parent left empty.
+
+`biological_context.intervention.*` is still folded into its parent item. The machinery above would
+carry it, but the catalogue defines no `biological_context.intervention[].*` items to require;
+adding them is catalogue work, not generator work.

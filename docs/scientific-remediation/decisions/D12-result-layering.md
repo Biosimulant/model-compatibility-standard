@@ -69,4 +69,18 @@ Implemented now: comparison normalises its own inputs in both engines, so a set-
 in another order is no longer a contradiction for a caller who skipped the normalisation stage
 (erratum E9). Normalisation degrades gracefully when a caller supplies a minimal bundle.
 
-**Still open:** moving consent and data-use comparison out of the technical result.
+**Implemented: consent and data-use are out of the technical result.** A rule now declares its
+`layer`, and the 100 rules on `security.data_use` and `security.consent_scope` are `policy`. A
+policy rule is evaluated and reported in a new `policy_findings` array on the report, and it does
+not touch the technical status: a data-use mismatch leaves two ports `DIRECT_COMPATIBLE` and raises
+`BMCS_SECURITY_DATA_USE_MISMATCH` as a policy finding for the workspace-policy stage to act on.
+Absent consent terms are treated the same way, as a governance question rather than an UNKNOWN.
+`BMCS-SCI-113` guards it, and the generated fixtures for those paths became `comparison-policy-*`
+rather than `comparison-incompatible-*`.
+
+The field is still *required* where a profile requires it: validation continues to insist the port
+declares its terms. What changed is that declaring different terms is no longer a statement about
+whether the data fit together.
+
+**Still open:** `policy_decision` remains in the report as the documented default mapping, which is
+option (c) and deliberate for v0.1.

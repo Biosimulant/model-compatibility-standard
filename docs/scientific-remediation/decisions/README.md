@@ -20,12 +20,12 @@ change that implements it.
 | [D4](D4-context-vocabulary.md) | Should subject and biological context be controlled terms? | S2 | Decided in part: subject demoted; subsumption needs snapshots |
 | [D5](D5-species-and-organisms.md) | What does a species field mean, and what is "any"? | SCI-010, 109 | Decided in part: wildcard fixed; subsumption needs snapshots |
 | [D6](D6-representation-equivalence.md) | When is a re-encoding lossless? | SCI-104, 110 | Decided in part: operator implemented; narrowing needs review |
-| [D7](D7-identifier-mapping.md) | When is an identifier mapping lossless? | SCI-002, 014 | Decided in part: mapping loss implemented; version-as-mapping deferred |
+| [D7](D7-identifier-mapping.md) | When is an identifier mapping lossless? | SCI-002, 014 | Decided in part: mapping loss and release transitions implemented; publishing the mappings needs an owner |
 | [D8](D8-scale-and-transform.md) | How are measurement level, value domain and transform separated? | SCI-013 | Decided, implemented |
-| [D9](D9-fixture-generation.md) | Where do generated fixture values come from? | SCI-011, 012, 013, 107 | Decided, implemented |
+| [D9](D9-fixture-generation.md) | Where do generated fixture values come from? | SCI-011, 012, 013, 107 | Decided, implemented, including per-member requirements |
 | [D10](D10-requirement-levels.md) | How is each item's requirement level decided? | E3 | Recorded, not implemented: classes need the pilot |
 | [D11](D11-transformation-statuses.md) | What evidence must lossy and inferred conversions carry? | S9, SCI-111, 112 | Decided in part: policy wired and paths tested; per-profile fixtures need review |
-| [D12](D12-result-layering.md) | Where do technical status, policy and quality separate? | SCI-015, 108 | Decided in part: normalisation fixed; layering deferred to the next version |
+| [D12](D12-result-layering.md) | Where do technical status, policy and quality separate? | SCI-015, 108, 113 | Decided in part: consent and data-use moved out of the technical status; `policy_decision` stays for v0.1 |
 
 ## Order
 

@@ -212,9 +212,18 @@ and have qualified reviewers sign them off under `PROFILE_REVIEW.md`. *Exit:* 20
 under `source/reviews/`, each naming a domain-qualified scientific reviewer and a different schema
 reviewer, neither an author; pilot-specific cases added to the suite.
 
-**Phase 3 — regeneration.** Apply the corrected foundations to the remaining 630 profiles. Produce
-a per-domain diff of what changed and why. No blanket item decisions carried over from the
-pre-review. *Exit:* regenerated bundle with no fixture invariant violations.
+**Phase 3 — regeneration. Mechanically complete, pending review.** The corrected foundations are
+applied to all 650 profiles, not only the 630 outside the pilot, because the generator rebuilds the
+whole tree from the declarations. No blanket item decision was carried over from the pre-review.
+[`measurements/domain-diff-2026-09-15.md`](measurements/domain-diff-2026-09-15.md) records what
+moved in each of the 26 domains, and `scripts/domain_diff.py` regenerates it against any baseline
+commit. *Exit:* regenerated bundle with no fixture invariant violations — done; the scientific
+suite's fixture invariants pass in both languages.
+
+What that diff cannot tell anyone is whether a new value is *right*. It reports that a domain's
+required-item count fell or that an operator appeared, not whether the profile now describes the
+science correctly. That judgement is Phase 4's, and it is the reason this phase's completion is not
+an approval.
 
 **Phase 4 — domain review waves.** Review by domain, not by field. Each wave needs named reviewers
 and produces evidence files. *Exit:* every profile has complete evidence, or is deprecated.

@@ -7,8 +7,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -33,8 +39,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -58,8 +70,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -81,8 +99,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -106,8 +130,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -136,8 +166,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -158,8 +194,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -183,8 +225,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -203,8 +251,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -228,8 +282,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -250,8 +310,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -271,8 +337,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -297,8 +369,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -327,8 +405,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -349,8 +433,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -374,8 +464,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -395,8 +491,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -420,8 +522,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -442,8 +550,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -513,8 +627,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay",
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            },
             "different"
           ]
         },
@@ -536,8 +656,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -578,8 +704,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -603,8 +735,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -643,8 +781,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -669,8 +813,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -699,8 +849,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -721,8 +877,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -746,8 +908,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -767,8 +935,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -792,8 +966,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -814,8 +994,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -834,8 +1020,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -861,8 +1053,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -891,8 +1089,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -913,8 +1117,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -936,8 +1146,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -958,8 +1174,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -983,8 +1205,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -1003,8 +1231,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -1026,8 +1260,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {},
@@ -1051,8 +1291,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -1080,8 +1326,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -1102,8 +1354,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -1127,8 +1385,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {},
@@ -1147,8 +1411,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -1172,8 +1442,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {
@@ -1194,8 +1470,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "assay"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": "assay"
+            }
           ]
         },
         "identifiers": {},
@@ -1207,6 +1489,70 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/multiomics/multiomics-sample-map"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One biological sample"
+            },
+            {
+              "meaning": "One assay the sample was measured by"
+            }
+          ]
+        },
+        "identifiers": {
+          "entity_type": "example-entity-type"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/multiomics/multiomics-sample-map"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One biological sample",
+              "name": 7
+            },
+            {
+              "meaning": "One assay the sample was measured by",
+              "name": 7
+            }
+          ]
+        },
+        "identifiers": {
+          "entity_type": "example-entity-type"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/multiomics/multiomics-sample-map"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/multiomics-sample-map/v0.1"

@@ -108,6 +108,7 @@ OPERATORS = [
     "context-compatible",
     "digest-equal",
     "representation-equivalent",
+    "namespace-version-compatible",
 ]
 
 REASON_CODES = {
@@ -416,7 +417,11 @@ def item_operator(path: str, family: str) -> str:
         return "mapping-total"
     if family == "biological_context":
         return "context-compatible"
-    if path in {"semantic.concept", "semantic.subject", "identifiers.namespace", "identifiers.namespace_version"}:
+    if path == "identifiers.namespace_version":
+        # Decision D7. Two releases of one namespace are not a contradiction: identifiers are
+        # retired and merged between releases, so a version change is itself a mapping.
+        return "namespace-version-compatible"
+    if path in {"semantic.concept", "semantic.subject", "identifiers.namespace"}:
         return "equal"
     if family in {"semantic", "identifiers"}:
         return "term-equivalent"
@@ -588,7 +593,13 @@ def allowed_representation_kinds(profile: dict[str, Any]) -> list[str]:
 
 # These operators need a pinned snapshot to decide anything. Without one the engine answers
 # UNKNOWN, so a differing value is absent evidence rather than a contradiction (decisions D3, D7).
-SNAPSHOT_OPERATORS = {"term-equivalent", "term-subsumes", "mapping-total", "mapping-bijective"}
+SNAPSHOT_OPERATORS = {
+    "term-equivalent",
+    "term-subsumes",
+    "mapping-total",
+    "mapping-bijective",
+    "namespace-version-compatible",
+}
 
 
 def contradiction_reason_code(path: str, definition: dict[str, Any]) -> str:
@@ -601,6 +612,17 @@ def contradiction_reason_code(path: str, definition: dict[str, Any]) -> str:
     if path == "measurement.unit" and get_path(definition.get("fixed", {}), "measurement.quantity"):
         return "BMCS_UNIT_DIMENSION_MISMATCH"
     return reason_code_for(path)
+
+
+def policy_layer(path: str) -> bool:
+    """Whether this item is decided by governance rather than by technical fit (decision D12).
+
+    Consent and data-use terms say whether two ports may exchange data at all. That is a policy
+    outcome: it is reported as a policy finding and does not decide the technical status, so a
+    contradiction in one of these fields produces no INCOMPATIBLE fixture.
+    """
+
+    return path.split(".")[0] == "security"
 
 
 def needs_snapshot(path: str) -> bool:
@@ -630,8 +652,17 @@ def profile_allowed(profile: dict[str, Any]) -> dict[str, Any]:
 
 
 def get_path(document: dict[str, Any], path: str) -> Any:
+    if "[]" in path:
+        # A path through "[]" addresses every member of the array, so it resolves to one value per
+        # member rather than to a single value (decision D9).
+        head, _, tail = path.partition("[]")
+        container = get_path(document, head.strip("."))
+        if not isinstance(container, list):
+            return None
+        leaf = tail.strip(".")
+        return [get_path(item, leaf) if isinstance(item, dict) else None for item in container]
     current: Any = document
-    for part in path.replace("[]", "").split("."):
+    for part in path.split("."):
         if not isinstance(current, dict) or part not in current:
             return None
         current = current[part]
@@ -655,13 +686,26 @@ def measurement_unit(profile: dict[str, Any]) -> str:
     return str(declared) if declared else "1"
 
 
-def axis_names(profile: dict[str, Any]) -> list[str]:
-    """The reviewed axes for this profile, in order (decision D9)."""
+def axis_entries(profile: dict[str, Any]) -> list[Any]:
+    """The reviewed axes for this profile, in order (decision D9).
+
+    Each axis is published as the object its declaration describes rather than as a bare name. A
+    list of names has nowhere to put a per-axis requirement: "every axis declares its unit" cannot
+    attach to a string, and emitting it against one overwrites the list. The declarations already
+    carry a reviewed meaning for each axis, which a list of names discards.
+    """
 
     axes = structured(profile).get("axes")
     if axes in (None, "port-declared"):
-        return ["axis"]
-    return [str(axis["name"]) for axis in axes]
+        return [{"name": "axis"}]
+    entries: list[Any] = []
+    for axis in axes:
+        entry: dict[str, Any] = {"name": str(axis["name"])}
+        meaning = axis.get("meaning")
+        if meaning:
+            entry["meaning"] = str(meaning)
+        entries.append(entry)
+    return entries
 
 
 def example_from_schema(schema: Any, leaf: str) -> Any:
@@ -711,7 +755,7 @@ def example_value(path: str, profile: dict[str, Any] | None = None) -> Any:
             return allowed[0]
     leaf = path.replace("[]", "").split(".")[-1]
     if leaf == "axes" and profile is not None:
-        return axis_names(profile)
+        return axis_entries(profile)
     if leaf in {"axes", "labels", "qualifiers", "disease", "intervention", "data_use"}:
         return [f"example-{leaf}"]
     if leaf in BOOLEAN_LEAVES:
@@ -846,7 +890,17 @@ def fixture_slug(path: str) -> str:
 
 
 def delete_path(document: dict[str, Any], path: str) -> None:
-    parts = [part for part in path.replace("[]", "").split(".") if part]
+    if "[]" in path:
+        # Deleting through "[]" removes the field from every member of the array. Stripping the
+        # marker made this a silent no-op, because the container is a list, not a dict (D9).
+        head, _, tail = path.partition("[]")
+        container = get_path(document, head.strip("."))
+        if isinstance(container, list):
+            for item in container:
+                if isinstance(item, dict):
+                    delete_path(item, tail.strip("."))
+        return
+    parts = [part for part in path.split(".") if part]
     current: Any = document
     for part in parts[:-1]:
         if not isinstance(current, dict) or part not in current:
@@ -882,21 +936,39 @@ def effective_required_items(profile: dict[str, Any]) -> list[str]:
     for extra in list(declaration.get("requires", [])) + list(structure.get("requires", [])):
         if extra not in required:
             required.append(extra)
+    if "dimensions.axes" in required and isinstance(structure.get("axes"), list) and "dimensions.axes[].name" not in required:
+        # An axis that does not say what it is cannot be read or compared. That is structural rather
+        # than a domain judgement, so it holds wherever a profile declares its axes (decision D9).
+        required.append("dimensions.axes[].name")
     return required
 
 
 def required_fixture_groups(profile: dict[str, Any]) -> dict[str, list[str]]:
     slugs = [fixture_slug(path) for path in effective_required_items(profile)]
+    # A policy path never decides the technical status, so absent or differing consent and data-use
+    # terms are reported as policy findings rather than as UNKNOWN (decision D12).
+    technical_slugs = [
+        fixture_slug(path) for path in effective_required_items(profile)
+        if not policy_layer(path) and "[]" not in path
+    ]
+    policy_slugs = [fixture_slug(path) for path in effective_required_items(profile) if policy_layer(path)]
     groups = {
         "positive": ["positive"],
         "negative": [f"negative-required-missing-{slug}" for slug in slugs],
         "invalid": [f"negative-value-invalid-{slug}" for slug in slugs],
         "direct": ["comparison-direct"],
-        "incompatible": [f"comparison-incompatible-{fixture_slug(path)}" for path in effective_required_items(profile) if not needs_snapshot(path)],
-        "unknown": [f"comparison-unknown-{slug}" for slug in slugs],
+        "incompatible": [
+            f"comparison-incompatible-{fixture_slug(path)}"
+            for path in effective_required_items(profile)
+            if not needs_snapshot(path) and not policy_layer(path) and "[]" not in path
+        ],
+        "unknown": [f"comparison-unknown-{slug}" for slug in technical_slugs],
+        "policy": [f"comparison-policy-{slug}" for slug in policy_slugs],
         "transformations": [],
     }
-    groups["unknown"].extend(f"comparison-unknown-target-{slug}" for slug in slugs)
+    groups["unknown"].extend(f"comparison-unknown-target-{slug}" for slug in technical_slugs)
+    groups["policy"].extend(f"comparison-policy-missing-{slug}" for slug in policy_slugs)
+    groups["policy"].extend(f"comparison-policy-missing-target-{slug}" for slug in policy_slugs)
     groups["unknown"].extend(
         f"comparison-unknown-no-snapshot-{fixture_slug(path)}"
         for path in effective_required_items(profile)
@@ -909,7 +981,18 @@ def required_fixture_groups(profile: dict[str, Any]) -> dict[str, list[str]]:
 
 
 def set_path(document: dict[str, Any], path: str, value: Any) -> None:
-    parts = [part for part in path.replace("[]", "").split(".") if part]
+    if "[]" in path:
+        # Writing through "[]" writes into every member of the array. Stripping the marker instead
+        # would write a dict over the array itself, which is what made per-axis requirements
+        # unusable (decision D9).
+        head, _, tail = path.partition("[]")
+        container = get_path(document, head.strip("."))
+        if isinstance(container, list):
+            for item in container:
+                if isinstance(item, dict):
+                    set_path(item, tail.strip("."), value)
+        return
+    parts = [part for part in path.split(".") if part]
     current = document
     for part in parts[:-1]:
         child = current.get(part)
@@ -976,7 +1059,10 @@ def internal_quality_errors(profile: dict[str, Any], definition: dict[str, Any])
     kinds = get_path(definition.get("allowed", {}), "representation.kind")
     if not isinstance(kinds, list) or not kinds:
         errors.append("representation.kind has no allowed values")
-    required_paths = [item["path"] for item in requirements if item.get("level") == "required"]
+    required_paths = [
+        item["path"] for item in requirements
+        if item.get("level") == "required" and "[]" not in item["path"]
+    ]
     levels = {item.get("level") for item in requirements}
     if levels - {"required", "conditional", "recommended", "optional"}:
         errors.append("a requirement declares a level outside the published vocabulary")
@@ -1075,6 +1161,8 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "severity": {"enum": ["info", "warning", "error"]},
             "reason_code": {"type": "string", "pattern": "^BMCS_[A-Z0-9_]+$"},
             "parameters": {"type": "object"},
+            # Decision D12. A policy rule is reported, not folded into the technical status.
+            "layer": {"enum": ["technical", "policy"]},
         },
         "additionalProperties": False,
     }
@@ -1245,7 +1333,7 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     )
     report = simple(
         "compatibility-report", "Compatibility Report",
-        ["schema_version", "standard", "bundle_sha256", "source", "target", "status", "policy_decision", "findings", "digest"],
+        ["schema_version", "standard", "bundle_sha256", "source", "target", "status", "policy_decision", "findings", "policy_findings", "digest"],
         {
             "schema_version": {"const": "0.1"}, "standard": {"const": STANDARD},
             "bundle_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
@@ -1253,6 +1341,10 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "status": {"enum": STATUSES}, "policy_decision": {"enum": POLICY_DECISIONS},
             "quality_reference": {"type": ["object", "null"]},
             "findings": {"type": "array", "items": {"$ref": "compatibility-finding.schema.json"}},
+            # Decision D12. Consent and data-use are governance outcomes, not statements about
+            # whether two datasets fit together, so they are reported here rather than deciding
+            # the technical status.
+            "policy_findings": {"type": "array", "items": {"$ref": "compatibility-finding.schema.json"}},
             "paths": {"type": "array", "items": {"type": "object"}},
             "snapshots": {"type": "object"},
             "digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
@@ -1308,6 +1400,85 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "immutable_references": {"type": "array", "items": {"type": "object"}},
             "expires_at": {"type": ["string", "null"], "format": "date-time"},
             "digest": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+        },
+    )
+    # The engines consume three kinds of pinned snapshot and the standard published the format of
+    # none of them. A snapshot is verified by digest, so the shape below is what a publisher has to
+    # produce for the operators to read it (decisions D3, D4, D5, D7).
+    ontology_snapshot = simple(
+        "ontology-snapshot", "Ontology Snapshot",
+        ["ref", "sha256"],
+        {
+            "schema_version": {"const": "0.1"},
+            "ref": {"type": "string", "format": "uri"},
+            "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+            "ontology": {"type": "string", "minLength": 1},
+            "release": {"type": "string", "minLength": 1},
+            "license": {"type": "string", "minLength": 1},
+            "equivalences": {"type": "array", "items": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}}},
+            "subsumptions": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "required": ["parent", "child"],
+                    "properties": {"parent": {"type": "string", "minLength": 1}, "child": {"type": "string", "minLength": 1}},
+                    "additionalProperties": False,
+                },
+            },
+        },
+    )
+    mapping_snapshot = simple(
+        "mapping-snapshot", "Mapping Snapshot",
+        ["ref", "sha256"],
+        {
+            "schema_version": {"const": "0.1"},
+            "ref": {"type": "string", "format": "uri"},
+            "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+            "source_namespace": {"type": "string", "minLength": 1},
+            "target_namespace": {"type": "string", "minLength": 1},
+            "release": {"type": "string", "minLength": 1},
+            "license": {"type": "string", "minLength": 1},
+            "mappings": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "required": ["source"],
+                    "properties": {
+                        "source": {"type": "string", "minLength": 1},
+                        "target": {"type": "string", "minLength": 1},
+                        "targets": {"type": "array", "items": {"type": "string", "minLength": 1}},
+                    },
+                    "additionalProperties": False,
+                },
+            },
+        },
+    )
+    namespace_snapshot = simple(
+        "namespace-transition-snapshot", "Namespace Transition Snapshot",
+        ["ref", "sha256", "namespace", "transitions"],
+        {
+            "schema_version": {"const": "0.1"},
+            "ref": {"type": "string", "format": "uri"},
+            "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+            "namespace": {"type": "string", "minLength": 1},
+            "license": {"type": "string", "minLength": 1},
+            "transitions": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "required": ["from", "to"],
+                    "properties": {
+                        "from": {"type": "string", "minLength": 1},
+                        "to": {"type": "string", "minLength": 1},
+                        # A transition that retired and merged nothing preserves every identifier;
+                        # one that did either is a real loss and needs approval (decision D7).
+                        "identifiers_retired": {"type": "integer", "minimum": 0},
+                        "identifiers_merged": {"type": "integer", "minimum": 0},
+                        "released_at": {"type": "string", "minLength": 1},
+                    },
+                    "additionalProperties": False,
+                },
+            },
         },
     )
     envelope = simple(
@@ -1411,6 +1582,9 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
         "compatibility-finding": finding,
         "compatibility-report": report,
         "resolution-plan": plan,
+        "ontology-snapshot": ontology_snapshot,
+        "mapping-snapshot": mapping_snapshot,
+        "namespace-transition-snapshot": namespace_snapshot,
         "signal-envelope": envelope,
         "compatibility-lock": lock,
         "conformance-manifest": conformance,
@@ -1527,7 +1701,11 @@ def build(root: Path) -> None:
                 "severity": "error",
                 "reason_code": reason_code_for(path),
             }
+            # A requirement addressing every member of an array is validated, not compared: JSON
+            # Pointer cannot say "each element", and comparison of the array itself is already
+            # covered by the rule on the array (decision D9).
             for path in raw["required_items"]
+            if "[]" not in path
         ]
         for path in COMPARED_WHEN_BOTH_DECLARE:
             if path in required_paths or path not in item_index:
@@ -1542,6 +1720,9 @@ def build(root: Path) -> None:
                     "reason_code": reason_code_for(path),
                 }
             )
+        for entry in rules:
+            # Decision D12: security and consent comparisons are governance, not technical fit.
+            entry["layer"] = "policy" if entry["target"].startswith("/contract/security/") else "technical"
         questions = review_questions(raw)
         definition = {
             "$schema": f"{STANDARD}/schemas/profile-definition.schema.json",
@@ -1711,7 +1892,15 @@ def build(root: Path) -> None:
         for requirement in definition["requirements"]:
             if requirement["level"] != "required":
                 continue
-            set_path(valid_contract, requirement["path"], example_value(requirement["path"], source_profile))
+            path = requirement["path"]
+            if "[]" in path:
+                # The parent item builds the array from its reviewed declaration, so a member
+                # requirement must not write a generic example over it: that is the same clobbering
+                # this decision exists to fix. Only fill a field the parent left empty (D9).
+                declared = get_path(valid_contract, path)
+                if isinstance(declared, list) and declared and all(value is not None for value in declared):
+                    continue
+            set_path(valid_contract, path, example_value(path, source_profile))
         direct_contract = json.loads(json.dumps(valid_contract))
         if "origin.type" in {item["path"] for item in definition["requirements"] if item["level"] == "required"}:
             set_path(direct_contract, "origin.generated_at", "2026-01-01T00:00:00Z")
@@ -1757,25 +1946,38 @@ def build(root: Path) -> None:
                         "field": path,
                     },
                     {
-                        "name": f"comparison-unknown-no-snapshot-{slug}" if needs_snapshot(path) else f"comparison-incompatible-{slug}",
+                        "name": (
+                            f"comparison-unknown-no-snapshot-{slug}" if needs_snapshot(path)
+                            else f"comparison-policy-{slug}" if policy_layer(path)
+                            else f"comparison-incompatible-{slug}"
+                        ),
                         "source": incompatible_contract,
                         "target": valid_contract,
-                        "status": "UNKNOWN" if needs_snapshot(path) else "INCOMPATIBLE",
-                        **({} if needs_snapshot(path) else {"reason_code": contradiction_reason_code(path, definition)}),
+                        # A policy contradiction is reported as a policy finding and leaves the
+                        # technical status alone, so the contracts still fit together (D12).
+                        "status": (
+                            "UNKNOWN" if needs_snapshot(path)
+                            else "DIRECT_COMPATIBLE" if policy_layer(path)
+                            else "INCOMPATIBLE"
+                        ),
+                        **({} if needs_snapshot(path) or policy_layer(path) else {"reason_code": contradiction_reason_code(path, definition)}),
                         "field": path,
                     },
                     {
-                        "name": f"comparison-unknown-{slug}",
+                        # A port that does not declare its consent or data-use terms raises a
+                        # governance question, not a technical one, so the status is unchanged and
+                        # the absence is reported as a policy finding (decision D12).
+                        "name": f"comparison-policy-missing-{slug}" if policy_layer(path) else f"comparison-unknown-{slug}",
                         "source": missing_contract,
                         "target": valid_contract,
-                        "status": "UNKNOWN",
+                        "status": "DIRECT_COMPATIBLE" if policy_layer(path) else "UNKNOWN",
                         "field": path,
                     },
                     {
-                        "name": f"comparison-unknown-target-{slug}",
+                        "name": f"comparison-policy-missing-target-{slug}" if policy_layer(path) else f"comparison-unknown-target-{slug}",
                         "source": valid_contract,
                         "target": missing_contract,
-                        "status": "UNKNOWN",
+                        "status": "DIRECT_COMPATIBLE" if policy_layer(path) else "UNKNOWN",
                         "field": path,
                     },
                 ]
@@ -1793,6 +1995,12 @@ def build(root: Path) -> None:
                     "status": "LOSSLESS_CONVERSION_AVAILABLE",
                 }
             )
+        # A member requirement is validated per member and never compared, so it keeps its two
+        # negative fixtures and none of the three comparison ones (decision D9).
+        cases = [
+            case for case in cases
+            if not (case["name"].startswith("comparison-") and "[]" in str(case.get("field", "")))
+        ]
         write_json(
             root,
             f"fixtures/profiles/{definition['domain']}/{definition['name']}.json",

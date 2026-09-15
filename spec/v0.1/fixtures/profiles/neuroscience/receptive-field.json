@@ -7,8 +7,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -30,8 +36,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "origin": {
@@ -52,8 +64,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -72,8 +90,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -94,8 +118,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -121,8 +151,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -140,8 +176,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -162,8 +204,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -179,8 +227,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -201,8 +255,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -220,8 +280,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -238,8 +304,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -261,8 +333,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -288,8 +366,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -307,8 +391,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -329,8 +419,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -347,8 +443,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -369,8 +471,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -388,8 +496,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -450,8 +564,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y",
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            },
             "different"
           ]
         },
@@ -470,8 +590,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -506,8 +632,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -528,8 +660,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -562,8 +700,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -585,8 +729,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -612,8 +762,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -631,8 +787,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -653,8 +815,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -671,8 +839,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -693,8 +867,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -712,8 +892,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -729,8 +915,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -753,8 +945,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -780,8 +978,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -799,8 +1003,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -819,8 +1029,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -838,8 +1054,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -860,8 +1082,14 @@
         },
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -877,8 +1105,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First stimulus axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -889,6 +1123,64 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/neuroscience/receptive-field"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "First stimulus axis"
+            },
+            {
+              "meaning": "Second stimulus axis"
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/neuroscience/receptive-field"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "First stimulus axis",
+              "name": 7
+            },
+            {
+              "meaning": "Second stimulus axis",
+              "name": 7
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/neuroscience/receptive-field"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/receptive-field/v0.1"

@@ -7,7 +7,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -38,7 +41,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -68,7 +74,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -96,7 +105,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -126,7 +138,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -161,7 +176,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -188,7 +206,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -218,7 +239,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -243,7 +267,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -273,7 +300,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -300,7 +330,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -326,7 +359,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -357,7 +393,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -392,7 +431,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -419,7 +461,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -449,7 +494,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -475,7 +523,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -505,7 +556,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -532,7 +586,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -620,7 +677,10 @@
         },
         "dimensions": {
           "axes": [
-            "time",
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
             "different"
           ]
         },
@@ -648,7 +708,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -701,7 +764,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -731,7 +797,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -782,7 +851,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -813,7 +885,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -848,7 +923,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -875,7 +953,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -905,7 +986,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -931,7 +1015,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -961,7 +1048,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -988,7 +1078,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1015,7 +1108,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1046,7 +1142,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1081,7 +1180,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1108,7 +1210,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1138,7 +1243,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1164,7 +1272,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1194,7 +1305,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1221,7 +1335,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1248,7 +1365,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1279,7 +1399,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1314,7 +1437,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1341,7 +1467,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1371,7 +1500,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1397,7 +1529,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1427,7 +1562,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1454,7 +1592,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1481,7 +1622,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1512,7 +1656,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1547,7 +1694,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1574,7 +1724,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1604,7 +1757,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1630,7 +1786,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1660,7 +1819,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1687,7 +1849,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1712,7 +1877,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1744,7 +1912,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1779,7 +1950,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1806,7 +1980,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1834,7 +2011,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1861,7 +2041,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1891,7 +2074,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1916,7 +2102,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1944,7 +2133,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1975,7 +2167,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2010,7 +2205,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2037,7 +2235,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2067,7 +2268,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2093,7 +2297,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2123,7 +2330,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2150,7 +2360,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2177,7 +2390,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2208,7 +2424,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2243,7 +2462,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2270,7 +2492,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2300,7 +2525,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2326,7 +2554,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2356,7 +2587,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2383,7 +2617,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -2402,6 +2639,75 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/physiology/physiological-time-series"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Sample at the declared rate"
+            }
+          ]
+        },
+        "lifecycle": {
+          "sampling": "example-sampling",
+          "time_unit": "example-time-unit"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/physiology/physiological-time-series"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Sample at the declared rate",
+              "name": 7
+            }
+          ]
+        },
+        "lifecycle": {
+          "sampling": "example-sampling",
+          "time_unit": "example-time-unit"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/physiology/physiological-time-series"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/physiological-time-series/v0.1"

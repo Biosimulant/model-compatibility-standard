@@ -7,8 +7,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -42,8 +48,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -76,8 +88,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -108,8 +126,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -142,8 +166,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -181,8 +211,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -212,8 +248,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -246,8 +288,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -275,8 +323,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -309,8 +363,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -340,8 +400,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -370,8 +436,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -405,8 +477,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -444,8 +522,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -475,8 +559,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -509,8 +599,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -539,8 +635,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -573,8 +675,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -604,8 +712,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -702,8 +816,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon",
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            },
             "different"
           ]
         },
@@ -734,8 +854,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -794,8 +920,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -828,8 +960,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -886,8 +1024,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -921,8 +1065,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -960,8 +1110,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -991,8 +1147,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1025,8 +1187,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1055,8 +1223,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1089,8 +1263,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1120,8 +1300,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1151,8 +1337,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1186,8 +1378,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1225,8 +1423,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1256,8 +1460,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1290,8 +1500,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1320,8 +1536,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1354,8 +1576,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1385,8 +1613,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1416,8 +1650,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1451,8 +1691,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1490,8 +1736,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1521,8 +1773,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1555,8 +1813,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1585,8 +1849,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1619,8 +1889,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1650,8 +1926,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1681,8 +1963,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1716,8 +2004,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1755,8 +2049,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1786,8 +2086,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1820,8 +2126,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1850,8 +2162,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1884,8 +2202,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1915,8 +2239,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1944,8 +2274,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -1980,8 +2316,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2019,8 +2361,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2050,8 +2398,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2082,8 +2436,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2113,8 +2473,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2147,8 +2513,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2176,8 +2548,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2208,8 +2586,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2243,8 +2627,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2282,8 +2672,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2313,8 +2709,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2347,8 +2749,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2377,8 +2785,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2411,8 +2825,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2442,8 +2862,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2473,8 +2899,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2508,8 +2940,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2547,8 +2985,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2578,8 +3022,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2612,8 +3062,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2642,8 +3098,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2676,8 +3138,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2707,8 +3175,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2738,8 +3212,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {},
@@ -2772,8 +3252,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2810,8 +3296,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2841,8 +3333,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2875,8 +3373,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {},
@@ -2904,8 +3408,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2938,8 +3448,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {
@@ -2969,8 +3485,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "taxon"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": "taxon"
+            }
           ]
         },
         "identifiers": {},
@@ -2991,6 +3513,88 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/community-time-series"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Sampling time point"
+            },
+            {
+              "meaning": "One taxon in the community"
+            }
+          ]
+        },
+        "identifiers": {
+          "taxonomy_version": "2026-01-01"
+        },
+        "lifecycle": {
+          "sampling": "example-sampling",
+          "time_unit": "example-time-unit"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/community-time-series"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:562"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Sampling time point",
+              "name": 7
+            },
+            {
+              "meaning": "One taxon in the community",
+              "name": 7
+            }
+          ]
+        },
+        "identifiers": {
+          "taxonomy_version": "2026-01-01"
+        },
+        "lifecycle": {
+          "sampling": "example-sampling",
+          "time_unit": "example-time-unit"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/community-time-series"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/community-time-series/v0.1"

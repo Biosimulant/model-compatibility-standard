@@ -4,7 +4,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -29,7 +32,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -53,7 +59,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -75,7 +84,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -99,7 +111,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -128,7 +143,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -149,7 +167,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -173,7 +194,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -192,7 +216,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -216,7 +243,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -237,7 +267,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -257,7 +290,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -282,7 +318,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -311,7 +350,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -332,7 +374,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -356,7 +401,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -376,7 +424,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -400,7 +451,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -421,7 +475,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -492,7 +549,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature",
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            },
             "different"
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
@@ -514,7 +574,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -556,7 +619,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -580,7 +646,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -620,7 +689,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -645,7 +717,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -674,7 +749,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -695,7 +773,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -719,7 +800,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -739,7 +823,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -763,7 +850,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -784,7 +874,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -805,7 +898,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -830,7 +926,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -859,7 +958,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -880,7 +982,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -904,7 +1009,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -924,7 +1032,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -948,7 +1059,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -969,7 +1083,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -990,7 +1107,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1015,7 +1135,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1039,12 +1162,14 @@
     },
     {
       "field": "identifiers.namespace_version",
-      "name": "comparison-incompatible-identifiers-namespace-version",
-      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
+      "name": "comparison-unknown-no-snapshot-identifiers-namespace-version",
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1061,11 +1186,14 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/chemical-descriptor-vector"
         }
       },
-      "status": "INCOMPATIBLE",
+      "status": "UNKNOWN",
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1089,7 +1217,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1109,7 +1240,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1133,7 +1267,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1154,7 +1291,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1175,7 +1315,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -1200,7 +1343,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": 7,
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1229,7 +1375,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref-different",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1250,7 +1399,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1274,7 +1426,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -1294,7 +1449,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1318,7 +1476,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1339,7 +1500,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -1360,7 +1524,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1385,7 +1552,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": 7
@@ -1414,7 +1584,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000-different"
@@ -1435,7 +1608,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1459,7 +1635,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1479,7 +1658,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1503,7 +1685,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1524,7 +1709,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named descriptor",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1540,6 +1728,63 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/chemical-descriptor-vector"
         }
       }
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One named descriptor"
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/chemical-descriptor-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One named descriptor",
+              "name": 7
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/chemical-descriptor-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/chemical-descriptor-vector/v0.1"

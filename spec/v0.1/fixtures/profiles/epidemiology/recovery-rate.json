@@ -1380,8 +1380,7 @@
     },
     {
       "field": "security.data_use",
-      "name": "comparison-incompatible-security-data-use",
-      "reason_code": "BMCS_SECURITY_DATA_USE_MISMATCH",
+      "name": "comparison-policy-security-data-use",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
@@ -1406,7 +1405,7 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/recovery-rate"
         }
       },
-      "status": "INCOMPATIBLE",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
@@ -1433,7 +1432,7 @@
     },
     {
       "field": "security.data_use",
-      "name": "comparison-unknown-security-data-use",
+      "name": "comparison-policy-missing-security-data-use",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
@@ -1454,7 +1453,7 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/recovery-rate"
         }
       },
-      "status": "UNKNOWN",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
@@ -1481,7 +1480,7 @@
     },
     {
       "field": "security.data_use",
-      "name": "comparison-unknown-target-security-data-use",
+      "name": "comparison-policy-missing-target-security-data-use",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
@@ -1505,7 +1504,7 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/recovery-rate"
         }
       },
-      "status": "UNKNOWN",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
@@ -1586,8 +1585,7 @@
     },
     {
       "field": "security.consent_scope",
-      "name": "comparison-incompatible-security-consent-scope",
-      "reason_code": "BMCS_SECURITY_CONSENT_SCOPE_MISMATCH",
+      "name": "comparison-policy-security-consent-scope",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
@@ -1611,7 +1609,7 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/recovery-rate"
         }
       },
-      "status": "INCOMPATIBLE",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
@@ -1638,7 +1636,7 @@
     },
     {
       "field": "security.consent_scope",
-      "name": "comparison-unknown-security-consent-scope",
+      "name": "comparison-policy-missing-security-consent-scope",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
@@ -1661,7 +1659,7 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/recovery-rate"
         }
       },
-      "status": "UNKNOWN",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
@@ -1688,7 +1686,7 @@
     },
     {
       "field": "security.consent_scope",
-      "name": "comparison-unknown-target-security-consent-scope",
+      "name": "comparison-policy-missing-target-security-consent-scope",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
@@ -1712,7 +1710,7 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/recovery-rate"
         }
       },
-      "status": "UNKNOWN",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"

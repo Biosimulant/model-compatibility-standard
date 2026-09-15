@@ -4,7 +4,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -23,7 +26,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -41,7 +47,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -57,7 +66,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -75,7 +87,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -98,7 +113,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -113,7 +131,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -131,7 +152,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -144,7 +168,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -162,7 +189,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -177,7 +207,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -191,7 +224,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -210,7 +246,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -233,7 +272,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -248,7 +290,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -266,7 +311,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -280,7 +328,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -298,7 +349,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -313,7 +367,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -365,7 +422,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature",
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            },
             "different"
           ]
         },
@@ -381,7 +441,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -410,7 +473,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -428,7 +494,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -455,7 +524,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -474,7 +546,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -497,7 +572,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -512,7 +590,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -530,7 +611,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -544,7 +628,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -562,7 +649,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -577,7 +667,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One position in a declared order",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -587,6 +680,51 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/ordered-vector"
         }
       }
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One position in a declared order"
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/ordered-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One position in a declared order",
+              "name": 7
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/ordered-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/core/ordered-vector/v0.1"

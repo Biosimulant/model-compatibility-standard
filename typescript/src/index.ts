@@ -298,6 +298,32 @@ export function validateContract(contract: JsonObject, profileRefs: string[] = [
     for (const requirement of profile.requirements as JsonObject[]) {
       if (requirement.level !== "required") continue;
       const path = requirement.path as string;
+      if (path.includes("[]")) {
+        // "dimensions.axes[].unit" means every axis declares a unit, so the requirement is checked
+        // once per member and reports which member failed (decision D9).
+        const [head, tail] = path.split("[]");
+        const containerPath = head.replace(/\.$/, "");
+        const leaf = tail.replace(/^\./, "");
+        const pointer = `/${containerPath.replaceAll(".", "/")}`;
+        const container = getDotted(contract, containerPath);
+        if (!Array.isArray(container) || !container.length) {
+          findings.push({ reason_code: "BMCS_REQUIRED_MISSING", message: `Profile ${ref} requires '${path}', but it is missing.`, path: pointer, severity: "error" });
+          continue;
+        }
+        const checkMember = ajv.compile(requirement.schema as JsonObject);
+        container.forEach((member, index) => {
+          const memberValue = member && typeof member === "object" && !Array.isArray(member) ? getDotted(member as JsonObject, leaf) : undefined;
+          const memberPointer = `${pointer}/${index}/${leaf.replaceAll(".", "/")}`;
+          if (memberValue === undefined || memberValue === null) {
+            findings.push({ reason_code: "BMCS_REQUIRED_MISSING", message: `Profile ${ref} requires '${path}', but member ${index} does not declare it.`, path: memberPointer, severity: "error" });
+            return;
+          }
+          if (!checkMember(memberValue)) {
+            findings.push({ reason_code: "BMCS_PROFILE_VALUE_INVALID", message: `${path}[${index}]: ${checkMember.errors?.[0]?.message ?? "value is invalid"}`, path: memberPointer, severity: "error" });
+          }
+        });
+        continue;
+      }
       const value = getDotted(contract, path);
       if (value === undefined || value === null) {
         findings.push({ reason_code: "BMCS_REQUIRED_MISSING", message: `Profile ${ref} requires '${path}', but it is missing.`, path: `/${path.replaceAll(".", "/")}`, severity: "error" });
@@ -664,6 +690,26 @@ function compareValue(rule: JsonObject, source: JsonValue, target: JsonValue, bu
     const open = target === null || target === undefined || target === "any" || target === "unspecified";
     return [canonicalJson(source) === canonicalJson(target) || open, undefined];
   }
+  if (operator === "namespace-version-compatible") {
+    // Decision D7. Two releases of one namespace are not a contradiction. Identifiers are retired
+    // and merged between releases, so what matters is what the transition did, and without a pinned
+    // release-transition snapshot nobody can say: that is undecidable, not a mismatch. A transition
+    // that retired and merged nothing preserves every identifier; one that did either is a real loss
+    // and needs approval.
+    if (source === target) return [true, undefined];
+    const snapshot = snapshotFor(rule, snapshots.mappings);
+    if (!snapshot) return [false, "unsupported"];
+    for (const transition of (snapshot.transitions ?? []) as JsonObject[]) {
+      if (!transition || typeof transition !== "object" || Array.isArray(transition)) continue;
+      if (String(transition.from) !== String(source) || String(transition.to) !== String(target)) continue;
+      const retired = transition.identifiers_retired ?? 0;
+      const merged = transition.identifiers_merged ?? 0;
+      if (!Number.isInteger(retired) || !Number.isInteger(merged)) return [false, "invalid"];
+      return [true, retired === 0 && merged === 0 ? "none" : "identifier-merge"];
+    }
+    // The snapshot is pinned but says nothing about this pair of releases.
+    return [false, "unsupported"];
+  }
   if (operator === "representation-equivalent") {
     // Decision D6. Re-encoding dense as sparse preserves the data only when both sides declare, and
     // agree on, what an absent entry means, the ordering, the shape and the dtype. Undeclared is
@@ -713,6 +759,9 @@ export function compareContracts(source: JsonObject | null, target: JsonObject |
   const snapshots = { ontology: verifiedSnapshots(options.snapshots?.ontology), mappings: verifiedSnapshots(options.snapshots?.mappings) };
   let status: TechnicalStatus;
   let findings: CompatibilityFinding[];
+  // Decision D12. Consent and data-use outcomes are collected apart from the technical findings,
+  // and every path through this function reports them, including the ones with no rules to run.
+  const policyFindings: CompatibilityFinding[] = [];
   if (source === null || target === null) {
     status = "UNKNOWN";
     findings = [finding("contract", "UNKNOWN", "BMCS_CONTRACT_NOT_DECLARED", "One or both ports have no compatibility contract.")];
@@ -747,6 +796,18 @@ export function compareContracts(source: JsonObject | null, target: JsonObject |
     for (const rule of rules) {
       const left = getPointer({ contract: source }, rule.source as string), right = getPointer({ contract: target }, rule.target as string);
       const dimension = (rule.target as string).split("/")[2] ?? "contract";
+      if (rule.layer === "policy") {
+        // Decision D12. Whether two ports may exchange data under their consent and data-use terms
+        // is a governance outcome, not a statement about whether the data fit together. It is
+        // reported, and the workspace policy stage decides what to do.
+        if (left === undefined || right === undefined) {
+          if (rule.missing !== "ignore") policyFindings.push(finding(dimension, "UNKNOWN", "BMCS_REQUIRED_EVIDENCE_MISSING", `${rule.target} is missing from the source or target contract.`));
+          continue;
+        }
+        const [allowed] = compareValue(rule, left, right, bundle, snapshots);
+        policyFindings.push(finding(dimension, allowed ? "DIRECT_COMPATIBLE" : "INCOMPATIBLE", allowed ? "BMCS_RULE_SATISFIED" : rule.reason_code as string, `${rule.target}: '${rule.operator}' policy check ${allowed ? "passed" : "failed"}.`, allowed ? undefined : { source: left, target: right }));
+        continue;
+      }
       if (left === undefined || right === undefined) {
         if (rule.missing === "ignore") continue;
         unknown = true;
@@ -775,6 +836,7 @@ export function compareContracts(source: JsonObject | null, target: JsonObject |
     status,
     policy_decision: (["LOSSY_CONVERSION_REQUIRES_APPROVAL", "INFERENCE_MODEL_REQUIRED", "CONDITIONAL"].includes(status) ? "APPROVAL_REQUIRED" : ["INCOMPATIBLE", "UNKNOWN"].includes(status) ? "BLOCK" : "ALLOW") as "ALLOW" | "APPROVAL_REQUIRED" | "BLOCK",
     findings,
+    policy_findings: policyFindings,
     ...((snapshotRefs.ontology.length || snapshotRefs.mappings.length) ? { snapshots: snapshotRefs } : {}),
   };
   return { ...partial, digest: digest(partial) };

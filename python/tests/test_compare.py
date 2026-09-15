@@ -158,3 +158,34 @@ def test_pinned_ontology_and_mapping_snapshots_are_enforced():
     assert merged["policy_decision"] == "APPROVAL_REQUIRED"
     # The same merging snapshot cannot satisfy a bijective requirement at all.
     assert _rule_report("mapping-bijective", ["A", "B"], ["1"], parameters=merge_parameters, mappings=[merging])["status"] == "INCOMPATIBLE"
+
+
+def test_a_namespace_release_change_is_a_mapping_not_a_contradiction():
+    # Decision D7. Two releases of one namespace are not a contradiction: identifiers are retired
+    # and merged between releases, so what matters is what the transition did.
+    def snapshot(transitions):
+        unsigned = {
+            "ref": "https://biosimulant.com/snapshots/ensembl-releases/v1",
+            "namespace": "ensembl",
+            "transitions": transitions,
+        }
+        signed = {**unsigned, "sha256": digest(unsigned)}
+        return signed, {"snapshot_ref": signed["ref"], "snapshot_sha256": signed["sha256"]}
+
+    clean, clean_parameters = snapshot(
+        [{"from": "110", "to": "114", "identifiers_retired": 0, "identifiers_merged": 0}]
+    )
+    lossy, lossy_parameters = snapshot(
+        [{"from": "110", "to": "114", "identifiers_retired": 12, "identifiers_merged": 3}]
+    )
+
+    # A transition that retired and merged nothing preserves every identifier.
+    assert _rule_report("namespace-version-compatible", "110", "114", parameters=clean_parameters, mappings=[clean])["status"] == "LOSSLESS_CONVERSION_AVAILABLE"
+    # One that retired or merged identifiers is a real loss and needs approval.
+    approval = _rule_report("namespace-version-compatible", "110", "114", parameters=lossy_parameters, mappings=[lossy])
+    assert approval["status"] == "LOSSY_CONVERSION_REQUIRES_APPROVAL"
+    assert approval["policy_decision"] == "APPROVAL_REQUIRED"
+    # Without a pinned snapshot nobody can say, which is undecidable rather than a mismatch.
+    assert _rule_report("namespace-version-compatible", "110", "114")["status"] == "UNKNOWN"
+    # A snapshot that says nothing about this pair of releases decides nothing either.
+    assert _rule_report("namespace-version-compatible", "110", "999", parameters=clean_parameters, mappings=[clean])["status"] == "UNKNOWN"

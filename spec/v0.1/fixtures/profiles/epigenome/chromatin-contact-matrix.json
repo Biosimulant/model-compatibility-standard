@@ -7,8 +7,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -31,8 +37,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "origin": {
@@ -54,8 +66,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -75,8 +93,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -98,8 +122,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -126,8 +156,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -146,8 +182,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -169,8 +211,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -187,8 +235,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -210,8 +264,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -230,8 +290,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -249,8 +315,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -273,8 +345,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -301,8 +379,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -321,8 +405,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -344,8 +434,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -363,8 +459,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -386,8 +488,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -406,8 +514,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -471,8 +585,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin",
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            },
             "different"
           ]
         },
@@ -492,8 +612,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -530,8 +656,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -553,8 +685,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -589,8 +727,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -613,8 +757,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -641,8 +791,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -661,8 +817,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -684,8 +846,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -703,8 +871,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -726,8 +900,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -746,8 +926,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -764,8 +950,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -789,8 +981,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -817,8 +1015,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -837,8 +1041,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -858,8 +1068,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -878,8 +1094,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -901,8 +1123,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -919,8 +1147,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -940,8 +1174,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -964,8 +1204,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -992,8 +1238,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -1012,8 +1264,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -1035,8 +1293,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -1054,8 +1318,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -1077,8 +1347,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -1097,8 +1373,14 @@
         },
         "dimensions": {
           "axes": [
-            "genomic_bin",
-            "genomic_bin"
+            {
+              "meaning": "First genomic bin",
+              "name": "genomic_bin"
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": "genomic_bin"
+            }
           ]
         },
         "representation": {
@@ -1109,6 +1391,66 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/chromatin-contact-matrix"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "First genomic bin"
+            },
+            {
+              "meaning": "Second genomic bin"
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/chromatin-contact-matrix"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "First genomic bin",
+              "name": 7
+            },
+            {
+              "meaning": "Second genomic bin",
+              "name": 7
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "reference_assembly": "example-reference-assembly"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epigenome/chromatin-contact-matrix"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/chromatin-contact-matrix/v0.1"

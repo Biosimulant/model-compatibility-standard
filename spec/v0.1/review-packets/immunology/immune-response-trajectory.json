@@ -23,7 +23,6 @@
     "dimensions.axes[].labels_ref",
     "dimensions.axes[].labels_sha256",
     "dimensions.axes[].meaning",
-    "dimensions.axes[].name",
     "dimensions.axes[].ordering",
     "dimensions.axes[].size",
     "dimensions.axes[].unit",
@@ -90,15 +89,18 @@
       "negative-value-invalid-representation-kind",
       "negative-value-invalid-dimensions-axes",
       "negative-value-invalid-representation-ordering",
-      "negative-value-invalid-biological-context-species"
+      "negative-value-invalid-biological-context-species",
+      "negative-value-invalid-dimensions-axes-name"
     ],
     "negative": [
       "negative-required-missing-semantic-concept",
       "negative-required-missing-representation-kind",
       "negative-required-missing-dimensions-axes",
       "negative-required-missing-representation-ordering",
-      "negative-required-missing-biological-context-species"
+      "negative-required-missing-biological-context-species",
+      "negative-required-missing-dimensions-axes-name"
     ],
+    "policy": [],
     "positive": [
       "positive"
     ],
@@ -143,14 +145,16 @@
     "negative-value-invalid-biological-context-species",
     "comparison-incompatible-biological-context-species",
     "comparison-unknown-biological-context-species",
-    "comparison-unknown-target-biological-context-species"
+    "comparison-unknown-target-biological-context-species",
+    "negative-required-missing-dimensions-axes-name",
+    "negative-value-invalid-dimensions-axes-name"
   ],
   "internal_quality_errors": [],
   "label": "Immune Response Trajectory",
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/immune-response-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/immune-response-trajectory/v0.1",
-  "profile_sha256": "sha256:66b8d64649945cb9f712bac70e880c8eb739f8c9fcf5962c3511f62c41e2569e",
+  "profile_sha256": "sha256:ba00462e1f3611388546cf24d12271da5958059e936595ba7b5e5220ef6a53e8",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -168,6 +172,7 @@
   },
   "proposed_comparison_rules": [
     {
+      "layer": "technical",
       "missing": "unknown",
       "operator": "equal",
       "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
@@ -176,6 +181,7 @@
       "target": "/contract/semantic/concept"
     },
     {
+      "layer": "technical",
       "missing": "unknown",
       "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
@@ -184,6 +190,7 @@
       "target": "/contract/representation"
     },
     {
+      "layer": "technical",
       "missing": "unknown",
       "operator": "labels-equal",
       "reason_code": "BMCS_DIMENSIONS_AXES_MISMATCH",
@@ -192,6 +199,7 @@
       "target": "/contract/dimensions/axes"
     },
     {
+      "layer": "technical",
       "missing": "unknown",
       "operator": "equal",
       "reason_code": "BMCS_REPRESENTATION_ORDERING_MISMATCH",
@@ -200,6 +208,7 @@
       "target": "/contract/representation/ordering"
     },
     {
+      "layer": "technical",
       "missing": "unknown",
       "operator": "context-compatible",
       "reason_code": "BMCS_BIOLOGICAL_CONTEXT_SPECIES_MISMATCH",
@@ -208,6 +217,7 @@
       "target": "/contract/biological_context/species"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "unit-convertible",
       "reason_code": "BMCS_MEASUREMENT_UNIT_MISMATCH",
@@ -216,6 +226,7 @@
       "target": "/contract/measurement/unit"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "equal",
       "reason_code": "BMCS_MEASUREMENT_SCALE_MISMATCH",
@@ -224,6 +235,7 @@
       "target": "/contract/measurement/scale"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "equal",
       "reason_code": "BMCS_MEASUREMENT_TRANSFORM_MISMATCH",
@@ -232,6 +244,7 @@
       "target": "/contract/measurement/transform"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "equal",
       "reason_code": "BMCS_MEASUREMENT_QUANTITY_MISMATCH",
@@ -240,6 +253,7 @@
       "target": "/contract/measurement/quantity"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "equal",
       "reason_code": "BMCS_MEASUREMENT_NORMALIZATION_MISMATCH",
@@ -248,6 +262,7 @@
       "target": "/contract/measurement/normalization"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "equal",
       "reason_code": "BMCS_MEASUREMENT_BASELINE_MISMATCH",
@@ -256,6 +271,7 @@
       "target": "/contract/measurement/baseline"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "equal",
       "reason_code": "BMCS_MEASUREMENT_AGGREGATION_MISMATCH",
@@ -264,6 +280,7 @@
       "target": "/contract/measurement/aggregation"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "equal",
       "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_MISMATCH",
@@ -272,14 +289,16 @@
       "target": "/contract/identifiers/namespace"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
-      "operator": "equal",
+      "operator": "namespace-version-compatible",
       "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
       "severity": "error",
       "source": "/contract/identifiers/namespace_version",
       "target": "/contract/identifiers/namespace_version"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "equal",
       "reason_code": "BMCS_REPRESENTATION_FEATURE_SPACE_MISMATCH",
@@ -288,6 +307,7 @@
       "target": "/contract/representation/feature_space"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "equal",
       "reason_code": "BMCS_REPRESENTATION_REFERENCE_ASSEMBLY_MISMATCH",
@@ -296,6 +316,7 @@
       "target": "/contract/representation/reference_assembly"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "equal",
       "reason_code": "BMCS_REPRESENTATION_COORDINATE_SYSTEM_MISMATCH",
@@ -304,6 +325,7 @@
       "target": "/contract/representation/coordinate_system"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "equal",
       "reason_code": "BMCS_LIFECYCLE_TIME_UNIT_MISMATCH",
@@ -312,6 +334,7 @@
       "target": "/contract/lifecycle/time_unit"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "equal",
       "reason_code": "BMCS_LIFECYCLE_TEMPORAL_MEANING_MISMATCH",
@@ -320,6 +343,7 @@
       "target": "/contract/lifecycle/temporal_meaning"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "equal",
       "reason_code": "BMCS_ORIGIN_TYPE_MISMATCH",
@@ -328,6 +352,7 @@
       "target": "/contract/origin/type"
     },
     {
+      "layer": "technical",
       "missing": "ignore",
       "operator": "context-compatible",
       "reason_code": "BMCS_BIOLOGICAL_CONTEXT_COMPARTMENT_MISMATCH",
@@ -447,6 +472,15 @@
             "pattern": "^NCBITaxon:[1-9][0-9]*$"
           }
         ],
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "dimensions.axes[].name",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
         "type": "string"
       }
     }

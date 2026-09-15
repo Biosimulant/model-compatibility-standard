@@ -10,7 +10,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -43,7 +46,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -75,7 +81,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -105,7 +114,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -137,7 +149,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -174,7 +189,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -203,7 +221,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -235,7 +256,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -262,7 +286,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -294,7 +321,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -323,7 +353,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -351,7 +384,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -384,7 +420,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -421,7 +460,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -450,7 +492,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -482,7 +527,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -510,7 +558,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -542,7 +593,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -571,7 +625,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -666,7 +723,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration",
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            },
             "different"
           ],
           "dose_axis": "example-dose-axis"
@@ -696,7 +756,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -754,7 +817,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -786,7 +852,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -842,7 +911,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -875,7 +947,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -912,7 +987,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -941,7 +1019,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -973,7 +1054,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1001,7 +1085,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1033,7 +1120,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1062,7 +1152,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1091,7 +1184,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1124,7 +1220,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1161,7 +1260,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1190,7 +1292,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1222,7 +1327,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1250,7 +1358,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1282,7 +1393,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1311,7 +1425,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1340,7 +1457,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1373,7 +1493,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1410,7 +1533,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1439,7 +1565,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1471,7 +1600,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1499,7 +1631,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1531,7 +1666,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1560,7 +1698,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1589,7 +1730,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1622,7 +1766,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1659,7 +1806,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1688,7 +1838,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1720,7 +1873,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1748,7 +1904,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1780,7 +1939,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1809,7 +1971,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1837,7 +2002,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1871,7 +2039,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1908,7 +2079,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1937,7 +2111,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1968,7 +2145,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -1997,7 +2177,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2029,7 +2212,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2057,7 +2243,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2087,7 +2276,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2120,7 +2312,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2157,7 +2352,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2186,7 +2384,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2218,7 +2419,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2246,7 +2450,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2278,7 +2485,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2307,7 +2517,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2336,7 +2549,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2369,7 +2585,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2406,7 +2625,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2435,7 +2657,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2467,7 +2692,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2495,7 +2723,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2527,7 +2758,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2556,7 +2790,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2582,7 +2819,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2614,7 +2854,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2652,7 +2895,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2681,7 +2927,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2710,7 +2959,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2739,7 +2991,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2771,7 +3026,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2797,7 +3055,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2827,7 +3088,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ]
         },
         "measurement": {
@@ -2860,7 +3124,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": 7
         },
@@ -2897,7 +3164,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis-different"
         },
@@ -2926,7 +3196,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -2958,7 +3231,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ]
         },
         "measurement": {
@@ -2986,7 +3262,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -3018,7 +3297,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ],
           "dose_axis": "example-dose-axis"
         },
@@ -3047,7 +3329,10 @@
         },
         "dimensions": {
           "axes": [
-            "concentration"
+            {
+              "meaning": "Exposure concentration level",
+              "name": "concentration"
+            }
           ]
         },
         "measurement": {
@@ -3065,6 +3350,79 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/pharmacology/concentration-response-curve"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "intervention": [
+            "example-intervention"
+          ],
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Exposure concentration level"
+            }
+          ],
+          "dose_axis": "example-dose-axis"
+        },
+        "measurement": {
+          "control": "example-control",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/proportion",
+          "response_direction": "example-response-direction",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/pharmacology/concentration-response-curve"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "intervention": [
+            "example-intervention"
+          ],
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Exposure concentration level",
+              "name": 7
+            }
+          ],
+          "dose_axis": "example-dose-axis"
+        },
+        "measurement": {
+          "control": "example-control",
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/proportion",
+          "response_direction": "example-response-direction",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/pharmacology/concentration-response-curve"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/concentration-response-curve/v0.1"

@@ -4,7 +4,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -24,7 +27,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -43,7 +49,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -60,7 +69,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -79,7 +91,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -103,7 +118,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -119,7 +137,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -138,7 +159,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -152,7 +176,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -171,7 +198,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -187,7 +217,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -202,7 +235,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -222,7 +258,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -246,7 +285,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -262,7 +304,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -281,7 +326,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -296,7 +344,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -315,7 +366,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -331,7 +385,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -386,7 +443,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature",
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            },
             "different"
           ]
         },
@@ -403,7 +463,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -434,7 +497,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -453,7 +519,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -482,7 +551,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -502,7 +574,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -526,7 +601,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -542,7 +620,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -561,7 +642,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -576,7 +660,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -595,7 +682,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -611,7 +701,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -627,7 +720,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -647,7 +743,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -671,7 +770,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -687,7 +789,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -706,7 +811,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -721,7 +829,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -740,7 +851,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -756,7 +870,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -767,6 +884,53 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-vector"
         }
       }
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule"
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "sparsity": "dense"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One feature; absent entries follow the declared sparsity rule",
+              "name": 7
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "sparsity": "dense"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/core/sparse-vector/v0.1"

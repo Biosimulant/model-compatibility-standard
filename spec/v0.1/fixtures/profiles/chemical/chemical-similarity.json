@@ -441,8 +441,7 @@
     },
     {
       "field": "identifiers.namespace_version",
-      "name": "comparison-incompatible-identifiers-namespace-version",
-      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
+      "name": "comparison-unknown-no-snapshot-identifiers-namespace-version",
       "source": {
         "identifiers": {
           "namespace": "example-namespace",
@@ -455,7 +454,7 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/chemical-similarity"
         }
       },
-      "status": "INCOMPATIBLE",
+      "status": "UNKNOWN",
       "target": {
         "identifiers": {
           "namespace": "example-namespace",

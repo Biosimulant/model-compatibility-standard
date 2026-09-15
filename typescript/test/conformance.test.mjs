@@ -23,7 +23,11 @@ test("the full external-review fixture set passes for every profile", () => {
     // Count the lossless cases rather than test that any exist: a profile can now carry both a unit
     // conversion and a representation re-encoding (decision D6).
     const lossless = Object.keys(cases).filter((name) => name.startsWith("comparison-lossless")).length;
-    const expectedCount = 2 + (5 * required.length) + lossless;
+    // A requirement addressing every member of an array is validated, not compared: no pointer means
+    // "each element", so it carries the two negative fixtures and none of the three comparison ones
+    // (decision D9).
+    const memberRequired = required.filter((item) => String(item.path).includes("[]")).length;
+    const expectedCount = 2 + (5 * (required.length - memberRequired)) + (2 * memberRequired) + lossless;
     assert.equal(fixture.cases.length, expectedCount, fixture.profile_ref);
     const positive = cases.positive;
     assert.deepEqual(validateContract(positive.contract, [fixture.profile_ref]), [], fixture.profile_ref);
@@ -249,4 +253,28 @@ test("the term registry is published and version independent", () => {
   assert.ok(registry.terms.every((term) => term.label && term.definition));
   // External terms are an honest absence until a reviewer decides per profile (erratum E3).
   assert.ok(registry.terms.every((term) => Array.isArray(term.external_terms) && term.external_terms.length === 0));
+});
+
+
+test("a namespace release change is a mapping, not a contradiction", () => {
+  // Decision D7. Two releases of one namespace are not a contradiction: identifiers are retired and
+  // merged between releases, so what matters is what the transition did.
+  const snapshot = (transitions) => {
+    const unsigned = { ref: "https://biosimulant.com/snapshots/ensembl-releases/v1", namespace: "ensembl", transitions };
+    const signed = { ...unsigned, sha256: digest(unsigned) };
+    return [signed, { snapshot_ref: signed.ref, snapshot_sha256: signed.sha256 }];
+  };
+  const [clean, cleanParameters] = snapshot([{ from: "110", to: "114", identifiers_retired: 0, identifiers_merged: 0 }]);
+  const [lossy, lossyParameters] = snapshot([{ from: "110", to: "114", identifiers_retired: 12, identifiers_merged: 3 }]);
+
+  // A transition that retired and merged nothing preserves every identifier.
+  assert.equal(ruleReport("namespace-version-compatible", "110", "114", { parameters: cleanParameters, mappings: [clean] }).status, "LOSSLESS_CONVERSION_AVAILABLE");
+  // One that retired or merged identifiers is a real loss and needs approval.
+  const approval = ruleReport("namespace-version-compatible", "110", "114", { parameters: lossyParameters, mappings: [lossy] });
+  assert.equal(approval.status, "LOSSY_CONVERSION_REQUIRES_APPROVAL");
+  assert.equal(approval.policy_decision, "APPROVAL_REQUIRED");
+  // Without a pinned snapshot nobody can say, which is undecidable rather than a mismatch.
+  assert.equal(ruleReport("namespace-version-compatible", "110", "114").status, "UNKNOWN");
+  // A snapshot that says nothing about this pair of releases decides nothing either.
+  assert.equal(ruleReport("namespace-version-compatible", "110", "999", { parameters: cleanParameters, mappings: [clean] }).status, "UNKNOWN");
 });

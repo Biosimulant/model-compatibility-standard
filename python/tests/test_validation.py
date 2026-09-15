@@ -27,7 +27,11 @@ def test_full_external_review_fixture_set_for_every_profile():
         # Count the lossless cases rather than test that any exist: a profile can now carry both a
         # unit conversion and a representation re-encoding (decision D6).
         lossless = sum(1 for case in cases if case.startswith("comparison-lossless"))
-        expected_count = 2 + (5 * len(required)) + lossless
+        # A requirement addressing every member of an array is validated, not compared: no pointer
+        # means "each element", so it carries the two negative fixtures and none of the three
+        # comparison ones (decision D9).
+        member_required = [item for item in required if "[]" in item["path"]]
+        expected_count = 2 + (5 * (len(required) - len(member_required))) + (2 * len(member_required)) + lossless
         assert len(cases) == expected_count, ref
         positive = cases["positive"]
         assert validate_contract(positive["contract"], [ref]) == [], ref

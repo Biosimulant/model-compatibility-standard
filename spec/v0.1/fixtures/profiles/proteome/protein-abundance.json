@@ -818,8 +818,7 @@
     },
     {
       "field": "identifiers.namespace_version",
-      "name": "comparison-incompatible-identifiers-namespace-version",
-      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
+      "name": "comparison-unknown-no-snapshot-identifiers-namespace-version",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
@@ -845,7 +844,7 @@
           "missingness": "example-missingness"
         }
       },
-      "status": "INCOMPATIBLE",
+      "status": "UNKNOWN",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"

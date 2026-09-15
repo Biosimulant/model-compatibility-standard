@@ -4,7 +4,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -25,7 +28,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -45,7 +51,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -63,7 +72,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -83,7 +95,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -108,7 +123,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -125,7 +143,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -145,7 +166,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -160,7 +184,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -180,7 +207,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -197,7 +227,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -213,7 +246,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -234,7 +270,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -259,7 +298,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -276,7 +318,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -296,7 +341,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -312,7 +360,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -332,7 +383,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -349,7 +403,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -408,7 +465,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature",
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            },
             "different"
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
@@ -426,7 +486,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -460,7 +523,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -480,7 +546,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -512,7 +581,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -533,7 +605,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -558,7 +633,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -575,7 +653,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -595,7 +676,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -611,7 +695,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -631,7 +718,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -648,7 +738,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -665,7 +758,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -686,7 +782,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": 7,
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -711,7 +810,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref-different",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -728,7 +830,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -748,7 +853,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -764,7 +872,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -784,7 +895,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -801,7 +915,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -818,7 +935,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -839,7 +959,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": 7
@@ -864,7 +987,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000-different"
@@ -881,7 +1007,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -901,7 +1030,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -917,7 +1049,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -937,7 +1072,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -954,7 +1092,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One labelled feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -966,6 +1107,55 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/labelled-vector"
         }
       }
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One labelled feature"
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/labelled-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One labelled feature",
+              "name": 7
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/labelled-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/core/labelled-vector/v0.1"

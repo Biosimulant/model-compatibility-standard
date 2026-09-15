@@ -7,7 +7,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -35,7 +38,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -62,7 +68,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -87,7 +96,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -114,7 +126,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -146,7 +161,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -170,7 +188,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -197,7 +218,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -219,7 +243,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -246,7 +273,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -270,7 +300,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -293,7 +326,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -321,7 +357,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -353,7 +392,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -377,7 +419,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -404,7 +449,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -427,7 +475,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -454,7 +505,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -478,7 +532,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -558,7 +615,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature",
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            },
             "different"
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
@@ -583,7 +643,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -631,7 +694,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -658,7 +724,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -704,7 +773,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -732,7 +804,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -764,7 +839,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -788,7 +866,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -815,7 +896,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -838,7 +922,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -865,7 +952,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -889,7 +979,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -913,7 +1006,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -941,7 +1037,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -973,7 +1072,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -997,7 +1099,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1024,7 +1129,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1047,7 +1155,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1074,7 +1185,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1098,7 +1212,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1122,7 +1239,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1150,7 +1270,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1174,15 +1297,17 @@
     },
     {
       "field": "identifiers.namespace_version",
-      "name": "comparison-incompatible-identifiers-namespace-version",
-      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
+      "name": "comparison-unknown-no-snapshot-identifiers-namespace-version",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1199,14 +1324,17 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/genome/gene-mutation-vector"
         }
       },
-      "status": "INCOMPATIBLE",
+      "status": "UNKNOWN",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1233,7 +1361,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1256,7 +1387,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1283,7 +1417,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1307,7 +1444,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1329,7 +1469,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1358,7 +1501,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1390,7 +1536,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1414,7 +1563,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1439,7 +1591,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1463,7 +1618,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1490,7 +1648,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1512,7 +1673,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1537,7 +1701,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -1565,7 +1732,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": 7,
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1597,7 +1767,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref-different",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1621,7 +1794,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1648,7 +1824,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -1671,7 +1850,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1698,7 +1880,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1722,7 +1907,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -1746,7 +1934,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1774,7 +1965,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": 7
@@ -1806,7 +2000,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000-different"
@@ -1830,7 +2027,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1857,7 +2057,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1880,7 +2083,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1907,7 +2113,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1931,7 +2140,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One gene",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1947,6 +2159,69 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/genome/gene-mutation-vector"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One gene"
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/genome/gene-mutation-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One gene",
+              "name": 7
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/genome/gene-mutation-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/gene-mutation-vector/v0.1"

@@ -1651,7 +1651,7 @@
     },
     {
       "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
-      "comparison_operator": "equal",
+      "comparison_operator": "namespace-version-compatible",
       "family": "identifiers",
       "json_schema": {
         "maxLength": 4096,

@@ -76,18 +76,25 @@ it reports `LOSSLESS_CONVERSION_AVAILABLE` rather than `DIRECT_COMPATIBLE`. This
 BMCS-SCI-002. The coverage lives in the operator tests of both languages rather than in a profile
 fixture, because a `compare` case in the scientific-checks file cannot carry a pinned snapshot.
 
-**Deferred: a namespace version change as a mapping.** The recommendation above says Ensembl 110 to
-114 is itself a mapping, and the reasoning is right — identifiers are retired and merged between
-releases, so calling two releases a flat contradiction asserts knowledge nobody has. It is not
-implemented, for a concrete reason: `mapping-total` requires list-valued feature universes and
-returns false immediately for anything else, while `identifiers.namespace_version` is a scalar
-string. Reusing it would give UNKNOWN when no snapshot exists, which is right by accident, and
-INCOMPATIBLE whenever a snapshot *is* pinned, which is wrong. Doing it properly needs a new operator
-and a release-transition snapshot format that does not exist yet. The change would also reach
-further than it looks: `identifiers.namespace` and `namespace_version` each carry 650 comparison
-rules, not the ~100 that require them, because `COMPARED_WHEN_BOTH_DECLARE` emits them everywhere,
-and roughly 101 generated fixtures would move from `comparison-incompatible-*` to
-`comparison-unknown-no-snapshot-*`.
+**Implemented: a namespace version change is a mapping.** Ensembl 110 against 114 was a flat
+contradiction, which asserts knowledge nobody has — identifiers are retired and merged between
+releases, so the question is what the transition did. `mapping-total` could not answer it: it
+requires list-valued feature universes and returns false for anything else, while
+`identifiers.namespace_version` is a scalar. A `namespace-version-compatible` operator now decides
+it against a pinned release-transition snapshot, whose format the standard publishes as
+`namespace-transition-snapshot.schema.json`:
+
+| Situation | Status |
+|---|---|
+| Same release | direct match |
+| Transition pinned, nothing retired or merged | `LOSSLESS_CONVERSION_AVAILABLE` |
+| Transition pinned, identifiers retired or merged | `LOSSY_CONVERSION_REQUIRES_APPROVAL` |
+| No snapshot, or a snapshot silent on this pair | `UNKNOWN` |
+
+The change reaches all 650 profiles, because `identifiers.namespace_version` carries a rule
+everywhere through `COMPARED_WHEN_BOTH_DECLARE`, not only in the ~100 that require it. Generated
+`comparison-unknown-no-snapshot-*` fixtures rose from 10 to 123 accordingly, since a differing
+release with no pinned transition is now absent evidence rather than a contradiction.
 
 **Still open, and per-profile.** `identifiers.mapping_refs[]` becoming required wherever a mapping is
 applied stays review work: `mapping_refs`, `unmapped_handling` and `ambiguity_handling` are each

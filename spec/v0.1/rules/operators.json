@@ -18,7 +18,8 @@
     "mapping-bijective",
     "context-compatible",
     "digest-equal",
-    "representation-equivalent"
+    "representation-equivalent",
+    "namespace-version-compatible"
   ],
   "standard": "https://biosimulant.com/standards/model-compatibility/v0.1"
 }

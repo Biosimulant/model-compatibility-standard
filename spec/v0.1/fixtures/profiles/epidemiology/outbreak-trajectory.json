@@ -7,7 +7,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -38,7 +41,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -68,7 +74,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -96,7 +105,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -126,7 +138,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -161,7 +176,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -188,7 +206,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -218,7 +239,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -243,7 +267,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -273,7 +300,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -300,7 +330,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -326,7 +359,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -357,7 +393,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -392,7 +431,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -419,7 +461,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -449,7 +494,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -475,7 +523,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -505,7 +556,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -532,7 +586,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -620,7 +677,10 @@
         },
         "dimensions": {
           "axes": [
-            "time",
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            },
             "different"
           ]
         },
@@ -648,7 +708,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -701,7 +764,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -731,7 +797,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -782,7 +851,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -813,7 +885,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -848,7 +923,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -875,7 +953,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -905,7 +986,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -931,7 +1015,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -961,7 +1048,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -988,7 +1078,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1013,7 +1106,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1045,7 +1141,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1080,7 +1179,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1107,7 +1209,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1135,7 +1240,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1162,7 +1270,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1192,7 +1303,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1217,7 +1331,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1245,7 +1362,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1274,7 +1394,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1299,15 +1422,17 @@
     },
     {
       "field": "security.data_use",
-      "name": "comparison-incompatible-security-data-use",
-      "reason_code": "BMCS_SECURITY_DATA_USE_MISMATCH",
+      "name": "comparison-policy-security-data-use",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1328,14 +1453,17 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/outbreak-trajectory"
         }
       },
-      "status": "INCOMPATIBLE",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1358,14 +1486,17 @@
     },
     {
       "field": "security.data_use",
-      "name": "comparison-unknown-security-data-use",
+      "name": "comparison-policy-missing-security-data-use",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1382,14 +1513,17 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/outbreak-trajectory"
         }
       },
-      "status": "UNKNOWN",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1412,14 +1546,17 @@
     },
     {
       "field": "security.data_use",
-      "name": "comparison-unknown-target-security-data-use",
+      "name": "comparison-policy-missing-target-security-data-use",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1439,14 +1576,17 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/outbreak-trajectory"
         }
       },
-      "status": "UNKNOWN",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1471,7 +1611,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1502,7 +1645,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1529,15 +1675,17 @@
     },
     {
       "field": "security.consent_scope",
-      "name": "comparison-incompatible-security-consent-scope",
-      "reason_code": "BMCS_SECURITY_CONSENT_SCOPE_MISMATCH",
+      "name": "comparison-policy-security-consent-scope",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1557,14 +1705,17 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/outbreak-trajectory"
         }
       },
-      "status": "INCOMPATIBLE",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1587,14 +1738,17 @@
     },
     {
       "field": "security.consent_scope",
-      "name": "comparison-unknown-security-consent-scope",
+      "name": "comparison-policy-missing-security-consent-scope",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1613,14 +1767,17 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/outbreak-trajectory"
         }
       },
-      "status": "UNKNOWN",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1643,14 +1800,17 @@
     },
     {
       "field": "security.consent_scope",
-      "name": "comparison-unknown-target-security-consent-scope",
+      "name": "comparison-policy-missing-target-security-consent-scope",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1670,14 +1830,17 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/outbreak-trajectory"
         }
       },
-      "status": "UNKNOWN",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1704,7 +1867,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {},
@@ -1734,7 +1900,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1769,7 +1938,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1796,7 +1968,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1826,7 +2001,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {},
@@ -1851,7 +2029,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1881,7 +2062,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {
@@ -1908,7 +2092,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Reporting interval",
+              "name": "time"
+            }
           ]
         },
         "lifecycle": {},
@@ -1926,6 +2113,75 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/outbreak-trajectory"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Reporting interval"
+            }
+          ]
+        },
+        "lifecycle": {
+          "observation_period": "example-observation-period"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/outbreak-trajectory"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Reporting interval",
+              "name": 7
+            }
+          ]
+        },
+        "lifecycle": {
+          "observation_period": "example-observation-period"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/outbreak-trajectory"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/outbreak-trajectory/v0.1"

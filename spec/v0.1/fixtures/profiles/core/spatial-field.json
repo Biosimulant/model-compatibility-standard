@@ -4,8 +4,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -25,8 +31,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -45,8 +57,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -63,8 +81,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -83,8 +107,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -108,8 +138,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -125,8 +161,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -145,8 +187,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -160,8 +208,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -180,8 +234,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -197,8 +257,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -213,8 +279,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -234,8 +306,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -259,8 +337,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -276,8 +360,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -296,8 +386,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -312,8 +408,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -332,8 +434,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -349,8 +457,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -406,8 +520,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y",
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            },
             "different"
           ],
           "pixel_spacing": "example-pixel-spacing"
@@ -424,8 +544,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -457,8 +583,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -477,8 +609,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -508,8 +646,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -529,8 +673,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -554,8 +704,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -571,8 +727,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -591,8 +753,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -607,8 +775,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -627,8 +801,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -644,8 +824,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -661,8 +847,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -682,8 +874,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": 7
         },
@@ -707,8 +905,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing-different"
         },
@@ -724,8 +928,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -744,8 +954,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -760,8 +976,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -780,8 +1002,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ],
           "pixel_spacing": "example-pixel-spacing"
         },
@@ -797,8 +1025,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "x",
-            "y"
+            {
+              "meaning": "First spatial axis",
+              "name": "x"
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": "y"
+            }
           ]
         },
         "representation": {
@@ -809,6 +1043,60 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/spatial-field"
         }
       }
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "First spatial axis"
+            },
+            {
+              "meaning": "Second spatial axis"
+            }
+          ],
+          "pixel_spacing": "example-pixel-spacing"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/spatial-field"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "First spatial axis",
+              "name": 7
+            },
+            {
+              "meaning": "Second spatial axis",
+              "name": 7
+            }
+          ],
+          "pixel_spacing": "example-pixel-spacing"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/spatial-field"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/core/spatial-field/v0.1"

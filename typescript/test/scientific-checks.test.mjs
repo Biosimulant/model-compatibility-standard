@@ -104,6 +104,8 @@ function violations(entry) {
     if ("status" in expect && report.status !== expect.status) found.push(`status ${report.status}, expected ${expect.status}`);
     if ((expect.status_not_in ?? []).includes(report.status)) found.push(`status ${report.status} ${NOT_A_MATCH}`);
     if ("policy_decision_not" in expect && report.policy_decision === expect.policy_decision_not) found.push(`policy decision ${report.policy_decision} ${NOT_A_MATCH}`);
+    // Decision D12: a governance outcome is reported separately from the technical findings.
+    if ("policy_finding_reason_code" in expect && !(report.policy_findings ?? []).some((item) => item.reason_code === expect.policy_finding_reason_code)) found.push(`no policy finding ${expect.policy_finding_reason_code}`);
   } else if (entry.check === "validate") {
     const errors = validateContract(contractFor(entry, "source"), [ref(entry.profile)]).filter((item) => item.severity === "error");
     if (expect.error_findings === "at-least-one" && errors.length === 0) found.push("contract validated with no error finding");

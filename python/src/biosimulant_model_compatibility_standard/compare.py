@@ -213,6 +213,30 @@ def _evaluate(
             # The source declares no context. That is absent evidence, not a contradiction (D5).
             return (True, None) if target in (None, "any", "unspecified") else (False, "unsupported")
         return source == target or target in (None, "any", "unspecified"), None
+    if operator == "namespace-version-compatible":
+        # Decision D7. Two releases of one namespace are not a contradiction. Identifiers are
+        # retired and merged between releases, so what matters is what the transition did, and
+        # without a pinned release-transition snapshot nobody can say: that is undecidable, not a
+        # mismatch. A transition that retired and merged nothing preserves every identifier; one
+        # that did either is a real loss and needs approval.
+        if source == target:
+            return True, None
+        snapshot = _snapshot_for(rule, mapping_snapshots)
+        if snapshot is None:
+            return False, "unsupported"
+        for transition in snapshot.get("transitions", []):
+            if not isinstance(transition, dict):
+                continue
+            if str(transition.get("from")) != str(source) or str(transition.get("to")) != str(target):
+                continue
+            retired = transition.get("identifiers_retired", 0) or 0
+            merged = transition.get("identifiers_merged", 0) or 0
+            if not isinstance(retired, int) or not isinstance(merged, int):
+                return False, "invalid"
+            return True, ("none" if retired == 0 and merged == 0 else "identifier-merge")
+        # The snapshot is pinned but says nothing about this pair of releases.
+        return False, "unsupported"
+
     if operator == "representation-equivalent":
         # Decision D6. Re-encoding dense as sparse preserves the data only when both sides declare,
         # and agree on, what an absent entry means, the ordering, the shape and the dtype.
@@ -349,6 +373,9 @@ def compare_contracts(
     target_contract = _normalised(target_contract, active)
     ontology_index = _verified_snapshots(ontology_snapshots)
     mapping_index = _verified_snapshots(mapping_snapshots)
+    # Decision D12. Consent and data-use outcomes are collected apart from the technical findings,
+    # and every path through this function reports them, including the ones with no rules to run.
+    policy_findings: list[dict[str, Any]] = []
     if source_contract is None or target_contract is None:
         status = "UNKNOWN"
         findings = [_finding("contract", "UNKNOWN", "BMCS_CONTRACT_NOT_DECLARED", "One or both ports have no compatibility contract.")]
@@ -395,6 +422,32 @@ def compare_contracts(
             left = get_pointer(wrapped_source, rule["source"])
             right = get_pointer(wrapped_target, rule["target"])
             dimension = rule["target"].split("/")[2] if len(rule["target"].split("/")) > 2 else "contract"
+            if rule.get("layer") == "policy":
+                # Decision D12. Whether two ports may exchange data under their consent and data-use
+                # terms is a governance outcome, not a statement about whether the data fit
+                # together. It is reported, and the workspace policy stage decides what to do.
+                if left is MISSING or right is MISSING:
+                    if rule.get("missing", "unknown") != "ignore":
+                        policy_findings.append(_finding(dimension, "UNKNOWN", "BMCS_REQUIRED_EVIDENCE_MISSING", f"{rule['target']} is missing from the source or target contract."))
+                    continue
+                allowed, _ = _evaluate(
+                    rule,
+                    left,
+                    right,
+                    active,
+                    ontology_snapshots=ontology_index,
+                    mapping_snapshots=mapping_index,
+                )
+                policy_findings.append(
+                    _finding(
+                        dimension,
+                        "DIRECT_COMPATIBLE" if allowed else "INCOMPATIBLE",
+                        "BMCS_RULE_SATISFIED" if allowed else rule.get("reason_code", "BMCS_VALUE_MISMATCH"),
+                        f"{rule['target']}: '{rule['operator']}' policy check {'passed' if allowed else 'failed'}.",
+                        evidence=None if allowed else {"source": left, "target": right},
+                    )
+                )
+                continue
             if left is MISSING or right is MISSING:
                 behavior = rule.get("missing", "unknown")
                 if behavior == "ignore":
@@ -452,6 +505,7 @@ def compare_contracts(
         "status": status,
         "policy_decision": "APPROVAL_REQUIRED" if status in {"LOSSY_CONVERSION_REQUIRES_APPROVAL", "INFERENCE_MODEL_REQUIRED", "CONDITIONAL"} else ("BLOCK" if status in {"INCOMPATIBLE", "UNKNOWN"} else "ALLOW"),
         "findings": findings,
+        "policy_findings": policy_findings,
     }
     snapshot_refs = {
         "ontology": [

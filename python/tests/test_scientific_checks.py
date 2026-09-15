@@ -130,6 +130,12 @@ def violations(case: dict[str, Any]) -> list[str]:
             found.append(f"status {status} {NOT_A_MATCH}")
         if "policy_decision_not" in expect and policy == expect["policy_decision_not"]:
             found.append(f"policy decision {policy} {NOT_A_MATCH}")
+        if "policy_finding_reason_code" in expect and not any(
+            item.get("reason_code") == expect["policy_finding_reason_code"]
+            for item in report.get("policy_findings", [])
+        ):
+            # Decision D12: a governance outcome is reported separately from the technical findings.
+            found.append(f"no policy finding {expect['policy_finding_reason_code']}")
     elif case["check"] == "validate":
         errors = [f for f in validate_contract(_contract(case, "source"), [_ref(case["profile"])]) if f.severity == "error"]
         if expect.get("error_findings") == "at-least-one" and not errors:

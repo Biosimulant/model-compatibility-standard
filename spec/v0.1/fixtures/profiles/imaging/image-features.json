@@ -7,7 +7,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -33,7 +36,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -56,7 +62,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -79,7 +88,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -104,7 +116,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -134,7 +149,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -156,7 +174,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -181,7 +202,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -201,7 +225,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -226,7 +253,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -248,7 +278,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -269,7 +302,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -295,7 +331,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -325,7 +364,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -347,7 +389,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -372,7 +417,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -393,7 +441,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -418,7 +469,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -440,7 +494,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -514,7 +571,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature",
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            },
             "different"
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
@@ -537,7 +597,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -581,7 +644,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -606,7 +672,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -648,7 +717,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -674,7 +746,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -704,7 +779,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -726,7 +804,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -751,7 +832,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -772,7 +856,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -797,7 +884,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -819,7 +909,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -839,7 +932,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -866,7 +962,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -896,7 +995,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -918,7 +1020,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -941,7 +1046,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -963,7 +1071,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -988,7 +1099,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1008,7 +1122,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1031,7 +1148,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -1057,7 +1177,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": 7
         },
@@ -1087,7 +1210,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref-different"
         },
@@ -1109,7 +1235,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1134,7 +1263,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -1155,7 +1287,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1180,7 +1315,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1202,7 +1340,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -1224,7 +1365,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1249,7 +1393,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1279,7 +1426,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1301,7 +1451,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1326,7 +1479,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1346,7 +1502,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1371,7 +1530,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1393,7 +1555,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One extracted image feature",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1406,6 +1571,65 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/imaging/image-features"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One extracted image feature"
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "origin": {
+          "processing_pipeline_ref": "https://biosimulant.com/standards/model-compatibility/examples/processing-pipeline-ref"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/imaging/image-features"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One extracted image feature",
+              "name": 7
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "origin": {
+          "processing_pipeline_ref": "https://biosimulant.com/standards/model-compatibility/examples/processing-pipeline-ref"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/imaging/image-features"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/image-features/v0.1"

@@ -4,7 +4,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -24,7 +27,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -43,7 +49,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -60,7 +69,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -79,7 +91,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -103,7 +118,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -119,7 +137,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -138,7 +159,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -152,7 +176,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -171,7 +198,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -187,7 +217,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -202,7 +235,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -222,7 +258,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -246,7 +285,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -262,7 +304,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -281,7 +326,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -296,7 +344,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -315,7 +366,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -331,7 +385,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -387,7 +444,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature",
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            },
             "different"
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
@@ -404,7 +464,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -436,7 +499,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -455,7 +521,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -485,7 +554,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -505,7 +577,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -529,7 +604,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -545,7 +623,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -564,7 +645,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -579,7 +663,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -598,7 +685,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -614,7 +704,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -630,7 +723,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -650,7 +746,10 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": 7
         },
@@ -674,7 +773,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref-different"
         },
@@ -690,7 +792,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -709,7 +814,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -724,7 +832,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -743,7 +854,10 @@
       "source": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -759,7 +873,10 @@
       "target": {
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One named parameter",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -770,6 +887,53 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/parameter-vector"
         }
       }
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One named parameter"
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/parameter-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One named parameter",
+              "name": 7
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/simulation/parameter-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/simulation/parameter-vector/v0.1"

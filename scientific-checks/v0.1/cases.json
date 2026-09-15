@@ -913,6 +913,33 @@
       "sources": [
         "obi-2016"
       ]
+    },
+    {
+      "id": "BMCS-SCI-113",
+      "kind": "guard",
+      "check": "compare",
+      "title": "A data-use mismatch is a governance finding, not a technical contradiction",
+      "profile": "clinical/admission-event",
+      "source_patch": {
+        "security": {
+          "data_use": [
+            "DUO:0000004"
+          ]
+        }
+      },
+      "expect": {
+        "status": "DIRECT_COMPATIBLE",
+        "policy_finding_reason_code": "BMCS_SECURITY_DATA_USE_MISMATCH"
+      },
+      "why": "Whether two ports may exchange data under their consent and data-use terms is a governance outcome, not a statement about whether the data fit together. Reporting it as INCOMPATIBLE mixed the workspace-policy stage into the technical result, which INTEGRATIONS.md says to keep apart. The mismatch must still be visible, so it is reported as a policy finding.",
+      "conditions": "The two contracts differ only in security.data_use. The technical status stays DIRECT_COMPATIBLE and the contradiction appears in policy_findings, which is where a workspace policy stage reads it.",
+      "decision": "D12",
+      "report_finding": "S12",
+      "fixed_by": "D12",
+      "fixed_at": "2026-09-15",
+      "sources": [
+        "duo-2021"
+      ]
     }
   ]
 }

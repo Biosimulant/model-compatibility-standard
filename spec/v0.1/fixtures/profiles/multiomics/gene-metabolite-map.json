@@ -7,8 +7,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -47,8 +53,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -86,8 +98,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -123,8 +141,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -162,8 +186,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -206,8 +236,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -242,8 +278,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -281,8 +323,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -315,8 +363,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -354,8 +408,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -390,8 +450,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -425,8 +491,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -465,8 +537,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -509,8 +587,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -545,8 +629,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -584,8 +674,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -619,8 +715,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -658,8 +760,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -694,8 +802,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -807,8 +921,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite",
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            },
             "different"
           ]
         },
@@ -844,8 +964,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -914,8 +1040,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -953,8 +1085,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1021,8 +1159,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1061,8 +1205,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1105,8 +1255,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1141,8 +1297,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1180,8 +1342,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1215,8 +1383,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1254,8 +1428,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1290,8 +1470,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1326,8 +1512,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1366,8 +1558,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1410,8 +1608,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1446,8 +1650,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1485,8 +1695,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1520,8 +1736,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1559,8 +1781,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1595,8 +1823,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1631,8 +1865,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1671,8 +1911,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1707,16 +1953,21 @@
     },
     {
       "field": "identifiers.namespace_version",
-      "name": "comparison-incompatible-identifiers-namespace-version",
-      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
+      "name": "comparison-unknown-no-snapshot-identifiers-namespace-version",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1744,15 +1995,21 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/multiomics/gene-metabolite-map"
         }
       },
-      "status": "INCOMPATIBLE",
+      "status": "UNKNOWN",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1790,8 +2047,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1825,8 +2088,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1864,8 +2133,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1900,8 +2175,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1934,8 +2215,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -1975,8 +2262,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2019,8 +2312,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2055,8 +2354,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2092,8 +2397,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2128,8 +2439,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2167,8 +2484,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2201,8 +2524,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2238,8 +2567,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2267,8 +2602,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2299,8 +2640,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2336,8 +2683,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2375,8 +2728,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2399,8 +2758,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2438,8 +2803,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2474,8 +2845,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2499,8 +2876,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2539,8 +2922,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2582,8 +2971,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2618,8 +3013,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2657,8 +3058,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2692,8 +3099,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2731,8 +3144,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2767,8 +3186,14 @@
         },
         "dimensions": {
           "axes": [
-            "gene",
-            "metabolite"
+            {
+              "meaning": "One gene identifier",
+              "name": "gene"
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": "metabolite"
+            }
           ]
         },
         "identifiers": {
@@ -2795,6 +3220,98 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/multiomics/gene-metabolite-map"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One gene identifier"
+            },
+            {
+              "meaning": "One metabolite identifier"
+            }
+          ]
+        },
+        "identifiers": {
+          "mapping_refs": [
+            {
+              "cardinality": "example-cardinality",
+              "coverage": 1,
+              "license": "example-license",
+              "ref": "https://biosimulant.com/standards/model-compatibility/examples/ref",
+              "release": "example-release",
+              "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+              "source_namespace": "example-source-namespace",
+              "target_namespace": "example-target-namespace"
+            }
+          ],
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version",
+          "unmapped_handling": "example-unmapped-handling"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/multiomics/gene-metabolite-map"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One gene identifier",
+              "name": 7
+            },
+            {
+              "meaning": "One metabolite identifier",
+              "name": 7
+            }
+          ]
+        },
+        "identifiers": {
+          "mapping_refs": [
+            {
+              "cardinality": "example-cardinality",
+              "coverage": 1,
+              "license": "example-license",
+              "ref": "https://biosimulant.com/standards/model-compatibility/examples/ref",
+              "release": "example-release",
+              "sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+              "source_namespace": "example-source-namespace",
+              "target_namespace": "example-target-namespace"
+            }
+          ],
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version",
+          "unmapped_handling": "example-unmapped-handling"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/multiomics/gene-metabolite-map"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/gene-metabolite-map/v0.1"

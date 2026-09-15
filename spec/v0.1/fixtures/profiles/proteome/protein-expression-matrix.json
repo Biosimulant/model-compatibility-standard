@@ -7,8 +7,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -36,8 +42,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -64,8 +76,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -90,8 +108,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -118,8 +142,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -151,8 +181,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -176,8 +212,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -204,8 +246,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -227,8 +275,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -255,8 +309,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -280,8 +340,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -304,8 +370,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -333,8 +405,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -366,8 +444,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -391,8 +475,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -419,8 +509,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -443,8 +539,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -471,8 +573,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -496,8 +604,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -577,8 +691,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature",
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            },
             "different"
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
@@ -603,8 +723,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -652,8 +778,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -680,8 +812,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -727,8 +865,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -756,8 +900,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -789,8 +939,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -814,8 +970,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -842,8 +1004,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -866,8 +1034,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -894,8 +1068,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -919,8 +1099,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -944,8 +1130,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -973,8 +1165,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1006,8 +1204,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1031,8 +1235,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1059,8 +1269,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1083,8 +1299,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1111,8 +1333,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1136,8 +1364,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1161,8 +1395,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1190,8 +1430,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1215,16 +1461,21 @@
     },
     {
       "field": "identifiers.namespace_version",
-      "name": "comparison-incompatible-identifiers-namespace-version",
-      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
+      "name": "comparison-unknown-no-snapshot-identifiers-namespace-version",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1241,15 +1492,21 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-expression-matrix"
         }
       },
-      "status": "INCOMPATIBLE",
+      "status": "UNKNOWN",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1276,8 +1533,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1300,8 +1563,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1328,8 +1597,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1353,8 +1628,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1376,8 +1657,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1406,8 +1693,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1439,8 +1732,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1464,8 +1763,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1490,8 +1795,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1515,8 +1826,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1543,8 +1860,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1566,8 +1889,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1592,8 +1921,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ]
         },
         "identifiers": {
@@ -1621,8 +1956,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": 7
         },
@@ -1654,8 +1995,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref-different"
         },
@@ -1679,8 +2026,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1707,8 +2060,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ]
         },
         "identifiers": {
@@ -1731,8 +2090,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1759,8 +2124,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1784,8 +2155,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ]
         },
         "identifiers": {
@@ -1809,8 +2186,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1838,8 +2221,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1870,8 +2259,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1895,8 +2290,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1923,8 +2324,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1947,8 +2354,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1975,8 +2388,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -2000,8 +2419,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One protein group",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -2017,6 +2442,76 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-expression-matrix"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One biological sample"
+            },
+            {
+              "meaning": "One protein group"
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "identifiers": {
+          "ambiguity_handling": "example-ambiguity-handling",
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-expression-matrix"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One biological sample",
+              "name": 7
+            },
+            {
+              "meaning": "One protein group",
+              "name": 7
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
+        },
+        "identifiers": {
+          "ambiguity_handling": "example-ambiguity-handling",
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-expression-matrix"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-expression-matrix/v0.1"

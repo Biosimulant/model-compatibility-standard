@@ -7,7 +7,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -42,7 +45,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -76,7 +82,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -108,7 +117,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -142,7 +154,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -181,7 +196,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -212,7 +230,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -246,7 +267,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -275,7 +299,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -309,7 +336,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -340,7 +370,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -370,7 +403,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -405,7 +441,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -444,7 +483,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -475,7 +517,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -509,7 +554,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -539,7 +587,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -573,7 +624,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -604,7 +658,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -704,7 +761,10 @@
         },
         "dimensions": {
           "axes": [
-            "time",
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            },
             "different"
           ]
         },
@@ -736,7 +796,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -797,7 +860,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -831,7 +897,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -890,7 +959,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -925,7 +997,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -964,7 +1039,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -995,7 +1073,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1029,7 +1110,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1059,7 +1143,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1093,7 +1180,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1124,7 +1214,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1155,7 +1248,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1190,7 +1286,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1229,7 +1328,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1260,7 +1362,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1294,7 +1399,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1324,7 +1432,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1358,7 +1469,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1389,7 +1503,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1420,7 +1537,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1455,7 +1575,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1486,15 +1609,17 @@
     },
     {
       "field": "identifiers.namespace_version",
-      "name": "comparison-incompatible-identifiers-namespace-version",
-      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
+      "name": "comparison-unknown-no-snapshot-identifiers-namespace-version",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1518,14 +1643,17 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/metabolome/metabolite-time-series"
         }
       },
-      "status": "INCOMPATIBLE",
+      "status": "UNKNOWN",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606"
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1559,7 +1687,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1589,7 +1720,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1623,7 +1757,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1654,7 +1791,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1685,7 +1825,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1720,7 +1863,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1759,7 +1905,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1790,7 +1939,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1824,7 +1976,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1854,7 +2009,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1888,7 +2046,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1919,7 +2080,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1950,7 +2114,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -1985,7 +2152,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2024,7 +2194,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2055,7 +2228,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2089,7 +2265,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2119,7 +2298,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2153,7 +2335,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2184,7 +2369,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2215,7 +2403,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2250,7 +2441,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2289,7 +2483,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2320,7 +2517,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2354,7 +2554,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2384,7 +2587,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2418,7 +2624,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2449,7 +2658,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2478,7 +2690,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2514,7 +2729,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2553,7 +2771,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2584,7 +2805,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2616,7 +2840,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2647,7 +2874,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2681,7 +2911,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2710,7 +2943,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2742,7 +2978,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2777,7 +3016,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2816,7 +3058,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2847,7 +3092,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2881,7 +3129,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2911,7 +3162,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2945,7 +3199,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -2976,7 +3233,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -3007,7 +3267,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -3042,7 +3305,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -3081,7 +3347,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -3112,7 +3381,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -3146,7 +3418,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -3176,7 +3451,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -3210,7 +3488,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -3241,7 +3522,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Sampling time point",
+              "name": "time"
+            }
           ]
         },
         "identifiers": {
@@ -3264,6 +3548,83 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/metabolome/metabolite-time-series"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Sampling time point"
+            }
+          ]
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "lifecycle": {
+          "sampling": "example-sampling",
+          "time_unit": "example-time-unit"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/metabolome/metabolite-time-series"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Sampling time point",
+              "name": 7
+            }
+          ]
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "lifecycle": {
+          "sampling": "example-sampling",
+          "time_unit": "example-time-unit"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
+          "scale": "nominal",
+          "unit": "1"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/metabolome/metabolite-time-series"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/metabolite-time-series/v0.1"

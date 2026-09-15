@@ -7,8 +7,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -34,8 +40,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -60,8 +72,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -84,8 +102,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -110,8 +134,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -141,8 +171,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -164,8 +200,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -190,8 +232,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -211,8 +259,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -237,8 +291,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -260,8 +320,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -282,8 +348,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -309,8 +381,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -340,8 +418,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -363,8 +447,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -389,8 +479,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -411,8 +507,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -437,8 +539,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -460,8 +568,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -534,8 +648,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel",
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            },
             "different"
           ]
         },
@@ -558,8 +678,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -602,8 +728,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -628,8 +760,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -670,8 +808,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -697,8 +841,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -728,8 +878,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -751,8 +907,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -777,8 +939,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -799,8 +967,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -825,8 +999,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -848,8 +1028,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -869,8 +1055,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -897,8 +1089,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -928,8 +1126,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -951,8 +1155,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -975,8 +1185,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -998,8 +1214,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1024,8 +1246,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1045,8 +1273,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1069,8 +1303,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1096,8 +1336,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1127,8 +1373,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1150,8 +1402,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1176,8 +1434,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1198,8 +1462,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1224,8 +1494,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1247,8 +1523,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1270,8 +1552,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1297,8 +1585,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1328,8 +1622,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1351,8 +1651,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1377,8 +1683,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1399,8 +1711,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1425,8 +1743,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1448,8 +1772,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "channel"
+            {
+              "meaning": "Sample at the declared rate",
+              "name": "time"
+            },
+            {
+              "meaning": "One recording channel",
+              "name": "channel"
+            }
           ]
         },
         "lifecycle": {
@@ -1463,6 +1793,72 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/neuroscience/local-field-potential"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Sample at the declared rate"
+            },
+            {
+              "meaning": "One recording channel"
+            }
+          ]
+        },
+        "lifecycle": {
+          "sampling": "example-sampling",
+          "time_unit": "example-time-unit"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/neuroscience/local-field-potential"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Sample at the declared rate",
+              "name": 7
+            },
+            {
+              "meaning": "One recording channel",
+              "name": 7
+            }
+          ]
+        },
+        "lifecycle": {
+          "sampling": "example-sampling",
+          "time_unit": "example-time-unit"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/neuroscience/local-field-potential"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/local-field-potential/v0.1"

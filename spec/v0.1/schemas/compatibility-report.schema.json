@@ -30,6 +30,12 @@
         "BLOCK"
       ]
     },
+    "policy_findings": {
+      "items": {
+        "$ref": "compatibility-finding.schema.json"
+      },
+      "type": "array"
+    },
     "quality_reference": {
       "type": [
         "object",
@@ -73,6 +79,7 @@
     "status",
     "policy_decision",
     "findings",
+    "policy_findings",
     "digest"
   ],
   "title": "Compatibility Report",

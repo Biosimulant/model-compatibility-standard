@@ -7,7 +7,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -29,7 +32,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "origin": {
@@ -50,7 +56,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -69,7 +78,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -90,7 +102,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -116,7 +131,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -134,7 +152,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -155,7 +176,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -171,7 +195,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -192,7 +219,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -210,7 +240,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -227,7 +260,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -249,7 +285,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -275,7 +314,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -293,7 +335,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -314,7 +359,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -331,7 +379,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -352,7 +403,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -370,7 +424,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -431,7 +488,10 @@
         },
         "dimensions": {
           "axes": [
-            "time",
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            },
             "different"
           ]
         },
@@ -450,7 +510,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -485,7 +548,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -506,7 +572,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -539,7 +608,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -561,7 +633,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -587,7 +662,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -605,7 +683,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -626,7 +707,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -643,7 +727,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -664,7 +751,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -682,7 +772,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -698,7 +791,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -721,7 +817,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -747,7 +846,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -765,7 +867,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -784,7 +889,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -802,7 +910,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -823,7 +934,10 @@
         },
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -839,7 +953,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time"
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": "time"
+            }
           ]
         },
         "representation": {
@@ -850,6 +967,57 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/cell/lineage-trajectory"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Pseudotime or real time along the lineage"
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/cell/lineage-trajectory"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Pseudotime or real time along the lineage",
+              "name": 7
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/cell/lineage-trajectory"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/lineage-trajectory/v0.1"

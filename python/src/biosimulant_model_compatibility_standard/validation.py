@@ -109,6 +109,9 @@ def validate_contract(
         for requirement in requirements:
             if requirement.get("level") != "required":
                 continue
+            if "[]" in requirement["path"]:
+                findings.extend(_array_member_findings(ref, requirement, contract))
+                continue
             value = get_dotted(contract, requirement["path"])
             if value is MISSING or value is None:
                 findings.append(
@@ -128,6 +131,33 @@ def validate_contract(
                     )
                 )
         findings.extend(_unit_findings(active, profile, contract))
+    return findings
+
+
+def _array_member_findings(ref: str, requirement: dict[str, Any], contract: dict[str, Any]) -> list[ValidationFinding]:
+    """Check a requirement that addresses every member of an array (decision D9).
+
+    "dimensions.axes[].unit" means every axis declares a unit, so the requirement is checked once per
+    member and reports which member failed. An empty or absent array cannot satisfy it.
+    """
+
+    path = requirement["path"]
+    head, _, tail = path.partition("[]")
+    container_path = head.strip(".")
+    leaf = tail.strip(".")
+    pointer = "/" + container_path.replace(".", "/")
+    container = get_dotted(contract, container_path)
+    if container is MISSING or not isinstance(container, list) or not container:
+        return [ValidationFinding("BMCS_REQUIRED_MISSING", f"Profile {ref} requires '{path}', but it is missing.", pointer)]
+    validator = Draft202012Validator(requirement["schema"], format_checker=FormatChecker())
+    findings: list[ValidationFinding] = []
+    for index, member in enumerate(container):
+        value = get_dotted(member, leaf) if isinstance(member, dict) else MISSING
+        if value is MISSING or value is None:
+            findings.append(ValidationFinding("BMCS_REQUIRED_MISSING", f"Profile {ref} requires '{path}', but member {index} does not declare it.", f"{pointer}/{index}/{leaf.replace('.', '/')}"))
+            continue
+        for error in validator.iter_errors(value):
+            findings.append(ValidationFinding("BMCS_PROFILE_VALUE_INVALID", f"{path}[{index}]: {error.message}", f"{pointer}/{index}/{leaf.replace('.', '/')}"))
     return findings
 
 

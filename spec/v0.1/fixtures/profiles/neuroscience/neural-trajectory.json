@@ -7,8 +7,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -30,8 +36,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "origin": {
@@ -52,8 +64,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -72,8 +90,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -94,8 +118,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -121,8 +151,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -140,8 +176,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -162,8 +204,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -179,8 +227,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -201,8 +255,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -220,8 +280,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -238,8 +304,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -261,8 +333,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -288,8 +366,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -307,8 +391,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -329,8 +419,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -347,8 +443,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -369,8 +471,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -388,8 +496,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -450,8 +564,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit",
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            },
             "different"
           ]
         },
@@ -470,8 +590,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -506,8 +632,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -528,8 +660,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -562,8 +700,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -585,8 +729,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -612,8 +762,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -631,8 +787,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -653,8 +815,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -671,8 +839,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -693,8 +867,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -712,8 +892,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -729,8 +915,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -753,8 +945,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -780,8 +978,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -799,8 +1003,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -819,8 +1029,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -838,8 +1054,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -860,8 +1082,14 @@
         },
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -877,8 +1105,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "time",
-            "unit"
+            {
+              "meaning": "Sample time point",
+              "name": "time"
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": "unit"
+            }
           ]
         },
         "representation": {
@@ -889,6 +1123,64 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/neuroscience/neural-trajectory"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Sample time point"
+            },
+            {
+              "meaning": "One neuron or latent dimension"
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/neuroscience/neural-trajectory"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:10090"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Sample time point",
+              "name": 7
+            },
+            {
+              "meaning": "One neuron or latent dimension",
+              "name": 7
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/neuroscience/neural-trajectory"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/neural-trajectory/v0.1"

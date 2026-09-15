@@ -7,7 +7,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -32,7 +35,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -54,7 +60,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -76,7 +85,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -100,7 +112,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -129,7 +144,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -150,7 +168,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -174,7 +195,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -193,7 +217,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -217,7 +244,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -238,7 +268,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -258,7 +291,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -283,7 +319,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -312,7 +351,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -333,7 +375,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -357,7 +402,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -377,7 +425,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -401,7 +452,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -422,7 +476,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -492,7 +549,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature",
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            },
             "different"
           ]
         },
@@ -514,7 +574,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -555,7 +618,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -579,7 +645,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -618,7 +687,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -643,7 +715,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -672,7 +747,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -693,7 +771,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -717,7 +798,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -737,7 +821,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -761,7 +848,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -782,7 +872,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -801,7 +894,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -827,7 +923,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -856,7 +955,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -877,7 +979,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -899,7 +1004,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -920,7 +1028,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -944,7 +1055,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -963,7 +1077,10 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -985,7 +1102,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {},
@@ -1009,7 +1129,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -1038,7 +1161,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -1059,7 +1185,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -1083,7 +1212,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {},
@@ -1102,7 +1234,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -1126,7 +1261,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -1147,7 +1285,10 @@
         },
         "dimensions": {
           "axes": [
-            "feature"
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": "feature"
+            }
           ]
         },
         "origin": {},
@@ -1159,6 +1300,63 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/multiomics/embedding-vector"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One embedding dimension, meaningful only within its model"
+            }
+          ]
+        },
+        "origin": {
+          "model_digest": "example-model-digest"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/multiomics/embedding-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One embedding dimension, meaningful only within its model",
+              "name": 7
+            }
+          ]
+        },
+        "origin": {
+          "model_digest": "example-model-digest"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/multiomics/embedding-vector"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/embedding-vector/v0.1"

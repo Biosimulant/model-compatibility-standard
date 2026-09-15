@@ -8,8 +8,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -38,8 +44,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "origin": {
@@ -67,8 +79,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -94,8 +112,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -123,8 +147,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -157,8 +187,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -183,8 +219,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -212,8 +254,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -236,8 +284,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -265,8 +319,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -291,8 +351,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -316,8 +382,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -346,8 +418,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -380,8 +458,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -406,8 +490,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -435,8 +525,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -460,8 +556,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -489,8 +591,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -515,8 +623,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -598,8 +712,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group",
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            },
             "different"
           ]
         },
@@ -625,8 +745,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -675,8 +801,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -704,8 +836,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -752,8 +890,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -782,8 +926,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -816,8 +966,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -842,8 +998,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -871,8 +1033,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -896,8 +1064,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -925,8 +1099,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -951,8 +1131,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -976,8 +1162,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1007,8 +1199,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1041,8 +1239,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1067,8 +1271,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1095,8 +1305,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1121,8 +1337,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1150,8 +1372,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1175,8 +1403,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1202,8 +1436,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1230,8 +1470,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1253,8 +1499,7 @@
     },
     {
       "field": "security.data_use",
-      "name": "comparison-incompatible-security-data-use",
-      "reason_code": "BMCS_SECURITY_DATA_USE_MISMATCH",
+      "name": "comparison-policy-security-data-use",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606",
@@ -1262,8 +1507,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1281,7 +1532,7 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/contact-matrix"
         }
       },
-      "status": "INCOMPATIBLE",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606",
@@ -1289,8 +1540,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1310,7 +1567,7 @@
     },
     {
       "field": "security.data_use",
-      "name": "comparison-unknown-security-data-use",
+      "name": "comparison-policy-missing-security-data-use",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606",
@@ -1318,8 +1575,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1333,7 +1596,7 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/contact-matrix"
         }
       },
-      "status": "UNKNOWN",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606",
@@ -1341,8 +1604,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1362,7 +1631,7 @@
     },
     {
       "field": "security.data_use",
-      "name": "comparison-unknown-target-security-data-use",
+      "name": "comparison-policy-missing-target-security-data-use",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606",
@@ -1370,8 +1639,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1388,7 +1663,7 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/contact-matrix"
         }
       },
-      "status": "UNKNOWN",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606",
@@ -1396,8 +1671,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1420,8 +1701,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1450,8 +1737,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1475,8 +1768,7 @@
     },
     {
       "field": "security.consent_scope",
-      "name": "comparison-incompatible-security-consent-scope",
-      "reason_code": "BMCS_SECURITY_CONSENT_SCOPE_MISMATCH",
+      "name": "comparison-policy-security-consent-scope",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606",
@@ -1484,8 +1776,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1502,7 +1800,7 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/contact-matrix"
         }
       },
-      "status": "INCOMPATIBLE",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606",
@@ -1510,8 +1808,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1531,7 +1835,7 @@
     },
     {
       "field": "security.consent_scope",
-      "name": "comparison-unknown-security-consent-scope",
+      "name": "comparison-policy-missing-security-consent-scope",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606",
@@ -1539,8 +1843,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1556,7 +1866,7 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/contact-matrix"
         }
       },
-      "status": "UNKNOWN",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606",
@@ -1564,8 +1874,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1585,7 +1901,7 @@
     },
     {
       "field": "security.consent_scope",
-      "name": "comparison-unknown-target-security-consent-scope",
+      "name": "comparison-policy-missing-target-security-consent-scope",
       "source": {
         "biological_context": {
           "species": "NCBITaxon:9606",
@@ -1593,8 +1909,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1611,7 +1933,7 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/contact-matrix"
         }
       },
-      "status": "UNKNOWN",
+      "status": "DIRECT_COMPATIBLE",
       "target": {
         "biological_context": {
           "species": "NCBITaxon:9606",
@@ -1619,8 +1941,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1644,8 +1972,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1675,8 +2009,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1709,8 +2049,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1735,8 +2081,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1763,8 +2115,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1789,8 +2147,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1818,8 +2182,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1843,8 +2213,14 @@
         },
         "dimensions": {
           "axes": [
-            "age_group",
-            "age_group"
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": "age_group"
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": "age_group"
+            }
           ]
         },
         "representation": {
@@ -1861,6 +2237,78 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/contact-matrix"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606",
+          "stratum": "example-stratum"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Age group of the contacting individual"
+            },
+            {
+              "meaning": "Age group of the contacted individual"
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/contact-matrix"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606",
+          "stratum": "example-stratum"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "Age group of the contacting individual",
+              "name": 7
+            },
+            {
+              "meaning": "Age group of the contacted individual",
+              "name": 7
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "security": {
+          "consent_scope": "example-consent-scope",
+          "data_use": [
+            "example-data_use"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/epidemiology/contact-matrix"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/contact-matrix/v0.1"

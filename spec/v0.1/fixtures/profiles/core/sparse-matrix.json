@@ -4,8 +4,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -25,8 +31,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "origin": {
@@ -45,8 +57,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -63,8 +81,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -83,8 +107,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -108,8 +138,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -125,8 +161,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -145,8 +187,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -160,8 +208,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -180,8 +234,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -197,8 +257,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -213,8 +279,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -234,8 +306,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -259,8 +337,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -276,8 +360,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -296,8 +386,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -312,8 +408,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -332,8 +434,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -349,8 +457,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -405,8 +519,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature",
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            },
             "different"
           ]
         },
@@ -423,8 +543,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -455,8 +581,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -475,8 +607,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -505,8 +643,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -526,8 +670,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -551,8 +701,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -568,8 +724,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -588,8 +750,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -604,8 +772,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -624,8 +798,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -641,8 +821,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -658,8 +844,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -679,8 +871,14 @@
       "contract": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -704,8 +902,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -721,8 +925,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -741,8 +951,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -757,8 +973,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -777,8 +999,14 @@
       "source": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -794,8 +1022,14 @@
       "target": {
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One observed sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One measured feature",
+              "name": "feature"
+            }
           ]
         },
         "representation": {
@@ -806,6 +1040,60 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
         }
       }
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One observed sample"
+            },
+            {
+              "meaning": "One measured feature"
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "sparsity": "dense"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One observed sample",
+              "name": 7
+            },
+            {
+              "meaning": "One measured feature",
+              "name": 7
+            }
+          ]
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit",
+          "sparsity": "dense"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/core/sparse-matrix/v0.1"

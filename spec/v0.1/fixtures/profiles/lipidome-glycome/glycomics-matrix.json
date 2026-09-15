@@ -7,8 +7,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -32,8 +38,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -56,8 +68,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -78,8 +96,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -102,8 +126,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -131,8 +161,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -152,8 +188,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -176,8 +218,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -195,8 +243,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -219,8 +273,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -240,8 +300,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -260,8 +326,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -285,8 +357,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -314,8 +392,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -335,8 +419,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -359,8 +449,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -379,8 +475,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -403,8 +505,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -424,8 +532,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -493,8 +607,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature",
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            },
             "different"
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
@@ -515,8 +635,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -556,8 +682,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -580,8 +712,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -619,8 +757,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -644,8 +788,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -673,8 +823,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -694,8 +850,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -718,8 +880,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -738,8 +906,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -762,8 +936,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -783,8 +963,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -802,8 +988,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -828,8 +1020,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -857,8 +1055,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -878,8 +1082,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -900,8 +1110,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -921,8 +1137,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -945,8 +1167,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -964,8 +1192,14 @@
         "biological_context": {},
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -986,8 +1220,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -1011,8 +1251,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": 7,
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1040,8 +1286,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref-different",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1061,8 +1313,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1085,8 +1343,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -1105,8 +1369,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1129,8 +1399,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1150,8 +1426,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
         },
@@ -1171,8 +1453,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1196,8 +1484,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": 7
@@ -1225,8 +1519,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000-different"
@@ -1246,8 +1546,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1270,8 +1576,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1290,8 +1602,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1314,8 +1632,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
           "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
@@ -1335,8 +1659,14 @@
         },
         "dimensions": {
           "axes": [
-            "sample",
-            "feature"
+            {
+              "meaning": "One biological sample",
+              "name": "sample"
+            },
+            {
+              "meaning": "One glycan",
+              "name": "feature"
+            }
           ],
           "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref"
         },
@@ -1348,6 +1678,68 @@
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/glycomics-matrix"
         }
       }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One biological sample"
+            },
+            {
+              "meaning": "One glycan"
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/glycomics-matrix"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-required-missing-dimensions-axes-name",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "dimensions": {
+          "axes": [
+            {
+              "meaning": "One biological sample",
+              "name": 7
+            },
+            {
+              "meaning": "One glycan",
+              "name": 7
+            }
+          ],
+          "feature_labels_ref": "https://biosimulant.com/standards/model-compatibility/examples/feature-labels-ref",
+          "feature_labels_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+        },
+        "representation": {
+          "kind": "dense_vector",
+          "ordering": "explicit"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/lipidome-glycome/glycomics-matrix"
+        }
+      },
+      "field": "dimensions.axes[].name",
+      "name": "negative-value-invalid-dimensions-axes-name",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
     }
   ],
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/glycomics-matrix/v0.1"

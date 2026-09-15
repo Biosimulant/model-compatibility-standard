@@ -4,7 +4,7 @@ compatibility:
   standard: https://biosimulant.com/standards/model-compatibility/v0.1
   profiles:
     - ref: https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/gene-expression-counts/v0.1
-      sha256: sha256:1bb113d26a2d8df9c582edf716996623873f5d157f458f91388198584e200a4f
+      sha256: sha256:dfb0f425e8dd785fb037a5576c7968e8cc837b61ba8429ae0bf38e584a1d0985
 biosim:
   entrypoint: src.model:Model
   communication_step: 1.0
