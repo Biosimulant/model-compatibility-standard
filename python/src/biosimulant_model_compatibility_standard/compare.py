@@ -1,12 +1,12 @@
-"""Data-driven, deterministic comparison of two port contracts."""
+"""Compare two port contracts using the rules in the spec bundle."""
 
 from __future__ import annotations
 
-from copy import deepcopy
 from typing import Any, Iterable
 
 from .bundle import Bundle, get_bundle
 from .canonical import digest
+from .constants import STANDARD
 from .pointers import MISSING, get_pointer
 
 
@@ -44,7 +44,9 @@ def _evaluate(operator: str, source: Any, target: Any, bundle: Bundle) -> tuple[
     if operator == "superset":
         return set(source).issuperset(set(target)), None
     if operator == "labels-permutation":
-        return len(source) == len(target) and sorted(source) == sorted(target), "lossless"
+        same_labels = len(source) == len(target) and sorted(source) == sorted(target)
+        # A reordering loses nothing; labels already in the same order need no conversion.
+        return same_labels, (None if source == target else "none")
     if operator == "range":
         return source["minimum"] >= target["minimum"] and source["maximum"] <= target["maximum"], None
     if operator == "unit-convertible":
@@ -54,7 +56,8 @@ def _evaluate(operator: str, source: Any, target: Any, bundle: Bundle) -> tuple[
         return conversion is not None, conversion and conversion["loss"]
     if operator == "context-compatible":
         return source == target or target in (None, "any", "unspecified"), None
-    # Mapping and ontology operators require a pinned mapping/ontology snapshot.
+    # pattern, term-subsumes and the mapping operators aren't implemented yet. They need
+    # pinned ontology or mapping data, so the comparison reports UNKNOWN for them.
     return False, "unsupported"
 
 
@@ -81,10 +84,10 @@ def compare_contracts(
     active = bundle or get_bundle()
     if source_contract is None or target_contract is None:
         status = "UNKNOWN"
-        findings = [_finding("contract", "UNKNOWN", "BMCS_CONTRACT_NOT_DECLARED", "Compatibility metadata is not declared on both ports.")]
+        findings = [_finding("contract", "UNKNOWN", "BMCS_CONTRACT_NOT_DECLARED", "One or both ports have no compatibility contract.")]
     elif digest(source_contract) == digest(target_contract):
         status = "EXACT"
-        findings = [_finding("contract", "EXACT", "BMCS_EXACT_CONTRACT", "Canonical contract digests are identical.")]
+        findings = [_finding("contract", "EXACT", "BMCS_EXACT_CONTRACT", "The two contracts are identical.")]
     else:
         refs = list(target_profile_refs) or list(source_profile_refs)
         rules = _rules(refs, active) if refs else []
@@ -93,8 +96,8 @@ def compare_contracts(
         incompatible = False
         conversion: str | None = None
         if not rules:
-            # Exact recursive equality on declared target leaves. This is conservative:
-            # absent required evidence is UNKNOWN, an explicit contradiction is incompatible.
+            # No profile rules apply, so compare every field the target declares, one level deep.
+            # A field missing on either side gives UNKNOWN; a different value gives INCOMPATIBLE.
             rules = []
             for family, members in target_contract.items():
                 if family in {"profile_refs", "extensions"} or not isinstance(members, dict):
@@ -118,19 +121,19 @@ def compare_contracts(
                 if behavior == "ignore":
                     continue
                 unknown = True
-                findings.append(_finding(dimension, "UNKNOWN", "BMCS_REQUIRED_EVIDENCE_MISSING", f"Evidence is missing for {rule['target']}."))
+                findings.append(_finding(dimension, "UNKNOWN", "BMCS_REQUIRED_EVIDENCE_MISSING", f"{rule['target']} is missing from the source or target contract."))
                 continue
             compatible, transformation = _evaluate(rule["operator"], left, right, active)
             if transformation == "unsupported":
                 unknown = True
-                findings.append(_finding(dimension, "UNKNOWN", "BMCS_OPERATOR_REQUIRES_SNAPSHOT", f"{rule['operator']} requires pinned external evidence."))
+                findings.append(_finding(dimension, "UNKNOWN", "BMCS_OPERATOR_REQUIRES_SNAPSHOT", f"The '{rule['operator']}' check isn't available yet, so {rule['target']} can't be compared."))
             elif compatible:
                 if transformation:
                     conversion = transformation
-                findings.append(_finding(dimension, "DIRECT_COMPATIBLE", "BMCS_RULE_SATISFIED", f"{rule['operator']} comparison passed."))
+                findings.append(_finding(dimension, "DIRECT_COMPATIBLE", "BMCS_RULE_SATISFIED", f"{rule['target']}: '{rule['operator']}' check passed."))
             else:
                 incompatible = True
-                findings.append(_finding(dimension, "INCOMPATIBLE", rule.get("reason_code", "BMCS_VALUE_MISMATCH"), f"{rule['operator']} comparison failed.", evidence={"source": left, "target": right}))
+                findings.append(_finding(dimension, "INCOMPATIBLE", rule.get("reason_code", "BMCS_VALUE_MISMATCH"), f"{rule['target']}: '{rule['operator']}' check failed.", evidence={"source": left, "target": right}))
         if incompatible:
             status = "INCOMPATIBLE"
         elif unknown:
@@ -144,7 +147,7 @@ def compare_contracts(
 
     report = {
         "schema_version": "0.1",
-        "standard": "https://biosimulant.com/standards/model-compatibility/v0.1",
+        "standard": STANDARD,
         "bundle_sha256": active.digest,
         "source": {
             "contract_digest": digest(source_contract) if source_contract is not None else None,

@@ -1,13 +1,27 @@
 {
   "name": "@biosimulant/model-compatibility-standard",
   "version": "0.1.0-alpha.2",
-  "description": "Schemas, profiles, fixtures, and reference validation for the Biosimulant Model Compatibility Standard",
+  "description": "Schemas, profiles, and Python/TypeScript reference validators for the Biosimulant Model Compatibility Standard",
+  "keywords": [
+    "biosimulant",
+    "biology",
+    "simulation",
+    "interoperability",
+    "json-schema"
+  ],
+  "author": "Biosimulant",
+  "homepage": "https://github.com/Biosimulant/model-compatibility-standard#readme",
+  "bugs": {
+    "url": "https://github.com/Biosimulant/model-compatibility-standard/issues"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/Biosimulant/model-compatibility-standard.git"
   },
   "license": "Apache-2.0",
-  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "module",
   "main": "./typescript/dist/index.js",
   "types": "./typescript/dist/index.d.ts",

@@ -1,15 +1,26 @@
-# Profile review protocol
+# Profile review
 
-Executable conformance and scientific review are separate gates.
+Passing tests and passing scientific review are separate things. Tests show the
+validators behave as written. They don't show that a profile is biologically
+right.
 
-A profile may be marked `reviewed` only when it has:
+A profile can move to `reviewed` only when it has all of the following:
 
-- profile-specific semantic, representation, identifier, measurement, context, temporal, origin, uncertainty, and artifact decisions where applicable;
-- primary or authoritative sources that support those decisions;
-- a named scientific reviewer who is independent of the schema author;
-- positive, contradiction, missing-evidence, and relevant transformation fixtures;
-- documented intended-use boundaries and non-claims;
-- schema review confirming that rules use only allowlisted operators;
-- a review date and a domain owner responsible for future deprecation decisions.
+- Decisions for each part of the contract that applies to it: meaning,
+  representation, identifiers, measurement, biological context, timing, origin,
+  uncertainty and file format.
+- Primary or authoritative sources that back those decisions.
+- A named scientific reviewer who didn't write the profile.
+- Fixtures for a valid contract, a missing required field, a comparison with
+  missing information, and any conversions the profile allows. The generator
+  currently makes only the first three (`positive`, `negative-required-missing`
+  and `comparison-unknown`).
+- A short statement of what the profile is for and what it doesn't cover. The
+  profile format has no field for this yet.
+- A check that its rules only use operators listed in
+  `spec/v0.1/rules/operators.json`.
+- A review date, and a domain owner who decides when to deprecate it.
 
-Automated fixture success proves validator behavior. It does not prove biological correctness. The alpha compiler therefore preserves the imported catalogue’s actual review status and sets `release_eligible` to false until evidence-backed review is complete.
+Until that evidence exists, the build keeps each profile's recorded review
+status and sets `release_eligible` to `false`. Today that applies to all 650
+profiles.

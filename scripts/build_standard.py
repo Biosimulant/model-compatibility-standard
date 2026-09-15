@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
-"""Build the deterministic v0.1 standard bundle from the review catalogue."""
+"""Generate spec/v0.1 from source/catalogue.review.json.
+
+Run with --check to confirm the committed spec/v0.1 is up to date without changing it.
+"""
 
 from __future__ import annotations
 
@@ -53,26 +56,26 @@ OPERATORS = [
 ]
 
 REASON_CODES = {
-    "BMCS_EXACT": "Normalized producer and consumer contracts are identical.",
-    "BMCS_DIRECT": "The producer guarantee satisfies the consumer without transformation.",
-    "BMCS_REQUIRED_MISSING": "A target-required item is absent from available evidence.",
-    "BMCS_VALUE_MISMATCH": "A required producer value does not satisfy the consumer value.",
-    "BMCS_UNIT_CONVERSION": "A declared lossless unit conversion is available.",
-    "BMCS_LOSSY_PATH": "The selected path loses or ambiguously maps information.",
-    "BMCS_INFERENCE_PATH": "The selected path requires scientific inference.",
-    "BMCS_CONDITION_UNRESOLVED": "A declared compatibility precondition is unresolved.",
-    "BMCS_PROFILE_UNRESOLVED": "A referenced profile is absent from the installed bundle.",
-    "BMCS_DIGEST_MISMATCH": "Resolved content does not match its declared digest.",
-    "BMCS_REFERENCE_CYCLE": "Profile or contract inheritance contains a cycle.",
-    "BMCS_PROFILE_NOT_REVIEWED": "The profile lacks completed scientific review evidence.",
-    "BMCS_SCHEMA_INVALID": "The document does not conform to its JSON Schema.",
-    "BMCS_PROFILE_VALUE_INVALID": "A value does not satisfy a profile requirement.",
-    "BMCS_PROFILE_NOT_IMPORTED": "A port binds a profile absent from the manifest import list.",
-    "BMCS_CONTRACT_NOT_DECLARED": "Compatibility metadata is not declared on both ports.",
-    "BMCS_EXACT_CONTRACT": "Canonical contract digests are identical.",
-    "BMCS_REQUIRED_EVIDENCE_MISSING": "Evidence required for comparison is missing.",
-    "BMCS_OPERATOR_REQUIRES_SNAPSHOT": "The operator requires a pinned external evidence snapshot.",
-    "BMCS_RULE_SATISFIED": "A declarative compatibility comparison rule passed.",
+    "BMCS_EXACT": "The source and target contracts are identical after normalization.",
+    "BMCS_DIRECT": "The source already meets the target's requirements, with no conversion.",
+    "BMCS_REQUIRED_MISSING": "The target requires a field that the source doesn't provide.",
+    "BMCS_VALUE_MISMATCH": "A source value doesn't match what the target requires.",
+    "BMCS_UNIT_CONVERSION": "A lossless unit conversion is available.",
+    "BMCS_LOSSY_PATH": "The chosen conversion loses information or maps it ambiguously.",
+    "BMCS_INFERENCE_PATH": "The chosen path relies on an inference model.",
+    "BMCS_CONDITION_UNRESOLVED": "A required precondition hasn't been checked or isn't met.",
+    "BMCS_PROFILE_UNRESOLVED": "The profile isn't in the installed bundle.",
+    "BMCS_DIGEST_MISMATCH": "The content doesn't match its declared sha256.",
+    "BMCS_REFERENCE_CYCLE": "Profiles or contracts extend each other in a loop.",
+    "BMCS_PROFILE_NOT_REVIEWED": "The profile hasn't finished scientific review.",
+    "BMCS_SCHEMA_INVALID": "The document doesn't match its JSON Schema.",
+    "BMCS_PROFILE_VALUE_INVALID": "A value doesn't meet a profile requirement.",
+    "BMCS_PROFILE_NOT_IMPORTED": "A port uses a profile that isn't listed in compatibility.profiles.",
+    "BMCS_CONTRACT_NOT_DECLARED": "One or both ports have no compatibility contract.",
+    "BMCS_EXACT_CONTRACT": "The two contracts are identical.",
+    "BMCS_REQUIRED_EVIDENCE_MISSING": "Information needed for the comparison is missing.",
+    "BMCS_OPERATOR_REQUIRES_SNAPSHOT": "This check needs pinned ontology or mapping data, which isn't available.",
+    "BMCS_RULE_SATISFIED": "A comparison rule passed.",
 }
 
 SET_LIKE_PATHS = [
@@ -89,8 +92,8 @@ def dump_bytes(value: Any) -> bytes:
 
 
 def canonical_bytes(value: Any) -> bytes:
-    # The generated catalogue contains JSON primitives for which this is JCS
-    # equivalent. Runtime packages use an RFC 8785 implementation and fixtures.
+    # For the values generated here (no floats), sorted-key json.dumps gives the same bytes
+    # as RFC 8785. The Python and TypeScript packages use real RFC 8785 libraries.
     return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
 
 
@@ -518,7 +521,10 @@ def build(root: Path) -> None:
     items = source["item_definitions"]
     packs = source["item_packs"]
     if (len(profiles), len(items), len(packs)) != (650, 266, 30):
-        raise SystemExit("Review catalogue counts must remain 650 profiles, 266 items, and 30 packs")
+        raise SystemExit(
+            "source/catalogue.review.json must have 650 profiles, 266 items and 30 packs; "
+            f"found {len(profiles)}, {len(items)} and {len(packs)}"
+        )
 
     enriched_items: list[dict[str, Any]] = []
     item_index: dict[str, dict[str, Any]] = {}
@@ -700,7 +706,7 @@ def build(root: Path) -> None:
         "canonicalization": "RFC8785", "files": files,
         "counts": {"profiles": 650, "item_definitions": 266, "item_packs": 30},
         "ga_ready": False,
-        "ga_blockers": ["Every profile requires authoritative scientific sources and named domain-review approval."],
+        "ga_blockers": ["Every profile still needs authoritative scientific sources and sign-off from a named domain reviewer."],
     }
     bundle_digest = digest(manifest_without_digest)
     write_json(root, "bundle.manifest.json", {**manifest_without_digest, "bundle_sha256": bundle_digest})
@@ -713,17 +719,24 @@ def compare_trees(left: Path, right: Path) -> list[str]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--check", action="store_true")
+    parser = argparse.ArgumentParser(description="Generate spec/v0.1 from source/catalogue.review.json.")
+    parser.add_argument(
+        "--check",
+        action="store_true",
+        help="build into a temporary folder and fail if spec/v0.1 differs, without changing it",
+    )
     args = parser.parse_args()
     with tempfile.TemporaryDirectory(prefix="bmcs-build-") as temp:
         generated = Path(temp) / "v0.1"
         build(generated)
         if args.check:
-            differences = compare_trees(generated, OUTPUT) if OUTPUT.exists() else ["spec/v0.1 missing"]
+            differences = compare_trees(generated, OUTPUT) if OUTPUT.exists() else ["spec/v0.1 is missing"]
             if differences:
-                raise SystemExit("Generated standard is stale:\n" + "\n".join(differences[:50]))
-            print("Standard bundle is deterministic and current")
+                raise SystemExit(
+                    "spec/v0.1 is out of date. Run `python3 scripts/build_standard.py` to regenerate it.\n"
+                    "Files that differ:\n" + "\n".join(differences[:50])
+                )
+            print("spec/v0.1 is up to date.")
             return
         if OUTPUT.exists():
             shutil.rmtree(OUTPUT)

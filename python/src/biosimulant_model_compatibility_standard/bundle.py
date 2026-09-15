@@ -9,14 +9,12 @@ from importlib.resources import files
 from pathlib import Path
 from typing import Any, Iterator
 
-from .constants import STANDARD
-
 
 def _spec_root() -> Any:
     packaged = files(__package__).joinpath("spec/v0.1")
     if packaged.joinpath("bundle.manifest.json").is_file():
         return packaged
-    # Editable source checkout fallback.
+    # Not installed from a wheel: use spec/ from the repository checkout.
     return Path(__file__).resolve().parents[3] / "spec" / "v0.1"
 
 

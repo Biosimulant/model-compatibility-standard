@@ -6,7 +6,7 @@ import yaml
 from biosimulant_model_compatibility_standard import build_compatibility_lock, get_bundle
 
 
-def test_lock_is_deterministic_and_does_not_mutate_manifest():
+def test_lock_is_repeatable_and_leaves_manifest_unchanged():
     bundle = get_bundle()
     manifest = yaml.safe_load((Path(bundle.root) / "examples" / "compatible-model.yaml").read_text())
     original = deepcopy(manifest)

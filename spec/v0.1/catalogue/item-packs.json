@@ -1,7 +1,7 @@
 {
   "item_packs": [
     {
-      "description": "Artifact media, serialization, schema, compression, integrity, and staging.",
+      "description": "Details for data passed as files: media type, serialization, schema, compression, checksum, and staging.",
       "id": "artifact-format",
       "items": [
         "artifact.media_type",
@@ -18,7 +18,7 @@
       ]
     },
     {
-      "description": "Assay identity, protocol, instrument, calibration, controls, and evidence.",
+      "description": "Which assay produced the data: protocol, instrument, calibration, and controls.",
       "id": "assay-evidence",
       "items": [
         "biological_context.assay",
@@ -35,7 +35,7 @@
       ]
     },
     {
-      "description": "Species, material, disease, intervention, assay, and compartment context.",
+      "description": "Where the data comes from biologically: species, material, disease, intervention, assay, and compartment.",
       "id": "biological-context",
       "items": [
         "biological_context.species",
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "description": "Cell identity, lineage, culture, passage, state, and environment.",
+      "description": "Which cells the data describes: cell type, lineage, culture conditions, passage, and state.",
       "id": "cell-context",
       "items": [
         "biological_context.cell_type",
@@ -69,7 +69,7 @@
       ]
     },
     {
-      "description": "Clinical coding, population, consent, deidentification, and use restrictions.",
+      "description": "Rules for clinical data: coding systems, population, consent, de-identification, and use restrictions.",
       "id": "clinical-governance",
       "items": [
         "identifiers.coding_system",
@@ -86,7 +86,7 @@
       ]
     },
     {
-      "description": "Named axes, coordinates, labels, cardinality, and order.",
+      "description": "How an array is laid out: named axes, coordinates, labels, sizes, and order.",
       "id": "dimensioned-array",
       "items": [
         "dimensions.axes",
@@ -102,7 +102,7 @@
       ]
     },
     {
-      "description": "Intervention, dose axis, endpoint, response direction, and fitted curve.",
+      "description": "Dose-response data: the intervention, dose axis, endpoint, response direction, and fitted curve.",
       "id": "dose-response",
       "items": [
         "biological_context.intervention.agent",
@@ -119,7 +119,7 @@
       ]
     },
     {
-      "description": "Sample-by-feature matrices with exact feature universes and preprocessing.",
+      "description": "Sample-by-feature matrices, including exactly which features are present and how the data was preprocessed.",
       "id": "feature-matrix",
       "items": [
         "dimensions.sample_axis",
@@ -135,7 +135,7 @@
       ]
     },
     {
-      "description": "Typed nodes and edges, direction, weights, evidence, and identifier spaces.",
+      "description": "Networks: node and edge types, direction, weights, sources, and identifier systems.",
       "id": "graph-network",
       "items": [
         "representation.node_schema",
@@ -151,7 +151,7 @@
       ]
     },
     {
-      "description": "Versioned identifiers and ambiguity-safe canonicalization.",
+      "description": "Versioned identifiers, normalized so the same thing always gets the same ID.",
       "id": "identifier-core",
       "items": [
         "identifiers.namespace",
@@ -166,7 +166,7 @@
       ]
     },
     {
-      "description": "Pixels or voxels, channels, resolution, registration, and anatomical frame.",
+      "description": "Images and volumes: pixels or voxels, channels, resolution, registration, and anatomical frame.",
       "id": "imaging-spatial",
       "items": [
         "representation.coordinate_system",
@@ -182,7 +182,7 @@
       ]
     },
     {
-      "description": "Exact source/target systems and immutable mapping evidence.",
+      "description": "Mappings between identifier systems: the exact source and target systems, and a fixed record of the mapping used.",
       "id": "mapping-capability",
       "items": [
         "identifiers.mapping_refs[].ref",
@@ -196,7 +196,7 @@
       ]
     },
     {
-      "description": "Quantity, units, scale, normalization, and analytical limits.",
+      "description": "What was measured: quantity, unit, scale, normalization, and detection limits.",
       "id": "measurement-core",
       "items": [
         "measurement.quantity",
@@ -212,7 +212,7 @@
       ]
     },
     {
-      "description": "Chemical or macromolecular identity, stereochemistry, charge, and conformer state.",
+      "description": "Which molecule this is: chemical or macromolecular structure, stereochemistry, charge, and conformer.",
       "id": "molecular-structure",
       "items": [
         "semantic.entity",
@@ -228,7 +228,7 @@
       ]
     },
     {
-      "description": "Pinned controlled terms and safe directional subsumption.",
+      "description": "Ontology terms pinned to a specific version, and safe rules for matching broader and narrower terms.",
       "id": "ontology-terms",
       "items": [
         "semantic.ontology_terms[].uri",
@@ -241,7 +241,7 @@
       ]
     },
     {
-      "description": "Exposure, sampling, compartment, and PK parameter definitions.",
+      "description": "Pharmacokinetics: exposure, sampling times, compartments, and PK parameter definitions.",
       "id": "pharmacokinetics",
       "items": [
         "biological_context.compartment",
@@ -256,7 +256,7 @@
       ]
     },
     {
-      "description": "Population strata, geography, denominator, sampling frame, and rates.",
+      "description": "Which population the data describes: strata, geography, denominator, sampling frame, and rates.",
       "id": "population-context",
       "items": [
         "biological_context.population",
@@ -272,7 +272,7 @@
       ]
     },
     {
-      "description": "Existing model.yaml io structure incorporated into the normalized contract.",
+      "description": "The port fields model.yaml already has (name, type, shape), carried into the contract.",
       "id": "port-structure",
       "items": [
         "name",
@@ -288,7 +288,7 @@
       ]
     },
     {
-      "description": "How a value was obtained and from which immutable evidence.",
+      "description": "Where a value came from and how it was produced.",
       "id": "provenance-origin",
       "items": [
         "origin.type",
@@ -303,7 +303,7 @@
       ]
     },
     {
-      "description": "Encoding and logical representation.",
+      "description": "How the data is encoded and structured.",
       "id": "representation-core",
       "items": [
         "representation.kind",
@@ -318,7 +318,7 @@
       ]
     },
     {
-      "description": "Actual runtime context, value/artifact binding, provenance, and observation time.",
+      "description": "What travels with a value at run time: context, the value or file itself, provenance, and observation time.",
       "id": "runtime-envelope",
       "items": [
         "envelope.contract_sha256",
@@ -334,7 +334,7 @@
       ]
     },
     {
-      "description": "Classification, license, consent, residency, and workspace policy inputs.",
+      "description": "How the data may be handled: classification, license, consent, data residency, and workspace policy.",
       "id": "security-policy",
       "items": [
         "security.classification",
@@ -350,7 +350,7 @@
       ]
     },
     {
-      "description": "Primary biological or computational meaning.",
+      "description": "What the data means, biologically or computationally.",
       "id": "semantic-core",
       "items": [
         "semantic.concept",
@@ -363,7 +363,7 @@
       ]
     },
     {
-      "description": "Sequence alphabet, strand, coordinates, and reference assembly.",
+      "description": "Sequence positions: alphabet, strand, coordinates, and reference genome assembly.",
       "id": "sequence-coordinate",
       "items": [
         "representation.alphabet",
@@ -378,7 +378,7 @@
       ]
     },
     {
-      "description": "Model formalism, solver, tolerances, stochastic seed, and state ordering.",
+      "description": "What you need to rerun a simulation: model formalism, solver, tolerances, random seed, and state order.",
       "id": "simulation-reproducibility",
       "items": [
         "semantic.model_formalism",
@@ -395,7 +395,7 @@
       ]
     },
     {
-      "description": "Taxonomy, lineage, phylogenetic method, evolutionary time, and confidence.",
+      "description": "Taxonomy and evolution: lineage, phylogenetic method, evolutionary time, and confidence.",
       "id": "taxonomy-evolution",
       "items": [
         "identifiers.taxonomy_namespace",
@@ -411,7 +411,7 @@
       ]
     },
     {
-      "description": "State/event lifecycle, temporal interpretation, sampling, and freshness.",
+      "description": "Timing: how states and events change over time, sampling, and how recent the data is.",
       "id": "temporal-lifecycle",
       "items": [
         "lifecycle.kind",
@@ -428,7 +428,7 @@
       ]
     },
     {
-      "description": "Uncertainty, confidence, quality flags, missingness, and censoring.",
+      "description": "Data quality: uncertainty, confidence, quality flags, missing values, and censoring.",
       "id": "uncertainty-quality",
       "items": [
         "uncertainty.kind",
@@ -444,7 +444,7 @@
       ]
     },
     {
-      "description": "Declarative, allowlisted validation without executable expressions.",
+      "description": "Validation rules written as data, never as code.",
       "id": "validation-constraints",
       "items": [
         "constraints[].id",
@@ -458,7 +458,7 @@
       ]
     },
     {
-      "description": "Normalized variant identity and consequence semantics.",
+      "description": "Genetic variants: normalized variant identity and predicted consequence.",
       "id": "variant-identity",
       "items": [
         "semantic.variant_class",

@@ -5,15 +5,23 @@ build-backend = "hatchling.build"
 [project]
 name = "biosimulant-model-compatibility-standard"
 version = "0.1.0a2"
-description = "Schemas, profiles, fixtures, and reference validation for the Biosimulant Model Compatibility Standard"
+description = "Schemas, profiles, and Python/TypeScript reference validators for the Biosimulant Model Compatibility Standard"
 readme = "README.md"
 requires-python = ">=3.10"
 license = { text = "Apache-2.0" }
+authors = [{ name = "Biosimulant" }]
+keywords = ["biosimulant", "biology", "simulation", "interoperability", "json-schema"]
 dependencies = [
   "jsonschema[format]>=4.23,<5",
   "PyYAML>=6,<7",
+  "referencing>=0.28.4",
   "rfc8785>=0.1,<1",
 ]
+
+[project.urls]
+Homepage = "https://github.com/Biosimulant/model-compatibility-standard"
+Documentation = "https://docs.biosimulant.com/standards/model-compatibility"
+Issues = "https://github.com/Biosimulant/model-compatibility-standard/issues"
 
 [project.optional-dependencies]
 test = ["pytest>=8,<10"]

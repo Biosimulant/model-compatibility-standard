@@ -1,4 +1,4 @@
-"""Schema and executable-profile validation."""
+"""Check contracts and manifests against the bundled JSON Schemas and profile requirements."""
 
 from __future__ import annotations
 
@@ -47,7 +47,7 @@ def validate_object(
     *,
     bundle: Bundle | None = None,
 ) -> list[ValidationFinding]:
-    """Validate any public standard object with the named bundled schema."""
+    """Validate an object against a bundled schema, e.g. 'compatibility-report.schema.json'."""
 
     active = bundle or get_bundle()
     normalized_name = schema_name if schema_name.endswith(".json") else f"{schema_name}.json"
@@ -68,7 +68,7 @@ def validate_contract(
         try:
             profile = active.profile(ref)
         except KeyError:
-            findings.append(ValidationFinding("BMCS_REFERENCE_UNRESOLVED", f"Unknown profile: {ref}", "/profile_refs"))
+            findings.append(ValidationFinding("BMCS_PROFILE_UNRESOLVED", f"Profile not found in the installed bundle: {ref}", "/profile_refs"))
             continue
         for requirement in profile.get("requirements", []):
             if requirement.get("level") != "required":
@@ -78,7 +78,7 @@ def validate_contract(
                 findings.append(
                     ValidationFinding(
                         "BMCS_REQUIRED_MISSING",
-                        f"{ref} requires {requirement['path']}",
+                        f"Profile {ref} requires '{requirement['path']}', but it is missing.",
                         "/" + requirement["path"].replace(".", "/"),
                     )
                 )
@@ -103,9 +103,9 @@ def validate_manifest(manifest: dict[str, Any], *, bundle: Bundle | None = None)
     for ref, entry in imported.items():
         catalogue_entry = active.profile_index.get(ref)
         if catalogue_entry is None:
-            findings.append(ValidationFinding("BMCS_REFERENCE_UNRESOLVED", f"Unknown profile: {ref}", "/compatibility/profiles"))
+            findings.append(ValidationFinding("BMCS_PROFILE_UNRESOLVED", f"Profile not found in the installed bundle: {ref}", "/compatibility/profiles"))
         elif entry.get("sha256") != catalogue_entry["sha256"]:
-            findings.append(ValidationFinding("BMCS_DIGEST_MISMATCH", f"Profile digest does not match {ref}", "/compatibility/profiles"))
+            findings.append(ValidationFinding("BMCS_DIGEST_MISMATCH", f"The sha256 for {ref} doesn't match the installed profile.", "/compatibility/profiles"))
 
     for direction in ("inputs", "outputs"):
         for index, port in enumerate(manifest.get("io", {}).get(direction, [])):
@@ -117,7 +117,7 @@ def validate_manifest(manifest: dict[str, Any], *, bundle: Bundle | None = None)
                         findings.append(
                             ValidationFinding(
                                 "BMCS_PROFILE_NOT_IMPORTED",
-                                f"Port profile is not listed in compatibility.profiles: {ref}",
+                                f"This port uses {ref}, but it isn't listed in compatibility.profiles.",
                                 f"/io/{direction}/{index}/contract/profile_refs",
                             )
                         )

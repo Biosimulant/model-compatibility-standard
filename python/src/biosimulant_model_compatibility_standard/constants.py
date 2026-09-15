@@ -1,15 +1,3 @@
-"""Stable public constants."""
+"""Constants shared across the package."""
 
 STANDARD = "https://biosimulant.com/standards/model-compatibility/v0.1"
-SCHEMA_VERSION = "0.1"
-TECHNICAL_STATUSES = (
-    "EXACT",
-    "DIRECT_COMPATIBLE",
-    "LOSSLESS_CONVERSION_AVAILABLE",
-    "LOSSY_CONVERSION_REQUIRES_APPROVAL",
-    "INFERENCE_MODEL_REQUIRED",
-    "CONDITIONAL",
-    "INCOMPATIBLE",
-    "UNKNOWN",
-)
-POLICY_DECISIONS = ("ALLOW", "APPROVAL_REQUIRED", "BLOCK")

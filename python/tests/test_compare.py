@@ -49,3 +49,29 @@ def test_committed_cross_language_golden_vectors():
     comparisons = bundle.read_json("fixtures/golden/comparison-statuses.json")
     for case in comparisons["cases"]:
         assert compare_contracts(case["source"], case["target"])["status"] == case["status"]
+
+
+class _PermutationBundle:
+    # The real bundle, except every profile has a single labels-permutation rule.
+    def __init__(self):
+        real = get_bundle()
+        self.digest = real.digest
+        self.unit_conversions = real.unit_conversions
+
+    def profile(self, ref):
+        rule = {
+            "source": "/contract/dimensions/axes",
+            "target": "/contract/dimensions/axes",
+            "operator": "labels-permutation",
+            "missing": "unknown",
+            "reason_code": "BMCS_VALUE_MISMATCH",
+        }
+        return {"comparison_rules": [rule]}
+
+
+def test_reordered_axis_labels_are_a_lossless_conversion():
+    source = {"dimensions": {"axes": ["gene", "sample"]}}
+    target = {"dimensions": {"axes": ["sample", "gene"]}}
+    report = compare_contracts(source, target, target_profile_refs=["test"], bundle=_PermutationBundle())
+    assert report["status"] == "LOSSLESS_CONVERSION_AVAILABLE"
+    assert report["policy_decision"] == "ALLOW"

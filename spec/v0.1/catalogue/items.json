@@ -1,7 +1,7 @@
 {
   "items": [
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "unit-convertible",
       "family": "existing-io",
       "json_schema": {
@@ -22,7 +22,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "artifact",
       "json_schema": {
@@ -43,7 +43,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "artifact",
       "json_schema": {
@@ -64,7 +64,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "artifact",
       "json_schema": {
@@ -85,7 +85,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "artifact",
       "json_schema": {
@@ -106,7 +106,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "artifact",
       "json_schema": {
@@ -127,7 +127,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "artifact",
       "json_schema": {
@@ -148,7 +148,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "artifact",
       "json_schema": {
@@ -169,7 +169,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "artifact",
       "json_schema": {
@@ -190,7 +190,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "artifact",
       "json_schema": {
@@ -211,7 +211,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "digest-equal",
       "family": "artifact",
       "json_schema": {
@@ -232,7 +232,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "artifact",
       "json_schema": {
@@ -253,7 +253,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -274,7 +274,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -295,7 +295,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -316,7 +316,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -337,7 +337,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -358,7 +358,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -379,7 +379,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -400,7 +400,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -421,7 +421,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -442,7 +442,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -463,7 +463,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -484,7 +484,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -505,7 +505,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -526,7 +526,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -547,7 +547,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -568,7 +568,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -589,7 +589,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -610,7 +610,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -631,7 +631,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -652,7 +652,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -673,7 +673,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -694,7 +694,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -715,7 +715,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -736,7 +736,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -757,7 +757,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -778,7 +778,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -799,7 +799,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -820,7 +820,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -841,7 +841,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
@@ -862,7 +862,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "constraints[]",
       "json_schema": {
@@ -883,7 +883,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "constraints[]",
       "json_schema": {
@@ -904,7 +904,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "constraints[]",
       "json_schema": {
@@ -925,7 +925,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "constraints[]",
       "json_schema": {
@@ -946,7 +946,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "constraints[]",
       "json_schema": {
@@ -967,7 +967,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "constraints[]",
       "json_schema": {
@@ -988,7 +988,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "constraints[]",
       "json_schema": {
@@ -1009,7 +1009,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "constraints[]",
       "json_schema": {
@@ -1030,7 +1030,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "existing-io",
       "json_schema": {
@@ -1051,7 +1051,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "labels-equal",
       "family": "dimensions",
       "json_schema": {
@@ -1072,7 +1072,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1093,7 +1093,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1114,7 +1114,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1135,7 +1135,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1156,7 +1156,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1177,7 +1177,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1198,7 +1198,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1219,7 +1219,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1240,7 +1240,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "unit-convertible",
       "family": "dimensions",
       "json_schema": {
@@ -1261,7 +1261,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1282,7 +1282,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1303,7 +1303,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1324,7 +1324,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1345,7 +1345,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1366,7 +1366,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1387,7 +1387,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1408,7 +1408,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1429,7 +1429,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1450,7 +1450,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1471,7 +1471,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "dimensions",
       "json_schema": {
@@ -1492,7 +1492,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "existing-io",
       "json_schema": {
@@ -1513,7 +1513,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "existing-io",
       "json_schema": {
@@ -1534,7 +1534,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "envelope",
       "json_schema": {
@@ -1555,7 +1555,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "envelope",
       "json_schema": {
@@ -1576,7 +1576,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "envelope",
       "json_schema": {
@@ -1597,7 +1597,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "envelope",
       "json_schema": {
@@ -1618,7 +1618,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "envelope",
       "json_schema": {
@@ -1639,7 +1639,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "envelope",
       "json_schema": {
@@ -1660,7 +1660,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "envelope",
       "json_schema": {
@@ -1681,7 +1681,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "envelope",
       "json_schema": {
@@ -1702,7 +1702,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "envelope",
       "json_schema": {
@@ -1723,7 +1723,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "envelope",
       "json_schema": {
@@ -1744,7 +1744,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -1765,7 +1765,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -1786,7 +1786,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -1807,7 +1807,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -1828,7 +1828,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -1849,7 +1849,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -1870,7 +1870,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -1891,7 +1891,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -1912,7 +1912,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -1933,7 +1933,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -1954,7 +1954,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "mapping-total",
       "family": "identifiers",
       "json_schema": {
@@ -1975,7 +1975,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -1996,7 +1996,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -2017,7 +2017,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -2038,7 +2038,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -2059,7 +2059,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -2080,7 +2080,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -2101,7 +2101,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -2122,7 +2122,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -2143,7 +2143,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -2164,7 +2164,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -2185,7 +2185,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -2206,7 +2206,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -2227,7 +2227,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -2248,7 +2248,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -2269,7 +2269,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "identifiers",
       "json_schema": {
@@ -2290,7 +2290,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "existing-io",
       "json_schema": {
@@ -2311,7 +2311,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "lifecycle",
       "json_schema": {
@@ -2332,7 +2332,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "lifecycle",
       "json_schema": {
@@ -2353,7 +2353,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "lifecycle",
       "json_schema": {
@@ -2374,7 +2374,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "lifecycle",
       "json_schema": {
@@ -2395,7 +2395,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "lifecycle",
       "json_schema": {
@@ -2416,7 +2416,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "lifecycle",
       "json_schema": {
@@ -2437,7 +2437,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "lifecycle",
       "json_schema": {
@@ -2458,7 +2458,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "lifecycle",
       "json_schema": {
@@ -2479,7 +2479,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "lifecycle",
       "json_schema": {
@@ -2500,7 +2500,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "lifecycle",
       "json_schema": {
@@ -2521,7 +2521,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "lifecycle",
       "json_schema": {
@@ -2542,7 +2542,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "lifecycle",
       "json_schema": {
@@ -2563,7 +2563,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "lifecycle",
       "json_schema": {
@@ -2584,7 +2584,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2605,7 +2605,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2626,7 +2626,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2647,7 +2647,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2668,7 +2668,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2689,7 +2689,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2710,7 +2710,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2731,7 +2731,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2752,7 +2752,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2773,7 +2773,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2794,7 +2794,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2815,7 +2815,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2836,7 +2836,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2857,7 +2857,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2878,7 +2878,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "measurement",
       "json_schema": {
@@ -2899,7 +2899,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "unit-convertible",
       "family": "measurement",
       "json_schema": {
@@ -2920,7 +2920,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "existing-io",
       "json_schema": {
@@ -2941,7 +2941,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -2962,7 +2962,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -2983,7 +2983,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3004,7 +3004,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3025,7 +3025,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3046,7 +3046,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3067,7 +3067,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3088,7 +3088,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3109,7 +3109,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3130,7 +3130,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3151,7 +3151,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3172,7 +3172,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3193,7 +3193,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3214,7 +3214,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3235,7 +3235,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3256,7 +3256,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3277,7 +3277,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3298,7 +3298,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3319,7 +3319,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3340,7 +3340,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3361,7 +3361,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3382,7 +3382,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3403,7 +3403,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3424,7 +3424,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3445,7 +3445,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3466,7 +3466,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3487,7 +3487,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3508,7 +3508,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3529,7 +3529,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3550,7 +3550,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3571,7 +3571,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3592,7 +3592,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3613,7 +3613,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "origin",
       "json_schema": {
@@ -3634,7 +3634,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3655,7 +3655,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3676,7 +3676,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3697,7 +3697,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3718,7 +3718,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3739,7 +3739,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3760,7 +3760,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3781,7 +3781,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3802,7 +3802,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3823,7 +3823,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3844,7 +3844,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3865,7 +3865,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3886,7 +3886,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3907,7 +3907,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3928,7 +3928,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3949,7 +3949,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3970,7 +3970,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -3991,7 +3991,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4012,7 +4012,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4033,7 +4033,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4054,7 +4054,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4075,7 +4075,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4096,7 +4096,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4117,7 +4117,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4138,7 +4138,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4159,7 +4159,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4180,7 +4180,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4201,7 +4201,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4222,7 +4222,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4243,7 +4243,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4264,7 +4264,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4285,7 +4285,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4306,7 +4306,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4327,7 +4327,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4348,7 +4348,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4369,7 +4369,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4390,7 +4390,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4411,7 +4411,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4432,7 +4432,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4453,7 +4453,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
@@ -4474,7 +4474,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "existing-io",
       "json_schema": {
@@ -4495,7 +4495,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "existing-io",
       "json_schema": {
@@ -4516,7 +4516,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "security",
       "json_schema": {
@@ -4537,7 +4537,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "security",
       "json_schema": {
@@ -4558,7 +4558,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "security",
       "json_schema": {
@@ -4579,7 +4579,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "security",
       "json_schema": {
@@ -4600,7 +4600,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "security",
       "json_schema": {
@@ -4621,7 +4621,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "security",
       "json_schema": {
@@ -4642,7 +4642,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "security",
       "json_schema": {
@@ -4663,7 +4663,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "security",
       "json_schema": {
@@ -4684,7 +4684,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "security",
       "json_schema": {
@@ -4705,7 +4705,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "security",
       "json_schema": {
@@ -4726,7 +4726,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "security",
       "json_schema": {
@@ -4747,7 +4747,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -4768,7 +4768,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -4789,7 +4789,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -4810,7 +4810,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -4831,7 +4831,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -4852,7 +4852,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -4873,7 +4873,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -4894,7 +4894,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -4915,7 +4915,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -4936,7 +4936,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -4957,7 +4957,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -4978,7 +4978,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -4999,7 +4999,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -5020,7 +5020,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -5041,7 +5041,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -5062,7 +5062,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -5083,7 +5083,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -5104,7 +5104,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -5125,7 +5125,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -5146,7 +5146,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -5167,7 +5167,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -5188,7 +5188,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -5209,7 +5209,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
       "family": "semantic",
       "json_schema": {
@@ -5230,7 +5230,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "existing-io",
       "json_schema": {
@@ -5251,7 +5251,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "existing-io",
       "json_schema": {
@@ -5272,7 +5272,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {
@@ -5293,7 +5293,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {
@@ -5314,7 +5314,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {
@@ -5335,7 +5335,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {
@@ -5356,7 +5356,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {
@@ -5377,7 +5377,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {
@@ -5398,7 +5398,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {
@@ -5419,7 +5419,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {
@@ -5440,7 +5440,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {
@@ -5461,7 +5461,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {
@@ -5482,7 +5482,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {
@@ -5503,7 +5503,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {
@@ -5524,7 +5524,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {
@@ -5545,7 +5545,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {
@@ -5566,7 +5566,7 @@
       "value_type": "profile-defined JSON value"
     },
     {
-      "comparison_effect": "Compared only when required by the selected profile or present in both normalized contracts.",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
       "family": "uncertainty",
       "json_schema": {

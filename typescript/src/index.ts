@@ -108,7 +108,7 @@ const canonicalizeFunction = ((canonicalizeImport as unknown as { default?: type
 
 export function canonicalJson(value: unknown): string {
   const encoded = canonicalizeFunction(value);
-  if (encoded === undefined) throw new TypeError("Value is not valid canonical JSON");
+  if (encoded === undefined) throw new TypeError("Value can't be serialized as canonical JSON");
   return encoded;
 }
 
@@ -170,7 +170,7 @@ export function validateContract(contract: JsonObject, profileRefs: string[] = [
     try {
       profile = bundle.profile(ref);
     } catch {
-      findings.push({ reason_code: "BMCS_PROFILE_UNRESOLVED", message: `Unknown profile: ${ref}`, path: "/profile_refs", severity: "error" });
+      findings.push({ reason_code: "BMCS_PROFILE_UNRESOLVED", message: `Profile not found in the installed bundle: ${ref}`, path: "/profile_refs", severity: "error" });
       continue;
     }
     for (const requirement of profile.requirements as JsonObject[]) {
@@ -178,12 +178,12 @@ export function validateContract(contract: JsonObject, profileRefs: string[] = [
       const path = requirement.path as string;
       const value = getDotted(contract, path);
       if (value === undefined || value === null) {
-        findings.push({ reason_code: "BMCS_REQUIRED_MISSING", message: `${ref} requires ${path}`, path: `/${path.replaceAll(".", "/")}`, severity: "error" });
+        findings.push({ reason_code: "BMCS_REQUIRED_MISSING", message: `Profile ${ref} requires '${path}', but it is missing.`, path: `/${path.replaceAll(".", "/")}`, severity: "error" });
         continue;
       }
       const checkRequirement = ajv.compile(requirement.schema as JsonObject);
       if (!checkRequirement(value)) {
-        findings.push({ reason_code: "BMCS_PROFILE_VALUE_INVALID", message: `${path} does not satisfy the profile requirement`, path: `/${path.replaceAll(".", "/")}`, severity: "error" });
+        findings.push({ reason_code: "BMCS_PROFILE_VALUE_INVALID", message: `${path}: ${checkRequirement.errors?.[0]?.message ?? "value is invalid"}`, path: `/${path.replaceAll(".", "/")}`, severity: "error" });
       }
     }
   }
@@ -212,8 +212,8 @@ export function validateManifest(manifest: JsonObject, bundle = getBundle()): Va
   for (const item of (compatibility.profiles ?? []) as JsonObject[]) imports.set(item.ref as string, item);
   for (const [ref, imported] of imports) {
     const expected = bundle.profileSummary(ref);
-    if (!expected) findings.push({ reason_code: "BMCS_PROFILE_UNRESOLVED", message: `Unknown profile: ${ref}`, path: "/compatibility/profiles", severity: "error" });
-    else if (imported.sha256 !== expected.sha256) findings.push({ reason_code: "BMCS_DIGEST_MISMATCH", message: `Profile digest does not match ${ref}`, path: "/compatibility/profiles", severity: "error" });
+    if (!expected) findings.push({ reason_code: "BMCS_PROFILE_UNRESOLVED", message: `Profile not found in the installed bundle: ${ref}`, path: "/compatibility/profiles", severity: "error" });
+    else if (imported.sha256 !== expected.sha256) findings.push({ reason_code: "BMCS_DIGEST_MISMATCH", message: `The sha256 for ${ref} doesn't match the installed profile.`, path: "/compatibility/profiles", severity: "error" });
   }
   const io = manifest.io as JsonObject;
   for (const direction of ["inputs", "outputs"]) {
@@ -221,7 +221,7 @@ export function validateManifest(manifest: JsonObject, bundle = getBundle()): Va
       const contract = rawPort.contract as JsonObject | undefined;
       if (!contract) continue;
       const refs = (contract.profile_refs ?? []) as string[];
-      for (const ref of refs) if (!imports.has(ref)) findings.push({ reason_code: "BMCS_PROFILE_NOT_IMPORTED", message: `Port profile is not imported: ${ref}`, path: `/io/${direction}/${index}/contract/profile_refs`, severity: "error" });
+      for (const ref of refs) if (!imports.has(ref)) findings.push({ reason_code: "BMCS_PROFILE_NOT_IMPORTED", message: `This port uses ${ref}, but it isn't listed in compatibility.profiles.`, path: `/io/${direction}/${index}/contract/profile_refs`, severity: "error" });
       findings.push(...validateContract(contract, refs, bundle));
     }
   }
@@ -251,7 +251,11 @@ function compareValue(operator: string, source: JsonValue, target: JsonValue, bu
     const left = new Set(source as JsonValue[]), right = new Set(target as JsonValue[]);
     return [operator === "subset" ? [...left].every((value) => right.has(value)) : [...right].every((value) => left.has(value)), undefined];
   }
-  if (operator === "labels-permutation") return [(source as JsonValue[]).length === (target as JsonValue[]).length && [...source as JsonValue[]].sort().every((value, index) => canonicalJson(value) === canonicalJson([...target as JsonValue[]].sort()[index])), "none"];
+  if (operator === "labels-permutation") {
+    const left = (source as JsonValue[]).map(canonicalJson), right = (target as JsonValue[]).map(canonicalJson);
+    const sameLabels = JSON.stringify([...left].sort()) === JSON.stringify([...right].sort());
+    return [sameLabels, JSON.stringify(left) === JSON.stringify(right) ? undefined : "none"];
+  }
   if (operator === "unit-convertible") {
     if (source === target) return [true, undefined];
     const conversion = bundle.unitConversions().find((entry) => entry.from === source && entry.to === target);
@@ -267,10 +271,10 @@ export function compareContracts(source: JsonObject | null, target: JsonObject |
   let findings: CompatibilityFinding[];
   if (source === null || target === null) {
     status = "UNKNOWN";
-    findings = [finding("contract", "UNKNOWN", "BMCS_CONTRACT_NOT_DECLARED", "Compatibility metadata is not declared on both ports.")];
+    findings = [finding("contract", "UNKNOWN", "BMCS_CONTRACT_NOT_DECLARED", "One or both ports have no compatibility contract.")];
   } else if (digest(source) === digest(target)) {
     status = "EXACT";
-    findings = [finding("contract", "EXACT", "BMCS_EXACT_CONTRACT", "Canonical contract digests are identical.")];
+    findings = [finding("contract", "EXACT", "BMCS_EXACT_CONTRACT", "The two contracts are identical.")];
   } else {
     const refs = options.targetProfileRefs?.length ? options.targetProfileRefs : options.sourceProfileRefs ?? [];
     let rules = refs.length ? rulesFor(refs, bundle) : [];
@@ -288,13 +292,13 @@ export function compareContracts(source: JsonObject | null, target: JsonObject |
       if (left === undefined || right === undefined) {
         if (rule.missing === "ignore") continue;
         unknown = true;
-        findings.push(finding(dimension, "UNKNOWN", "BMCS_REQUIRED_EVIDENCE_MISSING", `Evidence is missing for ${rule.target}.`));
+        findings.push(finding(dimension, "UNKNOWN", "BMCS_REQUIRED_EVIDENCE_MISSING", `${rule.target} is missing from the source or target contract.`));
         continue;
       }
       const [compatible, transformation] = compareValue(rule.operator as string, left, right, bundle);
-      if (transformation === "unsupported") { unknown = true; findings.push(finding(dimension, "UNKNOWN", "BMCS_OPERATOR_REQUIRES_SNAPSHOT", `${rule.operator} requires pinned external evidence.`)); }
-      else if (compatible) { conversion = transformation ?? conversion; findings.push(finding(dimension, "DIRECT_COMPATIBLE", "BMCS_RULE_SATISFIED", `${rule.operator} comparison passed.`)); }
-      else { incompatible = true; findings.push(finding(dimension, "INCOMPATIBLE", rule.reason_code as string, `${rule.operator} comparison failed.`, { source: left, target: right })); }
+      if (transformation === "unsupported") { unknown = true; findings.push(finding(dimension, "UNKNOWN", "BMCS_OPERATOR_REQUIRES_SNAPSHOT", `The '${rule.operator}' check isn't available yet, so ${rule.target} can't be compared.`)); }
+      else if (compatible) { conversion = transformation ?? conversion; findings.push(finding(dimension, "DIRECT_COMPATIBLE", "BMCS_RULE_SATISFIED", `${rule.target}: '${rule.operator}' check passed.`)); }
+      else { incompatible = true; findings.push(finding(dimension, "INCOMPATIBLE", rule.reason_code as string, `${rule.target}: '${rule.operator}' check failed.`, { source: left, target: right })); }
     }
     status = incompatible ? "INCOMPATIBLE" : unknown ? "UNKNOWN" : conversion === "none" ? "LOSSLESS_CONVERSION_AVAILABLE" : conversion ? "LOSSY_CONVERSION_REQUIRES_APPROVAL" : "DIRECT_COMPATIBLE";
   }

@@ -1,4 +1,4 @@
-"""Bounded deterministic planning over reviewed adapter and inference capabilities."""
+"""Find the cheapest chain of reviewed adapters or inference models from a source contract to a target."""
 
 from __future__ import annotations
 
@@ -10,6 +10,7 @@ from typing import Any, Iterable
 from .bundle import Bundle, get_bundle
 from .canonical import digest
 from .compare import compare_contracts
+from .constants import STANDARD
 from .validation import validate_object
 
 _LOSS_RANK = {"none": 0, "bounded": 1, "lossy": 2}
@@ -113,7 +114,7 @@ def _plan(
     )
     partial = {
         "schema_version": "0.1",
-        "standard": "https://biosimulant.com/standards/model-compatibility/v0.1",
+        "standard": STANDARD,
         "bundle_sha256": bundle.digest,
         "nodes": nodes,
         "edges": edges,
@@ -136,7 +137,11 @@ def resolve_contracts(
     limits: ResolutionLimits | None = None,
     bundle: Bundle | None = None,
 ) -> dict[str, Any]:
-    """Resolve one boundary or return an explicit unresolved/ambiguous result."""
+    """Plan how to connect a source contract to a target.
+
+    Returns RESOLVED with a plan, AMBIGUOUS when several plans cost the same, or
+    UNRESOLVED with a reason. Only capabilities with state "reviewed" are used.
+    """
 
     active = bundle or get_bundle()
     active_policy = dict(policy or {})

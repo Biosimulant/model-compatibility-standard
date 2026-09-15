@@ -1,4 +1,4 @@
-"""Reference implementation for the Biosimulant Model Compatibility Standard."""
+"""Python reference implementation of the Biosimulant Model Compatibility Standard."""
 
 from .bundle import Bundle, get_bundle
 from .canonical import canonical_bytes, digest

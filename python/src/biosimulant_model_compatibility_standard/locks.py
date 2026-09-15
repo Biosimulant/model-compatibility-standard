@@ -1,4 +1,4 @@
-"""Deterministic compatibility.lock.json generation."""
+"""Build compatibility.lock.json, which pins the exact profiles and contracts a model uses."""
 
 from __future__ import annotations
 
@@ -7,6 +7,7 @@ from typing import Any
 
 from .bundle import Bundle, get_bundle
 from .canonical import digest
+from .constants import STANDARD
 from .validation import validate_manifest
 
 
@@ -15,7 +16,7 @@ def build_compatibility_lock(manifest: dict[str, Any], *, bundle: Bundle | None 
     findings = validate_manifest(manifest, bundle=active)
     if findings:
         messages = "; ".join(f"{item.path}: {item.message}" for item in findings)
-        raise ValueError(f"Invalid opted-in compatibility declaration: {messages}")
+        raise ValueError(f"The manifest's compatibility block is invalid: {messages}")
 
     imports = sorted(manifest.get("compatibility", {}).get("profiles", []), key=lambda item: item["ref"])
     contracts = []
@@ -32,7 +33,7 @@ def build_compatibility_lock(manifest: dict[str, Any], *, bundle: Bundle | None 
     contracts.sort(key=lambda item: (item["direction"], item["port"]))
     lock = {
         "schema_version": "0.1",
-        "standard": "https://biosimulant.com/standards/model-compatibility/v0.1",
+        "standard": STANDARD,
         "bundle_sha256": active.digest,
         "contracts": contracts,
         "resolved_references": imports,

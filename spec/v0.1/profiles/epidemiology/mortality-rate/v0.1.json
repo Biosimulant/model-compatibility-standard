@@ -81,8 +81,8 @@
       "target": "/contract/security/consent_scope"
     }
   ],
-  "compatibility_notes": "Direct compatibility requires every target-required item to be satisfied; missing required evidence returns UNKNOWN; transformations must be explicit, versioned capabilities.",
-  "description": "Compatibility contract for mortality rate values in the epidemiology and public health domain.",
+  "compatibility_notes": "Two ports match only when every field the target port requires is satisfied. If required information is missing, the result is UNKNOWN. Any conversion between ports must be a declared, versioned transformation.",
+  "description": "Mortality Rate (Epidemiology and public health): what a port must declare, and how two ports are compared.",
   "domain": "epidemiology",
   "domain_label": "Epidemiology and public health",
   "extends": [],
@@ -243,7 +243,7 @@
     "sources": [],
     "status": "candidate"
   },
-  "scientific_claim": "This profile describes interface compatibility only and does not establish scientific validity, fitness for purpose, or regulatory suitability.",
+  "scientific_claim": "This profile checks whether two model interfaces fit together. It doesn't show that a model is scientifically valid or clinically safe.",
   "stage": "CONTROLLED",
   "transformation_policy": {
     "inference": "approval",

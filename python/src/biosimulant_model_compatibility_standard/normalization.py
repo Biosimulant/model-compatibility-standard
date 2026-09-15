@@ -1,4 +1,4 @@
-"""Specification-driven normalization helpers."""
+"""Sort list fields that are really sets, so equal contracts and manifests get equal digests."""
 
 from __future__ import annotations
 
@@ -37,7 +37,7 @@ def normalize_manifest(manifest: dict[str, Any], *, bundle: Bundle | None = None
     findings = validate_manifest(manifest, bundle=active)
     if findings:
         messages = "; ".join(f"{item.path}: {item.message}" for item in findings)
-        raise ValueError(f"Invalid opted-in compatibility declaration: {messages}")
+        raise ValueError(f"The manifest's compatibility block is invalid: {messages}")
     result = deepcopy(manifest)
     if "compatibility" not in result:
         return result

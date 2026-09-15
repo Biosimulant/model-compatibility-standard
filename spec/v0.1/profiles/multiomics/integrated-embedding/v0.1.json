@@ -65,8 +65,8 @@
       "target": "/contract/biological_context/species"
     }
   ],
-  "compatibility_notes": "Direct compatibility requires every target-required item to be satisfied; missing required evidence returns UNKNOWN; transformations must be explicit, versioned capabilities.",
-  "description": "Compatibility contract for integrated embedding values in the multi-omics, networks, and learned representations domain.",
+  "compatibility_notes": "Two ports match only when every field the target port requires is satisfied. If required information is missing, the result is UNKNOWN. Any conversion between ports must be a declared, versioned transformation.",
+  "description": "Integrated Embedding (Multi-omics, networks, and learned representations): what a port must declare, and how two ports are compared.",
   "domain": "multiomics",
   "domain_label": "Multi-omics, networks, and learned representations",
   "extends": [],
@@ -198,7 +198,7 @@
     "sources": [],
     "status": "candidate"
   },
-  "scientific_claim": "This profile describes interface compatibility only and does not establish scientific validity, fitness for purpose, or regulatory suitability.",
+  "scientific_claim": "This profile checks whether two model interfaces fit together. It doesn't show that a model is scientifically valid or clinically safe.",
   "stage": "WAVE_2",
   "transformation_policy": {
     "inference": "approval",
