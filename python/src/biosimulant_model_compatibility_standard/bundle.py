@@ -73,13 +73,6 @@ class Bundle:
         return result
 
     @cached_property
-    def unit_conversions(self) -> list[dict[str, Any]]:
-        try:
-            return self.read_json("rules/unit-conversions.json")["conversions"]
-        except (FileNotFoundError, KeyError):
-            return []
-
-    @cached_property
     def units(self) -> dict[str, Any]:
         """The UCUM table published with the bundle, empty when the release predates it."""
 

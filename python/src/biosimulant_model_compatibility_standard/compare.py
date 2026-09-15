@@ -45,10 +45,9 @@ def _unit_conversion(source: Any, target: Any, bundle: Bundle) -> dict[str, Any]
             return None
         return {"from": source, "to": target, "factor": conversion.factor, "offset": conversion.offset,
                 "affine": conversion.affine, "loss": "none"}
-    return next(
-        (entry for entry in getattr(bundle, "unit_conversions", []) if entry["from"] == source and entry["to"] == target),
-        None,
-    )
+    # A bundle with no published units table cannot decide the question. That is undecidable, not a
+    # statement that the two units differ; the caller turns an "unsupported" loss into UNKNOWN.
+    return {"loss": "unsupported"}
 
 
 def _verified_snapshots(values: Iterable[dict[str, Any]]) -> dict[str, dict[str, Any]]:
@@ -190,7 +189,14 @@ def _evaluate(
         if source == target:
             return True, None
         if isinstance(source, str) and isinstance(target, str):
-            return (_unit_conversion(source, target, bundle) is not None or _unit_conversion(target, source, bundle) is not None), None
+            conversion = _unit_conversion(source, target, bundle)
+            if conversion is None:
+                return False, None
+            loss = conversion.get("loss")
+            if loss in {"unsupported", "invalid"}:
+                # An unreadable or arbitrary unit is undecidable, not proof of a shared dimension.
+                return False, loss
+            return True, None
         if isinstance(source, dict) and isinstance(target, dict):
             left = source.get("dimension")
             right = target.get("dimension")

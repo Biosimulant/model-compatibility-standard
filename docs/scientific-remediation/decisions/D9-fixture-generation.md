@@ -78,3 +78,16 @@ Generated fixtures changed with them:
   schema says string, and digests and URIs are real.
 
 Settles BMCS-SCI-011, 012, 013 and the target-side coverage gap behind guard 107.
+
+**Follow-up, not yet done.** Two item-model problems were found while regenerating and are worked
+around rather than solved:
+
+- Per-axis requirements under `dimensions.axes[]` are **stripped**. Emitting a `requires` against an
+  array member wrote the requirement as a nested object and clobbered the axes array itself, so the
+  generator now drops them. A profile therefore cannot say "every axis must declare a coordinate
+  reference", which is a real expressiveness loss for image, volume and trajectory profiles.
+- The same defect hit `biological_context.intervention.*`, and those requirements are folded into
+  the parent item instead.
+
+Both need an item model that can address a member of an array, which is a change to the item
+catalogue rather than to the generator.

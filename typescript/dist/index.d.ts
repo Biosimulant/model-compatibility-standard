@@ -58,7 +58,6 @@ export declare class Bundle {
     profile(ref: string): JsonObject;
     profileSummary(ref: string): JsonObject | undefined;
     schemaFiles(): string[];
-    unitConversions(): JsonObject[];
     units(): UnitTable | undefined;
     quantityKinds(): JsonObject;
     verifyIntegrity(): void;

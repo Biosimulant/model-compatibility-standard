@@ -130,7 +130,13 @@ test("the complete scalar, collection, range, pattern and dimension operator set
   assert.equal(ruleReport("not-in", "c", ["a", "b"]).status, "DIRECT_COMPATIBLE");
   assert.equal(ruleReport("range", { minimum: 2, maximum: 4 }, { minimum: 1, maximum: 5 }).status, "DIRECT_COMPATIBLE");
   assert.equal(ruleReport("pattern", "ENSG0001", "ignored", { parameters: { pattern: "ENSG[0-9]+" } }).status, "DIRECT_COMPATIBLE");
-  assert.equal(ruleReport("same-dimension", "nM", "uM").status, "DIRECT_COMPATIBLE");
+  // same-dimension is convertibility, decided against the published UCUM table. It used to read a
+  // four-row table whose rows were nM/uM, so it answered for those two spellings and nothing else.
+  assert.equal(ruleReport("same-dimension", "g", "kg").status, "DIRECT_COMPATIBLE");
+  assert.equal(ruleReport("same-dimension", "Cel", "K").status, "DIRECT_COMPATIBLE");
+  assert.equal(ruleReport("same-dimension", "g", "s").status, "INCOMPATIBLE");
+  // nM and uM are not UCUM codes: M is the mega prefix. Unreadable is undecidable, never a match.
+  assert.equal(ruleReport("same-dimension", "nM", "uM").status, "UNKNOWN");
 });
 
 test("ontology and mapping operators require exact digest-pinned snapshots", () => {

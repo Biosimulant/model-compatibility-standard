@@ -171,14 +171,6 @@ export class Bundle {
     return readdirSync(join(this.root, "schemas")).filter((name) => name.endsWith(".json")).sort();
   }
 
-  unitConversions(): JsonObject[] {
-    try {
-      return this.readJson("rules/unit-conversions.json").conversions as JsonObject[];
-    } catch {
-      return [];
-    }
-  }
-
   units(): UnitTable | undefined {
     try {
       return this.readJson("rules/units.json") as unknown as UnitTable;
@@ -633,8 +625,9 @@ function compareValue(rule: JsonObject, source: JsonValue, target: JsonValue, bu
         return [false, "unsupported"];
       }
     }
-    const conversion = (typeof bundle.unitConversions === "function" ? bundle.unitConversions() : []).find((entry) => entry.from === source && entry.to === target);
-    return [conversion !== undefined, conversion?.loss as string | undefined];
+    // A bundle with no published units table cannot decide the question; that is undecidable,
+    // not a statement that the two units differ.
+    return [false, "unsupported"];
   }
   if (operator === "range") {
     if (typeof source !== "object" || source === null || Array.isArray(source) || typeof target !== "object" || target === null || Array.isArray(target)) return [false, "invalid"];
@@ -646,8 +639,15 @@ function compareValue(rule: JsonObject, source: JsonValue, target: JsonValue, bu
   if (operator === "same-dimension") {
     if (canonicalJson(source) === canonicalJson(target)) return [true, undefined];
     if (typeof source === "string" && typeof target === "string") {
-      const same = bundle.unitConversions().some((entry) => (entry.from === source && entry.to === target) || (entry.from === target && entry.to === source));
-      return [same, undefined];
+      const table = typeof bundle.units === "function" ? bundle.units() : undefined;
+      if (!table) return [false, "unsupported"];
+      try {
+        // Sharing a dimension is exactly being convertible; an unreadable or arbitrary unit is
+        // undecidable rather than proof of a shared dimension.
+        return [convertUnit(source, target, table) !== null, undefined];
+      } catch {
+        return [false, "unsupported"];
+      }
     }
     if (typeof source === "object" && source !== null && !Array.isArray(source) && typeof target === "object" && target !== null && !Array.isArray(target) && source.dimension !== undefined && target.dimension !== undefined) return [canonicalJson(source.dimension) === canonicalJson(target.dimension), undefined];
     return [false, "invalid"];

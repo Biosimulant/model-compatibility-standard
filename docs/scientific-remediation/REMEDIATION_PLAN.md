@@ -84,8 +84,10 @@ points do not.
 
 ## 3. What this plan does not decide
 
-It does not pick the final wording of any profile, and it does not approve anything. Every design
-decision below is open and needs a named owner. No review evidence may be written to
+It does not pick the final wording of any profile, and it does not approve anything. Each design
+decision below carries its status: six are decided and implemented, and every one of them still
+needs a named owner to accept it. A decision recorded here is an engineering choice with its
+reasoning and sources attached, not an approval. No review evidence may be written to
 `source/reviews/` until the profile it covers is both corrected and reviewed by qualified people.
 
 ## 4. Design decisions

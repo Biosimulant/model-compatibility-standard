@@ -113,3 +113,19 @@ Settles BMCS-SCI-003 to 009, 011 and 012. Must keep guards 102, 103 and 105 pass
   deprecated spelling.
 
 Settles BMCS-SCI-003 to 009, 011, 012 and 016, all now guards.
+
+**The legacy conversion table is retired.** `spec/v0.1/rules/unit-conversions.json` carried four
+rows — nM to uM and back, mM to uM and back — and was still published and still read by both
+engines after the UCUM table landed. That had two consequences. It re-exposed the non-UCUM
+spellings this decision migrated away from, to any consumer reading the published rules. And
+`same-dimension` in TypeScript read that table directly, unguarded, rather than going through the
+units table as `unit-convertible` does, so the two engines disagreed about which units share a
+dimension: TypeScript knew only those four spellings, while Python answered from UCUM. Python had
+its own defect in the same operator — an unreadable unit produced a truthy "unsupported" result that
+`is not None` then read as *same dimension*.
+
+The file is no longer generated, both engines now decide `same-dimension` by convertibility against
+the UCUM table, and a unit neither engine can parse is undecidable rather than a match. No generated
+profile emits a `same-dimension` rule, so the coverage lives in the operator tests of both languages
+rather than in a profile fixture: g against kg and Cel against K share a dimension, g against s does
+not, and nM against uM is UNKNOWN.

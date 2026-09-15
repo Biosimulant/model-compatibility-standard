@@ -56,7 +56,7 @@ class _PermutationBundle:
     def __init__(self):
         real = get_bundle()
         self.digest = real.digest
-        self.unit_conversions = real.unit_conversions
+        self.units = real.units
 
     def profile(self, ref):
         rule = {
@@ -81,7 +81,7 @@ class _RuleBundle:
     def __init__(self, rule):
         real = get_bundle()
         self.digest = real.digest
-        self.unit_conversions = real.unit_conversions
+        self.units = real.units
         self.rule = rule
 
     def profile(self, ref):
@@ -113,7 +113,13 @@ def test_scalar_collection_range_pattern_and_dimension_operators():
     assert _rule_report("not-in", "c", ["a", "b"])["status"] == "DIRECT_COMPATIBLE"
     assert _rule_report("range", {"minimum": 2, "maximum": 4}, {"minimum": 1, "maximum": 5})["status"] == "DIRECT_COMPATIBLE"
     assert _rule_report("pattern", "ENSG0001", "ignored", parameters={"pattern": "ENSG[0-9]+"})["status"] == "DIRECT_COMPATIBLE"
-    assert _rule_report("same-dimension", "nM", "uM")["status"] == "DIRECT_COMPATIBLE"
+    # same-dimension is convertibility, decided against the published UCUM table. It used to read a
+    # four-row table whose rows were nM/uM, so it answered for those two spellings and nothing else.
+    assert _rule_report("same-dimension", "g", "kg")["status"] == "DIRECT_COMPATIBLE"
+    assert _rule_report("same-dimension", "Cel", "K")["status"] == "DIRECT_COMPATIBLE"
+    assert _rule_report("same-dimension", "g", "s")["status"] == "INCOMPATIBLE"
+    # nM and uM are not UCUM codes: M is the mega prefix. Unreadable is undecidable, never a match.
+    assert _rule_report("same-dimension", "nM", "uM")["status"] == "UNKNOWN"
 
 
 def test_pinned_ontology_and_mapping_snapshots_are_enforced():

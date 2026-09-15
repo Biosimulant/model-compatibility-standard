@@ -1586,19 +1586,6 @@ def build(root: Path) -> None:
     write_json(root, "rules/reason-codes.json", {"standard": STANDARD, "reason_codes": REASON_CODES})
     write_json(root, "rules/statuses.json", {"standard": STANDARD, "technical": STATUSES, "policy": POLICY_DECISIONS, "quality": QUALITY_DECISIONS})
     write_json(root, "rules/normalization.json", {"standard": STANDARD, "canonicalization": "RFC8785", "set_like_paths": SET_LIKE_PATHS})
-    write_json(
-        root,
-        "rules/unit-conversions.json",
-        {
-            "standard": STANDARD,
-            "conversions": [
-                {"from": "nM", "to": "uM", "factor": "0.001", "offset": "0", "loss": "none"},
-                {"from": "uM", "to": "nM", "factor": "1000", "offset": "0", "loss": "none"},
-                {"from": "mM", "to": "uM", "factor": "1000", "offset": "0", "loss": "none"},
-                {"from": "uM", "to": "mM", "factor": "0.001", "offset": "0", "loss": "none"},
-            ],
-        },
-    )
     write_json(root, "rules/units.json", {"standard": STANDARD, **UCUM_TABLE})
     write_json(root, "rules/quantity-kinds.json", {"standard": STANDARD, "id_prefix": f"{STANDARD.rsplit('/', 1)[0]}/quantity-kinds/", "kinds": QUANTITY_KINDS})
     write_json(root, "catalogue/items.json", {"schema_version": "0.1", "standard": STANDARD, "items": enriched_items})
