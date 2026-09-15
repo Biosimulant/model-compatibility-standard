@@ -17,7 +17,7 @@ Python and TypeScript.
 
 ## Status
 
-`0.1.0-alpha.4` is an engineering release candidate. The schemas and validators
+`0.1.0-alpha.5` is an engineering release candidate. The schemas and validators
 are conformance-tested, but the catalogue is not GA until its scientific review
 gate is complete.
 
@@ -63,11 +63,11 @@ that a model is scientifically valid or clinically safe.
 The packages aren't on PyPI or npm yet. Install from a tagged release on GitHub:
 
 ```bash
-pip install "biosimulant-model-compatibility-standard @ git+https://github.com/Biosimulant/model-compatibility-standard@v0.1.0-alpha.4"
+pip install "biosimulant-model-compatibility-standard @ git+https://github.com/Biosimulant/model-compatibility-standard@v0.1.0-alpha.5"
 ```
 
 ```bash
-npm install github:Biosimulant/model-compatibility-standard#v0.1.0-alpha.4
+npm install github:Biosimulant/model-compatibility-standard#v0.1.0-alpha.5
 ```
 
 The npm install builds the package, which runs a small Python 3 script. Python 3
@@ -100,6 +100,22 @@ const report = compareContracts({ measurement: { unit: "nM" } }, { measurement: 
 console.log(report.status); // LOSSLESS_CONVERSION_AVAILABLE
 ```
 
+Browser and desktop apps use the browser-safe entry point. It contains the same
+schemas and all 650 profiles, so local validation doesn't need a server call:
+
+```ts
+import {
+  parseYaml,
+  validateManifest,
+} from "@biosimulant/model-compatibility-standard/browser";
+
+const findings = validateManifest(parseYaml(modelYaml));
+```
+
+Contract comparison, path planning, approvals and private data stay on the
+authenticated Biosimulant API. The browser entry point only parses and validates
+public standard data.
+
 What each package provides:
 
 | Task | Python | TypeScript |
@@ -113,6 +129,9 @@ What each package provides:
 | Plan a conversion path | `resolve_contracts`, `ResolutionLimits` | `resolveContracts`, `ResolutionLimits` |
 | Build `compatibility.lock.json` | `build_compatibility_lock` | `buildCompatibilityLock` |
 | Verify the installed bundle | `Bundle.verify_integrity` | `Bundle.verifyIntegrity` |
+
+Browser apps can use `parseYaml`, `validateManifest`, `validateContract`, and
+`validateObject` from the `/browser` entry point.
 
 The [Biosimulant docs](https://docs.biosimulant.com/standards/model-compatibility)
 show a full `model.yaml` example and the profile catalogue.

@@ -1,6 +1,6 @@
 {
   "name": "@biosimulant/model-compatibility-standard",
-  "version": "0.1.0-alpha.4",
+  "version": "0.1.0-alpha.5",
   "description": "Schemas, profiles, and Python/TypeScript reference validators for the Biosimulant Model Compatibility Standard",
   "keywords": [
     "biosimulant",
@@ -25,6 +25,17 @@
   "type": "module",
   "main": "./typescript/dist/index.js",
   "types": "./typescript/dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./typescript/dist/index.d.ts",
+      "import": "./typescript/dist/index.js"
+    },
+    "./browser": {
+      "types": "./typescript/dist/browser.d.ts",
+      "import": "./typescript/dist/browser.js"
+    },
+    "./spec/*": "./spec/*"
+  },
   "files": [
     "typescript/dist",
     "spec/v0.1",
@@ -33,7 +44,8 @@
   ],
   "scripts": {
     "build:spec": "python3 scripts/build_standard.py --check",
-    "build": "npm run build:spec && tsc -p typescript/tsconfig.json",
+    "build:browser-data": "node scripts/build_browser_data.mjs",
+    "build": "npm run build:spec && npm run build:browser-data && tsc -p typescript/tsconfig.json",
     "test": "npm run build && node --test typescript/test/*.test.mjs && node scripts/check_cross_language.mjs",
     "prepack": "npm test",
     "prepare": "npm run build"

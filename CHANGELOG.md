@@ -2,6 +2,10 @@
 
 ## Unreleased
 
+- Added a browser-safe TypeScript entry point with the full public schema and
+  profile bundle for offline manifest and contract validation.
+- Added browser-entry conformance tests and an explicit package export.
+
 - Resolver preconditions now run in Python and TypeScript instead of being
   skipped.
 - Compatibility reports and plans now record every verified ontology and

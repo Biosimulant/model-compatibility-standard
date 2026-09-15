@@ -706,7 +706,7 @@ def build(root: Path) -> None:
             data = path.read_bytes()
             files.append({"path": path.relative_to(root).as_posix(), "sha256": "sha256:" + hashlib.sha256(data).hexdigest(), "size_bytes": len(data)})
     manifest_without_digest = {
-        "schema_version": "0.1", "standard": STANDARD, "release": "0.1.0-alpha.4",
+        "schema_version": "0.1", "standard": STANDARD, "release": "0.1.0-alpha.5",
         "canonicalization": "RFC8785", "files": files,
         "counts": {"profiles": 650, "item_definitions": 266, "item_packs": 30},
         "ga_ready": False,

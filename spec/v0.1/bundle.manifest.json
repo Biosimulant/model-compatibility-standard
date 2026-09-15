@@ -1,5 +1,5 @@
 {
-  "bundle_sha256": "sha256:1a3e6d1d4dbed4cbc7bfbb2fed6b7df888e8a9f446eda40b4504f703905fb9af",
+  "bundle_sha256": "sha256:abd5dd94439d26511d3fd88ecfdbcc8767158edbf5681bf794cf2f5f17a66aff",
   "canonicalization": "RFC8785",
   "counts": {
     "item_definitions": 266,
@@ -6647,7 +6647,7 @@
     "Every profile still needs authoritative scientific sources and sign-off from a named domain reviewer."
   ],
   "ga_ready": false,
-  "release": "0.1.0-alpha.4",
+  "release": "0.1.0-alpha.5",
   "schema_version": "0.1",
   "standard": "https://biosimulant.com/standards/model-compatibility/v0.1"
 }
