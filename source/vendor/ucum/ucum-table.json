@@ -1,0 +1,4237 @@
+{
+  "schema_version": "0.1",
+  "generated_by": "scripts/build_ucum_table.py",
+  "ucum": {
+    "version": "2.2",
+    "revision_date": "2024-06-17",
+    "sha256": "sha256:dfccea1b5dc284245ebae97edd1dc03c45864da4e87df55bc9851797b4fd0b61"
+  },
+  "note": "Every unit resolved to a factor over the UCUM base units, a dimension vector in the order given by 'dimensions', and for affine units an offset such that base_value = factor * value + offset. Units flagged arbitrary are not commensurable with anything else, per UCUM section 24, so they convert only to themselves. Units UCUM defines through logarithmic or other non-affine functions are listed in 'unresolved' and must never be converted silently.",
+  "dimensions": [
+    "L",
+    "T",
+    "M",
+    "A",
+    "C",
+    "Q",
+    "F"
+  ],
+  "prefixes": {
+    "Y": 1e+24,
+    "Z": 1e+21,
+    "E": 1e+18,
+    "P": 1000000000000000.0,
+    "T": 1000000000000.0,
+    "G": 1000000000.0,
+    "M": 1000000.0,
+    "k": 1000.0,
+    "h": 100.0,
+    "da": 10.0,
+    "d": 0.1,
+    "c": 0.01,
+    "m": 0.001,
+    "u": 1e-06,
+    "n": 1e-09,
+    "p": 1e-12,
+    "f": 1e-15,
+    "a": 1e-18,
+    "z": 1e-21,
+    "y": 1e-24,
+    "Ki": 1024.0,
+    "Mi": 1048576.0,
+    "Gi": 1073741824.0,
+    "Ti": 1099511627776.0
+  },
+  "aliases": {
+    "M": "mol/L",
+    "nM": "nmol/L",
+    "uM": "umol/L",
+    "mM": "mmol/L",
+    "pM": "pmol/L",
+    "Da": "u",
+    "kDa": "ku"
+  },
+  "alias_note": "Spellings used by v0.1 that UCUM does not define. Deprecated: migrate to the UCUM spelling (decision D1).",
+  "units": {
+    "%": {
+      "factor": 0.01,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fraction"
+    },
+    "'": {
+      "factor": 0.0002908882086657216,
+      "dim": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "plane angle"
+    },
+    "''": {
+      "factor": 4.84813681109536e-06,
+      "dim": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "plane angle"
+    },
+    "10*": {
+      "factor": 10.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "number"
+    },
+    "10^": {
+      "factor": 10.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "number"
+    },
+    "A": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "metric": true,
+      "property": "electric current"
+    },
+    "AU": {
+      "factor": 149597870691.0,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "Ao": {
+      "factor": 1.0000000000000002e-10,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "Bd": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "signal transmission rate"
+    },
+    "Bi": {
+      "factor": 10.0,
+      "dim": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "metric": true,
+      "property": "electric current"
+    },
+    "Bq": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "radioactivity"
+    },
+    "By": {
+      "factor": 8.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "amount of information"
+    },
+    "C": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "metric": true,
+      "property": "electric charge"
+    },
+    "Cel": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "offset": 273.15,
+      "metric": true,
+      "property": "temperature"
+    },
+    "Ci": {
+      "factor": 37000000000.0,
+      "dim": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "radioactivity"
+    },
+    "F": {
+      "factor": 0.001,
+      "dim": [
+        -2,
+        2,
+        -1,
+        0,
+        0,
+        2,
+        0
+      ],
+      "metric": true,
+      "property": "electric capacitance"
+    },
+    "G": {
+      "factor": 0.1,
+      "dim": [
+        0,
+        -1,
+        1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "metric": true,
+      "property": "magnetic flux density"
+    },
+    "Gal": {
+      "factor": 0.01,
+      "dim": [
+        1,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "acceleration"
+    },
+    "Gb": {
+      "factor": 0.7957747154594768,
+      "dim": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "metric": true,
+      "property": "magnetic tension"
+    },
+    "Gy": {
+      "factor": 1.0,
+      "dim": [
+        2,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "energy dose"
+    },
+    "H": {
+      "factor": 1000.0,
+      "dim": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        -2,
+        0
+      ],
+      "metric": true,
+      "property": "inductance"
+    },
+    "Hz": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "frequency"
+    },
+    "J": {
+      "factor": 1000.0,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "energy"
+    },
+    "K": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "temperature"
+    },
+    "Ky": {
+      "factor": 100.0,
+      "dim": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "lineic number"
+    },
+    "L": {
+      "factor": 0.0010000000000000002,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "volume"
+    },
+    "Lmb": {
+      "factor": 3183.098861837907,
+      "dim": [
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "metric": true,
+      "property": "brightness"
+    },
+    "Mx": {
+      "factor": 1e-05,
+      "dim": [
+        2,
+        -1,
+        1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "metric": true,
+      "property": "flux of magnetic induction"
+    },
+    "N": {
+      "factor": 1000.0,
+      "dim": [
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "force"
+    },
+    "Oe": {
+      "factor": 79.57747154594767,
+      "dim": [
+        -1,
+        -1,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "metric": true,
+      "property": "magnetic field intensity"
+    },
+    "Ohm": {
+      "factor": 1000.0,
+      "dim": [
+        2,
+        -1,
+        1,
+        0,
+        0,
+        -2,
+        0
+      ],
+      "metric": true,
+      "property": "electric resistance"
+    },
+    "P": {
+      "factor": 100.0,
+      "dim": [
+        -1,
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "dynamic viscosity"
+    },
+    "Pa": {
+      "factor": 1000.0,
+      "dim": [
+        -1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "pressure"
+    },
+    "R": {
+      "factor": 2.58e-07,
+      "dim": [
+        0,
+        0,
+        -1,
+        0,
+        0,
+        1,
+        0
+      ],
+      "metric": true,
+      "property": "ion dose"
+    },
+    "RAD": {
+      "factor": 0.01,
+      "dim": [
+        2,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "energy dose"
+    },
+    "REM": {
+      "factor": 0.01,
+      "dim": [
+        2,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "dose equivalent"
+    },
+    "S": {
+      "factor": 0.001,
+      "dim": [
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        2,
+        0
+      ],
+      "metric": true,
+      "property": "electric conductance"
+    },
+    "St": {
+      "factor": 0.0001,
+      "dim": [
+        2,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "kinematic viscosity"
+    },
+    "Sv": {
+      "factor": 1.0,
+      "dim": [
+        2,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "dose equivalent"
+    },
+    "T": {
+      "factor": 1000.0,
+      "dim": [
+        0,
+        -1,
+        1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "metric": true,
+      "property": "magnetic flux density"
+    },
+    "U": {
+      "factor": 1.0036901266666666e+16,
+      "dim": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "catalytic activity"
+    },
+    "V": {
+      "factor": 1000.0,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "metric": true,
+      "property": "electric potential"
+    },
+    "W": {
+      "factor": 1000.0,
+      "dim": [
+        2,
+        -3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "power"
+    },
+    "Wb": {
+      "factor": 1000.0,
+      "dim": [
+        2,
+        -1,
+        1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "metric": true,
+      "property": "magnetic flux"
+    },
+    "[APL'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "biologic activity of anticardiolipin IgA"
+    },
+    "[AU]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "procedure defined amount of an allergen using some reference standard"
+    },
+    "[Amb'a'1'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "procedure defined amount of the major allergen of ragweed"
+    },
+    "[BAU]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "amount of an allergen calibrated through in-vivo testing based on the ID50EAL method of (intradermal dilution for 50mm sum of erythema diameters"
+    },
+    "[Btu]": {
+      "factor": 1054350.0,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "energy"
+    },
+    "[Btu_39]": {
+      "factor": 1059670.0,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "energy"
+    },
+    "[Btu_59]": {
+      "factor": 1054800.0,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "energy"
+    },
+    "[Btu_60]": {
+      "factor": 1054680.0,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "energy"
+    },
+    "[Btu_IT]": {
+      "factor": 1055055.85262,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "energy"
+    },
+    "[Btu_m]": {
+      "factor": 1055870.0,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "energy"
+    },
+    "[Btu_th]": {
+      "factor": 1054350.0,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "energy"
+    },
+    "[CCID_50]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "biologic activity (infectivity) of an infectious agent preparation"
+    },
+    "[CFU]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "amount of a proliferating organism"
+    },
+    "[Cal]": {
+      "factor": 4184000.0,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "energy"
+    },
+    "[Ch]": {
+      "factor": 0.0003333333333333333,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "gauge of catheters"
+    },
+    "[D'ag'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "procedure defined amount of a poliomyelitis d-antigen substance"
+    },
+    "[EID_50]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "biologic activity (infectivity) of an infectious agent preparation"
+    },
+    "[ELU]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "arbitrary ELISA unit"
+    },
+    "[EU]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "Ehrlich unit"
+    },
+    "[FEU]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "amount of fibrinogen broken down into the measured d-dimers"
+    },
+    "[FFU]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "amount of an infectious agent"
+    },
+    "[FNU]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "turbidity"
+    },
+    "[GPL'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "biologic activity of anticardiolipin IgG"
+    },
+    "[G]": {
+      "factor": 6.674299999999999e-14,
+      "dim": [
+        3,
+        -2,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "(unclassified)"
+    },
+    "[HPF]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "view area in microscope"
+    },
+    "[HP]": {
+      "factor": 745699.8715822703,
+      "dim": [
+        2,
+        -3,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "power"
+    },
+    "[IR]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "amount of an allergen calibrated through in-vivo testing using the Stallergenes\u00ae method"
+    },
+    "[IU]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "arbitrary": true,
+      "property": "arbitrary"
+    },
+    "[LPF]": {
+      "factor": 100.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "view area in microscope"
+    },
+    "[Lf]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "procedure defined amount of an antigen substance"
+    },
+    "[MET]": {
+      "factor": 5.833333333333335e-11,
+      "dim": [
+        3,
+        -1,
+        -1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "metabolic cost of physical activity"
+    },
+    "[MPL'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "biologic activity of anticardiolipin IgM"
+    },
+    "[NTU]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "turbidity"
+    },
+    "[PFU]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "amount of an infectious agent"
+    },
+    "[PNU]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "procedure defined amount of a protein substance"
+    },
+    "[PRU]": {
+      "factor": 133321999999.99998,
+      "dim": [
+        -4,
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fluid resistance"
+    },
+    "[S]": {
+      "factor": 1e-13,
+      "dim": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "sedimentation coefficient"
+    },
+    "[TCID_50]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "biologic activity (infectivity) of an infectious agent preparation"
+    },
+    "[USP'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "arbitrary"
+    },
+    "[acr_br]": {
+      "factor": 4046.850049400269,
+      "dim": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "area"
+    },
+    "[acr_us]": {
+      "factor": 4046.872609874252,
+      "dim": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "area"
+    },
+    "[anti'Xa'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "biologic activity of factor Xa inhibitor (heparin)"
+    },
+    "[arb'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "arbitrary"
+    },
+    "[bbl_us]": {
+      "factor": 0.15898729492800007,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fluid volume"
+    },
+    "[bdsk'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "biologic activity of phosphatase"
+    },
+    "[beth'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "biologic activity of factor VIII inhibitor"
+    },
+    "[bf_i]": {
+      "factor": 0.0023597372160000006,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[bu_br]": {
+      "factor": 0.036368720000000014,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[bu_us]": {
+      "factor": 0.035239070166880014,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "dry volume"
+    },
+    "[c]": {
+      "factor": 299792458.0,
+      "dim": [
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "velocity"
+    },
+    "[car_Au]": {
+      "factor": 0.041666666666666664,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass fraction"
+    },
+    "[car_m]": {
+      "factor": 0.2,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[cft_i]": {
+      "factor": 0.028316846592000004,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[ch_br]": {
+      "factor": 20.11678416,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[ch_us]": {
+      "factor": 20.116840233680467,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[cicero]": {
+      "factor": 0.004511111111111111,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[cin_i]": {
+      "factor": 1.6387064000000006e-05,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[cml_i]": {
+      "factor": 5.067074790974979e-10,
+      "dim": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "area"
+    },
+    "[cr_i]": {
+      "factor": 3.6245563637760005,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[crd_us]": {
+      "factor": 3.6245563637760005,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fluid volume"
+    },
+    "[cup_m]": {
+      "factor": 0.00024000000000000003,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[cup_us]": {
+      "factor": 0.0002365882365000001,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[cyd_i]": {
+      "factor": 0.7645548579840002,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[degF]": {
+      "factor": 0.5555555555555556,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "offset": 255.37222222222223,
+      "metric": false,
+      "property": "temperature"
+    },
+    "[degR]": {
+      "factor": 0.5555555555555556,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "temperature"
+    },
+    "[degRe]": {
+      "factor": 1.25,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "offset": 273.15,
+      "metric": false,
+      "property": "temperature"
+    },
+    "[den]": {
+      "factor": 0.0001111111111111111,
+      "dim": [
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "linear mass density (of textile thread)"
+    },
+    "[didot]": {
+      "factor": 0.0003759259259259259,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[diop]": {
+      "factor": 1.0,
+      "dim": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "refraction of a lens"
+    },
+    "[dpt_us]": {
+      "factor": 0.0005506104713575002,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "dry volume"
+    },
+    "[dqt_us]": {
+      "factor": 0.0011012209427150004,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "dry volume"
+    },
+    "[dr_ap]": {
+      "factor": 3.8879346,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[dr_av]": {
+      "factor": 1.7718451953125,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[drp]": {
+      "factor": 5.000000000000001e-08,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[dye'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "biologic activity of amylase"
+    },
+    "[e]": {
+      "factor": 1.602176634e-19,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "metric": true,
+      "property": "electric charge"
+    },
+    "[eps_0]": {
+      "factor": 8.854187817000001e-15,
+      "dim": [
+        -3,
+        2,
+        -1,
+        0,
+        0,
+        2,
+        0
+      ],
+      "metric": true,
+      "property": "electric permittivity"
+    },
+    "[fdr_br]": {
+      "factor": 3.5516328125000015e-06,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[fdr_us]": {
+      "factor": 3.6966911953125014e-06,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fluid volume"
+    },
+    "[foz_br]": {
+      "factor": 2.841306250000001e-05,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[foz_m]": {
+      "factor": 3.0000000000000004e-05,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fluid volume"
+    },
+    "[foz_us]": {
+      "factor": 2.957352956250001e-05,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fluid volume"
+    },
+    "[ft_br]": {
+      "factor": 0.30479976000000003,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[ft_i]": {
+      "factor": 0.3048,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[ft_us]": {
+      "factor": 0.3048006096012192,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[fth_br]": {
+      "factor": 1.82879856,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[fth_i]": {
+      "factor": 1.8288000000000002,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "depth of water"
+    },
+    "[fth_us]": {
+      "factor": 1.828803657607315,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[fur_us]": {
+      "factor": 201.16840233680466,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[g]": {
+      "factor": 9.80665,
+      "dim": [
+        1,
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "acceleration"
+    },
+    "[gal_br]": {
+      "factor": 0.004546090000000002,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[gal_us]": {
+      "factor": 0.0037854117840000014,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fluid volume"
+    },
+    "[gal_wi]": {
+      "factor": 0.004404883770860002,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "dry volume"
+    },
+    "[gil_br]": {
+      "factor": 0.00014206531250000006,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[gil_us]": {
+      "factor": 0.00011829411825000005,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fluid volume"
+    },
+    "[gr]": {
+      "factor": 0.06479891,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[h]": {
+      "factor": 6.62607015e-31,
+      "dim": [
+        2,
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "action"
+    },
+    "[hd_i]": {
+      "factor": 0.10160000000000001,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "height of horses"
+    },
+    "[hnsf'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "x-ray attenuation"
+    },
+    "[hp_C]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "homeopathic potency (Hahnemann)"
+    },
+    "[hp_M]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "homeopathic potency (Hahnemann)"
+    },
+    "[hp_Q]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "homeopathic potency (Hahnemann)"
+    },
+    "[hp_X]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "homeopathic potency (Hahnemann)"
+    },
+    "[iU]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "arbitrary": true,
+      "property": "arbitrary"
+    },
+    "[in_br]": {
+      "factor": 0.025399980000000003,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[in_i'H2O]": {
+      "factor": 249088.91000000003,
+      "dim": [
+        -1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "pressure"
+    },
+    "[in_i'Hg]": {
+      "factor": 3386378.8000000003,
+      "dim": [
+        -1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "pressure"
+    },
+    "[in_i]": {
+      "factor": 0.025400000000000002,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[in_us]": {
+      "factor": 0.0254000508001016,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[k]": {
+      "factor": 1.380649e-20,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "(unclassified)"
+    },
+    "[ka'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "biologic activity of phosphatase"
+    },
+    "[kn_br]": {
+      "factor": 0.5147729280000001,
+      "dim": [
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "velocity"
+    },
+    "[kn_i]": {
+      "factor": 0.5144444444444445,
+      "dim": [
+        1,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "velocity"
+    },
+    "[knk'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "arbitrary biologic activity"
+    },
+    "[kp_C]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "homeopathic potency (Korsakov)"
+    },
+    "[kp_M]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "homeopathic potency (Korsakov)"
+    },
+    "[kp_Q]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "homeopathic potency (Korsakov)"
+    },
+    "[kp_X]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "homeopathic potency (Korsakov)"
+    },
+    "[lb_ap]": {
+      "factor": 373.2417216,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[lb_av]": {
+      "factor": 453.59237,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[lb_tr]": {
+      "factor": 373.2417216,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[lbf_av]": {
+      "factor": 4448.2216152605,
+      "dim": [
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "force"
+    },
+    "[lcwt_av]": {
+      "factor": 50802.345440000005,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[ligne]": {
+      "factor": 0.0022555555555555554,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[lk_br]": {
+      "factor": 0.2011678416,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[lk_us]": {
+      "factor": 0.20116840233680466,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[lne]": {
+      "factor": 0.002116666666666667,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[lton_av]": {
+      "factor": 1016046.9088000001,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[ly]": {
+      "factor": 9460730472580800.0,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "length"
+    },
+    "[m_e]": {
+      "factor": 9.1093837139e-28,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "mass"
+    },
+    "[m_p]": {
+      "factor": 1.67262192595e-24,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "mass"
+    },
+    "[mclg'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "arbitrary biologic activity"
+    },
+    "[mesh_i]": {
+      "factor": 39.370078740157474,
+      "dim": [
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "lineic number"
+    },
+    "[mi_br]": {
+      "factor": 1609.3427328000002,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[mi_i]": {
+      "factor": 1609.344,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[mi_us]": {
+      "factor": 1609.3472186944373,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[mil_i]": {
+      "factor": 2.5400000000000004e-05,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[mil_us]": {
+      "factor": 2.54000508001016e-05,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[min_br]": {
+      "factor": 5.919388020833336e-08,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[min_us]": {
+      "factor": 6.161151992187503e-08,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fluid volume"
+    },
+    "[mu_0]": {
+      "factor": 0.0012566370614359172,
+      "dim": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        -2,
+        0
+      ],
+      "metric": true,
+      "property": "magnetic permeability"
+    },
+    "[nmi_br]": {
+      "factor": 1853.1825408000002,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[nmi_i]": {
+      "factor": 1852.0,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[oz_ap]": {
+      "factor": 31.1034768,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[oz_av]": {
+      "factor": 28.349523125,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[oz_m]": {
+      "factor": 28.0,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[oz_tr]": {
+      "factor": 31.103476800000003,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[pc_br]": {
+      "factor": 0.7619994000000001,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[pca]": {
+      "factor": 0.004233333333333334,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[pca_pr]": {
+      "factor": 0.004217517600000001,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[pi]": {
+      "factor": 3.141592653589793,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "number"
+    },
+    "[pied]": {
+      "factor": 0.3248,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[pk_br]": {
+      "factor": 0.009092180000000004,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[pk_us]": {
+      "factor": 0.008809767541720004,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "dry volume"
+    },
+    "[pnt]": {
+      "factor": 0.0003527777777777778,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[pnt_pr]": {
+      "factor": 0.00035145980000000004,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[pouce]": {
+      "factor": 0.027066666666666666,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[ppb]": {
+      "factor": 1e-09,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fraction"
+    },
+    "[ppm]": {
+      "factor": 1e-06,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fraction"
+    },
+    "[ppth]": {
+      "factor": 0.001,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fraction"
+    },
+    "[pptr]": {
+      "factor": 1e-12,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fraction"
+    },
+    "[psi]": {
+      "factor": 6894757.293168359,
+      "dim": [
+        -1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "pressure"
+    },
+    "[pt_br]": {
+      "factor": 0.0005682612500000002,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[pt_us]": {
+      "factor": 0.0004731764730000002,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fluid volume"
+    },
+    "[pwt_tr]": {
+      "factor": 1.5551738400000001,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[qt_br]": {
+      "factor": 0.0011365225000000004,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[qt_us]": {
+      "factor": 0.0009463529460000004,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fluid volume"
+    },
+    "[rch_us]": {
+      "factor": 30.480060960121918,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[rd_br]": {
+      "factor": 5.02919604,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[rd_us]": {
+      "factor": 5.029210058420117,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[rlk_us]": {
+      "factor": 0.3048006096012192,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[sc_ap]": {
+      "factor": 1.2959782,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[sct]": {
+      "factor": 2589998.470319521,
+      "dim": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "area"
+    },
+    "[scwt_av]": {
+      "factor": 45359.237,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[sft_i]": {
+      "factor": 0.09290304,
+      "dim": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "area"
+    },
+    "[sin_i]": {
+      "factor": 0.0006451600000000001,
+      "dim": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "area"
+    },
+    "[smgy'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "biologic activity of amylase"
+    },
+    "[smi_us]": {
+      "factor": 2589998.470319521,
+      "dim": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "area"
+    },
+    "[smoot]": {
+      "factor": 1.7018000000000002,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[srd_us]": {
+      "factor": 25.292953811714074,
+      "dim": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "area"
+    },
+    "[ston_av]": {
+      "factor": 907184.74,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[stone_av]": {
+      "factor": 6350.293180000001,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "mass"
+    },
+    "[syd_i]": {
+      "factor": 0.8361273600000002,
+      "dim": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "area"
+    },
+    "[tb'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "biologic activity of tuberculin"
+    },
+    "[tbs_m]": {
+      "factor": 1.5000000000000002e-05,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[tbs_us]": {
+      "factor": 1.4786764781250006e-05,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[todd'U]": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "arbitrary": true,
+      "property": "biologic activity antistreptolysin O"
+    },
+    "[tsp_m]": {
+      "factor": 5.000000000000001e-06,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[tsp_us]": {
+      "factor": 4.928921593750002e-06,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "volume"
+    },
+    "[twp]": {
+      "factor": 93239944.93150276,
+      "dim": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "area"
+    },
+    "[wood'U]": {
+      "factor": 7999319999.999998,
+      "dim": [
+        -4,
+        -1,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "fluid resistance"
+    },
+    "[yd_br]": {
+      "factor": 0.91439928,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[yd_i]": {
+      "factor": 0.9144000000000001,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "[yd_us]": {
+      "factor": 0.9144018288036575,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "length"
+    },
+    "a": {
+      "factor": 31557600.0,
+      "dim": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "time"
+    },
+    "a_g": {
+      "factor": 31556952.0,
+      "dim": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "time"
+    },
+    "a_j": {
+      "factor": 31557600.0,
+      "dim": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "time"
+    },
+    "a_t": {
+      "factor": 31556925.216,
+      "dim": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "time"
+    },
+    "ar": {
+      "factor": 100.0,
+      "dim": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "area"
+    },
+    "atm": {
+      "factor": 101325000.0,
+      "dim": [
+        -1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "pressure"
+    },
+    "att": {
+      "factor": 98066499.99999999,
+      "dim": [
+        -1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "pressure"
+    },
+    "b": {
+      "factor": 1.0000000000000001e-28,
+      "dim": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "action area"
+    },
+    "bar": {
+      "factor": 100000000.0,
+      "dim": [
+        -1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "pressure"
+    },
+    "bit": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "amount of information"
+    },
+    "cal": {
+      "factor": 4184.0,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "energy"
+    },
+    "cal_IT": {
+      "factor": 4186.8,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "energy"
+    },
+    "cal_[15]": {
+      "factor": 4185.8,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "energy"
+    },
+    "cal_[20]": {
+      "factor": 4181.9,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "energy"
+    },
+    "cal_m": {
+      "factor": 4190.0199999999995,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "energy"
+    },
+    "cal_th": {
+      "factor": 4184.0,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "energy"
+    },
+    "cd": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "metric": true,
+      "property": "luminous intensity"
+    },
+    "circ": {
+      "factor": 6.283185307179586,
+      "dim": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "plane angle"
+    },
+    "d": {
+      "factor": 86400.0,
+      "dim": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "time"
+    },
+    "deg": {
+      "factor": 0.017453292519943295,
+      "dim": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "plane angle"
+    },
+    "dyn": {
+      "factor": 0.01,
+      "dim": [
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "force"
+    },
+    "eV": {
+      "factor": 1.602176634e-16,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "energy"
+    },
+    "eq": {
+      "factor": 6.02214076e+23,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "amount of substance"
+    },
+    "erg": {
+      "factor": 0.0001,
+      "dim": [
+        2,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "energy"
+    },
+    "g": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "mass"
+    },
+    "g%": {
+      "factor": 9999.999999999996,
+      "dim": [
+        -3,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "mass concentration"
+    },
+    "gf": {
+      "factor": 9.80665,
+      "dim": [
+        1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "force"
+    },
+    "gon": {
+      "factor": 0.015707963267948967,
+      "dim": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "plane angle"
+    },
+    "h": {
+      "factor": 3600.0,
+      "dim": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "time"
+    },
+    "kat": {
+      "factor": 6.02214076e+23,
+      "dim": [
+        0,
+        -1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "catalytic activity"
+    },
+    "l": {
+      "factor": 0.0010000000000000002,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "volume"
+    },
+    "lm": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "metric": true,
+      "property": "luminous flux"
+    },
+    "lx": {
+      "factor": 1.0,
+      "dim": [
+        -2,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "metric": true,
+      "property": "illuminance"
+    },
+    "m": {
+      "factor": 1.0,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "length"
+    },
+    "m[H2O]": {
+      "factor": 9806650.0,
+      "dim": [
+        -1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "pressure"
+    },
+    "m[Hg]": {
+      "factor": 133322000.0,
+      "dim": [
+        -1,
+        -2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "pressure"
+    },
+    "mho": {
+      "factor": 0.001,
+      "dim": [
+        -2,
+        1,
+        -1,
+        0,
+        0,
+        2,
+        0
+      ],
+      "metric": true,
+      "property": "electric conductance"
+    },
+    "min": {
+      "factor": 60.0,
+      "dim": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "time"
+    },
+    "mo": {
+      "factor": 2629800.0,
+      "dim": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "time"
+    },
+    "mo_g": {
+      "factor": 2629746.0,
+      "dim": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "time"
+    },
+    "mo_j": {
+      "factor": 2629800.0,
+      "dim": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "time"
+    },
+    "mo_s": {
+      "factor": 2551442.976,
+      "dim": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "time"
+    },
+    "mol": {
+      "factor": 6.02214076e+23,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "amount of substance"
+    },
+    "osm": {
+      "factor": 6.02214076e+23,
+      "dim": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "amount of substance (dissolved particles)"
+    },
+    "pc": {
+      "factor": 3.085678e+16,
+      "dim": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "length"
+    },
+    "ph": {
+      "factor": 0.0001,
+      "dim": [
+        -2,
+        0,
+        0,
+        2,
+        0,
+        0,
+        1
+      ],
+      "metric": true,
+      "property": "illuminance"
+    },
+    "rad": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "plane angle"
+    },
+    "s": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "time"
+    },
+    "sb": {
+      "factor": 10000.0,
+      "dim": [
+        -2,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "metric": true,
+      "property": "lum. intensity density"
+    },
+    "sph": {
+      "factor": 12.566370614359172,
+      "dim": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "solid angle"
+    },
+    "sr": {
+      "factor": 1.0,
+      "dim": [
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "solid angle"
+    },
+    "st": {
+      "factor": 1.0,
+      "dim": [
+        3,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "volume"
+    },
+    "t": {
+      "factor": 1000000.0,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "mass"
+    },
+    "tex": {
+      "factor": 0.001,
+      "dim": [
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "linear mass density (of textile thread)"
+    },
+    "u": {
+      "factor": 1.6605390666e-24,
+      "dim": [
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": true,
+      "property": "mass"
+    },
+    "wk": {
+      "factor": 604800.0,
+      "dim": [
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "metric": false,
+      "property": "time"
+    }
+  },
+  "unresolved": {
+    "%[slope]": "'%[slope]' uses the non-affine function '100tan'",
+    "B": "'B' uses the non-affine function 'lg'",
+    "B[10.nV]": "'B[10.nV]' uses the non-affine function 'lgTimes2'",
+    "B[SPL]": "'B[SPL]' uses the non-affine function 'lgTimes2'",
+    "B[V]": "'B[V]' uses the non-affine function 'lgTimes2'",
+    "B[W]": "'B[W]' uses the non-affine function 'lg'",
+    "B[kW]": "'B[kW]' uses the non-affine function 'lg'",
+    "B[mV]": "'B[mV]' uses the non-affine function 'lgTimes2'",
+    "B[uV]": "'B[uV]' uses the non-affine function 'lgTimes2'",
+    "Np": "'Np' uses the non-affine function 'ln'",
+    "[hp'_C]": "\"[hp'_C]\" uses the non-affine function 'hpC'",
+    "[hp'_M]": "\"[hp'_M]\" uses the non-affine function 'hpM'",
+    "[hp'_Q]": "\"[hp'_Q]\" uses the non-affine function 'hpQ'",
+    "[hp'_X]": "\"[hp'_X]\" uses the non-affine function 'hpX'",
+    "[m/s2/Hz^(1/2)]": "'[m/s2/Hz^(1/2)]' uses the non-affine function 'sqrt'",
+    "[p'diop]": "\"[p'diop]\" uses the non-affine function 'tanTimes100'",
+    "[pH]": "'[pH]' uses the non-affine function 'pH'",
+    "bit_s": "'bit_s' uses the non-affine function 'ld'"
+  }
+}

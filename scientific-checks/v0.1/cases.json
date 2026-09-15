@@ -505,6 +505,32 @@
       ]
     },
     {
+      "id": "BMCS-SCI-016",
+      "kind": "defect",
+      "check": "validate",
+      "title": "A firing rate declared in becquerels passes validation",
+      "profile": "neuroscience/firing-rate",
+      "source_patch": {
+        "measurement": {
+          "unit": "Bq"
+        }
+      },
+      "expect": {
+        "error_findings": "at-least-one"
+      },
+      "observed_at_review": {
+        "error_findings": 0
+      },
+      "why": "Becquerels and hertz share the dimension 1/time, so dimensional analysis alone accepts Bq for a firing rate. Radioactivity is not a firing rate; only a quantity-kind binding can refuse it.",
+      "conditions": "This case exists so that D1 cannot be declared done on dimensional analysis alone: the prototype UCUM engine converts Hz to Bq with factor 1, and would pass it.",
+      "decision": "D1",
+      "report_finding": "S4",
+      "sources": [
+        "ucum-2.2",
+        "si-brochure-9"
+      ]
+    },
+    {
       "id": "BMCS-SCI-101",
       "kind": "guard",
       "check": "compare",

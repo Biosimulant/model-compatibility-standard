@@ -46,6 +46,37 @@ Option (b). Checked against UCUM 2.2 (revision 2024-06-17):
   conversion and not a contradiction.
 - Fixture spelling migration across the 124 profiles that require a unit.
 
+## Evidence from the prototype
+
+A working prototype of option (b) exists on branch `scientific-review/phase-0`, not yet wired into
+comparison:
+
+- `scripts/build_ucum_table.py` flattens the vendored UCUM 2.2 file, whose digest matches the pinned
+  source, into `source/vendor/ucum/ucum-table.json`: 294 units resolved, 41 arbitrary, 3 affine
+  (`Cel`, `[degF]`, `[degRe]`), and 18 logarithmic units (bel, neper and similar) listed as
+  unrepresentable rather than converted.
+- `python/src/.../units.py` and `typescript/src/units.ts` parse expressions over that table. The
+  two agree on all 30 conversions tested.
+
+What it gets right: g to kg ×0.001; Cel to K +273.15; [degF] to Cel ×5/9, −17.78; 1/s to /min ×60;
+mm[Hg] to kPa ×0.1333; mo to d ×30.4375 (UCUM's mean Julian month); mass against molar concentration
+incommensurable; [PFU] against [TCID_50] undecidable; `Cel/min` refused, because an offset means
+nothing once combined.
+
+What it cannot do, and why the quantity-kind registry is **required** rather than optional:
+
+- **Hz converts to Bq with factor 1.** Both are 1/time. Radioactivity is not a firing rate.
+  BMCS-SCI-016 pins this, so D1 cannot be declared done on dimensional analysis alone.
+- **[hnsf'U] converts to 1 with factor 1.** UCUM does not flag Hounsfield units as arbitrary.
+- **Annotations are ignored**, as UCUM specifies. `{BAU}/mL` and `{cells}/mL` both reduce to `/mL`
+  and would convert silently. `[IU]/mL` against `{BAU}/mL` is refused only because `[IU]` happens
+  to be flagged arbitrary.
+- **`fmol/(cell.h)` is not UCUM**: `cell` is not a unit. The valid spelling is
+  `fmol/({cell}.h)`, which parses, and then loses the per-cell basis to the annotation rule above.
+
+The v0.1 spellings `nM`, `uM`, `mM` and `M` are carried as explicit, deprecated aliases so existing
+contracts keep working until the fixtures migrate. Guard BMCS-SCI-103 depends on that.
+
 ## Sub-questions
 
 1. Migrate `uM` to `umol/L`, or accept non-UCUM spellings with a mapping?
