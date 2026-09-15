@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added a machine-checked scientific review record for each profile. The build
+  now calculates `release_eligible` and `ga_ready` from complete review evidence
+  instead of hard-coding them. No profile was marked reviewed by this change.
 - Added a browser-safe TypeScript entry point with the full public schema and
   profile bundle for offline manifest and contract validation.
 - Added browser-entry conformance tests and an explicit package export.

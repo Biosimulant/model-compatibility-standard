@@ -7,6 +7,7 @@ Run with --check to confirm the committed spec/v0.1 is up to date without changi
 from __future__ import annotations
 
 import argparse
+from datetime import date
 import hashlib
 import json
 import shutil
@@ -17,6 +18,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "source" / "catalogue.review.json"
+REVIEWS = ROOT / "source" / "reviews"
 OUTPUT = ROOT / "spec" / "v0.1"
 STANDARD = "https://biosimulant.com/standards/model-compatibility/v0.1"
 JSON_TYPES = ["string", "number", "integer", "boolean", "array", "object", "null"]
@@ -90,6 +92,22 @@ SET_LIKE_PATHS = [
     "/contract/security/data_use",
 ]
 
+REVIEW_SECTIONS = {
+    "structure",
+    "semantic",
+    "representation",
+    "dimensions",
+    "identifiers",
+    "measurement",
+    "biological_context",
+    "lifecycle",
+    "origin",
+    "uncertainty",
+    "artifact",
+    "constraints",
+    "security",
+}
+
 
 def dump_bytes(value: Any) -> bytes:
     return (json.dumps(value, indent=2, ensure_ascii=False, sort_keys=True) + "\n").encode()
@@ -109,6 +127,145 @@ def write_json(root: Path, relative: str, value: Any) -> None:
     path = root / relative
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_bytes(dump_bytes(value))
+
+
+def applicable_review_sections(profile: dict[str, Any]) -> set[str]:
+    """Return the parts of a profile that a scientific review must cover."""
+
+    sections: set[str] = set()
+    for path in profile.get("required_items", []):
+        head = str(path).split(".", 1)[0]
+        sections.add(head if head in REVIEW_SECTIONS else "structure")
+    return sections or {"structure"}
+
+
+def review_evidence_errors(profile: dict[str, Any], evidence: dict[str, Any]) -> list[str]:
+    """Check the human evidence needed before a profile can be released as reviewed."""
+
+    errors: list[str] = []
+    if evidence.get("profile_id") != profile.get("id"):
+        errors.append("profile_id must match the catalogue profile")
+
+    authors = evidence.get("authors")
+    if not isinstance(authors, list) or not authors or not all(isinstance(v, str) and v.strip() for v in authors):
+        errors.append("authors must contain at least one name")
+        authors = []
+    scientific_reviewer = evidence.get("scientific_reviewer")
+    schema_reviewer = evidence.get("schema_reviewer")
+    for key, value in (
+        ("scientific_reviewer", scientific_reviewer),
+        ("schema_reviewer", schema_reviewer),
+        ("domain_owner", evidence.get("domain_owner")),
+    ):
+        if not isinstance(value, str) or not value.strip():
+            errors.append(f"{key} must name a person")
+    author_names = {str(value).strip().casefold() for value in authors}
+    if isinstance(scientific_reviewer, str) and scientific_reviewer.strip().casefold() in author_names:
+        errors.append("scientific_reviewer must not be one of the profile authors")
+    if isinstance(schema_reviewer, str) and schema_reviewer.strip().casefold() in author_names:
+        errors.append("schema_reviewer must not be one of the profile authors")
+    if (
+        isinstance(scientific_reviewer, str)
+        and isinstance(schema_reviewer, str)
+        and scientific_reviewer.strip().casefold() == schema_reviewer.strip().casefold()
+    ):
+        errors.append("scientific_reviewer and schema_reviewer must be different people")
+
+    reviewed_at = evidence.get("reviewed_at")
+    try:
+        date.fromisoformat(reviewed_at) if isinstance(reviewed_at, str) else None
+        if not isinstance(reviewed_at, str):
+            raise ValueError
+    except ValueError:
+        errors.append("reviewed_at must be an ISO date")
+
+    intended_use = evidence.get("intended_use")
+    if not isinstance(intended_use, str) or len(intended_use.strip()) < 20:
+        errors.append("intended_use must explain the profile's intended use")
+    limitations = evidence.get("limitations")
+    if not isinstance(limitations, list) or not limitations or not all(
+        isinstance(value, str) and len(value.strip()) >= 10 for value in limitations
+    ):
+        errors.append("limitations must contain at least one clear limitation")
+
+    sources = evidence.get("sources")
+    source_ids: set[str] = set()
+    if not isinstance(sources, list) or not sources:
+        errors.append("sources must contain at least one authoritative source")
+    else:
+        for index, source in enumerate(sources):
+            if not isinstance(source, dict):
+                errors.append(f"sources[{index}] must be an object")
+                continue
+            for field in ("id", "title", "kind", "url"):
+                value = source.get(field)
+                if not isinstance(value, str) or not value.strip():
+                    errors.append(f"sources[{index}].{field} is required")
+            source_id = source.get("id")
+            if isinstance(source_id, str):
+                if source_id in source_ids:
+                    errors.append(f"source id is repeated: {source_id}")
+                source_ids.add(source_id)
+
+    decisions = evidence.get("decisions")
+    if not isinstance(decisions, dict):
+        errors.append("decisions must record each applicable contract section")
+        decisions = {}
+    missing_sections = sorted(applicable_review_sections(profile) - set(decisions))
+    if missing_sections:
+        errors.append("decisions are missing: " + ", ".join(missing_sections))
+    for section, decision in decisions.items():
+        if section not in REVIEW_SECTIONS:
+            errors.append(f"unknown review section: {section}")
+            continue
+        if not isinstance(decision, dict):
+            errors.append(f"decisions.{section} must be an object")
+            continue
+        rationale = decision.get("rationale")
+        if not isinstance(rationale, str) or len(rationale.strip()) < 20:
+            errors.append(f"decisions.{section}.rationale is too short")
+        references = decision.get("source_ids")
+        if not isinstance(references, list) or not references:
+            errors.append(f"decisions.{section}.source_ids must cite at least one source")
+        elif any(ref not in source_ids for ref in references):
+            errors.append(f"decisions.{section}.source_ids contains an unknown source")
+
+    fixture_review = evidence.get("fixture_review")
+    if not isinstance(fixture_review, dict):
+        errors.append("fixture_review is required")
+    else:
+        for group in ("positive", "negative", "unknown"):
+            cases = fixture_review.get(group)
+            if not isinstance(cases, list) or not cases or not all(
+                isinstance(value, str) and value.strip() for value in cases
+            ):
+                errors.append(f"fixture_review.{group} must name at least one checked fixture")
+    return errors
+
+
+def load_profile_reviews(profiles: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+    """Load complete review records. Draft notes do not change release state."""
+
+    profile_index = {str(profile["id"]): profile for profile in profiles}
+    reviews: dict[str, dict[str, Any]] = {}
+    if not REVIEWS.exists():
+        return reviews
+    for path in sorted(REVIEWS.rglob("*.json")):
+        if path.name.endswith(".template.json"):
+            continue
+        evidence = json.loads(path.read_text())
+        profile_id = evidence.get("profile_id") if isinstance(evidence, dict) else None
+        if not isinstance(profile_id, str) or profile_id not in profile_index:
+            raise SystemExit(f"{path.relative_to(ROOT)}: profile_id is missing or unknown")
+        if profile_id in reviews:
+            raise SystemExit(f"{path.relative_to(ROOT)}: duplicate review for {profile_id}")
+        errors = review_evidence_errors(profile_index[profile_id], evidence)
+        if errors:
+            raise SystemExit(
+                f"{path.relative_to(ROOT)} is not complete:\n- " + "\n- ".join(errors)
+            )
+        reviews[profile_id] = evidence
+    return reviews
 
 
 def item_pointer(path: str) -> str:
@@ -281,8 +438,15 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
                 "properties": {
                     "status": {"enum": ["candidate", "draft", "reviewed", "deprecated", "revoked"]},
                     "reviewer": {"type": ["string", "null"]},
+                    "schema_reviewer": {"type": ["string", "null"]},
+                    "domain_owner": {"type": ["string", "null"]},
+                    "authors": {"type": "array", "items": {"type": "string"}},
                     "reviewed_at": {"type": ["string", "null"], "format": "date"},
                     "sources": {"type": "array", "items": {"type": "object"}},
+                    "intended_use": {"type": ["string", "null"]},
+                    "limitations": {"type": "array", "items": {"type": "string"}},
+                    "decisions": {"type": "object"},
+                    "fixture_review": {"type": "object"},
                 },
                 "additionalProperties": False,
             },
@@ -495,7 +659,9 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
         {
             "schema_version": {"const": "0.1"}, "standard": {"const": STANDARD},
             "status": {"type": "string"}, "bundle_sha256": {"type": ["string", "null"]},
-            "counts": {"type": "object"}, "item_definitions": {"type": "array", "items": {"type": "object"}},
+            "counts": {"type": "object"},
+            "review_counts": {"type": "object"},
+            "item_definitions": {"type": "array", "items": {"type": "object"}},
             "item_packs": {"type": "array", "items": {"type": "object"}},
             "profiles": {"type": "array", "items": {"type": "object"}},
         },
@@ -529,6 +695,12 @@ def build(root: Path) -> None:
             "source/catalogue.review.json must have 650 profiles, 266 items and 30 packs; "
             f"found {len(profiles)}, {len(items)} and {len(packs)}"
         )
+    reviews = load_profile_reviews(profiles)
+    for profile in profiles:
+        if profile.get("review_status") == "reviewed" and profile["id"] not in reviews:
+            raise SystemExit(
+                f"{profile['id']} is marked reviewed but has no complete file under source/reviews"
+            )
 
     enriched_items: list[dict[str, Any]] = []
     item_index: dict[str, dict[str, Any]] = {}
@@ -544,6 +716,36 @@ def build(root: Path) -> None:
     definitions: list[dict[str, Any]] = []
     summaries: list[dict[str, Any]] = []
     for raw in profiles:
+        review_evidence = reviews.get(raw["id"])
+        release_eligible = review_evidence is not None
+        if review_evidence is None:
+            review = {
+                "status": raw["review_status"],
+                "reviewer": None,
+                "schema_reviewer": None,
+                "domain_owner": None,
+                "authors": [],
+                "reviewed_at": None,
+                "sources": [],
+                "intended_use": None,
+                "limitations": [],
+                "decisions": {},
+                "fixture_review": {},
+            }
+        else:
+            review = {
+                "status": "reviewed",
+                "reviewer": review_evidence["scientific_reviewer"],
+                "schema_reviewer": review_evidence["schema_reviewer"],
+                "domain_owner": review_evidence["domain_owner"],
+                "authors": review_evidence["authors"],
+                "reviewed_at": review_evidence["reviewed_at"],
+                "sources": review_evidence["sources"],
+                "intended_use": review_evidence["intended_use"],
+                "limitations": review_evidence["limitations"],
+                "decisions": review_evidence["decisions"],
+                "fixture_review": review_evidence["fixture_review"],
+            }
         requirements = [
             {"path": path, "level": "required", "schema": item_index.get(path, {}).get("json_schema", {})}
             for path in raw["required_items"]
@@ -570,13 +772,8 @@ def build(root: Path) -> None:
             "label": raw["label"],
             "description": raw["description"],
             "stage": raw["stage"],
-            "review": {
-                "status": raw["review_status"],
-                "reviewer": None,
-                "reviewed_at": None,
-                "sources": [],
-            },
-            "release_eligible": False,
+            "review": review,
+            "release_eligible": release_eligible,
             "applies_to": raw["applies_to"],
             "extends": [],
             "fixed": {},
@@ -595,8 +792,8 @@ def build(root: Path) -> None:
                 "id": raw["id"], "ref": raw["ref"], "sha256": definition_digest,
                 "version": raw["version"], "domain": raw["domain"], "domain_label": raw["domain_label"],
                 "name": raw["name"], "label": raw["label"], "description": raw["description"],
-                "stage": raw["stage"], "review_status": raw["review_status"],
-                "release_eligible": False, "applies_to": raw["applies_to"],
+                "stage": raw["stage"], "review_status": review["status"],
+                "release_eligible": release_eligible, "applies_to": raw["applies_to"],
                 "required_item_count": len(requirements), "item_packs": raw["required_item_packs"],
             }
         )
@@ -676,14 +873,20 @@ def build(root: Path) -> None:
             },
         )
 
+    reviewed_count = sum(1 for summary in summaries if summary["release_eligible"])
+    ga_ready = reviewed_count == len(summaries)
     catalogue = {
         "$schema": f"{STANDARD}/schemas/catalogue.schema.json",
         "$id": f"{STANDARD}/catalogue.json",
         "schema_version": "0.1",
         "standard": STANDARD,
-        "status": "implementation-draft",
+        "status": "release-candidate" if ga_ready else "implementation-draft",
         "bundle_sha256": None,
         "counts": {"profiles": len(summaries), "item_definitions": len(enriched_items), "item_packs": len(packs)},
+        "review_counts": {
+            "reviewed": reviewed_count,
+            "remaining": len(summaries) - reviewed_count,
+        },
         "item_definitions": enriched_items,
         "item_packs": packs,
         "profiles": summaries,
@@ -705,12 +908,15 @@ def build(root: Path) -> None:
         if path.is_file() and path.name != "bundle.manifest.json":
             data = path.read_bytes()
             files.append({"path": path.relative_to(root).as_posix(), "sha256": "sha256:" + hashlib.sha256(data).hexdigest(), "size_bytes": len(data)})
+    remaining_reviews = len(summaries) - reviewed_count
     manifest_without_digest = {
         "schema_version": "0.1", "standard": STANDARD, "release": "0.1.0-alpha.5",
         "canonicalization": "RFC8785", "files": files,
         "counts": {"profiles": 650, "item_definitions": 266, "item_packs": 30},
-        "ga_ready": False,
-        "ga_blockers": ["Every profile still needs authoritative scientific sources and sign-off from a named domain reviewer."],
+        "ga_ready": ga_ready,
+        "ga_blockers": [] if ga_ready else [
+            f"{remaining_reviews} profiles still need complete, independent scientific and schema review evidence."
+        ],
     }
     bundle_digest = digest(manifest_without_digest)
     write_json(root, "bundle.manifest.json", {**manifest_without_digest, "bundle_sha256": bundle_digest})

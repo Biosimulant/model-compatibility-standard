@@ -123,8 +123,15 @@
     }
   ],
   "review": {
+    "authors": [],
+    "decisions": {},
+    "domain_owner": null,
+    "fixture_review": {},
+    "intended_use": null,
+    "limitations": [],
     "reviewed_at": null,
     "reviewer": null,
+    "schema_reviewer": null,
     "sources": [],
     "status": "draft"
   },

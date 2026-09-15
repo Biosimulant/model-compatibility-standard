@@ -112,6 +112,36 @@
     "review": {
       "additionalProperties": false,
       "properties": {
+        "authors": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
+        "decisions": {
+          "type": "object"
+        },
+        "domain_owner": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "fixture_review": {
+          "type": "object"
+        },
+        "intended_use": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "limitations": {
+          "items": {
+            "type": "string"
+          },
+          "type": "array"
+        },
         "reviewed_at": {
           "format": "date",
           "type": [
@@ -120,6 +150,12 @@
           ]
         },
         "reviewer": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "schema_reviewer": {
           "type": [
             "string",
             "null"

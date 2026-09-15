@@ -30,6 +30,9 @@
       },
       "type": "array"
     },
+    "review_counts": {
+      "type": "object"
+    },
     "schema_version": {
       "const": "0.1"
     },

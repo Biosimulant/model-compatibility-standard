@@ -16,6 +16,11 @@ def test_catalogue_counts_and_all_profiles_load():
     assert len(profiles) == 650
     assert all(profile["$id"] in bundle.profile_index for profile in profiles)
     assert not any(profile["release_eligible"] for profile in profiles)
+    assert bundle.catalogue["review_counts"] == {"reviewed": 0, "remaining": 650}
+    assert bundle.manifest["ga_ready"] is False
+    assert bundle.manifest["ga_blockers"] == [
+        "650 profiles still need complete, independent scientific and schema review evidence."
+    ]
 
 
 def test_manifest_lists_every_generated_file_with_digest():

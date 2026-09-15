@@ -152,12 +152,16 @@ locks, resolution order and bundle integrity checks.
 
 The remaining release blocker is scientific rather than a missing validator
 feature: every public profile still needs authoritative sources and independent
-review. See [PROFILE_REVIEW.md](PROFILE_REVIEW.md).
+scientific and schema review. Review evidence is stored one profile at a time
+under `source/reviews/`; the bundle calculates `ga_ready` from those files. See
+[PROFILE_REVIEW.md](PROFILE_REVIEW.md).
 
 ## Repository layout
 
 - `source/catalogue.review.json`: the input catalogue of profiles, contract
   fields and packs.
+- `source/reviews/`: independent review evidence. A completed file is required
+  before a profile becomes release-eligible.
 - `scripts/build_standard.py`: generates everything in `spec/v0.1/` from the
   catalogue.
 - `spec/v0.1/`: the generated specification: JSON Schemas, profiles, rules,
