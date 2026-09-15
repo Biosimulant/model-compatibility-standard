@@ -41,6 +41,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.interval_convention",
     "representation.layout",
     "representation.left_normalized",
@@ -128,7 +129,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/indel@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/indel/v0.1",
-  "profile_sha256": "sha256:8f9af356220212b996b1f7ccdb7ab9deaf1c606cfa14a6277c6ba2f269e1e219",
+  "profile_sha256": "sha256:c0b09e8f89561732a9ae255378e0acf52ebbf48fc1394482521bcbb783fc4fe5",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -154,11 +155,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

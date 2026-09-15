@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cardiopulmonary-renal/wall-shear-stress@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cardiopulmonary-renal/wall-shear-stress/v0.1",
-  "profile_sha256": "sha256:f2a71dcad0e25435a80865039cb561efea1589b24cd5a65c8c942569b9727278",
+  "profile_sha256": "sha256:cb3da2bf937fe5695f7fdfa9ebcd994a875cf606fb196f8f62f7f226b380d85e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

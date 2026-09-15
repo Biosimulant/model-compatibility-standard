@@ -47,6 +47,7 @@
     "representation.feature_space",
     "representation.formal_charge",
     "representation.hydrogen_policy",
+    "representation.implicit_entry",
     "representation.isotope_state",
     "representation.layout",
     "representation.ordering",
@@ -111,7 +112,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/inchi@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/inchi/v0.1",
-  "profile_sha256": "sha256:978fba9a0d173be7bea94b4c7fc02eede62a46bb0d6ed0b6e836fd3329dd8d20",
+  "profile_sha256": "sha256:68f1f21aec9c53a529152e3cc40f8c940902725af99c1f73fda44f07f94204f8",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,11 +135,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "ignore",

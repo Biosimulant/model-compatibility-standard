@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/metabolite-ratio@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/metabolite-ratio/v0.1",
-  "profile_sha256": "sha256:87c1010694fd805c41c97402c8872d9171fc06d04405d2fda2ea23e421140626",
+  "profile_sha256": "sha256:9c8fcd8191c27c39148f2eb53c64689930f6e01f4e237186c28c32908e26e9df",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -168,11 +168,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

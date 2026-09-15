@@ -167,7 +167,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/neutralization-titer@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/neutralization-titer/v0.1",
-  "profile_sha256": "sha256:46287911cb3557276065a035b02c62a8344771afcea36447b8c8f725ce49398c",
+  "profile_sha256": "sha256:e0b991011adb970c0cf0939f05c9fad13453b85c1e19fbd0fbd102466e4b08c2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -193,11 +193,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -786,6 +786,133 @@
       "sources": [
         "obi-2016"
       ]
+    },
+    {
+      "id": "BMCS-SCI-110",
+      "kind": "guard",
+      "check": "compare",
+      "title": "A fully declared dense-to-sparse re-encoding is lossless, not a contradiction",
+      "profile": "transcriptome/single-cell-expression-matrix",
+      "source_patch": {
+        "representation": {
+          "kind": "dense_vector",
+          "implicit_entry": "observed_zero",
+          "ordering": "explicit",
+          "sparsity": "dense"
+        }
+      },
+      "target_patch": {
+        "representation": {
+          "kind": "sparse_vector",
+          "implicit_entry": "observed_zero",
+          "ordering": "explicit",
+          "sparsity": "dense"
+        }
+      },
+      "expect": {
+        "status": "LOSSLESS_CONVERSION_AVAILABLE"
+      },
+      "why": "Guard BMCS-SCI-104 pins the unsafe direction: dense against sparse with nothing declared must not be a lossless match. This is the other half, which that guard's own conditions asked for. When both sides declare what an absent entry means, the ordering and the sparsity, and the three agree, the re-encoding preserves every value and blocking it would push a correct coupling outside the standard.",
+      "conditions": "The two contracts differ only in representation.kind and are otherwise identical, so the result comes from the representation-equivalent operator rather than from another rule. The enabling fields are declared in the case because no profile requires them yet; making them required for sparse-capable ports is per-profile work that needs domain review.",
+      "decision": "D6",
+      "report_finding": "S11",
+      "fixed_by": "D6",
+      "fixed_at": "2026-09-15",
+      "sources": [
+        "svensson-2020-zeros"
+      ]
+    },
+    {
+      "kind": "guard",
+      "check": "resolve",
+      "profile": "neuroscience/firing-rate",
+      "target_patch": {
+        "measurement": {
+          "scale": "ordinal"
+        }
+      },
+      "decision": "D11",
+      "report_finding": "S9",
+      "fixed_by": "D11",
+      "fixed_at": "2026-09-15",
+      "id": "BMCS-SCI-111",
+      "title": "Binning a continuous rate into ordinal categories requires approval, never ALLOW",
+      "capabilities": [
+        {
+          "schema_version": "0.1",
+          "ref": "https://biosimulant.com/adapters/rate-to-ordinal-band/1.0.0",
+          "sha256": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+          "source": "$source",
+          "target": "$target",
+          "state": "reviewed",
+          "transformation_class": "aggregation",
+          "information_loss": "lossy",
+          "loss_score": 1,
+          "execution_cost": 1,
+          "release": {
+            "version": "1.0.0"
+          }
+        }
+      ],
+      "expect": {
+        "resolution": "RESOLVED",
+        "plan_status": "LOSSY_CONVERSION_REQUIRES_APPROVAL",
+        "policy_decision_not": "ALLOW"
+      },
+      "why": "transformation_policy declares an approval path for lossy transformations on every profile, and until now no fixture in either language exercised it: every capability in every test used an information_loss of \"none\". Binning a continuous firing rate into ordinal bands discards the value and keeps only its band, so it must surface as an approval rather than as a silent match.",
+      "conditions": "The plan's own technical_status is asserted, not reports[0].status. The terminal comparison is EXACT whenever the last adapter lands exactly on the target, so asserting the report would pass while testing nothing.",
+      "sources": [
+        "stevens-1946",
+        "vim-jcgm-200-2012"
+      ]
+    },
+    {
+      "kind": "guard",
+      "check": "resolve",
+      "profile": "neuroscience/firing-rate",
+      "target_patch": {
+        "measurement": {
+          "scale": "ordinal"
+        }
+      },
+      "decision": "D11",
+      "report_finding": "S9",
+      "fixed_by": "D11",
+      "fixed_at": "2026-09-15",
+      "id": "BMCS-SCI-112",
+      "title": "A value only a model can produce is never a direct match",
+      "capabilities": [
+        {
+          "schema_version": "0.1",
+          "ref": "https://biosimulant.com/inference/rate-band-from-calcium/1.0.0",
+          "sha256": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+          "source": "$source",
+          "target": "$target",
+          "state": "reviewed",
+          "inferred_modality": "firing-rate-band-inferred-from-calcium-imaging",
+          "assumptions": [
+            "The deconvolution kernel calibrated for this preparation applies"
+          ],
+          "uncertainty": {
+            "kind": "interval"
+          },
+          "loss_score": 1,
+          "execution_cost": 1,
+          "release": {
+            "version": "1.0.0"
+          }
+        }
+      ],
+      "expect": {
+        "resolution": "RESOLVED",
+        "plan_status": "INFERENCE_MODEL_REQUIRED",
+        "policy_decision_not": "ALLOW"
+      },
+      "why": "The same two contracts as BMCS-SCI-111, bridged by an inference model instead of an adapter. A band a model inferred from a calcium trace is not the same evidence as a measured rate, so the status must say an inference model is involved and must never read as a direct match.",
+      "conditions": "Deliberately the same contracts and patch as BMCS-SCI-111, so the capability kind is the only difference between the two cases.",
+      "sources": [
+        "obi-2016"
+      ]
     }
   ]
 }

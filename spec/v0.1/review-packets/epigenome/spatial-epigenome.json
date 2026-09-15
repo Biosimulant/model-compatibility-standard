@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/spatial-epigenome@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/spatial-epigenome/v0.1",
-  "profile_sha256": "sha256:815c33f8e1bbd60a05565c199faa780e417449c6c97c56237394dfc6cfa788a5",
+  "profile_sha256": "sha256:c2f1867887b464c0577d759e28b00ba10b69c4d16673d6a22425fef82216705d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -148,11 +148,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

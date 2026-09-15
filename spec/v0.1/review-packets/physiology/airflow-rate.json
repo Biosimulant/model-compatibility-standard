@@ -154,7 +154,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/airflow-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/airflow-rate/v0.1",
-  "profile_sha256": "sha256:fd3f6b20833d8a75a7ee341e34e7be9148b6ec55368501443fa290508928be98",
+  "profile_sha256": "sha256:f9eb3ccbd628994117921752e8479c90059a1a7b9c250814c1d3b95f78d60ca1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -180,11 +180,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -50,6 +50,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.multigraph",
     "representation.node_schema",
@@ -124,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/tissue-coordinate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/tissue-coordinate/v0.1",
-  "profile_sha256": "sha256:2869d4b447ca74f6e561476bacce78522338c4ebe6788b44c339bf252bbb989d",
+  "profile_sha256": "sha256:07ecd2d30c44257c0372b776834a43245be984e6984756afd63b8ca610dc464f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

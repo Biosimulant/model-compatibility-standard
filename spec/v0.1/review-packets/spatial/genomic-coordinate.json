@@ -50,6 +50,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.multigraph",
     "representation.node_schema",
@@ -124,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/genomic-coordinate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/genomic-coordinate/v0.1",
-  "profile_sha256": "sha256:9ed03401de6604797348def35b52192cde907d6cb7bb68b41f1e177aa573f7b3",
+  "profile_sha256": "sha256:487180ebb79e9b1a9e9e55eda70ed231d71a7a3e7d9d14029931bd346b428c41",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

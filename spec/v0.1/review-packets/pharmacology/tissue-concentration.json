@@ -176,7 +176,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/tissue-concentration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/tissue-concentration/v0.1",
-  "profile_sha256": "sha256:8a8754d9f23518f9d5d57786fa2a93df1a931ef3fb7f26e9de68356d1ef17f30",
+  "profile_sha256": "sha256:2a2654ac085f6649d489a4f861f6d9b194d6a47f44903021ad7ce446a58ce675",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -202,11 +202,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

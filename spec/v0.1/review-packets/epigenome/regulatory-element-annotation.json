@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/regulatory-element-annotation@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/regulatory-element-annotation/v0.1",
-  "profile_sha256": "sha256:afb3f215b2157c412b32612ad3c626cebac6046a77129d2dbf89d6764299b5c8",
+  "profile_sha256": "sha256:038efd1b2a940118e624c4971e20bc24963758dbfee1f44d7163fb3e8dc4db6d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -144,11 +144,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

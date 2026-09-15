@@ -163,7 +163,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/electrolyte-concentration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/electrolyte-concentration/v0.1",
-  "profile_sha256": "sha256:d8787b55f277b929382039d7db6332f696c1194965a4b7e3f14a438b20598f41",
+  "profile_sha256": "sha256:aba466f1fc78f8280fabad13583f22624c19ed6a95f9589c16793b844efdced8",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -189,11 +189,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

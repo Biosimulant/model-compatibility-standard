@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/vaccine-response@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/vaccine-response/v0.1",
-  "profile_sha256": "sha256:fd0f2d244c29c5a32235e2744aafbea1361f1c830df664c20ac8d6af6f9a4e36",
+  "profile_sha256": "sha256:e0372a48cb7229476decac013d319e1f76f1f2d73f98969337e76d030dcaed42",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -147,11 +147,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

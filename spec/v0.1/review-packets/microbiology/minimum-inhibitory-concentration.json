@@ -162,7 +162,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/minimum-inhibitory-concentration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/minimum-inhibitory-concentration/v0.1",
-  "profile_sha256": "sha256:a8fee61b5fff603892260608014fcf2bb28b3bc8d15c6a8a4eb41dc29a52db73",
+  "profile_sha256": "sha256:feaf38a38f517383a04e9da07b8d03985a1aae2554b96dfba5059bcb6c58bfb9",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -188,11 +188,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

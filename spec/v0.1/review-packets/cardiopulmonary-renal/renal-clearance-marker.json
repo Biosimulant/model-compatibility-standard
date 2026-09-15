@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cardiopulmonary-renal/renal-clearance-marker@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cardiopulmonary-renal/renal-clearance-marker/v0.1",
-  "profile_sha256": "sha256:e0142af3d5778cc72cf460d3fcb18ee898a6dbe9f69fa37b068834dc2d55cbfe",
+  "profile_sha256": "sha256:01fdaf763fe0896827285bcfaf4bafcfa088c1a2a75e5d2639b53b3e47d68599",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

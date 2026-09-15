@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/orthology-relation@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/orthology-relation/v0.1",
-  "profile_sha256": "sha256:4f78c20fa69c41f6e08c0f92299e87bdb607171c7d730b692d186feba2817bb8",
+  "profile_sha256": "sha256:00b7e9ec6b17f7cf24e896ae03265aeabb3526bbe3721e8fdbccd9841570a688",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

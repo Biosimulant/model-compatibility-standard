@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/carrying-capacity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/carrying-capacity/v0.1",
-  "profile_sha256": "sha256:26edc97da98a1428cf85c0dfed708001dba34e7796bac0c3182b3d373199e3bf",
+  "profile_sha256": "sha256:8415fd5bb111bd9a8431e67705ae84812362c7b3dd0a0b454bb977515c247cd0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

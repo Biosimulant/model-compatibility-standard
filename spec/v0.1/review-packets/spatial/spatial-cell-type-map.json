@@ -48,6 +48,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.multigraph",
     "representation.node_schema",
@@ -161,7 +162,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/spatial-cell-type-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/spatial-cell-type-map/v0.1",
-  "profile_sha256": "sha256:272443255d2efde0ad97506d8d99f948a7f2f0441eee364187b9104b3dbf1979",
+  "profile_sha256": "sha256:998b4bd8f5901d4dc864b13455f089bc2eddcfec8d4221ef320c4cc6c54ada7a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -188,11 +189,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -56,12 +56,25 @@
     },
     "standard": {
       "const": "https://biosimulant.com/standards/model-compatibility/v0.1"
+    },
+    "technical_status": {
+      "enum": [
+        "EXACT",
+        "DIRECT_COMPATIBLE",
+        "LOSSLESS_CONVERSION_AVAILABLE",
+        "LOSSY_CONVERSION_REQUIRES_APPROVAL",
+        "INFERENCE_MODEL_REQUIRED",
+        "CONDITIONAL",
+        "INCOMPATIBLE",
+        "UNKNOWN"
+      ]
     }
   },
   "required": [
     "schema_version",
     "standard",
     "bundle_sha256",
+    "technical_status",
     "nodes",
     "edges",
     "reports",

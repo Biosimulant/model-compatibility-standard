@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/strain-identity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/strain-identity/v0.1",
-  "profile_sha256": "sha256:8913a4f2a412c62a89bf0f10e6f35035385d0c255acc8fdbe67d470641e22aa2",
+  "profile_sha256": "sha256:20bedf832205a0d3c25e862e24632337b76a0ed376efde22d6f80217d9a51405",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -164,11 +164,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

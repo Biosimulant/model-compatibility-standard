@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/fluid-balance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/fluid-balance/v0.1",
-  "profile_sha256": "sha256:4c26be2510db7d9fd5351a19c63db2a42d998740b198fd48d8e661432a864b84",
+  "profile_sha256": "sha256:069a3d0c2c9cb6cd6fe564f07f416ffe25a6cf72d6acc0041d7b76f35f093841",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

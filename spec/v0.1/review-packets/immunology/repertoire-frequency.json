@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/repertoire-frequency@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/repertoire-frequency/v0.1",
-  "profile_sha256": "sha256:4d6f83860929dd0b5bd3adf4538cdecde7b1bf7e913ed087fb6d8aa49c5cd3e3",
+  "profile_sha256": "sha256:dfd2a989751e515722f67453ba67b1bf22a654e92df768a6d379f6c1236d69ba",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -147,11 +147,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

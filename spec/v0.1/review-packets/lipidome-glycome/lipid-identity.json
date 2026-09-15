@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/lipid-identity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/lipid-identity/v0.1",
-  "profile_sha256": "sha256:f48357d368d959c6a00b5ccaf81627532b0062333b07239ad14127ab1b177f8d",
+  "profile_sha256": "sha256:2483abc7b0ab6491dfbed2ee041532b5e695f092acb3fb5ad0cbfcb8dfdd9747",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -164,11 +164,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

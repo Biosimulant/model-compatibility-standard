@@ -134,7 +134,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/tissue-tropism@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/tissue-tropism/v0.1",
-  "profile_sha256": "sha256:09902eadff5a79413e2940c86ac5dd223fe9045681fe6855fc4567e3caa4de33",
+  "profile_sha256": "sha256:ff3994631c2fe81deed8e9b55af02123f02814f5d87c6d7532753b7b0d9a2c7f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -160,11 +160,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

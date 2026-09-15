@@ -140,7 +140,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/epigenetic-clock@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/epigenetic-clock/v0.1",
-  "profile_sha256": "sha256:91f8a34e80921a9b8ccc1d4d278d48b965c15cb78db90542e82acc34e55d1596",
+  "profile_sha256": "sha256:a8050e80c4b424bbc073db21dd51d437760961fc72570988b6748b13d04cc0e1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -166,11 +166,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

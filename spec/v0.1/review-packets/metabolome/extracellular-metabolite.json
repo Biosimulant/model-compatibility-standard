@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/extracellular-metabolite@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/extracellular-metabolite/v0.1",
-  "profile_sha256": "sha256:1f85392bc1a83a0feccec7de4fffe5d6e1d540d181ee26b5672ab3e0f8119992",
+  "profile_sha256": "sha256:b86333d81f46a32e8e1e42c982cc7b1ca0ff3956f6762bc6938f4a7876e95710",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -168,11 +168,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

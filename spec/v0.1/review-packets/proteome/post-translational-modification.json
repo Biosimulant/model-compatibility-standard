@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/post-translational-modification@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/post-translational-modification/v0.1",
-  "profile_sha256": "sha256:0b19a8f62d17c52c1464a44092b9c23c90db542faa80ce63018ece18e5513890",
+  "profile_sha256": "sha256:7298270bc0bdba9dc955eb5d0f07a8469039c069008b11dcf40d65ff551a7d35",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

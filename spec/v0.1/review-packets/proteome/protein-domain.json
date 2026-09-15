@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-domain@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-domain/v0.1",
-  "profile_sha256": "sha256:cb7f53f45e9e4cc7c2a56e265952f8efc22617d3461742c3280e7e057b538d1b",
+  "profile_sha256": "sha256:3b7e660a63e0298c3dd1606fde208aef9b06966e72d0f66b46ed1fdb3be9a90c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -167,11 +167,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

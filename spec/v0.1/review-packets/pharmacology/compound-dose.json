@@ -167,7 +167,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/compound-dose@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/compound-dose/v0.1",
-  "profile_sha256": "sha256:b24929975ac375adda8769d309311f5d5d99829541146487075c271fad10ab65",
+  "profile_sha256": "sha256:0356ae9def8628ddf4edbe8d680b1700ad1057d9a6512946c9bc0da16ced4000",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -193,11 +193,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

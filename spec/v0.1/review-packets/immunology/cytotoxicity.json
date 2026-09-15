@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/cytotoxicity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/cytotoxicity/v0.1",
-  "profile_sha256": "sha256:e4915c2c4909b3692a5db9b66b3a183141ec658468e613cef094a00b71f33318",
+  "profile_sha256": "sha256:f2dbb1a6fb9d4df766de3ffc6743c883d89ca161a1d768815037dde4f4597f92",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -147,11 +147,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -189,11 +189,10 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/physiological-time-series@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/physiological-time-series/v0.1",
-  "profile_sha256": "sha256:704cc498d619bf6a20e6eb4b936949f462484b7cc3f4bf0c4de609d794337ae2",
+  "profile_sha256": "sha256:5bb3ec43016ffec201b8c3570e47de51b7b1d05318c02429a50e9f31fd98af55",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
-        "scalar",
         "dense_vector",
         "sparse_vector",
         "matrix",
@@ -215,11 +214,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",
@@ -400,7 +399,6 @@
       "path": "representation.kind",
       "schema": {
         "enum": [
-          "scalar",
           "dense_vector",
           "sparse_vector",
           "matrix",

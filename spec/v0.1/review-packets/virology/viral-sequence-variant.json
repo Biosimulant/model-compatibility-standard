@@ -152,7 +152,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/viral-sequence-variant@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/viral-sequence-variant/v0.1",
-  "profile_sha256": "sha256:f7524d7953c23ff49ba661e4517a4b9506f3c81502ca04bd13f8b0d12725f6fe",
+  "profile_sha256": "sha256:34f4f8fcde951ab7b6c4b65a3c19d5ec9845ae609908d27b0a72303dfda64a01",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -175,11 +175,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

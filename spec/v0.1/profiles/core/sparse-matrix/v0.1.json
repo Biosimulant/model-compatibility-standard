@@ -32,11 +32,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",
@@ -311,9 +311,10 @@
       "level": "required",
       "path": "representation.sparsity",
       "schema": {
-        "maxLength": 4096,
-        "minLength": 1,
-        "type": "string"
+        "enum": [
+          "dense",
+          "sparse"
+        ]
       }
     }
   ],

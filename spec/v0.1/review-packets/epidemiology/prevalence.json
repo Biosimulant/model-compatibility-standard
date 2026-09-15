@@ -139,7 +139,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/prevalence@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/prevalence/v0.1",
-  "profile_sha256": "sha256:7ebe51d39997cbf3c817f1f2f45693b195163bd6e99026055e6321cb911342b0",
+  "profile_sha256": "sha256:e66d48e3206851672ba64d49ecc825de313db9daaa166363fc2c43ceb2821a37",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -165,11 +165,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

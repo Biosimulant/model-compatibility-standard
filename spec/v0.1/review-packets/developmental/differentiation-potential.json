@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/differentiation-potential@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/differentiation-potential/v0.1",
-  "profile_sha256": "sha256:6f26cfcb32eba982d0912057cd3aa774df79f82af166546545b5592749cfa3dc",
+  "profile_sha256": "sha256:a4124fcee44e53d91a9ed0a18cdc6f42f40932e507894c09bedecb8aa15c216d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

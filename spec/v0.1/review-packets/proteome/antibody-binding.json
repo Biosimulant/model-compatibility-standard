@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/antibody-binding@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/antibody-binding/v0.1",
-  "profile_sha256": "sha256:f6a3975aaad89ef1ae84ae69a80e4952210ed9e9ffc32656f240787d73046627",
+  "profile_sha256": "sha256:26f1bfc75e4e36d41667eb4148b4d0f7978837e68e6c66564515bd1c6be0f49d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

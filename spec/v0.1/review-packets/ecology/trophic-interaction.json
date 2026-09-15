@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/trophic-interaction@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/trophic-interaction/v0.1",
-  "profile_sha256": "sha256:868afb4469ef0b765f64f5ee1613073044c24a096d336b237735324334294853",
+  "profile_sha256": "sha256:1e51699f2af8fad3bb4fc5a544353c357a77bdc4483ccc44aca341c1363d5efc",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

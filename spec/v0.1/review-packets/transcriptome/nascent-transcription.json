@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/nascent-transcription@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/nascent-transcription/v0.1",
-  "profile_sha256": "sha256:411c359725ce37dd1757a7f2fdbd3542bada1fcec540c24060efaf8cb715fffa",
+  "profile_sha256": "sha256:a92c889fdb85c5e41f93dd587fd2077f13476cd1f04370083c924c7f5ef40d10",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -147,11 +147,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

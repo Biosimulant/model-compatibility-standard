@@ -41,6 +41,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.interval_convention",
     "representation.layout",
     "representation.left_normalized",
@@ -128,7 +129,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/haplotype@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/haplotype/v0.1",
-  "profile_sha256": "sha256:4a12c339f2082b9e0915b1ea3cc01c5a2f32a02be8695b46bea9664aca706331",
+  "profile_sha256": "sha256:1d3e08a83b7c199d3424ebc6b704dcb1d00e05ae475205620bf14b7a5e9d8a3e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +152,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

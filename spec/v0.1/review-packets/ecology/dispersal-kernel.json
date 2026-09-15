@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/dispersal-kernel@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/dispersal-kernel/v0.1",
-  "profile_sha256": "sha256:d21d85ae58c06dac4833a87b8211ed3f8344ba7d62fe32042dff3bd53adcbbf7",
+  "profile_sha256": "sha256:175c6800250f3e66f2b36dd58acc6945c646941fe1bdbb81c7ffe030d22c720c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

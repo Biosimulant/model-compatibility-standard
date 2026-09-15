@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/pharmacokinetic-parameters@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/pharmacokinetic-parameters/v0.1",
-  "profile_sha256": "sha256:562f1bf73c83ca080edd03739917a9e23729fcb1c6edfabe4e800d663906b909",
+  "profile_sha256": "sha256:3815e10fa4cb13854ec686e31b117f5f9ae8348f9409343d62a3ee52441fdcf1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -154,11 +154,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

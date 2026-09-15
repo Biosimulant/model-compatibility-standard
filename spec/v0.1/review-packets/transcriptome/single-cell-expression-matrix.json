@@ -212,7 +212,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/single-cell-expression-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/single-cell-expression-matrix/v0.1",
-  "profile_sha256": "sha256:698dbe043abb257e52441553de84a95b05aac92125a8d0c6f9b65a81ce50bdb7",
+  "profile_sha256": "sha256:e20ca179fa33984ed05eea016a2ac75100b36312818cb6b1e97c7fb64e502826",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -239,11 +239,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -164,7 +164,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/cognitive-score@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/cognitive-score/v0.1",
-  "profile_sha256": "sha256:5406b341e1b0ce72dfe23da810afe65df9a1968bfc6097e03b11c44294ae3339",
+  "profile_sha256": "sha256:388a915bf45a17f5596a5b0f159144963349d9e042ee3e5238ff653bb83f6707",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -190,11 +190,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

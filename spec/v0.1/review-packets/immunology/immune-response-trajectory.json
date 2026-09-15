@@ -150,7 +150,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/immune-response-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/immune-response-trajectory/v0.1",
-  "profile_sha256": "sha256:ac7d5e62a8e4852b152ac862d5d5c9420d22428817cafe795e75ad522cddac81",
+  "profile_sha256": "sha256:66b8d64649945cb9f712bac70e880c8eb739f8c9fcf5962c3511f62c41e2569e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -177,11 +177,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

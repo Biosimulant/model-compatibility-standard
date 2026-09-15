@@ -139,7 +139,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/b-cell-receptor-sequence@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/b-cell-receptor-sequence/v0.1",
-  "profile_sha256": "sha256:a30f8225efe4dfa6010b8aed626d9686164db13f377696751b8ce46e8e932caa",
+  "profile_sha256": "sha256:d70e4a1a0dc95ff291d5392ddc7d1c056c1e1701ac897fe0b2c15709995771d8",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -162,11 +162,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -30,7 +30,8 @@
         "mapping-total",
         "mapping-bijective",
         "context-compatible",
-        "digest-equal"
+        "digest-equal",
+        "representation-equivalent"
       ]
     },
     "parameters": {

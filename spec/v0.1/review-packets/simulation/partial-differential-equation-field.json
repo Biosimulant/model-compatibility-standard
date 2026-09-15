@@ -39,6 +39,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.precision",
     "representation.sparsity",
@@ -148,7 +149,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "simulation/partial-differential-equation-field@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/simulation/partial-differential-equation-field/v0.1",
-  "profile_sha256": "sha256:0dbb32403160ea50bc2ab4d5df734f10f554b87a6a2b3773e388b2193991b9e8",
+  "profile_sha256": "sha256:38e6131660a5dff926b46bc4bc07a402716616f8b95b3a54aea191f02484a74f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -175,11 +176,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

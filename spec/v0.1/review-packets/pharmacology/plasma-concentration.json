@@ -176,7 +176,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/plasma-concentration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/plasma-concentration/v0.1",
-  "profile_sha256": "sha256:410f8f41eeb71c20f76d6a66e2f2fd64bae4eb406399d16c6085d7134efa489b",
+  "profile_sha256": "sha256:277ddb6f684b4cb91214cdc4be2dc7713d4e229c44b1045db871f4882e29dfa9",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -202,11 +202,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

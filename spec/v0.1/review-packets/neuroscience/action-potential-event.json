@@ -127,7 +127,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/action-potential-event@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/action-potential-event/v0.1",
-  "profile_sha256": "sha256:66996c75f9d6ade2e9a8ed9fa919d12188ed374d88f2c362bf4354d335b373c0",
+  "profile_sha256": "sha256:7649a166f5092d6e945bcdcd62ce190925bd0feda8fd69f8ef2276aa11586a96",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -148,11 +148,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/microbial-community-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/microbial-community-profile/v0.1",
-  "profile_sha256": "sha256:daec6eb2e05553a2ee28f97d597d41b4d58ca5e4a05765200910cdee765786df",
+  "profile_sha256": "sha256:14fff6ee4946e1ba1e7ee264f95935fc998cc7ba81eede0a86faad623a71b5b0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

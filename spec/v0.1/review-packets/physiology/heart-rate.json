@@ -151,7 +151,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/heart-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/heart-rate/v0.1",
-  "profile_sha256": "sha256:415452a3e74af789680e56454659ccac403ef4c376723c7849343294eb52fb86",
+  "profile_sha256": "sha256:b9fb484dad065cbd937547ca3e079eaa85d2553eff33714a0a64a128f2fa5176",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -177,11 +177,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

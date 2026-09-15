@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/eicosanoid-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/eicosanoid-profile/v0.1",
-  "profile_sha256": "sha256:c22c2ce9bf5243cdbcf65834ac0dd4f773bd1be02e2cf2ff75e01a6f8532d85e",
+  "profile_sha256": "sha256:27df6e65b7958327c5694b2e6fdebe40df4f7e64963e9c63e82c91d11ad77701",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

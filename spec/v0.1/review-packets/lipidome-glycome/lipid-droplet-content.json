@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/lipid-droplet-content@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/lipid-droplet-content/v0.1",
-  "profile_sha256": "sha256:e502e9cde4ba3de51596f39594d7d3f3f1545939ff06c9b920fca0b6944ea96a",
+  "profile_sha256": "sha256:1886fa9f03bbf7c2592c877bc1444549b9f2dbe331c26f393484fc1542ed072d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -167,11 +167,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

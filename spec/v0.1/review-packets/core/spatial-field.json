@@ -21,6 +21,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.precision",
     "representation.sparsity",
@@ -108,7 +109,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "core/spatial-field@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/core/spatial-field/v0.1",
-  "profile_sha256": "sha256:137a9ecf6c9dcbb3001a03b55a966b3de708ffe2ed461268513fdecaafc5e2f7",
+  "profile_sha256": "sha256:f331fdc1701f5e9058f88c1ab476d224c7c1982575e507a2d5293555645425f2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -135,11 +136,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

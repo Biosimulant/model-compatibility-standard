@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/metabolic-flux@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/metabolic-flux/v0.1",
-  "profile_sha256": "sha256:2e796d02160b52396e33dade548fa6212f2dc2756181f7e90feffd4cdb2742e2",
+  "profile_sha256": "sha256:60c5dc9d2d7631a98fc1d38f24887eba26866ab1eb79a923ca59852c24b9a306",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

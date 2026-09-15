@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/morphological-features@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/morphological-features/v0.1",
-  "profile_sha256": "sha256:e587303e3c1b04079d8edc06d42c9a52b4e8f4afc273bff53aca0af72a666c19",
+  "profile_sha256": "sha256:1a023de19f77167e29b92833d015f89428b509624751c01d5d4d9fb5165adf97",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

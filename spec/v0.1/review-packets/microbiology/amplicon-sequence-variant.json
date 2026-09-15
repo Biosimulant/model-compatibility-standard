@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/amplicon-sequence-variant@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/amplicon-sequence-variant/v0.1",
-  "profile_sha256": "sha256:d816835dd981d76b753751ec57146f99248672335453e68411d78a97c57d1a80",
+  "profile_sha256": "sha256:0e4091c5cd20fc724ff5be5938340872c42c24c383b79a752c1ed62bb8197dc7",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -164,11 +164,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

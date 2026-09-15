@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/splice-junction-counts@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/splice-junction-counts/v0.1",
-  "profile_sha256": "sha256:6db0ffe74d7ddf386df2c49fe2c82d5f8ff86c9c858ac3c5368bdfd13c94832c",
+  "profile_sha256": "sha256:1402c8f64fca247fbc29c5656333c42a35659a754579d7fbbc4b77adcb84027d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -148,11 +148,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

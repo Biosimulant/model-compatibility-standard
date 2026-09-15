@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/blood-gas@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/blood-gas/v0.1",
-  "profile_sha256": "sha256:ac49912616ec0ea08e4561ed7d41e4732ed2dce8617a98c1330568d8ddd63ec4",
+  "profile_sha256": "sha256:3dfeca55a71426c0cde3ee9a2f1ee2f98f50279c8bb3a6bb79ef58379b3554ae",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

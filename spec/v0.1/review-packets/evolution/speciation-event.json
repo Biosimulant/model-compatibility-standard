@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/speciation-event@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/speciation-event/v0.1",
-  "profile_sha256": "sha256:9175262f97274278b78e65c96cce23ef75b5ce0233e3a2fc64e7dab28508bb1e",
+  "profile_sha256": "sha256:376d99d167c113248ce3d168f15f0a981aeaf45f739855c60ec5fd52f1cbd84d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -144,11 +144,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

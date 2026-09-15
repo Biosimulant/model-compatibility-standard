@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/virulence-factor-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/virulence-factor-profile/v0.1",
-  "profile_sha256": "sha256:8850f4d02bdf0c1b0e1169db23c86add6a8f6ee8a334d0e3cef3bebdbfb42808",
+  "profile_sha256": "sha256:a2272657a8dc0188e5828303d0d964c27d7045d9386161ec5a930e6b13f13320",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

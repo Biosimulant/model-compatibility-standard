@@ -152,7 +152,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/allele-frequency-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/allele-frequency-trajectory/v0.1",
-  "profile_sha256": "sha256:8997a7be0e1bcecfdb9fc7d158e67952e9b9283646d452f940cb67c8fc7d4945",
+  "profile_sha256": "sha256:b7a93c0972aedf67fdc6ecf563c0a171a1060e8390f8c7829fa5ab7dca4a332b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -179,11 +179,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

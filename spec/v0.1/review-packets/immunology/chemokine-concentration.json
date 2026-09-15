@@ -151,7 +151,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/chemokine-concentration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/chemokine-concentration/v0.1",
-  "profile_sha256": "sha256:66f83bf688218e0cd4c873dca2f1d63c62ddb5ee557563be08a87e52442a609d",
+  "profile_sha256": "sha256:9244a7a61bcd0554947c35bfe7b5cc4fd8131a3715c4a963aa51ff5507ca6ec5",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -177,11 +177,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

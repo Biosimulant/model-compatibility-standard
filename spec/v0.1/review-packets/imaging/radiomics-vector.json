@@ -173,7 +173,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/radiomics-vector@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/radiomics-vector/v0.1",
-  "profile_sha256": "sha256:a1dc6ebf390ee1248351f1ea181e5486322bed8c6097d10fd9ca9e71c9692937",
+  "profile_sha256": "sha256:7eec66fa9669dae005373fc3f7520e9a7c5dc79999e254cdf418ea216a8f34fe",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -200,11 +200,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

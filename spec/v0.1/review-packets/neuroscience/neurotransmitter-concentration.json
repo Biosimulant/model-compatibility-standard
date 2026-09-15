@@ -166,7 +166,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/neurotransmitter-concentration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/neurotransmitter-concentration/v0.1",
-  "profile_sha256": "sha256:fde51d28c9134a1b82599ba3cb8c077cadb8348c548f27bbde298de9438ae6c8",
+  "profile_sha256": "sha256:8480a5c7e51ac93c284d012e319d0363f93faa085772c4666cc2fa6f07f0e92a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -192,11 +192,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

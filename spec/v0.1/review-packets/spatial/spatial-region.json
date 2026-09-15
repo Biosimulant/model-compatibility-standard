@@ -50,6 +50,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.multigraph",
     "representation.node_schema",
@@ -124,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/spatial-region@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/spatial-region/v0.1",
-  "profile_sha256": "sha256:7fefe4ef6a967735da24372f17eedbb47d65bc361dcaf72e217d503b82ca8cc3",
+  "profile_sha256": "sha256:d86af1dc745bcf2f91a15d89c9693ebcc15244957a34e9ce6f4567abf25dcf24",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

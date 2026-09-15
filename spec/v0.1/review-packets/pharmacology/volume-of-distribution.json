@@ -177,7 +177,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/volume-of-distribution@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/volume-of-distribution/v0.1",
-  "profile_sha256": "sha256:3f1830526bf16cc162ec9b2f8e87920402a83767cf697ae3f2ffd971c3efbf1f",
+  "profile_sha256": "sha256:94f035fd96112fd1894ec9947e31249d7c692ca387f197e6d57f50c4312f1ed2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -197,11 +197,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

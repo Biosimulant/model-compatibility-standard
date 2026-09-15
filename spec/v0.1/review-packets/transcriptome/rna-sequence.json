@@ -139,7 +139,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/rna-sequence@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/rna-sequence/v0.1",
-  "profile_sha256": "sha256:14416cdb2b618459a7a9cd4882e5f12ff1e11766f039fbfa29dcb061111207f2",
+  "profile_sha256": "sha256:549466351a1d227dcf41f52b8745c1e28e18045c5ed9e3075a0af22b3a20aaf5",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -162,11 +162,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

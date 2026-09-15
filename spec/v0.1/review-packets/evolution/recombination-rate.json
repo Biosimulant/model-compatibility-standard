@@ -163,7 +163,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/recombination-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/recombination-rate/v0.1",
-  "profile_sha256": "sha256:40dbf09de7eb6a97dbb82f796637c8cd34779b0f7a44131991a725b8dcaab332",
+  "profile_sha256": "sha256:0aad95de4cff36b1aa4367a9d8510702d0fe98115727ea485fe588430b0d33ea",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -189,11 +189,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

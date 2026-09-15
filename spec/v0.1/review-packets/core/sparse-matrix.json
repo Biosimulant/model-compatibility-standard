@@ -21,6 +21,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.precision",
     "semantic.endpoint",
@@ -107,7 +108,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "core/sparse-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/core/sparse-matrix/v0.1",
-  "profile_sha256": "sha256:2bd78307ae3b13a831643bde0c5a756fa07cc09ec52cd239b2276d382e5aedaf",
+  "profile_sha256": "sha256:e06d14f89621533fcc5f81aa38ced466d9ddceeb91c8c290307797ca8385933d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,11 +135,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",
@@ -396,9 +397,10 @@
       "level": "required",
       "path": "representation.sparsity",
       "schema": {
-        "maxLength": 4096,
-        "minLength": 1,
-        "type": "string"
+        "enum": [
+          "dense",
+          "sparse"
+        ]
       }
     }
   ],

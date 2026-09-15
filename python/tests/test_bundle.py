@@ -9,7 +9,7 @@ def test_catalogue_counts_and_all_profiles_load():
     bundle = get_bundle()
     assert bundle.catalogue["counts"] == {
         "profiles": 650,
-        "item_definitions": 267,
+        "item_definitions": 268,
         "item_packs": 30,
     }
     profiles = list(bundle.profiles())

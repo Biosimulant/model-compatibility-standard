@@ -154,7 +154,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cardiopulmonary-renal/respiratory-waveform@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cardiopulmonary-renal/respiratory-waveform/v0.1",
-  "profile_sha256": "sha256:013b53ea99ca07a0c40b25a667cd1918b84ce5d8261c7afd610ce6d2bf3bc51e",
+  "profile_sha256": "sha256:4105c4408e4d693266927734f2c84def9282b807c623b25b685cd7ab78bd0545",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -181,11 +181,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

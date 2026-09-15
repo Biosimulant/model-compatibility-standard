@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/methylation-age@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/methylation-age/v0.1",
-  "profile_sha256": "sha256:e77a0c91833beba05f906abb4c8b3c9aaa13e6eaa4daa49f7097e09a1f30f4d2",
+  "profile_sha256": "sha256:c140af9ee2903e91ffa02407ff8a58c87f2895eff9a95f3edb51b4b1ed1679f0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -148,11 +148,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

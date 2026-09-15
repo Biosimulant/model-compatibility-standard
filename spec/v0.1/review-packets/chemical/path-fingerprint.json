@@ -47,6 +47,7 @@
     "representation.feature_space",
     "representation.formal_charge",
     "representation.hydrogen_policy",
+    "representation.implicit_entry",
     "representation.isotope_state",
     "representation.layout",
     "representation.ordering",
@@ -111,7 +112,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/path-fingerprint@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/path-fingerprint/v0.1",
-  "profile_sha256": "sha256:93bb67b97a7a826a6b83976008f84a13fe4333f8bed693ce8d3768c9cdd6cf71",
+  "profile_sha256": "sha256:c42635a4d4271022016deb13fb2e2ed5edeb66337ea5e6a03cdf7228c6108a81",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -137,11 +138,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "ignore",

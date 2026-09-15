@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/muscle-force@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/muscle-force/v0.1",
-  "profile_sha256": "sha256:4c17926340ba6f8f498a4873694d19fd8c75b29836b9552b6b4ed6598ec591c3",
+  "profile_sha256": "sha256:5d5f26c5a4e449018c3d320d3f943c2cc7a36da7e7e64bef68ef76f0d10e6a2e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -47,6 +47,7 @@
     "representation.feature_space",
     "representation.formal_charge",
     "representation.hydrogen_policy",
+    "representation.implicit_entry",
     "representation.isotope_state",
     "representation.layout",
     "representation.ordering",
@@ -111,7 +112,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/tautomer-state@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/tautomer-state/v0.1",
-  "profile_sha256": "sha256:e09dc5411aa6b1d62623009614b8cef5dec880d4707fc4b5d4756273f4459d47",
+  "profile_sha256": "sha256:4f1bf25cbe2e5c8776b96a65a03ff6d0bbb05a6518ffc465ccbcf9b45e00398b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,11 +135,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "ignore",

@@ -971,6 +971,13 @@
           "minLength": 1,
           "type": "string"
         },
+        "implicit_entry": {
+          "enum": [
+            "observed_zero",
+            "unobserved",
+            "not_applicable"
+          ]
+        },
         "interval_convention": {
           "maxLength": 4096,
           "minLength": 1,
@@ -1056,9 +1063,10 @@
           "type": "boolean"
         },
         "sparsity": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
+          "enum": [
+            "dense",
+            "sparse"
+          ]
         },
         "state_order": {
           "maxLength": 4096,

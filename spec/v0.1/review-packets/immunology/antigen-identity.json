@@ -139,7 +139,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/antigen-identity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/antigen-identity/v0.1",
-  "profile_sha256": "sha256:6d6092d043c9e8e0c29b60a0b0326ec449d951af5990f1ecca92ecc1a827388d",
+  "profile_sha256": "sha256:599cff68a56828d8d4c698fe3c39d4457b4354ecc4310e54a113e23a8b125e6c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -162,11 +162,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/developmental-clock@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/developmental-clock/v0.1",
-  "profile_sha256": "sha256:dd67b108d907aad62ef1c674bc7bcd90f76f40b1a9e6e42f43190ccd6c67a510",
+  "profile_sha256": "sha256:e61930551e0dbe99d4437d2781d9895435ac43aa6fe0f15eb3bba69bac0ad3c7",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

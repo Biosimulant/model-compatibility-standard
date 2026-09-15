@@ -173,7 +173,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/lung-volume@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/lung-volume/v0.1",
-  "profile_sha256": "sha256:d5ab7dac4c3821a5f1f26639b2f7654ea3e9334271a2d3d90154ddc96c03a02f",
+  "profile_sha256": "sha256:73245473abf3972501acedc40f4c5128867fd61aeac3f681aba8aa60e343bf26",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -195,11 +195,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

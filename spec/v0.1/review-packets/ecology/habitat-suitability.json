@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/habitat-suitability@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/habitat-suitability/v0.1",
-  "profile_sha256": "sha256:238d10b516e046724810e3e0230b42ca102d1595962459d557e588e59e1ef869",
+  "profile_sha256": "sha256:2fa09c097eef26e215754321119ae744955e114efc51fbf898fc2eda1cea11a7",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

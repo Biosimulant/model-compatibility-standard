@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/gastrulation-state@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/gastrulation-state/v0.1",
-  "profile_sha256": "sha256:06df6ede8f958684bdb2e881750c1966559799378dedfbdcf128deba0eea63a2",
+  "profile_sha256": "sha256:c0e54ed904f396d484f2343971e7d67e11d13f6c064d0714b4173a0dba97c755",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -147,11 +147,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

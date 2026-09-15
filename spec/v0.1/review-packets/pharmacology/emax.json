@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/emax@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/emax/v0.1",
-  "profile_sha256": "sha256:9d1ba0b99dd959ce9201ff235840127abca315ab55fd0e836728883ce91cc874",
+  "profile_sha256": "sha256:3eb3c62b009300c1c2f9c30370748293e3c7d8977cd1c6b67576fd0751a5f7f1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -154,11 +154,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

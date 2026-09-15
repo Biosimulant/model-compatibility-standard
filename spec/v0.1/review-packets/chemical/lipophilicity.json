@@ -47,6 +47,7 @@
     "representation.feature_space",
     "representation.formal_charge",
     "representation.hydrogen_policy",
+    "representation.implicit_entry",
     "representation.isotope_state",
     "representation.layout",
     "representation.ordering",
@@ -111,7 +112,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/lipophilicity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/lipophilicity/v0.1",
-  "profile_sha256": "sha256:60ccd59abc17a763d275cadb4d89b5f79b10cbc797a7d741d815f4d2448b2aa2",
+  "profile_sha256": "sha256:4cc3ca8916d05983e331d5a1d3dc3d493aec8edc2c4c94d0f146cd5d39e0ef75",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -137,11 +138,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "ignore",

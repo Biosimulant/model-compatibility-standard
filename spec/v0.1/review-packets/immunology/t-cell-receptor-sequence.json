@@ -139,7 +139,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/t-cell-receptor-sequence@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/t-cell-receptor-sequence/v0.1",
-  "profile_sha256": "sha256:2e6f50960269d4e53702a93ddfeeca48a1029406616f13d36dcf852aa0e607ec",
+  "profile_sha256": "sha256:28d67a32ab266993a45047a76f7d3b0c0d5ddb876f1316b4958ddc13f2ebf970",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -162,11 +162,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

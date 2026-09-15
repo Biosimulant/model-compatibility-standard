@@ -170,7 +170,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/viral-transcript-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/viral-transcript-abundance/v0.1",
-  "profile_sha256": "sha256:a46881f29ecb0517894776d5349fe84b340f3648cd1b890e13f7db3e59b61d08",
+  "profile_sha256": "sha256:f91b26f1fa32906b28bf0c2df761d74a6dcad887d53e715dc8cb67be0d2cd584",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -197,11 +197,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

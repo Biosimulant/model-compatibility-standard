@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/membrane-lipid-composition@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/membrane-lipid-composition/v0.1",
-  "profile_sha256": "sha256:ae556061f104ef723868a8ea59ae10778dc5d0811d966e290f920328672e2f49",
+  "profile_sha256": "sha256:a6f404618688004c26a108e28682bfbdf45493090c559917bf06febd776acac1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -168,11 +168,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

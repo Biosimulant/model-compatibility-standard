@@ -4,6 +4,8 @@ from biosimulant_model_compatibility_standard import (
     validate_object,
 )
 
+REF = "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/firing-rate/v0.1"
+
 
 def _adapter(ref: str, source: dict, target: dict, *, loss: str = "none") -> dict:
     return {
@@ -22,12 +24,12 @@ def _adapter(ref: str, source: dict, target: dict, *, loss: str = "none") -> dic
 
 
 def test_lossless_adapter_is_a_visible_plan_node():
-    source = {"measurement": {"unit": "nM"}}
-    target = {"measurement": {"unit": "uM"}}
+    source = {"measurement": {"unit": "nmol/L"}}
+    target = {"measurement": {"unit": "umol/L"}}
     result = resolve_contracts(
         source,
         target,
-        [_adapter("https://biosimulant.com/adapters/nm-to-um/1.0.0", source, target)],
+        [_adapter("https://biosimulant.com/adapters/nmol-to-umol/1.0.0", source, target)],
     )
     assert result["resolution"] == "RESOLVED"
     plan = result["plan"]
@@ -98,3 +100,24 @@ def test_resolution_pins_verified_snapshots():
         "ref": snapshot["ref"],
         "sha256": snapshot["sha256"],
     } in result["plan"]["immutable_references"]
+
+
+def test_profile_transformation_policy_reaches_the_plan():
+    # Every profile publishes transformation_policy and nothing read it: the only policy consulted
+    # was the one a caller passed in by hand, so a profile's declared approval paths had no effect
+    # on any plan (decision D11).
+    source = {"measurement": {"unit": "Hz", "scale": "nominal"}, "profile_refs": [REF]}
+    target = {"measurement": {"unit": "Hz", "scale": "ordinal"}, "profile_refs": [REF]}
+    capability = _adapter(
+        "https://biosimulant.com/adapters/rate-to-ordinal-band/1.0.0", source, target, loss="lossy"
+    )
+    capability["transformation_class"] = "aggregation"
+    result = resolve_contracts(source, target, [capability])
+    assert result["resolution"] == "RESOLVED"
+    plan = result["plan"]
+    assert plan["technical_status"] == "LOSSY_CONVERSION_REQUIRES_APPROVAL"
+    # Read from the profile, translated out of the published allow/approval/block vocabulary.
+    assert plan["policy"]["lossy"] == "APPROVAL_REQUIRED"
+    assert plan["policy"]["lossless"] == "ALLOW"
+    assert plan["policy"]["decision"] == "APPROVAL_REQUIRED"
+    assert validate_object(plan, "resolution-plan.schema.json") == []

@@ -158,7 +158,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/association-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/association-rate/v0.1",
-  "profile_sha256": "sha256:413aa5c20504d5899eb3d84b84dc1be0dda370405331d90438a0110bf1e9920e",
+  "profile_sha256": "sha256:280b59323a15878b837329d039e9607bd37b3717cc79ef60c2b14cb7bbb55a3b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -184,11 +184,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -139,7 +139,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/population-stratum@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/population-stratum/v0.1",
-  "profile_sha256": "sha256:4832d4ac43a676c028931e7eafe85206c6896267d8d666a70027f1309a1acc44",
+  "profile_sha256": "sha256:c74753424f63dcd11f09144ac94d6b40da5aa4c0d7cc0a1dd2b79ea7e577f38b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -165,11 +165,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

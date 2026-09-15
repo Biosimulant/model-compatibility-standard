@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/food-web@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/food-web/v0.1",
-  "profile_sha256": "sha256:b0b25c86e8a9beb7c835481470cd89b6f8295208b04b93e3063d87118031175c",
+  "profile_sha256": "sha256:a7204bb15583a9c5f4a6d34d2c6a1ccd247eea661c130bc8ade4a05c2bbb1a1b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/targeted-metabolomics-panel@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/targeted-metabolomics-panel/v0.1",
-  "profile_sha256": "sha256:5dcc9a2d9f753ebb043dc6bc6f46151e6b12f09a59f2ab7aa6a11d1d1e7148a6",
+  "profile_sha256": "sha256:abd35f343cbcde8a8ba9575c0b29b8af474f1a548c6b2f19e8840ce5c1815a41",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

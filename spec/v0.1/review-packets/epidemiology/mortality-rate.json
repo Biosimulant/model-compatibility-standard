@@ -184,7 +184,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/mortality-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/mortality-rate/v0.1",
-  "profile_sha256": "sha256:8466feb1a443fa81e751062938ba9d17a69837cdd01452545e327e38fede82e3",
+  "profile_sha256": "sha256:e04bfe44eb608350a9c5a9e4b70e4b3c806137ec09d6eba019dd84446e0f768c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -210,11 +210,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

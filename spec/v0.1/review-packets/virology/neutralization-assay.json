@@ -134,7 +134,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/neutralization-assay@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/neutralization-assay/v0.1",
-  "profile_sha256": "sha256:9b1402adb8a1409bb51731be20c0c96d96eeb1f4c5bd9456bbd28c260c80133e",
+  "profile_sha256": "sha256:38adcd5dbcc036c2fa24f38e0756f10fdcb2e2dd74435baa0ca529fd203f3c84",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -160,11 +160,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -47,6 +47,7 @@
     "representation.feature_space",
     "representation.formal_charge",
     "representation.hydrogen_policy",
+    "representation.implicit_entry",
     "representation.isotope_state",
     "representation.layout",
     "representation.ordering",
@@ -111,7 +112,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/isomeric-smiles@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/isomeric-smiles/v0.1",
-  "profile_sha256": "sha256:3822cd01f37de7cd5330a4faf097bcb169cdee9fe62359967fd8ff1689c102d6",
+  "profile_sha256": "sha256:af8570c6269243defe2f77c7b149c4a767bb69e4272dc7a877a0fce22c71e8ac",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,11 +135,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "ignore",

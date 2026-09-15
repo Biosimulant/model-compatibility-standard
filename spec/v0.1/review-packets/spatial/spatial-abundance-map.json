@@ -48,6 +48,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.multigraph",
     "representation.node_schema",
@@ -191,7 +192,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/spatial-abundance-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/spatial-abundance-map/v0.1",
-  "profile_sha256": "sha256:ae95c57a08435755cce8a5ec40a3c6da508eeee27cd73e4125f8515f38487f48",
+  "profile_sha256": "sha256:3a9944cb0843e252e8a5136733fe5c612f4b844072b526d2972968bf6f09e923",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -218,11 +219,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

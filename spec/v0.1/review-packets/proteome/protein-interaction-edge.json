@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-interaction-edge@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-interaction-edge/v0.1",
-  "profile_sha256": "sha256:6e5360d47a7fa72f82d077011dc8f85443c31791f04d9950473fa79111c4f892",
+  "profile_sha256": "sha256:229bd9963efc98dc6d13ea3799b664405a078a74d842516569284df9c3c99d91",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -167,11 +167,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

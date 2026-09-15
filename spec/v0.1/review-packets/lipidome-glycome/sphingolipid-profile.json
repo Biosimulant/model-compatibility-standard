@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/sphingolipid-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/sphingolipid-profile/v0.1",
-  "profile_sha256": "sha256:8a5693d52207f170c4b505adc55723e858216060d2999dbd77a3bd5b00fccfe0",
+  "profile_sha256": "sha256:5f07839a9d975ce6c1d652a20d88f26ace02bacbde2534d4312ac175f403f049",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -168,11 +168,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

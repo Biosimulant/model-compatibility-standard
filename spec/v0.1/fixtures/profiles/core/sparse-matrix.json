@@ -11,7 +11,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -35,7 +35,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -52,7 +52,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -70,7 +70,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {}
       },
@@ -90,7 +90,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix-different"
@@ -115,7 +115,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix-different"
@@ -132,7 +132,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -152,7 +152,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {}
       },
@@ -167,7 +167,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -187,7 +187,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -204,7 +204,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {}
       }
@@ -219,7 +219,7 @@
         },
         "representation": {
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -241,7 +241,7 @@
         "representation": {
           "kind": "not-an-allowed-value",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -266,7 +266,7 @@
         "representation": {
           "kind": "dense_vector-different",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -283,7 +283,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -302,7 +302,7 @@
         },
         "representation": {
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -319,7 +319,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -339,7 +339,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -355,7 +355,7 @@
         },
         "representation": {
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -368,7 +368,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -387,7 +387,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -413,7 +413,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -430,7 +430,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -445,7 +445,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -462,7 +462,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -482,7 +482,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -494,7 +494,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -511,7 +511,7 @@
         },
         "representation": {
           "kind": "dense_vector",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -533,7 +533,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": 7,
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -558,7 +558,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit-different",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -575,7 +575,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -594,7 +594,7 @@
         },
         "representation": {
           "kind": "dense_vector",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -611,7 +611,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -631,7 +631,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -647,7 +647,7 @@
         },
         "representation": {
           "kind": "dense_vector",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -686,7 +686,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": 7
+          "sparsity": "not-an-allowed-value"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -711,7 +711,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity-different"
+          "sparsity": "dense-different"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -728,7 +728,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -764,7 +764,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"
@@ -784,7 +784,7 @@
         "representation": {
           "kind": "dense_vector",
           "ordering": "explicit",
-          "sparsity": "example-sparsity"
+          "sparsity": "dense"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/core/sparse-matrix"

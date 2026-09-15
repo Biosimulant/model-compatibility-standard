@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cardiopulmonary-renal/arrhythmia-event@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cardiopulmonary-renal/arrhythmia-event/v0.1",
-  "profile_sha256": "sha256:1e4bee67d4d7a434f6529bf91e11c7097e819f6749be2276a37ca3ec528a7906",
+  "profile_sha256": "sha256:76002cbc6f536871d5819113e98bfc644b820f4da59a73259ff4c9eb36800afc",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -146,11 +146,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

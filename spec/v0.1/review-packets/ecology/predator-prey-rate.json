@@ -161,7 +161,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/predator-prey-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/predator-prey-rate/v0.1",
-  "profile_sha256": "sha256:34806fed0e5b02d895d55233f55525d0c73d4b1025b6c01dc0e38b0ef846511a",
+  "profile_sha256": "sha256:fc9ffd9757a856860c62860f6b50985e5388ad789ba60e829f3a3bba15c12cb8",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -187,11 +187,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

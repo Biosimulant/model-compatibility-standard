@@ -40,6 +40,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.precision",
     "representation.sparsity",
@@ -139,7 +140,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "simulation/parameter-vector@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/simulation/parameter-vector/v0.1",
-  "profile_sha256": "sha256:d51f2192e8c651808e1174a1166ffe533749f1641e98da4a8a65d7ff264d45c0",
+  "profile_sha256": "sha256:471bc3700e80fac3bbd34134a7ecafb63ee21ffe466f98af5e2650680dec29f1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -166,11 +167,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

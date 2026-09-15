@@ -130,7 +130,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/cross-modal-alignment@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/cross-modal-alignment/v0.1",
-  "profile_sha256": "sha256:a6eeeaa05a9ce6d627d0868bb0083085c644ec90175a7501b90b9902b5290097",
+  "profile_sha256": "sha256:d2017e7c072bc2ca203194b3dcac5033b7c41f7b589b38a59000bfa9dc076d50",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -156,11 +156,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

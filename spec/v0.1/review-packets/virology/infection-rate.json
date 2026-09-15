@@ -171,7 +171,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/infection-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/infection-rate/v0.1",
-  "profile_sha256": "sha256:043b17df4e1a7a037ba435d6e5643bcae1414902919ddbd58aa917e5ba17f676",
+  "profile_sha256": "sha256:405a0a27ac2390a5e6f45d67a559c509ca31a2cc0284d0860522729852fac418",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -197,11 +197,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -184,7 +184,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/hospitalization-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/hospitalization-rate/v0.1",
-  "profile_sha256": "sha256:7120d21bc7e1915da7a72f860dac6f92cac1c9bba0d1cd7bc0d442640d5a3d68",
+  "profile_sha256": "sha256:ca7206c92eac7aff35cfe1fd5ec573f3825efac6d541186b3b2da5520c8393de",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -210,11 +210,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

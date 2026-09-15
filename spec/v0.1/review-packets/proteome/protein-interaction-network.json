@@ -151,7 +151,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-interaction-network@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-interaction-network/v0.1",
-  "profile_sha256": "sha256:7a54389442b070c5b2d413a9b082f47f80de4f20dd214f3a7bdf21c55406a472",
+  "profile_sha256": "sha256:c30360542e12121059d254e235caafa7477b75338fb08ec636026cbf1948951c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -173,11 +173,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

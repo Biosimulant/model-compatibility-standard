@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/paralogy-relation@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/paralogy-relation/v0.1",
-  "profile_sha256": "sha256:dd62ba3a9d9e0e360f52be0704abdd06786547b65e7eefbcb366b5547f39a5ac",
+  "profile_sha256": "sha256:ae2c8c72256ec07ca39cdfad05f3b857b3cdb171e63dec58be87c2177e731083",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

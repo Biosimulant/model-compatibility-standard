@@ -127,7 +127,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/behavioral-trial@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/behavioral-trial/v0.1",
-  "profile_sha256": "sha256:596888e322857c99a09cc040650b3954e2dc912db6739c7cae5c84e56857c54a",
+  "profile_sha256": "sha256:fc3ca73528891773b4b1054ec53f6491efc7bb802698ad5cc7df089ff3c043d6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -153,11 +153,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

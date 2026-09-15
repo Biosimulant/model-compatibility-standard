@@ -24,9 +24,10 @@ def test_full_external_review_fixture_set_for_every_profile():
         cases = {case["name"]: case for case in fixture["cases"]}
         profile = bundle.profile(ref)
         required = [item for item in profile["requirements"] if item["level"] == "required"]
-        expected_count = 2 + (5 * len(required)) + int(
-            any(case.startswith("comparison-lossless") for case in cases)
-        )
+        # Count the lossless cases rather than test that any exist: a profile can now carry both a
+        # unit conversion and a representation re-encoding (decision D6).
+        lossless = sum(1 for case in cases if case.startswith("comparison-lossless"))
+        expected_count = 2 + (5 * len(required)) + lossless
         assert len(cases) == expected_count, ref
         positive = cases["positive"]
         assert validate_contract(positive["contract"], [ref]) == [], ref

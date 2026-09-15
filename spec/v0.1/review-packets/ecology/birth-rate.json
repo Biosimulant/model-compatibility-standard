@@ -161,7 +161,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/birth-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/birth-rate/v0.1",
-  "profile_sha256": "sha256:1bfeb3dd0e5dd615d10f7c397e0ac5a19da486d6d151829f2dbe04d767377bac",
+  "profile_sha256": "sha256:3c42d400cd2ffbef2b84775ea4eb49ba610c03cbf7eb18778838d63360c7425a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -187,11 +187,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

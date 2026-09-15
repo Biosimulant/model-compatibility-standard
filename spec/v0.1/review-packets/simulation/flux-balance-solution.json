@@ -41,6 +41,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.ordering",
     "representation.precision",
@@ -111,7 +112,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "simulation/flux-balance-solution@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/simulation/flux-balance-solution/v0.1",
-  "profile_sha256": "sha256:f5b18220c877f5979349807413aa476fa061451e37f36da7e76c0c8e64a343fb",
+  "profile_sha256": "sha256:06db19ffa4d0dbc2dab097827320eff0bbe44828f887a220aed1cda74ff0925b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -137,11 +138,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "ignore",

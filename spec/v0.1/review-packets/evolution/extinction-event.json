@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/extinction-event@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/extinction-event/v0.1",
-  "profile_sha256": "sha256:8df640a02b5186be59b4335c93bbc86d615d160cba7bbd95310c353272a9790a",
+  "profile_sha256": "sha256:97ee6fa8d764d0e97a6f3f246003a58c34cff948b630c556b7348d352404ac9e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -144,11 +144,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

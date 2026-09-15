@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/active-site@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/active-site/v0.1",
-  "profile_sha256": "sha256:e264f12a2804e3cc307fbf13e89dea86da8432832d8c5f2e03063549647faad6",
+  "profile_sha256": "sha256:a161b19bb70f9107254ad9eebcbfffdfb332bbba06082c3300287ad11a047669",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -41,6 +41,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.interval_convention",
     "representation.layout",
     "representation.left_normalized",
@@ -128,7 +129,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/phased-genotype@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/phased-genotype/v0.1",
-  "profile_sha256": "sha256:29d93aba06a7e925792c51f26b816c04f12084f9e2ddbd760cb1a6e7e5f7928d",
+  "profile_sha256": "sha256:ae65d7aa2a487bc08e1e1f319f4551fb64ff0043abbf596d974379ab693c2371",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +152,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

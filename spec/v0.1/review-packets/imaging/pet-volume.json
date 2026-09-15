@@ -222,7 +222,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/pet-volume@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/pet-volume/v0.1",
-  "profile_sha256": "sha256:40695f6100b5532999bf09138d77dacd0a91c32b273def4e292595a83732bbb6",
+  "profile_sha256": "sha256:71844e28495081a166ab055546a74b9d99969c9816e2f84b01c2f812558eab0c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -249,11 +249,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

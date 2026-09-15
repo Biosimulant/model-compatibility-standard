@@ -47,6 +47,7 @@
     "representation.feature_space",
     "representation.formal_charge",
     "representation.hydrogen_policy",
+    "representation.implicit_entry",
     "representation.isotope_state",
     "representation.layout",
     "representation.ordering",
@@ -111,7 +112,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/reaction-smiles@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/reaction-smiles/v0.1",
-  "profile_sha256": "sha256:311488c2d2624fe79c397766461a44e688d3f3320b01af7211218beaef540d45",
+  "profile_sha256": "sha256:120dc5b5ddc1cf8505633e3ee804d5d8ff46e9f12f39cfc1191c1796ed0cb2d4",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,11 +135,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "ignore",

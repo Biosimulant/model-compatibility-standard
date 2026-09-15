@@ -41,6 +41,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.ordering",
     "representation.precision",
@@ -111,7 +112,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "simulation/ordinary-differential-equation-state@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/simulation/ordinary-differential-equation-state/v0.1",
-  "profile_sha256": "sha256:44d4bad19fc23a50e0d490fc9f9c05427c3ba8de9cd6912d34ed44b063dda571",
+  "profile_sha256": "sha256:61423314f66ed8c84df5e7456a51661b189c4bae78b516debfe27e7d8a3c095a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,11 +135,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "ignore",

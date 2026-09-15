@@ -189,7 +189,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-expression-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-expression-matrix/v0.1",
-  "profile_sha256": "sha256:033fa525c20842762dca1ea7bc777f7666409b24be560774a2650a78df58587b",
+  "profile_sha256": "sha256:a46d2864ce7bc523f69beced9059cafddc01ecfe41dbf0a44ee6d0858911f3ef",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -216,11 +216,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

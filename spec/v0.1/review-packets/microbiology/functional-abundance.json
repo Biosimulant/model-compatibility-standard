@@ -168,7 +168,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/functional-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/functional-abundance/v0.1",
-  "profile_sha256": "sha256:8d7203ab912b0bc6a32c05f5a389936f8957d2bea98a64eb4c658997df152082",
+  "profile_sha256": "sha256:4bdd948bd665814a07009ac3ad6ed65276c78dceaa502f6d5894e2c989cf6d4f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -195,11 +195,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

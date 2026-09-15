@@ -188,7 +188,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/viral-protein-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/viral-protein-abundance/v0.1",
-  "profile_sha256": "sha256:901e1ecc51ec7fe22ce868760794c4ce4478c9710e26cff213cabeabff61e79d",
+  "profile_sha256": "sha256:08c6d18b29282411b05094cc0206a59e2e73a31a5d6049ce16dbb2292672d90d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -215,11 +215,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

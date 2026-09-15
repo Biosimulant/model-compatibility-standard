@@ -134,7 +134,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/antiviral-susceptibility@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/antiviral-susceptibility/v0.1",
-  "profile_sha256": "sha256:74fb346249c6ee5daa2f4b8515bc4f5053e829ca45b38ab905dc17440b2cbcf8",
+  "profile_sha256": "sha256:7e2c79e02ed4fa79eb6cf33b920f105a86bb4772944fbe4019df1f9084756c8f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -160,11 +160,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

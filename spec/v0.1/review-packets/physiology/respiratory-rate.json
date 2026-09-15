@@ -151,7 +151,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/respiratory-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/respiratory-rate/v0.1",
-  "profile_sha256": "sha256:199fa3b38a40f45a6bfad56310bc292631881e03883876f36bc5754e6148b839",
+  "profile_sha256": "sha256:6d8a3d86eaf83efd99cca5acad4a1e3df6ce793f4e90c3dd3a68b348fd22c413",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -177,11 +177,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/cell-state@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/cell-state/v0.1",
-  "profile_sha256": "sha256:346669c67656ded337cd882736b6f7495a7d26cd346b40adbeb8d2ad7f660e70",
+  "profile_sha256": "sha256:93b5dd027a7ac1bad52afd6a7d6d6c9b19764961244000edf608e6b1158ab2b0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -146,11 +146,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

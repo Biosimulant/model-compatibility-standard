@@ -171,7 +171,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/transmission-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/transmission-rate/v0.1",
-  "profile_sha256": "sha256:33389d988263d20297887cfff40176cf22062abd914f461ad94b014794917484",
+  "profile_sha256": "sha256:4af772bf712b8ad42498830834dba770b94c1d48df22db977d82c79afd3c00f8",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -197,11 +197,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

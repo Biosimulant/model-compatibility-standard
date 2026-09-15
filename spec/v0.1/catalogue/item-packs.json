@@ -315,7 +315,8 @@
         "representation.sparsity",
         "representation.canonicalization",
         "representation.precision",
-        "representation.endianness"
+        "representation.endianness",
+        "representation.implicit_entry"
       ]
     },
     {

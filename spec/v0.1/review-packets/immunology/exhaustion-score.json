@@ -158,7 +158,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/exhaustion-score@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/exhaustion-score/v0.1",
-  "profile_sha256": "sha256:59ff0699f287caff6ee4c3fbb57cdc5daac82a1ff9927c7ea668978f042709e1",
+  "profile_sha256": "sha256:1e7844d10a27003c008b2428f1399c6f2a17a0e7ac38373f8038908c23acd77a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -184,11 +184,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

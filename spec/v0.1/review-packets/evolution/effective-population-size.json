@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/effective-population-size@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/effective-population-size/v0.1",
-  "profile_sha256": "sha256:a803c1ce773747a930558841a74a0e12890f4c6272cec078d1c3f43b01e5ae7f",
+  "profile_sha256": "sha256:22b31a844a228a4063ada48ade4234e5ebbc34259b1411a0805b7b3ee8f59a15",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

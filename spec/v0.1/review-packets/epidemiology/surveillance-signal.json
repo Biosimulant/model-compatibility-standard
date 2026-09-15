@@ -139,7 +139,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/surveillance-signal@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/surveillance-signal/v0.1",
-  "profile_sha256": "sha256:fa223b86b15bf5b60060192f0d6eccc84b8eeefb7da82b9b9afb8aec8a72e8c3",
+  "profile_sha256": "sha256:ccf7442bda8d67d531d7ae2390a3c7d74d0c09c8d17178e3ae24b3e27f8af555",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -166,11 +166,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -134,7 +134,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/receptor-binding@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/receptor-binding/v0.1",
-  "profile_sha256": "sha256:f46194700d4f80e40027f31e85f7a478884d2ce38ef477c805a1ef15b325d3d3",
+  "profile_sha256": "sha256:23d381d701702ee4f370231839a687a2a9a9891ae844b80b01591865eb6611f9",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -160,11 +160,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

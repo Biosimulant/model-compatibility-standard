@@ -139,7 +139,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/immunity-level@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/immunity-level/v0.1",
-  "profile_sha256": "sha256:d62cb973c5336c29f6876a287fd78be09197ebaad2987e1708d5688737f18490",
+  "profile_sha256": "sha256:1d29ec2d157c91af749a513863bb344af7a0820c647b123fb8da24bb299cdf8c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -165,11 +165,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

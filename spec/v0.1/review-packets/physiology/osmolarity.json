@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/osmolarity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/osmolarity/v0.1",
-  "profile_sha256": "sha256:c74aae5bdbe8aa0db110e5607d078a395c6588426ad24af6db769275daf5c69e",
+  "profile_sha256": "sha256:00f43298cc70b5fc97589f8550bfab18146f6b4bd9a8982c3e12bf94266c254c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -149,7 +149,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/dna-methylation-fraction@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/dna-methylation-fraction/v0.1",
-  "profile_sha256": "sha256:3fba5db127b3e392c504a0938847ffc4370224058cfe78e50f9b0cd7361574cf",
+  "profile_sha256": "sha256:db4106d26213930c4810f5c5da906c3652ece2865484aeaff7a78c42ef5c3870",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -175,11 +175,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

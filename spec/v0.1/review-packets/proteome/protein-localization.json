@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-localization@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-localization/v0.1",
-  "profile_sha256": "sha256:251b479e421af8ada3cb3580db5d14bacde1c68cf2ec35c9f0f9ab24acd0718f",
+  "profile_sha256": "sha256:b8cb6b3fd335a31f06119f09e635738e87ec20206100eab2c96fcfac43be6f96",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -167,11 +167,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

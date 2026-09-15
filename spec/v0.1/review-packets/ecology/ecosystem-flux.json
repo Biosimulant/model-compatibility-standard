@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/ecosystem-flux@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/ecosystem-flux/v0.1",
-  "profile_sha256": "sha256:3f603cf72250e6c02064cd4bc1fa9d8a62178d614d619e2598770942ff3c9693",
+  "profile_sha256": "sha256:b8de1c06dc1f41a793fd12c09df6df2f9d15a8beaab06cc996f9ec911d812c74",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

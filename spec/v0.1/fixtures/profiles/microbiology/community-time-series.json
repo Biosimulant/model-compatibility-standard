@@ -24,7 +24,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -62,7 +62,7 @@
           "type": "declared"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -93,7 +93,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -125,7 +125,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {}
@@ -159,7 +159,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -198,7 +198,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -229,7 +229,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -263,7 +263,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {}
@@ -292,7 +292,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -326,7 +326,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -357,7 +357,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {}
@@ -461,7 +461,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar-different",
+          "kind": "dense_vector-different",
           "ordering": "explicit"
         },
         "semantic": {
@@ -492,7 +492,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -556,7 +556,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -590,7 +590,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -647,7 +647,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -680,7 +680,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -720,7 +720,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -751,7 +751,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -780,7 +780,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -811,7 +811,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -845,7 +845,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -871,7 +871,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -903,7 +903,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar"
+          "kind": "dense_vector"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/community-time-series"
@@ -938,7 +938,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": 7
         },
         "semantic": {
@@ -977,7 +977,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit-different"
         },
         "semantic": {
@@ -1008,7 +1008,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1042,7 +1042,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar"
+          "kind": "dense_vector"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/community-time-series"
@@ -1072,7 +1072,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1106,7 +1106,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1137,7 +1137,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar"
+          "kind": "dense_vector"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/microbiology/community-time-series"
@@ -1167,7 +1167,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1203,7 +1203,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1242,7 +1242,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1273,7 +1273,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1306,7 +1306,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1337,7 +1337,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1371,7 +1371,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1401,7 +1401,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1432,7 +1432,7 @@
           "scale": "nominal"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1468,7 +1468,7 @@
           "unit": 7
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1507,7 +1507,7 @@
           "unit": "s"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1538,7 +1538,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1571,7 +1571,7 @@
           "scale": "nominal"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1602,7 +1602,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1636,7 +1636,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1666,7 +1666,7 @@
           "scale": "nominal"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1697,7 +1697,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1733,7 +1733,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1772,7 +1772,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1803,7 +1803,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1836,7 +1836,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1867,7 +1867,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1901,7 +1901,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1931,7 +1931,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1961,7 +1961,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -1997,7 +1997,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2036,7 +2036,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2067,7 +2067,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2099,7 +2099,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2130,7 +2130,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2164,7 +2164,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2193,7 +2193,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2224,7 +2224,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2260,7 +2260,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2299,7 +2299,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2330,7 +2330,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2363,7 +2363,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2394,7 +2394,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2428,7 +2428,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2458,7 +2458,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2489,7 +2489,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2525,7 +2525,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2564,7 +2564,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2595,7 +2595,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2628,7 +2628,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2659,7 +2659,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2693,7 +2693,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2723,7 +2723,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2753,7 +2753,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2789,7 +2789,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2827,7 +2827,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2858,7 +2858,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2890,7 +2890,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2921,7 +2921,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2955,7 +2955,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {
@@ -2984,7 +2984,7 @@
           "unit": "1"
         },
         "representation": {
-          "kind": "scalar",
+          "kind": "dense_vector",
           "ordering": "explicit"
         },
         "semantic": {

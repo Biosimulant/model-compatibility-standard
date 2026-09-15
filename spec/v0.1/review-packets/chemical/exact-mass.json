@@ -44,6 +44,7 @@
     "representation.feature_space",
     "representation.formal_charge",
     "representation.hydrogen_policy",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.ordering",
     "representation.precision",
@@ -150,7 +151,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/exact-mass@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/exact-mass/v0.1",
-  "profile_sha256": "sha256:3bc0c2baa78d1e21253ca233c54e21451746bc7010b8ac5907deb89a0cbefdb1",
+  "profile_sha256": "sha256:43de6e354e7579943fb3e5402e32a44adda5ba383499ba736366aa36f933e254",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -176,11 +177,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

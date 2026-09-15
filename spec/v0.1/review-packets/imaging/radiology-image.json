@@ -171,7 +171,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/radiology-image@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/radiology-image/v0.1",
-  "profile_sha256": "sha256:ea2ce6e228a9c20e2c32f6716dc9171cd42fbafc0953c1d423769be4ecca7b6f",
+  "profile_sha256": "sha256:bddee83ea0fbc832905c13e4417018fa91e5c0c1e02640d7b5c1fb58f256c286",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -198,11 +198,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

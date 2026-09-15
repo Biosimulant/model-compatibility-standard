@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/membrane-potential@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/membrane-potential/v0.1",
-  "profile_sha256": "sha256:66accd073e20ba56f434836f55243a915faa42d742b5ad4eb6fc741337f5566a",
+  "profile_sha256": "sha256:b87d9c3b6d43b033b0ec68fd3f31c324b78f71e5001bf096f4f6275fb4cafc97",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

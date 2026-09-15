@@ -168,7 +168,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/epigenetic-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/epigenetic-trajectory/v0.1",
-  "profile_sha256": "sha256:a5145067c4d24a32bdbcb2ac509fe73b51dfa2a9513afad4f2544884d5603217",
+  "profile_sha256": "sha256:6d60cf664d5b53f7d4c68da10e3f4eb467ad366b4908d58deea8b6feaeacbe81",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -195,11 +195,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/dose-schedule@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/dose-schedule/v0.1",
-  "profile_sha256": "sha256:c2b9b7418178c41ba595f90e7ebfaddb855cd8e677f6bda27d8e5b9f2de2fa7e",
+  "profile_sha256": "sha256:40d0ab13530ff1f3d28dd54d7027a742bbd5efe6b527c0d3f86d06b3e1d5c5c7",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

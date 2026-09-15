@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/immune-cell-count@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/immune-cell-count/v0.1",
-  "profile_sha256": "sha256:b5bdb7f9e4de65ed8898b7cd6ef3a9b60de0903c9f51a9007a739599f38b6c63",
+  "profile_sha256": "sha256:77ff235e3b1902209ef3c9624fb60158f7b7982dd0dee807f4314a7d046564da",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -147,11 +147,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

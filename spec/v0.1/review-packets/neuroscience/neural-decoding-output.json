@@ -127,7 +127,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/neural-decoding-output@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/neural-decoding-output/v0.1",
-  "profile_sha256": "sha256:6c220e288ef8744a798f5202271e779193aaf156e76c38e7635b37e803cc4da3",
+  "profile_sha256": "sha256:c4a6fb84c6b7af88dc76419a3aa3bdcb30dd1aae9d542385674ebbd5c25072c5",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -153,11 +153,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -155,7 +155,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/dissociation-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/dissociation-rate/v0.1",
-  "profile_sha256": "sha256:c14f12c7636fc4c8d6e3c29c9ca59a5c7636b8fd1509d64d69d0db88914bdc86",
+  "profile_sha256": "sha256:b911a9610805d3e0527b72f8b9f14c5dd508f7cffe2e366963624b5e3fecb106",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -181,11 +181,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -134,7 +134,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/viral-haplotype@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/viral-haplotype/v0.1",
-  "profile_sha256": "sha256:621658323dfd3d3d8b14e56f449b26ae1f4d4810bf515577b3926297cc208bab",
+  "profile_sha256": "sha256:0ed9f1226fc8378a6893fb474b4d1181d015b4c382618d75e67872b235214a41",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -157,11 +157,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

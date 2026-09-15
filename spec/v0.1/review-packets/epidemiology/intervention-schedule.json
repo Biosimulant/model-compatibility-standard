@@ -139,7 +139,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/intervention-schedule@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/intervention-schedule/v0.1",
-  "profile_sha256": "sha256:1a74dd85c3f60be1e6d0710d43957780748631014fb254f5d8fcaec6a9bb6735",
+  "profile_sha256": "sha256:2a93d5ee17e40dccabde69038a3ffcd11f4409d63aa0da9d82f70ddcc2adad3b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -161,11 +161,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

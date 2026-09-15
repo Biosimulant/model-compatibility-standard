@@ -127,7 +127,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/sensory-stimulus@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/sensory-stimulus/v0.1",
-  "profile_sha256": "sha256:4904f4527d2b9e592eb3f825fd62986a08f9fbc306aad5197f102e3119587128",
+  "profile_sha256": "sha256:fd840b5b59d703f8b4c758e6f74fb5bbf4761e518249edfdaadfb4c36faed25a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -153,11 +153,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/chromatin-state@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/chromatin-state/v0.1",
-  "profile_sha256": "sha256:2d7df6481ebdb4fd0d18e7e7d0103540c91729efa2e7a25f4234e3aeda3bafa9",
+  "profile_sha256": "sha256:3cf8bdec249b9df60bc7e4071fcde63babc8fbbadfafff8be1e777674ee15a74",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -145,11 +145,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

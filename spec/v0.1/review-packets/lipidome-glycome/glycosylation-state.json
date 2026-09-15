@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/glycosylation-state@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/glycosylation-state/v0.1",
-  "profile_sha256": "sha256:98acea425acc523ffe31a51f44aadda3e55f36549f8374729d9d84867f01a157",
+  "profile_sha256": "sha256:06a3484176c42b6c15cbaf2904b9f3b8c91aa1474eeca14555c3664f34f6b8b1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -146,11 +146,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

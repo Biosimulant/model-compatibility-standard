@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "phenotype/overall-survival@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/phenotype/overall-survival/v0.1",
-  "profile_sha256": "sha256:a9d100260535564fd4014eaef5b4c3b4f620de7dd1e093c27658c98d24549e08",
+  "profile_sha256": "sha256:eb1ac0003cf0c7f2a9191ba1beac1892fa12af11a4df4a754f69b9f78f2f4b32",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

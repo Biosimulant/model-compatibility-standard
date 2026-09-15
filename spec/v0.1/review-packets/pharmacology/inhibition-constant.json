@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/inhibition-constant@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/inhibition-constant/v0.1",
-  "profile_sha256": "sha256:48d682109065fb99fca3acd9a9cf69c5054c3ce4978ccbf18c6cf0b0372a8182",
+  "profile_sha256": "sha256:4879fc356bf292edfa54e855b44ea6ed1bba31b6c2e4ecd286615f7d2177d07c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -154,11 +154,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

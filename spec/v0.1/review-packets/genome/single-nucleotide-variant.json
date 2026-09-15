@@ -39,6 +39,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.interval_convention",
     "representation.layout",
     "representation.left_normalized",
@@ -146,7 +147,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/single-nucleotide-variant@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/single-nucleotide-variant/v0.1",
-  "profile_sha256": "sha256:0dc2392ce2bc8ef71b7481815f722555155a2d9d698d6ff831f7a15e7ecc302d",
+  "profile_sha256": "sha256:619fa4cc86d783d7960b7ce4f7e1eab27405ea525bcfb49a71040b4a1bf221ef",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -172,11 +173,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

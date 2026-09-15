@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "phenotype/drug-sensitivity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/phenotype/drug-sensitivity/v0.1",
-  "profile_sha256": "sha256:c6f0b3918d551fbdef0f0d75d284579baf9b707f50962d6cc1e838897fc564e6",
+  "profile_sha256": "sha256:468c1a8ca1992b6e950278d369bcb60de6a2271a83937435bd2f5c5cf0c0bbfa",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

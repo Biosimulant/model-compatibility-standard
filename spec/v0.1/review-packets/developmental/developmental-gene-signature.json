@@ -144,7 +144,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/developmental-gene-signature@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/developmental-gene-signature/v0.1",
-  "profile_sha256": "sha256:5c3324a76b5e24279c1699efe615ab6e4b65d1d1929eac83549035835b60d821",
+  "profile_sha256": "sha256:74587c85bb68a90eeb8ee5ce9647ecff64b602ce9316883d764c32802452cfe1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -170,11 +170,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

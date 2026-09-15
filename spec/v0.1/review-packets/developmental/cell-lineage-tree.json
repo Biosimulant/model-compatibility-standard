@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/cell-lineage-tree@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/cell-lineage-tree/v0.1",
-  "profile_sha256": "sha256:0ce69c72663c92787e7489c0f1cbfc67eb56548927b3eab0b986d363aaffb578",
+  "profile_sha256": "sha256:d1f9a03d0ce55951c789f55c8be15a290a66b3b6d27a57a1877413d4e397e67a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -146,11 +146,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

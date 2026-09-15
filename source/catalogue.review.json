@@ -51,7 +51,7 @@
   },
   "counts": {
     "profiles": 650,
-    "item_definitions": 267,
+    "item_definitions": 268,
     "item_packs": 30
   },
   "item_definitions": [
@@ -1372,6 +1372,13 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
+      "path": "representation.implicit_entry",
+      "family": "representation",
+      "value_type": "profile-defined JSON value",
+      "requirement": "profile-dependent",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
+    },
+    {
       "path": "representation.interval_convention",
       "family": "representation",
       "value_type": "profile-defined JSON value",
@@ -2241,7 +2248,8 @@
         "representation.sparsity",
         "representation.canonicalization",
         "representation.precision",
-        "representation.endianness"
+        "representation.endianness",
+        "representation.implicit_entry"
       ]
     },
     {

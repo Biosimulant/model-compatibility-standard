@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/lncrna-expression@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/lncrna-expression/v0.1",
-  "profile_sha256": "sha256:8d3d15dc8f517de36eb32c10813a1946d5e73e9ea5333a4a6d8929d07da194dc",
+  "profile_sha256": "sha256:a5e523fdc0b2f046f7c61c1c3091bda07557fe02f5b12b2b457b27070cc69ed0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -147,11 +147,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

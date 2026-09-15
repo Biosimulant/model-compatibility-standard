@@ -134,7 +134,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/plaque-forming-units@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/plaque-forming-units/v0.1",
-  "profile_sha256": "sha256:79e41c541bd34f2059c176899551933ed23b499865d561fb4d32417a309ca4e0",
+  "profile_sha256": "sha256:45cf737913e50a9c6e4317ed7051c6d90faebee96faf65808eaa733c2ff857e0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -160,11 +160,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

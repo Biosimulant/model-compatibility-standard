@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/organoid-state@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/organoid-state/v0.1",
-  "profile_sha256": "sha256:f86676d9010c5a95eaee41ca69fa4bc9456f70228d270a8f5d526229be483b06",
+  "profile_sha256": "sha256:4c4216381c786c38a668c059094bf5099eb74644f35b3bd82548d3893d72021d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -147,11 +147,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

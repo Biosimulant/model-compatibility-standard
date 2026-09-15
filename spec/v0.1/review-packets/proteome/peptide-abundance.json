@@ -168,7 +168,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/peptide-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/peptide-abundance/v0.1",
-  "profile_sha256": "sha256:300f45b8d97188e03c831b32b39e6a033ad406ae5a360a4c223e6c2230109ee5",
+  "profile_sha256": "sha256:d8990ed06d503abc53537d60a763252a3163f4482bf22413eabe0bf834eee982",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -195,11 +195,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

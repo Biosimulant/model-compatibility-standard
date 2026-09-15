@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/ancestral-state@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/ancestral-state/v0.1",
-  "profile_sha256": "sha256:314b39af5d216ad0b2c44f51f4317b678adf5d8108cf2bce53234a00b60b8cff",
+  "profile_sha256": "sha256:6bcf6c8215e6f307543dc4b1d7306a942687a3f9ac28f74761ec9607a7458f40",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -146,11 +146,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

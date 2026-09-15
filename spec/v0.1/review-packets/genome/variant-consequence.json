@@ -39,6 +39,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.interval_convention",
     "representation.layout",
     "representation.left_normalized",
@@ -146,7 +147,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/variant-consequence@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/variant-consequence/v0.1",
-  "profile_sha256": "sha256:335406bd5cd751798ca564471d66d769a8fb8b8992ad1e24a3335660e5465cb1",
+  "profile_sha256": "sha256:d5df287ad25e0b9c3d0084dd320c4ddc08eb98872b9e8c53bba604f200fbc0b5",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -169,11 +170,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

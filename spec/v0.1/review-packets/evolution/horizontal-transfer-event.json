@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/horizontal-transfer-event@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/horizontal-transfer-event/v0.1",
-  "profile_sha256": "sha256:ab920dc0a2903d867fa5acbaa5dfdb248b3c8c8c3cd87dab1451593e6cf4c7f2",
+  "profile_sha256": "sha256:fe5af3086932270708927d871228e237b03af78455c1e042e3b3ed9e8b14f0b5",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -144,11 +144,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

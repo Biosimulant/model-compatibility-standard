@@ -152,7 +152,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cardiopulmonary-renal/ejection-fraction@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cardiopulmonary-renal/ejection-fraction/v0.1",
-  "profile_sha256": "sha256:2e08f7cffb2b0a6b8c0540f06a16c39992d26ffcda16183c2f915a3e17960a58",
+  "profile_sha256": "sha256:a42df46dc7b70665ad9bc514fc2d443fe7fe2b7308749464e1547724f32920d0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -178,11 +178,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -160,7 +160,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "phenotype/viability-at-dose@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/phenotype/viability-at-dose/v0.1",
-  "profile_sha256": "sha256:3e731ba041198ad68f9eb22dea5c23af77ddd8cd2de930e8827cbd4e9de8f158",
+  "profile_sha256": "sha256:e35fe4ac35d3585eeae86dec0a60b25831346caea2fd89b1d89392984fd847af",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -186,11 +186,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

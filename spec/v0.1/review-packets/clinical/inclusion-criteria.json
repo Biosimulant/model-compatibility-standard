@@ -146,7 +146,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "clinical/inclusion-criteria@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/clinical/inclusion-criteria/v0.1",
-  "profile_sha256": "sha256:8b0a0c4e2dcdc98796ab40c61b49fd18f7c91cc1ebaf5f9b114a546da08cfde3",
+  "profile_sha256": "sha256:2d25fbd1ba667b5ce79e971e2ec15b8bb8f296cc97e2eee9c89ee43c22b4050e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -168,11 +168,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

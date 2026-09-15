@@ -171,7 +171,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/immune-escape-score@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/immune-escape-score/v0.1",
-  "profile_sha256": "sha256:d435b0c6267f86072797c069c89f128467b70efd53bb1c5a554abbf5c4864388",
+  "profile_sha256": "sha256:f643b4fc2608aad6696f47e556325fce15351ad9fb41091e273e763a6c333a0b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -197,11 +197,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -107,6 +107,7 @@ OPERATORS = [
     "mapping-bijective",
     "context-compatible",
     "digest-equal",
+    "representation-equivalent",
 ]
 
 REASON_CODES = {
@@ -536,6 +537,12 @@ def item_json_schema(path: str) -> dict[str, Any]:
     if leaf == "taxonomy_namespace":
         # The registry the taxon labels come from, such as ncbitaxon or gtdb.
         return {"type": "string", "pattern": "^[a-z][a-z0-9.\\-]*$", "maxLength": 64}
+    if leaf == "implicit_entry":
+        # What an entry absent from a sparse encoding means. Re-encoding dense as sparse is lossless
+        # only when both sides agree on this: an unobserved value is not an observed zero (D6).
+        return {"enum": ["observed_zero", "unobserved", "not_applicable"]}
+    if leaf == "sparsity":
+        return {"enum": ["dense", "sparse"]}
     if leaf == "scale":
         # Stevens' level, separated from the value domain and from any transform (decision D8).
         return {"enum": ["nominal", "ordinal", "interval", "ratio", "proportion", "probability", "count"]}
@@ -569,7 +576,14 @@ def allowed_representation_kinds(profile: dict[str, Any]) -> list[str]:
     values: list[str] = []
     for signal_type in profile.get("applies_to", []):
         values.extend(REPRESENTATION_KINDS.get(str(signal_type), []))
-    return list(dict.fromkeys(values)) or ["record"]
+    values = list(dict.fromkeys(values)) or ["record"]
+    # A profile whose reviewed structure declares at least one axis is indexed, so it is not a
+    # scalar (decision D6). Narrowing beyond this needs a per-profile judgement that no reviewed
+    # declaration carries yet, and guessing it from the profile name is what D9 abolished.
+    axes = structured(profile).get("axes")
+    if isinstance(axes, list) and axes and "scalar" in values:
+        values = [value for value in values if value != "scalar"]
+    return values
 
 
 # These operators need a pinned snapshot to decide anything. Without one the engine answers
@@ -935,6 +949,17 @@ def review_questions(profile: dict[str, Any]) -> list[str]:
     return questions
 
 
+def gating_pointer(path: str) -> str:
+    """Where the gating rule for a required field points.
+
+    Almost always the field itself. representation.kind is the exception: conditional equivalence
+    needs to see the sibling fields that would make a re-encoding lossless, so its rule points at the
+    representation object (decision D6).
+    """
+
+    return "/contract/representation" if path == "representation.kind" else item_pointer(path)
+
+
 def internal_quality_errors(profile: dict[str, Any], definition: dict[str, Any]) -> list[str]:
     errors: list[str] = []
     requirements = definition.get("requirements", [])
@@ -948,7 +973,7 @@ def internal_quality_errors(profile: dict[str, Any], definition: dict[str, Any])
         errors.append("representation.kind has no allowed values")
     required_paths = [item["path"] for item in requirements if item.get("level") == "required"]
     gating = [rule for rule in definition.get("comparison_rules", []) if rule.get("missing") != "ignore"]
-    if sorted(rule["target"] for rule in gating) != sorted(item_pointer(path) for path in required_paths):
+    if sorted(rule["target"] for rule in gating) != sorted(gating_pointer(path) for path in required_paths):
         errors.append("each required field must have exactly one comparison rule")
     for requirement in requirements:
         schema = requirement.get("schema", {})
@@ -1260,10 +1285,14 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     )
     plan = simple(
         "resolution-plan", "Resolution Plan",
-        ["schema_version", "standard", "bundle_sha256", "nodes", "edges", "reports", "policy", "approvals", "digest"],
+        ["schema_version", "standard", "bundle_sha256", "technical_status", "nodes", "edges", "reports", "policy", "approvals", "digest"],
         {
             "schema_version": {"const": "0.1"}, "standard": {"const": STANDARD},
             "bundle_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
+            # The status the chain carries. reports[] holds the terminal comparison, which is EXACT
+            # whenever the last adapter lands exactly on the target, so a reader needs this to tell a
+            # lossy chain from an inference one (decision D11).
+            "technical_status": {"enum": STATUSES},
             "nodes": {"type": "array", "items": {"type": "object"}},
             "edges": {"type": "array", "items": {"type": "object"}},
             "reports": {"type": "array", "items": {"type": "object"}},
@@ -1388,9 +1417,9 @@ def build(root: Path) -> None:
     profiles = source["profiles"]
     items = source["item_definitions"]
     packs = source["item_packs"]
-    if (len(profiles), len(items), len(packs)) != (650, 267, 30):
+    if (len(profiles), len(items), len(packs)) != (650, 268, 30):
         raise SystemExit(
-            "source/catalogue.review.json must have 650 profiles, 267 items and 30 packs; "
+            "source/catalogue.review.json must have 650 profiles, 268 items and 30 packs; "
             f"found {len(profiles)}, {len(items)} and {len(packs)}"
         )
     reviews = load_profile_reviews(profiles)
@@ -1469,9 +1498,12 @@ def build(root: Path) -> None:
         ]
         rules = [
             {
-                "source": item_pointer(path),
-                "target": item_pointer(path),
-                "operator": item_index.get(path, {}).get("comparison_operator", "equal"),
+                # representation.kind is compared by conditional equivalence against the whole
+                # representation object, so the operator can see whether the fields that would make
+                # a re-encoding lossless are declared (decision D6).
+                "source": gating_pointer(path),
+                "target": gating_pointer(path),
+                "operator": "representation-equivalent" if path == "representation.kind" else item_index.get(path, {}).get("comparison_operator", "equal"),
                 "missing": "unknown",
                 "severity": "error",
                 "reason_code": reason_code_for(path),

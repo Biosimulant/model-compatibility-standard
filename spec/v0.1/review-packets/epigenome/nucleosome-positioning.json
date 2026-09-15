@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/nucleosome-positioning@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/nucleosome-positioning/v0.1",
-  "profile_sha256": "sha256:1de1359711848b7a4e62eeebe44ee98575888916868aa38de74e0c08ca81b732",
+  "profile_sha256": "sha256:739b2aad9926106bb5d060b4f22390bf776d163a1d674945b1190ea9319f6c4b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -148,11 +148,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

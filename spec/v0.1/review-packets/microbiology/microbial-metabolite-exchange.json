@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/microbial-metabolite-exchange@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/microbial-metabolite-exchange/v0.1",
-  "profile_sha256": "sha256:b12e4239f876090f0a3f47a47ff331b9fcaaa5b194c993a2e4031485e6e6164f",
+  "profile_sha256": "sha256:a012fa41a2f1fb654a0583257efa21a72eb9ef571c12910a12282cfa7bed98ae",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -167,11 +167,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

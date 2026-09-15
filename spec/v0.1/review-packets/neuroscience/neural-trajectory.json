@@ -156,7 +156,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/neural-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/neural-trajectory/v0.1",
-  "profile_sha256": "sha256:9faccdc07bd33d6f57cdeb19f654c7552a8dd228eaf6636faf3d2867fdd02a70",
+  "profile_sha256": "sha256:cae8e78d3c180a34ca94d74d7d00349069653160ea7f42476ec8ae62c5aafa2e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -183,11 +183,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

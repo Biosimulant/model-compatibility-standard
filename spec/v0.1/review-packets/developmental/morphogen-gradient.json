@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/morphogen-gradient@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/morphogen-gradient/v0.1",
-  "profile_sha256": "sha256:01e6ba5dcc1b5fa9c9f7799eb2a08f23e36b7fde01099018c315b293001493ff",
+  "profile_sha256": "sha256:9ff421a683435da4cd3fe4d8040a459ea94a1a6208f60de29ca2c4a2331c0214",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

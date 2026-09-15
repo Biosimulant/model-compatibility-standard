@@ -47,6 +47,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.multigraph",
     "representation.node_schema",
@@ -160,7 +161,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/displacement-field@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/displacement-field/v0.1",
-  "profile_sha256": "sha256:a364d756fbd5c640477d40ac0b60da50770e7c83383b3338053f1eb558e4bd39",
+  "profile_sha256": "sha256:14e38930111a6e8f9c2c3cc7e18930ea7416420a777e4a4f88a5235787197a83",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -187,11 +188,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

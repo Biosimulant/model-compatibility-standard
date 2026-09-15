@@ -48,6 +48,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.interval_convention",
     "representation.layout",
     "representation.left_normalized",
@@ -194,7 +195,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/gene-mutation-vector@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/gene-mutation-vector/v0.1",
-  "profile_sha256": "sha256:4ae11b53c2573f0d6ee1ab0543e7d8d21f7deff6ac9258050c00f4f57f8b7524",
+  "profile_sha256": "sha256:00b3daac906822a4fc0edc8ab11686f497a7f0062facdc83573d5204508f3748",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -221,11 +222,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/cpg-methylation-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/cpg-methylation-profile/v0.1",
-  "profile_sha256": "sha256:82e0bb0268d3b6a9923136b02bc95b1979d51a6a06ed2379d3a23777e2107655",
+  "profile_sha256": "sha256:723775e1b204bb69caf11335b5a138efbbc11d2d7489e341524553e0dc56c473",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

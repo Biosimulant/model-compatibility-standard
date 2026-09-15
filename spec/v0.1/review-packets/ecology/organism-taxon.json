@@ -143,7 +143,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/organism-taxon@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/organism-taxon/v0.1",
-  "profile_sha256": "sha256:41e577b4b7a4570d7abc8811df595b9c2841e774a8194f17f40687668b04f89a",
+  "profile_sha256": "sha256:4f54b2e9f1632ac134526f6250bdc47eaedc341c045253c0c29fbf7d312c6d30",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -169,11 +169,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

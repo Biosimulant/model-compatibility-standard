@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/intracellular-ph@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/intracellular-ph/v0.1",
-  "profile_sha256": "sha256:54096dbcf96bf4e0666845c250f185e5ae4cfb7114b0e98c1c33db8e59200002",
+  "profile_sha256": "sha256:e1c5c6b2e3e1485d7356cb2f5800f978f6ada8f9d9eaa516315dad4b6bb0a5cf",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

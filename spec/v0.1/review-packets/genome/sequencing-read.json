@@ -41,6 +41,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.interval_convention",
     "representation.layout",
     "representation.left_normalized",
@@ -128,7 +129,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/sequencing-read@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/sequencing-read/v0.1",
-  "profile_sha256": "sha256:ba32902f1bf51de06f4d475f2be7d9ce4b12d958f5f1059564688782af2d24df",
+  "profile_sha256": "sha256:752d98f64f250c6a62b01eb17841c1241f8c6a0da6da8b6e65478e1dba07fd27",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -154,11 +155,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

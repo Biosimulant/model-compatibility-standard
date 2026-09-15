@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/operational-taxonomic-unit@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/operational-taxonomic-unit/v0.1",
-  "profile_sha256": "sha256:b780eb968554368d70834f78956704de86446fa885d94709f2f0e327180e1833",
+  "profile_sha256": "sha256:db368a30aed8ae2deaeb1b77b2d81ce19880180d3fa33c991a64071a351310d3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -167,11 +167,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -219,7 +219,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/mri-volume@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/mri-volume/v0.1",
-  "profile_sha256": "sha256:87be060dff1c67aa1ca99c3663ac74db9e29c0ae9e869f1e5e693ab860446e31",
+  "profile_sha256": "sha256:8e926a4cfc8eafc9f5dad8f2026a44d22d4ecb109f165143bcba6d9532680c64",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -246,11 +246,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

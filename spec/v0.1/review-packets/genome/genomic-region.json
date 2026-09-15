@@ -41,6 +41,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.interval_convention",
     "representation.layout",
     "representation.left_normalized",
@@ -128,7 +129,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/genomic-region@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/genomic-region/v0.1",
-  "profile_sha256": "sha256:7ba25d53ac9f9ec58445a9af86a3ce911ff6483788de4ce9f7147cb77fcf88cd",
+  "profile_sha256": "sha256:bc02ddca27a36108a11fb3e6c92d3e49ac23d37c1d07be14f11cc69b6da915b8",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -154,11 +155,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

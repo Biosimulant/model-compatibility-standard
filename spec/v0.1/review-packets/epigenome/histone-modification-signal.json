@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/histone-modification-signal@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/histone-modification-signal/v0.1",
-  "profile_sha256": "sha256:f35e756e041727d176d3bd99a84e204ca5785cd37e3b550b4b10c8b0ba51ed74",
+  "profile_sha256": "sha256:758516ff002a638fe7d72b529629b3bd4b0d38438fc73c0dc227c75c273e8351",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

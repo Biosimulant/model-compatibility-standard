@@ -47,6 +47,42 @@ def _cost(path: tuple[dict[str, Any], ...]) -> tuple[Any, ...]:
     )
 
 
+_POLICY_STRENGTH = {"allow": 0, "approval": 1, "block": 2}
+_PUBLISHED_TO_DECISION = {"allow": "ALLOW", "approval": "APPROVAL_REQUIRED", "block": "BLOCK"}
+_DECISIONS = {"ALLOW", "APPROVAL_REQUIRED", "BLOCK"}
+
+
+def _declared_policy(contract: dict[str, Any] | None, bundle: Bundle) -> dict[str, Any]:
+    """The transformation policy published by the target contract's own profiles.
+
+    Every profile publishes `transformation_policy`, and until now nothing read it: a profile that
+    declared `lossy: block` still produced APPROVAL_REQUIRED, because the only policy consulted was
+    the one a caller passed in by hand (decision D11). Where a contract names several profiles the
+    most restrictive setting wins, since a profile that blocks a path is not overruled by one that
+    permits it.
+    """
+
+    if not isinstance(contract, dict):
+        return {}
+    refs = contract.get("profile_refs")
+    if not isinstance(refs, list):
+        return {}
+    combined: dict[str, Any] = {}
+    for ref in sorted({value for value in refs if isinstance(value, str)}):
+        try:
+            profile = bundle.profile(ref)
+        except Exception:
+            continue
+        policy = profile.get("transformation_policy")
+        if not isinstance(policy, dict):
+            continue
+        for key, value in policy.items():
+            current = combined.get(key)
+            if current is None or _POLICY_STRENGTH.get(str(value), 0) > _POLICY_STRENGTH.get(str(current), 0):
+                combined[key] = value
+    return {key: _PUBLISHED_TO_DECISION.get(str(value), value) for key, value in combined.items()}
+
+
 def _policy_decision(status: str, policy: dict[str, Any]) -> str:
     key = {
         "UNKNOWN": "unknown",
@@ -55,7 +91,9 @@ def _policy_decision(status: str, policy: dict[str, Any]) -> str:
         "LOSSY_CONVERSION_REQUIRES_APPROVAL": "lossy",
         "INFERENCE_MODEL_REQUIRED": "inference",
     }.get(status)
-    if key is not None and key in policy:
+    # Only a value already in the decision vocabulary overrides the default mapping, which is what
+    # the TypeScript engine does. Anything else falls through rather than becoming the decision.
+    if key is not None and str(policy.get(key)) in _DECISIONS:
         return str(policy[key])
     if status in {"EXACT", "DIRECT_COMPATIBLE", "LOSSLESS_CONVERSION_AVAILABLE"}:
         return "ALLOW"
@@ -129,6 +167,10 @@ def _plan(
         "schema_version": "0.1",
         "standard": STANDARD,
         "bundle_sha256": bundle.digest,
+        # The status the chain itself carries. reports[] holds the terminal comparison, which is
+        # EXACT whenever the last adapter lands exactly on the target, so without this a reader
+        # cannot tell a lossy chain from an inference one or from a direct match (decision D11).
+        "technical_status": status,
         "nodes": nodes,
         "edges": edges,
         "reports": [{"digest": terminal_report["digest"], "status": terminal_report["status"]}],
@@ -168,7 +210,8 @@ def resolve_contracts(
     )
     ontology_index = _verified_snapshots(ontology_values)
     mapping_index = _verified_snapshots(mapping_values)
-    active_policy = dict(policy or {})
+    # A policy the caller supplies wins; otherwise use the one the target's profiles publish (D11).
+    active_policy = dict(policy) if policy else _declared_policy(target, active)
     direct = compare_contracts(
         source,
         target,

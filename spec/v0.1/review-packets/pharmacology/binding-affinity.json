@@ -176,7 +176,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/binding-affinity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/binding-affinity/v0.1",
-  "profile_sha256": "sha256:1d9f9836eb829128b0a88979b0f34a1579087b376f5769edbb05d41799fa71e9",
+  "profile_sha256": "sha256:1d619a56c88b4bb119691c5299e1ad44d13fdabe3de233d9dbba468e35dd779f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -202,11 +202,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

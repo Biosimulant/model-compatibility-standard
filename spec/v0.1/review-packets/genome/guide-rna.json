@@ -41,6 +41,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.interval_convention",
     "representation.layout",
     "representation.left_normalized",
@@ -128,7 +129,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/guide-rna@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/guide-rna/v0.1",
-  "profile_sha256": "sha256:de929b375e3366cb8586ae5bc951a56154a73bb50c94265183622af027597085",
+  "profile_sha256": "sha256:b7139a764a7554c3b1e9a93506b0294740f4a8955bf61432a566dd88d6a78263",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -154,11 +155,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

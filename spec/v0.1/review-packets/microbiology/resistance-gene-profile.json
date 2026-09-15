@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/resistance-gene-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/resistance-gene-profile/v0.1",
-  "profile_sha256": "sha256:6e3ddcc353f59b55217a7a55e96a3f048d846d32b71149f7b66838babfd13c80",
+  "profile_sha256": "sha256:771040a6e21c9f1e672610aac28d6710b55241cc7149c3b4f9e242a33cf44d3d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -168,11 +168,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

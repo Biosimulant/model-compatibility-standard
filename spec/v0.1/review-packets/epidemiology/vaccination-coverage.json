@@ -139,7 +139,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/vaccination-coverage@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/vaccination-coverage/v0.1",
-  "profile_sha256": "sha256:d3f2f8dc4d783063e718068fe1ebfa6d899d088576eaef35a9bb7f66d1dab7fa",
+  "profile_sha256": "sha256:f78703cfa12217903db718d4a93b1b96a3bced8fa3c42f78754b625dfbd204a6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -165,11 +165,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

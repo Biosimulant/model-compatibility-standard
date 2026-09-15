@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "phenotype/drug-resistance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/phenotype/drug-resistance/v0.1",
-  "profile_sha256": "sha256:e6f7eabb29fe241da16c051cb0bbb371cfa149f58d34b2463e123c4f3e112b71",
+  "profile_sha256": "sha256:fd027784ab6ba8977e3cd7931f3ecf8979de5299009f3853cece28b2eb813211",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

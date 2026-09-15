@@ -144,7 +144,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/branching-morphogenesis@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/branching-morphogenesis/v0.1",
-  "profile_sha256": "sha256:5d8c5ab4591a9da41f4d7b201cee4d080f98d71043863fba35e5985352c96377",
+  "profile_sha256": "sha256:9e78623cc3022c3cedf4e8b8cd676a7f2d248b7f270559fadb194218a3879477",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -170,11 +170,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

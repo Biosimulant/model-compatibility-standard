@@ -134,7 +134,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/infection-stage@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/infection-stage/v0.1",
-  "profile_sha256": "sha256:30064972809962151d7d6c04668311842058b7fe4b2f889772d710825f48a9a0",
+  "profile_sha256": "sha256:4504f9d2d23f3d8dd16da14106c4b9f9bc75779ef005ab8ae35922c60609ead0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -157,11 +157,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

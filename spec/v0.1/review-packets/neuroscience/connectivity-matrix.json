@@ -184,7 +184,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/connectivity-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/connectivity-matrix/v0.1",
-  "profile_sha256": "sha256:4132458b1fc22455ae54d7d7170642753f1911d037a3b560da00cef96dc88a13",
+  "profile_sha256": "sha256:5963c1f34534165e4400dae80eed53e77228b4805cf5f4308353dc39c763a84c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -211,11 +211,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

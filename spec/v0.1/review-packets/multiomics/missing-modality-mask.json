@@ -130,7 +130,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/missing-modality-mask@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/missing-modality-mask/v0.1",
-  "profile_sha256": "sha256:d9bcc84d26a18ab2bf8d339b53804d0dc9b0763a26874495d8ffacc3bf5b521e",
+  "profile_sha256": "sha256:1c764e5686e1ee90d54de0ee45a30ad03adaa010f58693c2641280a995faa85f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -157,11 +157,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

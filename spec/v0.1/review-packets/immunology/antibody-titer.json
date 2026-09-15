@@ -167,7 +167,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/antibody-titer@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/antibody-titer/v0.1",
-  "profile_sha256": "sha256:7bd003bdd1b87e0139e33e6267466778750b1617c4cd17c5a8b6d0a0d3e85522",
+  "profile_sha256": "sha256:1c75dda466824045947831907d99fee1c7959984c8c4b613f81e0997f678a38c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -193,11 +193,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

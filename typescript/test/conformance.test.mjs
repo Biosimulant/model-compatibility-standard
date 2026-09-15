@@ -8,7 +8,7 @@ import { Bundle, buildCompatibilityLock, canonicalJson, compareContracts, digest
 test("bundle exposes all catalogue entries", () => {
   const bundle = getBundle();
   assert.equal(bundle.catalogue.counts.profiles, 650);
-  assert.equal(bundle.catalogue.counts.item_definitions, 267);
+  assert.equal(bundle.catalogue.counts.item_definitions, 268);
   assert.equal(bundle.catalogue.counts.item_packs, 30);
   bundle.verifyIntegrity();
 });
@@ -20,7 +20,10 @@ test("the full external-review fixture set passes for every profile", () => {
     const cases = Object.fromEntries(fixture.cases.map((entry) => [entry.name, entry]));
     const profile = bundle.profile(fixture.profile_ref);
     const required = profile.requirements.filter((item) => item.level === "required");
-    const expectedCount = 2 + (5 * required.length) + Number(Object.keys(cases).some((name) => name.startsWith("comparison-lossless")));
+    // Count the lossless cases rather than test that any exist: a profile can now carry both a unit
+    // conversion and a representation re-encoding (decision D6).
+    const lossless = Object.keys(cases).filter((name) => name.startsWith("comparison-lossless")).length;
+    const expectedCount = 2 + (5 * required.length) + lossless;
     assert.equal(fixture.cases.length, expectedCount, fixture.profile_ref);
     const positive = cases.positive;
     assert.deepEqual(validateContract(positive.contract, [fixture.profile_ref]), [], fixture.profile_ref);
@@ -169,6 +172,25 @@ test("TypeScript resolver exposes adapters, ambiguity, and revocation", () => {
   assert.equal(ambiguous.resolution, "AMBIGUOUS");
   first.state = "revoked";
   assert.equal(resolveContracts(source, target, [first]).resolution, "UNRESOLVED");
+});
+
+test("a profile's published transformation policy reaches the plan", () => {
+  // Every profile publishes transformation_policy and nothing read it: the only policy consulted was
+  // the one a caller passed in by hand, so a profile's declared approval paths had no effect on any
+  // plan (decision D11).
+  const ref = "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/firing-rate/v0.1";
+  const source = { measurement: { unit: "Hz", scale: "nominal" }, profile_refs: [ref] };
+  const target = { measurement: { unit: "Hz", scale: "ordinal" }, profile_refs: [ref] };
+  const capability = adapter("https://biosimulant.com/adapters/rate-to-ordinal-band/1.0.0", source, target, "lossy");
+  capability.transformation_class = "aggregation";
+  const result = resolveContracts(source, target, [capability]);
+  assert.equal(result.resolution, "RESOLVED");
+  assert.equal(result.plan.technical_status, "LOSSY_CONVERSION_REQUIRES_APPROVAL");
+  // Read from the profile, translated out of the published allow/approval/block vocabulary.
+  assert.equal(result.plan.policy.lossy, "APPROVAL_REQUIRED");
+  assert.equal(result.plan.policy.lossless, "ALLOW");
+  assert.equal(result.plan.policy.decision, "APPROVAL_REQUIRED");
+  assert.deepEqual(validateObject(result.plan, "resolution-plan.schema.json"), []);
 });
 
 test("TypeScript resolver checks preconditions and pins snapshots", () => {

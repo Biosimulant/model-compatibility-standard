@@ -39,6 +39,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.interval_convention",
     "representation.layout",
     "representation.left_normalized",
@@ -146,7 +147,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/gene-presence-absence@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/gene-presence-absence/v0.1",
-  "profile_sha256": "sha256:442d982d8ce4fa459c070f1f398465185c7e73a5a7a50019f8926cb3da92e434",
+  "profile_sha256": "sha256:2a1e2b0e4bdd601dbb19ee47dad8636f057b26a10c1db55d7a10bb953a7f7dc7",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -172,11 +173,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

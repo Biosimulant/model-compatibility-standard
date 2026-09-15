@@ -47,6 +47,7 @@
     "representation.feature_space",
     "representation.formal_charge",
     "representation.hydrogen_policy",
+    "representation.implicit_entry",
     "representation.isotope_state",
     "representation.layout",
     "representation.ordering",
@@ -111,7 +112,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/pharmacophore-fingerprint@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/pharmacophore-fingerprint/v0.1",
-  "profile_sha256": "sha256:0f58291d01f4e1d5f80d19a463238ab465eea74928fc354d221c6a15b245c186",
+  "profile_sha256": "sha256:9984f8dcf835823b8483c635af4b76f160cb019ec26b66d6d2f8e671fd2365aa",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -137,11 +138,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "ignore",

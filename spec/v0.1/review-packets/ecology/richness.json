@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/richness@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/richness/v0.1",
-  "profile_sha256": "sha256:c5e8f37832a7dcea48c3ce5f866484b59967c3d9b096c7d4b2dacc0b0ec31296",
+  "profile_sha256": "sha256:3cb560e941b0675ffe3df7796559dab884b5e516e244419c4c60d2f70f29f3f8",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -167,7 +167,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/multiomics-sample-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/multiomics-sample-map/v0.1",
-  "profile_sha256": "sha256:51de7a67b56de055443105c353cc043979e98be92e14cac787691fa328f9e880",
+  "profile_sha256": "sha256:d3c03c8331682a1d72066c94c643d383e91aba734f80f8192baf1d87fc89e11e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -194,11 +194,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

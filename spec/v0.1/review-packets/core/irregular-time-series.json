@@ -12,6 +12,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.precision",
     "representation.sparsity",
@@ -159,11 +160,10 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "core/irregular-time-series@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/core/irregular-time-series/v0.1",
-  "profile_sha256": "sha256:30b9d6aa22617ab7b7fd328300d6e47a2b332d9648413953301e58aa6fb4c709",
+  "profile_sha256": "sha256:ebde243b511d2c9e296fdc42bbda318174eb5f12f1525e85a68b9265556ceb56",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
-        "scalar",
         "dense_vector",
         "sparse_vector",
         "matrix",
@@ -185,11 +185,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",
@@ -370,7 +370,6 @@
       "path": "representation.kind",
       "schema": {
         "enum": [
-          "scalar",
           "dense_vector",
           "sparse_vector",
           "matrix",

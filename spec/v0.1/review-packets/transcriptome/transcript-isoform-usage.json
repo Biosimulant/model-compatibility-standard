@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/transcript-isoform-usage@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/transcript-isoform-usage/v0.1",
-  "profile_sha256": "sha256:0e6db8fb5e1ba79a38c9a7b770d485edfc199a108c6a3300a992ba1241bca4c8",
+  "profile_sha256": "sha256:6b4a2941eceb4c1831038fa4baff2ecfbb0808f3e13527392b586b5bc8aaf340",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -147,11 +147,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

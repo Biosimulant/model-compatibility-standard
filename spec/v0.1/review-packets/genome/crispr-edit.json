@@ -41,6 +41,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.interval_convention",
     "representation.layout",
     "representation.left_normalized",
@@ -128,7 +129,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/crispr-edit@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/crispr-edit/v0.1",
-  "profile_sha256": "sha256:0595caaaa68db4c8eb9116016f69ef52fc6a37466309dc814b07393638272735",
+  "profile_sha256": "sha256:b19bc03ea0ed2598f0fb0fd1b1ec1b2735fcce8b8a87957d4b5ac727fa911a8a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

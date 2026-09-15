@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/antimicrobial-susceptibility@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/antimicrobial-susceptibility/v0.1",
-  "profile_sha256": "sha256:801027a1a6096fe23229811a46dd99b605cbc58fef6938f6995d6a02ffa9f0f1",
+  "profile_sha256": "sha256:bff8cb145365ff73bcfdbe7adf3e339e00e1175a6c0580dd248674f2ad91b532",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

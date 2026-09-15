@@ -127,7 +127,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/sleep-stage@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/sleep-stage/v0.1",
-  "profile_sha256": "sha256:b4bc65c4ca84d81142c2dcb019b2a8cf67ce9abb490a19ffdec752c4ecdeb596",
+  "profile_sha256": "sha256:5a2db9586d44e2481ddd5a252cbbbd77ad8c3f5e43f53a8e5e7e5b01e8d7c9c7",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

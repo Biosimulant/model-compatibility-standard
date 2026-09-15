@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/energy-charge@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/energy-charge/v0.1",
-  "profile_sha256": "sha256:a05f28d6fa801410516fe489f0775b735cb3fee1e5e315b0465699b493561895",
+  "profile_sha256": "sha256:05c60aa14522750bcda59d4bb7d4855adbfd301d214f2a4c31acc4c8c07cd9b8",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

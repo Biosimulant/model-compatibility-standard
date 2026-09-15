@@ -130,7 +130,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/latent-factor@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/latent-factor/v0.1",
-  "profile_sha256": "sha256:b25a6de271a5dbc212772cd47510ff76e2e0a0e22a7cf3eb128df9b012c701aa",
+  "profile_sha256": "sha256:6796e298c9354db9b4e57a36117b9ba2e8f8c342ca8dde2cdce05ba0165f14a2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -156,11 +156,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

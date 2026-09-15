@@ -164,7 +164,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/glomerular-filtration-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/glomerular-filtration-rate/v0.1",
-  "profile_sha256": "sha256:d7f54ff23a550b7d55459767b27c7e5b64a8f72b918a462b43a6bfb89d793331",
+  "profile_sha256": "sha256:534a908ac6931f5a5a366c7e6087b02a126c88a18eb04c273533ecdc0e3f89a5",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -190,11 +190,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/activation-marker@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/activation-marker/v0.1",
-  "profile_sha256": "sha256:441d6350f3dd78042527e134779e5eddbe037fbc01dd628c9e08d02f6b5d0201",
+  "profile_sha256": "sha256:21a931eae16c033e5c62f92be208a90c8ccc295f198a376a2b443906e408456f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -147,11 +147,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

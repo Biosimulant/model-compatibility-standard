@@ -176,7 +176,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/firing-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/firing-rate/v0.1",
-  "profile_sha256": "sha256:eb5067ada7a7c2623210228ca43285218cac095ddc8842ed81872f93016ac81c",
+  "profile_sha256": "sha256:651c74108f29bae638f162d6bbe7eda6c1293e45d7ca684daf41dd1f0c936e52",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -202,11 +202,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

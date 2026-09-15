@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "phenotype/adverse-event@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/phenotype/adverse-event/v0.1",
-  "profile_sha256": "sha256:fda4da9a8bcf60b174aa1723f857e9182d7da722557493da4bd09fa910b2b312",
+  "profile_sha256": "sha256:dcbac9316ef8606b35ce593ae75e710f29d4e257facd1a52ef72a39d0f75c247",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -144,11 +144,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

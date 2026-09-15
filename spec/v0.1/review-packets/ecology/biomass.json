@@ -164,7 +164,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/biomass@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/biomass/v0.1",
-  "profile_sha256": "sha256:95e51cc42670de3ac55690c4a0f3722b454604b10099a741d093a22e6bb3e994",
+  "profile_sha256": "sha256:f93dbd473c3f46f5d4c04eb4414a49f39ccfbe64ba597256b88d414e414d0d61",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -190,11 +190,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

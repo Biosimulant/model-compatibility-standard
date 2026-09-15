@@ -179,7 +179,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/infectious-titer@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/infectious-titer/v0.1",
-  "profile_sha256": "sha256:2338bba90450539763e2dc76923be2144c6b0d566e33bffc76a00b51af64b2ff",
+  "profile_sha256": "sha256:2aa1a2658a9cce2c19accbcdbc8ca8157ef6e56c3e2a2aee824047a1ab9d2f9d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -205,11 +205,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

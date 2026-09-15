@@ -205,6 +205,7 @@
     "BMCS_REPRESENTATION_FEATURE_SPACE_MISMATCH": "The value at representation.feature_space is incompatible with the target profile.",
     "BMCS_REPRESENTATION_FORMAL_CHARGE_MISMATCH": "The value at representation.formal_charge is incompatible with the target profile.",
     "BMCS_REPRESENTATION_HYDROGEN_POLICY_MISMATCH": "The value at representation.hydrogen_policy is incompatible with the target profile.",
+    "BMCS_REPRESENTATION_IMPLICIT_ENTRY_MISMATCH": "The value at representation.implicit_entry is incompatible with the target profile.",
     "BMCS_REPRESENTATION_INTERVAL_CONVENTION_MISMATCH": "The value at representation.interval_convention is incompatible with the target profile.",
     "BMCS_REPRESENTATION_ISOTOPE_STATE_MISMATCH": "The value at representation.isotope_state is incompatible with the target profile.",
     "BMCS_REPRESENTATION_KIND_MISMATCH": "The value at representation.kind is incompatible with the target profile.",

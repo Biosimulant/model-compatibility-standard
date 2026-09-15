@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/host-microbe-interaction@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/host-microbe-interaction/v0.1",
-  "profile_sha256": "sha256:fb1b11db6aa0fb1d471857b40d01f4364595c656a9b2e1ac5aed0d2f3dd1018c",
+  "profile_sha256": "sha256:44db5cc8dfe8225829afb1817c03be55573b98d8a640f7a581f5775ca3c69550",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

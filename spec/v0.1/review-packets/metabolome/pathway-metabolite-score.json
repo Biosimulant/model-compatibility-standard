@@ -179,7 +179,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/pathway-metabolite-score@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/pathway-metabolite-score/v0.1",
-  "profile_sha256": "sha256:41c0b47aa29a3b23a723e54ee60090c3fcc124673bb10d1290ef25546f507700",
+  "profile_sha256": "sha256:2a570e1bd20502e0fd64a61e6d561edeb6e315050ff688a7b7dda540f4fc4d16",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -205,11 +205,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

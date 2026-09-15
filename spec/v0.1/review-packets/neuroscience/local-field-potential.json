@@ -174,7 +174,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/local-field-potential@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/local-field-potential/v0.1",
-  "profile_sha256": "sha256:67a2bf6f8d3a4c8f9a1e9c6b87ef0de375d216f6f72e349db2e3bd6605361719",
+  "profile_sha256": "sha256:dd6075a35482a41088c8df145613d626b9880c6a048bf1582ee23eed75bdfb1d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -201,11 +201,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/immune-infiltration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/immune-infiltration/v0.1",
-  "profile_sha256": "sha256:2df9f958cbbaaa42f7d3ea64c42ead389c20a38f73ecfb0658c0b7b5e3f58343",
+  "profile_sha256": "sha256:908d25491bfa9c3c3d11bddb709e4d5f677b065d37641b26479d0454a2b6c936",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -147,11 +147,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

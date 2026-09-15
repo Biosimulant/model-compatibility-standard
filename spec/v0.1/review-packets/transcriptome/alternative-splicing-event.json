@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/alternative-splicing-event@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/alternative-splicing-event/v0.1",
-  "profile_sha256": "sha256:b46c8ff9ded55c6f06d4eca3c79225b812903fde0cec2fad3685fc8d75cf9e52",
+  "profile_sha256": "sha256:33675046dfba9d6896d03ec82ebf333e5c3129ed9ca209c821dba2ad1cffd086",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -142,11 +142,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

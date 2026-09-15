@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/receptor-occupancy@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/receptor-occupancy/v0.1",
-  "profile_sha256": "sha256:1edbbdaf4ce5e877f2250a711a934eb0b746b0599d48ce08bf9ed32a2e7bbd33",
+  "profile_sha256": "sha256:f45f0477844eefedaf078eb0362e51f837288ddfa19e7b83b4c536db88e0f20a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -154,11 +154,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

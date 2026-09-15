@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/nutrient-cycle@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/nutrient-cycle/v0.1",
-  "profile_sha256": "sha256:da18399547ba15138306522b868255d046e708146a7d77a10f8c3401a5cca64e",
+  "profile_sha256": "sha256:cb74e840e138e4a552f3b3126ef80338e53a79c65d0de73002c7df6d8a02ba25",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

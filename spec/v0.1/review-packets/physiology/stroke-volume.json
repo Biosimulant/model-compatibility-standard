@@ -164,7 +164,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/stroke-volume@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/stroke-volume/v0.1",
-  "profile_sha256": "sha256:d135242b8366d374335ebd0574a4ca7462a886fff0c0ffd8832436ef0dd9704a",
+  "profile_sha256": "sha256:95de1c07bd546b66b76d6fc3c9185262ebaa2880ba5b70a7cedb28d7aab39269",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -186,11 +186,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

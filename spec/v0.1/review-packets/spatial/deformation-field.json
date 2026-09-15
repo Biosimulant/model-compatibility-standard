@@ -47,6 +47,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.multigraph",
     "representation.node_schema",
@@ -160,7 +161,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/deformation-field@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/deformation-field/v0.1",
-  "profile_sha256": "sha256:36ebb966fc8cb8bfe4430fcc2f27f2007ef7ebab714cf1d2290fc73acf987364",
+  "profile_sha256": "sha256:5925e8f13d29011313c07f77d709af6c22c6c9f0e2b2962aed218ce8ef8fa04d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -187,11 +188,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

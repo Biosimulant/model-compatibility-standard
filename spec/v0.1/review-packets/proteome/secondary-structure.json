@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/secondary-structure@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/secondary-structure/v0.1",
-  "profile_sha256": "sha256:e12eff56ad63fac0303cb313353d73a2518646d4af4d33befbbb6c76d7a95cfe",
+  "profile_sha256": "sha256:51cb178bd06d4785d5801caf72090ed7295e0363301152a9620c00bef9f4731f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

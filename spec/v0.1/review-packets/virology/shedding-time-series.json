@@ -199,11 +199,10 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/shedding-time-series@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/shedding-time-series/v0.1",
-  "profile_sha256": "sha256:22aaa59dc315c1a6ea97ab5b51674ba8642f536ab9567c1ac6cf9ec2a0c704c4",
+  "profile_sha256": "sha256:8087f3ba107437761d26a74b3de443e9e09871485ee02bf75580ac4e9114a2ee",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
-        "scalar",
         "dense_vector",
         "sparse_vector",
         "matrix",
@@ -225,11 +224,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",
@@ -410,7 +409,6 @@
       "path": "representation.kind",
       "schema": {
         "enum": [
-          "scalar",
           "dense_vector",
           "sparse_vector",
           "matrix",

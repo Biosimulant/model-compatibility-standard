@@ -177,7 +177,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/mobility-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/mobility-matrix/v0.1",
-  "profile_sha256": "sha256:3aa343a902908ce941cdcaee2af2875d3ba4ff8a74e3824b2cb6bae3f26ed4fa",
+  "profile_sha256": "sha256:8f73f740c54c8db144e462761e3cc79ef1fe5db6eb2e2f00c7b5a411127cd0cc",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -204,11 +204,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

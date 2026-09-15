@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/segmentation-mask@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/segmentation-mask/v0.1",
-  "profile_sha256": "sha256:f852fc7b0b6cdbc7122c4a9d623f791f0f63a079b743f1d127fa4f34308a1f7d",
+  "profile_sha256": "sha256:718b5a3a06daee77ca35a7694291e9c707daf77e28186cbeb6b87fee80e1fa2a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

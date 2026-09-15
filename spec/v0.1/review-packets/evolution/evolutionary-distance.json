@@ -162,7 +162,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/evolutionary-distance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/evolutionary-distance/v0.1",
-  "profile_sha256": "sha256:4db298f344f5da73cc7ea8441475d2c9277c937a5e4fe2c67777ee064f906ee6",
+  "profile_sha256": "sha256:ac5c4d32ec37b53224f2a01f20dae174ad77ffbb04236a8ec9c4da9e0405b101",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -188,11 +188,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/transcription-factor-binding@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/transcription-factor-binding/v0.1",
-  "profile_sha256": "sha256:05184b763d21958cb56a71b917be0c06babaf534129f82fe2e3c151ae31c460d",
+  "profile_sha256": "sha256:39a5e7a45e3df01046a562662d45013945a3e1d1fe8d4f68296ed9c303e31096",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -148,11 +148,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

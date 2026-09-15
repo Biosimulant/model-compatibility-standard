@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/fate-transition@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/fate-transition/v0.1",
-  "profile_sha256": "sha256:01364ef574367d3b4c78f4aa144f61efabe0a78a33b60c619a4f1b1a3325980e",
+  "profile_sha256": "sha256:29954c0ebafa43b9c24956ace9474e8df7c49a2fa92fcb59209e9c84278b5b84",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -145,11 +145,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

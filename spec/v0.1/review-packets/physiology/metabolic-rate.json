@@ -164,7 +164,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/metabolic-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/metabolic-rate/v0.1",
-  "profile_sha256": "sha256:8c881b770c93097c6ca9f6f4975e1e9a134e2dd23a1b567ada1ade62c45caa5a",
+  "profile_sha256": "sha256:40e1e7558321d1132022ca20e07bfb0793b8b6207549238d52ee9821c1d52822",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -190,11 +190,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

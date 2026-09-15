@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/age-equivalent@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/age-equivalent/v0.1",
-  "profile_sha256": "sha256:db1ad249a7218f72ae72a72d1eb215a2bb2d33be70b178d1e2a1c8a0b1af02f9",
+  "profile_sha256": "sha256:5df530d1e6e63f35fa795efabc8c244856bfa10cfb9068ea26fc70c86d577e69",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

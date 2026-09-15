@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/phosphorylation-site-state@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/phosphorylation-site-state/v0.1",
-  "profile_sha256": "sha256:995ba1c19f261d3168619b54eda907b46dd989822510a9a2e74f5eb9625b8191",
+  "profile_sha256": "sha256:c2b73464641b6cec7cfc6dc94f62ed2d11c0c4076d5571e07b729e50b450d41b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -146,11 +146,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

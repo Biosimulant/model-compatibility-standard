@@ -167,7 +167,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/fold-change-vector@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/fold-change-vector/v0.1",
-  "profile_sha256": "sha256:a7605e2bae3a8516f2763d8bac552766ca8353aef8f20bdc727dee27dda95615",
+  "profile_sha256": "sha256:96834b43ffe3f9c0da3808194df94d4b357775c777c7d5c6b1f12d9224c6ad0c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -194,11 +194,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

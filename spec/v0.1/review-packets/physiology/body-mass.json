@@ -154,7 +154,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/body-mass@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/body-mass/v0.1",
-  "profile_sha256": "sha256:023a893e2707023a99e8af32557d274585bd9ad597ec1054c4b07070b8f5ac41",
+  "profile_sha256": "sha256:12fb599285109908af9f12823f8edf40a7eb208e1cebd7cbea75e7c529caebbd",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -180,11 +180,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

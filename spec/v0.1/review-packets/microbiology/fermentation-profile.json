@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/fermentation-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/fermentation-profile/v0.1",
-  "profile_sha256": "sha256:a21e2c8cea2e5c04ab0d2ae2b24f2e07671cd7e0e6500d0e0ec8a5e4cf2e1e2b",
+  "profile_sha256": "sha256:cb13a3bbf8380b8ac3362451ebf4588d02f83927dd5c59ab27abb214ac547796",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

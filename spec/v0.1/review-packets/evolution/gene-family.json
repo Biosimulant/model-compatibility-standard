@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/gene-family@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/gene-family/v0.1",
-  "profile_sha256": "sha256:29582dec1129a3530d1a508d34b59bea97f29dd80899997e96c78fb16e63f290",
+  "profile_sha256": "sha256:e7442dcce6ed381c8a89e43a5d8272af1888e70f30d7956d4859fc5ad03146a9",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -167,11 +167,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

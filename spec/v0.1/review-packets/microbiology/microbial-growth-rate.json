@@ -160,7 +160,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/microbial-growth-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/microbial-growth-rate/v0.1",
-  "profile_sha256": "sha256:cfd0c11e4862993478156ee4d570ff191499e84bbb6076922d30ede8b6585dc1",
+  "profile_sha256": "sha256:08bf0e5c6218b424196875a88c1e600d0ff5dce0cb22a24a5f6c5fa99371e7c3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -186,11 +186,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

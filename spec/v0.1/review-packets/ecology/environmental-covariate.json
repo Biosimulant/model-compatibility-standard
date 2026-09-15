@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/environmental-covariate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/environmental-covariate/v0.1",
-  "profile_sha256": "sha256:d4838a892c6a7e4d1bfbcde0d06e1159c8df2fbbd479930404a97b279d209cfb",
+  "profile_sha256": "sha256:b0a8d47904933cbb8c6bf613ad7b92e24d44d8db069aad6a4a950c4b6cbd8384",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/blood-glucose@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/blood-glucose/v0.1",
-  "profile_sha256": "sha256:c1ff1bb2499d9619431a2b2154eab3e74cc7728d41b132885d3269d8b8360b19",
+  "profile_sha256": "sha256:90c8a837df3a5da84bafa085d2775010ad499847d433a83f101261edea674861",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

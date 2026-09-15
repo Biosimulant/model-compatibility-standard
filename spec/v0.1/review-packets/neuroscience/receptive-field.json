@@ -156,7 +156,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/receptive-field@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/receptive-field/v0.1",
-  "profile_sha256": "sha256:04df016f2acfae86bab601cf9f32a6c9c58215c72c2e3d93ab00f7cfdc5d44bf",
+  "profile_sha256": "sha256:d188f3bcf0e7d50f31f5b399fbd9db42a79f58afde35fdb5e36277f6babd3308",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -183,11 +183,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

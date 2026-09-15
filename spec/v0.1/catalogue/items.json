@@ -2958,6 +2958,23 @@
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
+        "enum": [
+          "observed_zero",
+          "unobserved",
+          "not_applicable"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.implicit_entry",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
+      "comparison_operator": "equal",
+      "family": "representation",
+      "json_schema": {
         "maxLength": 4096,
         "minLength": 1,
         "type": "string"
@@ -3222,9 +3239,10 @@
       "comparison_operator": "equal",
       "family": "representation",
       "json_schema": {
-        "maxLength": 4096,
-        "minLength": 1,
-        "type": "string"
+        "enum": [
+          "dense",
+          "sparse"
+        ]
       },
       "missing_behavior": "unknown",
       "ordered": true,

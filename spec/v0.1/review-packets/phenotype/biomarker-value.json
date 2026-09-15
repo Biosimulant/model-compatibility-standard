@@ -169,7 +169,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "phenotype/biomarker-value@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/phenotype/biomarker-value/v0.1",
-  "profile_sha256": "sha256:7dbf630aa7131f57940487f5df0a665f267f92c9391d64f9548a1e50d1c25964",
+  "profile_sha256": "sha256:f2cb42e993ee47f4f0378a877b495a43e81adc73e61773290ca0ffcc3adf9c00",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -195,11 +195,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

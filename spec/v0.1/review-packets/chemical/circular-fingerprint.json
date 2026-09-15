@@ -47,6 +47,7 @@
     "representation.feature_space",
     "representation.formal_charge",
     "representation.hydrogen_policy",
+    "representation.implicit_entry",
     "representation.isotope_state",
     "representation.layout",
     "representation.ordering",
@@ -111,7 +112,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/circular-fingerprint@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/circular-fingerprint/v0.1",
-  "profile_sha256": "sha256:fbc6ef5a64bf331e4e1461793596161c5b168edb4670514c78bde39ae5bf32db",
+  "profile_sha256": "sha256:a72b43f9ed39b53fc89d0a9c8d1d0a66999c6cc0ce8f49c544f40d650c289238",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -137,11 +138,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "ignore",

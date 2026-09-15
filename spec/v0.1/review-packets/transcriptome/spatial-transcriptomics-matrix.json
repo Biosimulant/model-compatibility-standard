@@ -158,7 +158,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/spatial-transcriptomics-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/spatial-transcriptomics-matrix/v0.1",
-  "profile_sha256": "sha256:03713a4c5793158d83a8a678f2cf0492633c9fdf9831996b0a6dd501fa9c4e66",
+  "profile_sha256": "sha256:10bfbab07b2e89ba6c93b346d94b6ca1a0f8da95a5dc745d8652e7250475b7c3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -185,11 +185,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

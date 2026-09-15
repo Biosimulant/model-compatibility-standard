@@ -147,7 +147,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/neuron-identity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/neuron-identity/v0.1",
-  "profile_sha256": "sha256:6a439f8a185b1f5f35f433ba91f07e65eaefa1d1698de039aa36d440c6ece617",
+  "profile_sha256": "sha256:fd8f58509ce2858b7b3f3c869666901cae8a419f49678149bc7ce86f01066f20",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -170,11 +170,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

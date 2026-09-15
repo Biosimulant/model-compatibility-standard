@@ -220,7 +220,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/dose-response-curve@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/dose-response-curve/v0.1",
-  "profile_sha256": "sha256:7fe76a128b0b483dd1c6b5f157cca116783a796a115e12f3cdc7ec4b6549d674",
+  "profile_sha256": "sha256:e78768321bc9ae7c34e891161d6a18443dc43b274101f77ea439b64beab1ac57",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -247,11 +247,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

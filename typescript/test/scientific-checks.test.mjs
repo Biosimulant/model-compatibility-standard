@@ -11,7 +11,7 @@ import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import test from "node:test";
 
-import { compareContracts, normalizeContract, validateContract } from "../dist/index.js";
+import { compareContracts, normalizeContract, resolveContracts, validateContract } from "../dist/index.js";
 import { parseUnit, UnitError } from "../dist/units.js";
 
 const ROOT = fileURLToPath(new URL("../../", import.meta.url));
@@ -107,6 +107,29 @@ function violations(entry) {
   } else if (entry.check === "validate") {
     const errors = validateContract(contractFor(entry, "source"), [ref(entry.profile)]).filter((item) => item.severity === "error");
     if (expect.error_findings === "at-least-one" && errors.length === 0) found.push("contract validated with no error finding");
+  } else if (entry.check === "resolve") {
+    // The lossy and inference statuses are produced by the resolution layer, not by comparison, so a
+    // case that exercises an approval path has to plan a capability chain (decision D11).
+    const source = contractFor(entry, "source");
+    const target = contractFor(entry, "target");
+    const capabilities = (entry.capabilities ?? []).map((capability) => {
+      const filled = structuredClone(capability);
+      for (const side of ["source", "target"]) {
+        if (filled[side] === "$source") filled[side] = structuredClone(source);
+        else if (filled[side] === "$target") filled[side] = structuredClone(target);
+      }
+      return filled;
+    });
+    const result = resolveContracts(source, target, capabilities);
+    const plan = result.plan ?? {};
+    // The chain's own status, not the terminal comparison: reports[] is EXACT whenever the last
+    // adapter lands exactly on the target, which would make an approval-path case vacuous.
+    const status = plan.technical_status;
+    const decision = (plan.policy ?? {}).decision;
+    if ("resolution" in expect && result.resolution !== expect.resolution) found.push(`resolution ${result.resolution}, expected ${expect.resolution}`);
+    if ("plan_status" in expect && status !== expect.plan_status) found.push(`plan status ${status}, expected ${expect.plan_status}`);
+    if ("policy_decision" in expect && decision !== expect.policy_decision) found.push(`policy decision ${decision}, expected ${expect.policy_decision}`);
+    if ("policy_decision_not" in expect && decision === expect.policy_decision_not) found.push(`policy decision ${decision} ${NOT_A_MATCH}`);
   } else if (entry.check === "fixture-invariant") {
     const list = offenders(entry.invariant);
     if (list.length) found.push(`${list.length} offending profiles, e.g. ${list.slice(0, 3).join("; ")}`);
@@ -139,7 +162,7 @@ test("scientific case file is well formed", () => {
   assert.equal(new Set(ids).size, ids.length);
   for (const entry of SUITE.cases) {
     assert.ok(["defect", "guard"].includes(entry.kind), entry.id);
-    assert.ok(["compare", "validate", "fixture-invariant"].includes(entry.check), entry.id);
+    assert.ok(["compare", "validate", "fixture-invariant", "resolve"].includes(entry.check), entry.id);
     for (const key of ["title", "why", "conditions", "decision", "expect", "report_finding"]) assert.ok(entry[key], `${entry.id}: ${key}`);
     if (entry.kind === "defect") assert.ok(entry.observed_at_review, entry.id);
   }

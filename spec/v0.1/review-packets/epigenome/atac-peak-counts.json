@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/atac-peak-counts@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/atac-peak-counts/v0.1",
-  "profile_sha256": "sha256:15b604e03ad3d39fe5c3223f1e89d8e2cc6df47c00933dbff1d3faec6e47ad10",
+  "profile_sha256": "sha256:ea7dd63c347d397f90afcb413e796cccea5780061e59240a4b3bab5739f585ff",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

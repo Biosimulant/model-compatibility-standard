@@ -160,7 +160,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/body-temperature@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/body-temperature/v0.1",
-  "profile_sha256": "sha256:779373de3069b7b9afb911e09404ed3807b02442c2393846fbfffbc8735d621c",
+  "profile_sha256": "sha256:2657ae892a94b454a3f00910a7f4c721f399686e7d2766e79c9782857fd492e6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -186,11 +186,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -49,6 +49,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.layout",
     "representation.multigraph",
     "representation.node_schema",
@@ -185,7 +186,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/distance-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/distance-matrix/v0.1",
-  "profile_sha256": "sha256:685ee352060f7813c5427a10f91e8b082a37bb43f1afa03410815d6136ed92cd",
+  "profile_sha256": "sha256:77345c42e3ffd6ef66a8dc8750f9af1923969aa075ab67494b3398d5e117c088",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -212,11 +213,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

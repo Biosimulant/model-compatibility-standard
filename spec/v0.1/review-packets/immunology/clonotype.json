@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/clonotype@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/clonotype/v0.1",
-  "profile_sha256": "sha256:551df380bc622046d28bc8097e6e884614e44c6131857af16ace3e781cddc951",
+  "profile_sha256": "sha256:9a1e83902039fb9f25f0e1ba1cb4890ef2d0761121fd45b192dd22f7c9704133",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -144,11 +144,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -47,6 +47,7 @@
     "representation.feature_space",
     "representation.formal_charge",
     "representation.hydrogen_policy",
+    "representation.implicit_entry",
     "representation.isotope_state",
     "representation.layout",
     "representation.ordering",
@@ -111,7 +112,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/molecular-formula@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/molecular-formula/v0.1",
-  "profile_sha256": "sha256:7ba08a6bbf3fba17c05f6ade2c803d7f6edbc27725fc4cc434caa1b6ca2ab3b2",
+  "profile_sha256": "sha256:db79405ef97ee25537e7602b5e9a32fae5382473def98e977d46b118c1436ec7",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -137,11 +138,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "ignore",

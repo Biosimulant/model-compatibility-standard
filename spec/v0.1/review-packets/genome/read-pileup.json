@@ -41,6 +41,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.interval_convention",
     "representation.layout",
     "representation.left_normalized",
@@ -128,7 +129,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/read-pileup@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/read-pileup/v0.1",
-  "profile_sha256": "sha256:cfb69327f37a45b11ad102bc0748535dd4eb0d66a8156dac87e4d0b8e991b579",
+  "profile_sha256": "sha256:f55e800a67b3ce716d2dc610586c8acb9c3300962a2abfbd22da3fb51cfac300",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -154,11 +155,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -159,7 +159,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "phenotype/survival-fraction@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/phenotype/survival-fraction/v0.1",
-  "profile_sha256": "sha256:7bd56d1a20d4bcf3b8fbc543b60d909c15c9c627a7b3a1ad0bd5f78a490725b5",
+  "profile_sha256": "sha256:1f1cc0b6d01529c3bc12ee998f2c073731ce6f73485375c05e9f15bb05e386de",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -185,11 +185,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

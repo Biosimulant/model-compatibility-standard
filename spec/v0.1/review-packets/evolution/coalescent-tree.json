@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/coalescent-tree@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/coalescent-tree/v0.1",
-  "profile_sha256": "sha256:6d183b2b24ff07252a707815eac780772db1f80fe1e33e0e520ede56148b33eb",
+  "profile_sha256": "sha256:d92e6e70b3bf41b0f3a7ca55de594af37d00071b073d40ad16262802f1dc25fa",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -145,11 +145,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

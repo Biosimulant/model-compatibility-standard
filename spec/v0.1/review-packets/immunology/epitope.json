@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/epitope@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/epitope/v0.1",
-  "profile_sha256": "sha256:46068465b4bd0daf72ca69e5419e0a3e36a96e9fa2164056564b358949b1c9c1",
+  "profile_sha256": "sha256:7b4238deae39e220f3dbee1b789833d4a25834564794572b52a253ead840e295",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -147,11 +147,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

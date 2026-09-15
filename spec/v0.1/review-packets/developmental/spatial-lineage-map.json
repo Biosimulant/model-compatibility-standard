@@ -162,7 +162,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/spatial-lineage-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/spatial-lineage-map/v0.1",
-  "profile_sha256": "sha256:da6f81f3d6ec4448fe93b2f90619608933c7cc6f4281deb1c8d201ec4f29ab30",
+  "profile_sha256": "sha256:c3b896d6f35ed4f0854c56e1cb44c7d709df1389d3dba89122a4de3744440e17",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -189,11 +189,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

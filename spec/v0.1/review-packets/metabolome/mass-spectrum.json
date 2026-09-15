@@ -151,7 +151,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/mass-spectrum@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/mass-spectrum/v0.1",
-  "profile_sha256": "sha256:e541fc5576e32cdbedae391c6649674d46bbe613c0c3fe7336dc87cee2ec5f21",
+  "profile_sha256": "sha256:f90d5ea7f486e7253db4f034645a57caac8fb4609b66c4cb63cd19d38f5c3780",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -178,11 +178,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

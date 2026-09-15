@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/metagenomic-counts@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/metagenomic-counts/v0.1",
-  "profile_sha256": "sha256:53ac9b2dd1ce9604d86a6f41120013c4ab61f61beb7765cb1aeac6286c96c58f",
+  "profile_sha256": "sha256:2b13cb5252a2f88249e277864424c702cf4794c5900a51b448eaef7ba77c89a5",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

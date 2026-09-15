@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/redox-ratio@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/redox-ratio/v0.1",
-  "profile_sha256": "sha256:bae700a349c0cd08416ecf71c57c2ca392f8059f4162b50e0ca75b5a57ce40c3",
+  "profile_sha256": "sha256:22740dfbb706195f5ae2793e24b3010c3b3d1edda0b89472b8f0e1abd95a8e9b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/reactive-oxygen-species@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/reactive-oxygen-species/v0.1",
-  "profile_sha256": "sha256:d6931fd49844224147f3fb9269c7154b6965ee7d815bf2652cf5fc5ac5110edd",
+  "profile_sha256": "sha256:7800103ba1c9ede8efe4e2a7ee5fa99efaabb0e280809ce400fb14ae53bf65c6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

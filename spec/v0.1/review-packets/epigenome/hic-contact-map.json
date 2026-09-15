@@ -168,7 +168,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/hic-contact-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/hic-contact-map/v0.1",
-  "profile_sha256": "sha256:3989b0fd2c0a1bba65eb49892d1c7e2f1876dbd80626fbe383558a6c5c82531e",
+  "profile_sha256": "sha256:c6e5de8c6d834e4452999ecb712a18870a988ff9a511a8ba0f14d174d7bbdabd",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -195,11 +195,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

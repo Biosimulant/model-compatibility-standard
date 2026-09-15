@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/apoptosis-state@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/apoptosis-state/v0.1",
-  "profile_sha256": "sha256:4a2e0613ec1c449e5c2969323152fe138744530d92d6319776a28af7a523aa33",
+  "profile_sha256": "sha256:ebed3d74f70da9cb14142929fde909ba2caf30afda96e82c4151157af31e966b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -146,11 +146,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

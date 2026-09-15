@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/cardiac-output@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/cardiac-output/v0.1",
-  "profile_sha256": "sha256:1d9586c2467d46bd6377b23af7cbe2c5ec5da13e9c0abfa571b2b917ca7eb010",
+  "profile_sha256": "sha256:2dc4158288acfd23e084c583ab968529ff1549920d80786d2b030c1db1a1a7b1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

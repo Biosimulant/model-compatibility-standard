@@ -651,6 +651,32 @@ function compareValue(rule, source, target, bundle, snapshots) {
         const open = target === null || target === undefined || target === "any" || target === "unspecified";
         return [canonicalJson(source) === canonicalJson(target) || open, undefined];
     }
+    if (operator === "representation-equivalent") {
+        // Decision D6. Re-encoding dense as sparse preserves the data only when both sides declare, and
+        // agree on, what an absent entry means, the ordering, the shape and the dtype. Undeclared is
+        // undecidable, not equivalent: in single-cell data a zero and an unobserved value are different
+        // claims about the same cell.
+        // The rule points at /contract/representation, so the finding keeps the representation
+        // dimension rather than being filed against the contract as a whole.
+        const left = (source ?? {}), right = (target ?? {});
+        const sourceKind = left.kind, targetKind = right.kind;
+        if (sourceKind === undefined || targetKind === undefined)
+            return [false, "evidence"];
+        if (sourceKind === targetKind)
+            return [true, undefined];
+        if (typeof sourceKind !== "string" || typeof targetKind !== "string")
+            return [false, "invalid"];
+        const pair = [sourceKind, targetKind].sort().join("|");
+        if (pair !== ["dense_vector", "sparse_vector"].join("|"))
+            return [false, undefined];
+        const enabling = (side) => [side.implicit_entry, side.ordering, side.sparsity];
+        const sourceFields = enabling(left), targetFields = enabling(right);
+        if (sourceFields.some((value) => value === undefined) || targetFields.some((value) => value === undefined))
+            return [false, "evidence"];
+        if (canonicalJson(sourceFields) !== canonicalJson(targetFields))
+            return [false, undefined];
+        return [true, "none"];
+    }
     if (operator === "term-equivalent" || operator === "term-subsumes") {
         if (canonicalJson(source) === canonicalJson(target))
             return [true, undefined];
@@ -730,6 +756,10 @@ export function compareContracts(source, target, options = {}) {
             else if (transformation === "invalid") {
                 unknown = true;
                 findings.push(finding(dimension, "UNKNOWN", "BMCS_OPERATOR_INPUT_INVALID", `The '${rule.operator}' check received invalid or unsafe input at ${rule.target}.`));
+            }
+            else if (transformation === "evidence") {
+                unknown = true;
+                findings.push(finding(dimension, "UNKNOWN", "BMCS_REQUIRED_EVIDENCE_MISSING", `The '${rule.operator}' check needs a field neither contract declares at ${rule.target}.`));
             }
             else if (compatible) {
                 conversion = transformation ?? conversion;
@@ -848,6 +878,39 @@ function compareCosts(left, right, includeIdentifiers = true) {
     }
     return 0;
 }
+const POLICY_STRENGTH = { allow: 0, approval: 1, block: 2 };
+const PUBLISHED_TO_DECISION = { allow: "ALLOW", approval: "APPROVAL_REQUIRED", block: "BLOCK" };
+/** The transformation policy published by the target contract's own profiles (decision D11).
+ *
+ * Every profile publishes `transformation_policy`, and until now nothing read it: a profile that
+ * declared `lossy: block` still produced APPROVAL_REQUIRED, because the only policy consulted was
+ * the one a caller passed in by hand. Where a contract names several profiles the most restrictive
+ * setting wins, since a profile that blocks a path is not overruled by one that permits it.
+ */
+function declaredPolicy(contract, bundle) {
+    const refs = contract?.profile_refs;
+    if (!Array.isArray(refs))
+        return {};
+    const combined = {};
+    for (const ref of [...new Set(refs.filter((value) => typeof value === "string"))].sort()) {
+        let profile;
+        try {
+            profile = bundle.profile(ref);
+        }
+        catch {
+            continue;
+        }
+        const policy = profile?.transformation_policy;
+        if (!policy || typeof policy !== "object" || Array.isArray(policy))
+            continue;
+        for (const [key, value] of Object.entries(policy)) {
+            const current = combined[key];
+            if (current === undefined || (POLICY_STRENGTH[String(value)] ?? 0) > (POLICY_STRENGTH[String(current)] ?? 0))
+                combined[key] = String(value);
+        }
+    }
+    return Object.fromEntries(Object.entries(combined).map(([key, value]) => [key, PUBLISHED_TO_DECISION[value] ?? value]));
+}
 function policyDecision(status, policy) {
     const key = { UNKNOWN: "unknown", CONDITIONAL: "conditional", LOSSLESS_CONVERSION_AVAILABLE: "lossless", LOSSY_CONVERSION_REQUIRES_APPROVAL: "lossy", INFERENCE_MODEL_REQUIRED: "inference" };
     const configured = key[status] ? policy[key[status]] : undefined;
@@ -891,6 +954,10 @@ function resolutionPlan(source, target, path, policy, bundle, snapshots) {
         schema_version: "0.1",
         standard: STANDARD,
         bundle_sha256: bundle.manifest.bundle_sha256,
+        // The status the chain itself carries. reports[] holds the terminal comparison, which is EXACT
+        // whenever the last adapter lands exactly on the target, so without this a reader cannot tell a
+        // lossy chain from an inference one or from a direct match (decision D11).
+        technical_status: status,
         nodes,
         edges,
         reports: [{ digest: terminal.digest, status: terminal.status }],
@@ -902,7 +969,8 @@ function resolutionPlan(source, target, path, policy, bundle, snapshots) {
 }
 export function resolveContracts(source, target, capabilities = [], options = {}) {
     const bundle = options.bundle ?? getBundle();
-    const policy = options.policy ?? {};
+    // A policy the caller supplies wins; otherwise use the one the target's profiles publish (D11).
+    const policy = options.policy ?? declaredPolicy(target, options.bundle ?? getBundle());
     const snapshots = options.snapshots ?? {};
     const verified = {
         ontology: verifiedSnapshots(snapshots.ontology),

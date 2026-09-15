@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/immune-cell-type@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/immune-cell-type/v0.1",
-  "profile_sha256": "sha256:c886a66a84214d84eaf93e73cb368a3b89c3566eef68fc54760cd4b4ef1ee217",
+  "profile_sha256": "sha256:fa995119bf187e6411307cd18f8125cc96c379110ea150fc5b44e904842f64bf",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -144,11 +144,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

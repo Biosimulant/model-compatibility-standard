@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/rna-editing-event@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/rna-editing-event/v0.1",
-  "profile_sha256": "sha256:dd7a6aed4e5a6b13670dbce32aca32575af1ad11eaaaa8f831d005568a191cf2",
+  "profile_sha256": "sha256:60490d36b1beb83be7492621e3befeed29e040b9d60d62e133434df0dd0f11f6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -142,11 +142,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

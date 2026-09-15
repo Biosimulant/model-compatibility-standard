@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/phylogenetic-network@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/phylogenetic-network/v0.1",
-  "profile_sha256": "sha256:4a781fd47c4a54773d5388b73bdc3d84aad5e3286e0f3afca5cad3a740a68878",
+  "profile_sha256": "sha256:bc40b4f6734ebfb1e1aa6655a4aaac3db4e712b65a2a91c79232f259521c5b68",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -163,11 +163,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

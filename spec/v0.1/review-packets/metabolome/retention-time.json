@@ -161,7 +161,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/retention-time@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/retention-time/v0.1",
-  "profile_sha256": "sha256:4ecb9adb532d460563eeab28308e863b44026231b2f0162f8e088081a789e4b9",
+  "profile_sha256": "sha256:23e6e44430f468c865eb72d0f39163b573673ae31c47bba1ed59ebdc1680bab6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -187,11 +187,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

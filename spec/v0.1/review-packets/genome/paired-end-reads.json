@@ -41,6 +41,7 @@
     "representation.encoding",
     "representation.endianness",
     "representation.feature_space",
+    "representation.implicit_entry",
     "representation.interval_convention",
     "representation.layout",
     "representation.left_normalized",
@@ -128,7 +129,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/paired-end-reads@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/paired-end-reads/v0.1",
-  "profile_sha256": "sha256:31ddf41b4046544d3ef7ce28e34615e76fd873938268792f19d39cf7ef64388e",
+  "profile_sha256": "sha256:8c4d4ec08972fdec9e8a0acfaf0fc3ba6bea0f107bdad008fc00d776c8f2301d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -154,11 +155,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

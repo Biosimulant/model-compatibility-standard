@@ -47,6 +47,7 @@
     "representation.feature_space",
     "representation.formal_charge",
     "representation.hydrogen_policy",
+    "representation.implicit_entry",
     "representation.isotope_state",
     "representation.layout",
     "representation.ordering",
@@ -111,7 +112,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/protonation-state@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/protonation-state/v0.1",
-  "profile_sha256": "sha256:1e06655e2acee86ceafa91a33d4c591d12de26f790c66e83eafd98f3821a1078",
+  "profile_sha256": "sha256:80e7fec514382cdba38dafab4ed64dc9e8de6eaa5d8f23b3f3baff18ebe226aa",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,11 +135,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "ignore",

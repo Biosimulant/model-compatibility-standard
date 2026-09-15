@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/urine-flow@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/urine-flow/v0.1",
-  "profile_sha256": "sha256:a2171f604313997c3eef02d4cc32a9f4a456e21e6b86126ebed61cd0fbc1a8e5",
+  "profile_sha256": "sha256:33c077e272dc87a5777de3396550835af818b0b851e9553e2c2298b92dd55359",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,11 +150,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

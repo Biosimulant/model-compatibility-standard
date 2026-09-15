@@ -163,7 +163,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/blood-pressure@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/blood-pressure/v0.1",
-  "profile_sha256": "sha256:f91730232336e4f0c94f9b3d8c0d1a608cc6e770f89613c5c818b75f9fbf342b",
+  "profile_sha256": "sha256:637624cff586e1b1624b6da78fcc744d02c47d7eb02b7d0e5379eac3d84a9d80",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -189,11 +189,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

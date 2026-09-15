@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/evenness@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/evenness/v0.1",
-  "profile_sha256": "sha256:782e489b547bb8c13b2af1a338a5f6c5bd8fc0e9238e26ae96580516dd32d79e",
+  "profile_sha256": "sha256:90372d983f786f4933974f3052b2ae0bda5efdcbc31ca58518f470d8989328c6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/microbial-genome@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/microbial-genome/v0.1",
-  "profile_sha256": "sha256:160b0faf6d4d3c46862a2998701469b03a82155967b5c1a903eed87486fe72c2",
+  "profile_sha256": "sha256:2ecb0abc217d942f8292e372c8ab941e8f9578088fe176d4b7f58459514676e3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

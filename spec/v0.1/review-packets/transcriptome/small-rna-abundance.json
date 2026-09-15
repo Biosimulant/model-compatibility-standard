@@ -157,7 +157,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/small-rna-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/small-rna-abundance/v0.1",
-  "profile_sha256": "sha256:7a9febb486f906f00925171f0775f5131e793b892f737f6a07f1d8b9f0a74d76",
+  "profile_sha256": "sha256:a3a3c4a42c13ac8101593bbb95c2de79e3e966936a3990fc2337707501514cb6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -184,11 +184,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

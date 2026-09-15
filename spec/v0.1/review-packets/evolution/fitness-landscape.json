@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/fitness-landscape@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/fitness-landscape/v0.1",
-  "profile_sha256": "sha256:8c2d4a46aed68a7aacd20b891fef64e2216522bcb0af43bb6c9088ef2fc2a18c",
+  "profile_sha256": "sha256:bdf3c8609ea675bdd2f3d2fc4e336f49fcac63b474d16ab9b871737c56c2a3a6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

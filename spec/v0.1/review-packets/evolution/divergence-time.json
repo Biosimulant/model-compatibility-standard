@@ -162,7 +162,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/divergence-time@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/divergence-time/v0.1",
-  "profile_sha256": "sha256:fefa645a07eba51e57187f7ce517ebc0f2d67aa2b1542eb14df220da19f7cd1a",
+  "profile_sha256": "sha256:568210319f7e3c3012e5911463f24970d72055c1a33e4192babe00ad337c71e2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -188,11 +188,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

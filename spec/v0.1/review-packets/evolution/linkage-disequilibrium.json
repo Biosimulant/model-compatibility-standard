@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/linkage-disequilibrium@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/linkage-disequilibrium/v0.1",
-  "profile_sha256": "sha256:233a8636637ffbd6a78d17b46cbec8b63ed3d20f44517ac2cb81d104c2d25651",
+  "profile_sha256": "sha256:cd1ee46bed4a76e737276bf72e6bcb2f832fbcce150fb4a1cf5772ec20fd7f23",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

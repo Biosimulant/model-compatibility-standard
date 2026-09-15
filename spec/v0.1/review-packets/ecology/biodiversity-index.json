@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/biodiversity-index@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/biodiversity-index/v0.1",
-  "profile_sha256": "sha256:a1e8782ced7074f89a5a2dad0d25ed98d33fe3c0a3b55741542f44b733b01146",
+  "profile_sha256": "sha256:f9e9581defc4a77f8f8092e8d711dcbd6e5b465fb73f3a309e1f02f078079662",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,11 +151,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

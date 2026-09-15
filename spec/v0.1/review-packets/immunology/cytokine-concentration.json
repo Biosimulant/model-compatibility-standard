@@ -151,7 +151,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/cytokine-concentration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/cytokine-concentration/v0.1",
-  "profile_sha256": "sha256:8bfd126a84fe85828510d104aef58d2edfec026993e4e16ebfb3c01dea58b0a6",
+  "profile_sha256": "sha256:05a240b9d8f78725b34e2c1e1c26128751206ab29cc44277b7de07ae63593589",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -177,11 +177,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

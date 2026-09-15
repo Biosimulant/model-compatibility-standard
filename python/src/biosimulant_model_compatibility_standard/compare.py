@@ -213,6 +213,34 @@ def _evaluate(
             # The source declares no context. That is absent evidence, not a contradiction (D5).
             return (True, None) if target in (None, "any", "unspecified") else (False, "unsupported")
         return source == target or target in (None, "any", "unspecified"), None
+    if operator == "representation-equivalent":
+        # Decision D6. Re-encoding dense as sparse preserves the data only when both sides declare,
+        # and agree on, what an absent entry means, the ordering, the shape and the dtype.
+        # Undeclared is undecidable rather than equivalent: in single-cell data an observed zero and
+        # an unobserved value are different claims about the same cell.
+        # The rule points at /contract/representation, so the finding keeps the representation
+        # dimension rather than being filed against the contract as a whole.
+        left = source if isinstance(source, dict) else {}
+        right = target if isinstance(target, dict) else {}
+        source_kind, target_kind = left.get("kind"), right.get("kind")
+        if source_kind is None or target_kind is None:
+            return False, "evidence"
+        if source_kind == target_kind:
+            return True, None
+        if not isinstance(source_kind, str) or not isinstance(target_kind, str):
+            return False, "invalid"
+        if sorted([source_kind, target_kind]) != ["dense_vector", "sparse_vector"]:
+            return False, None
+
+        def enabling(side: dict[str, Any]) -> list[Any]:
+            return [side.get("implicit_entry"), side.get("ordering"), side.get("sparsity")]
+
+        source_fields, target_fields = enabling(left), enabling(right)
+        if any(value is None for value in source_fields + target_fields):
+            return False, "evidence"
+        if source_fields != target_fields:
+            return False, None
+        return True, "none"
     if operator in {"term-equivalent", "term-subsumes"}:
         if source == target:
             return True, None
@@ -380,6 +408,9 @@ def compare_contracts(
             elif transformation == "invalid":
                 unknown = True
                 findings.append(_finding(dimension, "UNKNOWN", "BMCS_OPERATOR_INPUT_INVALID", f"The '{rule['operator']}' check received invalid or unsafe input at {rule['target']}."))
+            elif transformation == "evidence":
+                unknown = True
+                findings.append(_finding(dimension, "UNKNOWN", "BMCS_REQUIRED_EVIDENCE_MISSING", f"The '{rule['operator']}' check needs a field neither contract declares at {rule['target']}."))
             elif compatible:
                 if transformation:
                     conversion = transformation

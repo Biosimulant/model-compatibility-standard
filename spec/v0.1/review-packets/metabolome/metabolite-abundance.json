@@ -178,7 +178,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/metabolite-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/metabolite-abundance/v0.1",
-  "profile_sha256": "sha256:40171ed2945ba13d9c5d880a0535da19bd70b804b0e994fb94acb275ab7d6921",
+  "profile_sha256": "sha256:d9d3bf164ebdc4eefa3c1000ce2b3daea3654f3837492552507f79b02f807179",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -205,11 +205,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

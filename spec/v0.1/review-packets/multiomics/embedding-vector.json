@@ -168,7 +168,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/embedding-vector@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/embedding-vector/v0.1",
-  "profile_sha256": "sha256:2bd540a5bdd0a155657e17249fe9cf1d201f7974c961101f4ad57e81dc7165b4",
+  "profile_sha256": "sha256:36c9bb167a58cb64a47449350d89f261c912cec28283626d5c5a4463b59fd11e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -195,11 +195,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

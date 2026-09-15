@@ -16,7 +16,7 @@ from typing import Any
 
 import pytest
 
-from biosimulant_model_compatibility_standard import compare_contracts, normalize_contract, validate_contract
+from biosimulant_model_compatibility_standard import compare_contracts, normalize_contract, resolve_contracts, validate_contract
 from biosimulant_model_compatibility_standard.units import UnitError, parse_unit
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -94,6 +94,26 @@ def _offenders(invariant: str) -> list[str]:
     return offenders
 
 
+def _capabilities(case: dict[str, Any], source: dict[str, Any], target: dict[str, Any]) -> list[dict[str, Any]]:
+    """Capabilities for a resolve case, with the contract sentinels filled in.
+
+    resolve_contracts indexes a capability by the digest of its source contract, so a capability
+    written into the case file cannot name a contract the harness builds from the profile fixture.
+    "$source" and "$target" stand in for those two contracts.
+    """
+
+    filled: list[dict[str, Any]] = []
+    for capability in case.get("capabilities", []):
+        entry = copy.deepcopy(capability)
+        for side in ("source", "target"):
+            if entry.get(side) == "$source":
+                entry[side] = copy.deepcopy(source)
+            elif entry.get(side) == "$target":
+                entry[side] = copy.deepcopy(target)
+        filled.append(entry)
+    return filled
+
+
 def violations(case: dict[str, Any]) -> list[str]:
     expect = case["expect"]
     found: list[str] = []
@@ -114,6 +134,24 @@ def violations(case: dict[str, Any]) -> list[str]:
         errors = [f for f in validate_contract(_contract(case, "source"), [_ref(case["profile"])]) if f.severity == "error"]
         if expect.get("error_findings") == "at-least-one" and not errors:
             found.append("contract validated with no error finding")
+    elif case["check"] == "resolve":
+        # The lossy and inference statuses are produced by the resolution layer, not by comparison,
+        # so a case that exercises an approval path has to plan a capability chain (decision D11).
+        source, target = _contract(case, "source"), _contract(case, "target")
+        result = resolve_contracts(source, target, _capabilities(case, source, target))
+        plan = result.get("plan") or {}
+        # The chain's own status, not the terminal comparison: reports[] is EXACT whenever the last
+        # adapter lands exactly on the target, which would make an approval-path case vacuous.
+        status = plan.get("technical_status")
+        decision = (plan.get("policy") or {}).get("decision")
+        if "resolution" in expect and result["resolution"] != expect["resolution"]:
+            found.append(f"resolution {result['resolution']}, expected {expect['resolution']}")
+        if "plan_status" in expect and status != expect["plan_status"]:
+            found.append(f"plan status {status}, expected {expect['plan_status']}")
+        if "policy_decision" in expect and decision != expect["policy_decision"]:
+            found.append(f"policy decision {decision}, expected {expect['policy_decision']}")
+        if "policy_decision_not" in expect and decision == expect["policy_decision_not"]:
+            found.append(f"policy decision {decision} {NOT_A_MATCH}")
     elif case["check"] == "fixture-invariant":
         offenders = _offenders(case["invariant"])
         if offenders:
@@ -153,7 +191,7 @@ def test_case_file_is_well_formed() -> None:
     assert len(ids) == len(set(ids))
     for case in SUITE["cases"]:
         assert case["kind"] in {"defect", "guard"}, case["id"]
-        assert case["check"] in {"compare", "validate", "fixture-invariant"}, case["id"]
+        assert case["check"] in {"compare", "validate", "fixture-invariant", "resolve"}, case["id"]
         for key in ("title", "why", "conditions", "decision", "expect", "report_finding"):
             assert case.get(key), (case["id"], key)
         if case["kind"] == "defect":

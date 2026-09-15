@@ -138,7 +138,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/area-under-curve@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/area-under-curve/v0.1",
-  "profile_sha256": "sha256:eddc1d3c6dc7ab2a65255959af45f638b952993c0e49b8ade61369db91431917",
+  "profile_sha256": "sha256:8f6f8179b8984d431d162966dc4f6d5932e91efdc89aaa6077924545a57e4b26",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -158,11 +158,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

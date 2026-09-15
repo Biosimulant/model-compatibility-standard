@@ -194,7 +194,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/gene-protein-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/gene-protein-map/v0.1",
-  "profile_sha256": "sha256:407a34873a3ef55939d7a3f046346cbba3d611efee3e7de3a94f7e7d759de9d2",
+  "profile_sha256": "sha256:bd3eb9c1d7792755ba62c3fb949cfc5c004641fa71bac485158a16425cef608d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -221,11 +221,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

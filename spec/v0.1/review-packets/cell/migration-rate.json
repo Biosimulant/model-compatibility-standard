@@ -153,7 +153,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/migration-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/migration-rate/v0.1",
-  "profile_sha256": "sha256:60754084d36dda530440b8bb66b66dfea4b60dc97bbbd5d086862ce24072c8f3",
+  "profile_sha256": "sha256:bca6904f5478aa2d12d2489336a1a3f921b3b0d033491d7d27b90b6957f719a3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -179,11 +179,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

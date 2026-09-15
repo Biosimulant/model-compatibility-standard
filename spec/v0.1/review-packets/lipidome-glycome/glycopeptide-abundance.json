@@ -159,7 +159,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/glycopeptide-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/glycopeptide-abundance/v0.1",
-  "profile_sha256": "sha256:480df6ae1b1d0161a9e4b382067f49d85d09d82075c02fc6c72c551b4049113f",
+  "profile_sha256": "sha256:1ce311272c6a4ff62eb51dd8ae6bc43696c48650ff2f31cae1b537404689d227",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -186,11 +186,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "phenotype/categorical-phenotype@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/phenotype/categorical-phenotype/v0.1",
-  "profile_sha256": "sha256:d50e809011b878d2845ce944333ff7ac6a4c0d1a6f771f3bcb1928be01ec8668",
+  "profile_sha256": "sha256:d19a777e1874621893111ec7aa552c5445f66574d28dc7430cb13258c23b632c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -146,11 +146,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

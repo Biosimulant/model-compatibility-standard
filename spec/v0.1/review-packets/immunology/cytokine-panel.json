@@ -121,7 +121,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/cytokine-panel@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/cytokine-panel/v0.1",
-  "profile_sha256": "sha256:acddb7cb505326ba88f4439705706c085e91d90c80e68f73d56b6cdc7880a572",
+  "profile_sha256": "sha256:8695a79f98a3b49b8dec7f1fc78dade430c89095f982256ea8debf0e7c69de1e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -147,11 +147,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

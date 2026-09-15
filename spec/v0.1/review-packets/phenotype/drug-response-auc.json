@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "phenotype/drug-response-auc@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/phenotype/drug-response-auc/v0.1",
-  "profile_sha256": "sha256:2eaadcde05f53b2afd5df71881942e949d6ca8eec4b8fa6a3b9ca1e3b71056f5",
+  "profile_sha256": "sha256:f9d6324dc73a0a7399a30040b3b4e2f353af14687cb113ef821fa3fbd9878f6b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

@@ -152,7 +152,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/virus-identity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/virus-identity/v0.1",
-  "profile_sha256": "sha256:84b70ce859062f45946d475d52d4bfaac96816759bfc531448543cfd6581db38",
+  "profile_sha256": "sha256:4486d39ec404ad6c43c06b02262feefb971b4e875b886a8af8045f59bd008fa8",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -175,11 +175,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",

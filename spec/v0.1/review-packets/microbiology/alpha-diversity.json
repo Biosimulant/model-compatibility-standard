@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/alpha-diversity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/alpha-diversity/v0.1",
-  "profile_sha256": "sha256:6bab6951736265d2340e3677b943e4a98a9d88d11dba9f15ae8568c7433bc061",
+  "profile_sha256": "sha256:e19d00962a983494dd4dadee3be4899deb92a86b8a32de23e60ed9006998f1b3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,11 +149,11 @@
     },
     {
       "missing": "unknown",
-      "operator": "equal",
+      "operator": "representation-equivalent",
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "severity": "error",
-      "source": "/contract/representation/kind",
-      "target": "/contract/representation/kind"
+      "source": "/contract/representation",
+      "target": "/contract/representation"
     },
     {
       "missing": "unknown",
