@@ -1,182 +1,124 @@
 # Biosimulant Model Compatibility Standard
 
-A way for simulation models to describe what their inputs and outputs mean, so
-tools can check whether two models can be connected before you run them.
+The standard helps decide whether the output of one model can be used as the
+input of another.
 
-A model's `model.yaml` already lists its ports (name, data type, shape). This
-standard lets a port also say what the data *is*: the biological concept, units,
-identifiers, species, file format and so on. With that information, a tool can
-tell you whether an output from one model can feed an input of another, whether
-a conversion is needed, or whether there isn't enough information to decide.
+Matching file shapes and data types is not enough. Two ports can both carry a
+string, array or file while disagreeing about the scientific meaning, species,
+identifier system, units, normalisation, coordinate system or provenance. A
+port contract records those details. A profile says which details matter for a
+particular kind of data and how they should be compared.
 
-It's optional. Models without a `compatibility` block in `model.yaml` keep
-working exactly as before (`schema_version: "2.0"` doesn't change).
+The result is one of four practical answers:
 
-This repository holds the specification files and reference implementations in
-Python and TypeScript.
+- the ports can connect directly;
+- a stated conversion or inference step is needed;
+- the ports are incompatible; or
+- there is not enough information to decide.
 
-## Status
+This is an interface check. It does not approve a model, dataset, result,
+clinical use or regulatory claim.
 
-The standard is being restarted as a small `0.0.1` incubator. The schemas and
-validators remain conformance-tested, but the profile catalogue is deliberately
-limited to three draft profiles that reflect current molecular-model workflows:
-Protein Sequence, Protein Structure and Canonical SMILES. None has finished
-independent scientific review. See
-[PROFILE_REVIEW.md](PROFILE_REVIEW.md) and
-[`spec/v0.1/catalogue/internal-validation.json`](spec/v0.1/catalogue/internal-validation.json).
+## Current scope
 
-The former 650-profile catalogue was an exploratory prototype. It remains in
-Git history but is no longer part of the active source tree or generated
-standard. Profiles will now be added incrementally from real output-to-input use
-cases and reviewed independently before release.
+Version `0.0.1` is a deliberately small incubator. It contains three draft
+profiles:
 
-Compatibility checks whether two model interfaces fit together. It doesn't show
-that a model is scientifically valid or clinically safe.
+- Protein Sequence
+- Protein Structure
+- Canonical SMILES
 
-## Key ideas
+None has completed independent scientific review. They are usable for testing
+the format and review process, but should not be presented as approved
+scientific standards.
 
-- **Port contract**: the `contract` block on a port in `model.yaml`. It describes
-  the port's data in groups of fields such as `semantic` (what it is),
-  `measurement` (quantity, unit, scale), `identifiers` and `biological_context`.
-- **Profile**: a reusable set of rules for one kind of data, for example
-  `proteome/protein-sequence`. A profile lists which contract fields are required
-  and how to compare them. The active incubator starts with three draft profiles.
-- **Comparison report**: the result of comparing a source (output) port with a
-  target (input) port. Its `status` is one of:
+The former 650-profile catalogue was an exploratory prototype and has been
+removed from the active standard. It remains in Git history. New profiles will
+be added only when there is a real model-to-model mapping to support and people
+available to review it.
 
-  | Status | Meaning |
-  |---|---|
-  | `EXACT` | The contracts are identical. |
-  | `DIRECT_COMPATIBLE` | The source already meets the target's requirements. |
-  | `LOSSLESS_CONVERSION_AVAILABLE` | A conversion that loses nothing is available, such as `nmol/L` to `umol/L`. |
-  | `LOSSY_CONVERSION_REQUIRES_APPROVAL` | A conversion exists but loses information, so someone has to approve it. |
-  | `INFERENCE_MODEL_REQUIRED` | Getting from source to target needs a model to infer data. |
-  | `CONDITIONAL` | Compatible only if a precondition holds. |
-  | `INCOMPATIBLE` | A required value doesn't match. |
-  | `UNKNOWN` | There isn't enough information to decide. |
+See [Proposing a profile](PROPOSING_A_PROFILE.md) if the data exchanged by your
+models is not covered by the current catalogue.
 
-  Each report also has a `policy_decision` (`ALLOW`, `APPROVAL_REQUIRED` or
-  `BLOCK`) and a list of findings. Each finding has a `reason_code` from
-  [`spec/v0.1/rules/reason-codes.json`](spec/v0.1/rules/reason-codes.json).
-- **Resolution plan**: when two ports don't match directly, a chain of reviewed
-  adapters (for example a unit conversion) or inference models that connects them.
-- **Lock**: `compatibility.lock.json`, which records the exact profiles and
-  contracts a model uses, with their sha256 digests.
+## What goes in `model.yaml`
 
-## Install
+Compatibility is optional. A model can import one or more profiles and add a
+contract to the ports it wants to describe. Existing models without a
+`compatibility` block continue to work.
 
-The packages aren't on PyPI or npm yet. Install from a tagged release on GitHub:
+```yaml
+schema_version: "2.0"
 
-```bash
-pip install "biosimulant-model-compatibility-standard @ git+https://github.com/Biosimulant/model-compatibility-standard@v0.0.1"
+compatibility:
+  standard: https://biosimulant.com/standards/model-compatibility/v0.1
+  profiles:
+    - ref: https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-sequence/v0.1
+      sha256: sha256:5000e512dc105f96c4ad4da65dc1305011522682f555b88a35213e8d20a5a179
+
+io:
+  inputs:
+    - name: protein_sequence
+      signal_type: record
+      contract:
+        profile_refs:
+          - https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-sequence/v0.1
+        semantic:
+          concept: https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence
+        representation:
+          kind: scalar
+          alphabet: IUPAC-amino-acid
+          encoding: single-letter
+        identifiers:
+          namespace: UniProtKB
+          namespace_version: "2026_03"
+        biological_context:
+          species: NCBITaxon:9606
 ```
 
+The profile fixes the scientific concept and requires enough information to
+interpret and compare the sequence. If required information is missing, the
+comparison returns `UNKNOWN`; it does not guess.
+
+## Use the libraries
+
+The Python and TypeScript packages validate manifests and contracts, compare
+ports, build resolution plans and create compatibility lock files. Packages are
+not published to PyPI or npm yet. Until the first v0 tag is cut, install the
+exact incubator commit:
+
 ```bash
-npm install github:Biosimulant/model-compatibility-standard#v0.0.1
+pip install "biosimulant-model-compatibility-standard @ git+https://github.com/Biosimulant/model-compatibility-standard@7ed53a619fee78641998226c1ce7c8479259ff8a"
+npm install "https://github.com/Biosimulant/model-compatibility-standard/archive/7ed53a619fee78641998226c1ce7c8479259ff8a.tar.gz"
 ```
 
-The npm install builds the package, which runs a small Python 3 script. Python 3
-needs to be on your `PATH`; it only uses the standard library.
-
-## Use it
+The npm build requires Python 3 on `PATH`.
 
 Python:
 
 ```python
-import yaml
-from biosimulant_model_compatibility_standard import compare_contracts, validate_manifest
+from biosimulant_model_compatibility_standard import compare_contracts
 
-manifest = yaml.safe_load(open("model.yaml"))
-for finding in validate_manifest(manifest):
-    print(finding.reason_code, finding.path, finding.message)
-
-report = compare_contracts({"measurement": {"unit": "nmol/L"}}, {"measurement": {"unit": "umol/L"}})
-print(report["status"])  # LOSSLESS_CONVERSION_AVAILABLE
+report = compare_contracts(source_contract, target_contract)
+print(report["status"])
 ```
 
 TypeScript:
 
 ```ts
-import { readFileSync } from "node:fs";
-import { compareContracts, parseYaml, validateManifest } from "@biosimulant/model-compatibility-standard";
+import { compareContracts } from "@biosimulant/model-compatibility-standard";
 
-const findings = validateManifest(parseYaml(readFileSync("model.yaml", "utf8")));
-const report = compareContracts({ measurement: { unit: "nmol/L" } }, { measurement: { unit: "umol/L" } });
-console.log(report.status); // LOSSLESS_CONVERSION_AVAILABLE
+const report = compareContracts(sourceContract, targetContract);
+console.log(report.status);
 ```
 
-Browser and desktop apps use the browser-safe entry point. It contains the same
-schemas and active profiles, so local validation doesn't need a server call:
+Browser and desktop applications can use the `/browser` entry point for public,
+local validation. Resolution plans, approvals and private data stay on the
+authenticated Biosimulant service.
 
-```ts
-import {
-  parseYaml,
-  validateManifest,
-} from "@biosimulant/model-compatibility-standard/browser";
+## Work on the standard
 
-const findings = validateManifest(parseYaml(modelYaml));
-```
-
-Contract comparison, path planning, approvals and private data stay on the
-authenticated Biosimulant API. The browser entry point only parses and validates
-public standard data.
-
-What each package provides:
-
-| Task | Python | TypeScript |
-|---|---|---|
-| Validate a `model.yaml` | `validate_manifest` | `validateManifest` |
-| Validate a contract against profiles | `validate_contract` | `validateContract` |
-| Validate any object against a bundled schema | `validate_object` | `validateObject` |
-| Compare two contracts | `compare_contracts` | `compareContracts` |
-| Canonical JSON and sha256 digest | `canonical_bytes`, `digest` | `canonicalJson`, `digest` |
-| Sort set-like fields before hashing | `normalize_contract`, `normalize_manifest` | `normalizeContract`, `normalizeManifest` |
-| Plan a conversion path | `resolve_contracts`, `ResolutionLimits` | `resolveContracts`, `ResolutionLimits` |
-| Build `compatibility.lock.json` | `build_compatibility_lock` | `buildCompatibilityLock` |
-| Verify the installed bundle | `Bundle.verify_integrity` | `Bundle.verifyIntegrity` |
-
-Browser apps can use `parseYaml`, `validateManifest`, `validateContract`, and
-`validateObject` from the `/browser` entry point.
-
-The [Biosimulant docs](https://docs.biosimulant.com/standards/model-compatibility)
-show a full `model.yaml` example and the profile catalogue.
-
-For agent integrations, [MCP and Agent Skill Integration](INTEGRATIONS.md)
-defines the Biosimulant Agent Gateway tools, OAuth scopes, approval boundary,
-and strict managed-run sequence. MCP is an authenticated product interface;
-skills are optional guidance and do not change permissions or compatibility
-decisions.
-
-## Remaining GA gate
-
-Both implementations now support the complete operator vocabulary. Ontology
-and identifier-mapping operators fail closed with `UNKNOWN` unless the caller
-supplies the exact digest-pinned snapshot named by the rule. They also enforce
-the same document limits, accepted-profile refinement rules, normalization,
-locks, resolution order and bundle integrity checks.
-
-The remaining release blocker is scientific rather than a missing validator
-feature: each active profile needs authoritative sources and independent
-scientific and schema review. Review evidence is stored one profile at a time
-under `source/reviews/`; release eligibility is calculated per profile. See
-[PROFILE_REVIEW.md](PROFILE_REVIEW.md).
-
-## Repository layout
-
-- `source/catalogue.review.json`: the input catalogue of profiles, contract
-  fields and packs.
-- `source/reviews/`: independent review evidence. A completed file is required
-  before a profile becomes release-eligible.
-- `scripts/build_standard.py`: generates everything in `spec/v0.1/` from the
-  catalogue.
-- `spec/v0.1/`: the generated specification: JSON Schemas, profiles, rules,
-  fixtures, external-review packets, examples and `bundle.manifest.json`, which lists every file with its
-  sha256. **Don't edit these files by hand.** See [CONTRIBUTING.md](CONTRIBUTING.md).
-- `python/`: the Python package and its tests.
-- `typescript/`: the TypeScript package and its tests.
-- `ci/github-actions-conformance.yml`: the CI workflow.
-
-## Build and test
+The source of truth is `source/catalogue.review.json`. Files under `spec/v0.1/`
+are generated and must not be edited by hand.
 
 ```bash
 python3 -m venv .venv
@@ -188,32 +130,30 @@ npm install
 npm test
 ```
 
-`--check` rebuilds the spec in a temporary folder and fails if `spec/v0.1/`
-doesn't match. `npm test` runs the same check, compiles the TypeScript and runs
-its tests.
+The repository is organised as follows:
 
-The CI workflow lives in `ci/` for now. Copy it to `.github/workflows/` to turn
-it on; pushing workflow files needs a GitHub token with the `workflow` scope.
+- `source/` — profile source and independent review records
+- `spec/v0.1/` — generated schemas, profiles, rules, fixtures and review packets
+- `python/` and `typescript/` — reference implementations and tests
+- `scientific-checks/` — shared cases for scientifically important outcomes
+- `scripts/` — supported build and verification scripts
 
-## Identifiers
+One-off scripts and local investigation files belong in `.scratch/`, which Git
+ignores. See [scripts/README.md](scripts/README.md).
 
-Every published object has a stable URL:
+For changes, start with [CONTRIBUTING.md](CONTRIBUTING.md). A new profile has a
+separate, evidence-led route in [PROPOSING_A_PROFILE.md](PROPOSING_A_PROFILE.md).
+The scientific review gate is described in
+[PROFILE_REVIEW.md](PROFILE_REVIEW.md).
 
-```text
-https://biosimulant.com/standards/model-compatibility/v0.1
-https://biosimulant.com/standards/model-compatibility/profiles/{domain}/{name}/v0.1
-```
+## Stable references
 
-Always pin a profile with its sha256 when you reference it. Locks and resolution
-plans never use a moving reference like "latest".
+Published profiles and bundles are versioned and identified by SHA-256. Lock
+files and plans must use the versioned reference and digest, never a moving
+`latest` reference.
 
-## Security
+The validators use only the installed bundle. They do not fetch remote schemas
+or execute code from profile rules. Report security issues as described in
+[SECURITY.md](SECURITY.md).
 
-The validators only read files from the installed package. They never download
-a `$ref` or profile URL. Comparison rules are data, so a profile can't run code.
-To report a security problem, see [SECURITY.md](SECURITY.md).
-
-## License
-
-Apache-2.0. See
-[LICENSE](https://github.com/Biosimulant/model-compatibility-standard/blob/main/LICENSE).
+Apache-2.0 licensed. See [LICENSE](LICENSE).

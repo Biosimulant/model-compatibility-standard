@@ -1,36 +1,30 @@
-# Profile review files
+# Scientific review records
 
-This directory holds the evidence that moves a profile from `candidate` or
-`draft` to `reviewed`. One completed JSON file covers one profile. Put it at:
+This directory holds one review record per profile:
 
 ```text
 source/reviews/<domain>/<profile-name>.json
 ```
 
-Start with `profile-review.template.json` and validate it against
-`../profile-review.schema.json`. The build also checks rules that JSON Schema
-cannot express clearly:
+Start from `profile-review.template.json`. The record is checked against
+`../profile-review.schema.json` when the standard is built.
 
-- the profile must exist in the catalogue;
-- the scientific and schema reviewers must be different people;
-- neither reviewer can be one of the profile authors;
-- every contract section must be included, conditional, or explicitly excluded,
-  with a decision and source;
-- every source used by a decision must exist in the same review file; and
-- each source must name a version and pin the reviewed bytes with SHA-256; and
-- positive, missing, invalid, direct, incompatible, `UNKNOWN`, and applicable
-  transformation fixtures must have been checked.
+A completed review names the scientific reviewer, a separate schema reviewer
+and the domain owner. It records the sources, intended use, limitations,
+field-by-field decisions and the examples that were checked. Neither reviewer
+may be a profile author.
 
-Adding a name is not enough. The reviewer must check the actual profile rules,
-fixtures, intended use and limits. Do not use generated text as scientific
-approval.
+The generated review packet under `spec/v0.1/review-packets/` is the mapping the
+scientist reviews. Every required and candidate field in that packet needs a
+decision: required, conditional, recommended or excluded. The reviewer may also
+identify a field that is missing from the proposal.
 
-The generated packet is the complete mapping proposal for that profile: its
-required fields, candidate fields, comparison rules and expected outcomes. The
-review evidence should record a disposition for every candidate and any missing
-field the reviewer believes is necessary. Fields outside the profile's packet
-remain out of scope unless the reviewer explicitly adds them.
+The build checks that sources are versioned and pinned, reviewers are
+independent, every contract section has a decision, and the required fixtures
+were reviewed. A name or signature by itself is not enough.
 
-The standard build sets `release_eligible: true` only after the review file is
-complete. `ga_ready` becomes true only when every profile in the active
-incubator catalogue is eligible.
+When the record is complete, the build can mark that profile
+`release_eligible: true`. Automated tests and generated text do not count as
+scientific approval. See [PROFILE_REVIEW.md](../../PROFILE_REVIEW.md) for the
+full gate and [PROPOSING_A_PROFILE.md](../../PROPOSING_A_PROFILE.md) for the
+submission process.

@@ -1,54 +1,48 @@
 # Contributing
 
-Released files never change. To fix a released profile, schema or rule, make the
-change in a new version.
+Small, reviewable changes are preferred. Please do not generate a catalogue of
+possible profiles or add a profile without a real model connection behind it.
 
-## How the spec is built
+## Change an existing profile
 
-Everything in `spec/v0.1/` is generated, so don't edit it by hand.
+Released objects do not change in place. A scientific or technical change to a
+released profile creates a new version.
 
-1. Change `source/catalogue.review.json` (profiles, contract fields and packs) or
-   `scripts/build_standard.py` (schemas, rules, reason codes and fixtures).
-2. Run `python3 scripts/build_standard.py` to regenerate `spec/v0.1/`.
-3. Commit the source change and the regenerated files together.
+Profiles, contract fields and packs are maintained in
+`source/catalogue.review.json`. Files under `spec/v0.1/` are generated. After a
+source change, regenerate the bundle and commit both the source and generated
+files:
 
-`npm test` and CI run `python3 scripts/build_standard.py --check`, which fails if
-the two are out of sync.
+```bash
+python3 scripts/build_standard.py
+python3 scripts/build_standard.py --check
+```
 
-## Adding or changing a profile
+If you are adding a profile, follow [Proposing a profile](PROPOSING_A_PROFILE.md).
+That process starts with a real output-to-input mapping and includes scientific
+review.
 
-The v0 catalogue grows from observed model connections, not from a generated
-list of possible biological concepts. Add one profile, or a small set that is
-needed for the same workflow, in a change. Do not bulk-generate profiles.
+## Change comparison behaviour
 
-A new profile starts with a concrete mapping: one model output, one model input,
-and examples of the data each side actually emits or accepts. Record what must
-match, what may be converted, what should be reported as unknown, and what must
-block the connection. Then prepare the scientific review packet.
+A new comparison operator must be implemented and tested in both Python and
+TypeScript. The two implementations must produce the same result on the shared
+fixtures in `spec/v0.1/fixtures/golden/`.
 
-A profile change needs:
+Do not add scientific assumptions to implementation code to make a test pass.
+Those decisions belong in a reviewed profile or capability.
 
-1. A stable id and version.
-2. A stated use case, scope and important exclusions.
-3. The complete output-to-input mapping that motivated it.
-4. Requirements and comparison rules written as data.
-5. Its generated fixtures: `positive`, `negative-required-missing` and
-   `comparison-unknown`.
-6. Authoritative scientific sources.
-7. A named scientific reviewer, a separate schema reviewer and a review date.
-8. A description that sticks to whether interfaces fit together, not whether a
-   model is scientifically valid.
+## Before opening a pull request
 
-Keep the profile at `draft` and non-release-eligible until its review evidence
-is complete. Adding a profile changes the generated catalogue counts; tests
-derive those counts from the catalogue and must not hard-code a target size.
+Run:
 
-## Adding a comparison operator
+```bash
+.venv/bin/python scripts/build_standard.py --check
+.venv/bin/pytest
+npm test
+```
 
-Implement it in both `python/` and `typescript/`, add tests in both, and check
-that both give the same results on the shared fixtures in
-`spec/v0.1/fixtures/golden/`.
+Explain the model connection or defect the change addresses, list the evidence
+used, and call out any question that still needs scientific judgement.
 
-## Before you open a pull request
-
-Run the Python and TypeScript test suites. The README explains how.
+Supported repository automation belongs in `scripts/`. Put disposable local
+work in the ignored `.scratch/` directory rather than committing it.
