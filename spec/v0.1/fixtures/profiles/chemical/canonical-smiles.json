@@ -3,7 +3,10 @@
     {
       "contract": {
         "representation": {
-          "kind": "scalar"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
@@ -19,7 +22,10 @@
           "type": "declared"
         },
         "representation": {
-          "kind": "scalar"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
@@ -28,7 +34,10 @@
       "status": "DIRECT_COMPATIBLE",
       "target": {
         "representation": {
-          "kind": "scalar"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
@@ -38,7 +47,10 @@
     {
       "contract": {
         "representation": {
-          "kind": "scalar"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {}
       },
@@ -50,7 +62,10 @@
     {
       "contract": {
         "representation": {
-          "kind": "scalar"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles-different"
@@ -67,7 +82,10 @@
       "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
       "source": {
         "representation": {
-          "kind": "scalar"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles-different"
@@ -76,7 +94,10 @@
       "status": "INCOMPATIBLE",
       "target": {
         "representation": {
-          "kind": "scalar"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
@@ -88,14 +109,20 @@
       "name": "comparison-unknown-semantic-concept",
       "source": {
         "representation": {
-          "kind": "scalar"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {}
       },
       "status": "UNKNOWN",
       "target": {
         "representation": {
-          "kind": "scalar"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
@@ -107,7 +134,10 @@
       "name": "comparison-unknown-target-semantic-concept",
       "source": {
         "representation": {
-          "kind": "scalar"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
@@ -116,14 +146,21 @@
       "status": "UNKNOWN",
       "target": {
         "representation": {
-          "kind": "scalar"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {}
       }
     },
     {
       "contract": {
-        "representation": {},
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
         }
@@ -136,7 +173,10 @@
     {
       "contract": {
         "representation": {
-          "kind": "not-an-allowed-value"
+          "canonicalization": "example-canonicalization",
+          "kind": "not-an-allowed-value",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
@@ -153,7 +193,10 @@
       "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
       "source": {
         "representation": {
-          "kind": "scalar-different"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar-different",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
@@ -162,7 +205,10 @@
       "status": "INCOMPATIBLE",
       "target": {
         "representation": {
-          "kind": "scalar"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
@@ -173,7 +219,11 @@
       "field": "representation.kind",
       "name": "comparison-unknown-representation-kind",
       "source": {
-        "representation": {},
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
         }
@@ -181,7 +231,10 @@
       "status": "UNKNOWN",
       "target": {
         "representation": {
-          "kind": "scalar"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
@@ -193,7 +246,10 @@
       "name": "comparison-unknown-target-representation-kind",
       "source": {
         "representation": {
-          "kind": "scalar"
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
@@ -201,7 +257,350 @@
       },
       "status": "UNKNOWN",
       "target": {
-        "representation": {},
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      }
+    },
+    {
+      "contract": {
+        "representation": {
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "field": "representation.canonicalization",
+      "name": "negative-required-missing-representation-canonicalization",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "representation": {
+          "canonicalization": 7,
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "field": "representation.canonicalization",
+      "name": "negative-value-invalid-representation-canonicalization",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.canonicalization",
+      "name": "comparison-incompatible-representation-canonicalization",
+      "reason_code": "BMCS_REPRESENTATION_CANONICALIZATION_MISMATCH",
+      "source": {
+        "representation": {
+          "canonicalization": "example-canonicalization-different",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      }
+    },
+    {
+      "field": "representation.canonicalization",
+      "name": "comparison-unknown-representation-canonicalization",
+      "source": {
+        "representation": {
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      }
+    },
+    {
+      "field": "representation.canonicalization",
+      "name": "comparison-unknown-target-representation-canonicalization",
+      "source": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "representation": {
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      }
+    },
+    {
+      "contract": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "field": "representation.normalization_tool",
+      "name": "negative-required-missing-representation-normalization-tool",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": 7,
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "field": "representation.normalization_tool",
+      "name": "negative-value-invalid-representation-normalization-tool",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.normalization_tool",
+      "name": "comparison-incompatible-representation-normalization-tool",
+      "reason_code": "BMCS_REPRESENTATION_NORMALIZATION_TOOL_MISMATCH",
+      "source": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool-different",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      }
+    },
+    {
+      "field": "representation.normalization_tool",
+      "name": "comparison-unknown-representation-normalization-tool",
+      "source": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      }
+    },
+    {
+      "field": "representation.normalization_tool",
+      "name": "comparison-unknown-target-representation-normalization-tool",
+      "source": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      }
+    },
+    {
+      "contract": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "field": "representation.normalization_version",
+      "name": "negative-required-missing-representation-normalization-version",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": 7
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "field": "representation.normalization_version",
+      "name": "negative-value-invalid-representation-normalization-version",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.normalization_version",
+      "name": "comparison-incompatible-representation-normalization-version",
+      "reason_code": "BMCS_REPRESENTATION_NORMALIZATION_VERSION_MISMATCH",
+      "source": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version-different"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      }
+    },
+    {
+      "field": "representation.normalization_version",
+      "name": "comparison-unknown-representation-normalization-version",
+      "source": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      }
+    },
+    {
+      "field": "representation.normalization_version",
+      "name": "comparison-unknown-target-representation-normalization-version",
+      "source": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool",
+          "normalization_version": "example-normalization-version"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "representation": {
+          "canonicalization": "example-canonicalization",
+          "kind": "scalar",
+          "normalization_tool": "example-normalization-tool"
+        },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
         }

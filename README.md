@@ -17,15 +17,18 @@ Python and TypeScript.
 
 ## Status
 
-`0.1.0-alpha.5` is an engineering release candidate. The schemas and validators
-are conformance-tested, but the catalogue is not GA until its scientific review
-gate is complete.
-
-All 650 profiles pass the internal schema and compatibility pre-review and have
-an individual external-review packet. None has finished independent scientific
-review yet: 591 are `candidate` and 59 are `draft`. See
+The standard is being restarted as a small `0.0.1` incubator. The schemas and
+validators remain conformance-tested, but the profile catalogue is deliberately
+limited to three draft profiles that reflect current molecular-model workflows:
+Protein Sequence, Protein Structure and Canonical SMILES. None has finished
+independent scientific review. See
 [PROFILE_REVIEW.md](PROFILE_REVIEW.md) and
 [`spec/v0.1/catalogue/internal-validation.json`](spec/v0.1/catalogue/internal-validation.json).
+
+The former 650-profile catalogue was an exploratory prototype. It is retained in
+Git history and in the scientific-remediation records, but it is no longer part
+of the active generated standard. Profiles will now be added incrementally from
+real output-to-input use cases and reviewed independently before release.
 
 Compatibility checks whether two model interfaces fit together. It doesn't show
 that a model is scientifically valid or clinically safe.
@@ -36,8 +39,8 @@ that a model is scientifically valid or clinically safe.
   the port's data in groups of fields such as `semantic` (what it is),
   `measurement` (quantity, unit, scale), `identifiers` and `biological_context`.
 - **Profile**: a reusable set of rules for one kind of data, for example
-  `transcriptome/gene-expression-counts`. A profile lists which contract fields
-  are required and how to compare them. There are 650 profiles across 26 domains.
+  `proteome/protein-sequence`. A profile lists which contract fields are required
+  and how to compare them. The active incubator starts with three draft profiles.
 - **Comparison report**: the result of comparing a source (output) port with a
   target (input) port. Its `status` is one of:
 
@@ -65,11 +68,11 @@ that a model is scientifically valid or clinically safe.
 The packages aren't on PyPI or npm yet. Install from a tagged release on GitHub:
 
 ```bash
-pip install "biosimulant-model-compatibility-standard @ git+https://github.com/Biosimulant/model-compatibility-standard@v0.1.0-alpha.5"
+pip install "biosimulant-model-compatibility-standard @ git+https://github.com/Biosimulant/model-compatibility-standard@v0.0.1"
 ```
 
 ```bash
-npm install github:Biosimulant/model-compatibility-standard#v0.1.0-alpha.5
+npm install github:Biosimulant/model-compatibility-standard#v0.0.1
 ```
 
 The npm install builds the package, which runs a small Python 3 script. Python 3
@@ -103,7 +106,7 @@ console.log(report.status); // LOSSLESS_CONVERSION_AVAILABLE
 ```
 
 Browser and desktop apps use the browser-safe entry point. It contains the same
-schemas and all 650 profiles, so local validation doesn't need a server call:
+schemas and active profiles, so local validation doesn't need a server call:
 
 ```ts
 import {
@@ -153,9 +156,9 @@ the same document limits, accepted-profile refinement rules, normalization,
 locks, resolution order and bundle integrity checks.
 
 The remaining release blocker is scientific rather than a missing validator
-feature: every public profile still needs authoritative sources and independent
+feature: each active profile needs authoritative sources and independent
 scientific and schema review. Review evidence is stored one profile at a time
-under `source/reviews/`; the bundle calculates `ga_ready` from those files. See
+under `source/reviews/`; release eligibility is calculated per profile. See
 [PROFILE_REVIEW.md](PROFILE_REVIEW.md).
 
 ## Repository layout

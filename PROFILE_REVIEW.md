@@ -21,8 +21,8 @@ A profile can move to `reviewed` only when it has all of the following:
 - A review date, and a domain owner who decides when to deprecate it.
 
 Until that evidence exists, the build keeps each profile's recorded review
-status and sets `release_eligible` to `false`. Today that applies to all 650
-profiles.
+status and sets `release_eligible` to `false`. Today that applies to all active
+incubator profiles.
 
 ## Internal pre-review
 
@@ -33,7 +33,7 @@ recommended fields, comparison rules, fixture names, reviewer questions and
 the remaining approval roles.
 
 `spec/v0.1/catalogue/internal-validation.json` records the machine-checkable
-result for all 650 profiles. `ready-for-external-review` means that the profile
+result for every active profile. `ready-for-external-review` means that the profile
 is distinct, typed, schema-valid and fixture-backed in both implementations. It
 does not mean that its scientific choices have been approved.
 
@@ -46,4 +46,5 @@ domain work separate and avoids treating passing code tests as a scientific
 sign-off.
 
 The bundle calculates `ga_ready` from these files. It becomes `true` only when
-all 650 profiles have complete review evidence.
+every active profile has complete review evidence. Adding a future profile does
+not invalidate previously completed profile reviews.

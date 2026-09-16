@@ -17,7 +17,7 @@ def test_full_external_review_fixture_set_for_every_profile():
     bundle = get_bundle()
     fixture_root = Path(bundle.root) / "fixtures" / "profiles"
     files = sorted(fixture_root.rglob("*.json"))
-    assert len(files) == 650
+    assert len(files) == bundle.catalogue["counts"]["profiles"]
     for path in files:
         fixture = json.loads(path.read_text())
         ref = fixture["profile_ref"]

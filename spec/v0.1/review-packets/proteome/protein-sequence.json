@@ -73,12 +73,16 @@
     "incompatible": [
       "comparison-incompatible-semantic-concept",
       "comparison-incompatible-representation-kind",
+      "comparison-incompatible-representation-alphabet",
+      "comparison-incompatible-representation-encoding",
       "comparison-incompatible-identifiers-namespace",
       "comparison-incompatible-biological-context-species"
     ],
     "invalid": [
       "negative-value-invalid-semantic-concept",
       "negative-value-invalid-representation-kind",
+      "negative-value-invalid-representation-alphabet",
+      "negative-value-invalid-representation-encoding",
       "negative-value-invalid-identifiers-namespace",
       "negative-value-invalid-identifiers-namespace-version",
       "negative-value-invalid-biological-context-species"
@@ -86,6 +90,8 @@
     "negative": [
       "negative-required-missing-semantic-concept",
       "negative-required-missing-representation-kind",
+      "negative-required-missing-representation-alphabet",
+      "negative-required-missing-representation-encoding",
       "negative-required-missing-identifiers-namespace",
       "negative-required-missing-identifiers-namespace-version",
       "negative-required-missing-biological-context-species"
@@ -98,11 +104,15 @@
     "unknown": [
       "comparison-unknown-semantic-concept",
       "comparison-unknown-representation-kind",
+      "comparison-unknown-representation-alphabet",
+      "comparison-unknown-representation-encoding",
       "comparison-unknown-identifiers-namespace",
       "comparison-unknown-identifiers-namespace-version",
       "comparison-unknown-biological-context-species",
       "comparison-unknown-target-semantic-concept",
       "comparison-unknown-target-representation-kind",
+      "comparison-unknown-target-representation-alphabet",
+      "comparison-unknown-target-representation-encoding",
       "comparison-unknown-target-identifiers-namespace",
       "comparison-unknown-target-identifiers-namespace-version",
       "comparison-unknown-target-biological-context-species",
@@ -122,6 +132,16 @@
     "comparison-incompatible-representation-kind",
     "comparison-unknown-representation-kind",
     "comparison-unknown-target-representation-kind",
+    "negative-required-missing-representation-alphabet",
+    "negative-value-invalid-representation-alphabet",
+    "comparison-incompatible-representation-alphabet",
+    "comparison-unknown-representation-alphabet",
+    "comparison-unknown-target-representation-alphabet",
+    "negative-required-missing-representation-encoding",
+    "negative-value-invalid-representation-encoding",
+    "comparison-incompatible-representation-encoding",
+    "comparison-unknown-representation-encoding",
+    "comparison-unknown-target-representation-encoding",
     "negative-required-missing-identifiers-namespace",
     "negative-value-invalid-identifiers-namespace",
     "comparison-incompatible-identifiers-namespace",
@@ -143,7 +163,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-sequence@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-sequence/v0.1",
-  "profile_sha256": "sha256:7129ebd28d32c7f9ff4aa860e13b2470fd9714a1f6f2799e2d9f2f28aefd131d",
+  "profile_sha256": "sha256:a3ef13781bace67d2a3e545e9920ebde05c55a6134fa7315f61c6d57fa1c8b82",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -173,6 +193,24 @@
       "severity": "error",
       "source": "/contract/representation",
       "target": "/contract/representation"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_ALPHABET_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/alphabet",
+      "target": "/contract/representation/alphabet"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_ENCODING_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/encoding",
+      "target": "/contract/representation/encoding"
     },
     {
       "layer": "technical",
@@ -374,6 +412,24 @@
     },
     {
       "level": "required",
+      "path": "representation.alphabet",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.encoding",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
       "path": "identifiers.namespace",
       "schema": {
         "maxLength": 4096,
@@ -422,7 +478,7 @@
     "different named schema and compatibility reviewer",
     "domain owner"
   ],
-  "stage": "WAVE_2",
+  "stage": "V0_PILOT",
   "technical_pre_review": {
     "checks": [
       "profile-definition-schema",

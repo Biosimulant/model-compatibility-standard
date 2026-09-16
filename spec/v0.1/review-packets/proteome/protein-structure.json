@@ -45,7 +45,6 @@
     "representation.isotope_state",
     "representation.protonation_state",
     "representation.stereochemistry",
-    "representation.structure_format",
     "representation.tautomer_state",
     "semantic.endpoint",
     "semantic.entity",
@@ -73,22 +72,31 @@
     "incompatible": [
       "comparison-incompatible-semantic-concept",
       "comparison-incompatible-representation-kind",
+      "comparison-incompatible-representation-structure-format",
+      "comparison-incompatible-representation-coordinate-system",
       "comparison-incompatible-identifiers-namespace",
-      "comparison-incompatible-biological-context-species"
+      "comparison-incompatible-biological-context-species",
+      "comparison-incompatible-origin-type"
     ],
     "invalid": [
       "negative-value-invalid-semantic-concept",
       "negative-value-invalid-representation-kind",
+      "negative-value-invalid-representation-structure-format",
+      "negative-value-invalid-representation-coordinate-system",
       "negative-value-invalid-identifiers-namespace",
       "negative-value-invalid-identifiers-namespace-version",
-      "negative-value-invalid-biological-context-species"
+      "negative-value-invalid-biological-context-species",
+      "negative-value-invalid-origin-type"
     ],
     "negative": [
       "negative-required-missing-semantic-concept",
       "negative-required-missing-representation-kind",
+      "negative-required-missing-representation-structure-format",
+      "negative-required-missing-representation-coordinate-system",
       "negative-required-missing-identifiers-namespace",
       "negative-required-missing-identifiers-namespace-version",
-      "negative-required-missing-biological-context-species"
+      "negative-required-missing-biological-context-species",
+      "negative-required-missing-origin-type"
     ],
     "policy": [],
     "positive": [
@@ -98,14 +106,20 @@
     "unknown": [
       "comparison-unknown-semantic-concept",
       "comparison-unknown-representation-kind",
+      "comparison-unknown-representation-structure-format",
+      "comparison-unknown-representation-coordinate-system",
       "comparison-unknown-identifiers-namespace",
       "comparison-unknown-identifiers-namespace-version",
       "comparison-unknown-biological-context-species",
+      "comparison-unknown-origin-type",
       "comparison-unknown-target-semantic-concept",
       "comparison-unknown-target-representation-kind",
+      "comparison-unknown-target-representation-structure-format",
+      "comparison-unknown-target-representation-coordinate-system",
       "comparison-unknown-target-identifiers-namespace",
       "comparison-unknown-target-identifiers-namespace-version",
       "comparison-unknown-target-biological-context-species",
+      "comparison-unknown-target-origin-type",
       "comparison-unknown-no-snapshot-identifiers-namespace-version"
     ]
   },
@@ -122,6 +136,16 @@
     "comparison-incompatible-representation-kind",
     "comparison-unknown-representation-kind",
     "comparison-unknown-target-representation-kind",
+    "negative-required-missing-representation-structure-format",
+    "negative-value-invalid-representation-structure-format",
+    "comparison-incompatible-representation-structure-format",
+    "comparison-unknown-representation-structure-format",
+    "comparison-unknown-target-representation-structure-format",
+    "negative-required-missing-representation-coordinate-system",
+    "negative-value-invalid-representation-coordinate-system",
+    "comparison-incompatible-representation-coordinate-system",
+    "comparison-unknown-representation-coordinate-system",
+    "comparison-unknown-target-representation-coordinate-system",
     "negative-required-missing-identifiers-namespace",
     "negative-value-invalid-identifiers-namespace",
     "comparison-incompatible-identifiers-namespace",
@@ -136,26 +160,26 @@
     "negative-value-invalid-biological-context-species",
     "comparison-incompatible-biological-context-species",
     "comparison-unknown-biological-context-species",
-    "comparison-unknown-target-biological-context-species"
+    "comparison-unknown-target-biological-context-species",
+    "negative-required-missing-origin-type",
+    "negative-value-invalid-origin-type",
+    "comparison-incompatible-origin-type",
+    "comparison-unknown-origin-type",
+    "comparison-unknown-target-origin-type"
   ],
   "internal_quality_errors": [],
   "label": "Protein Structure",
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-structure@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-structure/v0.1",
-  "profile_sha256": "sha256:fe5fb6245f242e8e261b58354fd4a1db0bf5bd01a4e89f53bed9adaff4e5e930",
+  "profile_sha256": "sha256:42cf67926f8d80bfc559e15f49e459cd195b50300286c305e108f5823c9b72f9",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
-        "scalar",
-        "dense_vector",
-        "sparse_vector",
-        "matrix",
-        "sparse_matrix",
-        "tensor",
-        "array",
         "record",
-        "table"
+        "table",
+        "artifact",
+        "file"
       ]
     }
   },
@@ -177,6 +201,24 @@
       "severity": "error",
       "source": "/contract/representation",
       "target": "/contract/representation"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_STRUCTURE_FORMAT_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/structure_format",
+      "target": "/contract/representation/structure_format"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_COORDINATE_SYSTEM_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/coordinate_system",
+      "target": "/contract/representation/coordinate_system"
     },
     {
       "layer": "technical",
@@ -204,6 +246,15 @@
       "severity": "error",
       "source": "/contract/biological_context/species",
       "target": "/contract/biological_context/species"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_ORIGIN_TYPE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/origin/type",
+      "target": "/contract/origin/type"
     },
     {
       "layer": "technical",
@@ -298,15 +349,6 @@
     {
       "layer": "technical",
       "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_REPRESENTATION_COORDINATE_SYSTEM_MISMATCH",
-      "severity": "error",
-      "source": "/contract/representation/coordinate_system",
-      "target": "/contract/representation/coordinate_system"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
       "operator": "labels-equal",
       "reason_code": "BMCS_DIMENSIONS_AXES_MISMATCH",
       "severity": "error",
@@ -330,15 +372,6 @@
       "severity": "error",
       "source": "/contract/lifecycle/temporal_meaning",
       "target": "/contract/lifecycle/temporal_meaning"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_ORIGIN_TYPE_MISMATCH",
-      "severity": "error",
-      "source": "/contract/origin/type",
-      "target": "/contract/origin/type"
     },
     {
       "layer": "technical",
@@ -368,16 +401,29 @@
       "path": "representation.kind",
       "schema": {
         "enum": [
-          "scalar",
-          "dense_vector",
-          "sparse_vector",
-          "matrix",
-          "sparse_matrix",
-          "tensor",
-          "array",
           "record",
-          "table"
+          "table",
+          "artifact",
+          "file"
         ]
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.structure_format",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.coordinate_system",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
       }
     },
     {
@@ -412,6 +458,15 @@
         ],
         "type": "string"
       }
+    },
+    {
+      "level": "required",
+      "path": "origin.type",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
     }
   ],
   "questions_for_reviewers": [
@@ -430,7 +485,7 @@
     "different named schema and compatibility reviewer",
     "domain owner"
   ],
-  "stage": "WAVE_2",
+  "stage": "V0_PILOT",
   "technical_pre_review": {
     "checks": [
       "profile-definition-schema",

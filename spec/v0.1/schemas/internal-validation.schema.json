@@ -13,8 +13,6 @@
       "items": {
         "type": "object"
       },
-      "maxItems": 650,
-      "minItems": 650,
       "type": "array"
     },
     "schema_version": {

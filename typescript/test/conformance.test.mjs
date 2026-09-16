@@ -7,9 +7,11 @@ import { Bundle, buildCompatibilityLock, canonicalJson, compareContracts, digest
 
 test("bundle exposes all catalogue entries", () => {
   const bundle = getBundle();
-  assert.equal(bundle.catalogue.counts.profiles, 650);
-  assert.equal(bundle.catalogue.counts.item_definitions, 271);
-  assert.equal(bundle.catalogue.counts.item_packs, 30);
+  assert.equal(bundle.catalogue.counts.profiles, bundle.catalogue.profiles.length);
+  assert.ok(bundle.catalogue.counts.item_definitions > 0);
+  assert.ok(bundle.catalogue.counts.item_packs > 0);
+  assert.ok(bundle.catalogue.profiles.length > 0);
+  assert.equal(new Set(bundle.catalogue.profiles.map((profile) => profile.id)).size, bundle.catalogue.profiles.length);
   bundle.verifyIntegrity();
 });
 
@@ -195,7 +197,7 @@ test("a profile's published transformation policy reaches the plan", () => {
   // Every profile publishes transformation_policy and nothing read it: the only policy consulted was
   // the one a caller passed in by hand, so a profile's declared approval paths had no effect on any
   // plan (decision D11).
-  const ref = "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/firing-rate/v0.1";
+  const ref = "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-sequence/v0.1";
   const source = { measurement: { unit: "Hz", scale: "nominal" }, profile_refs: [ref] };
   const target = { measurement: { unit: "Hz", scale: "ordinal" }, profile_refs: [ref] };
   const capability = adapter("https://biosimulant.com/adapters/rate-to-ordinal-band/1.0.0", source, target, "lossy");
@@ -243,10 +245,11 @@ test("resource limits fail closed with a stable reason code", () => {
 test("the term registry is published and version independent", () => {
   const bundle = getBundle();
   const registry = bundle.readJson("catalogue/terms.json");
-  assert.equal(registry.count, 650);
-  assert.equal(registry.terms.length, 650);
+  const expected = bundle.catalogue.counts.profiles;
+  assert.equal(registry.count, expected);
+  assert.equal(registry.terms.length, expected);
   const ids = registry.terms.map((term) => term.id);
-  assert.equal(new Set(ids).size, 650);
+  assert.equal(new Set(ids).size, expected);
   // A term must outlive the profile version that minted it, or a v0.2 profile would report every
   // v0.1 port as incompatible even where the meaning is unchanged (decision D3).
   assert.deepEqual(ids.filter((id) => id.includes("/v0.")), []);

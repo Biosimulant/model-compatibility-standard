@@ -73,6 +73,7 @@ def example_species(profile: dict[str, Any]) -> str:
 REVIEWS = ROOT / "source" / "reviews"
 OUTPUT = ROOT / "spec" / "v0.1"
 STANDARD = "https://biosimulant.com/standards/model-compatibility/v0.1"
+RELEASE = "0.0.1"
 JSON_TYPES = ["string", "number", "integer", "boolean", "array", "object", "null"]
 
 STATUSES = [
@@ -1633,7 +1634,7 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "method_version": {"const": "1.0"},
             "scope": {"type": "string", "minLength": 20},
             "counts": {"type": "object"},
-            "profiles": {"type": "array", "minItems": 650, "maxItems": 650, "items": {"type": "object"}},
+            "profiles": {"type": "array", "items": {"type": "object"}},
         },
     )
     return {
@@ -1666,11 +1667,8 @@ def build(root: Path) -> None:
     profiles = source["profiles"]
     items = source["item_definitions"]
     packs = source["item_packs"]
-    if (len(profiles), len(items), len(packs)) != (650, 271, 30):
-        raise SystemExit(
-            "source/catalogue.review.json must have 650 profiles, 271 items and 30 packs; "
-            f"found {len(profiles)}, {len(items)} and {len(packs)}"
-        )
+    if not profiles:
+        raise SystemExit("source/catalogue.review.json must contain at least one active profile")
     reviews = load_profile_reviews(profiles)
     for profile in profiles:
         if profile.get("review_status") == "reviewed" and profile["id"] not in reviews:
@@ -2143,11 +2141,11 @@ def build(root: Path) -> None:
     (root / "examples" / "legacy-model.yaml").write_text(
         'schema_version: "2.0"\nstandard: other\nbiosim:\n  entrypoint: src.model:Model\n  communication_step: 1.0\nio:\n  inputs:\n    - name: expression\n      signal_type: array\n      dtype: float32\n      shape: ["*"]\n  outputs: []\n'
     )
-    example_ref = "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/gene-expression-counts/v0.1"
+    example_ref = "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-sequence/v0.1"
     example_digest = next(entry["sha256"] for entry in summaries if entry["ref"] == example_ref)
-    example_concept = profile_concept({"domain": "transcriptome", "name": "gene-expression-counts"})
+    example_concept = profile_concept({"domain": "proteome", "name": "protein-sequence"})
     (root / "examples" / "compatible-model.yaml").write_text(
-        f'schema_version: "2.0"\nstandard: other\ncompatibility:\n  standard: https://biosimulant.com/standards/model-compatibility/v0.1\n  profiles:\n    - ref: {example_ref}\n      sha256: {example_digest}\nbiosim:\n  entrypoint: src.model:Model\n  communication_step: 1.0\nio:\n  inputs:\n    - name: expression\n      signal_type: array\n      dtype: float32\n      shape: ["*"]\n      contract:\n        profile_refs:\n          - {example_ref}\n        semantic:\n          concept: {example_concept}\n        representation:\n          kind: dense_vector\n        identifiers:\n          namespace: ensembl-gene\n          namespace_version: release-pinned\n        biological_context:\n          species: NCBITaxon:9606\n  outputs: []\n'
+        f'schema_version: "2.0"\nstandard: other\ncompatibility:\n  standard: https://biosimulant.com/standards/model-compatibility/v0.1\n  profiles:\n    - ref: {example_ref}\n      sha256: {example_digest}\nbiosim:\n  entrypoint: src.model:Model\n  communication_step: 1.0\nio:\n  inputs:\n    - name: protein_sequence\n      signal_type: record\n      contract:\n        profile_refs:\n          - {example_ref}\n        semantic:\n          concept: {example_concept}\n          subject: protein\n        representation:\n          kind: record\n          alphabet: amino-acid\n          encoding: single-letter\n        identifiers:\n          namespace: uniprot\n          namespace_version: release-pinned\n        biological_context:\n          species: NCBITaxon:9606\n  outputs: []\n'
     )
 
     files = []
@@ -2157,9 +2155,13 @@ def build(root: Path) -> None:
             files.append({"path": path.relative_to(root).as_posix(), "sha256": "sha256:" + hashlib.sha256(data).hexdigest(), "size_bytes": len(data)})
     remaining_reviews = len(summaries) - reviewed_count
     manifest_without_digest = {
-        "schema_version": "0.1", "standard": STANDARD, "release": "0.1.0-alpha.5",
+        "schema_version": "0.1", "standard": STANDARD, "release": RELEASE,
         "canonicalization": "RFC8785", "files": files,
-        "counts": {"profiles": 650, "item_definitions": 266, "item_packs": 30},
+        "counts": {
+            "profiles": len(summaries),
+            "item_definitions": len(enriched_items),
+            "item_packs": len(packs),
+        },
         "ga_ready": ga_ready,
         "ga_blockers": [] if ga_ready else [
             f"{remaining_reviews} profiles still need complete, independent scientific and schema review evidence."

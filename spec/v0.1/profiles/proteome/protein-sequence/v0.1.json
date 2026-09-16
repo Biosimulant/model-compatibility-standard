@@ -40,6 +40,24 @@
       "layer": "technical",
       "missing": "unknown",
       "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_ALPHABET_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/alphabet",
+      "target": "/contract/representation/alphabet"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_ENCODING_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/encoding",
+      "target": "/contract/representation/encoding"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
       "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_MISMATCH",
       "severity": "error",
       "source": "/contract/identifiers/namespace",
@@ -209,7 +227,7 @@
     }
   ],
   "compatibility_notes": "Two ports match only when every field the target port requires is satisfied. If required information is missing, the result is UNKNOWN. Any conversion between ports must be a declared, versioned transformation.",
-  "description": "Protein Sequence (Proteome and protein structure): what a port must declare, and how two ports are compared.",
+  "description": "An amino-acid residue sequence representing a declared protein or polypeptide, with the identifier namespace, namespace version and organism context needed to interpret it.",
   "domain": "proteome",
   "domain_label": "Proteome and protein structure",
   "extends": [],
@@ -250,6 +268,24 @@
           "artifact",
           "file"
         ]
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.alphabet",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.encoding",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
       }
     },
     {
@@ -297,7 +333,7 @@
     "reviewer": null,
     "schema_reviewer": null,
     "sources": [],
-    "status": "candidate"
+    "status": "draft"
   },
   "review_questions": [
     "Does the proposed concept identify Protein Sequence narrowly enough to prevent a different scientific quantity from matching?",
@@ -311,7 +347,7 @@
     "What uses and scientific claims must this profile explicitly exclude?"
   ],
   "scientific_claim": "This profile checks whether two model interfaces fit together. It doesn't show that a model is scientifically valid or clinically safe.",
-  "stage": "WAVE_2",
+  "stage": "V0_PILOT",
   "technical_pre_review": {
     "checks": [
       "profile-definition-schema",

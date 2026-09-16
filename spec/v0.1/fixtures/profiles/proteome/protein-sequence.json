@@ -10,6 +10,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -33,6 +35,8 @@
           "type": "declared"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -49,6 +53,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -66,6 +72,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {}
@@ -85,6 +93,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -109,6 +119,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -125,6 +137,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -144,6 +158,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {}
@@ -158,6 +174,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -177,6 +195,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -193,6 +213,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {}
@@ -207,7 +229,10 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
-        "representation": {},
+        "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding"
+        },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
         }
@@ -227,6 +252,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "not-an-allowed-value"
         },
         "semantic": {
@@ -251,6 +278,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar-different"
         },
         "semantic": {
@@ -267,6 +296,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -285,7 +316,10 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
-        "representation": {},
+        "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding"
+        },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
         }
@@ -300,6 +334,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -319,6 +355,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -334,7 +372,332 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
-        "representation": {},
+        "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "encoding": "example-encoding",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      },
+      "field": "representation.alphabet",
+      "name": "negative-required-missing-representation-alphabet",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "alphabet": 7,
+          "encoding": "example-encoding",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      },
+      "field": "representation.alphabet",
+      "name": "negative-value-invalid-representation-alphabet",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.alphabet",
+      "name": "comparison-incompatible-representation-alphabet",
+      "reason_code": "BMCS_REPRESENTATION_ALPHABET_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "alphabet": "example-alphabet-different",
+          "encoding": "example-encoding",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      }
+    },
+    {
+      "field": "representation.alphabet",
+      "name": "comparison-unknown-representation-alphabet",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "encoding": "example-encoding",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      }
+    },
+    {
+      "field": "representation.alphabet",
+      "name": "comparison-unknown-target-representation-alphabet",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "encoding": "example-encoding",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "alphabet": "example-alphabet",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      },
+      "field": "representation.encoding",
+      "name": "negative-required-missing-representation-encoding",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": 7,
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      },
+      "field": "representation.encoding",
+      "name": "negative-value-invalid-representation-encoding",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.encoding",
+      "name": "comparison-incompatible-representation-encoding",
+      "reason_code": "BMCS_REPRESENTATION_ENCODING_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding-different",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      }
+    },
+    {
+      "field": "representation.encoding",
+      "name": "comparison-unknown-representation-encoding",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "alphabet": "example-alphabet",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      }
+    },
+    {
+      "field": "representation.encoding",
+      "name": "comparison-unknown-target-representation-encoding",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "representation": {
+          "alphabet": "example-alphabet",
+          "kind": "scalar"
+        },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
         }
@@ -349,6 +712,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -370,6 +735,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -394,6 +761,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -410,6 +779,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -428,6 +799,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -444,6 +817,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -463,6 +838,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -478,6 +855,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -494,6 +873,8 @@
           "namespace": "example-namespace"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -515,6 +896,8 @@
           "namespace_version": 7
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -538,6 +921,8 @@
           "namespace_version": "example-namespace-version-different"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -554,6 +939,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -572,6 +959,8 @@
           "namespace": "example-namespace"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -588,6 +977,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -607,6 +998,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -622,6 +1015,8 @@
           "namespace": "example-namespace"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -637,6 +1032,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -658,6 +1055,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -682,6 +1081,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -698,6 +1099,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -715,6 +1118,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -731,6 +1136,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -750,6 +1157,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {
@@ -764,6 +1173,8 @@
           "namespace_version": "example-namespace-version"
         },
         "representation": {
+          "alphabet": "example-alphabet",
+          "encoding": "example-encoding",
           "kind": "scalar"
         },
         "semantic": {

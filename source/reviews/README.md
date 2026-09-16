@@ -26,4 +26,5 @@ fixtures, intended use and limits. Do not use generated text as scientific
 approval.
 
 The standard build sets `release_eligible: true` only after the review file is
-complete. `ga_ready` becomes true only when all 650 profiles are eligible.
+complete. `ga_ready` becomes true only when every profile in the active
+incubator catalogue is eligible.

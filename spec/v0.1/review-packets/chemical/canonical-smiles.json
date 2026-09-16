@@ -40,7 +40,6 @@
     "measurement.tolerance",
     "measurement.transform",
     "measurement.unit",
-    "representation.canonicalization",
     "representation.conformer_method",
     "representation.encoding",
     "representation.endianness",
@@ -72,15 +71,24 @@
     ],
     "incompatible": [
       "comparison-incompatible-semantic-concept",
-      "comparison-incompatible-representation-kind"
+      "comparison-incompatible-representation-kind",
+      "comparison-incompatible-representation-canonicalization",
+      "comparison-incompatible-representation-normalization-tool",
+      "comparison-incompatible-representation-normalization-version"
     ],
     "invalid": [
       "negative-value-invalid-semantic-concept",
-      "negative-value-invalid-representation-kind"
+      "negative-value-invalid-representation-kind",
+      "negative-value-invalid-representation-canonicalization",
+      "negative-value-invalid-representation-normalization-tool",
+      "negative-value-invalid-representation-normalization-version"
     ],
     "negative": [
       "negative-required-missing-semantic-concept",
-      "negative-required-missing-representation-kind"
+      "negative-required-missing-representation-kind",
+      "negative-required-missing-representation-canonicalization",
+      "negative-required-missing-representation-normalization-tool",
+      "negative-required-missing-representation-normalization-version"
     ],
     "policy": [],
     "positive": [
@@ -90,8 +98,14 @@
     "unknown": [
       "comparison-unknown-semantic-concept",
       "comparison-unknown-representation-kind",
+      "comparison-unknown-representation-canonicalization",
+      "comparison-unknown-representation-normalization-tool",
+      "comparison-unknown-representation-normalization-version",
       "comparison-unknown-target-semantic-concept",
-      "comparison-unknown-target-representation-kind"
+      "comparison-unknown-target-representation-kind",
+      "comparison-unknown-target-representation-canonicalization",
+      "comparison-unknown-target-representation-normalization-tool",
+      "comparison-unknown-target-representation-normalization-version"
     ]
   },
   "fixture_names": [
@@ -106,14 +120,29 @@
     "negative-value-invalid-representation-kind",
     "comparison-incompatible-representation-kind",
     "comparison-unknown-representation-kind",
-    "comparison-unknown-target-representation-kind"
+    "comparison-unknown-target-representation-kind",
+    "negative-required-missing-representation-canonicalization",
+    "negative-value-invalid-representation-canonicalization",
+    "comparison-incompatible-representation-canonicalization",
+    "comparison-unknown-representation-canonicalization",
+    "comparison-unknown-target-representation-canonicalization",
+    "negative-required-missing-representation-normalization-tool",
+    "negative-value-invalid-representation-normalization-tool",
+    "comparison-incompatible-representation-normalization-tool",
+    "comparison-unknown-representation-normalization-tool",
+    "comparison-unknown-target-representation-normalization-tool",
+    "negative-required-missing-representation-normalization-version",
+    "negative-value-invalid-representation-normalization-version",
+    "comparison-incompatible-representation-normalization-version",
+    "comparison-unknown-representation-normalization-version",
+    "comparison-unknown-target-representation-normalization-version"
   ],
   "internal_quality_errors": [],
   "label": "Canonical SMILES",
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/canonical-smiles@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/canonical-smiles/v0.1",
-  "profile_sha256": "sha256:c2fae80aef2f7e2bd3dd0b397b5407814cb325a5485d333b7a59306c08c868c7",
+  "profile_sha256": "sha256:531d6ca4c985c26c96c7b203fc144714d07eb9eae95b911a928170787598ec67",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -143,6 +172,33 @@
       "severity": "error",
       "source": "/contract/representation",
       "target": "/contract/representation"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_CANONICALIZATION_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/canonicalization",
+      "target": "/contract/representation/canonicalization"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_NORMALIZATION_TOOL_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/normalization_tool",
+      "target": "/contract/representation/normalization_tool"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_NORMALIZATION_VERSION_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/normalization_version",
+      "target": "/contract/representation/normalization_version"
     },
     {
       "layer": "technical",
@@ -332,6 +388,33 @@
           "file"
         ]
       }
+    },
+    {
+      "level": "required",
+      "path": "representation.canonicalization",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.normalization_tool",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.normalization_version",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
     }
   ],
   "questions_for_reviewers": [
@@ -349,7 +432,7 @@
     "different named schema and compatibility reviewer",
     "domain owner"
   ],
-  "stage": "V0.1_PILOT",
+  "stage": "V0_PILOT",
   "technical_pre_review": {
     "checks": [
       "profile-definition-schema",

@@ -8,9 +8,9 @@ import {
   validateManifest,
 } from "../dist/browser.js";
 
-test("browser entry has all profiles and validates without Node file APIs", () => {
+test("browser entry has all active profiles and validates without Node file APIs", () => {
   const bundle = getBrowserBundle();
-  assert.equal(bundle.catalogue.counts.profiles, 650);
+  assert.equal(bundle.catalogue.counts.profiles, bundle.catalogue.profiles.length);
   assert.deepEqual(validateManifest(parseYaml('schema_version: "2.0"\n')), []);
 
   const summary = bundle.catalogue.profiles[0];

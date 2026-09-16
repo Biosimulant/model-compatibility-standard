@@ -1,4 +1,4 @@
-"""Measure what the comparison engine actually answers, across all 650 profiles.
+"""Measure what the comparison engine actually answers across active profiles.
 
 The remediation plan's main risk is over-requirement: fixes that turn real couplings into UNKNOWN.
 This script runs a fixed set of scenarios against every profile and tallies the statuses, so the

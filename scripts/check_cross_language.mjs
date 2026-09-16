@@ -17,14 +17,14 @@ import {
 
 const root = join(dirname(fileURLToPath(import.meta.url)), "..");
 const bundle = getBundle();
-const profile = bundle.catalogue.profiles.find((item) => item.ref.endsWith("/transcriptome/gene-expression-counts/v0.1"));
+const profile = bundle.catalogue.profiles.find((item) => item.ref.endsWith("/proteome/protein-sequence/v0.1"));
 assert.ok(profile);
 
 const manifest = {
   schema_version: "2.0",
   compatibility: { standard: "https://biosimulant.com/standards/model-compatibility/v0.1", profiles: [{ ref: profile.ref, sha256: profile.sha256 }] },
   io: {
-    inputs: [{ name: "expression", signal_type: "array", contract: { profile_refs: [profile.ref], semantic: { concept: "https://biosimulant.com/standards/model-compatibility/terms/transcriptome/gene-expression-counts", qualifiers: ["z", "a"] }, representation: { kind: "dense_vector" }, identifiers: { namespace: "ensembl-gene", namespace_version: "release-pinned" }, biological_context: { species: "NCBITaxon:9606" } } }],
+    inputs: [{ name: "protein_sequence", signal_type: "record", contract: { profile_refs: [profile.ref], semantic: { concept: "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence", subject: "protein", qualifiers: ["z", "a"] }, representation: { kind: "record", alphabet: "amino-acid", encoding: "single-letter" }, identifiers: { namespace: "uniprot", namespace_version: "release-pinned" }, biological_context: { species: "NCBITaxon:9606" } } }],
     outputs: [],
   },
 };

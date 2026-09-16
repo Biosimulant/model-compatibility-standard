@@ -1,989 +1,109 @@
 {
   "schema_version": "0.1",
-  "title": "Scientific checks for the Biosimulant Model Compatibility Standard v0.1",
-  "purpose": "Language-neutral expectations about scientific outcomes, read by python/tests/test_scientific_checks.py and typescript/test/scientific-checks.test.mjs. A defect case states the scientifically correct outcome that the current release does not meet. A guard case states an outcome the current release already meets and that remediation must not break.",
+  "title": "Scientific guards for the active v0 pilot profiles",
+  "purpose": "Language-neutral scientific expectations for the three profiles in the active v0 catalogue. Historical checks for the former 650-profile prototype remain available in Git history and are not part of the active conformance suite.",
   "rules": [
-    "Only pin an outcome that is correct under every open design decision. When the correct outcome depends on a decision, assert the property that holds under all of its options (for example 'not a direct match') and name the decision.",
-    "Build contracts from a profile's generated positive fixture plus explicit patches, so each case shows exactly what differs.",
-    "When a defect is fixed, change its kind to guard in the same change. Strict expected-failure handling makes an unexpected pass fail the suite.",
-    "A case may set \"normalize\": true to compare normalised contracts, which is what the documented validation pipeline does before comparison.",
-    "A case that has been fixed keeps its observed_at_review record and gains fixed_by, so the suite shows both what the release used to do and which decision changed it."
+    "Build contracts from each active profile's generated positive fixture plus explicit patches.",
+    "Keep only checks that apply to profiles in the active catalogue.",
+    "Add profile-specific scientific guards as each profile is reviewed and approved."
   ],
-  "strict_mode": "Set BMCS_SCIENTIFIC_STRICT=1 to run every defect as an ordinary failing test. GA requires the strict run to pass.",
-  "plan": "docs/scientific-remediation/REMEDIATION_PLAN.md",
+  "strict_mode": "The active v0 suite contains guards only; every guard must pass in Python and TypeScript.",
+  "plan": "README.md",
   "profile_ref_prefix": "https://biosimulant.com/standards/model-compatibility/profiles/",
   "profile_ref_suffix": "/v0.1",
   "cases": [
     {
-      "id": "BMCS-SCI-001",
+      "id": "BMCS-V0-001",
       "kind": "guard",
       "check": "compare",
-      "title": "Raw counts and log-normalised expression resolve as a direct match",
-      "profile": "transcriptome/single-cell-expression-matrix",
-      "source_patch": {
-        "measurement": {
-          "quantity": "read_count",
-          "scale": "count",
-          "unit": "1"
-        }
-      },
-      "target_patch": {
-        "measurement": {
-          "quantity": "log1p_normalized_expression",
-          "scale": "log",
-          "unit": "1"
-        }
-      },
-      "expect": {
-        "status_not_in": [
-          "EXACT",
-          "DIRECT_COMPATIBLE",
-          "LOSSLESS_CONVERSION_AVAILABLE"
-        ],
-        "policy_decision_not": "ALLOW"
-      },
-      "observed_at_review": {
-        "status": "DIRECT_COMPATIBLE",
-        "policy_decision": "ALLOW"
-      },
-      "why": "Library-size normalisation followed by log1p is a lossy, non-invertible transformation. Declared measurement fields that both ports supply are never compared because the profile does not require them.",
-      "conditions": "Both ports declare their measurement. When either port is silent the outcome is a separate question for D2.",
-      "decision": "D2",
-      "report_finding": "S3",
-      "sources": [
-        "robinson-2010-tmm",
-        "wagner-2012-tpm"
-      ],
-      "fixed_by": "D2",
-      "fixed_at": "2026-09-15"
+      "title": "Identical protein-sequence contracts are exact matches",
+      "profile": "proteome/protein-sequence",
+      "expect": { "status": "EXACT" },
+      "why": "The pilot needs a positive baseline showing that the same declared sequence contract can connect without conversion or approval.",
+      "conditions": "Both ports make the same complete declarations for the active protein-sequence profile.",
+      "decision": "V0 active-profile reset",
+      "report_finding": "Positive baseline"
     },
     {
-      "id": "BMCS-SCI-002",
+      "id": "BMCS-V0-002",
       "kind": "guard",
       "check": "compare",
-      "title": "Ensembl gene identifiers and HGNC symbols resolve as a direct match",
-      "profile": "transcriptome/single-cell-expression-matrix",
-      "source_patch": {
-        "identifiers": {
-          "namespace": "ensembl.gene",
-          "namespace_version": "114"
-        }
-      },
-      "target_patch": {
-        "identifiers": {
-          "namespace": "hgnc.symbol",
-          "namespace_version": "2026-09-01"
-        }
-      },
-      "expect": {
-        "status_not_in": [
-          "EXACT",
-          "DIRECT_COMPATIBLE",
-          "LOSSLESS_CONVERSION_AVAILABLE"
-        ],
-        "policy_decision_not": "ALLOW"
-      },
-      "observed_at_review": {
-        "status": "DIRECT_COMPATIBLE",
-        "policy_decision": "ALLOW"
-      },
-      "why": "Without a mapping, the two ports index different feature universes. Declared identifier fields that both ports supply are never compared.",
-      "conditions": "No mapping snapshot is supplied. A pinned mapping that is total over the declared feature universe and bijective can make a lossless result correct (D7). That case cannot be expressed in v0.1 and is not tested.",
-      "decision": "D2, D7",
-      "report_finding": "S3",
-      "sources": [
-        "ensembl-2024",
-        "bioregistry-2022"
-      ],
-      "fixed_by": "D2",
-      "fixed_at": "2026-09-15"
+      "title": "Different protein-sequence alphabets are incompatible",
+      "profile": "proteome/protein-sequence",
+      "source_patch": { "representation": { "alphabet": "amino-acid" } },
+      "target_patch": { "representation": { "alphabet": "nucleotide" } },
+      "expect": { "status": "INCOMPATIBLE" },
+      "why": "Amino-acid and nucleotide strings do not have the same biological interpretation and cannot be treated as direct substitutes.",
+      "conditions": "Both ports explicitly declare their sequence alphabet and no translation step is supplied.",
+      "decision": "V0 protein-sequence contract",
+      "report_finding": "Contradictory sequence representation"
     },
     {
-      "id": "BMCS-SCI-003",
-      "kind": "guard",
-      "check": "compare",
-      "title": "A value in mg and a value in s resolve as a direct match",
-      "profile": "core/scalar-quantity",
-      "source_patch": {
-        "measurement": {
-          "unit": "mg"
-        }
-      },
-      "target_patch": {
-        "measurement": {
-          "unit": "s"
-        }
-      },
-      "expect": {
-        "status": "INCOMPATIBLE"
-      },
-      "observed_at_review": {
-        "status": "DIRECT_COMPATIBLE",
-        "policy_decision": "ALLOW"
-      },
-      "why": "Mass and time are different dimensions, so declared units on both ports are a known contradiction whatever unit system is adopted.",
-      "conditions": "Both ports declare a unit.",
-      "decision": "D1, D2",
-      "report_finding": "S3, S4",
-      "sources": [
-        "vim-jcgm-200-2012",
-        "si-brochure-9"
-      ],
-      "fixed_by": "D1, D2",
-      "fixed_at": "2026-09-15"
-    },
-    {
-      "id": "BMCS-SCI-004",
-      "kind": "guard",
-      "check": "compare",
-      "title": "A firing rate converts between concentration units without loss",
-      "profile": "neuroscience/firing-rate",
-      "source_patch": {
-        "measurement": {
-          "unit": "umol/L"
-        }
-      },
-      "target_patch": {
-        "measurement": {
-          "unit": "mmol/L"
-        }
-      },
-      "expect": {
-        "status_not_in": [
-          "EXACT",
-          "DIRECT_COMPATIBLE",
-          "LOSSLESS_CONVERSION_AVAILABLE"
-        ]
-      },
-      "observed_at_review": {
-        "status": "LOSSLESS_CONVERSION_AVAILABLE",
-        "policy_decision": "ALLOW"
-      },
-      "why": "A firing rate is a frequency. Amount-of-substance concentration units are not units of that quantity, so no conversion between them can describe a firing rate.",
-      "conditions": "Both units are amount-of-substance concentrations, which the profile's quantity kind is not. Dimensional analysis alone accepts the conversion, so the quantity kind has to refuse it.",
-      "decision": "D1",
-      "report_finding": "S4, S7",
-      "sources": [
-        "vim-jcgm-200-2012",
-        "ucum-2.2"
-      ],
-      "fixed_by": "D1",
-      "fixed_at": "2026-09-15"
-    },
-    {
-      "id": "BMCS-SCI-005",
+      "id": "BMCS-V0-003",
       "kind": "guard",
       "check": "validate",
-      "title": "A firing-rate contract in kg passes validation",
-      "profile": "neuroscience/firing-rate",
-      "source_patch": {
-        "measurement": {
-          "unit": "kg"
-        }
-      },
-      "expect": {
-        "error_findings": "at-least-one"
-      },
-      "observed_at_review": {
-        "error_findings": 0
-      },
-      "why": "The declared unit's dimension (mass) contradicts the profile's quantity (frequency).",
-      "conditions": "None.",
-      "decision": "D1",
-      "report_finding": "S4",
-      "sources": [
-        "vim-jcgm-200-2012",
-        "ucum-2.2"
-      ],
-      "fixed_by": "D1",
-      "fixed_at": "2026-09-15"
+      "title": "Protein-sequence encoding is required",
+      "profile": "proteome/protein-sequence",
+      "source_remove": ["representation.encoding"],
+      "expect": { "error_findings": "at-least-one" },
+      "why": "A sequence cannot be interpreted reliably unless its encoding is declared.",
+      "conditions": "A contract claims the protein-sequence profile but omits the required encoding.",
+      "decision": "V0 protein-sequence contract",
+      "report_finding": "Missing required representation information"
     },
     {
-      "id": "BMCS-SCI-006",
+      "id": "BMCS-V0-004",
       "kind": "guard",
       "check": "compare",
-      "title": "Body mass in g and kg is reported incompatible",
-      "profile": "physiology/body-mass",
-      "source_patch": {
-        "measurement": {
-          "unit": "g"
-        }
-      },
-      "target_patch": {
-        "measurement": {
-          "unit": "kg"
-        }
-      },
-      "expect": {
-        "status": "LOSSLESS_CONVERSION_AVAILABLE"
-      },
-      "observed_at_review": {
-        "status": "INCOMPATIBLE",
-        "policy_decision": "BLOCK"
-      },
-      "why": "Grams and kilograms are units of the same quantity related by an exact factor of 1000.",
-      "conditions": "None.",
-      "decision": "D1",
-      "report_finding": "S4, S8",
-      "sources": [
-        "si-brochure-9",
-        "ucum-2.2"
-      ],
-      "fixed_by": "D1",
-      "fixed_at": "2026-09-15"
+      "title": "Different canonicalisation methods do not directly match",
+      "profile": "chemical/canonical-smiles",
+      "source_patch": { "representation": { "canonicalization": "method-a" } },
+      "target_patch": { "representation": { "canonicalization": "method-b" } },
+      "expect": { "status": "INCOMPATIBLE" },
+      "why": "Canonical SMILES is method-dependent, so strings produced by different declared canonicalisation methods cannot be assumed identical.",
+      "conditions": "Both ports declare different canonicalisation methods and no normalising adapter is supplied.",
+      "decision": "V0 canonical-SMILES contract",
+      "report_finding": "Contradictory canonicalisation provenance"
     },
     {
-      "id": "BMCS-SCI-007",
-      "kind": "guard",
-      "check": "compare",
-      "title": "Body temperature in Cel and K is reported incompatible",
-      "profile": "physiology/body-temperature",
-      "source_patch": {
-        "measurement": {
-          "unit": "Cel"
-        }
-      },
-      "target_patch": {
-        "measurement": {
-          "unit": "K"
-        }
-      },
-      "expect": {
-        "status": "LOSSLESS_CONVERSION_AVAILABLE"
-      },
-      "observed_at_review": {
-        "status": "INCOMPATIBLE",
-        "policy_decision": "BLOCK"
-      },
-      "why": "Body temperature is an absolute temperature. Celsius and kelvin values of an absolute temperature are related exactly by an offset of 273.15.",
-      "conditions": "Absolute temperatures only. A temperature difference converts with factor 1 and no offset and needs its own quantity kind (D1); that case is not expressible in v0.1 and is not tested.",
-      "decision": "D1",
-      "report_finding": "S4",
-      "sources": [
-        "si-brochure-9",
-        "ucum-2.2"
-      ],
-      "fixed_by": "D1",
-      "fixed_at": "2026-09-15"
-    },
-    {
-      "id": "BMCS-SCI-008",
-      "kind": "guard",
-      "check": "compare",
-      "title": "Heart rate in 1/s and /min is reported incompatible",
-      "profile": "physiology/heart-rate",
-      "source_patch": {
-        "measurement": {
-          "unit": "1/s"
-        }
-      },
-      "target_patch": {
-        "measurement": {
-          "unit": "/min"
-        }
-      },
-      "expect": {
-        "status": "LOSSLESS_CONVERSION_AVAILABLE"
-      },
-      "observed_at_review": {
-        "status": "INCOMPATIBLE",
-        "policy_decision": "BLOCK"
-      },
-      "why": "Per second and per minute are units of the same quantity related by an exact factor of 60.",
-      "conditions": "None.",
-      "decision": "D1",
-      "report_finding": "S4",
-      "sources": [
-        "si-brochure-9",
-        "ucum-2.2"
-      ],
-      "fixed_by": "D1",
-      "fixed_at": "2026-09-15"
-    },
-    {
-      "id": "BMCS-SCI-009",
-      "kind": "guard",
-      "check": "compare",
-      "title": "Plasma concentration in umol/L and mol/L is reported incompatible",
-      "profile": "pharmacology/plasma-concentration",
-      "source_patch": {
-        "measurement": {
-          "unit": "umol/L"
-        }
-      },
-      "target_patch": {
-        "measurement": {
-          "unit": "mol/L"
-        }
-      },
-      "expect": {
-        "status": "LOSSLESS_CONVERSION_AVAILABLE"
-      },
-      "observed_at_review": {
-        "status": "INCOMPATIBLE",
-        "policy_decision": "BLOCK"
-      },
-      "why": "Micromolar and moles per litre are units of the same amount-of-substance concentration related by an exact factor of 10^6.",
-      "conditions": "The same amount-of-substance concentration written with a different prefix.",
-      "decision": "D1",
-      "report_finding": "S4",
-      "sources": [
-        "si-brochure-9",
-        "ucum-2.2"
-      ],
-      "fixed_by": "D1",
-      "fixed_at": "2026-09-15"
-    },
-    {
-      "id": "BMCS-SCI-010",
-      "kind": "guard",
-      "check": "compare",
-      "title": "An unspecified species connected to a human-only port is reported as a contradiction",
-      "profile": "neuroscience/firing-rate",
-      "source_patch": {
-        "biological_context": {
-          "species": "any"
-        }
-      },
-      "expect": {
-        "status_not_in": [
-          "INCOMPATIBLE"
-        ]
-      },
-      "observed_at_review": {
-        "status": "INCOMPATIBLE",
-        "policy_decision": "BLOCK"
-      },
-      "why": "'any' has no defined meaning yet. Under each candidate meaning - a wildcard, missing evidence, or species-independent content - the correct result is compatible or UNKNOWN, never a known contradiction.",
-      "conditions": "Which of those results is correct is for D5, which must define 'any' before a stronger assertion is added.",
-      "decision": "D5",
-      "report_finding": "S5",
-      "sources": [
-        "ncbitaxon-schoch-2020"
-      ],
-      "fixed_by": "D5",
-      "fixed_at": "2026-09-15"
-    },
-    {
-      "id": "BMCS-SCI-011",
-      "kind": "guard",
-      "check": "fixture-invariant",
-      "invariant": "conversion-within-dimension",
-      "title": "Generated unit-conversion fixtures convert between units of another quantity",
-      "expect": {
-        "offenders": "none"
-      },
-      "observed_at_review": {
-        "offenders": 110
-      },
-      "why": "Every profile that requires a unit receives the same nM to uM fixture, including frequencies, times, masses and temperatures, and both implementations are tested to agree on it.",
-      "conditions": "Checks that the conversion's source unit, target unit and the positive fixture's unit share one dimension.",
-      "decision": "D9",
-      "report_finding": "S7",
-      "sources": [
-        "vim-jcgm-200-2012"
-      ],
-      "fixed_by": "D9",
-      "fixed_at": "2026-09-15"
-    },
-    {
-      "id": "BMCS-SCI-012",
-      "kind": "guard",
-      "check": "fixture-invariant",
-      "invariant": "contradiction-cross-dimension",
-      "title": "Generated unit-contradiction fixtures pair units of the same quantity",
-      "expect": {
-        "offenders": "none"
-      },
-      "observed_at_review": {
-        "offenders": 6
-      },
-      "why": "The contradiction unit is hard-coded to kg, so every profile measured in g asserts that g and kg are incompatible.",
-      "conditions": "Checks that the two units in a contradiction fixture have different dimensions.",
-      "decision": "D9",
-      "report_finding": "S8",
-      "sources": [
-        "si-brochure-9"
-      ],
-      "fixed_by": "D9",
-      "fixed_at": "2026-09-15"
-    },
-    {
-      "id": "BMCS-SCI-013",
-      "kind": "guard",
-      "check": "fixture-invariant",
-      "invariant": "probability-scale-dimensionless",
-      "title": "Generated positive fixtures put dimensional quantities on a probability scale",
-      "expect": {
-        "offenders": "none"
-      },
-      "observed_at_review": {
-        "offenders": 17
-      },
-      "why": "Scale values are chosen by substring matching on profile names ('concentration' contains 'ratio'), so concentrations and rates are declared as probabilities.",
-      "conditions": "Checks only that a probability is dimensionless. Whether a bounded fraction should be 'probability' or a separate 'proportion' is for D8.",
-      "decision": "D8, D9",
-      "report_finding": "S6",
-      "sources": [
-        "stevens-1946",
-        "vim-jcgm-200-2012"
-      ],
-      "fixed_by": "D8, D9",
-      "fixed_at": "2026-09-15"
-    },
-    {
-      "id": "BMCS-SCI-014",
-      "kind": "guard",
-      "check": "compare",
-      "title": "Variants on different reference assemblies resolve as a direct match",
-      "profile": "genome/single-nucleotide-variant",
-      "source_patch": {
-        "representation": {
-          "reference_assembly": "GRCh37"
-        }
-      },
-      "target_patch": {
-        "representation": {
-          "reference_assembly": "GRCh38"
-        }
-      },
-      "expect": {
-        "status_not_in": [
-          "EXACT",
-          "DIRECT_COMPATIBLE",
-          "LOSSLESS_CONVERSION_AVAILABLE"
-        ],
-        "policy_decision_not": "ALLOW"
-      },
-      "observed_at_review": {
-        "status": "DIRECT_COMPATIBLE",
-        "policy_decision": "ALLOW"
-      },
-      "why": "The same coordinates on GRCh37 and GRCh38 denote different genomic positions. Liftover is a transformation that can fail per position, so it is never a silent direct match.",
-      "conditions": "Both ports declare the assembly. Whether the correct result is INCOMPATIBLE or a declared lossy liftover is for D2 and D7; either satisfies this check.",
-      "decision": "D2, D7",
-      "report_finding": "S3",
-      "sources": [
-        "spdi-2020",
-        "vrs-2021"
-      ],
-      "fixed_by": "D2",
-      "fixed_at": "2026-09-15"
-    },
-    {
-      "id": "BMCS-SCI-015",
-      "kind": "guard",
-      "check": "compare",
-      "title": "A simulated value satisfies a port that requires measured data",
-      "profile": "physiology/heart-rate",
-      "source_patch": {
-        "origin": {
-          "type": "simulated"
-        }
-      },
-      "target_patch": {
-        "origin": {
-          "type": "measured"
-        }
-      },
-      "expect": {
-        "status_not_in": [
-          "EXACT",
-          "DIRECT_COMPATIBLE",
-          "LOSSLESS_CONVERSION_AVAILABLE"
-        ],
-        "policy_decision_not": "ALLOW"
-      },
-      "observed_at_review": {
-        "status": "DIRECT_COMPATIBLE",
-        "policy_decision": "ALLOW"
-      },
-      "why": "Measured, simulated and inferred values must never substitute for one another without being visible. Both ports declare origin.type and the target asks for measured data, yet the field is never compared.",
-      "conditions": "Whether this surfaces as INCOMPATIBLE or as a policy refusal is for D12; either satisfies this check.",
-      "decision": "D2, D12",
-      "report_finding": "S3",
-      "sources": [
-        "obi-2016"
-      ],
-      "fixed_by": "D2",
-      "fixed_at": "2026-09-15"
-    },
-    {
-      "id": "BMCS-SCI-016",
+      "id": "BMCS-V0-005",
       "kind": "guard",
       "check": "validate",
-      "title": "A firing rate declared in becquerels passes validation",
-      "profile": "neuroscience/firing-rate",
-      "source_patch": {
-        "measurement": {
-          "unit": "Bq"
-        }
-      },
-      "expect": {
-        "error_findings": "at-least-one"
-      },
-      "observed_at_review": {
-        "error_findings": 0
-      },
-      "why": "Becquerels and hertz share the dimension 1/time, so dimensional analysis alone accepts Bq for a firing rate. Radioactivity is not a firing rate; only a quantity-kind binding can refuse it.",
-      "conditions": "This case exists so that D1 cannot be declared done on dimensional analysis alone: the prototype UCUM engine converts Hz to Bq with factor 1, and would pass it.",
-      "decision": "D1",
-      "report_finding": "S4",
-      "sources": [
-        "ucum-2.2",
-        "si-brochure-9"
-      ],
-      "fixed_by": "D1",
-      "fixed_at": "2026-09-15"
+      "title": "Canonical SMILES tool version is required",
+      "profile": "chemical/canonical-smiles",
+      "source_remove": ["representation.normalization_version"],
+      "expect": { "error_findings": "at-least-one" },
+      "why": "The same tool can change canonical output between versions, so the method must be reproducibly identified.",
+      "conditions": "A contract claims the canonical-SMILES profile but omits the normalisation tool version.",
+      "decision": "V0 canonical-SMILES contract",
+      "report_finding": "Missing canonicalisation provenance"
     },
     {
-      "id": "BMCS-SCI-101",
+      "id": "BMCS-V0-006",
       "kind": "guard",
       "check": "compare",
-      "title": "An omitted species returns UNKNOWN",
-      "profile": "neuroscience/firing-rate",
-      "source_remove": [
-        "biological_context.species"
-      ],
-      "expect": {
-        "status": "UNKNOWN"
-      },
-      "why": "Absent evidence is not a contradiction. The D5 redesign must keep an omitted species distinct from a declared one.",
-      "conditions": "None.",
-      "decision": "D5",
-      "report_finding": "S5",
-      "sources": [
-        "ncbitaxon-schoch-2020"
-      ]
+      "title": "Different protein-structure coordinate systems are incompatible",
+      "profile": "proteome/protein-structure",
+      "source_patch": { "representation": { "coordinate_system": "cartesian-angstrom" } },
+      "target_patch": { "representation": { "coordinate_system": "fractional-unit-cell" } },
+      "expect": { "status": "INCOMPATIBLE" },
+      "why": "Coordinates expressed in different systems cannot be consumed as if their numerical values had the same spatial meaning.",
+      "conditions": "Both ports explicitly declare different coordinate systems and no conversion is supplied.",
+      "decision": "V0 protein-structure contract",
+      "report_finding": "Contradictory coordinate representation"
     },
     {
-      "id": "BMCS-SCI-102",
+      "id": "BMCS-V0-007",
       "kind": "guard",
-      "check": "compare",
-      "title": "Body mass in kg and a unit of time stay incompatible",
-      "profile": "physiology/body-mass",
-      "source_patch": {
-        "measurement": {
-          "unit": "kg"
-        }
-      },
-      "target_patch": {
-        "measurement": {
-          "unit": "s"
-        }
-      },
-      "expect": {
-        "status": "INCOMPATIBLE"
-      },
-      "why": "Making g and kg convertible must not make every unit pair convertible.",
-      "conditions": "None.",
-      "decision": "D1",
-      "report_finding": "S4",
-      "sources": [
-        "si-brochure-9"
-      ]
-    },
-    {
-      "id": "BMCS-SCI-103",
-      "kind": "guard",
-      "check": "compare",
-      "title": "A molar concentration still converts between prefixes without loss",
-      "profile": "pharmacology/plasma-concentration",
-      "source_patch": {
-        "measurement": {
-          "unit": "nmol/L"
-        }
-      },
-      "target_patch": {
-        "measurement": {
-          "unit": "umol/L"
-        }
-      },
-      "expect": {
-        "status": "LOSSLESS_CONVERSION_AVAILABLE"
-      },
-      "why": "The one conversion the current table gets right must survive the move to a real unit system.",
-      "conditions": "UCUM spellings; 'uM' and 'nM' are not UCUM codes and no longer appear in the standard.",
-      "decision": "D1",
-      "report_finding": "S4",
-      "sources": [
-        "si-brochure-9"
-      ]
-    },
-    {
-      "id": "BMCS-SCI-104",
-      "kind": "guard",
-      "check": "compare",
-      "title": "Dense and sparse matrices without declared implicit-entry rules are not a lossless match",
-      "profile": "transcriptome/single-cell-expression-matrix",
-      "source_patch": {
-        "representation": {
-          "kind": "dense_vector"
-        }
-      },
-      "target_patch": {
-        "representation": {
-          "kind": "sparse_vector"
-        }
-      },
-      "expect": {
-        "status_not_in": [
-          "EXACT",
-          "DIRECT_COMPATIBLE",
-          "LOSSLESS_CONVERSION_AVAILABLE"
-        ]
-      },
-      "why": "Re-encoding dense as sparse is lossless only when the implicit entry's meaning (zero or missing), ordering, shape and dtype are declared equal. Nothing here declares them.",
-      "conditions": "When D6 makes those rules declarable, add a separate defect case for the fully declared lossless pair.",
-      "decision": "D6",
-      "report_finding": "S11",
-      "sources": [
-        "svensson-2020-zeros"
-      ]
-    },
-    {
-      "id": "BMCS-SCI-105",
-      "kind": "guard",
-      "check": "compare",
-      "title": "Mass concentration and molar concentration are not a lossless match without a molar mass",
-      "profile": "metabolome/metabolite-concentration",
-      "source_patch": {
-        "measurement": {
-          "unit": "mg/L"
-        }
-      },
-      "target_patch": {
-        "measurement": {
-          "unit": "umol/L"
-        }
-      },
-      "expect": {
-        "status_not_in": [
-          "EXACT",
-          "DIRECT_COMPATIBLE",
-          "LOSSLESS_CONVERSION_AVAILABLE"
-        ]
-      },
-      "why": "Converting between mass and amount-of-substance concentration needs the analyte's molar mass, which is not part of either contract.",
-      "conditions": "A dimensional-analysis implementation must not treat this pair as convertible.",
-      "decision": "D1",
-      "report_finding": "S4",
-      "sources": [
-        "iso-80000-1-2022",
-        "goldbook-mr"
-      ]
-    },
-    {
-      "id": "BMCS-SCI-106",
-      "kind": "guard",
-      "check": "compare",
-      "title": "Human and mouse species stay incompatible for a species-specific port",
-      "profile": "neuroscience/firing-rate",
-      "source_patch": {
-        "biological_context": {
-          "species": "NCBITaxon:9606"
-        }
-      },
-      "expect": {
-        "status": "INCOMPATIBLE"
-      },
-      "why": "A declared cross-species difference is a genuine contradiction for a species-specific contract. Taxonomic subsumption (D5) must not weaken it.",
-      "conditions": "The profile's example species is now mouse, so the source declares human.",
-      "decision": "D5",
-      "report_finding": "S5",
-      "sources": [
-        "ncbitaxon-schoch-2020"
-      ]
-    },
-    {
-      "id": "BMCS-SCI-107",
-      "kind": "guard",
-      "check": "compare",
-      "title": "A required field missing from the target also returns UNKNOWN",
-      "profile": "neuroscience/firing-rate",
-      "target_remove": [
-        "measurement.unit"
-      ],
-      "expect": {
-        "status": "UNKNOWN"
-      },
-      "why": "Absent evidence must behave the same whichever port is silent. The behaviour is correct today but no generated fixture covers the target side (S10).",
-      "conditions": "None.",
-      "decision": "D9",
-      "report_finding": "S10",
-      "sources": [
-        "vim-jcgm-200-2012"
-      ]
-    },
-    {
-      "id": "BMCS-SCI-108",
-      "kind": "guard",
-      "check": "compare",
-      "normalize": true,
-      "title": "Reordering a set-like field does not change the result once contracts are normalised",
-      "profile": "clinical/diagnosis-code",
-      "source_patch": {
-        "security": {
-          "data_use": [
-            "DUO:0000042",
-            "DUO:0000006"
-          ]
-        }
-      },
-      "target_patch": {
-        "security": {
-          "data_use": [
-            "DUO:0000006",
-            "DUO:0000042"
-          ]
-        }
-      },
-      "expect": {
-        "status": "EXACT"
-      },
-      "why": "security.data_use is a set-like path, so element order carries no meaning. Whatever D12 decides about where normalisation runs, this must stay true.",
-      "conditions": "Applies to normalised contracts. On raw contracts compare_contracts is order-sensitive today; see erratum E9 in the remediation plan.",
-      "decision": "D12",
-      "report_finding": "S12",
-      "sources": [
-        "duo-2021"
-      ]
-    },
-    {
-      "id": "BMCS-SCI-109",
-      "kind": "guard",
-      "check": "compare",
-      "title": "Two equal set-like context values are not a contradiction in either implementation",
-      "profile": "pharmacology/compound-dose",
-      "source_patch": {
-        "biological_context": {
-          "intervention": [
-            {
-              "agent": "compound-a"
-            },
-            {
-              "agent": "vehicle"
-            }
-          ]
-        },
-        "origin": {
-          "type": "declared"
-        }
-      },
-      "target_patch": {
-        "biological_context": {
-          "intervention": [
-            {
-              "agent": "compound-a"
-            },
-            {
-              "agent": "vehicle"
-            }
-          ]
-        }
-      },
-      "expect": {
-        "status": "DIRECT_COMPATIBLE"
-      },
-      "why": "Every biological_context item is compared with the shared context-compatible operator, and biological_context.intervention is the one context field whose value is an array rather than a string. TypeScript compared the two sides with ===, which for an array asks whether they are the same object, so two identical intervention lists were reported as a contradiction while Python, using value equality, called them a match. The two engines must give the same answer, and declaring the same interventions on both sides is not a contradiction.",
-      "conditions": "The source declares an origin the target omits, so the two contracts are not byte-identical and the comparison rules are actually evaluated; identical contracts short-circuit to EXACT and would never exercise the operator. The interventions are structures, matching what the profile now requires of them.",
-      "decision": "D5",
-      "report_finding": "none: found in Phase 1 by the cross-language conformance test, not in the pre-review",
-      "fixed_by": "D5",
-      "fixed_at": "2026-09-15",
-      "sources": [
-        "obi-2016"
-      ]
-    },
-    {
-      "id": "BMCS-SCI-110",
-      "kind": "guard",
-      "check": "compare",
-      "title": "A fully declared dense-to-sparse re-encoding is lossless, not a contradiction",
-      "profile": "transcriptome/single-cell-expression-matrix",
-      "source_patch": {
-        "representation": {
-          "kind": "dense_vector",
-          "implicit_entry": "observed_zero",
-          "ordering": "explicit",
-          "sparsity": "dense"
-        }
-      },
-      "target_patch": {
-        "representation": {
-          "kind": "sparse_vector",
-          "implicit_entry": "observed_zero",
-          "ordering": "explicit",
-          "sparsity": "dense"
-        }
-      },
-      "expect": {
-        "status": "LOSSLESS_CONVERSION_AVAILABLE"
-      },
-      "why": "Guard BMCS-SCI-104 pins the unsafe direction: dense against sparse with nothing declared must not be a lossless match. This is the other half, which that guard's own conditions asked for. When both sides declare what an absent entry means, the ordering and the sparsity, and the three agree, the re-encoding preserves every value and blocking it would push a correct coupling outside the standard.",
-      "conditions": "The two contracts differ only in representation.kind and are otherwise identical, so the result comes from the representation-equivalent operator rather than from another rule. The enabling fields are declared in the case because no profile requires them yet; making them required for sparse-capable ports is per-profile work that needs domain review.",
-      "decision": "D6",
-      "report_finding": "S11",
-      "fixed_by": "D6",
-      "fixed_at": "2026-09-15",
-      "sources": [
-        "svensson-2020-zeros"
-      ]
-    },
-    {
-      "kind": "guard",
-      "check": "resolve",
-      "profile": "neuroscience/firing-rate",
-      "target_patch": {
-        "measurement": {
-          "scale": "ordinal"
-        }
-      },
-      "decision": "D11",
-      "report_finding": "S9",
-      "fixed_by": "D11",
-      "fixed_at": "2026-09-15",
-      "id": "BMCS-SCI-111",
-      "title": "Binning a continuous rate into ordinal categories requires approval, never ALLOW",
-      "capabilities": [
-        {
-          "schema_version": "0.1",
-          "ref": "https://biosimulant.com/adapters/rate-to-ordinal-band/1.0.0",
-          "sha256": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
-          "source": "$source",
-          "target": "$target",
-          "state": "reviewed",
-          "transformation_class": "aggregation",
-          "information_loss": "lossy",
-          "loss_score": 1,
-          "execution_cost": 1,
-          "release": {
-            "version": "1.0.0"
-          }
-        }
-      ],
-      "expect": {
-        "resolution": "RESOLVED",
-        "plan_status": "LOSSY_CONVERSION_REQUIRES_APPROVAL",
-        "policy_decision_not": "ALLOW"
-      },
-      "why": "transformation_policy declares an approval path for lossy transformations on every profile, and until now no fixture in either language exercised it: every capability in every test used an information_loss of \"none\". Binning a continuous firing rate into ordinal bands discards the value and keeps only its band, so it must surface as an approval rather than as a silent match.",
-      "conditions": "The plan's own technical_status is asserted, not reports[0].status. The terminal comparison is EXACT whenever the last adapter lands exactly on the target, so asserting the report would pass while testing nothing.",
-      "sources": [
-        "stevens-1946",
-        "vim-jcgm-200-2012"
-      ]
-    },
-    {
-      "kind": "guard",
-      "check": "resolve",
-      "profile": "neuroscience/firing-rate",
-      "target_patch": {
-        "measurement": {
-          "scale": "ordinal"
-        }
-      },
-      "decision": "D11",
-      "report_finding": "S9",
-      "fixed_by": "D11",
-      "fixed_at": "2026-09-15",
-      "id": "BMCS-SCI-112",
-      "title": "A value only a model can produce is never a direct match",
-      "capabilities": [
-        {
-          "schema_version": "0.1",
-          "ref": "https://biosimulant.com/inference/rate-band-from-calcium/1.0.0",
-          "sha256": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
-          "source": "$source",
-          "target": "$target",
-          "state": "reviewed",
-          "inferred_modality": "firing-rate-band-inferred-from-calcium-imaging",
-          "assumptions": [
-            "The deconvolution kernel calibrated for this preparation applies"
-          ],
-          "uncertainty": {
-            "kind": "interval"
-          },
-          "loss_score": 1,
-          "execution_cost": 1,
-          "release": {
-            "version": "1.0.0"
-          }
-        }
-      ],
-      "expect": {
-        "resolution": "RESOLVED",
-        "plan_status": "INFERENCE_MODEL_REQUIRED",
-        "policy_decision_not": "ALLOW"
-      },
-      "why": "The same two contracts as BMCS-SCI-111, bridged by an inference model instead of an adapter. A band a model inferred from a calcium trace is not the same evidence as a measured rate, so the status must say an inference model is involved and must never read as a direct match.",
-      "conditions": "Deliberately the same contracts and patch as BMCS-SCI-111, so the capability kind is the only difference between the two cases.",
-      "sources": [
-        "obi-2016"
-      ]
-    },
-    {
-      "id": "BMCS-SCI-113",
-      "kind": "guard",
-      "check": "compare",
-      "title": "A data-use mismatch is a governance finding, not a technical contradiction",
-      "profile": "clinical/admission-event",
-      "source_patch": {
-        "security": {
-          "data_use": [
-            "DUO:0000004"
-          ]
-        }
-      },
-      "expect": {
-        "status": "DIRECT_COMPATIBLE",
-        "policy_finding_reason_code": "BMCS_SECURITY_DATA_USE_MISMATCH"
-      },
-      "why": "Whether two ports may exchange data under their consent and data-use terms is a governance outcome, not a statement about whether the data fit together. Reporting it as INCOMPATIBLE mixed the workspace-policy stage into the technical result, which INTEGRATIONS.md says to keep apart. The mismatch must still be visible, so it is reported as a policy finding.",
-      "conditions": "The two contracts differ only in security.data_use. The technical status stays DIRECT_COMPATIBLE and the contradiction appears in policy_findings, which is where a workspace policy stage reads it.",
-      "decision": "D12",
-      "report_finding": "S12",
-      "fixed_by": "D12",
-      "fixed_at": "2026-09-15",
-      "sources": [
-        "duo-2021"
-      ]
-    },
-    {
-      "id": "BMCS-SCI-114",
-      "kind": "guard",
-      "check": "compare",
-      "title": "A sparse matrix is a re-encoding of a dense one, and is expressible at all",
-      "profile": "transcriptome/single-cell-expression-matrix",
-      "source_patch": {
-        "representation": {
-          "kind": "matrix",
-          "implicit_entry": "observed_zero",
-          "ordering": "explicit",
-          "sparsity": "sparse"
-        }
-      },
-      "target_patch": {
-        "representation": {
-          "kind": "sparse_matrix",
-          "implicit_entry": "observed_zero",
-          "ordering": "explicit",
-          "sparsity": "sparse"
-        }
-      },
-      "expect": {
-        "status": "LOSSLESS_CONVERSION_AVAILABLE"
-      },
-      "why": "The kind vocabulary had sparse_vector and no sparse counterpart for a matrix, so the most common storage form in single-cell data could not be declared at all. A port storing a sparse matrix had to call it something it was not. With the kind available, the same conditional equivalence applies as for vectors: the two encodings hold the same values when both sides declare, and agree on, what an absent entry means, the ordering and the sparsity.",
-      "conditions": "The two contracts differ only in representation.kind. Undeclared enabling fields stay undecidable, which BMCS-SCI-104 pins for the vector case.",
-      "decision": "D6",
-      "report_finding": "S11",
-      "fixed_by": "D6",
-      "fixed_at": "2026-09-16",
-      "sources": [
-        "svensson-2020-zeros",
-        "edam-2013"
-      ]
+      "check": "validate",
+      "title": "Protein-structure origin is required",
+      "profile": "proteome/protein-structure",
+      "source_remove": ["origin.type"],
+      "expect": { "error_findings": "at-least-one" },
+      "why": "An experimentally determined structure and a predicted structure have different provenance and limitations.",
+      "conditions": "A contract claims the protein-structure profile but omits whether the structure is experimental, predicted, or otherwise derived.",
+      "decision": "V0 protein-structure contract",
+      "report_finding": "Missing structure provenance"
     }
   ]
 }

@@ -4,22 +4,16 @@
   "allowed": {
     "representation": {
       "kind": [
-        "scalar",
-        "dense_vector",
-        "sparse_vector",
-        "matrix",
-        "sparse_matrix",
-        "tensor",
-        "array",
         "record",
-        "table"
+        "table",
+        "artifact",
+        "file"
       ]
     }
   },
   "applies_to": [
-    "scalar",
-    "array",
-    "record"
+    "record",
+    "artifact"
   ],
   "comparison_rules": [
     {
@@ -39,6 +33,24 @@
       "severity": "error",
       "source": "/contract/representation",
       "target": "/contract/representation"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_STRUCTURE_FORMAT_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/structure_format",
+      "target": "/contract/representation/structure_format"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_COORDINATE_SYSTEM_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/coordinate_system",
+      "target": "/contract/representation/coordinate_system"
     },
     {
       "layer": "technical",
@@ -66,6 +78,15 @@
       "severity": "error",
       "source": "/contract/biological_context/species",
       "target": "/contract/biological_context/species"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_ORIGIN_TYPE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/origin/type",
+      "target": "/contract/origin/type"
     },
     {
       "layer": "technical",
@@ -160,15 +181,6 @@
     {
       "layer": "technical",
       "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_REPRESENTATION_COORDINATE_SYSTEM_MISMATCH",
-      "severity": "error",
-      "source": "/contract/representation/coordinate_system",
-      "target": "/contract/representation/coordinate_system"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
       "operator": "labels-equal",
       "reason_code": "BMCS_DIMENSIONS_AXES_MISMATCH",
       "severity": "error",
@@ -196,15 +208,6 @@
     {
       "layer": "technical",
       "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_ORIGIN_TYPE_MISMATCH",
-      "severity": "error",
-      "source": "/contract/origin/type",
-      "target": "/contract/origin/type"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
       "operator": "context-compatible",
       "reason_code": "BMCS_BIOLOGICAL_CONTEXT_COMPARTMENT_MISMATCH",
       "severity": "error",
@@ -213,7 +216,7 @@
     }
   ],
   "compatibility_notes": "Two ports match only when every field the target port requires is satisfied. If required information is missing, the result is UNKNOWN. Any conversion between ports must be a declared, versioned transformation.",
-  "description": "Protein Structure (Proteome and protein structure): what a port must declare, and how two ports are compared.",
+  "description": "A three-dimensional structural representation of a declared protein or protein-containing assembly, including the identity, coordinate representation and format needed to interpret the structure.",
   "domain": "proteome",
   "domain_label": "Proteome and protein structure",
   "extends": [],
@@ -248,16 +251,29 @@
       "path": "representation.kind",
       "schema": {
         "enum": [
-          "scalar",
-          "dense_vector",
-          "sparse_vector",
-          "matrix",
-          "sparse_matrix",
-          "tensor",
-          "array",
           "record",
-          "table"
+          "table",
+          "artifact",
+          "file"
         ]
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.structure_format",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.coordinate_system",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
       }
     },
     {
@@ -292,6 +308,15 @@
         ],
         "type": "string"
       }
+    },
+    {
+      "level": "required",
+      "path": "origin.type",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
     }
   ],
   "review": {
@@ -305,7 +330,7 @@
     "reviewer": null,
     "schema_reviewer": null,
     "sources": [],
-    "status": "candidate"
+    "status": "draft"
   },
   "review_questions": [
     "Does the proposed concept identify Protein Structure narrowly enough to prevent a different scientific quantity from matching?",
@@ -319,7 +344,7 @@
     "What uses and scientific claims must this profile explicitly exclude?"
   ],
   "scientific_claim": "This profile checks whether two model interfaces fit together. It doesn't show that a model is scientifically valid or clinically safe.",
-  "stage": "WAVE_2",
+  "stage": "V0_PILOT",
   "technical_pre_review": {
     "checks": [
       "profile-definition-schema",

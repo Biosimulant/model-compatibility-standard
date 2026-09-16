@@ -4,7 +4,7 @@ from biosimulant_model_compatibility_standard import (
     validate_object,
 )
 
-REF = "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/firing-rate/v0.1"
+REF = "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-sequence/v0.1"
 
 
 def _adapter(ref: str, source: dict, target: dict, *, loss: str = "none") -> dict:

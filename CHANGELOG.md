@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.0.1 — active catalogue reset
+
+- Retired the generated 650-profile prototype from the active catalogue while preserving it in Git history and the scientific-remediation record.
+- Started the incubator with three draft profiles: Protein Sequence, Protein Structure and Canonical SMILES.
+- Removed fixed catalogue-size assertions from the generator and tests so profiles can be added incrementally.
+- Kept all three profiles non-release-eligible pending independent scientific and schema review.
+
 ## Unreleased
 
 - Added a machine-checked scientific review record for each profile. The build

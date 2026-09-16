@@ -9,8 +9,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -30,10 +35,13 @@
           "namespace_version": "example-namespace-version"
         },
         "origin": {
-          "type": "declared"
+          "generated_at": "2026-01-01T00:00:00Z",
+          "type": "example-type"
         },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -48,8 +56,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -65,8 +78,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {}
       },
@@ -84,8 +102,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure-different"
@@ -108,8 +131,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure-different"
@@ -124,8 +152,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -143,8 +176,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {}
       },
@@ -157,8 +195,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -176,8 +219,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -192,8 +240,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {}
       }
@@ -207,7 +260,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
-        "representation": {},
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "structure_format": "example-structure-format"
+        },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
         }
@@ -226,8 +285,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "not-an-allowed-value"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "not-an-allowed-value",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -250,8 +314,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar-different"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record-different",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -266,8 +335,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -285,7 +359,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
-        "representation": {},
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "structure_format": "example-structure-format"
+        },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
         }
@@ -299,8 +379,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -318,8 +403,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -334,7 +424,383 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
-        "representation": {},
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "field": "representation.structure_format",
+      "name": "negative-required-missing-representation-structure-format",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": 7
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "field": "representation.structure_format",
+      "name": "negative-value-invalid-representation-structure-format",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.structure_format",
+      "name": "comparison-incompatible-representation-structure-format",
+      "reason_code": "BMCS_REPRESENTATION_STRUCTURE_FORMAT_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format-different"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      }
+    },
+    {
+      "field": "representation.structure_format",
+      "name": "comparison-unknown-representation-structure-format",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      }
+    },
+    {
+      "field": "representation.structure_format",
+      "name": "comparison-unknown-target-representation-structure-format",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "field": "representation.coordinate_system",
+      "name": "negative-required-missing-representation-coordinate-system",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": 7,
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "field": "representation.coordinate_system",
+      "name": "negative-value-invalid-representation-coordinate-system",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.coordinate_system",
+      "name": "comparison-incompatible-representation-coordinate-system",
+      "reason_code": "BMCS_REPRESENTATION_COORDINATE_SYSTEM_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system-different",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      }
+    },
+    {
+      "field": "representation.coordinate_system",
+      "name": "comparison-unknown-representation-coordinate-system",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      }
+    },
+    {
+      "field": "representation.coordinate_system",
+      "name": "comparison-unknown-target-representation-coordinate-system",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
         }
@@ -348,8 +814,13 @@
         "identifiers": {
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -369,8 +840,13 @@
           "namespace": 7,
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -393,8 +869,13 @@
           "namespace": "example-namespace-different",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -409,8 +890,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -427,8 +913,13 @@
         "identifiers": {
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -443,8 +934,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -462,8 +958,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -477,8 +978,13 @@
         "identifiers": {
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -493,8 +999,13 @@
         "identifiers": {
           "namespace": "example-namespace"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -514,8 +1025,13 @@
           "namespace": "example-namespace",
           "namespace_version": 7
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -537,8 +1053,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version-different"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -553,8 +1074,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -571,8 +1097,13 @@
         "identifiers": {
           "namespace": "example-namespace"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -587,8 +1118,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -606,8 +1142,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -621,8 +1162,13 @@
         "identifiers": {
           "namespace": "example-namespace"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -636,8 +1182,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -657,8 +1208,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -681,8 +1237,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -697,8 +1258,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -714,8 +1280,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -730,8 +1301,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -749,8 +1325,13 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
@@ -763,8 +1344,195 @@
           "namespace": "example-namespace",
           "namespace_version": "example-namespace-version"
         },
+        "origin": {
+          "type": "example-type"
+        },
         "representation": {
-          "kind": "scalar"
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      }
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {},
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "field": "origin.type",
+      "name": "negative-required-missing-origin-type",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": 7
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "field": "origin.type",
+      "name": "negative-value-invalid-origin-type",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "origin.type",
+      "name": "comparison-incompatible-origin-type",
+      "reason_code": "BMCS_ORIGIN_TYPE_MISMATCH",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type-different"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      }
+    },
+    {
+      "field": "origin.type",
+      "name": "comparison-unknown-origin-type",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {},
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      }
+    },
+    {
+      "field": "origin.type",
+      "name": "comparison-unknown-target-origin-type",
+      "source": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {
+          "type": "example-type"
+        },
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "biological_context": {
+          "species": "NCBITaxon:9606"
+        },
+        "identifiers": {
+          "namespace": "example-namespace",
+          "namespace_version": "example-namespace-version"
+        },
+        "origin": {},
+        "representation": {
+          "coordinate_system": "example-coordinate-system",
+          "kind": "record",
+          "structure_format": "example-structure-format"
         },
         "semantic": {
           "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
