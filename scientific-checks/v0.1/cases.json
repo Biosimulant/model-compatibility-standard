@@ -1,7 +1,7 @@
 {
   "schema_version": "0.1",
   "title": "Scientific guards for the active v0 pilot profiles",
-  "purpose": "Language-neutral scientific expectations for the three profiles in the active v0 catalogue. Historical checks for the former 650-profile prototype remain available in Git history and are not part of the active conformance suite.",
+  "purpose": "Language-neutral scientific expectations for the three profiles in the active v0 catalogue.",
   "rules": [
     "Build contracts from each active profile's generated positive fixture plus explicit patches.",
     "Keep only checks that apply to profiles in the active catalogue.",

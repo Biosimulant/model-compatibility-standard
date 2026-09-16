@@ -8,8 +8,8 @@ table, which is a much smaller job.
 
     python3 scripts/build_ucum_table.py
 
-Input is the vendored ucum-essence.xml, pinned in docs/scientific-remediation/sources.
-Output is source/vendor/ucum/ucum-table.json. Decision D1 covers how the standard adopts it.
+Input is the vendored UCUM 2.2 `ucum-essence.xml`; the generated table records
+its SHA-256. Output is `source/vendor/ucum/ucum-table.json`.
 """
 from __future__ import annotations
 
@@ -30,7 +30,7 @@ DIMENSIONS = ["L", "T", "M", "A", "C", "Q", "F"]
 
 # No aliases. UCUM has no molar unit -- 'M' is the mega prefix, so 'uM' parses as micro-mega --
 # and v0.1 has not been released, so the declarations use UCUM spellings (umol/L, nmol/L) directly
-# rather than carrying deprecated ones (decision D1).
+# rather than carrying informal aliases.
 ALIASES: dict[str, str] = {}
 
 
@@ -209,7 +209,7 @@ def build() -> dict:
         "dimensions": DIMENSIONS,
         "prefixes": prefixes,
         "aliases": ALIASES,
-        "alias_note": "Spellings used by v0.1 that UCUM does not define. Deprecated: migrate to the UCUM spelling (decision D1).",
+        "alias_note": "Informal spellings that UCUM does not define are unsupported; use the UCUM spelling.",
         "units": {code: units[code] for code in sorted(units)},
         "unresolved": dict(sorted(unresolved.items())),
     }

@@ -247,7 +247,7 @@ export function validateContract(contract, profileRefs = [], bundle = getBundle(
             const path = requirement.path;
             if (path.includes("[]")) {
                 // "dimensions.axes[].unit" means every axis declares a unit, so the requirement is checked
-                // once per member and reports which member failed (decision D9).
+                // once per member and reports which member failed.
                 const [head, tail] = path.split("[]");
                 const containerPath = head.replace(/\.$/, "");
                 const leaf = tail.replace(/^\./, "");
@@ -286,7 +286,7 @@ export function validateContract(contract, profileRefs = [], bundle = getBundle(
     return findings;
 }
 /**
- * Check a declared unit against the profile's quantity kind (decision D1).
+ * Check a declared unit against the profile's quantity kind.
  *
  * A unit alone does not identify a quantity: hertz and becquerel are both per second, and a
  * Hounsfield unit is dimensionless like a bare ratio. Mirrors _unit_findings in the Python
@@ -303,7 +303,7 @@ function normalised(contract, bundle) {
         return contract;
     }
 }
-/** A declared unit that cannot belong to the profile's quantity kind (decision D1). */
+/** A declared unit that cannot belong to the profile's quantity kind. */
 function unitKindErrors(bundle, profile, contract) {
     const table = typeof bundle.units === "function" ? bundle.units() : undefined;
     const measurement = contract.measurement;
@@ -666,7 +666,7 @@ function compareValue(rule, source, target, bundle, snapshots) {
         return [false, "invalid"];
     }
     if (operator === "context-compatible") {
-        // A source that declares no context is absent evidence, not a contradiction (decision D5).
+        // A source that declares no context is absent evidence, not a contradiction.
         if (source === "any" || source === "unspecified") {
             const open = target === null || target === undefined || target === "any" || target === "unspecified";
             return open ? [true, undefined] : [false, "unsupported"];
@@ -678,7 +678,7 @@ function compareValue(rule, source, target, bundle, snapshots) {
         return [canonicalJson(source) === canonicalJson(target) || open, undefined];
     }
     if (operator === "namespace-version-compatible") {
-        // Decision D7. Two releases of one namespace are not a contradiction. Identifiers are retired
+        // Two releases of one namespace are not a contradiction. Identifiers are retired
         // and merged between releases, so what matters is what the transition did, and without a pinned
         // release-transition snapshot nobody can say: that is undecidable, not a mismatch. A transition
         // that retired and merged nothing preserves every identifier; one that did either is a real loss
@@ -703,7 +703,7 @@ function compareValue(rule, source, target, bundle, snapshots) {
         return [false, "unsupported"];
     }
     if (operator === "representation-equivalent") {
-        // Decision D6. Re-encoding dense as sparse preserves the data only when both sides declare, and
+        // Re-encoding dense as sparse preserves the data only when both sides declare, and
         // agree on, what an absent entry means, the ordering, the shape and the dtype. Undeclared is
         // undecidable, not equivalent: in single-cell data a zero and an unobserved value are different
         // claims about the same cell.
@@ -746,7 +746,7 @@ function compareValue(rule, source, target, bundle, snapshots) {
         const bijective = operator === "mapping-bijective";
         if (!mappingMatches(source, target, snapshot, bijective))
             return [false, undefined];
-        // Decision D7. A pinned mapping that is total over the declared universe and bijective on it
+        // A pinned mapping that is total over the declared universe and bijective on it
         // loses nothing, but it is still a conversion rather than a direct match. A mapping that is
         // total without being bijective merges identifiers, which needs approval.
         if (mappingMatches(source, target, snapshot, true))
@@ -758,13 +758,13 @@ function compareValue(rule, source, target, bundle, snapshots) {
 export function compareContracts(source, target, options = {}) {
     const bundle = options.bundle ?? getBundle();
     // Comparison normalises its own inputs, so a set-like field written in another order is not
-    // reported as a contradiction by a caller who skipped the normalisation stage (decision D12).
+    // reported as a contradiction by a caller who skipped the normalisation stage.
     source = normalised(source, bundle);
     target = normalised(target, bundle);
     const snapshots = { ontology: verifiedSnapshots(options.snapshots?.ontology), mappings: verifiedSnapshots(options.snapshots?.mappings) };
     let status;
     let findings;
-    // Decision D12. Consent and data-use outcomes are collected apart from the technical findings,
+    // Consent and data-use outcomes are collected apart from the technical findings,
     // and every path through this function reports them, including the ones with no rules to run.
     const policyFindings = [];
     if (source === null || target === null) {
@@ -807,7 +807,7 @@ export function compareContracts(source, target, options = {}) {
             const left = getPointer({ contract: source }, rule.source), right = getPointer({ contract: target }, rule.target);
             const dimension = rule.target.split("/")[2] ?? "contract";
             if (rule.layer === "policy") {
-                // Decision D12. Whether two ports may exchange data under their consent and data-use terms
+                // Whether two ports may exchange data under their consent and data-use terms
                 // is a governance outcome, not a statement about whether the data fit together. It is
                 // reported, and the workspace policy stage decides what to do.
                 if (left === undefined || right === undefined) {
@@ -959,7 +959,7 @@ function compareCosts(left, right, includeIdentifiers = true) {
 }
 const POLICY_STRENGTH = { allow: 0, approval: 1, block: 2 };
 const PUBLISHED_TO_DECISION = { allow: "ALLOW", approval: "APPROVAL_REQUIRED", block: "BLOCK" };
-/** The transformation policy published by the target contract's own profiles (decision D11).
+/** The transformation policy published by the target contract's own profiles.
  *
  * Every profile publishes `transformation_policy`, and until now nothing read it: a profile that
  * declared `lossy: block` still produced APPROVAL_REQUIRED, because the only policy consulted was
@@ -1035,7 +1035,7 @@ function resolutionPlan(source, target, path, policy, bundle, snapshots) {
         bundle_sha256: bundle.manifest.bundle_sha256,
         // The status the chain itself carries. reports[] holds the terminal comparison, which is EXACT
         // whenever the last adapter lands exactly on the target, so without this a reader cannot tell a
-        // lossy chain from an inference one or from a direct match (decision D11).
+        // lossy chain from an inference one or from a direct match.
         technical_status: status,
         nodes,
         edges,
@@ -1048,7 +1048,7 @@ function resolutionPlan(source, target, path, policy, bundle, snapshots) {
 }
 export function resolveContracts(source, target, capabilities = [], options = {}) {
     const bundle = options.bundle ?? getBundle();
-    // A policy the caller supplies wins; otherwise use the one the target's profiles publish (D11).
+    // A policy the caller supplies wins; otherwise use the one the target's profiles publish.
     const policy = options.policy ?? declaredPolicy(target, options.bundle ?? getBundle());
     const snapshots = options.snapshots ?? {};
     const verified = {

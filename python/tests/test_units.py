@@ -1,12 +1,9 @@
-"""Unit engine: parsing UCUM expressions and deciding whether two units convert.
-
-These test the prototype for decision D1 in isolation. It is not yet wired into comparison, so
-the scientific checks for units remain open defects until it is.
-"""
+"""Unit engine: parsing UCUM expressions and deciding whether two units convert."""
 
 from __future__ import annotations
 
 import json
+import hashlib
 from pathlib import Path
 
 import pytest
@@ -24,9 +21,8 @@ def factor(source: str, target: str) -> float:
 
 
 def test_table_is_built_from_the_pinned_ucum_release() -> None:
-    lock = json.loads((ROOT / "docs" / "scientific-remediation" / "sources" / "sources.lock.json").read_text(encoding="utf-8"))
-    pinned = next(entry for entry in lock["sources"] if entry["id"] == "ucum-2.2")
-    assert TABLE["ucum"]["sha256"] == pinned["sha256"]
+    source = ROOT / "source" / "vendor" / "ucum" / "ucum-essence.xml"
+    assert TABLE["ucum"]["sha256"] == "sha256:" + hashlib.sha256(source.read_bytes()).hexdigest()
     assert TABLE["ucum"]["version"] == "2.2"
 
 
@@ -63,7 +59,7 @@ def test_fahrenheit_converts_to_celsius() -> None:
 
 def test_molar_spellings_are_ucum_only() -> None:
     # UCUM has no molar unit: M is the mega prefix. v0.1 migrated to umol/L rather than carry an
-    # alias, so the old spellings must not resolve at all (decision D1).
+    # alias, so the old spellings must not resolve at all.
     assert factor("umol/L", "mol/L") == pytest.approx(1e-6)
     assert factor("nmol/L", "umol/L") == pytest.approx(1e-3)
     for retired in ("uM", "nM", "mM"):
@@ -92,5 +88,5 @@ def test_a_multi_digit_number_is_one_factor() -> None:
 
 
 def test_dimension_alone_cannot_tell_frequency_from_radioactivity() -> None:
-    # A known limit of dimensional analysis, and the reason D1 requires quantity kinds.
+    # A known limit of dimensional analysis, and the reason the standard also records quantity kinds.
     assert factor("Hz", "Bq") == pytest.approx(1.0)

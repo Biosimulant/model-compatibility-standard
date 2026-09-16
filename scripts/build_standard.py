@@ -33,43 +33,21 @@ _units_spec.loader.exec_module(_units)
 UnitError, parse_unit = _units.UnitError, _units.parse_unit
 SOURCE = ROOT / "source" / "catalogue.review.json"
 
-# Reviewed declarations replace the name-substring guessing that decision D9 retired.
 QUANTITY_KINDS: dict[str, Any] = {}
-MEASUREMENT_DECLARATIONS: dict[str, Any] = {}
-STRUCTURE_DECLARATIONS: dict[str, Any] = {}
-CONTEXT_DECLARATIONS: dict[str, Any] = {}
 ITEM_INDEX: dict[str, Any] = {}
 UCUM_TABLE: dict[str, Any] = {}
 
 
 def load_declarations() -> None:
-    global QUANTITY_KINDS, MEASUREMENT_DECLARATIONS, STRUCTURE_DECLARATIONS, CONTEXT_DECLARATIONS, UCUM_TABLE
+    global QUANTITY_KINDS, UCUM_TABLE
     QUANTITY_KINDS = json.loads((SOURCE.parent / "quantity-kinds.json").read_text())["kinds"]
-    MEASUREMENT_DECLARATIONS = json.loads((SOURCE.parent / "measurement-declarations.json").read_text())["profiles"]
-    STRUCTURE_DECLARATIONS = json.loads((SOURCE.parent / "structure-declarations.json").read_text())["profiles"]
-    CONTEXT_DECLARATIONS = json.loads((SOURCE.parent / "context-declarations.json").read_text())
     UCUM_TABLE = json.loads((SOURCE.parent / "vendor" / "ucum" / "ucum-table.json").read_text())
 
 
-def declaration_key(profile: dict[str, Any]) -> str:
-    return f"{profile.get('domain')}/{profile.get('name')}"
+def example_species() -> str:
+    """Return a schema-valid example, not a profile-level scientific assertion."""
 
-
-def measured(profile: dict[str, Any]) -> dict[str, Any]:
-    return MEASUREMENT_DECLARATIONS.get(declaration_key(profile), {})
-
-
-def structured(profile: dict[str, Any]) -> dict[str, Any]:
-    return STRUCTURE_DECLARATIONS.get(declaration_key(profile), {})
-
-
-def example_species(profile: dict[str, Any]) -> str:
-    key = declaration_key(profile)
-    per_profile = CONTEXT_DECLARATIONS.get("profiles", {}).get(key, {})
-    if "species" in per_profile:
-        return str(per_profile["species"])
-    domain = CONTEXT_DECLARATIONS.get("domains", {}).get(str(profile.get("domain")), {})
-    return str(domain.get("species", "NCBITaxon:9606"))
+    return "NCBITaxon:9606"
 REVIEWS = ROOT / "source" / "reviews"
 OUTPUT = ROOT / "spec" / "v0.1"
 STANDARD = "https://biosimulant.com/standards/model-compatibility/v0.1"
@@ -141,66 +119,22 @@ REASON_CODES = {
 
 REPRESENTATION_KINDS = {
     "scalar": ["scalar"],
-    # A sparse matrix was not expressible at all: the vocabulary had sparse_vector and no sparse
-    # counterpart for a matrix, which is the common case in single-cell data (decision D6).
     "array": ["dense_vector", "sparse_vector", "matrix", "sparse_matrix", "tensor", "array"],
     "record": ["record", "table"],
     "event": ["event"],
     "artifact": ["artifact", "file"],
 }
 
-DOMAIN_SUBJECTS = {
-    "core": "data_value",
-    "genome": "genomic_entity",
-    "transcriptome": "biological_sample",
-    "epigenome": "biological_sample",
-    "proteome": "biological_sample",
-    "metabolome": "biological_sample",
-    "lipidome-glycome": "biological_sample",
-    "chemical": "chemical_entity",
-    "pharmacology": "exposed_biological_system",
-    "cell": "cell",
-    "immunology": "immune_system",
-    "microbiology": "microbial_system",
-    "virology": "viral_system",
-    "developmental": "developing_biological_system",
-    "phenotype": "organism_or_sample",
-    "imaging": "imaged_subject",
-    "spatial": "spatial_entity",
-    "physiology": "biological_system",
-    "neuroscience": "nervous_system",
-    "cardiopulmonary-renal": "cardiopulmonary_or_renal_system",
-    "ecology": "ecological_system",
-    "evolution": "evolving_population_or_taxon",
-    "epidemiology": "population",
-    "simulation": "simulation_state_or_configuration",
-    "multiomics": "biological_sample_or_subject",
-    "clinical": "patient_or_cohort",
-}
-
-BOOLEAN_LEAVES = {
-    "canonical", "ordered", "sparse", "encrypted", "required", "dynamic",
-    "reversible", "directed", "multigraph", "self_loops", "left_normalized",
-}
-INTEGER_LEAVES = {"byte_size", "cardinality", "size", "passage", "random_seed"}
-NUMBER_LEAVES = {
-    "min", "max", "minimum", "maximum", "confidence", "confidence_level",
-    "variance", "loss_score", "execution_cost", "relative_tolerance",
-    "absolute_tolerance", "confluence", "oxygen",
-}
 ARRAY_LEAVES = {
-    "axes", "labels", "qualifiers", "disease", "intervention", "data_use", "taxa",
-    "mapping_refs", "ontology_terms", "quality_flags", "parameters",
-    "transformation_chain", "evidence_refs", "validation_results",
+    "axes", "qualifiers", "mapping_refs", "ontology_terms", "quality_flags",
 }
 
 SET_LIKE_PATHS = [
     "/contract/profile_refs",
     "/contract/semantic/qualifiers",
-    "/contract/biological_context/disease",
-    "/contract/biological_context/intervention",
-    "/contract/biological_context/taxa",
-    "/contract/security/data_use",
+    "/contract/semantic/ontology_terms",
+    "/contract/identifiers/mapping_refs",
+    "/contract/uncertainty/quality_flags",
 ]
 
 REVIEW_SECTIONS = {
@@ -216,7 +150,6 @@ REVIEW_SECTIONS = {
     "uncertainty",
     "artifact",
     "constraints",
-    "security",
 }
 
 
@@ -244,6 +177,18 @@ def applicable_review_sections(profile: dict[str, Any]) -> set[str]:
     """Return every section a reviewer must include or explicitly exclude."""
 
     return set(REVIEW_SECTIONS)
+
+
+def profile_review_fields(profile: dict[str, Any]) -> list[str]:
+    """Return every required or candidate field the reviewer must decide."""
+
+    source = json.loads(SOURCE.read_text())
+    pack_index = {str(pack["id"]): pack for pack in source.get("item_packs", [])}
+    fields = {str(path) for path in profile.get("required_items", [])}
+    for pack_name in profile.get("required_item_packs", []):
+        pack = pack_index.get(str(pack_name), {})
+        fields.update(str(path) for path in pack.get("items", []))
+    return sorted(fields)
 
 
 def review_evidence_errors(profile: dict[str, Any], evidence: dict[str, Any]) -> list[str]:
@@ -353,6 +298,39 @@ def review_evidence_errors(profile: dict[str, Any], evidence: dict[str, Any]) ->
         elif any(ref not in source_ids for ref in references):
             errors.append(f"decisions.{section}.source_ids contains an unknown source")
 
+    field_decisions = evidence.get("field_decisions")
+    expected_fields = set(profile_review_fields(profile))
+    if not isinstance(field_decisions, dict):
+        errors.append("field_decisions must classify every required and candidate field")
+        field_decisions = {}
+    missing_fields = sorted(expected_fields - set(field_decisions))
+    if missing_fields:
+        errors.append("field_decisions are missing: " + ", ".join(missing_fields))
+    unexpected_fields = sorted(set(field_decisions) - expected_fields)
+    if unexpected_fields:
+        errors.append(
+            "field_decisions contain fields outside the profile packet: "
+            + ", ".join(unexpected_fields)
+        )
+    required_fields = {str(path) for path in profile.get("required_items", [])}
+    for path, decision in field_decisions.items():
+        if not isinstance(decision, dict):
+            errors.append(f"field_decisions.{path} must be an object")
+            continue
+        disposition = decision.get("disposition")
+        if disposition not in {"required", "conditional", "recommended", "excluded"}:
+            errors.append(f"field_decisions.{path}.disposition is invalid")
+        if path in required_fields and disposition != "required":
+            errors.append(f"field_decisions.{path} must remain required or the profile must be revised")
+        rationale = decision.get("rationale")
+        if not isinstance(rationale, str) or len(rationale.strip()) < 20:
+            errors.append(f"field_decisions.{path}.rationale is too short")
+        references = decision.get("source_ids")
+        if not isinstance(references, list) or not references:
+            errors.append(f"field_decisions.{path}.source_ids must cite at least one source")
+        elif any(ref not in source_ids for ref in references):
+            errors.append(f"field_decisions.{path}.source_ids contains an unknown source")
+
     fixture_review = evidence.get("fixture_review")
     if not isinstance(fixture_review, dict):
         errors.append("fixture_review is required")
@@ -422,8 +400,8 @@ def item_operator(path: str, family: str) -> str:
     if family == "biological_context":
         return "context-compatible"
     if path == "identifiers.namespace_version":
-        # Decision D7. Two releases of one namespace are not a contradiction: identifiers are
-        # retired and merged between releases, so a version change is itself a mapping.
+        # Two releases of one namespace are not automatically contradictory: identifiers can be
+        # retired or merged between releases, so the comparison needs a pinned transition record.
         return "namespace-version-compatible"
     if path in {"semantic.concept", "semantic.subject", "identifiers.namespace"}:
         return "equal"
@@ -441,7 +419,6 @@ ARRAY_ITEM_PARENTS = (
     "identifiers.mapping_refs",
     "semantic.ontology_terms",
     "dimensions.axes",
-    "biological_context.taxa",
 )
 
 
@@ -464,22 +441,6 @@ def item_json_schema(path: str) -> dict[str, Any]:
                 return dict(declared)
 
     leaf = path.replace("[]", "").split(".")[-1]
-    if path == "accepted_units":
-        return {"type": "array", "minItems": 1, "uniqueItems": True, "items": {"type": "string", "minLength": 1}}
-    if path == "shape":
-        return {"type": "array", "items": {"anyOf": [{"type": "integer", "minimum": 0}, {"const": "*"}]}}
-    if path == "schema":
-        return {"type": "object"}
-    if path == "default":
-        return {}
-    if path == "constraints[].inputs":
-        return {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^/"}}
-    if leaf in BOOLEAN_LEAVES:
-        return {"type": "boolean"}
-    if leaf in INTEGER_LEAVES:
-        return {"type": "integer", "minimum": 0}
-    if leaf in NUMBER_LEAVES:
-        return {"type": "number"}
     if leaf in ARRAY_LEAVES:
         if leaf == "axes":
             return {
@@ -505,25 +466,6 @@ def item_json_schema(path: str) -> dict[str, Any]:
                             "additionalProperties": False,
                         },
                     ]
-                },
-            }
-        if leaf == "taxa":
-            # Decision D5. One species field cannot describe a host and its pathogen, or the members
-            # of a community, so a port declares the organisms involved and what each one is to the
-            # measurement. Subsumption between them still needs a pinned taxonomy snapshot.
-            return {
-                "type": "array",
-                "minItems": 1,
-                "items": {
-                    "type": "object",
-                    "required": ["taxon", "role"],
-                    "properties": {
-                        "taxon": {"type": "string", "pattern": "^NCBITaxon:[1-9][0-9]*$"},
-                        "role": {"enum": ["host", "pathogen", "community_member", "donor"]},
-                        "label": {"type": "string", "minLength": 1},
-                        "strain": {"type": "string", "minLength": 1},
-                    },
-                    "additionalProperties": False,
                 },
             }
         if leaf == "ontology_terms":
@@ -563,23 +505,13 @@ def item_json_schema(path: str) -> dict[str, Any]:
                     "additionalProperties": False,
                 },
             }
-        if leaf in {"disease", "intervention"}:
-            return {
-                "type": "array",
-                "minItems": 1,
-                "items": {"anyOf": [{"type": "string", "minLength": 1}, {"type": "object"}]},
-            }
-        if leaf in {"qualifiers", "data_use", "quality_flags", "evidence_refs", "validation_results"}:
+        if leaf in {"qualifiers", "quality_flags"}:
             return {"type": "array", "minItems": 1, "uniqueItems": True, "items": {"type": "string", "minLength": 1}}
         return {"type": "array", "minItems": 1}
     if leaf in {"sha256", "digest", "schema_sha256", "labels_sha256", "source_sha256", "contract_sha256"}:
         return {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
     if leaf.endswith("_ref") or leaf in {"ref", "url", "uri"}:
         return {"type": "string", "format": "uri"}
-    if path == "biological_context.taxa[].taxon":
-        return {"type": "string", "pattern": "^NCBITaxon:[1-9][0-9]*$"}
-    if path == "biological_context.taxa[].role":
-        return {"enum": ["host", "pathogen", "community_member", "donor"]}
     if leaf == "species":
         return {
             "type": "string",
@@ -588,60 +520,30 @@ def item_json_schema(path: str) -> dict[str, Any]:
                 {"pattern": "^NCBITaxon:[1-9][0-9]*$"},
             ],
         }
-    if leaf == "taxonomy_namespace":
-        # The registry the taxon labels come from, such as ncbitaxon or gtdb.
-        return {"type": "string", "pattern": "^[a-z][a-z0-9.\\-]*$", "maxLength": 64}
-    if leaf == "implicit_entry":
-        # What an entry absent from a sparse encoding means. Re-encoding dense as sparse is lossless
-        # only when both sides agree on this: an unobserved value is not an observed zero (D6).
-        return {"enum": ["observed_zero", "unobserved", "not_applicable"]}
-    if leaf == "sparsity":
-        return {"enum": ["dense", "sparse"]}
     if leaf == "scale":
-        # Stevens' level, separated from the value domain and from any transform (decision D8).
         return {"enum": ["nominal", "ordinal", "interval", "ratio", "proportion", "probability", "count"]}
     if leaf == "transform":
         return {"enum": ["identity", "log2", "log10", "ln", "logit"]}
-    if leaf in {"severity"}:
-        return {"enum": ["info", "warning", "error"]}
-    if leaf in {"classification"}:
-        return {"enum": ["public", "internal", "confidential", "restricted"]}
-    if leaf in {"unit", "time_unit", "accepted_units", "emitted_unit"}:
+    if leaf in {"unit", "time_unit"}:
         return {"type": "string", "minLength": 1, "maxLength": 128}
-    if leaf in {"actual_context", "provenance", "uncertainty", "value", "expected", "inputs", "schema"}:
-        return {"type": ["string", "number", "integer", "boolean", "array", "object"]}
     return {"type": "string", "minLength": 1, "maxLength": 4096}
 
 
 def profile_concept(profile: dict[str, Any]) -> str:
-    """A term identifier that does not change when the profile version does (decision D3)."""
+    """Return a term identifier that does not change with the profile version."""
 
     return f"{STANDARD.rsplit('/', 1)[0]}/terms/{profile.get('domain')}/{profile.get('name')}"
 
 
-def quantity_kind_id(kind: str) -> str:
-    return f"{STANDARD.rsplit('/', 1)[0]}/quantity-kinds/{kind}"
-
-
 def allowed_representation_kinds(profile: dict[str, Any]) -> list[str]:
-    narrowed = structured(profile).get("kinds")
-    if narrowed:
-        return list(narrowed)
     values: list[str] = []
     for signal_type in profile.get("applies_to", []):
         values.extend(REPRESENTATION_KINDS.get(str(signal_type), []))
-    values = list(dict.fromkeys(values)) or ["record"]
-    # A profile whose reviewed structure declares at least one axis is indexed, so it is not a
-    # scalar (decision D6). Narrowing beyond this needs a per-profile judgement that no reviewed
-    # declaration carries yet, and guessing it from the profile name is what D9 abolished.
-    axes = structured(profile).get("axes")
-    if isinstance(axes, list) and axes and "scalar" in values:
-        values = [value for value in values if value != "scalar"]
-    return values
+    return list(dict.fromkeys(values)) or ["record"]
 
 
 # These operators need a pinned snapshot to decide anything. Without one the engine answers
-# UNKNOWN, so a differing value is absent evidence rather than a contradiction (decisions D3, D7).
+# UNKNOWN, so a differing value is absent evidence rather than a contradiction.
 SNAPSHOT_OPERATORS = {
     "term-equivalent",
     "term-subsumes",
@@ -655,7 +557,7 @@ def contradiction_reason_code(path: str, definition: dict[str, Any]) -> str:
     """The code the engine actually reports for this contradiction.
 
     Where the profile fixes a quantity kind, a unit of another quantity is caught by the kind check
-    before the unit rule is reached, and that check reports its own code (decision D1).
+    before the unit rule is reached, and that check reports its own code.
     """
 
     if path == "measurement.unit" and get_path(definition.get("fixed", {}), "measurement.quantity"):
@@ -664,7 +566,7 @@ def contradiction_reason_code(path: str, definition: dict[str, Any]) -> str:
 
 
 def policy_layer(path: str) -> bool:
-    """Whether this item is decided by governance rather than by technical fit (decision D12).
+    """Whether this item is decided by governance rather than by technical fit.
 
     Consent and data-use terms say whether two ports may exchange data at all. That is a policy
     outcome: it is reported as a policy finding and does not decide the technical status, so a
@@ -687,9 +589,6 @@ def profile_fixed(profile: dict[str, Any]) -> dict[str, Any]:
     fixed: dict[str, Any] = {}
     if "semantic.concept" in profile.get("required_items", []):
         set_path(fixed, "semantic.concept", profile_concept(profile))
-    kind = measured(profile).get("kind")
-    if "measurement.quantity" in profile.get("required_items", []) and kind and kind != "port-declared":
-        set_path(fixed, "measurement.quantity", quantity_kind_id(str(kind)))
     return fixed
 
 
@@ -703,7 +602,7 @@ def profile_allowed(profile: dict[str, Any]) -> dict[str, Any]:
 def get_path(document: dict[str, Any], path: str) -> Any:
     if "[]" in path:
         # A path through "[]" addresses every member of the array, so it resolves to one value per
-        # member rather than to a single value (decision D9).
+        # member rather than to a single value.
         head, _, tail = path.partition("[]")
         container = get_path(document, head.strip("."))
         if not isinstance(container, list):
@@ -728,33 +627,16 @@ def requirement_schema(profile: dict[str, Any], path: str) -> dict[str, Any]:
     return item_json_schema(path)
 
 
-def measurement_unit(profile: dict[str, Any]) -> str:
-    """The reviewed UCUM unit for this profile (decision D9)."""
+def measurement_unit() -> str:
+    """Return a dimensionless example when no profile-specific quantity is declared."""
 
-    declared = measured(profile).get("unit")
-    return str(declared) if declared else "1"
+    return "1"
 
 
-def axis_entries(profile: dict[str, Any]) -> list[Any]:
-    """The reviewed axes for this profile, in order (decision D9).
+def axis_entries() -> list[Any]:
+    """Return the smallest schema-valid axis example."""
 
-    Each axis is published as the object its declaration describes rather than as a bare name. A
-    list of names has nowhere to put a per-axis requirement: "every axis declares its unit" cannot
-    attach to a string, and emitting it against one overwrites the list. The declarations already
-    carry a reviewed meaning for each axis, which a list of names discards.
-    """
-
-    axes = structured(profile).get("axes")
-    if axes in (None, "port-declared"):
-        return [{"name": "axis"}]
-    entries: list[Any] = []
-    for axis in axes:
-        entry: dict[str, Any] = {"name": str(axis["name"])}
-        meaning = axis.get("meaning")
-        if meaning:
-            entry["meaning"] = str(meaning)
-        entries.append(entry)
-    return entries
+    return [{"name": "axis"}]
 
 
 def example_from_schema(schema: Any, leaf: str) -> Any:
@@ -804,21 +686,11 @@ def example_value(path: str, profile: dict[str, Any] | None = None) -> Any:
             return allowed[0]
     leaf = path.replace("[]", "").split(".")[-1]
     if leaf == "axes" and profile is not None:
-        return axis_entries(profile)
-    if leaf == "taxa" and profile is not None:
-        return [{"taxon": example_species(profile), "role": "host"}]
-    if leaf == "intervention":
-        # An intervention is a structure, not a label: the catalogue defines an agent, dose, route,
-        # duration and schedule for it. A list of bare strings has nowhere to put them (D9).
-        return [{"agent": "example-agent"}]
-    if leaf in {"axes", "labels", "qualifiers", "disease", "data_use"}:
+        return axis_entries()
+    if leaf in {"axes", "qualifiers", "quality_flags"}:
         return [f"example-{leaf}"]
-    if leaf in BOOLEAN_LEAVES:
-        return True
-    if leaf in {"min", "max", "minimum", "maximum", "confidence", "variance", "byte_size"}:
-        return 1
     if leaf == "mapping_refs":
-        # An array of pinned mappings, not a label (decision D7). Each entry is built from the
+        # An array of pinned mappings, not a label. Each entry is built from the
         # catalogue's own sub-item definitions, so the example cannot drift from their schemas.
         prefix = "identifiers.mapping_refs[]."
         entry = {sub[len(prefix):]: example_value(sub) for sub in ITEM_INDEX if sub.startswith(prefix)}
@@ -827,33 +699,25 @@ def example_value(path: str, profile: dict[str, Any] | None = None) -> Any:
         # A digest item has a pattern to satisfy; "example-sha256" is not a digest.
         return "sha256:" + "0" * 64
     if leaf == "species":
-        return example_species(profile or {})
-    if leaf == "taxonomy_namespace":
-        return "ncbitaxon"
-    if leaf == "taxonomy_version":
-        return "2026-01-01"
+        return example_species()
     if leaf == "unit":
-        return measurement_unit(profile or {})
+        return measurement_unit()
     if leaf == "kind":
         return allowed_representation_kinds(profile or {})[0]
     if leaf == "concept" and profile is not None:
         return profile_concept(profile)
     if leaf == "subject" and profile is not None:
-        return DOMAIN_SUBJECTS.get(str(profile.get("domain")), "biological_entity")
+        return "biological_entity"
     if leaf == "quantity" and profile is not None:
-        kind = measured(profile).get("kind", "port-declared")
-        return quantity_kind_id(str(kind))
+        return "port-declared"
     if leaf == "scale":
-        return str(measured(profile or {}).get("scale", "ratio"))
+        return "ratio"
     if leaf == "transform":
-        return str(measured(profile or {}).get("transform", "identity"))
+        return "identity"
     if leaf == "ordering":
         return "explicit"
-    # Inferring a value from the item's schema comes last. It used to come first, and an enum schema
-    # returns its first member, so every profile published the first measurement scale in the list --
-    # "nominal" -- instead of the level its own declaration states. 122 of 122 were wrong, and the
-    # guard that a probability scale must be dimensionless was passing because nothing was ever on a
-    # probability scale (decision D8).
+    # Inferring a value from the item's schema comes last so explicit scientific examples win over
+    # the first member of a generic enum.
     derived = example_from_schema((ITEM_INDEX.get(path) or {}).get("json_schema"), leaf)
     if derived is not None:
         return derived
@@ -952,7 +816,7 @@ def fixture_slug(path: str) -> str:
 def delete_path(document: dict[str, Any], path: str) -> None:
     if "[]" in path:
         # Deleting through "[]" removes the field from every member of the array. Stripping the
-        # marker made this a silent no-op, because the container is a list, not a dict (D9).
+        # marker would otherwise be a silent no-op because the container is a list, not a dict.
         head, _, tail = path.partition("[]")
         container = get_path(document, head.strip("."))
         if isinstance(container, list):
@@ -970,51 +834,16 @@ def delete_path(document: dict[str, Any], path: str) -> None:
         current.pop(parts[-1], None)
 
 
-COMPARED_WHEN_BOTH_DECLARE = [
-    # Decision D2: a field that changes how a number or a feature is read must be compared
-    # whenever both ports declare it, even where the profile does not require it.
-    "measurement.unit", "measurement.scale", "measurement.transform", "measurement.quantity",
-    "measurement.normalization", "measurement.baseline", "measurement.aggregation",
-    "identifiers.namespace", "identifiers.namespace_version",
-    "representation.ordering", "representation.feature_space", "representation.reference_assembly",
-    "representation.coordinate_system", "dimensions.axes", "lifecycle.time_unit",
-    "lifecycle.temporal_meaning", "origin.type", "biological_context.compartment",
-]
-
-# Decision D4: an uncontrolled free-text subject compares unequal for synonyms and equal for
-# homonyms, so it stops being a required, compared field until it is term-bound.
-RETIRED_REQUIRED_ITEMS = {"semantic.subject"}
-
-
 def effective_required_items(profile: dict[str, Any]) -> list[str]:
-    required = [path for path in profile.get("required_items", []) if path not in RETIRED_REQUIRED_ITEMS]
-    declaration, structure = measured(profile), structured(profile)
-    if declaration.get("drop_measurement"):
-        required = [path for path in required if not path.startswith("measurement.")]
-    if "axes" in structure and structure.get("axes") is None:
-        required = [path for path in required if path not in {"dimensions.axes", "representation.ordering"}]
-    for extra in list(declaration.get("requires", [])) + list(structure.get("requires", [])):
-        if extra not in required:
-            required.append(extra)
-    if str(declaration.get("transform", "identity")) != "identity" and "measurement.transform" not in required:
-        # A log2 titre and a linear one are different numbers. Where the reviewed declaration says a
-        # transform was applied, the port has to say so, or the transform is invisible (decision D8).
-        required.append("measurement.transform")
-    if "biological_context.intervention" in required and "biological_context.intervention[].agent" not in required:
-        # An intervention that does not say what was administered cannot be read, the same way an
-        # unnamed axis cannot. Which of dose, route, duration and schedule matter is per profile.
-        required.append("biological_context.intervention[].agent")
-    if "dimensions.axes" in required and isinstance(structure.get("axes"), list) and "dimensions.axes[].name" not in required:
-        # An axis that does not say what it is cannot be read or compared. That is structural rather
-        # than a domain judgement, so it holds wherever a profile declares its axes (decision D9).
-        required.append("dimensions.axes[].name")
-    return required
+    """Return the authored v0 contract without catalogue-wide inferred requirements."""
+
+    return list(dict.fromkeys(str(path) for path in profile.get("required_items", [])))
 
 
 def required_fixture_groups(profile: dict[str, Any]) -> dict[str, list[str]]:
     slugs = [fixture_slug(path) for path in effective_required_items(profile)]
-    # A policy path never decides the technical status, so absent or differing consent and data-use
-    # terms are reported as policy findings rather than as UNKNOWN (decision D12).
+    # A policy path never decides the technical status, so absent or differing governance terms are
+    # reported as policy findings rather than as UNKNOWN.
     technical_slugs = [
         fixture_slug(path) for path in effective_required_items(profile)
         if not policy_layer(path) and "[]" not in path
@@ -1042,7 +871,7 @@ def required_fixture_groups(profile: dict[str, Any]) -> dict[str, list[str]]:
         for path in effective_required_items(profile)
         if needs_snapshot(path)
     )
-    unit = measurement_unit(profile) if "measurement.unit" in effective_required_items(profile) else None
+    unit = measurement_unit() if "measurement.unit" in effective_required_items(profile) else None
     if unit and convertible_unit(unit):
         groups["transformations"].append("comparison-lossless-unit-conversion")
     return groups
@@ -1052,7 +881,7 @@ def set_path(document: dict[str, Any], path: str, value: Any) -> None:
     if "[]" in path:
         # Writing through "[]" writes into every member of the array. Stripping the marker instead
         # would write a dict over the array itself, which is what made per-axis requirements
-        # unusable (decision D9).
+        # unusable.
         head, _, tail = path.partition("[]")
         container = get_path(document, head.strip("."))
         if isinstance(container, list):
@@ -1072,31 +901,24 @@ def set_path(document: dict[str, Any], path: str, value: Any) -> None:
         current[parts[-1]] = value
 
 
-def review_questions(profile: dict[str, Any]) -> list[str]:
+def review_questions(profile: dict[str, Any], candidate_items: list[str]) -> list[str]:
     required = set(profile.get("required_items", []))
     questions = [
-        f"Does the proposed concept identify {profile['label']} narrowly enough to prevent a different scientific quantity from matching?",
-        "Are the allowed representations complete, and can any two allowed representations connect without an explicit adapter?",
+        f"Does the proposed concept define {profile['label']} precisely enough for the stated use, without including scientifically different data?",
+        "Are the proposed required fields sufficient, and is each field correctly classified as required rather than conditional or optional?",
+        "For every candidate field listed in this packet, should it be required, conditional, recommended or excluded for this profile?",
+        "Are the allowed representations scientifically interchangeable, or does any pair require an explicit, versioned transformation?",
         "Which authoritative standards, ontologies, databases or primary publications support each required field and comparison rule?",
         "Which missing value must return UNKNOWN, and which known contradiction must return INCOMPATIBLE?",
+        "Do the worked fixtures cover the important direct matches, contradictions, missing information and permitted transformations?",
+        "What uses and scientific claims must this profile explicitly exclude?",
     ]
-    if "measurement.quantity" in required:
-        questions.append("Are the quantity, unit, scale, normalization, baseline and endpoint definitions sufficient for this measurement?")
-    else:
-        questions.append("Should quantity, unit, scale, normalization, baseline or endpoint be required for this profile?")
     if "identifiers.namespace" in required:
-        questions.append("Which identifier namespaces, releases, canonicalization rules and mapping-loss rules are permitted?")
-    else:
-        questions.append("Does this profile need a versioned identifier namespace or an ordered feature universe?")
-    if "dimensions.axes" in required:
-        questions.append("Are axis names, order, labels, coordinates and dynamic-size rules fully specified?")
-    elif any(kind in profile.get("applies_to", []) for kind in ("array", "artifact")):
-        questions.append("Should axes, labels, feature order, coordinates or artifact schema be required for non-scalar values?")
-    if profile.get("domain") not in {"core", "simulation", "chemical"}:
-        questions.append("Which species, tissue, cell type, disease, intervention, assay, cohort or compartment fields are required or conditional?")
-    if "event" in profile.get("applies_to", []) or any(token in profile.get("name", "") for token in ("time", "event", "trajectory", "rate", "stage")):
-        questions.append("Are event/state meaning, observation time, sampling, window, freshness and interpolation rules complete?")
-    questions.append("What uses and scientific claims must this profile explicitly exclude?")
+        questions.append("Which identifier namespaces and releases are permitted, and when is a pinned mapping required between them?")
+    if "biological_context.species" in required:
+        questions.append("When must organism identity match exactly, and are any cross-species connections scientifically defensible?")
+    if any(path.startswith("origin.") or path.startswith("artifact.") for path in candidate_items):
+        questions.append("Which provenance and file-format details are necessary to interpret the data safely, and which are merely useful metadata?")
     return questions
 
 
@@ -1105,7 +927,7 @@ def gating_pointer(path: str) -> str:
 
     Almost always the field itself. representation.kind is the exception: conditional equivalence
     needs to see the sibling fields that would make a re-encoding lossless, so its rule points at the
-    representation object (decision D6).
+    representation object.
     """
 
     return "/contract/representation" if path == "representation.kind" else item_pointer(path)
@@ -1113,6 +935,8 @@ def gating_pointer(path: str) -> str:
 
 def internal_quality_errors(profile: dict[str, Any], definition: dict[str, Any]) -> list[str]:
     errors: list[str] = []
+    if definition.get("stage") not in {"V0_PILOT", "STABLE", "DEPRECATED"}:
+        errors.append("stage is outside the published profile-stage vocabulary")
     requirements = definition.get("requirements", [])
     paths = [item.get("path") for item in requirements]
     if len(paths) != len(set(paths)):
@@ -1121,8 +945,8 @@ def internal_quality_errors(profile: dict[str, Any], definition: dict[str, Any])
     if not concept:
         errors.append("semantic.concept is not fixed to this profile")
     elif isinstance(concept, str) and "/v0." in concept:
-        # Decision D3: an IRI carrying /v0.1 would report every v0.2 port as incompatible even when
-        # the meaning is unchanged, so profile identity must not be baked into the term.
+        # A versioned concept IRI would make a later profile version appear scientifically different
+        # even when the meaning is unchanged.
         errors.append("semantic.concept embeds a profile version")
     kinds = get_path(definition.get("allowed", {}), "representation.kind")
     if not isinstance(kinds, list) or not kinds:
@@ -1229,7 +1053,7 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "severity": {"enum": ["info", "warning", "error"]},
             "reason_code": {"type": "string", "pattern": "^BMCS_[A-Z0-9_]+$"},
             "parameters": {"type": "object"},
-            # Decision D12. A policy rule is reported, not folded into the technical status.
+            # A governance rule is reported separately instead of changing technical compatibility.
             "layer": {"enum": ["technical", "policy"]},
         },
         "additionalProperties": False,
@@ -1255,7 +1079,7 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "name": {"type": "string"},
             "label": {"type": "string"},
             "description": {"type": "string", "minLength": 20},
-            "stage": {"enum": ["CURRENT", "FOUNDATION", "V0.1_PILOT", "WAVE_2", "CONTROLLED", "DEFERRED"]},
+            "stage": {"enum": ["V0_PILOT", "STABLE", "DEPRECATED"]},
             "review": {
                 "type": "object",
                 "required": ["status", "sources"],
@@ -1270,6 +1094,7 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
                     "intended_use": {"type": ["string", "null"]},
                     "limitations": {"type": "array", "items": {"type": "string"}},
                     "decisions": {"type": "object"},
+                    "field_decisions": {"type": "object"},
                     "fixture_review": {"type": "object"},
                 },
                 "additionalProperties": False,
@@ -1409,7 +1234,7 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "status": {"enum": STATUSES}, "policy_decision": {"enum": POLICY_DECISIONS},
             "quality_reference": {"type": ["object", "null"]},
             "findings": {"type": "array", "items": {"$ref": "compatibility-finding.schema.json"}},
-            # Decision D12. Consent and data-use are governance outcomes, not statements about
+            # Consent and data-use are governance outcomes, not statements about
             # whether two datasets fit together, so they are reported here rather than deciding
             # the technical status.
             "policy_findings": {"type": "array", "items": {"$ref": "compatibility-finding.schema.json"}},
@@ -1459,7 +1284,7 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "bundle_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
             # The status the chain carries. reports[] holds the terminal comparison, which is EXACT
             # whenever the last adapter lands exactly on the target, so a reader needs this to tell a
-            # lossy chain from an inference one (decision D11).
+            # lossy chain from an inference one.
             "technical_status": {"enum": STATUSES},
             "nodes": {"type": "array", "items": {"type": "object"}},
             "edges": {"type": "array", "items": {"type": "object"}},
@@ -1472,7 +1297,7 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     )
     # The engines consume three kinds of pinned snapshot and the standard published the format of
     # none of them. A snapshot is verified by digest, so the shape below is what a publisher has to
-    # produce for the operators to read it (decisions D3, D4, D5, D7).
+    # produce for the operators to read it.
     ontology_snapshot = simple(
         "ontology-snapshot", "Ontology Snapshot",
         ["ref", "sha256"],
@@ -1539,7 +1364,7 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
                         "from": {"type": "string", "minLength": 1},
                         "to": {"type": "string", "minLength": 1},
                         # A transition that retired and merged nothing preserves every identifier;
-                        # one that did either is a real loss and needs approval (decision D7).
+                        # one that did either is a real loss and needs approval.
                         "identifiers_retired": {"type": "integer", "minimum": 0},
                         "identifiers_merged": {"type": "integer", "minimum": 0},
                         "released_at": {"type": "string", "minLength": 1},
@@ -1713,6 +1538,7 @@ def build(root: Path) -> None:
                 "intended_use": None,
                 "limitations": [],
                 "decisions": {},
+                "field_decisions": {},
                 "fixture_review": {},
             }
         else:
@@ -1727,6 +1553,7 @@ def build(root: Path) -> None:
                 "intended_use": review_evidence["intended_use"],
                 "limitations": review_evidence["limitations"],
                 "decisions": review_evidence["decisions"],
+                "field_decisions": review_evidence["field_decisions"],
                 "fixture_review": review_evidence["fixture_review"],
             }
         raw = dict(raw, required_items=effective_required_items(raw))
@@ -1743,22 +1570,14 @@ def build(root: Path) -> None:
             for path in sorted(candidate_paths - required_paths)
             if path in item_index and item_index[path].get("family") not in {"existing-io", "envelope"}
         ]
-        # Decision D10. The profile document carried one level only: everything was "required" and
-        # the packet listed the rest as candidates a reader had to go and find. An item carried by a
-        # pack the profile adopts, but not required by it, is recommended for that profile. Pack
-        # membership is authored, reviewed data, so this needs no per-profile judgement. Neither
-        # validation nor comparison gates on a recommended item: both skip any level but "required".
-        # Decision D10. Emitting these as level "recommended" requirements was built and withdrawn:
-        # the review packet already publishes the same list as candidate_recommended_items, which its
-        # schema requires and the pre-review tooling reads, so the profile document was carrying a
-        # second copy of it for +9.2 MiB, 29.7% of the bundle, that no engine reads. The level
-        # vocabulary still has only one producer, and giving it a real one needs the profile classes
-        # the pilot exists to inform.
+        # Candidate fields stay in the review packet instead of being duplicated as non-gating
+        # profile requirements. The scientist decides whether each one should become required,
+        # conditional, recommended or excluded.
         rules = [
             {
                 # representation.kind is compared by conditional equivalence against the whole
                 # representation object, so the operator can see whether the fields that would make
-                # a re-encoding lossless are declared (decision D6).
+                # a re-encoding lossless are declared.
                 "source": gating_pointer(path),
                 "target": gating_pointer(path),
                 "operator": "representation-equivalent" if path == "representation.kind" else item_index.get(path, {}).get("comparison_operator", "equal"),
@@ -1768,27 +1587,14 @@ def build(root: Path) -> None:
             }
             # A requirement addressing every member of an array is validated, not compared: JSON
             # Pointer cannot say "each element", and comparison of the array itself is already
-            # covered by the rule on the array (decision D9).
+            # covered by the rule on the array.
             for path in raw["required_items"]
             if "[]" not in path
         ]
-        for path in COMPARED_WHEN_BOTH_DECLARE:
-            if path in required_paths or path not in item_index:
-                continue
-            rules.append(
-                {
-                    "source": item_pointer(path),
-                    "target": item_pointer(path),
-                    "operator": item_index[path].get("comparison_operator", "equal"),
-                    "missing": "ignore",
-                    "severity": "error",
-                    "reason_code": reason_code_for(path),
-                }
-            )
         for entry in rules:
-            # Decision D12: security and consent comparisons are governance, not technical fit.
+            # Governance rules are reported separately from technical compatibility.
             entry["layer"] = "policy" if entry["target"].startswith("/contract/security/") else "technical"
-        questions = review_questions(raw)
+        questions = review_questions(raw, candidate_recommended_items)
         definition = {
             "$schema": f"{STANDARD}/schemas/profile-definition.schema.json",
             "$id": raw["ref"],
@@ -1887,9 +1693,8 @@ def build(root: Path) -> None:
     write_json(root, "rules/quantity-kinds.json", {"standard": STANDARD, "id_prefix": f"{STANDARD.rsplit('/', 1)[0]}/quantity-kinds/", "kinds": QUANTITY_KINDS})
     write_json(root, "catalogue/items.json", {"schema_version": "0.1", "standard": STANDARD, "items": enriched_items})
     write_json(root, "catalogue/item-packs.json", {"schema_version": "0.1", "standard": STANDARD, "item_packs": packs})
-    # Decision D3. The concept IRI is minted outside the versioned profile document, so it needs a
-    # registry of its own: a term carries a label, a definition and a version that does not move when
-    # the profile version does. Label and definition come from the profile's own reviewed text.
+    # The concept IRI is minted outside the versioned profile document so its scientific meaning
+    # does not change merely because the profile contract receives a new version.
     terms = [
         {
             "id": profile_concept(profile),
@@ -1961,14 +1766,14 @@ def build(root: Path) -> None:
             if "[]" in path:
                 # The parent item builds the array from its reviewed declaration, so a member
                 # requirement must not write a generic example over it: that is the same clobbering
-                # this decision exists to fix. Only fill a field the parent left empty (D9).
+                # Only fill a field the parent left empty.
                 declared = get_path(valid_contract, path)
                 if isinstance(declared, list) and declared and all(value is not None for value in declared):
                     continue
             set_path(valid_contract, path, example_value(path, source_profile))
         direct_contract = json.loads(json.dumps(valid_contract))
         if "origin.type" in {item["path"] for item in definition["requirements"] if item["level"] == "required"}:
-            set_path(direct_contract, "origin.generated_at", "2026-01-01T00:00:00Z")
+            set_path(direct_contract, "origin.method", "declared")
         else:
             set_path(direct_contract, "origin.type", "declared")
         cases = [
@@ -2019,7 +1824,7 @@ def build(root: Path) -> None:
                         "source": incompatible_contract,
                         "target": valid_contract,
                         # A policy contradiction is reported as a policy finding and leaves the
-                        # technical status alone, so the contracts still fit together (D12).
+                        # technical status alone, so the contracts still fit together.
                         "status": (
                             "UNKNOWN" if needs_snapshot(path)
                             else "DIRECT_COMPATIBLE" if policy_layer(path)
@@ -2031,7 +1836,7 @@ def build(root: Path) -> None:
                     {
                         # A port that does not declare its consent or data-use terms raises a
                         # governance question, not a technical one, so the status is unchanged and
-                        # the absence is reported as a policy finding (decision D12).
+                        # the absence is reported as a policy finding.
                         "name": f"comparison-policy-missing-{slug}" if policy_layer(path) else f"comparison-unknown-{slug}",
                         "source": missing_contract,
                         "target": valid_contract,
@@ -2061,7 +1866,7 @@ def build(root: Path) -> None:
                 }
             )
         # A member requirement is validated per member and never compared, so it keeps its two
-        # negative fixtures and none of the three comparison ones (decision D9).
+        # negative fixtures and none of the three comparison ones.
         cases = [
             case for case in cases
             if not (case["name"].startswith("comparison-") and "[]" in str(case.get("field", "")))

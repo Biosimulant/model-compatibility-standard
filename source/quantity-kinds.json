@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "note": "Quantity kinds for decision D1. A unit alone does not identify a quantity: hertz and becquerel are both 1/time, and a Hounsfield unit is dimensionless like a bare ratio. Each kind fixes a dimension through its canonical unit, and may forbid units whose UCUM property belongs to a different quantity. Validation checks a declared unit against the kind; comparison requires the kinds to match before any conversion is considered.",
+  "note": "A unit alone does not identify a quantity: hertz and becquerel are both 1/time, and a Hounsfield unit is dimensionless like a bare ratio. Each kind fixes a dimension through its canonical unit, and may forbid units whose UCUM property belongs to a different quantity. Validation checks a declared unit against the kind; comparison requires the kinds to match before any conversion is considered.",
   "id_prefix": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/",
   "fields": {
     "canonical_unit": "A UCUM expression. Its dimension is the kind's dimension; nothing else about it is normative.",

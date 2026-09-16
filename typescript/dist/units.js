@@ -8,7 +8,7 @@
 // possibly an offset; not convertible because the dimensions differ; and not decidable, because a
 // unit is unparseable, arbitrary or logarithmic. The last must never resolve as a pass.
 //
-// Mirrors python/src/biosimulant_model_compatibility_standard/units.py. See decision D1.
+// Mirrors python/src/biosimulant_model_compatibility_standard/units.py.
 export class UnitError extends Error {
 }
 const TOKEN = /(\()|(\))|([./])|(\{[^}]*\})|(\d+)(?=$|[./(){}]|\{)|(\[[^\]]*\]|[^./(){}\s]+?)([+-]?\d+)?(?=$|[./(){}]|\{)/y;

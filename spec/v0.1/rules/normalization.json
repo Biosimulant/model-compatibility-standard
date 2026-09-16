@@ -3,10 +3,9 @@
   "set_like_paths": [
     "/contract/profile_refs",
     "/contract/semantic/qualifiers",
-    "/contract/biological_context/disease",
-    "/contract/biological_context/intervention",
-    "/contract/biological_context/taxa",
-    "/contract/security/data_use"
+    "/contract/semantic/ontology_terms",
+    "/contract/identifiers/mapping_refs",
+    "/contract/uncertainty/quality_flags"
   ],
   "standard": "https://biosimulant.com/standards/model-compatibility/v0.1"
 }

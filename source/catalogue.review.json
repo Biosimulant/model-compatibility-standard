@@ -40,7 +40,9 @@
     "mapping-total",
     "mapping-bijective",
     "context-compatible",
-    "digest-equal"
+    "digest-equal",
+    "representation-equivalent",
+    "namespace-version-compatible"
   ],
   "update_policy": {
     "released_objects_are_immutable": true,
@@ -51,38 +53,10 @@
   },
   "counts": {
     "profiles": 3,
-    "item_definitions": 271,
-    "item_packs": 30
+    "item_definitions": 69,
+    "item_packs": 3
   },
   "item_definitions": [
-    {
-      "path": "accepted_units",
-      "family": "existing-io",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "artifact.byte_size",
-      "family": "artifact",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "artifact.compression",
-      "family": "artifact",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "artifact.encryption",
-      "family": "artifact",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
     {
       "path": "artifact.format",
       "family": "artifact",
@@ -99,13 +73,6 @@
     },
     {
       "path": "artifact.media_type",
-      "family": "artifact",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "artifact.partitioning",
       "family": "artifact",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -133,175 +100,7 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "artifact.staging",
-      "family": "artifact",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.age",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.assay",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.cell_line",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.cell_type",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.cohort",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "biological_context.compartment",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.confluence",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.culture_system",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.denominator",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.disease",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.geography",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.intervention",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.intervention[].agent",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.intervention[].dose",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.intervention[].duration",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.intervention[].route",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.intervention[].schedule",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.lineage",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.medium",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.oxygen",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.passage",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.population",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.sampling_frame",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.sex",
       "family": "biological_context",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -315,133 +114,7 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "biological_context.strain",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.stratum",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.substrate",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.taxa",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.taxa[].role",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.taxa[].taxon",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "biological_context.tissue",
-      "family": "biological_context",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "constraints[].expected",
-      "family": "constraints[]",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "constraints[].id",
-      "family": "constraints[]",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "constraints[].inputs",
-      "family": "constraints[]",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "constraints[].operator",
-      "family": "constraints[]",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "constraints[].profile_ref",
-      "family": "constraints[]",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "constraints[].reason",
-      "family": "constraints[]",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "constraints[].remediation",
-      "family": "constraints[]",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "constraints[].severity",
-      "family": "constraints[]",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "default",
-      "family": "existing-io",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "dimensions.axes",
-      "family": "dimensions",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "dimensions.axes[].coordinates_ref",
-      "family": "dimensions",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "dimensions.axes[].dynamic",
       "family": "dimensions",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -492,223 +165,6 @@
     {
       "path": "dimensions.axes[].unit",
       "family": "dimensions",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "dimensions.dose_axis",
-      "family": "dimensions",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "dimensions.feature_axis",
-      "family": "dimensions",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "dimensions.feature_labels_ref",
-      "family": "dimensions",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "dimensions.feature_labels_sha256",
-      "family": "dimensions",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "dimensions.orientation",
-      "family": "dimensions",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "dimensions.origin",
-      "family": "dimensions",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "dimensions.pixel_spacing",
-      "family": "dimensions",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "dimensions.sample_axis",
-      "family": "dimensions",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "dimensions.slice_thickness",
-      "family": "dimensions",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "dimensions.spatial_axes",
-      "family": "dimensions",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "dimensions.time_axis",
-      "family": "dimensions",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "dtype",
-      "family": "existing-io",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "emitted_unit",
-      "family": "existing-io",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "envelope.actual_context",
-      "family": "envelope",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "envelope.artifact_ref",
-      "family": "envelope",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "envelope.contract_sha256",
-      "family": "envelope",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "envelope.observation_time",
-      "family": "envelope",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "envelope.origin",
-      "family": "envelope",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "envelope.produced_by",
-      "family": "envelope",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "envelope.provenance",
-      "family": "envelope",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "envelope.uncertainty",
-      "family": "envelope",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "envelope.validation_results",
-      "family": "envelope",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "envelope.value",
-      "family": "envelope",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "identifiers.ambiguity_handling",
-      "family": "identifiers",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "identifiers.canonicalization",
-      "family": "identifiers",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "identifiers.case_policy",
-      "family": "identifiers",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "identifiers.coding_system",
-      "family": "identifiers",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "identifiers.coding_version",
-      "family": "identifiers",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "identifiers.deprecated_handling",
-      "family": "identifiers",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "identifiers.edge_namespace",
-      "family": "identifiers",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "identifiers.entity_type",
-      "family": "identifiers",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
@@ -791,120 +247,8 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "identifiers.node_namespace",
-      "family": "identifiers",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "identifiers.structure_hash",
       "family": "identifiers",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "identifiers.taxonomy_namespace",
-      "family": "identifiers",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "identifiers.taxonomy_version",
-      "family": "identifiers",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "identifiers.transcript_reference",
-      "family": "identifiers",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "identifiers.unmapped_handling",
-      "family": "identifiers",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "identifiers.variant_notation",
-      "family": "identifiers",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "kind",
-      "family": "existing-io",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "lifecycle.causality",
-      "family": "lifecycle",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "lifecycle.consumption",
-      "family": "lifecycle",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "lifecycle.evolutionary_time",
-      "family": "lifecycle",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "lifecycle.freshness",
-      "family": "lifecycle",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "lifecycle.interpolation",
-      "family": "lifecycle",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "lifecycle.kind",
-      "family": "lifecycle",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "lifecycle.observation_period",
-      "family": "lifecycle",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "lifecycle.production",
-      "family": "lifecycle",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "lifecycle.sampling",
-      "family": "lifecycle",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
@@ -917,71 +261,8 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "lifecycle.time_origin",
-      "family": "lifecycle",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "lifecycle.time_unit",
       "family": "lifecycle",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "lifecycle.window",
-      "family": "lifecycle",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "measurement.aggregation",
-      "family": "measurement",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "measurement.baseline",
-      "family": "measurement",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "measurement.batch_correction",
-      "family": "measurement",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "measurement.calibration_ref",
-      "family": "measurement",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "measurement.control",
-      "family": "measurement",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "measurement.detection_limits",
-      "family": "measurement",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "measurement.evolutionary_distance",
-      "family": "measurement",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
@@ -1001,42 +282,7 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "measurement.rate_basis",
-      "family": "measurement",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "measurement.reference_range",
-      "family": "measurement",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "measurement.response_direction",
-      "family": "measurement",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "measurement.scale",
-      "family": "measurement",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "measurement.standardization",
-      "family": "measurement",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "measurement.tolerance",
       "family": "measurement",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -1057,76 +303,6 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "name",
-      "family": "existing-io",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.absolute_tolerance",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.audit_ref",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.edge_evidence",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.estimation_method",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.evidence_refs",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.fit_method",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.generated_at",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.instrument",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.instrument_model",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "origin.method",
       "family": "origin",
       "value_type": "profile-defined JSON value",
@@ -1135,90 +311,6 @@
     },
     {
       "path": "origin.method_version",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.model_digest",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.observed_at",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.operator",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.parameter_digest",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.phylogenetic_method",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.processing_pipeline_ref",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.protocol_ref",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.protocol_version",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.random_seed",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.registration_ref",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.relative_tolerance",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.segmentation_method",
       "family": "origin",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -1239,20 +331,6 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "origin.solver",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.solver_version",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "origin.source_ref",
       "family": "origin",
       "value_type": "profile-defined JSON value",
@@ -1261,27 +339,6 @@
     },
     {
       "path": "origin.source_sha256",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.substitution_model",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.surveillance_system",
-      "family": "origin",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "origin.transformation_chain",
       "family": "origin",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -1302,35 +359,7 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "representation.alternate_allele",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "representation.canonicalization",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.channel_order",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.circularity",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.conformer_method",
       "family": "representation",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -1344,20 +373,6 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "representation.directed",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.edge_schema",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "representation.encoding",
       "family": "representation",
       "value_type": "profile-defined JSON value",
@@ -1365,42 +380,7 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "representation.endianness",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.feature_space",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "representation.formal_charge",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.hydrogen_policy",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.implicit_entry",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.interval_convention",
       "family": "representation",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -1421,41 +401,6 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "representation.layout",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.left_normalized",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.masking",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.multigraph",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.node_schema",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "representation.normalization_tool",
       "family": "representation",
       "value_type": "profile-defined JSON value",
@@ -1464,13 +409,6 @@
     },
     {
       "path": "representation.normalization_version",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.ordering",
       "family": "representation",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -1491,63 +429,7 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "representation.quality_encoding",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.reference_allele",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.reference_assembly",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.reference_sequence",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.self_loops",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.sparsity",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.state_order",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "representation.stereochemistry",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.strand",
       "family": "representation",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -1568,125 +450,6 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "representation.tree_format",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "representation.weight_semantics",
-      "family": "representation",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "required",
-      "family": "existing-io",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "schema",
-      "family": "existing-io",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "security.classification",
-      "family": "security",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "security.consent_scope",
-      "family": "security",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "security.data_use",
-      "family": "security",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "security.deidentification",
-      "family": "security",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "security.export_control",
-      "family": "security",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "security.license",
-      "family": "security",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "security.license_ref",
-      "family": "security",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "security.redaction",
-      "family": "security",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "security.residency",
-      "family": "security",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "security.retention",
-      "family": "security",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "security.workspace_boundary",
-      "family": "security",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "semantic.ancestral_state",
-      "family": "semantic",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "semantic.cell_state",
-      "family": "semantic",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "semantic.concept",
       "family": "semantic",
       "value_type": "profile-defined JSON value",
@@ -1694,42 +457,7 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "semantic.consequence",
-      "family": "semantic",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "semantic.endpoint",
-      "family": "semantic",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "semantic.entity",
-      "family": "semantic",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "semantic.intended_use",
-      "family": "semantic",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "semantic.lineage",
-      "family": "semantic",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "semantic.model_formalism",
       "family": "semantic",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -1792,28 +520,7 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "semantic.pk_parameter",
-      "family": "semantic",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "semantic.process",
-      "family": "semantic",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "semantic.qualifiers",
-      "family": "semantic",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "semantic.role",
       "family": "semantic",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -1827,126 +534,7 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "semantic.variant_class",
-      "family": "semantic",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "shape",
-      "family": "existing-io",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "signal_type",
-      "family": "existing-io",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "uncertainty.branch_support",
-      "family": "uncertainty",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "uncertainty.censoring",
-      "family": "uncertainty",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "uncertainty.confidence_level",
-      "family": "uncertainty",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "uncertainty.distribution",
-      "family": "uncertainty",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "uncertainty.edge_confidence",
-      "family": "uncertainty",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "uncertainty.fit_quality",
-      "family": "uncertainty",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "uncertainty.imputation",
-      "family": "uncertainty",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "uncertainty.interval",
-      "family": "uncertainty",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "uncertainty.kind",
-      "family": "uncertainty",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "uncertainty.missingness",
-      "family": "uncertainty",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "uncertainty.parameter_covariance",
-      "family": "uncertainty",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "uncertainty.parameters",
-      "family": "uncertainty",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
       "path": "uncertainty.quality_flags",
-      "family": "uncertainty",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "uncertainty.segmentation_confidence",
-      "family": "uncertainty",
-      "value_type": "profile-defined JSON value",
-      "requirement": "profile-dependent",
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
-    },
-    {
-      "path": "uncertainty.variance",
       "family": "uncertainty",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -1955,478 +543,74 @@
   ],
   "item_packs": [
     {
-      "id": "artifact-format",
-      "description": "Details for data passed as files: media type, serialization, schema, compression, checksum, and staging.",
+      "id": "protein-sequence",
+      "description": "Fields needed to exchange an amino-acid sequence with explicit identity, encoding, organism context and source provenance.",
       "items": [
+        "semantic.concept",
+        "representation.kind",
+        "representation.alphabet",
+        "representation.encoding",
+        "identifiers.namespace",
+        "identifiers.namespace_version",
+        "biological_context.species",
+        "semantic.ontology_terms",
+        "semantic.qualifiers",
+        "origin.source_ref",
+        "origin.source_sha256",
+        "uncertainty.quality_flags"
+      ]
+    },
+    {
+      "id": "protein-structure",
+      "description": "Fields needed to exchange a protein structure with explicit identity, coordinate representation, format, organism context and provenance.",
+      "items": [
+        "semantic.concept",
+        "representation.kind",
+        "representation.structure_format",
+        "representation.coordinate_system",
+        "identifiers.namespace",
+        "identifiers.namespace_version",
+        "biological_context.species",
+        "origin.type",
+        "semantic.ontology_terms",
+        "semantic.qualifiers",
+        "representation.precision",
+        "origin.method",
+        "origin.method_version",
+        "origin.software",
+        "origin.software_version",
+        "origin.source_ref",
+        "origin.source_sha256",
         "artifact.media_type",
         "artifact.format",
         "artifact.format_version",
         "artifact.schema_ref",
         "artifact.schema_sha256",
-        "artifact.compression",
         "artifact.sha256",
-        "artifact.byte_size",
-        "artifact.staging",
-        "artifact.partitioning",
-        "artifact.encryption"
+        "uncertainty.quality_flags"
       ]
     },
     {
-      "id": "assay-evidence",
-      "description": "Which assay produced the data: protocol, instrument, calibration, and controls.",
+      "id": "canonical-smiles",
+      "description": "Fields needed to exchange a canonical SMILES string with explicit canonicalisation, chemical-state choices and software provenance.",
       "items": [
-        "biological_context.assay",
-        "origin.protocol_ref",
-        "origin.protocol_version",
-        "origin.instrument",
-        "origin.instrument_model",
-        "origin.software",
-        "origin.software_version",
-        "measurement.calibration_ref",
-        "measurement.control",
-        "uncertainty.quality_flags",
-        "origin.evidence_refs"
-      ]
-    },
-    {
-      "id": "biological-context",
-      "description": "Where the data comes from biologically: species, material, disease, intervention, assay, and compartment.",
-      "items": [
-        "biological_context.species",
-        "biological_context.strain",
-        "biological_context.sex",
-        "biological_context.age",
-        "biological_context.tissue",
-        "biological_context.cell_type",
-        "biological_context.cell_line",
-        "biological_context.disease",
-        "biological_context.intervention",
-        "biological_context.assay",
-        "biological_context.cohort",
-        "biological_context.compartment",
-        "biological_context.taxa"
-      ]
-    },
-    {
-      "id": "cell-context",
-      "description": "Which cells the data describes: cell type, lineage, culture conditions, passage, and state.",
-      "items": [
-        "biological_context.cell_type",
-        "biological_context.cell_line",
-        "biological_context.lineage",
-        "biological_context.culture_system",
-        "biological_context.passage",
-        "biological_context.medium",
-        "biological_context.substrate",
-        "biological_context.oxygen",
-        "biological_context.confluence",
-        "semantic.cell_state"
-      ]
-    },
-    {
-      "id": "clinical-governance",
-      "description": "Rules for clinical data: coding systems, population, consent, de-identification, and use restrictions.",
-      "items": [
-        "identifiers.coding_system",
-        "identifiers.coding_version",
-        "biological_context.cohort",
-        "biological_context.population",
-        "security.consent_scope",
-        "security.data_use",
-        "security.deidentification",
-        "security.residency",
-        "security.retention",
-        "origin.audit_ref",
-        "semantic.intended_use"
-      ]
-    },
-    {
-      "id": "dimensioned-array",
-      "description": "How an array is laid out: named axes, coordinates, labels, sizes, and order.",
-      "items": [
-        "dimensions.axes",
-        "dimensions.axes[].name",
-        "dimensions.axes[].meaning",
-        "dimensions.axes[].size",
-        "dimensions.axes[].unit",
-        "dimensions.axes[].labels_ref",
-        "dimensions.axes[].labels_sha256",
-        "dimensions.axes[].ordering",
-        "dimensions.axes[].coordinates_ref",
-        "dimensions.axes[].dynamic"
-      ]
-    },
-    {
-      "id": "dose-response",
-      "description": "Dose-response data: the intervention, dose axis, endpoint, response direction, and fitted curve.",
-      "items": [
-        "biological_context.intervention[].agent",
-        "biological_context.intervention[].dose",
-        "biological_context.intervention[].route",
-        "biological_context.intervention[].duration",
-        "semantic.endpoint",
-        "measurement.baseline",
-        "measurement.response_direction",
-        "dimensions.dose_axis",
-        "dimensions.time_axis",
-        "origin.fit_method",
-        "uncertainty.fit_quality"
-      ]
-    },
-    {
-      "id": "feature-matrix",
-      "description": "Sample-by-feature matrices, including exactly which features are present and how the data was preprocessed.",
-      "items": [
-        "dimensions.sample_axis",
-        "dimensions.feature_axis",
-        "dimensions.feature_labels_ref",
-        "dimensions.feature_labels_sha256",
-        "representation.feature_space",
-        "representation.ordering",
-        "measurement.normalization",
-        "measurement.batch_correction",
-        "uncertainty.missingness",
-        "origin.processing_pipeline_ref"
-      ]
-    },
-    {
-      "id": "graph-network",
-      "description": "Networks: node and edge types, direction, weights, sources, and identifier systems.",
-      "items": [
-        "representation.node_schema",
-        "representation.edge_schema",
-        "representation.directed",
-        "representation.multigraph",
-        "representation.weight_semantics",
-        "representation.self_loops",
-        "identifiers.node_namespace",
-        "identifiers.edge_namespace",
-        "origin.edge_evidence",
-        "uncertainty.edge_confidence"
-      ]
-    },
-    {
-      "id": "identifier-core",
-      "description": "Versioned identifiers, normalized so the same thing always gets the same ID.",
-      "items": [
-        "identifiers.namespace",
-        "identifiers.namespace_version",
-        "identifiers.entity_type",
-        "identifiers.canonicalization",
-        "identifiers.mapping_refs",
-        "identifiers.ambiguity_handling",
-        "identifiers.unmapped_handling",
-        "identifiers.deprecated_handling",
-        "identifiers.case_policy"
-      ]
-    },
-    {
-      "id": "imaging-spatial",
-      "description": "Images and volumes: pixels or voxels, channels, resolution, registration, and anatomical frame.",
-      "items": [
-        "representation.coordinate_system",
-        "representation.channel_order",
-        "dimensions.spatial_axes",
-        "dimensions.pixel_spacing",
-        "dimensions.slice_thickness",
-        "dimensions.origin",
-        "dimensions.orientation",
-        "origin.registration_ref",
-        "origin.segmentation_method",
-        "uncertainty.segmentation_confidence"
-      ]
-    },
-    {
-      "id": "mapping-capability",
-      "description": "Mappings between identifier systems: the exact source and target systems, and a fixed record of the mapping used.",
-      "items": [
-        "identifiers.mapping_refs[].ref",
-        "identifiers.mapping_refs[].sha256",
-        "identifiers.mapping_refs[].source_namespace",
-        "identifiers.mapping_refs[].target_namespace",
-        "identifiers.mapping_refs[].coverage",
-        "identifiers.mapping_refs[].cardinality",
-        "identifiers.mapping_refs[].release",
-        "identifiers.mapping_refs[].license"
-      ]
-    },
-    {
-      "id": "measurement-core",
-      "description": "What was measured: quantity, unit, scale, normalization, and detection limits.",
-      "items": [
-        "measurement.quantity",
-        "measurement.unit",
-        "measurement.scale",
-        "measurement.transform",
-        "measurement.normalization",
-        "measurement.baseline",
-        "measurement.reference_range",
-        "measurement.detection_limits",
-        "measurement.calibration_ref",
-        "measurement.aggregation",
-        "measurement.tolerance"
-      ]
-    },
-    {
-      "id": "molecular-structure",
-      "description": "Which molecule this is: chemical or macromolecular structure, stereochemistry, charge, and conformer.",
-      "items": [
-        "semantic.entity",
-        "representation.structure_format",
+        "semantic.concept",
+        "representation.kind",
+        "representation.canonicalization",
+        "representation.normalization_tool",
+        "representation.normalization_version",
+        "semantic.ontology_terms",
+        "semantic.qualifiers",
+        "identifiers.structure_hash",
         "representation.stereochemistry",
         "representation.protonation_state",
         "representation.tautomer_state",
         "representation.formal_charge",
         "representation.isotope_state",
-        "representation.conformer_method",
-        "representation.hydrogen_policy",
-        "identifiers.structure_hash"
-      ]
-    },
-    {
-      "id": "ontology-terms",
-      "description": "Ontology terms pinned to a specific version, and safe rules for matching broader and narrower terms.",
-      "items": [
-        "semantic.ontology_terms[].uri",
-        "semantic.ontology_terms[].ontology",
-        "semantic.ontology_terms[].version",
-        "semantic.ontology_terms[].label",
-        "semantic.ontology_terms[].relation",
-        "semantic.ontology_snapshot_ref",
-        "semantic.ontology_snapshot_sha256"
-      ]
-    },
-    {
-      "id": "pharmacokinetics",
-      "description": "Pharmacokinetics: exposure, sampling times, compartments, and PK parameter definitions.",
-      "items": [
-        "biological_context.compartment",
-        "biological_context.intervention[].route",
-        "biological_context.intervention[].schedule",
-        "lifecycle.sampling",
-        "measurement.quantity",
-        "measurement.unit",
-        "semantic.pk_parameter",
-        "origin.estimation_method",
-        "uncertainty.parameter_covariance"
-      ]
-    },
-    {
-      "id": "population-context",
-      "description": "Which population the data describes: strata, geography, denominator, sampling frame, and rates.",
-      "items": [
-        "biological_context.population",
-        "biological_context.geography",
-        "biological_context.stratum",
-        "biological_context.denominator",
-        "biological_context.sampling_frame",
-        "measurement.rate_basis",
-        "measurement.standardization",
-        "lifecycle.observation_period",
-        "origin.surveillance_system",
-        "uncertainty.interval"
-      ]
-    },
-    {
-      "id": "port-structure",
-      "description": "The port fields model.yaml already has (name, type, shape), carried into the contract.",
-      "items": [
-        "name",
-        "signal_type",
-        "kind",
-        "dtype",
-        "shape",
-        "schema",
-        "emitted_unit",
-        "accepted_units",
-        "required",
-        "default"
-      ]
-    },
-    {
-      "id": "provenance-origin",
-      "description": "Where a value came from and how it was produced.",
-      "items": [
-        "origin.type",
+        "origin.software",
+        "origin.software_version",
         "origin.source_ref",
-        "origin.source_sha256",
-        "origin.method",
-        "origin.method_version",
-        "origin.transformation_chain",
-        "origin.observed_at",
-        "origin.generated_at",
-        "origin.operator"
-      ]
-    },
-    {
-      "id": "representation-core",
-      "description": "How the data is encoded and structured.",
-      "items": [
-        "representation.kind",
-        "representation.encoding",
-        "representation.layout",
-        "representation.feature_space",
-        "representation.ordering",
-        "representation.sparsity",
-        "representation.canonicalization",
-        "representation.precision",
-        "representation.endianness",
-        "representation.implicit_entry"
-      ]
-    },
-    {
-      "id": "runtime-envelope",
-      "description": "What travels with a value at run time: context, the value or file itself, provenance, and observation time.",
-      "items": [
-        "envelope.contract_sha256",
-        "envelope.value",
-        "envelope.artifact_ref",
-        "envelope.actual_context",
-        "envelope.origin",
-        "envelope.uncertainty",
-        "envelope.provenance",
-        "envelope.observation_time",
-        "envelope.produced_by",
-        "envelope.validation_results"
-      ]
-    },
-    {
-      "id": "security-policy",
-      "description": "How the data may be handled: classification, license, consent, data residency, and workspace policy.",
-      "items": [
-        "security.classification",
-        "security.license",
-        "security.license_ref",
-        "security.consent_scope",
-        "security.data_use",
-        "security.residency",
-        "security.workspace_boundary",
-        "security.export_control",
-        "security.retention",
-        "security.redaction"
-      ]
-    },
-    {
-      "id": "semantic-core",
-      "description": "What the data means, biologically or computationally.",
-      "items": [
-        "semantic.concept",
-        "semantic.subject",
-        "semantic.process",
-        "semantic.role",
-        "semantic.endpoint",
-        "semantic.qualifiers",
-        "semantic.ontology_terms"
-      ]
-    },
-    {
-      "id": "sequence-coordinate",
-      "description": "Sequence positions: alphabet, strand, coordinates, and reference genome assembly.",
-      "items": [
-        "representation.alphabet",
-        "representation.strand",
-        "representation.coordinate_system",
-        "representation.reference_assembly",
-        "representation.reference_sequence",
-        "representation.interval_convention",
-        "representation.circularity",
-        "representation.masking",
-        "representation.quality_encoding"
-      ]
-    },
-    {
-      "id": "simulation-reproducibility",
-      "description": "What you need to rerun a simulation: model formalism, solver, tolerances, random seed, and state order.",
-      "items": [
-        "semantic.model_formalism",
-        "representation.state_order",
-        "lifecycle.time_unit",
-        "lifecycle.time_origin",
-        "origin.solver",
-        "origin.solver_version",
-        "origin.absolute_tolerance",
-        "origin.relative_tolerance",
-        "origin.random_seed",
-        "origin.parameter_digest",
-        "origin.model_digest"
-      ]
-    },
-    {
-      "id": "taxonomy-evolution",
-      "description": "Taxonomy and evolution: lineage, phylogenetic method, evolutionary time, and confidence.",
-      "items": [
-        "identifiers.taxonomy_namespace",
-        "identifiers.taxonomy_version",
-        "semantic.lineage",
-        "semantic.ancestral_state",
-        "representation.tree_format",
-        "measurement.evolutionary_distance",
-        "lifecycle.evolutionary_time",
-        "origin.phylogenetic_method",
-        "origin.substitution_model",
-        "uncertainty.branch_support"
-      ]
-    },
-    {
-      "id": "temporal-lifecycle",
-      "description": "Timing: how states and events change over time, sampling, and how recent the data is.",
-      "items": [
-        "lifecycle.kind",
-        "lifecycle.consumption",
-        "lifecycle.production",
-        "lifecycle.temporal_meaning",
-        "lifecycle.time_origin",
-        "lifecycle.time_unit",
-        "lifecycle.sampling",
-        "lifecycle.interpolation",
-        "lifecycle.freshness",
-        "lifecycle.window",
-        "lifecycle.causality"
-      ]
-    },
-    {
-      "id": "uncertainty-quality",
-      "description": "Data quality: uncertainty, confidence, quality flags, missing values, and censoring.",
-      "items": [
-        "uncertainty.kind",
-        "uncertainty.distribution",
-        "uncertainty.parameters",
-        "uncertainty.variance",
-        "uncertainty.interval",
-        "uncertainty.confidence_level",
-        "uncertainty.quality_flags",
-        "uncertainty.missingness",
-        "uncertainty.censoring",
-        "uncertainty.imputation"
-      ]
-    },
-    {
-      "id": "validation-constraints",
-      "description": "Validation rules written as data, never as code.",
-      "items": [
-        "constraints[].id",
-        "constraints[].operator",
-        "constraints[].inputs",
-        "constraints[].expected",
-        "constraints[].severity",
-        "constraints[].reason",
-        "constraints[].remediation",
-        "constraints[].profile_ref"
-      ]
-    },
-    {
-      "id": "variant-identity",
-      "description": "Genetic variants: normalized variant identity and predicted consequence.",
-      "items": [
-        "semantic.variant_class",
-        "representation.reference_allele",
-        "representation.alternate_allele",
-        "representation.left_normalized",
-        "representation.normalization_tool",
-        "representation.normalization_version",
-        "identifiers.variant_notation",
-        "identifiers.transcript_reference",
-        "semantic.consequence"
+        "origin.source_sha256"
       ]
     }
   ],
@@ -2448,17 +632,10 @@
         "artifact"
       ],
       "required_item_packs": [
-        "semantic-core",
-        "identifier-core",
-        "measurement-core",
-        "biological-context",
-        "assay-evidence",
-        "molecular-structure",
-        "uncertainty-quality"
+        "protein-sequence"
       ],
       "required_items": [
         "semantic.concept",
-        "semantic.subject",
         "representation.kind",
         "representation.alphabet",
         "representation.encoding",
@@ -2485,17 +662,10 @@
         "artifact"
       ],
       "required_item_packs": [
-        "semantic-core",
-        "identifier-core",
-        "measurement-core",
-        "biological-context",
-        "assay-evidence",
-        "molecular-structure",
-        "uncertainty-quality"
+        "protein-structure"
       ],
       "required_items": [
         "semantic.concept",
-        "semantic.subject",
         "representation.kind",
         "representation.structure_format",
         "representation.coordinate_system",
@@ -2524,17 +694,10 @@
         "artifact"
       ],
       "required_item_packs": [
-        "semantic-core",
-        "identifier-core",
-        "representation-core",
-        "molecular-structure",
-        "measurement-core",
-        "artifact-format",
-        "mapping-capability"
+        "canonical-smiles"
       ],
       "required_items": [
         "semantic.concept",
-        "semantic.subject",
         "representation.kind",
         "representation.canonicalization",
         "representation.normalization_tool",

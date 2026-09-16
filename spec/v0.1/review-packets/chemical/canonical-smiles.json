@@ -1,68 +1,17 @@
 {
   "candidate_recommended_items": [
-    "artifact.byte_size",
-    "artifact.compression",
-    "artifact.encryption",
-    "artifact.format",
-    "artifact.format_version",
-    "artifact.media_type",
-    "artifact.partitioning",
-    "artifact.schema_ref",
-    "artifact.schema_sha256",
-    "artifact.sha256",
-    "artifact.staging",
-    "identifiers.ambiguity_handling",
-    "identifiers.canonicalization",
-    "identifiers.case_policy",
-    "identifiers.deprecated_handling",
-    "identifiers.entity_type",
-    "identifiers.mapping_refs",
-    "identifiers.mapping_refs[].cardinality",
-    "identifiers.mapping_refs[].coverage",
-    "identifiers.mapping_refs[].license",
-    "identifiers.mapping_refs[].ref",
-    "identifiers.mapping_refs[].release",
-    "identifiers.mapping_refs[].sha256",
-    "identifiers.mapping_refs[].source_namespace",
-    "identifiers.mapping_refs[].target_namespace",
-    "identifiers.namespace",
-    "identifiers.namespace_version",
     "identifiers.structure_hash",
-    "identifiers.unmapped_handling",
-    "measurement.aggregation",
-    "measurement.baseline",
-    "measurement.calibration_ref",
-    "measurement.detection_limits",
-    "measurement.normalization",
-    "measurement.quantity",
-    "measurement.reference_range",
-    "measurement.scale",
-    "measurement.tolerance",
-    "measurement.transform",
-    "measurement.unit",
-    "representation.conformer_method",
-    "representation.encoding",
-    "representation.endianness",
-    "representation.feature_space",
+    "origin.software",
+    "origin.software_version",
+    "origin.source_ref",
+    "origin.source_sha256",
     "representation.formal_charge",
-    "representation.hydrogen_policy",
-    "representation.implicit_entry",
     "representation.isotope_state",
-    "representation.layout",
-    "representation.ordering",
-    "representation.precision",
     "representation.protonation_state",
-    "representation.sparsity",
     "representation.stereochemistry",
-    "representation.structure_format",
     "representation.tautomer_state",
-    "semantic.endpoint",
-    "semantic.entity",
     "semantic.ontology_terms",
-    "semantic.process",
-    "semantic.qualifiers",
-    "semantic.role",
-    "semantic.subject"
+    "semantic.qualifiers"
   ],
   "domain": "chemical",
   "fixture_groups": {
@@ -142,7 +91,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/canonical-smiles@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/canonical-smiles/v0.1",
-  "profile_sha256": "sha256:531d6ca4c985c26c96c7b203fc144714d07eb9eae95b911a928170787598ec67",
+  "profile_sha256": "sha256:9e248a7712a0844b29c63b1a69af975aa46ea7a4d578bdb92564aaaa92133061",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -199,168 +148,6 @@
       "severity": "error",
       "source": "/contract/representation/normalization_version",
       "target": "/contract/representation/normalization_version"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "unit-convertible",
-      "reason_code": "BMCS_MEASUREMENT_UNIT_MISMATCH",
-      "severity": "error",
-      "source": "/contract/measurement/unit",
-      "target": "/contract/measurement/unit"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_MEASUREMENT_SCALE_MISMATCH",
-      "severity": "error",
-      "source": "/contract/measurement/scale",
-      "target": "/contract/measurement/scale"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_MEASUREMENT_TRANSFORM_MISMATCH",
-      "severity": "error",
-      "source": "/contract/measurement/transform",
-      "target": "/contract/measurement/transform"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_MEASUREMENT_QUANTITY_MISMATCH",
-      "severity": "error",
-      "source": "/contract/measurement/quantity",
-      "target": "/contract/measurement/quantity"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_MEASUREMENT_NORMALIZATION_MISMATCH",
-      "severity": "error",
-      "source": "/contract/measurement/normalization",
-      "target": "/contract/measurement/normalization"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_MEASUREMENT_BASELINE_MISMATCH",
-      "severity": "error",
-      "source": "/contract/measurement/baseline",
-      "target": "/contract/measurement/baseline"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_MEASUREMENT_AGGREGATION_MISMATCH",
-      "severity": "error",
-      "source": "/contract/measurement/aggregation",
-      "target": "/contract/measurement/aggregation"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_MISMATCH",
-      "severity": "error",
-      "source": "/contract/identifiers/namespace",
-      "target": "/contract/identifiers/namespace"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "namespace-version-compatible",
-      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
-      "severity": "error",
-      "source": "/contract/identifiers/namespace_version",
-      "target": "/contract/identifiers/namespace_version"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_REPRESENTATION_ORDERING_MISMATCH",
-      "severity": "error",
-      "source": "/contract/representation/ordering",
-      "target": "/contract/representation/ordering"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_REPRESENTATION_FEATURE_SPACE_MISMATCH",
-      "severity": "error",
-      "source": "/contract/representation/feature_space",
-      "target": "/contract/representation/feature_space"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_REPRESENTATION_REFERENCE_ASSEMBLY_MISMATCH",
-      "severity": "error",
-      "source": "/contract/representation/reference_assembly",
-      "target": "/contract/representation/reference_assembly"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_REPRESENTATION_COORDINATE_SYSTEM_MISMATCH",
-      "severity": "error",
-      "source": "/contract/representation/coordinate_system",
-      "target": "/contract/representation/coordinate_system"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "labels-equal",
-      "reason_code": "BMCS_DIMENSIONS_AXES_MISMATCH",
-      "severity": "error",
-      "source": "/contract/dimensions/axes",
-      "target": "/contract/dimensions/axes"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_LIFECYCLE_TIME_UNIT_MISMATCH",
-      "severity": "error",
-      "source": "/contract/lifecycle/time_unit",
-      "target": "/contract/lifecycle/time_unit"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_LIFECYCLE_TEMPORAL_MEANING_MISMATCH",
-      "severity": "error",
-      "source": "/contract/lifecycle/temporal_meaning",
-      "target": "/contract/lifecycle/temporal_meaning"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "equal",
-      "reason_code": "BMCS_ORIGIN_TYPE_MISMATCH",
-      "severity": "error",
-      "source": "/contract/origin/type",
-      "target": "/contract/origin/type"
-    },
-    {
-      "layer": "technical",
-      "missing": "ignore",
-      "operator": "context-compatible",
-      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_COMPARTMENT_MISMATCH",
-      "severity": "error",
-      "source": "/contract/biological_context/compartment",
-      "target": "/contract/biological_context/compartment"
     }
   ],
   "proposed_fixed_values": {
@@ -418,14 +205,15 @@
     }
   ],
   "questions_for_reviewers": [
-    "Does the proposed concept identify Canonical SMILES narrowly enough to prevent a different scientific quantity from matching?",
-    "Are the allowed representations complete, and can any two allowed representations connect without an explicit adapter?",
+    "Does the proposed concept define Canonical SMILES precisely enough for the stated use, without including scientifically different data?",
+    "Are the proposed required fields sufficient, and is each field correctly classified as required rather than conditional or optional?",
+    "For every candidate field listed in this packet, should it be required, conditional, recommended or excluded for this profile?",
+    "Are the allowed representations scientifically interchangeable, or does any pair require an explicit, versioned transformation?",
     "Which authoritative standards, ontologies, databases or primary publications support each required field and comparison rule?",
     "Which missing value must return UNKNOWN, and which known contradiction must return INCOMPATIBLE?",
-    "Should quantity, unit, scale, normalization, baseline or endpoint be required for this profile?",
-    "Does this profile need a versioned identifier namespace or an ordered feature universe?",
-    "Should axes, labels, feature order, coordinates or artifact schema be required for non-scalar values?",
-    "What uses and scientific claims must this profile explicitly exclude?"
+    "Do the worked fixtures cover the important direct matches, contradictions, missing information and permitted transformations?",
+    "What uses and scientific claims must this profile explicitly exclude?",
+    "Which provenance and file-format details are necessary to interpret the data safely, and which are merely useful metadata?"
   ],
   "required_external_approvals": [
     "named domain-qualified scientific reviewer",

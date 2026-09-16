@@ -6,20 +6,6 @@
     "artifact": {
       "additionalProperties": false,
       "properties": {
-        "byte_size": {
-          "minimum": 0,
-          "type": "integer"
-        },
-        "compression": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "encryption": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "format": {
           "maxLength": 4096,
           "minLength": 1,
@@ -35,11 +21,6 @@
           "minLength": 1,
           "type": "string"
         },
-        "partitioning": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "schema_ref": {
           "format": "uri",
           "type": "string"
@@ -51,11 +32,6 @@
         "sha256": {
           "pattern": "^sha256:[0-9a-f]{64}$",
           "type": "string"
-        },
-        "staging": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
         }
       },
       "type": "object"
@@ -63,112 +39,7 @@
     "biological_context": {
       "additionalProperties": false,
       "properties": {
-        "age": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "assay": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "cell_line": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "cell_type": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "cohort": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "compartment": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "confluence": {
-          "type": "number"
-        },
-        "culture_system": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "denominator": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "disease": {
-          "items": {
-            "anyOf": [
-              {
-                "minLength": 1,
-                "type": "string"
-              },
-              {
-                "type": "object"
-              }
-            ]
-          },
-          "minItems": 1,
-          "type": "array"
-        },
-        "geography": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "intervention": {
-          "items": {
-            "anyOf": [
-              {
-                "minLength": 1,
-                "type": "string"
-              },
-              {
-                "type": "object"
-              }
-            ]
-          },
-          "minItems": 1,
-          "type": "array"
-        },
-        "lineage": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "medium": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "oxygen": {
-          "type": "number"
-        },
-        "passage": {
-          "minimum": 0,
-          "type": "integer"
-        },
-        "population": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "sampling_frame": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "sex": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
@@ -182,60 +53,6 @@
               "pattern": "^NCBITaxon:[1-9][0-9]*$"
             }
           ],
-          "type": "string"
-        },
-        "strain": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "stratum": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "substrate": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "taxa": {
-          "items": {
-            "additionalProperties": false,
-            "properties": {
-              "label": {
-                "minLength": 1,
-                "type": "string"
-              },
-              "role": {
-                "enum": [
-                  "host",
-                  "pathogen",
-                  "community_member",
-                  "donor"
-                ]
-              },
-              "strain": {
-                "minLength": 1,
-                "type": "string"
-              },
-              "taxon": {
-                "pattern": "^NCBITaxon:[1-9][0-9]*$",
-                "type": "string"
-              }
-            },
-            "required": [
-              "taxon",
-              "role"
-            ],
-            "type": "object"
-          },
-          "minItems": 1,
-          "type": "array"
-        },
-        "tissue": {
-          "maxLength": 4096,
-          "minLength": 1,
           "type": "string"
         }
       },
@@ -305,138 +122,6 @@
           },
           "minItems": 1,
           "type": "array"
-        },
-        "dose_axis": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "feature_axis": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "feature_labels_ref": {
-          "format": "uri",
-          "type": "string"
-        },
-        "feature_labels_sha256": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "orientation": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "origin": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "pixel_spacing": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "sample_axis": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "slice_thickness": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "spatial_axes": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "time_axis": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        }
-      },
-      "type": "object"
-    },
-    "envelope": {
-      "additionalProperties": false,
-      "properties": {
-        "actual_context": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object"
-          ]
-        },
-        "artifact_ref": {
-          "format": "uri",
-          "type": "string"
-        },
-        "contract_sha256": {
-          "pattern": "^sha256:[0-9a-f]{64}$",
-          "type": "string"
-        },
-        "observation_time": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "origin": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "produced_by": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "provenance": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object"
-          ]
-        },
-        "uncertainty": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object"
-          ]
-        },
-        "validation_results": {
-          "items": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "minItems": 1,
-          "type": "array",
-          "uniqueItems": true
-        },
-        "value": {
-          "type": [
-            "string",
-            "number",
-            "integer",
-            "boolean",
-            "array",
-            "object"
-          ]
         }
       },
       "type": "object"
@@ -450,46 +135,6 @@
     "identifiers": {
       "additionalProperties": false,
       "properties": {
-        "ambiguity_handling": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "canonicalization": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "case_policy": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "coding_system": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "coding_version": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "deprecated_handling": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "edge_namespace": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "entity_type": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "mapping_refs": {
           "items": {
             "additionalProperties": false,
@@ -550,37 +195,7 @@
           "minLength": 1,
           "type": "string"
         },
-        "node_namespace": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "structure_hash": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "taxonomy_namespace": {
-          "maxLength": 64,
-          "pattern": "^[a-z][a-z0-9.\\-]*$",
-          "type": "string"
-        },
-        "taxonomy_version": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "transcript_reference": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "unmapped_handling": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "variant_notation": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
@@ -591,68 +206,13 @@
     "lifecycle": {
       "additionalProperties": false,
       "properties": {
-        "causality": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "consumption": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "evolutionary_time": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "freshness": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "interpolation": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "kind": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "observation_period": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "production": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "sampling": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "temporal_meaning": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "time_origin": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
         },
         "time_unit": {
           "maxLength": 128,
-          "minLength": 1,
-          "type": "string"
-        },
-        "window": {
-          "maxLength": 4096,
           "minLength": 1,
           "type": "string"
         }
@@ -662,61 +222,12 @@
     "measurement": {
       "additionalProperties": false,
       "properties": {
-        "aggregation": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "baseline": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "batch_correction": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "calibration_ref": {
-          "format": "uri",
-          "type": "string"
-        },
-        "control": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "detection_limits": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "evolutionary_distance": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "normalization": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
         },
         "quantity": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "rate_basis": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "reference_range": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "response_direction": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
@@ -731,16 +242,6 @@
             "probability",
             "count"
           ]
-        },
-        "standardization": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "tolerance": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
         },
         "transform": {
           "enum": [
@@ -762,112 +263,12 @@
     "origin": {
       "additionalProperties": false,
       "properties": {
-        "absolute_tolerance": {
-          "type": "number"
-        },
-        "audit_ref": {
-          "format": "uri",
-          "type": "string"
-        },
-        "edge_evidence": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "estimation_method": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "evidence_refs": {
-          "items": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "minItems": 1,
-          "type": "array",
-          "uniqueItems": true
-        },
-        "fit_method": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "generated_at": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "instrument": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "instrument_model": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "method": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
         },
         "method_version": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "model_digest": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "observed_at": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "operator": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "parameter_digest": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "phylogenetic_method": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "processing_pipeline_ref": {
-          "format": "uri",
-          "type": "string"
-        },
-        "protocol_ref": {
-          "format": "uri",
-          "type": "string"
-        },
-        "protocol_version": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "random_seed": {
-          "minimum": 0,
-          "type": "integer"
-        },
-        "registration_ref": {
-          "format": "uri",
-          "type": "string"
-        },
-        "relative_tolerance": {
-          "type": "number"
-        },
-        "segmentation_method": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
@@ -882,16 +283,6 @@
           "minLength": 1,
           "type": "string"
         },
-        "solver": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "solver_version": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "source_ref": {
           "format": "uri",
           "type": "string"
@@ -899,20 +290,6 @@
         "source_sha256": {
           "pattern": "^sha256:[0-9a-f]{64}$",
           "type": "string"
-        },
-        "substitution_model": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "surveillance_system": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "transformation_chain": {
-          "minItems": 1,
-          "type": "array"
         },
         "type": {
           "maxLength": 4096,
@@ -942,27 +319,7 @@
           "minLength": 1,
           "type": "string"
         },
-        "alternate_allele": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "canonicalization": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "channel_order": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "circularity": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "conformer_method": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
@@ -972,47 +329,12 @@
           "minLength": 1,
           "type": "string"
         },
-        "directed": {
-          "type": "boolean"
-        },
-        "edge_schema": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "encoding": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
         },
-        "endianness": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "feature_space": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "formal_charge": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "hydrogen_policy": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "implicit_entry": {
-          "enum": [
-            "observed_zero",
-            "unobserved",
-            "not_applicable"
-          ]
-        },
-        "interval_convention": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
@@ -1027,38 +349,12 @@
           "minLength": 1,
           "type": "string"
         },
-        "layout": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "left_normalized": {
-          "type": "boolean"
-        },
-        "masking": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "multigraph": {
-          "type": "boolean"
-        },
-        "node_schema": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "normalization_tool": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
         },
         "normalization_version": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "ordering": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
@@ -1073,46 +369,7 @@
           "minLength": 1,
           "type": "string"
         },
-        "quality_encoding": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "reference_allele": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "reference_assembly": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "reference_sequence": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "self_loops": {
-          "type": "boolean"
-        },
-        "sparsity": {
-          "enum": [
-            "dense",
-            "sparse"
-          ]
-        },
-        "state_order": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "stereochemistry": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "strand": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
@@ -1126,83 +383,6 @@
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
-        },
-        "tree_format": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "weight_semantics": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        }
-      },
-      "type": "object"
-    },
-    "security": {
-      "additionalProperties": false,
-      "properties": {
-        "classification": {
-          "enum": [
-            "public",
-            "internal",
-            "confidential",
-            "restricted"
-          ]
-        },
-        "consent_scope": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "data_use": {
-          "items": {
-            "minLength": 1,
-            "type": "string"
-          },
-          "minItems": 1,
-          "type": "array",
-          "uniqueItems": true
-        },
-        "deidentification": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "export_control": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "license": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "license_ref": {
-          "format": "uri",
-          "type": "string"
-        },
-        "redaction": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "residency": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "retention": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "workspace_boundary": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
         }
       },
       "type": "object"
@@ -1210,47 +390,12 @@
     "semantic": {
       "additionalProperties": false,
       "properties": {
-        "ancestral_state": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "cell_state": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "concept": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
         },
-        "consequence": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "endpoint": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "entity": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "intended_use": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "lineage": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "model_formalism": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
@@ -1299,16 +444,6 @@
           "minItems": 1,
           "type": "array"
         },
-        "pk_parameter": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "process": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "qualifiers": {
           "items": {
             "minLength": 1,
@@ -1318,17 +453,7 @@
           "type": "array",
           "uniqueItems": true
         },
-        "role": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
         "subject": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "variant_class": {
           "maxLength": 4096,
           "minLength": 1,
           "type": "string"
@@ -1343,63 +468,6 @@
     "uncertainty": {
       "additionalProperties": false,
       "properties": {
-        "branch_support": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "censoring": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "confidence_level": {
-          "type": "number"
-        },
-        "distribution": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "edge_confidence": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "fit_quality": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "imputation": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "interval": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "kind": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "missingness": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "parameter_covariance": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "parameters": {
-          "minItems": 1,
-          "type": "array"
-        },
         "quality_flags": {
           "items": {
             "minLength": 1,
@@ -1408,14 +476,6 @@
           "minItems": 1,
           "type": "array",
           "uniqueItems": true
-        },
-        "segmentation_confidence": {
-          "maxLength": 4096,
-          "minLength": 1,
-          "type": "string"
-        },
-        "variance": {
-          "type": "number"
         }
       },
       "type": "object"

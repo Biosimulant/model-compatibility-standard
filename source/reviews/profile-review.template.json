@@ -53,7 +53,7 @@
     },
     "measurement": {
       "disposition": "excluded",
-      "rationale": "Explain why quantity, unit, scale, endpoint and normalization fields are not needed, or include them.",
+      "rationale": "Explain why quantity, unit, scale, transform and normalization fields are not needed, or include them.",
       "field_paths": [],
       "source_ids": ["doi:replace-me"]
     },
@@ -83,7 +83,7 @@
     },
     "artifact": {
       "disposition": "excluded",
-      "rationale": "Explain why file format, schema, compression and checksum cannot change compatibility, or include them.",
+      "rationale": "Explain why file format, media type, schema and checksum cannot change compatibility, or include them.",
       "field_paths": [],
       "source_ids": ["doi:replace-me"]
     },
@@ -92,11 +92,12 @@
       "rationale": "Explain why no cross-field constraints are required, or list the safe declarative constraints.",
       "field_paths": [],
       "source_ids": ["doi:replace-me"]
-    },
-    "security": {
-      "disposition": "excluded",
-      "rationale": "Explain why license, consent and data-boundary fields do not apply, or include the relevant fields.",
-      "field_paths": [],
+    }
+  },
+  "field_decisions": {
+    "semantic.concept": {
+      "disposition": "required",
+      "rationale": "Explain why this exact field disposition is scientifically appropriate for the profile.",
       "source_ids": ["doi:replace-me"]
     }
   },

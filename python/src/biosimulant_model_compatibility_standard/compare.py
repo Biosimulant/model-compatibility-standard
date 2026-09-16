@@ -210,11 +210,11 @@ def _evaluate(
         return conversion is not None, conversion and conversion["loss"]
     if operator == "context-compatible":
         if source in ("any", "unspecified"):
-            # The source declares no context. That is absent evidence, not a contradiction (D5).
+            # The source declares no context. That is absent evidence, not a contradiction.
             return (True, None) if target in (None, "any", "unspecified") else (False, "unsupported")
         return source == target or target in (None, "any", "unspecified"), None
     if operator == "namespace-version-compatible":
-        # Decision D7. Two releases of one namespace are not a contradiction. Identifiers are
+        # Two releases of one namespace are not a contradiction. Identifiers are
         # retired and merged between releases, so what matters is what the transition did, and
         # without a pinned release-transition snapshot nobody can say: that is undecidable, not a
         # mismatch. A transition that retired and merged nothing preserves every identifier; one
@@ -238,7 +238,7 @@ def _evaluate(
         return False, "unsupported"
 
     if operator == "representation-equivalent":
-        # Decision D6. Re-encoding dense as sparse preserves the data only when both sides declare,
+        # Re-encoding dense as sparse preserves the data only when both sides declare,
         # and agree on, what an absent entry means, the ordering, the shape and the dtype.
         # Undeclared is undecidable rather than equivalent: in single-cell data an observed zero and
         # an unobserved value are different claims about the same cell.
@@ -285,7 +285,7 @@ def _evaluate(
         bijective = operator == "mapping-bijective"
         if not _mapping_matches(source, target, snapshot, bijective=bijective):
             return False, None
-        # Decision D7. A pinned mapping that is total over the declared universe and bijective on it
+        # A pinned mapping that is total over the declared universe and bijective on it
         # loses nothing, but it is still a conversion rather than a direct match. A mapping that is
         # total without being bijective merges identifiers, which needs approval.
         if _mapping_matches(source, target, snapshot, bijective=True):
@@ -313,7 +313,7 @@ def _unit_kind_errors(bundle: Bundle, profile: dict[str, Any], contract: Any) ->
 
     Hertz and becquerel share a dimension, so a dimension check alone would convert a radioactivity
     into a firing rate. Comparing contracts where one is internally inconsistent must not produce a
-    conversion (decision D1).
+    conversion.
     """
 
     table = getattr(bundle, "units", None)
@@ -370,12 +370,12 @@ def compare_contracts(
 ) -> dict[str, Any]:
     active = bundle or get_bundle()
     # Comparison normalises its own inputs, so a set-like field written in another order is not
-    # reported as a contradiction by a caller who skipped the normalisation stage (decision D12).
+    # reported as a contradiction by a caller who skipped the normalisation stage.
     source_contract = _normalised(source_contract, active)
     target_contract = _normalised(target_contract, active)
     ontology_index = _verified_snapshots(ontology_snapshots)
     mapping_index = _verified_snapshots(mapping_snapshots)
-    # Decision D12. Consent and data-use outcomes are collected apart from the technical findings,
+    # Consent and data-use outcomes are collected apart from the technical findings,
     # and every path through this function reports them, including the ones with no rules to run.
     policy_findings: list[dict[str, Any]] = []
     if source_contract is None or target_contract is None:
@@ -425,7 +425,7 @@ def compare_contracts(
             right = get_pointer(wrapped_target, rule["target"])
             dimension = rule["target"].split("/")[2] if len(rule["target"].split("/")) > 2 else "contract"
             if rule.get("layer") == "policy":
-                # Decision D12. Whether two ports may exchange data under their consent and data-use
+                # Whether two ports may exchange data under their consent and data-use
                 # terms is a governance outcome, not a statement about whether the data fit
                 # together. It is reported, and the workspace policy stage decides what to do.
                 if left is MISSING or right is MISSING:

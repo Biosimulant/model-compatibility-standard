@@ -141,7 +141,7 @@ def test_pinned_ontology_and_mapping_snapshots_are_enforced():
     mapping = {**mapping_unsigned, "sha256": digest(mapping_unsigned)}
     parameters = {"snapshot_ref": mapping["ref"], "snapshot_sha256": mapping["sha256"]}
     # A pinned mapping that is total and bijective loses nothing, but translating identifiers is
-    # still a conversion rather than a direct match (decision D7).
+    # still a conversion rather than a direct match.
     assert _rule_report("mapping-total", ["A", "B"], ["1", "2"], parameters=parameters, mappings=[mapping])["status"] == "LOSSLESS_CONVERSION_AVAILABLE"
     assert _rule_report("mapping-bijective", ["A", "B"], ["1", "2"], parameters=parameters, mappings=[mapping])["status"] == "LOSSLESS_CONVERSION_AVAILABLE"
 
@@ -161,7 +161,7 @@ def test_pinned_ontology_and_mapping_snapshots_are_enforced():
 
 
 def test_a_namespace_release_change_is_a_mapping_not_a_contradiction():
-    # Decision D7. Two releases of one namespace are not a contradiction: identifiers are retired
+    # Two releases of one namespace are not a contradiction: identifiers are retired
     # and merged between releases, so what matters is what the transition did.
     def snapshot(transitions):
         unsigned = {

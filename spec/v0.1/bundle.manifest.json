@@ -1,16 +1,16 @@
 {
-  "bundle_sha256": "sha256:617bb1b381a151593bb25f6b2df03de6becf03647889af29a347a4a2270984a7",
+  "bundle_sha256": "sha256:6c44dc91689a4d1fc457b4d1483e4b3c5e7a2c06a7a8274982b30cb8b3c2499a",
   "canonicalization": "RFC8785",
   "counts": {
-    "item_definitions": 271,
-    "item_packs": 30,
+    "item_definitions": 69,
+    "item_packs": 3,
     "profiles": 3
   },
   "files": [
     {
       "path": "catalogue/catalogue.json",
-      "sha256": "sha256:5bbf83647efaf90493adffd65cdc45cd32881abf61b60d2a96424bacf9d46f6a",
-      "size_bytes": 159580
+      "sha256": "sha256:f4213f7d549cb35915da405d27ea848cb7a08707315603791b490d5046159818",
+      "size_bytes": 43872
     },
     {
       "path": "catalogue/internal-validation.json",
@@ -19,13 +19,13 @@
     },
     {
       "path": "catalogue/item-packs.json",
-      "sha256": "sha256:713ccaf0648cf275d9adc8add6f14740e775de9f84ff0fd389f6ba7d7eb52224",
-      "size_bytes": 16125
+      "sha256": "sha256:465ecbe1f4a17448a4a46f8de73476da7a9338cbfda33b68ef6a8cef62a92ec8",
+      "size_bytes": 2621
     },
     {
       "path": "catalogue/items.json",
-      "sha256": "sha256:80f67b52f63dbdfb9b5b03b5b6c7c246aff094629093681da18de9ad083f6daa",
-      "size_bytes": 139530
+      "sha256": "sha256:1119e272c56a9ea9be834343c136504b8a9844f4ba16c938e598ea817e09b6e4",
+      "size_bytes": 37839
     },
     {
       "path": "catalogue/terms.json",
@@ -34,7 +34,7 @@
     },
     {
       "path": "examples/compatible-model.yaml",
-      "sha256": "sha256:3fec798ecdb21dda9835478d22d545342e1c68ecdb790854156ad6cdfa335dfd",
+      "sha256": "sha256:d2c4a994d7f1bdd08f604eb6eac391f9788fcf9463a06a3d3c0e44a790a9038d",
       "size_bytes": 1036
     },
     {
@@ -64,43 +64,43 @@
     },
     {
       "path": "fixtures/profiles/proteome/protein-structure.json",
-      "sha256": "sha256:088e1652816015a01dd951da632039f346549a737202111bd7229a01d2fb7514",
-      "size_bytes": 48640
+      "sha256": "sha256:d06be171c9047c3fa0fdba4ddb18fee14218236fd81c7a68798e49a748bc40ec",
+      "size_bytes": 48622
     },
     {
       "path": "profiles/chemical/canonical-smiles/v0.1.json",
-      "sha256": "sha256:bf1ccf50e4402f8eba5e2a11c613eb92b9c5989890727a7fede2e9ab07e26263",
-      "size_bytes": 11335
+      "sha256": "sha256:8cfc235255ae0615e1d0a2d9c9c8963471708aef5b969c0914f7787b1c041481",
+      "size_bytes": 6223
     },
     {
       "path": "profiles/proteome/protein-sequence/v0.1.json",
-      "sha256": "sha256:a2941cce7dae1d79f838f1aa7de1af510ecbb1e9dc39b1351f62fd23a837f633",
-      "size_bytes": 11863
+      "sha256": "sha256:053fa88ed3637ef71dd0c0455b1951b5c1654a9ead9757068ab56114419fe24b",
+      "size_bytes": 7454
     },
     {
       "path": "profiles/proteome/protein-structure/v0.1.json",
-      "sha256": "sha256:24ca586ac261d77c9a9088e676a8021963c8ceb4b50cb356e90bfcf555e1d06d",
-      "size_bytes": 11765
+      "sha256": "sha256:1133dad1fec8765e8d43edeee47316fbc2a37462c006d27c22ae9aaf8f669db0",
+      "size_bytes": 7926
     },
     {
       "path": "review-packets/chemical/canonical-smiles.json",
-      "sha256": "sha256:b53dd72abe79e4b8c91377ef7de74d2490267699c83bb265e83ed6cdca0fa784",
-      "size_bytes": 15731
+      "sha256": "sha256:1b902812c586ac4120b1d2f2b750314da919aa2ef0a690f22a1cc383db05afc5",
+      "size_bytes": 9061
     },
     {
       "path": "review-packets/proteome/protein-sequence.json",
-      "sha256": "sha256:1afc4ff46f713cee8bf9ed3ea8a71d29e882946ab50333ccd82660d0f6661261",
-      "size_bytes": 17089
+      "sha256": "sha256:a01e5c027b9bc6278752ccbee827681962c61b9bcc0522750483db0a895b31e5",
+      "size_bytes": 10925
     },
     {
       "path": "review-packets/proteome/protein-structure.json",
-      "sha256": "sha256:486f17bfe62baab58f9b90ac05e58fccd34748c724fca86f0ff9575c39ce2477",
-      "size_bytes": 17548
+      "sha256": "sha256:57b2a11c26453b7fc0b9e5760a32c6f5ccbd0c097e9be389401d918ab9f9441b",
+      "size_bytes": 12289
     },
     {
       "path": "rules/normalization.json",
-      "sha256": "sha256:e8fe0cecc8df198b0402f353981a68c2c26a1c813a8ecef28c8684c517fa9631",
-      "size_bytes": 374
+      "sha256": "sha256:2fef9bcac0403cd454f42047f2a0468a86825260fb16232f04ef3b55665c16f0",
+      "size_bytes": 331
     },
     {
       "path": "rules/operators.json",
@@ -114,8 +114,8 @@
     },
     {
       "path": "rules/reason-codes.json",
-      "sha256": "sha256:5d4071063a43c298941b2e587db4f6b03e58b63c79ae38fd0e985414cb5e3177",
-      "size_bytes": 36766
+      "sha256": "sha256:86421c0635ce850b5b24a407db78bcc2b936c410af16d04644f89ea3d8b610fa",
+      "size_bytes": 11182
     },
     {
       "path": "rules/statuses.json",
@@ -124,8 +124,8 @@
     },
     {
       "path": "rules/units.json",
-      "sha256": "sha256:d9adb1191b79e3d36d9207f1bd9ca97fd4ea1580f01b8354ad1b91b325202f87",
-      "size_bytes": 65353
+      "sha256": "sha256:00cd8b037c6f866de11d18800721f7ed7f038225b195420122cb2d88abdf7fe6",
+      "size_bytes": 65332
     },
     {
       "path": "schemas/adapter-capability.schema.json",
@@ -194,13 +194,13 @@
     },
     {
       "path": "schemas/port-contract.schema.json",
-      "sha256": "sha256:c7f1e05f3ba457002acff5bbf22a80aa1ce3c9e12881b68b3bf3a0d1caf41afd",
-      "size_bytes": 33646
+      "sha256": "sha256:1e1c0faf8fdd89f13360e50e3d1829548bc4a3765c1d0ef7b2e461db19322b38",
+      "size_bytes": 11678
     },
     {
       "path": "schemas/profile-definition.schema.json",
-      "sha256": "sha256:ebfa6d23090a76d66598ceacfab92ced18eca9b1dcdb740719247800337e08b4",
-      "size_bytes": 5760
+      "sha256": "sha256:a558332d65d9b854962b64af6ee3269477e1856f6e86fb42daae00d4dbe8b087",
+      "size_bytes": 5764
     },
     {
       "path": "schemas/profile-reference.schema.json",

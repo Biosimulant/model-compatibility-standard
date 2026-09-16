@@ -9,13 +9,21 @@ profiles, rules and fixtures never change; fixes go into a new version.
 `spec/v0.1/bundle.manifest.json` lists every file with its sha256, so anyone can
 check that they have exactly what was released.
 
-## Two kinds of review
+## Review roles
 
 - **Technical review** checks that the schemas, rules and code behave as the
   specification says.
-- **Domain review** checks that a profile correctly describes the kind of
-  biological data it covers. It needs a named scientist. See
-  [PROFILE_REVIEW.md](PROFILE_REVIEW.md).
+- **Scientific review** checks that a profile correctly describes the kind of
+  biological data it covers. It needs a named scientist who did not write the
+  profile.
+- **Schema review** checks that the scientific decisions are represented
+  consistently in the standard. It must be performed by a different named
+  reviewer.
+- **Domain ownership** assigns responsibility for maintaining the profile and
+  deciding when it should be deprecated or retired.
+
+See [PROFILE_REVIEW.md](PROFILE_REVIEW.md) for the evidence required from each
+role.
 
 Neither review says that a model is scientifically valid or safe for clinical use.
 
@@ -28,6 +36,6 @@ Each profile records its status in `review.status`. The catalogue summary in
 |---|---|
 | `candidate` | Proposed. No review evidence yet. |
 | `draft` | Under review, not approved yet. |
-| `reviewed` | Approved by the named domain reviewer. |
+| `reviewed` | Scientific and schema review are complete, and a domain owner is named. |
 | `deprecated` | Still valid in existing locks, but don't use it for new work. |
 | `revoked` | Has a serious error. Don't use it in new plans. |

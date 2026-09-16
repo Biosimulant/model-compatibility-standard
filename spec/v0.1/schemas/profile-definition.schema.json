@@ -127,6 +127,9 @@
             "null"
           ]
         },
+        "field_decisions": {
+          "type": "object"
+        },
         "fixture_review": {
           "type": "object"
         },
@@ -198,12 +201,9 @@
     },
     "stage": {
       "enum": [
-        "CURRENT",
-        "FOUNDATION",
-        "V0.1_PILOT",
-        "WAVE_2",
-        "CONTROLLED",
-        "DEFERRED"
+        "V0_PILOT",
+        "STABLE",
+        "DEPRECATED"
       ]
     },
     "technical_pre_review": {

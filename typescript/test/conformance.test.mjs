@@ -12,6 +12,9 @@ test("bundle exposes all catalogue entries", () => {
   assert.ok(bundle.catalogue.counts.item_packs > 0);
   assert.ok(bundle.catalogue.profiles.length > 0);
   assert.equal(new Set(bundle.catalogue.profiles.map((profile) => profile.id)).size, bundle.catalogue.profiles.length);
+  for (const summary of bundle.catalogue.profiles) {
+    assert.deepEqual(validateObject(bundle.profile(summary.ref), "profile-definition.schema.json"), []);
+  }
   bundle.verifyIntegrity();
 });
 
@@ -23,11 +26,11 @@ test("the full external-review fixture set passes for every profile", () => {
     const profile = bundle.profile(fixture.profile_ref);
     const required = profile.requirements.filter((item) => item.level === "required");
     // Count the lossless cases rather than test that any exist: a profile can now carry both a unit
-    // conversion and a representation re-encoding (decision D6).
+    // conversion and a representation re-encoding.
     const lossless = Object.keys(cases).filter((name) => name.startsWith("comparison-lossless")).length;
     // A requirement addressing every member of an array is validated, not compared: no pointer means
     // "each element", so it carries the two negative fixtures and none of the three comparison ones
-    // (decision D9).
+    //.
     const memberRequired = required.filter((item) => String(item.path).includes("[]")).length;
     const expectedCount = 2 + (5 * (required.length - memberRequired)) + (2 * memberRequired) + lossless;
     assert.equal(fixture.cases.length, expectedCount, fixture.profile_ref);
@@ -160,7 +163,7 @@ test("ontology and mapping operators require exact digest-pinned snapshots", () 
   const mapping = { ...mappingUnsigned, sha256: digest(mappingUnsigned) };
   const mappingParameters = { snapshot_ref: mapping.ref, snapshot_sha256: mapping.sha256 };
   // A pinned mapping that is total and bijective loses nothing, but translating identifiers is still
-  // a conversion rather than a direct match (decision D7).
+  // a conversion rather than a direct match.
   assert.equal(ruleReport("mapping-total", ["A", "B"], ["1", "2"], { parameters: mappingParameters, mappings: [mapping] }).status, "LOSSLESS_CONVERSION_AVAILABLE");
   assert.equal(ruleReport("mapping-bijective", ["A", "B"], ["1", "2"], { parameters: mappingParameters, mappings: [mapping] }).status, "LOSSLESS_CONVERSION_AVAILABLE");
 
@@ -196,7 +199,7 @@ test("TypeScript resolver exposes adapters, ambiguity, and revocation", () => {
 test("a profile's published transformation policy reaches the plan", () => {
   // Every profile publishes transformation_policy and nothing read it: the only policy consulted was
   // the one a caller passed in by hand, so a profile's declared approval paths had no effect on any
-  // plan (decision D11).
+  // plan.
   const ref = "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-sequence/v0.1";
   const source = { measurement: { unit: "Hz", scale: "nominal" }, profile_refs: [ref] };
   const target = { measurement: { unit: "Hz", scale: "ordinal" }, profile_refs: [ref] };
@@ -251,16 +254,16 @@ test("the term registry is published and version independent", () => {
   const ids = registry.terms.map((term) => term.id);
   assert.equal(new Set(ids).size, expected);
   // A term must outlive the profile version that minted it, or a v0.2 profile would report every
-  // v0.1 port as incompatible even where the meaning is unchanged (decision D3).
+  // v0.1 port as incompatible even where the meaning is unchanged.
   assert.deepEqual(ids.filter((id) => id.includes("/v0.")), []);
   assert.ok(registry.terms.every((term) => term.label && term.definition));
-  // External terms are an honest absence until a reviewer decides per profile (erratum E3).
+  // External terms remain empty until a reviewer decides whether an exact maintained term exists.
   assert.ok(registry.terms.every((term) => Array.isArray(term.external_terms) && term.external_terms.length === 0));
 });
 
 
 test("a namespace release change is a mapping, not a contradiction", () => {
-  // Decision D7. Two releases of one namespace are not a contradiction: identifiers are retired and
+  // Two releases of one namespace are not a contradiction: identifiers are retired and
   // merged between releases, so what matters is what the transition did.
   const snapshot = (transitions) => {
     const unsigned = { ref: "https://biosimulant.com/snapshots/ensembl-releases/v1", namespace: "ensembl", transitions };

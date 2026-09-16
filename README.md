@@ -25,10 +25,10 @@ independent scientific review. See
 [PROFILE_REVIEW.md](PROFILE_REVIEW.md) and
 [`spec/v0.1/catalogue/internal-validation.json`](spec/v0.1/catalogue/internal-validation.json).
 
-The former 650-profile catalogue was an exploratory prototype. It is retained in
-Git history and in the scientific-remediation records, but it is no longer part
-of the active generated standard. Profiles will now be added incrementally from
-real output-to-input use cases and reviewed independently before release.
+The former 650-profile catalogue was an exploratory prototype. It remains in
+Git history but is no longer part of the active source tree or generated
+standard. Profiles will now be added incrementally from real output-to-input use
+cases and reviewed independently before release.
 
 Compatibility checks whether two model interfaces fit together. It doesn't show
 that a model is scientifically valid or clinically safe.
@@ -48,7 +48,7 @@ that a model is scientifically valid or clinically safe.
   |---|---|
   | `EXACT` | The contracts are identical. |
   | `DIRECT_COMPATIBLE` | The source already meets the target's requirements. |
-  | `LOSSLESS_CONVERSION_AVAILABLE` | A conversion that loses nothing is available, such as nM to µM. |
+  | `LOSSLESS_CONVERSION_AVAILABLE` | A conversion that loses nothing is available, such as `nmol/L` to `umol/L`. |
   | `LOSSY_CONVERSION_REQUIRES_APPROVAL` | A conversion exists but loses information, so someone has to approve it. |
   | `INFERENCE_MODEL_REQUIRED` | Getting from source to target needs a model to infer data. |
   | `CONDITIONAL` | Compatible only if a precondition holds. |
@@ -90,7 +90,7 @@ manifest = yaml.safe_load(open("model.yaml"))
 for finding in validate_manifest(manifest):
     print(finding.reason_code, finding.path, finding.message)
 
-report = compare_contracts({"measurement": {"unit": "nM"}}, {"measurement": {"unit": "uM"}})
+report = compare_contracts({"measurement": {"unit": "nmol/L"}}, {"measurement": {"unit": "umol/L"}})
 print(report["status"])  # LOSSLESS_CONVERSION_AVAILABLE
 ```
 
@@ -101,7 +101,7 @@ import { readFileSync } from "node:fs";
 import { compareContracts, parseYaml, validateManifest } from "@biosimulant/model-compatibility-standard";
 
 const findings = validateManifest(parseYaml(readFileSync("model.yaml", "utf8")));
-const report = compareContracts({ measurement: { unit: "nM" } }, { measurement: { unit: "uM" } });
+const report = compareContracts({ measurement: { unit: "nmol/L" } }, { measurement: { unit: "umol/L" } });
 console.log(report.status); // LOSSLESS_CONVERSION_AVAILABLE
 ```
 

@@ -105,7 +105,7 @@ def test_resolution_pins_verified_snapshots():
 def test_profile_transformation_policy_reaches_the_plan():
     # Every profile publishes transformation_policy and nothing read it: the only policy consulted
     # was the one a caller passed in by hand, so a profile's declared approval paths had no effect
-    # on any plan (decision D11).
+    # on any plan.
     source = {"measurement": {"unit": "Hz", "scale": "nominal"}, "profile_refs": [REF]}
     target = {"measurement": {"unit": "Hz", "scale": "ordinal"}, "profile_refs": [REF]}
     capability = _adapter(

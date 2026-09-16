@@ -1,478 +1,74 @@
 {
   "item_packs": [
     {
-      "description": "Details for data passed as files: media type, serialization, schema, compression, checksum, and staging.",
-      "id": "artifact-format",
+      "description": "Fields needed to exchange an amino-acid sequence with explicit identity, encoding, organism context and source provenance.",
+      "id": "protein-sequence",
       "items": [
+        "semantic.concept",
+        "representation.kind",
+        "representation.alphabet",
+        "representation.encoding",
+        "identifiers.namespace",
+        "identifiers.namespace_version",
+        "biological_context.species",
+        "semantic.ontology_terms",
+        "semantic.qualifiers",
+        "origin.source_ref",
+        "origin.source_sha256",
+        "uncertainty.quality_flags"
+      ]
+    },
+    {
+      "description": "Fields needed to exchange a protein structure with explicit identity, coordinate representation, format, organism context and provenance.",
+      "id": "protein-structure",
+      "items": [
+        "semantic.concept",
+        "representation.kind",
+        "representation.structure_format",
+        "representation.coordinate_system",
+        "identifiers.namespace",
+        "identifiers.namespace_version",
+        "biological_context.species",
+        "origin.type",
+        "semantic.ontology_terms",
+        "semantic.qualifiers",
+        "representation.precision",
+        "origin.method",
+        "origin.method_version",
+        "origin.software",
+        "origin.software_version",
+        "origin.source_ref",
+        "origin.source_sha256",
         "artifact.media_type",
         "artifact.format",
         "artifact.format_version",
         "artifact.schema_ref",
         "artifact.schema_sha256",
-        "artifact.compression",
         "artifact.sha256",
-        "artifact.byte_size",
-        "artifact.staging",
-        "artifact.partitioning",
-        "artifact.encryption"
+        "uncertainty.quality_flags"
       ]
     },
     {
-      "description": "Which assay produced the data: protocol, instrument, calibration, and controls.",
-      "id": "assay-evidence",
+      "description": "Fields needed to exchange a canonical SMILES string with explicit canonicalisation, chemical-state choices and software provenance.",
+      "id": "canonical-smiles",
       "items": [
-        "biological_context.assay",
-        "origin.protocol_ref",
-        "origin.protocol_version",
-        "origin.instrument",
-        "origin.instrument_model",
-        "origin.software",
-        "origin.software_version",
-        "measurement.calibration_ref",
-        "measurement.control",
-        "uncertainty.quality_flags",
-        "origin.evidence_refs"
-      ]
-    },
-    {
-      "description": "Where the data comes from biologically: species, material, disease, intervention, assay, and compartment.",
-      "id": "biological-context",
-      "items": [
-        "biological_context.species",
-        "biological_context.strain",
-        "biological_context.sex",
-        "biological_context.age",
-        "biological_context.tissue",
-        "biological_context.cell_type",
-        "biological_context.cell_line",
-        "biological_context.disease",
-        "biological_context.intervention",
-        "biological_context.assay",
-        "biological_context.cohort",
-        "biological_context.compartment",
-        "biological_context.taxa"
-      ]
-    },
-    {
-      "description": "Which cells the data describes: cell type, lineage, culture conditions, passage, and state.",
-      "id": "cell-context",
-      "items": [
-        "biological_context.cell_type",
-        "biological_context.cell_line",
-        "biological_context.lineage",
-        "biological_context.culture_system",
-        "biological_context.passage",
-        "biological_context.medium",
-        "biological_context.substrate",
-        "biological_context.oxygen",
-        "biological_context.confluence",
-        "semantic.cell_state"
-      ]
-    },
-    {
-      "description": "Rules for clinical data: coding systems, population, consent, de-identification, and use restrictions.",
-      "id": "clinical-governance",
-      "items": [
-        "identifiers.coding_system",
-        "identifiers.coding_version",
-        "biological_context.cohort",
-        "biological_context.population",
-        "security.consent_scope",
-        "security.data_use",
-        "security.deidentification",
-        "security.residency",
-        "security.retention",
-        "origin.audit_ref",
-        "semantic.intended_use"
-      ]
-    },
-    {
-      "description": "How an array is laid out: named axes, coordinates, labels, sizes, and order.",
-      "id": "dimensioned-array",
-      "items": [
-        "dimensions.axes",
-        "dimensions.axes[].name",
-        "dimensions.axes[].meaning",
-        "dimensions.axes[].size",
-        "dimensions.axes[].unit",
-        "dimensions.axes[].labels_ref",
-        "dimensions.axes[].labels_sha256",
-        "dimensions.axes[].ordering",
-        "dimensions.axes[].coordinates_ref",
-        "dimensions.axes[].dynamic"
-      ]
-    },
-    {
-      "description": "Dose-response data: the intervention, dose axis, endpoint, response direction, and fitted curve.",
-      "id": "dose-response",
-      "items": [
-        "biological_context.intervention[].agent",
-        "biological_context.intervention[].dose",
-        "biological_context.intervention[].route",
-        "biological_context.intervention[].duration",
-        "semantic.endpoint",
-        "measurement.baseline",
-        "measurement.response_direction",
-        "dimensions.dose_axis",
-        "dimensions.time_axis",
-        "origin.fit_method",
-        "uncertainty.fit_quality"
-      ]
-    },
-    {
-      "description": "Sample-by-feature matrices, including exactly which features are present and how the data was preprocessed.",
-      "id": "feature-matrix",
-      "items": [
-        "dimensions.sample_axis",
-        "dimensions.feature_axis",
-        "dimensions.feature_labels_ref",
-        "dimensions.feature_labels_sha256",
-        "representation.feature_space",
-        "representation.ordering",
-        "measurement.normalization",
-        "measurement.batch_correction",
-        "uncertainty.missingness",
-        "origin.processing_pipeline_ref"
-      ]
-    },
-    {
-      "description": "Networks: node and edge types, direction, weights, sources, and identifier systems.",
-      "id": "graph-network",
-      "items": [
-        "representation.node_schema",
-        "representation.edge_schema",
-        "representation.directed",
-        "representation.multigraph",
-        "representation.weight_semantics",
-        "representation.self_loops",
-        "identifiers.node_namespace",
-        "identifiers.edge_namespace",
-        "origin.edge_evidence",
-        "uncertainty.edge_confidence"
-      ]
-    },
-    {
-      "description": "Versioned identifiers, normalized so the same thing always gets the same ID.",
-      "id": "identifier-core",
-      "items": [
-        "identifiers.namespace",
-        "identifiers.namespace_version",
-        "identifiers.entity_type",
-        "identifiers.canonicalization",
-        "identifiers.mapping_refs",
-        "identifiers.ambiguity_handling",
-        "identifiers.unmapped_handling",
-        "identifiers.deprecated_handling",
-        "identifiers.case_policy"
-      ]
-    },
-    {
-      "description": "Images and volumes: pixels or voxels, channels, resolution, registration, and anatomical frame.",
-      "id": "imaging-spatial",
-      "items": [
-        "representation.coordinate_system",
-        "representation.channel_order",
-        "dimensions.spatial_axes",
-        "dimensions.pixel_spacing",
-        "dimensions.slice_thickness",
-        "dimensions.origin",
-        "dimensions.orientation",
-        "origin.registration_ref",
-        "origin.segmentation_method",
-        "uncertainty.segmentation_confidence"
-      ]
-    },
-    {
-      "description": "Mappings between identifier systems: the exact source and target systems, and a fixed record of the mapping used.",
-      "id": "mapping-capability",
-      "items": [
-        "identifiers.mapping_refs[].ref",
-        "identifiers.mapping_refs[].sha256",
-        "identifiers.mapping_refs[].source_namespace",
-        "identifiers.mapping_refs[].target_namespace",
-        "identifiers.mapping_refs[].coverage",
-        "identifiers.mapping_refs[].cardinality",
-        "identifiers.mapping_refs[].release",
-        "identifiers.mapping_refs[].license"
-      ]
-    },
-    {
-      "description": "What was measured: quantity, unit, scale, normalization, and detection limits.",
-      "id": "measurement-core",
-      "items": [
-        "measurement.quantity",
-        "measurement.unit",
-        "measurement.scale",
-        "measurement.transform",
-        "measurement.normalization",
-        "measurement.baseline",
-        "measurement.reference_range",
-        "measurement.detection_limits",
-        "measurement.calibration_ref",
-        "measurement.aggregation",
-        "measurement.tolerance"
-      ]
-    },
-    {
-      "description": "Which molecule this is: chemical or macromolecular structure, stereochemistry, charge, and conformer.",
-      "id": "molecular-structure",
-      "items": [
-        "semantic.entity",
-        "representation.structure_format",
+        "semantic.concept",
+        "representation.kind",
+        "representation.canonicalization",
+        "representation.normalization_tool",
+        "representation.normalization_version",
+        "semantic.ontology_terms",
+        "semantic.qualifiers",
+        "identifiers.structure_hash",
         "representation.stereochemistry",
         "representation.protonation_state",
         "representation.tautomer_state",
         "representation.formal_charge",
         "representation.isotope_state",
-        "representation.conformer_method",
-        "representation.hydrogen_policy",
-        "identifiers.structure_hash"
-      ]
-    },
-    {
-      "description": "Ontology terms pinned to a specific version, and safe rules for matching broader and narrower terms.",
-      "id": "ontology-terms",
-      "items": [
-        "semantic.ontology_terms[].uri",
-        "semantic.ontology_terms[].ontology",
-        "semantic.ontology_terms[].version",
-        "semantic.ontology_terms[].label",
-        "semantic.ontology_terms[].relation",
-        "semantic.ontology_snapshot_ref",
-        "semantic.ontology_snapshot_sha256"
-      ]
-    },
-    {
-      "description": "Pharmacokinetics: exposure, sampling times, compartments, and PK parameter definitions.",
-      "id": "pharmacokinetics",
-      "items": [
-        "biological_context.compartment",
-        "biological_context.intervention[].route",
-        "biological_context.intervention[].schedule",
-        "lifecycle.sampling",
-        "measurement.quantity",
-        "measurement.unit",
-        "semantic.pk_parameter",
-        "origin.estimation_method",
-        "uncertainty.parameter_covariance"
-      ]
-    },
-    {
-      "description": "Which population the data describes: strata, geography, denominator, sampling frame, and rates.",
-      "id": "population-context",
-      "items": [
-        "biological_context.population",
-        "biological_context.geography",
-        "biological_context.stratum",
-        "biological_context.denominator",
-        "biological_context.sampling_frame",
-        "measurement.rate_basis",
-        "measurement.standardization",
-        "lifecycle.observation_period",
-        "origin.surveillance_system",
-        "uncertainty.interval"
-      ]
-    },
-    {
-      "description": "The port fields model.yaml already has (name, type, shape), carried into the contract.",
-      "id": "port-structure",
-      "items": [
-        "name",
-        "signal_type",
-        "kind",
-        "dtype",
-        "shape",
-        "schema",
-        "emitted_unit",
-        "accepted_units",
-        "required",
-        "default"
-      ]
-    },
-    {
-      "description": "Where a value came from and how it was produced.",
-      "id": "provenance-origin",
-      "items": [
-        "origin.type",
+        "origin.software",
+        "origin.software_version",
         "origin.source_ref",
-        "origin.source_sha256",
-        "origin.method",
-        "origin.method_version",
-        "origin.transformation_chain",
-        "origin.observed_at",
-        "origin.generated_at",
-        "origin.operator"
-      ]
-    },
-    {
-      "description": "How the data is encoded and structured.",
-      "id": "representation-core",
-      "items": [
-        "representation.kind",
-        "representation.encoding",
-        "representation.layout",
-        "representation.feature_space",
-        "representation.ordering",
-        "representation.sparsity",
-        "representation.canonicalization",
-        "representation.precision",
-        "representation.endianness",
-        "representation.implicit_entry"
-      ]
-    },
-    {
-      "description": "What travels with a value at run time: context, the value or file itself, provenance, and observation time.",
-      "id": "runtime-envelope",
-      "items": [
-        "envelope.contract_sha256",
-        "envelope.value",
-        "envelope.artifact_ref",
-        "envelope.actual_context",
-        "envelope.origin",
-        "envelope.uncertainty",
-        "envelope.provenance",
-        "envelope.observation_time",
-        "envelope.produced_by",
-        "envelope.validation_results"
-      ]
-    },
-    {
-      "description": "How the data may be handled: classification, license, consent, data residency, and workspace policy.",
-      "id": "security-policy",
-      "items": [
-        "security.classification",
-        "security.license",
-        "security.license_ref",
-        "security.consent_scope",
-        "security.data_use",
-        "security.residency",
-        "security.workspace_boundary",
-        "security.export_control",
-        "security.retention",
-        "security.redaction"
-      ]
-    },
-    {
-      "description": "What the data means, biologically or computationally.",
-      "id": "semantic-core",
-      "items": [
-        "semantic.concept",
-        "semantic.subject",
-        "semantic.process",
-        "semantic.role",
-        "semantic.endpoint",
-        "semantic.qualifiers",
-        "semantic.ontology_terms"
-      ]
-    },
-    {
-      "description": "Sequence positions: alphabet, strand, coordinates, and reference genome assembly.",
-      "id": "sequence-coordinate",
-      "items": [
-        "representation.alphabet",
-        "representation.strand",
-        "representation.coordinate_system",
-        "representation.reference_assembly",
-        "representation.reference_sequence",
-        "representation.interval_convention",
-        "representation.circularity",
-        "representation.masking",
-        "representation.quality_encoding"
-      ]
-    },
-    {
-      "description": "What you need to rerun a simulation: model formalism, solver, tolerances, random seed, and state order.",
-      "id": "simulation-reproducibility",
-      "items": [
-        "semantic.model_formalism",
-        "representation.state_order",
-        "lifecycle.time_unit",
-        "lifecycle.time_origin",
-        "origin.solver",
-        "origin.solver_version",
-        "origin.absolute_tolerance",
-        "origin.relative_tolerance",
-        "origin.random_seed",
-        "origin.parameter_digest",
-        "origin.model_digest"
-      ]
-    },
-    {
-      "description": "Taxonomy and evolution: lineage, phylogenetic method, evolutionary time, and confidence.",
-      "id": "taxonomy-evolution",
-      "items": [
-        "identifiers.taxonomy_namespace",
-        "identifiers.taxonomy_version",
-        "semantic.lineage",
-        "semantic.ancestral_state",
-        "representation.tree_format",
-        "measurement.evolutionary_distance",
-        "lifecycle.evolutionary_time",
-        "origin.phylogenetic_method",
-        "origin.substitution_model",
-        "uncertainty.branch_support"
-      ]
-    },
-    {
-      "description": "Timing: how states and events change over time, sampling, and how recent the data is.",
-      "id": "temporal-lifecycle",
-      "items": [
-        "lifecycle.kind",
-        "lifecycle.consumption",
-        "lifecycle.production",
-        "lifecycle.temporal_meaning",
-        "lifecycle.time_origin",
-        "lifecycle.time_unit",
-        "lifecycle.sampling",
-        "lifecycle.interpolation",
-        "lifecycle.freshness",
-        "lifecycle.window",
-        "lifecycle.causality"
-      ]
-    },
-    {
-      "description": "Data quality: uncertainty, confidence, quality flags, missing values, and censoring.",
-      "id": "uncertainty-quality",
-      "items": [
-        "uncertainty.kind",
-        "uncertainty.distribution",
-        "uncertainty.parameters",
-        "uncertainty.variance",
-        "uncertainty.interval",
-        "uncertainty.confidence_level",
-        "uncertainty.quality_flags",
-        "uncertainty.missingness",
-        "uncertainty.censoring",
-        "uncertainty.imputation"
-      ]
-    },
-    {
-      "description": "Validation rules written as data, never as code.",
-      "id": "validation-constraints",
-      "items": [
-        "constraints[].id",
-        "constraints[].operator",
-        "constraints[].inputs",
-        "constraints[].expected",
-        "constraints[].severity",
-        "constraints[].reason",
-        "constraints[].remediation",
-        "constraints[].profile_ref"
-      ]
-    },
-    {
-      "description": "Genetic variants: normalized variant identity and predicted consequence.",
-      "id": "variant-identity",
-      "items": [
-        "semantic.variant_class",
-        "representation.reference_allele",
-        "representation.alternate_allele",
-        "representation.left_normalized",
-        "representation.normalization_tool",
-        "representation.normalization_version",
-        "identifiers.variant_notation",
-        "identifiers.transcript_reference",
-        "semantic.consequence"
+        "origin.source_sha256"
       ]
     }
   ],

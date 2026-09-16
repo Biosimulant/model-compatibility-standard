@@ -11,7 +11,7 @@ Three answers are distinct, and the standard needs all three:
 - not convertible, because the dimensions differ (a known contradiction);
 - not decidable, because a unit is unparseable, arbitrary or logarithmic (UNKNOWN, never a pass).
 
-See decision D1.
+The parser uses the vendored UCUM table; informal aliases are not silently accepted.
 """
 from __future__ import annotations
 

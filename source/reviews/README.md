@@ -25,6 +25,12 @@ Adding a name is not enough. The reviewer must check the actual profile rules,
 fixtures, intended use and limits. Do not use generated text as scientific
 approval.
 
+The generated packet is the complete mapping proposal for that profile: its
+required fields, candidate fields, comparison rules and expected outcomes. The
+review evidence should record a disposition for every candidate and any missing
+field the reviewer believes is necessary. Fields outside the profile's packet
+remain out of scope unless the reviewer explicitly adds them.
+
 The standard build sets `release_eligible: true` only after the review file is
 complete. `ga_ready` becomes true only when every profile in the active
 incubator catalogue is eligible.

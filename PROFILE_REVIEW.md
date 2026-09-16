@@ -9,6 +9,8 @@ A profile can move to `reviewed` only when it has all of the following:
 - Decisions for each part of the contract that applies to it: meaning,
   representation, identifiers, measurement, biological context, timing, origin,
   uncertainty and file format.
+- A field-level disposition for every required and candidate field in the
+  profile packet: required, conditional, recommended or excluded.
 - Primary or authoritative sources that back those decisions.
 - A named scientific reviewer who didn't write the profile.
 - A different named schema reviewer who didn't write the profile.
@@ -31,6 +33,13 @@ Every profile has a generated packet under
 exact profile digest, proposed fixed and allowed values, required and
 recommended fields, comparison rules, fixture names, reviewer questions and
 the remaining approval roles.
+
+For the profile being reviewed, the packet is the complete field-level mapping
+proposal: it shows every field currently required and every additional field in
+that profile's v0 item pack. The reviewer should classify each candidate as
+required, conditional, recommended or excluded, and may propose a missing field.
+They are not expected to review unrelated fields from the wider contract
+vocabulary.
 
 `spec/v0.1/catalogue/internal-validation.json` records the machine-checkable
 result for every active profile. `ready-for-external-review` means that the profile

@@ -43,7 +43,7 @@
     "Ti": 1099511627776.0
   },
   "aliases": {},
-  "alias_note": "Spellings used by v0.1 that UCUM does not define. Deprecated: migrate to the UCUM spelling (decision D1).",
+  "alias_note": "Informal spellings that UCUM does not define are unsupported; use the UCUM spelling.",
   "units": {
     "%": {
       "factor": 0.01,

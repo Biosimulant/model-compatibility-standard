@@ -135,7 +135,7 @@ def validate_contract(
 
 
 def _array_member_findings(ref: str, requirement: dict[str, Any], contract: dict[str, Any]) -> list[ValidationFinding]:
-    """Check a requirement that addresses every member of an array (decision D9).
+    """Check a requirement that addresses every member of an array.
 
     "dimensions.axes[].unit" means every axis declares a unit, so the requirement is checked once per
     member and reports which member failed. An empty or absent array cannot satisfy it.
@@ -162,7 +162,7 @@ def _array_member_findings(ref: str, requirement: dict[str, Any], contract: dict
 
 
 def _unit_findings(bundle: Bundle, profile: dict[str, Any], contract: dict[str, Any]) -> list[ValidationFinding]:
-    """Check a declared unit against the profile's quantity kind (decision D1).
+    """Check a declared unit against the profile's quantity kind.
 
     A unit alone does not identify a quantity: hertz and becquerel are both per second, and a
     Hounsfield unit is dimensionless like a bare ratio. The dimension has to match, and a kind may

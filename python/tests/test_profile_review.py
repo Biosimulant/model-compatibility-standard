@@ -14,6 +14,7 @@ SPEC.loader.exec_module(build_standard)
 applicable_review_sections = build_standard.applicable_review_sections
 review_evidence_errors = build_standard.review_evidence_errors
 required_fixture_groups = build_standard.required_fixture_groups
+profile_review_fields = build_standard.profile_review_fields
 
 
 def test_review_template_matches_its_json_schema():
@@ -49,7 +50,7 @@ def _valid_evidence(profile):
                 "sha256": "sha256:" + ("1" * 64),
             }
         ],
-        "intended_use": "Checks scalar quantity ports with an explicitly declared meaning.",
+        "intended_use": "Checks whether two ports exchange the profile's declared biological data under the stated contract.",
         "limitations": ["It does not prove that the producing model is scientifically valid."],
         "decisions": {
             section: {
@@ -59,6 +60,14 @@ def _valid_evidence(profile):
                 "source_ids": [source_id],
             }
             for section in applicable_review_sections(profile)
+        },
+        "field_decisions": {
+            path: {
+                "disposition": "required" if path in profile["required_items"] else "recommended",
+                "rationale": f"The review records an explicit scientific disposition for {path}.",
+                "source_ids": [source_id],
+            }
+            for path in profile_review_fields(profile)
         },
         "fixture_review": required_fixture_groups(profile),
     }
@@ -84,3 +93,12 @@ def test_every_applicable_section_needs_a_sourced_decision():
     evidence["decisions"] = {}
     errors = review_evidence_errors(profile, evidence)
     assert any(message.startswith("decisions are missing:") for message in errors)
+
+
+def test_every_packet_field_needs_an_explicit_decision():
+    profile = _profile()
+    evidence = _valid_evidence(profile)
+    missing = next(path for path in profile_review_fields(profile) if path not in profile["required_items"])
+    del evidence["field_decisions"][missing]
+    errors = review_evidence_errors(profile, evidence)
+    assert any(message.startswith("field_decisions are missing:") for message in errors)

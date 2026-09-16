@@ -57,7 +57,7 @@ def _declared_policy(contract: dict[str, Any] | None, bundle: Bundle) -> dict[st
 
     Every profile publishes `transformation_policy`, and until now nothing read it: a profile that
     declared `lossy: block` still produced APPROVAL_REQUIRED, because the only policy consulted was
-    the one a caller passed in by hand (decision D11). Where a contract names several profiles the
+    the one a caller passed in by hand. Where a contract names several profiles the
     most restrictive setting wins, since a profile that blocks a path is not overruled by one that
     permits it.
     """
@@ -169,7 +169,7 @@ def _plan(
         "bundle_sha256": bundle.digest,
         # The status the chain itself carries. reports[] holds the terminal comparison, which is
         # EXACT whenever the last adapter lands exactly on the target, so without this a reader
-        # cannot tell a lossy chain from an inference one or from a direct match (decision D11).
+        # cannot tell a lossy chain from an inference one or from a direct match.
         "technical_status": status,
         "nodes": nodes,
         "edges": edges,
@@ -210,7 +210,7 @@ def resolve_contracts(
     )
     ontology_index = _verified_snapshots(ontology_values)
     mapping_index = _verified_snapshots(mapping_values)
-    # A policy the caller supplies wins; otherwise use the one the target's profiles publish (D11).
+    # A policy the caller supplies wins; otherwise use the one the target's profiles publish.
     active_policy = dict(policy) if policy else _declared_policy(target, active)
     direct = compare_contracts(
         source,

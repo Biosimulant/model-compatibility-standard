@@ -14,6 +14,7 @@
     "intended_use",
     "limitations",
     "decisions",
+    "field_decisions",
     "fixture_review"
   ],
   "properties": {
@@ -81,8 +82,7 @@
         "origin": { "$ref": "#/$defs/decision" },
         "uncertainty": { "$ref": "#/$defs/decision" },
         "artifact": { "$ref": "#/$defs/decision" },
-        "constraints": { "$ref": "#/$defs/decision" },
-        "security": { "$ref": "#/$defs/decision" }
+        "constraints": { "$ref": "#/$defs/decision" }
       },
       "required": [
         "structure",
@@ -96,10 +96,14 @@
         "origin",
         "uncertainty",
         "artifact",
-        "constraints",
-        "security"
+        "constraints"
       ],
       "additionalProperties": false
+    },
+    "field_decisions": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": { "$ref": "#/$defs/fieldDecision" }
     },
     "fixture_review": {
       "type": "object",
@@ -132,6 +136,23 @@
           "uniqueItems": true,
           "items": { "type": "string", "minLength": 1 }
         },
+        "source_ids": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 2 }
+        }
+      },
+      "additionalProperties": false
+    },
+    "fieldDecision": {
+      "type": "object",
+      "required": ["disposition", "rationale", "source_ids"],
+      "properties": {
+        "disposition": {
+          "enum": ["required", "conditional", "recommended", "excluded"]
+        },
+        "rationale": { "type": "string", "minLength": 20 },
         "source_ids": {
           "type": "array",
           "minItems": 1,
