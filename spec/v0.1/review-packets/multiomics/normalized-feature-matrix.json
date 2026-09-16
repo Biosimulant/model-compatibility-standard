@@ -181,7 +181,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/normalized-feature-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/normalized-feature-matrix/v0.1",
-  "profile_sha256": "sha256:706e50fd78ca210ec90ae7fbd5757d1a20f54a937b75ae155bd6f2859c952800",
+  "profile_sha256": "sha256:19b64e51ba4056cd6062a87a37742830c69416c41d32c7a429dacbc62ea211fd",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -534,7 +534,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

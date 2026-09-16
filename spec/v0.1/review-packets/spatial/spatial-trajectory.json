@@ -148,7 +148,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/spatial-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/spatial-trajectory/v0.1",
-  "profile_sha256": "sha256:b2cb3c2801f7b84e52fadc1bb8c8de321ef9237cc4227362d1adf4dfdba7d82b",
+  "profile_sha256": "sha256:5e45369e0967291a1947d37fbac397bb4b37ccadf37d1e09159d32b50cd6e25d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -475,7 +475,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

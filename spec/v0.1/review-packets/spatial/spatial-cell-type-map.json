@@ -167,7 +167,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/spatial-cell-type-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/spatial-cell-type-map/v0.1",
-  "profile_sha256": "sha256:c7d7dcea9a3135fbee46f3d8fa202e9317db8d33de80bb4e32c2453b7e0ad054",
+  "profile_sha256": "sha256:79f6196b52536e21a456ca96d98e6c39433e8a3d0cef7e046542170167228b57",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -530,7 +530,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

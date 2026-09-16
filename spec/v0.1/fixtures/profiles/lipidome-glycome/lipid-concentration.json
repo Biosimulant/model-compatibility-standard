@@ -12,7 +12,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -38,7 +38,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "origin": {
@@ -63,7 +63,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -86,7 +86,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -111,7 +111,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -141,7 +141,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -163,7 +163,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -188,7 +188,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -208,7 +208,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -233,7 +233,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -255,7 +255,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -276,7 +276,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {},
@@ -301,7 +301,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -331,7 +331,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -353,7 +353,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -378,7 +378,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {},
@@ -398,7 +398,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -423,7 +423,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -445,7 +445,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {},
@@ -465,7 +465,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -492,7 +492,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -522,7 +522,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -544,7 +544,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -568,7 +568,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -590,7 +590,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -615,7 +615,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -636,7 +636,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -658,7 +658,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -685,7 +685,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -714,7 +714,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -736,7 +736,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -760,7 +760,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -782,7 +782,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -807,7 +807,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -828,7 +828,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -850,7 +850,7 @@
           "namespace_version": "example-namespace-version"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -877,7 +877,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -907,7 +907,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -929,7 +929,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -953,7 +953,7 @@
           "namespace_version": "example-namespace-version"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -975,7 +975,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1000,7 +1000,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1021,7 +1021,7 @@
           "namespace_version": "example-namespace-version"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1044,7 +1044,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -1070,7 +1070,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": 7
         },
         "representation": {
@@ -1100,7 +1100,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "s"
         },
         "representation": {
@@ -1122,7 +1122,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1147,7 +1147,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -1168,7 +1168,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1193,7 +1193,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1215,7 +1215,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -1293,7 +1293,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal-different",
+          "scale": "ratio-different",
           "unit": "umol/L"
         },
         "representation": {
@@ -1315,7 +1315,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1361,7 +1361,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1386,7 +1386,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1429,7 +1429,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1456,7 +1456,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1486,7 +1486,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1508,7 +1508,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1532,7 +1532,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1554,7 +1554,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1579,7 +1579,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1600,7 +1600,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1622,7 +1622,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1649,7 +1649,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1679,7 +1679,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1701,7 +1701,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1725,7 +1725,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1747,7 +1747,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1772,7 +1772,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1793,7 +1793,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1817,7 +1817,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mol/L"
         },
         "representation": {
@@ -1839,7 +1839,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {

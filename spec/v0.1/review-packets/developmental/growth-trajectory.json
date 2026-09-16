@@ -158,7 +158,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/growth-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/growth-trajectory/v0.1",
-  "profile_sha256": "sha256:953da1b74d4be20d7c30bfca80ea828013ecd01aa00697eb28963f0acfc66f3e",
+  "profile_sha256": "sha256:4921e9d538c153765ed532b907171577c5f8efcba71e50d4c32bb08fa6cfac45",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -485,7 +485,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

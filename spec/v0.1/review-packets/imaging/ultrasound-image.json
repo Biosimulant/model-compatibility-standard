@@ -167,7 +167,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/ultrasound-image@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/ultrasound-image/v0.1",
-  "profile_sha256": "sha256:ab36dee02c056057005ab814f4a1f844ab0bffb02e5db472705d6c30f7a112f3",
+  "profile_sha256": "sha256:38478a727ab1abafd32a8407324e5faa68bbf1588bb888c4a34e02c86b82de82",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -512,7 +512,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

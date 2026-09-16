@@ -173,7 +173,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/epigenetic-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/epigenetic-trajectory/v0.1",
-  "profile_sha256": "sha256:fbf7ddb0d7743fde34c43c9033d1c35e99c7574b6659057b8455bf8737fde79d",
+  "profile_sha256": "sha256:5d83ba80768a737d47ce0119f7867295ed78848bfd5713e9c65b51d92f49666c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -518,7 +518,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

@@ -182,7 +182,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/chemical-descriptor-vector@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/chemical-descriptor-vector/v0.1",
-  "profile_sha256": "sha256:db6af2cd2c1d0fa064227f53ad16a7e8b8a351359d5353c199cf6e9ca2344547",
+  "profile_sha256": "sha256:71d0c20f948b1e7f6e30edb28fd176c9fd052453377f3a754850922b71445cc9",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -538,7 +538,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

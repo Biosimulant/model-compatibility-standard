@@ -195,7 +195,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/physiological-time-series@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/physiological-time-series/v0.1",
-  "profile_sha256": "sha256:613c6a26ec901df667df7fede3d65ec302a5af98752859548f3ec35503e75991",
+  "profile_sha256": "sha256:21a7ad0c3b30393e3b5b597baf94dd86286c0eaf815e22d538e60eb60665f07b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -578,7 +578,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

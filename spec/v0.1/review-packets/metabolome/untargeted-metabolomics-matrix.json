@@ -177,7 +177,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/untargeted-metabolomics-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/untargeted-metabolomics-matrix/v0.1",
-  "profile_sha256": "sha256:30cd3a0090fa41b1f6385173d1981d078eda64cd796a7cd25fcf34d77c6301c2",
+  "profile_sha256": "sha256:11448435263ce5ec18245b19ebba74cee1c2004706e4692bd6971304d62fda11",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -530,7 +530,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

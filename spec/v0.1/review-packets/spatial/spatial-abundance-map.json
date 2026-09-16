@@ -197,7 +197,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/spatial-abundance-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/spatial-abundance-map/v0.1",
-  "profile_sha256": "sha256:754dd33bc251f297aa4671bc6d5571efc2b934fade6b84529bc104b6a84f90c3",
+  "profile_sha256": "sha256:88d91040867f5752f34103b9c391eb3110c8f652a66fe2ae9b2d4a0d3358acc1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -585,7 +585,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

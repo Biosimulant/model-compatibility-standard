@@ -7,7 +7,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -31,7 +31,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -52,7 +52,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -73,7 +73,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -96,7 +96,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -124,7 +124,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -144,7 +144,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -167,7 +167,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -185,7 +185,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -208,7 +208,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -228,7 +228,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -247,7 +247,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -270,7 +270,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -298,7 +298,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -318,7 +318,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -341,7 +341,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -359,7 +359,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -382,7 +382,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -402,7 +402,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -420,7 +420,7 @@
           "species": "NCBITaxon:9606"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -445,7 +445,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio-different",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -473,7 +473,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio-different",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -493,7 +493,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -515,7 +515,7 @@
           "species": "NCBITaxon:9606"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -535,7 +535,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -558,7 +558,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -577,7 +577,7 @@
           "species": "NCBITaxon:9606"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -598,7 +598,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal"
+          "scale": "interval"
         },
         "origin": {
           "model_digest": "example-model-digest"
@@ -622,7 +622,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": 7
         },
         "origin": {
@@ -650,7 +650,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "s"
         },
         "origin": {
@@ -670,7 +670,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -693,7 +693,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal"
+          "scale": "interval"
         },
         "origin": {
           "model_digest": "example-model-digest"
@@ -712,7 +712,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -735,7 +735,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -755,7 +755,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal"
+          "scale": "interval"
         },
         "origin": {
           "model_digest": "example-model-digest"
@@ -827,7 +827,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal-different",
+          "scale": "interval-different",
           "unit": "1"
         },
         "origin": {
@@ -847,7 +847,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -889,7 +889,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -912,7 +912,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -950,7 +950,7 @@
         "biological_context": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -975,7 +975,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1003,7 +1003,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1023,7 +1023,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1044,7 +1044,7 @@
         "biological_context": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1064,7 +1064,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1087,7 +1087,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1105,7 +1105,7 @@
         "biological_context": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1126,7 +1126,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {},
@@ -1149,7 +1149,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1177,7 +1177,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1197,7 +1197,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1220,7 +1220,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {},
@@ -1238,7 +1238,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1261,7 +1261,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1281,7 +1281,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dimensionless-ratio",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {},

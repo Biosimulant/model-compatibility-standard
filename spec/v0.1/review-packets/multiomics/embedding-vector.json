@@ -173,7 +173,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/embedding-vector@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/embedding-vector/v0.1",
-  "profile_sha256": "sha256:e15b1d1e86ccb969235c8f6fabd72eeac5236d30163a588bfd4b4114b542045b",
+  "profile_sha256": "sha256:c599e5357b0199f386eb9d9a840d5c17ed6998594b20ac1057f5e3d7a3d078dc",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -518,7 +518,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

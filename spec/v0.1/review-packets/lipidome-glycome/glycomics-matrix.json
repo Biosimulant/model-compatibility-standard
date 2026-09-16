@@ -174,7 +174,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/glycomics-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/glycomics-matrix/v0.1",
-  "profile_sha256": "sha256:ac4282289b1349d2a907f99b7e30b4e4082befad06586c227f474a649905ff8f",
+  "profile_sha256": "sha256:bec6c6c4ea2182d024356bc79ad1c46794fedf4f5b855f7274758b4e6a5d04a2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -536,7 +536,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

@@ -165,7 +165,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "core/regular-time-series@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/core/regular-time-series/v0.1",
-  "profile_sha256": "sha256:d445cf7258a5babd66626630450bd9b72d3ca4bcd27242365ec2081ffeb3d529",
+  "profile_sha256": "sha256:824b5c48227a0305d9b7dafb252dc6cb2e2008e0d05610e0d9a2f6f8b67640af",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -551,7 +551,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

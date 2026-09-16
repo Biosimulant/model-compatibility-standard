@@ -35,7 +35,6 @@
     "measurement.normalization",
     "measurement.reference_range",
     "measurement.tolerance",
-    "measurement.transform",
     "origin.evidence_refs",
     "origin.instrument",
     "origin.instrument_model",
@@ -73,7 +72,8 @@
       "comparison-incompatible-measurement-unit",
       "comparison-incompatible-measurement-scale",
       "comparison-incompatible-biological-context-species",
-      "comparison-incompatible-biological-context-assay"
+      "comparison-incompatible-biological-context-assay",
+      "comparison-incompatible-measurement-transform"
     ],
     "invalid": [
       "negative-value-invalid-semantic-concept",
@@ -83,7 +83,8 @@
       "negative-value-invalid-measurement-scale",
       "negative-value-invalid-biological-context-species",
       "negative-value-invalid-biological-context-assay",
-      "negative-value-invalid-semantic-entity"
+      "negative-value-invalid-semantic-entity",
+      "negative-value-invalid-measurement-transform"
     ],
     "negative": [
       "negative-required-missing-semantic-concept",
@@ -93,7 +94,8 @@
       "negative-required-missing-measurement-scale",
       "negative-required-missing-biological-context-species",
       "negative-required-missing-biological-context-assay",
-      "negative-required-missing-semantic-entity"
+      "negative-required-missing-semantic-entity",
+      "negative-required-missing-measurement-transform"
     ],
     "policy": [],
     "positive": [
@@ -109,6 +111,7 @@
       "comparison-unknown-biological-context-species",
       "comparison-unknown-biological-context-assay",
       "comparison-unknown-semantic-entity",
+      "comparison-unknown-measurement-transform",
       "comparison-unknown-target-semantic-concept",
       "comparison-unknown-target-representation-kind",
       "comparison-unknown-target-measurement-quantity",
@@ -117,6 +120,7 @@
       "comparison-unknown-target-biological-context-species",
       "comparison-unknown-target-biological-context-assay",
       "comparison-unknown-target-semantic-entity",
+      "comparison-unknown-target-measurement-transform",
       "comparison-unknown-no-snapshot-semantic-entity"
     ]
   },
@@ -162,14 +166,19 @@
     "negative-value-invalid-semantic-entity",
     "comparison-unknown-no-snapshot-semantic-entity",
     "comparison-unknown-semantic-entity",
-    "comparison-unknown-target-semantic-entity"
+    "comparison-unknown-target-semantic-entity",
+    "negative-required-missing-measurement-transform",
+    "negative-value-invalid-measurement-transform",
+    "comparison-incompatible-measurement-transform",
+    "comparison-unknown-measurement-transform",
+    "comparison-unknown-target-measurement-transform"
   ],
   "internal_quality_errors": [],
   "label": "Neutralization Titer",
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/neutralization-titer@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/neutralization-titer/v0.1",
-  "profile_sha256": "sha256:38c37bb069a7f502d9e0a0e16b4b063f9982f4afd22083aaeb74cc14d05c8d92",
+  "profile_sha256": "sha256:0258ef1cbd8b1e6c78877b34fb1a8d05d726bd8f6b7e08fe81fc31f8b15f7c98",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -260,7 +269,7 @@
     },
     {
       "layer": "technical",
-      "missing": "ignore",
+      "missing": "unknown",
       "operator": "equal",
       "reason_code": "BMCS_MEASUREMENT_TRANSFORM_MISMATCH",
       "severity": "error",
@@ -489,6 +498,19 @@
         "maxLength": 4096,
         "minLength": 1,
         "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "measurement.transform",
+      "schema": {
+        "enum": [
+          "identity",
+          "log2",
+          "log10",
+          "ln",
+          "logit"
+        ]
       }
     }
   ],

@@ -204,7 +204,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/community-time-series@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/community-time-series/v0.1",
-  "profile_sha256": "sha256:b589cf5906ae8f30f91a2f5b67d0c6344170b3b54faab14a2fcb3ca07d390eb2",
+  "profile_sha256": "sha256:2866b8a80098bc76153612328ddcf7e4b7dccd62c111dd2e7f1ea19cb8e7455f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -605,7 +605,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

@@ -7,7 +7,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -28,7 +28,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "origin": {
@@ -48,7 +48,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -66,7 +66,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -86,7 +86,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -111,7 +111,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -128,7 +128,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -148,7 +148,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -163,7 +163,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -183,7 +183,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -200,7 +200,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -216,7 +216,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {},
@@ -236,7 +236,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -261,7 +261,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -278,7 +278,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -298,7 +298,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {},
@@ -313,7 +313,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -333,7 +333,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -350,7 +350,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {},
@@ -365,7 +365,7 @@
           "species": "NCBITaxon:562"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -387,7 +387,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -412,7 +412,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -429,7 +429,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -448,7 +448,7 @@
           "species": "NCBITaxon:562"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -465,7 +465,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -485,7 +485,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -501,7 +501,7 @@
           "species": "NCBITaxon:562"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -519,7 +519,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -540,7 +540,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": 7
         },
         "representation": {
@@ -565,7 +565,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "s"
         },
         "representation": {
@@ -582,7 +582,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -602,7 +602,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -618,7 +618,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -638,7 +638,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -655,7 +655,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -718,7 +718,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal-different",
+          "scale": "ratio-different",
           "unit": "g/cm2"
         },
         "representation": {
@@ -735,7 +735,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -771,7 +771,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -791,7 +791,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -823,7 +823,7 @@
         "biological_context": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -845,7 +845,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -870,7 +870,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -887,7 +887,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -905,7 +905,7 @@
         "biological_context": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -922,7 +922,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -942,7 +942,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -957,7 +957,7 @@
         "biological_context": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {
@@ -976,7 +976,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg/cm2"
         },
         "representation": {
@@ -993,7 +993,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/mass-per-area",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g/cm2"
         },
         "representation": {

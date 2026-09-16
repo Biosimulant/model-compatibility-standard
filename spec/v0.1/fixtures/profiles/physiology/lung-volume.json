@@ -7,7 +7,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -31,7 +31,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "origin": {
@@ -54,7 +54,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -75,7 +75,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -99,7 +99,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -127,7 +127,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -147,7 +147,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -170,7 +170,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -189,7 +189,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -212,7 +212,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -232,7 +232,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -252,7 +252,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {},
@@ -275,7 +275,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -303,7 +303,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -323,7 +323,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -346,7 +346,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {},
@@ -364,7 +364,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -387,7 +387,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -407,7 +407,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {},
@@ -425,7 +425,7 @@
           "species": "NCBITaxon:9606"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -450,7 +450,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -478,7 +478,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -498,7 +498,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -520,7 +520,7 @@
           "species": "NCBITaxon:9606"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -540,7 +540,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -563,7 +563,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -582,7 +582,7 @@
           "species": "NCBITaxon:9606"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -603,7 +603,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -627,7 +627,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": 7
         },
         "representation": {
@@ -655,7 +655,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "s"
         },
         "representation": {
@@ -675,7 +675,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -698,7 +698,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -717,7 +717,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -740,7 +740,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -760,7 +760,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -832,7 +832,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal-different",
+          "scale": "ratio-different",
           "unit": "L"
         },
         "representation": {
@@ -852,7 +852,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -894,7 +894,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -917,7 +917,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -955,7 +955,7 @@
         "biological_context": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -980,7 +980,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1008,7 +1008,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1028,7 +1028,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1049,7 +1049,7 @@
         "biological_context": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1069,7 +1069,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1092,7 +1092,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1110,7 +1110,7 @@
         "biological_context": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1131,7 +1131,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1153,7 +1153,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1178,7 +1178,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1199,7 +1199,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1222,7 +1222,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1239,7 +1239,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1262,7 +1262,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1282,7 +1282,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {
@@ -1301,7 +1301,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mL"
         },
         "representation": {
@@ -1321,7 +1321,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/volume",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "L"
         },
         "representation": {

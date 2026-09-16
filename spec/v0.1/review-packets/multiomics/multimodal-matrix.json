@@ -172,7 +172,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/multimodal-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/multimodal-matrix/v0.1",
-  "profile_sha256": "sha256:d743852af9d86ad90b31c4506850a95da54d102ab3cdf6a602838731ce7a5b56",
+  "profile_sha256": "sha256:75bd1fc53d90c30104f13f134aef8a0c2384c85259337048a2beba877a469c0d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -516,7 +516,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

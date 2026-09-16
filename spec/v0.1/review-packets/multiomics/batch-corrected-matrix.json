@@ -181,7 +181,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/batch-corrected-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/batch-corrected-matrix/v0.1",
-  "profile_sha256": "sha256:3382f5cdec275f52baf6a7ac026780347cecabba59d283773b9d3b3bf6dc0279",
+  "profile_sha256": "sha256:0834791b2f49bb4ed0fd9f66b014343182e278f0d1c2846fbe752a2312ac13e6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -543,7 +543,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

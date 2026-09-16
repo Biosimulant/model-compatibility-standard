@@ -11,7 +11,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -36,7 +36,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "origin": {
@@ -60,7 +60,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -82,7 +82,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -106,7 +106,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -135,7 +135,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -156,7 +156,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -180,7 +180,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -199,7 +199,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -223,7 +223,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -244,7 +244,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -264,7 +264,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {},
@@ -288,7 +288,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -317,7 +317,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -338,7 +338,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -362,7 +362,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {},
@@ -381,7 +381,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -405,7 +405,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -426,7 +426,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {},
@@ -445,7 +445,7 @@
         },
         "measurement": {
           "normalization": "example-normalization",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -471,7 +471,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count-different",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -500,7 +500,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count-different",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -521,7 +521,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -544,7 +544,7 @@
         },
         "measurement": {
           "normalization": "example-normalization",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -565,7 +565,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -589,7 +589,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -609,7 +609,7 @@
         },
         "measurement": {
           "normalization": "example-normalization",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -631,7 +631,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal"
+          "scale": "count"
         },
         "representation": {
           "kind": "dense_vector"
@@ -656,7 +656,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": 7
         },
         "representation": {
@@ -685,7 +685,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "s"
         },
         "representation": {
@@ -706,7 +706,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -730,7 +730,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal"
+          "scale": "count"
         },
         "representation": {
           "kind": "dense_vector"
@@ -750,7 +750,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -774,7 +774,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -795,7 +795,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal"
+          "scale": "count"
         },
         "representation": {
           "kind": "dense_vector"
@@ -870,7 +870,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal-different",
+          "scale": "count-different",
           "unit": "1"
         },
         "representation": {
@@ -891,7 +891,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -935,7 +935,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -959,7 +959,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -999,7 +999,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1025,7 +1025,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1054,7 +1054,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1075,7 +1075,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1097,7 +1097,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1118,7 +1118,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1142,7 +1142,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1161,7 +1161,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1182,7 +1182,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1208,7 +1208,7 @@
         "measurement": {
           "normalization": 7,
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1237,7 +1237,7 @@
         "measurement": {
           "normalization": "example-normalization-different",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1258,7 +1258,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1281,7 +1281,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1302,7 +1302,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1326,7 +1326,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1346,7 +1346,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1366,7 +1366,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1392,7 +1392,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1420,7 +1420,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1441,7 +1441,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1463,7 +1463,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1484,7 +1484,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1508,7 +1508,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {
@@ -1527,7 +1527,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/count",
-          "scale": "nominal",
+          "scale": "count",
           "unit": "1"
         },
         "representation": {

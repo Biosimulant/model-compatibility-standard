@@ -37,7 +37,6 @@
     "measurement.normalization",
     "measurement.reference_range",
     "measurement.tolerance",
-    "measurement.transform",
     "origin.evidence_refs",
     "origin.instrument",
     "origin.instrument_model",
@@ -75,7 +74,8 @@
       "comparison-incompatible-measurement-unit",
       "comparison-incompatible-measurement-scale",
       "comparison-incompatible-biological-context-species",
-      "comparison-incompatible-biological-context-assay"
+      "comparison-incompatible-biological-context-assay",
+      "comparison-incompatible-measurement-transform"
     ],
     "invalid": [
       "negative-value-invalid-semantic-concept",
@@ -84,7 +84,8 @@
       "negative-value-invalid-measurement-unit",
       "negative-value-invalid-measurement-scale",
       "negative-value-invalid-biological-context-species",
-      "negative-value-invalid-biological-context-assay"
+      "negative-value-invalid-biological-context-assay",
+      "negative-value-invalid-measurement-transform"
     ],
     "negative": [
       "negative-required-missing-semantic-concept",
@@ -93,7 +94,8 @@
       "negative-required-missing-measurement-unit",
       "negative-required-missing-measurement-scale",
       "negative-required-missing-biological-context-species",
-      "negative-required-missing-biological-context-assay"
+      "negative-required-missing-biological-context-assay",
+      "negative-required-missing-measurement-transform"
     ],
     "policy": [],
     "positive": [
@@ -110,13 +112,15 @@
       "comparison-unknown-measurement-scale",
       "comparison-unknown-biological-context-species",
       "comparison-unknown-biological-context-assay",
+      "comparison-unknown-measurement-transform",
       "comparison-unknown-target-semantic-concept",
       "comparison-unknown-target-representation-kind",
       "comparison-unknown-target-measurement-quantity",
       "comparison-unknown-target-measurement-unit",
       "comparison-unknown-target-measurement-scale",
       "comparison-unknown-target-biological-context-species",
-      "comparison-unknown-target-biological-context-assay"
+      "comparison-unknown-target-biological-context-assay",
+      "comparison-unknown-target-measurement-transform"
     ]
   },
   "fixture_names": [
@@ -157,6 +161,11 @@
     "comparison-incompatible-biological-context-assay",
     "comparison-unknown-biological-context-assay",
     "comparison-unknown-target-biological-context-assay",
+    "negative-required-missing-measurement-transform",
+    "negative-value-invalid-measurement-transform",
+    "comparison-incompatible-measurement-transform",
+    "comparison-unknown-measurement-transform",
+    "comparison-unknown-target-measurement-transform",
     "comparison-lossless-unit-conversion"
   ],
   "internal_quality_errors": [],
@@ -164,7 +173,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/minimum-inhibitory-concentration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/minimum-inhibitory-concentration/v0.1",
-  "profile_sha256": "sha256:79ea3c0cdf55d1a50e1a3faf9f62c90084eb63ca00929d2913cef84153711e8b",
+  "profile_sha256": "sha256:bbdc91e3f6d0cd0ce87178f70ed9b78812c810991e6625e911bc7bdd0614595d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -246,7 +255,7 @@
     },
     {
       "layer": "technical",
-      "missing": "ignore",
+      "missing": "unknown",
       "operator": "equal",
       "reason_code": "BMCS_MEASUREMENT_TRANSFORM_MISMATCH",
       "severity": "error",
@@ -466,6 +475,19 @@
         "maxLength": 4096,
         "minLength": 1,
         "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "measurement.transform",
+      "schema": {
+        "enum": [
+          "identity",
+          "log2",
+          "log10",
+          "ln",
+          "logit"
+        ]
       }
     }
   ],

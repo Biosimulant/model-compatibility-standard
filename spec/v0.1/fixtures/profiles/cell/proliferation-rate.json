@@ -8,7 +8,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -30,7 +30,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "origin": {
@@ -51,7 +51,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -70,7 +70,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -91,7 +91,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -117,7 +117,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -135,7 +135,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -156,7 +156,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -172,7 +172,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -193,7 +193,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -211,7 +211,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -228,7 +228,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {},
@@ -249,7 +249,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -275,7 +275,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -293,7 +293,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -314,7 +314,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {},
@@ -330,7 +330,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -351,7 +351,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -369,7 +369,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {},
@@ -385,7 +385,7 @@
         },
         "measurement": {
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -408,7 +408,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate-different",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -434,7 +434,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate-different",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -452,7 +452,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -472,7 +472,7 @@
         },
         "measurement": {
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -490,7 +490,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -511,7 +511,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -528,7 +528,7 @@
         },
         "measurement": {
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -547,7 +547,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -569,7 +569,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": 7
         },
         "representation": {
@@ -595,7 +595,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "s"
         },
         "representation": {
@@ -613,7 +613,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -634,7 +634,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -651,7 +651,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -672,7 +672,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -690,7 +690,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -756,7 +756,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal-different",
+          "scale": "ratio-different",
           "unit": "1/h"
         },
         "representation": {
@@ -774,7 +774,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -812,7 +812,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -833,7 +833,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -867,7 +867,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -890,7 +890,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -916,7 +916,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -934,7 +934,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -953,7 +953,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -971,7 +971,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -992,7 +992,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -1008,7 +1008,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -1026,7 +1026,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -1049,7 +1049,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": 7,
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -1075,7 +1075,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -1093,7 +1093,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -1113,7 +1113,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -1131,7 +1131,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -1152,7 +1152,7 @@
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
           "rate_basis": "example-rate-basis",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {
@@ -1169,7 +1169,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/per-time-rate",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1/h"
         },
         "representation": {

@@ -200,7 +200,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/gene-mutation-vector@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/gene-mutation-vector/v0.1",
-  "profile_sha256": "sha256:ce5929fb51a70a02a7a961146827bcf2c47f3e2b36fc554de087be1c6e8bd546",
+  "profile_sha256": "sha256:4c3ec7d7e2510794ccea0957de5b5788cc8146074c4c2974be2f2fe3c493bff2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -580,7 +580,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

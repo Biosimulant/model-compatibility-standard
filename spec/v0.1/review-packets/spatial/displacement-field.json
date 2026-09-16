@@ -166,7 +166,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/displacement-field@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/displacement-field/v0.1",
-  "profile_sha256": "sha256:80d821d908203c4226ee5d0654e387916ed1aff799694e9efc1c39a8f192a6d0",
+  "profile_sha256": "sha256:a3d0bf88cbb773343979a81b5198e2c8e1d7b875fba2f9e1f271888682517ce0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -529,7 +529,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

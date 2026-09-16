@@ -9,7 +9,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -32,7 +32,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "origin": {
@@ -54,7 +54,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -74,7 +74,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -96,7 +96,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -123,7 +123,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -142,7 +142,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -164,7 +164,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -181,7 +181,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -203,7 +203,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -222,7 +222,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -240,7 +240,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {},
@@ -262,7 +262,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -289,7 +289,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -308,7 +308,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -330,7 +330,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {},
@@ -347,7 +347,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -369,7 +369,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -388,7 +388,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {},
@@ -405,7 +405,7 @@
           "species": "NCBITaxon:2697049"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -429,7 +429,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -456,7 +456,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -475,7 +475,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -496,7 +496,7 @@
           "species": "NCBITaxon:2697049"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -515,7 +515,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -537,7 +537,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -555,7 +555,7 @@
           "species": "NCBITaxon:2697049"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -575,7 +575,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -598,7 +598,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": 7
         },
         "representation": {
@@ -625,7 +625,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "s"
         },
         "representation": {
@@ -644,7 +644,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -666,7 +666,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -684,7 +684,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -706,7 +706,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -725,7 +725,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -794,7 +794,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal-different",
+          "scale": "ratio-different",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -813,7 +813,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -853,7 +853,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -875,7 +875,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -912,7 +912,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -936,7 +936,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -963,7 +963,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -982,7 +982,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1003,7 +1003,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1022,7 +1022,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1044,7 +1044,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1062,7 +1062,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1081,7 +1081,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1105,7 +1105,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1132,7 +1132,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1151,7 +1151,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1172,7 +1172,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1191,7 +1191,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1213,7 +1213,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1231,7 +1231,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1250,7 +1250,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1274,7 +1274,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1301,7 +1301,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1320,7 +1320,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1341,7 +1341,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1360,7 +1360,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1382,7 +1382,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {
@@ -1400,7 +1400,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/infectious-titre",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "[PFU]/mL"
         },
         "representation": {

@@ -176,7 +176,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/radiology-image@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/radiology-image/v0.1",
-  "profile_sha256": "sha256:5f93ae6b1db25ec69980d960f1a315a5be5049a112a66deee455b6ea5751c57e",
+  "profile_sha256": "sha256:492bd2f2b040af668014c4f24c0f14b3e5c932d8103fb1e16858bc91c0e230f1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -539,7 +539,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

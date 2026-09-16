@@ -228,7 +228,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/concentration-response-curve@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/concentration-response-curve/v0.1",
-  "profile_sha256": "sha256:da1fdcc016b91f2324d93f8a19aa7afc2d7c13c9aeb635da06d91aef0a4506b8",
+  "profile_sha256": "sha256:c2b633cd718e9f83bde72600973278ae42cfb98041eff157ce772eaada7edb81",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -680,7 +680,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

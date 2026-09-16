@@ -28,7 +28,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -71,7 +71,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "origin": {
@@ -113,7 +113,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -153,7 +153,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -195,7 +195,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -242,7 +242,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -281,7 +281,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -323,7 +323,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -360,7 +360,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -402,7 +402,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -441,7 +441,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -479,7 +479,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -522,7 +522,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -569,7 +569,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -608,7 +608,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -650,7 +650,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -688,7 +688,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -730,7 +730,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -769,7 +769,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -794,7 +794,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -825,7 +825,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -873,7 +873,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -912,7 +912,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -940,7 +940,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -979,7 +979,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1021,7 +1021,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1046,7 +1046,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1086,7 +1086,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1129,7 +1129,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1176,7 +1176,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1215,7 +1215,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1257,7 +1257,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1295,7 +1295,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1337,7 +1337,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1376,7 +1376,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1414,7 +1414,7 @@
           "time_unit": "example-time-unit"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1458,7 +1458,7 @@
         },
         "measurement": {
           "quantity": 7,
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1505,7 +1505,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1544,7 +1544,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1585,7 +1585,7 @@
           "time_unit": "example-time-unit"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1624,7 +1624,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1666,7 +1666,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1704,7 +1704,7 @@
           "time_unit": "example-time-unit"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1744,7 +1744,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "dense_vector",
@@ -1787,7 +1787,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": 7
         },
         "representation": {
@@ -1834,7 +1834,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "s"
         },
         "representation": {
@@ -1873,7 +1873,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1915,7 +1915,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "dense_vector",
@@ -1953,7 +1953,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1995,7 +1995,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2034,7 +2034,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "dense_vector",
@@ -2163,7 +2163,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal-different",
+          "scale": "ratio-different",
           "unit": "1"
         },
         "representation": {
@@ -2202,7 +2202,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2282,7 +2282,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2324,7 +2324,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2400,7 +2400,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2444,7 +2444,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2491,7 +2491,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2530,7 +2530,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2570,7 +2570,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2609,7 +2609,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2651,7 +2651,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2688,7 +2688,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2727,7 +2727,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2771,7 +2771,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2818,7 +2818,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2857,7 +2857,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2898,7 +2898,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2937,7 +2937,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -2979,7 +2979,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3017,7 +3017,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3056,7 +3056,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3100,7 +3100,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3147,7 +3147,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3186,7 +3186,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3227,7 +3227,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3266,7 +3266,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3308,7 +3308,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3346,7 +3346,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3385,7 +3385,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3429,7 +3429,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3476,7 +3476,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3515,7 +3515,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3556,7 +3556,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3595,7 +3595,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3637,7 +3637,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3675,7 +3675,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3712,7 +3712,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -3756,7 +3756,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/port-declared",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {

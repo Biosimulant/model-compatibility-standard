@@ -166,7 +166,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/deformation-field@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/deformation-field/v0.1",
-  "profile_sha256": "sha256:df19b9b7c1d7e909173a10a69d0d95e21f7077928c73f48516713dc92ea08c05",
+  "profile_sha256": "sha256:f1e9a81b55320fe67c22698352f04497604c672e58ff5bb4dc4f4e4fd09ad401",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -529,7 +529,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

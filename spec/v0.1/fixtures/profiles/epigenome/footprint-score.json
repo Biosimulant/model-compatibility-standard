@@ -7,7 +7,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -32,7 +32,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -54,7 +54,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -76,7 +76,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -100,7 +100,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -129,7 +129,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -150,7 +150,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -174,7 +174,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -193,7 +193,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -217,7 +217,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -238,7 +238,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -258,7 +258,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -282,7 +282,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -311,7 +311,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -332,7 +332,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -356,7 +356,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -375,7 +375,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -399,7 +399,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -420,7 +420,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -439,7 +439,7 @@
           "species": "NCBITaxon:9606"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -465,7 +465,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score-different",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -494,7 +494,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score-different",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -515,7 +515,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -538,7 +538,7 @@
           "species": "NCBITaxon:9606"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -559,7 +559,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -583,7 +583,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -603,7 +603,7 @@
           "species": "NCBITaxon:9606"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -625,7 +625,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal"
+          "scale": "interval"
         },
         "origin": {
           "method": "example-method",
@@ -650,7 +650,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": 7
         },
         "origin": {
@@ -679,7 +679,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "s"
         },
         "origin": {
@@ -700,7 +700,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -724,7 +724,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal"
+          "scale": "interval"
         },
         "origin": {
           "method": "example-method",
@@ -744,7 +744,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -768,7 +768,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -789,7 +789,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal"
+          "scale": "interval"
         },
         "origin": {
           "method": "example-method",
@@ -864,7 +864,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal-different",
+          "scale": "interval-different",
           "unit": "1"
         },
         "origin": {
@@ -885,7 +885,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -929,7 +929,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -953,7 +953,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -993,7 +993,7 @@
         "biological_context": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1019,7 +1019,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1048,7 +1048,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1069,7 +1069,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1091,7 +1091,7 @@
         "biological_context": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1112,7 +1112,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1136,7 +1136,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1155,7 +1155,7 @@
         "biological_context": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1177,7 +1177,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1202,7 +1202,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1231,7 +1231,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1252,7 +1252,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1276,7 +1276,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1296,7 +1296,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1320,7 +1320,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1341,7 +1341,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1362,7 +1362,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1387,7 +1387,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1416,7 +1416,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1437,7 +1437,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1461,7 +1461,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1481,7 +1481,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1505,7 +1505,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -1526,7 +1526,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/score",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {

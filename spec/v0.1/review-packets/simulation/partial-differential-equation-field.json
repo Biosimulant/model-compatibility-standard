@@ -153,7 +153,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "simulation/partial-differential-equation-field@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/simulation/partial-differential-equation-field/v0.1",
-  "profile_sha256": "sha256:ab7ecded7baee66a98732820f8fe8401c574d9b6ed0d9f33acc28fadbfcaa88d",
+  "profile_sha256": "sha256:e91ed051cf401a4c709a88e7ac5b1e0b25c9f27ee2046ef05d9b784e61d3be1b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -492,7 +492,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

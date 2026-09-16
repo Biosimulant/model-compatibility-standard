@@ -12,7 +12,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -38,7 +38,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "origin": {
@@ -63,7 +63,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -86,7 +86,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -111,7 +111,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -141,7 +141,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -163,7 +163,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -188,7 +188,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -208,7 +208,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -233,7 +233,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -255,7 +255,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -276,7 +276,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {},
@@ -301,7 +301,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -331,7 +331,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -353,7 +353,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -378,7 +378,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {},
@@ -398,7 +398,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -423,7 +423,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -445,7 +445,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {},
@@ -465,7 +465,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -492,7 +492,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -522,7 +522,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -544,7 +544,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -568,7 +568,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -590,7 +590,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -615,7 +615,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -636,7 +636,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -658,7 +658,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -685,7 +685,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -714,7 +714,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -736,7 +736,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -760,7 +760,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -782,7 +782,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -807,7 +807,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -828,7 +828,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -850,7 +850,7 @@
         },
         "measurement": {
           "normalization": "example-normalization",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -877,7 +877,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -907,7 +907,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -929,7 +929,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -953,7 +953,7 @@
         },
         "measurement": {
           "normalization": "example-normalization",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -975,7 +975,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1000,7 +1000,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1021,7 +1021,7 @@
         },
         "measurement": {
           "normalization": "example-normalization",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1044,7 +1044,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "dense_vector"
@@ -1070,7 +1070,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": 7
         },
         "representation": {
@@ -1100,7 +1100,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "s"
         },
         "representation": {
@@ -1122,7 +1122,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1147,7 +1147,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "dense_vector"
@@ -1168,7 +1168,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1193,7 +1193,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1215,7 +1215,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "dense_vector"
@@ -1293,7 +1293,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal-different",
+          "scale": "ratio-different",
           "unit": "1"
         },
         "representation": {
@@ -1315,7 +1315,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1361,7 +1361,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1386,7 +1386,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1428,7 +1428,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1455,7 +1455,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1485,7 +1485,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1507,7 +1507,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1530,7 +1530,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1552,7 +1552,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1577,7 +1577,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1597,7 +1597,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1619,7 +1619,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1646,7 +1646,7 @@
         "measurement": {
           "normalization": 7,
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1676,7 +1676,7 @@
         "measurement": {
           "normalization": "example-normalization-different",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1698,7 +1698,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1722,7 +1722,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1744,7 +1744,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1769,7 +1769,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {
@@ -1790,7 +1790,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "1"
         },
         "representation": {

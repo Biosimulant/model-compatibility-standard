@@ -199,7 +199,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/gene-metabolite-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/gene-metabolite-map/v0.1",
-  "profile_sha256": "sha256:8ab9b8d89ba8f172c01a7f81ba17af101fa3dd7c01ca62b797310203784feacc",
+  "profile_sha256": "sha256:bd1c7f9101f29837669321e82a8d6cf60e1ff5b14f4e6c6cf47f3683cafcae2e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -625,7 +625,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

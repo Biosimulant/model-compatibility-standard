@@ -167,7 +167,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/spatial-expression-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/spatial-expression-map/v0.1",
-  "profile_sha256": "sha256:c1418a7446632679a87297e00b7c8a99f78f0df7307d7654d624ab16b3224421",
+  "profile_sha256": "sha256:81473b8aa2dcf3f6cb2eddf60df1258e18950a9bc6bed2e93b295d1d6f4c4fc1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -529,7 +529,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

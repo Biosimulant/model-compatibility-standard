@@ -159,7 +159,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cardiopulmonary-renal/spirometry-curve@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cardiopulmonary-renal/spirometry-curve/v0.1",
-  "profile_sha256": "sha256:9b42fccb01a3ba838350ac06f1950ea94d6ef12edbf0c0ad79f2654de5e13d2f",
+  "profile_sha256": "sha256:10bee93689842166ba702b4ce486d0abd1ff811267b985a94711bfc625449e1d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -486,7 +486,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

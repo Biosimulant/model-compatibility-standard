@@ -433,12 +433,34 @@ def item_operator(path: str, family: str) -> str:
     return "equal"
 
 
+# Array items whose members are objects with declared properties. A member's schema comes from its
+# parent, never from guessing at the leaf name: "cardinality" means "1:many" here, not a count, and
+# deriving it from the name gave the member an integer schema while the parent said string.
+ARRAY_ITEM_PARENTS = (
+    "identifiers.mapping_refs",
+    "semantic.ontology_terms",
+    "dimensions.axes",
+    "biological_context.taxa",
+)
+
+
 def item_json_schema(path: str) -> dict[str, Any]:
     """Return a useful base type for a catalogue item.
 
     Profiles can narrow this schema with ``const`` or ``enum``.  The base schema
     deliberately validates representation, not scientific correctness.
     """
+
+    for parent_path in ARRAY_ITEM_PARENTS:
+        prefix = f"{parent_path}[]."
+        if not path.startswith(prefix):
+            continue
+        member = path[len(prefix):]
+        items = item_json_schema(parent_path).get("items") or {}
+        for candidate in items.get("anyOf") or [items]:
+            declared = (candidate.get("properties") or {}).get(member)
+            if declared is not None:
+                return dict(declared)
 
     leaf = path.replace("[]", "").split(".")[-1]
     if path == "accepted_units":
@@ -792,9 +814,6 @@ def example_value(path: str, profile: dict[str, Any] | None = None) -> Any:
         return [f"example-{leaf}"]
     if leaf in BOOLEAN_LEAVES:
         return True
-    derived = example_from_schema((ITEM_INDEX.get(path) or {}).get("json_schema"), leaf)
-    if derived is not None:
-        return derived
     if leaf in {"min", "max", "minimum", "maximum", "confidence", "variance", "byte_size"}:
         return 1
     if leaf == "mapping_refs":
@@ -829,6 +848,14 @@ def example_value(path: str, profile: dict[str, Any] | None = None) -> Any:
         return str(measured(profile or {}).get("transform", "identity"))
     if leaf == "ordering":
         return "explicit"
+    # Inferring a value from the item's schema comes last. It used to come first, and an enum schema
+    # returns its first member, so every profile published the first measurement scale in the list --
+    # "nominal" -- instead of the level its own declaration states. 122 of 122 were wrong, and the
+    # guard that a probability scale must be dimensionless was passing because nothing was ever on a
+    # probability scale (decision D8).
+    derived = example_from_schema((ITEM_INDEX.get(path) or {}).get("json_schema"), leaf)
+    if derived is not None:
+        return derived
     return f"example-{leaf.replace('_', '-')}"
 
 
@@ -968,6 +995,10 @@ def effective_required_items(profile: dict[str, Any]) -> list[str]:
     for extra in list(declaration.get("requires", [])) + list(structure.get("requires", [])):
         if extra not in required:
             required.append(extra)
+    if str(declaration.get("transform", "identity")) != "identity" and "measurement.transform" not in required:
+        # A log2 titre and a linear one are different numbers. Where the reviewed declaration says a
+        # transform was applied, the port has to say so, or the transform is invisible (decision D8).
+        required.append("measurement.transform")
     if "biological_context.intervention" in required and "biological_context.intervention[].agent" not in required:
         # An intervention that does not say what was administered cannot be read, the same way an
         # unnamed axis cannot. Which of dose, route, duration and schedule matter is per profile.

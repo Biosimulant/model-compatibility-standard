@@ -87,7 +87,7 @@
     },
     {
       "layer": "technical",
-      "missing": "ignore",
+      "missing": "unknown",
       "operator": "equal",
       "reason_code": "BMCS_MEASUREMENT_TRANSFORM_MISMATCH",
       "severity": "error",
@@ -325,6 +325,19 @@
         "maxLength": 4096,
         "minLength": 1,
         "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "measurement.transform",
+      "schema": {
+        "enum": [
+          "identity",
+          "log2",
+          "log10",
+          "ln",
+          "logit"
+        ]
       }
     }
   ],

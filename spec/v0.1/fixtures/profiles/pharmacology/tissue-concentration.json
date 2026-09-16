@@ -9,7 +9,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -32,7 +32,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "origin": {
@@ -54,7 +54,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -74,7 +74,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -96,7 +96,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -123,7 +123,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -142,7 +142,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -164,7 +164,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -181,7 +181,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -203,7 +203,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -222,7 +222,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -240,7 +240,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {},
@@ -262,7 +262,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -289,7 +289,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -308,7 +308,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -330,7 +330,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {},
@@ -347,7 +347,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -369,7 +369,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -388,7 +388,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {},
@@ -405,7 +405,7 @@
         },
         "measurement": {
           "normalization": "example-normalization",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -429,7 +429,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -456,7 +456,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -475,7 +475,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -496,7 +496,7 @@
         },
         "measurement": {
           "normalization": "example-normalization",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -515,7 +515,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -537,7 +537,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -555,7 +555,7 @@
         },
         "measurement": {
           "normalization": "example-normalization",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -575,7 +575,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -598,7 +598,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": 7
         },
         "representation": {
@@ -625,7 +625,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "s"
         },
         "representation": {
@@ -644,7 +644,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -666,7 +666,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -684,7 +684,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -706,7 +706,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -725,7 +725,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -794,7 +794,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal-different",
+          "scale": "ratio-different",
           "unit": "umol/L"
         },
         "representation": {
@@ -813,7 +813,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -853,7 +853,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -875,7 +875,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -912,7 +912,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -936,7 +936,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -963,7 +963,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -982,7 +982,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1003,7 +1003,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1022,7 +1022,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1044,7 +1044,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1062,7 +1062,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1081,7 +1081,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1105,7 +1105,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1132,7 +1132,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1151,7 +1151,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1172,7 +1172,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1191,7 +1191,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1213,7 +1213,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1231,7 +1231,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1250,7 +1250,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1274,7 +1274,7 @@
         "measurement": {
           "normalization": 7,
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1301,7 +1301,7 @@
         "measurement": {
           "normalization": "example-normalization-different",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1320,7 +1320,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1341,7 +1341,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1360,7 +1360,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1382,7 +1382,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1400,7 +1400,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {
@@ -1421,7 +1421,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mol/L"
         },
         "representation": {
@@ -1440,7 +1440,7 @@
         "measurement": {
           "normalization": "example-normalization",
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/amount-concentration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "umol/L"
         },
         "representation": {

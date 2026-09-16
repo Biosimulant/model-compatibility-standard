@@ -12,7 +12,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -38,7 +38,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "origin": {
@@ -63,7 +63,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -86,7 +86,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -111,7 +111,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -141,7 +141,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -163,7 +163,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -188,7 +188,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -208,7 +208,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -233,7 +233,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -255,7 +255,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -276,7 +276,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {},
@@ -301,7 +301,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -331,7 +331,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -353,7 +353,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -378,7 +378,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {},
@@ -398,7 +398,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -423,7 +423,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -445,7 +445,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {},
@@ -465,7 +465,7 @@
           "species": "NCBITaxon:9606"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -492,7 +492,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -522,7 +522,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -544,7 +544,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -568,7 +568,7 @@
           "species": "NCBITaxon:9606"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -590,7 +590,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -615,7 +615,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -636,7 +636,7 @@
           "species": "NCBITaxon:9606"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -659,7 +659,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -685,7 +685,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": 7
         },
         "representation": {
@@ -715,7 +715,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "s"
         },
         "representation": {
@@ -737,7 +737,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -762,7 +762,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -783,7 +783,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -808,7 +808,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -830,7 +830,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -908,7 +908,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal-different",
+          "scale": "ratio-different",
           "unit": "mg"
         },
         "representation": {
@@ -930,7 +930,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -976,7 +976,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1001,7 +1001,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1044,7 +1044,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1071,7 +1071,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1101,7 +1101,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1123,7 +1123,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1147,7 +1147,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1169,7 +1169,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1194,7 +1194,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1215,7 +1215,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1233,7 +1233,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1256,7 +1256,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1287,7 +1287,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1309,7 +1309,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1329,7 +1329,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1351,7 +1351,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1376,7 +1376,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1393,7 +1393,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1414,7 +1414,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1441,7 +1441,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {
@@ -1469,7 +1469,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "g"
         },
         "representation": {
@@ -1491,7 +1491,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mg"
         },
         "representation": {

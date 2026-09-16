@@ -176,7 +176,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/fluorescence-image@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/fluorescence-image/v0.1",
-  "profile_sha256": "sha256:d9367b3b8789e922e33fa7ee9aa8f9a9a8987fe0b1fe99caca636b57d7e57bec",
+  "profile_sha256": "sha256:1a815cbcb964ac59c0b03e0b072920d75cef1c20a69485dd3b0ad9db04e2f14d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -539,7 +539,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

@@ -167,7 +167,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/probability-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/probability-map/v0.1",
-  "profile_sha256": "sha256:3c06636ea5b5a8fbb0c2d001e50758332a545fda68d7955f35ad4cbf2fae3bfd",
+  "profile_sha256": "sha256:1b8dc914e2abc4bdae5f1a2f4e2eb5a3e389db287a2117c8e0c03919a291e338",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -512,7 +512,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

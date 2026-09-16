@@ -224,7 +224,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/ct-volume@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/ct-volume/v0.1",
-  "profile_sha256": "sha256:cdded0fd704542d584272ba13de0a9987316c7cd5103d5934ee4230d9ec12577",
+  "profile_sha256": "sha256:53980b327b00222592fb3e014289082ec569471a7a2a0f8f856f3406d4b209ae",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -657,7 +657,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

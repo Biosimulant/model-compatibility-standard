@@ -155,7 +155,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/immune-response-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/immune-response-trajectory/v0.1",
-  "profile_sha256": "sha256:996bc86d60f80b943db333d4c2e36f1e77f509f9948c4683df4547ac2c003e67",
+  "profile_sha256": "sha256:37287e1c6c22b18a1efef3a74799f01bd9cd7c10054a2715068266d628ecdf45",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -482,7 +482,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

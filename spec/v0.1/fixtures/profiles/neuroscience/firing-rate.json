@@ -10,7 +10,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -35,7 +35,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "origin": {
@@ -59,7 +59,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -81,7 +81,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -106,7 +106,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -135,7 +135,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -156,7 +156,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -180,7 +180,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -200,7 +200,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -224,7 +224,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -245,7 +245,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -266,7 +266,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {},
@@ -290,7 +290,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -319,7 +319,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -340,7 +340,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -364,7 +364,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {},
@@ -383,7 +383,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -407,7 +407,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -428,7 +428,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {},
@@ -447,7 +447,7 @@
           "window": "example-window"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -473,7 +473,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -502,7 +502,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -523,7 +523,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -546,7 +546,7 @@
           "window": "example-window"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -567,7 +567,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -591,7 +591,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -611,7 +611,7 @@
           "window": "example-window"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -633,7 +633,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -658,7 +658,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": 7
         },
         "representation": {
@@ -687,7 +687,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "s"
         },
         "representation": {
@@ -708,7 +708,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -732,7 +732,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -752,7 +752,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -776,7 +776,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -797,7 +797,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "scalar"
@@ -872,7 +872,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal-different",
+          "scale": "ratio-different",
           "unit": "Hz"
         },
         "representation": {
@@ -893,7 +893,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -937,7 +937,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -961,7 +961,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1001,7 +1001,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1027,7 +1027,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1056,7 +1056,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1077,7 +1077,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1099,7 +1099,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1120,7 +1120,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1144,7 +1144,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1163,7 +1163,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1183,7 +1183,7 @@
         "lifecycle": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1209,7 +1209,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1238,7 +1238,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1259,7 +1259,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1281,7 +1281,7 @@
         "lifecycle": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1302,7 +1302,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1326,7 +1326,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1345,7 +1345,7 @@
         "lifecycle": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1367,7 +1367,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1392,7 +1392,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1420,7 +1420,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1441,7 +1441,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1465,7 +1465,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1485,7 +1485,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1509,7 +1509,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1530,7 +1530,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {
@@ -1552,7 +1552,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "mHz"
         },
         "representation": {
@@ -1573,7 +1573,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/frequency",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "Hz"
         },
         "representation": {

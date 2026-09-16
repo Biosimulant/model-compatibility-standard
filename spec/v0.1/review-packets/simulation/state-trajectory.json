@@ -181,7 +181,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "simulation/state-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/simulation/state-trajectory/v0.1",
-  "profile_sha256": "sha256:0fb36d4e47ebe6f0cf9a226a84c6aed3738d157dc6de5ee9b5e1c609f6c0fada",
+  "profile_sha256": "sha256:01ef17975fb979b51e33690a1fbe3e228cdf2ab49306bd3c4712571da2e222de",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -555,7 +555,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }

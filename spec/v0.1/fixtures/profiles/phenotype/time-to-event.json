@@ -10,7 +10,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -38,7 +38,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "origin": {
@@ -65,7 +65,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -90,7 +90,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -118,7 +118,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -150,7 +150,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -174,7 +174,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -201,7 +201,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -224,7 +224,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -251,7 +251,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -275,7 +275,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -299,7 +299,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {},
@@ -326,7 +326,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -358,7 +358,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -382,7 +382,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -409,7 +409,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {},
@@ -431,7 +431,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -458,7 +458,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -482,7 +482,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {},
@@ -504,7 +504,7 @@
           "time_origin": "example-time-origin"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -533,7 +533,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -565,7 +565,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration-different",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -589,7 +589,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -615,7 +615,7 @@
           "time_origin": "example-time-origin"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -639,7 +639,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -666,7 +666,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -689,7 +689,7 @@
           "time_origin": "example-time-origin"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -714,7 +714,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "event"
@@ -742,7 +742,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": 7
         },
         "representation": {
@@ -774,7 +774,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "kg"
         },
         "representation": {
@@ -798,7 +798,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -825,7 +825,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "event"
@@ -848,7 +848,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -875,7 +875,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -899,7 +899,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal"
+          "scale": "ratio"
         },
         "representation": {
           "kind": "event"
@@ -983,7 +983,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal-different",
+          "scale": "ratio-different",
           "unit": "d"
         },
         "representation": {
@@ -1007,7 +1007,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1057,7 +1057,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1084,7 +1084,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1130,7 +1130,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1159,7 +1159,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1191,7 +1191,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1215,7 +1215,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1240,7 +1240,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1264,7 +1264,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1291,7 +1291,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1313,7 +1313,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1338,7 +1338,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1365,7 +1365,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1397,7 +1397,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1421,7 +1421,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1448,7 +1448,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1470,7 +1470,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1497,7 +1497,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1521,7 +1521,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1542,7 +1542,7 @@
         "lifecycle": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1571,7 +1571,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1603,7 +1603,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1627,7 +1627,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1652,7 +1652,7 @@
         "lifecycle": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1676,7 +1676,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1703,7 +1703,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1725,7 +1725,7 @@
         "lifecycle": {},
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1750,7 +1750,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1778,7 +1778,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1809,7 +1809,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1833,7 +1833,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1860,7 +1860,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1883,7 +1883,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1910,7 +1910,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {
@@ -1934,7 +1934,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/duration",
-          "scale": "nominal",
+          "scale": "ratio",
           "unit": "d"
         },
         "representation": {

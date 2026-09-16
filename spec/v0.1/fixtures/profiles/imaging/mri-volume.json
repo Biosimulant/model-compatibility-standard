@@ -27,7 +27,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -69,7 +69,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "origin": {
@@ -110,7 +110,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -149,7 +149,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -190,7 +190,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -236,7 +236,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -274,7 +274,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -315,7 +315,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -351,7 +351,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -392,7 +392,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -430,7 +430,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -467,7 +467,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -509,7 +509,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -555,7 +555,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -593,7 +593,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -634,7 +634,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -671,7 +671,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -712,7 +712,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -750,7 +750,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -774,7 +774,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -804,7 +804,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -851,7 +851,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -889,7 +889,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -916,7 +916,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -954,7 +954,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -995,7 +995,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1019,7 +1019,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1058,7 +1058,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1100,7 +1100,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1146,7 +1146,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1184,7 +1184,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1225,7 +1225,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1262,7 +1262,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1303,7 +1303,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1341,7 +1341,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1378,7 +1378,7 @@
           "slice_thickness": "example-slice-thickness"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1421,7 +1421,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity-different",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1467,7 +1467,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity-different",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1505,7 +1505,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1545,7 +1545,7 @@
           "slice_thickness": "example-slice-thickness"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1583,7 +1583,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1624,7 +1624,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1661,7 +1661,7 @@
           "slice_thickness": "example-slice-thickness"
         },
         "measurement": {
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1700,7 +1700,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal"
+          "scale": "interval"
         },
         "representation": {
           "kind": "dense_vector",
@@ -1742,7 +1742,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": 7
         },
         "representation": {
@@ -1788,7 +1788,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "s"
         },
         "representation": {
@@ -1826,7 +1826,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1867,7 +1867,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal"
+          "scale": "interval"
         },
         "representation": {
           "kind": "dense_vector",
@@ -1904,7 +1904,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1945,7 +1945,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -1983,7 +1983,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal"
+          "scale": "interval"
         },
         "representation": {
           "kind": "dense_vector",
@@ -2109,7 +2109,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal-different",
+          "scale": "interval-different",
           "unit": "1"
         },
         "representation": {
@@ -2147,7 +2147,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2225,7 +2225,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2266,7 +2266,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2340,7 +2340,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2383,7 +2383,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2429,7 +2429,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2467,7 +2467,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2506,7 +2506,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2544,7 +2544,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2585,7 +2585,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2621,7 +2621,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2659,7 +2659,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2702,7 +2702,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2748,7 +2748,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2786,7 +2786,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2826,7 +2826,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2864,7 +2864,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2905,7 +2905,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2942,7 +2942,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -2980,7 +2980,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3023,7 +3023,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3069,7 +3069,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3107,7 +3107,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3147,7 +3147,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3185,7 +3185,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3226,7 +3226,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3263,7 +3263,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3301,7 +3301,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3344,7 +3344,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3390,7 +3390,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3428,7 +3428,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3468,7 +3468,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3506,7 +3506,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3547,7 +3547,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3584,7 +3584,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3622,7 +3622,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3665,7 +3665,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3711,7 +3711,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3749,7 +3749,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3789,7 +3789,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3827,7 +3827,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3868,7 +3868,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3905,7 +3905,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3941,7 +3941,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {
@@ -3984,7 +3984,7 @@
         },
         "measurement": {
           "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/arbitrary-intensity",
-          "scale": "nominal",
+          "scale": "interval",
           "unit": "1"
         },
         "representation": {

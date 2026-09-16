@@ -157,7 +157,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/velocity-field@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/velocity-field/v0.1",
-  "profile_sha256": "sha256:807d7ff40fa15c1112145df386bdeb3dc7c33481710af5e4fc381a18edb7e2c3",
+  "profile_sha256": "sha256:d589027c0821535ba15905993b7602f374df9ed11adb8a81581d286815b12dd6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -502,7 +502,6 @@
       "level": "required",
       "path": "dimensions.axes[].name",
       "schema": {
-        "maxLength": 4096,
         "minLength": 1,
         "type": "string"
       }
