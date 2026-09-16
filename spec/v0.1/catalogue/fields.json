@@ -1,0 +1,1189 @@
+{
+  "fields": [
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "artifact",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.format",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "artifact",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.format_version",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "artifact",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.media_type",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "artifact",
+      "json_schema": {
+        "format": "uri",
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.schema_ref",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "artifact",
+      "json_schema": {
+        "pattern": "^sha256:[0-9a-f]{64}$",
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.schema_sha256",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "digest-equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "artifact",
+      "json_schema": {
+        "pattern": "^sha256:[0-9a-f]{64}$",
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "artifact.sha256",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "context-compatible",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "biological_context",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.compartment",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "context-compatible",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "biological_context",
+      "json_schema": {
+        "anyOf": [
+          {
+            "const": "any"
+          },
+          {
+            "pattern": "^NCBITaxon:[1-9][0-9]*$"
+          }
+        ],
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.species",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "labels-equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "dimensions",
+      "json_schema": {
+        "items": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "additionalProperties": false,
+              "properties": {
+                "coordinates_ref": {
+                  "format": "uri",
+                  "type": "string"
+                },
+                "dynamic": {
+                  "type": "boolean"
+                },
+                "labels_ref": {
+                  "format": "uri",
+                  "type": "string"
+                },
+                "labels_sha256": {
+                  "pattern": "^sha256:[0-9a-f]{64}$",
+                  "type": "string"
+                },
+                "meaning": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "name": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "ordering": {
+                  "minLength": 1,
+                  "type": "string"
+                },
+                "size": {
+                  "minimum": 0,
+                  "type": "integer"
+                },
+                "unit": {
+                  "minLength": 1,
+                  "type": "string"
+                }
+              },
+              "required": [
+                "name"
+              ],
+              "type": "object"
+            }
+          ]
+        },
+        "minItems": 1,
+        "type": "array"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "dimensions",
+      "json_schema": {
+        "format": "uri",
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].labels_ref",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "dimensions",
+      "json_schema": {
+        "pattern": "^sha256:[0-9a-f]{64}$",
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].labels_sha256",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "dimensions",
+      "json_schema": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].meaning",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "dimensions",
+      "json_schema": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].name",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "dimensions",
+      "json_schema": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].ordering",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "dimensions",
+      "json_schema": {
+        "minimum": 0,
+        "type": "integer"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].size",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "unit-convertible",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "dimensions",
+      "json_schema": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "dimensions.axes[].unit",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "identifiers",
+      "json_schema": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "cardinality": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "coverage": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "license": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "ref": {
+              "format": "uri",
+              "type": "string"
+            },
+            "release": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "sha256": {
+              "pattern": "^sha256:[0-9a-f]{64}$",
+              "type": "string"
+            },
+            "source_namespace": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "target_namespace": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "ref",
+            "sha256",
+            "source_namespace",
+            "target_namespace",
+            "release"
+          ],
+          "type": "object"
+        },
+        "minItems": 1,
+        "type": "array"
+      },
+      "missing_behavior": "unknown",
+      "ordered": false,
+      "path": "identifiers.mapping_refs",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "identifiers",
+      "json_schema": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].cardinality",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "mapping-total",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "identifiers",
+      "json_schema": {
+        "maximum": 1,
+        "minimum": 0,
+        "type": "number"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].coverage",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "identifiers",
+      "json_schema": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].license",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "identifiers",
+      "json_schema": {
+        "format": "uri",
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].ref",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "identifiers",
+      "json_schema": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].release",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "identifiers",
+      "json_schema": {
+        "pattern": "^sha256:[0-9a-f]{64}$",
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].sha256",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "identifiers",
+      "json_schema": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].source_namespace",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "identifiers",
+      "json_schema": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.mapping_refs[].target_namespace",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "identifiers",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.namespace",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "namespace-version-compatible",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "identifiers",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.namespace_version",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "identifiers",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "identifiers.structure_hash",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "lifecycle",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.temporal_meaning",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "lifecycle",
+      "json_schema": {
+        "maxLength": 128,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "lifecycle.time_unit",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "measurement",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.normalization",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "measurement",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.quantity",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "measurement",
+      "json_schema": {
+        "enum": [
+          "nominal",
+          "ordinal",
+          "interval",
+          "ratio",
+          "proportion",
+          "probability",
+          "count"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.scale",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked when the profile requires it or both contracts include it. A log2 and a log10 value of the same quantity are different numbers.",
+      "family": "measurement",
+      "json_schema": {
+        "enum": [
+          "identity",
+          "log2",
+          "log10",
+          "ln",
+          "logit"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.transform",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "unit-convertible",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "measurement",
+      "json_schema": {
+        "maxLength": 128,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "measurement.unit",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "origin",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.method",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "origin",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.method_version",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "origin",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.software",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "origin",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.software_version",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "origin",
+      "json_schema": {
+        "format": "uri",
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.source_ref",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "origin",
+      "json_schema": {
+        "pattern": "^sha256:[0-9a-f]{64}$",
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.source_sha256",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "origin",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "origin.type",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "representation",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.alphabet",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "representation",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.canonicalization",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "representation",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.coordinate_system",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "representation",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.encoding",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "representation",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.formal_charge",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "representation",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.isotope_state",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "representation",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.kind",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "representation",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.normalization_tool",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "representation",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.normalization_version",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "representation",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.precision",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "representation",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.protonation_state",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "representation",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.stereochemistry",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "representation",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.structure_format",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "subset",
+      "description": "Optional syntax features that an output may emit, or that an input can accept without discarding their meaning. Every feature declared by the output must be accepted by the input.\n",
+      "family": "representation",
+      "json_schema": {
+        "items": {
+          "enum": [
+            "atom-classes",
+            "disconnected-components",
+            "isotopes",
+            "stereochemistry"
+          ]
+        },
+        "maxItems": 4,
+        "type": "array",
+        "uniqueItems": true
+      },
+      "missing_behavior": "unknown",
+      "ordered": false,
+      "path": "representation.syntax_features",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "representation",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "representation.tautomer_state",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "semantic",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.concept",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "semantic",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.intended_use",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "semantic",
+      "json_schema": {
+        "format": "uri",
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_snapshot_ref",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "semantic",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_snapshot_sha256",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "semantic",
+      "json_schema": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "ontology": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "relation": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "uri": {
+              "format": "uri",
+              "type": "string"
+            },
+            "version": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "ontology",
+            "version"
+          ],
+          "type": "object"
+        },
+        "minItems": 1,
+        "type": "array"
+      },
+      "missing_behavior": "unknown",
+      "ordered": false,
+      "path": "semantic.ontology_terms",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "semantic",
+      "json_schema": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_terms[].label",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "semantic",
+      "json_schema": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_terms[].ontology",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "semantic",
+      "json_schema": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_terms[].relation",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "semantic",
+      "json_schema": {
+        "format": "uri",
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_terms[].uri",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "semantic",
+      "json_schema": {
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.ontology_terms[].version",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "semantic",
+      "json_schema": {
+        "items": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "minItems": 1,
+        "type": "array",
+        "uniqueItems": true
+      },
+      "missing_behavior": "unknown",
+      "ordered": false,
+      "path": "semantic.qualifiers",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "semantic",
+      "json_schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "semantic.subject",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
+      "family": "uncertainty",
+      "json_schema": {
+        "items": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "minItems": 1,
+        "type": "array",
+        "uniqueItems": true
+      },
+      "missing_behavior": "unknown",
+      "ordered": false,
+      "path": "uncertainty.quality_flags",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    }
+  ],
+  "schema_version": "0.1",
+  "standard": "https://biosimulant.com/standards/model-compatibility/v0.1"
+}

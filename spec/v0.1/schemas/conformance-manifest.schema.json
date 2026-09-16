@@ -1,0 +1,44 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/conformance-manifest.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bundle_sha256": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "digest": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "fixture_results": {
+      "type": "object"
+    },
+    "implementation": {
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "0.1"
+    },
+    "standard": {
+      "const": "https://biosimulant.com/standards/model-compatibility/v0.1"
+    },
+    "supported_levels": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "schema_version",
+    "implementation",
+    "standard",
+    "bundle_sha256",
+    "supported_levels",
+    "fixture_results",
+    "digest"
+  ],
+  "title": "Conformance Manifest",
+  "type": "object"
+}

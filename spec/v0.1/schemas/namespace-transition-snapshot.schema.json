@@ -1,0 +1,67 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/namespace-transition-snapshot.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "license": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "namespace": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "ref": {
+      "format": "uri",
+      "type": "string"
+    },
+    "schema_version": {
+      "const": "0.1"
+    },
+    "sha256": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "transitions": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "from": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "identifiers_merged": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "identifiers_retired": {
+            "minimum": 0,
+            "type": "integer"
+          },
+          "released_at": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "to": {
+            "minLength": 1,
+            "type": "string"
+          }
+        },
+        "required": [
+          "from",
+          "to"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "ref",
+    "sha256",
+    "namespace",
+    "transitions"
+  ],
+  "title": "Namespace Transition Snapshot",
+  "type": "object"
+}

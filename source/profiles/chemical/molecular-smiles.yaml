@@ -1,0 +1,122 @@
+schema_version: "0.1"
+label: Molecular SMILES
+domain_label: Chemical identity and representation
+description: >
+  One molecular structure represented as a SMILES string, with the optional
+  SMILES syntax features that the producing port may emit and the receiving
+  port can interpret without discarding their meaning.
+status: active
+representations: [scalar]
+intended_use: >
+  Connecting a model output that emits one validated molecular SMILES string
+  to a model input that accepts the declared SMILES syntax features. The first
+  pilot connection is a REINVENT 4 sampling output passed to a Chemprop 2.3.1
+  molecular input wrapper.
+limitations:
+  - This profile checks interface compatibility, not whether a SMILES string is chemically correct or denotes the intended molecule.
+  - A producing wrapper must parse and validate each emitted string before claiming this profile; a declaration alone does not validate runtime values.
+  - It does not treat different SMILES strings as the same molecule or standardise tautomers, protonation, salts, charge, aromaticity or atom order.
+  - It does not cover reaction SMILES, CXSMILES, files, tables or batches of molecules.
+  - Canonical and non-canonical SMILES are both in scope because canonicalisation is not required for this connection.
+sources:
+  - title: SMILES, a Chemical Language and Information System. 1. Introduction to Methodology and Encoding Rules
+    url: https://doi.org/10.1021/ci00057a005
+    note: Defines the SMILES notation and its core encoding rules.
+  - title: OpenSMILES specification
+    url: https://opensmiles.org/opensmiles.html
+    note: Documents the open SMILES syntax used to define the feature boundary.
+  - title: REINVENT 4 documentation
+    url: https://github.com/MolecularAI/REINVENT4/blob/main/contrib/reinvent-doc/index.md
+    note: Documents that REINVENT 4 generates SMILES strings.
+  - title: Chemprop 2.3.1 prediction documentation
+    url: https://chemprop.readthedocs.io/en/v2.3.1/tutorial/cli/predict.html
+    note: Documents molecular prediction input through a SMILES column and separates reaction input.
+
+fixed:
+  representation.structure_format: smiles
+
+fields:
+  semantic.concept: required
+  representation.kind: required
+  representation.structure_format: required
+  representation.syntax_features: required
+  representation.canonicalization: excluded
+  representation.normalization_tool: excluded
+  representation.normalization_version: excluded
+  representation.stereochemistry: excluded
+  representation.isotope_state: excluded
+  representation.protonation_state: excluded
+  representation.tautomer_state: excluded
+  representation.formal_charge: excluded
+  identifiers.structure_hash: excluded
+  origin.source_ref: excluded
+  origin.source_sha256: excluded
+
+examples:
+  - id: BMCS-SMILES-001
+    title: Identical molecular SMILES contracts are exact matches
+    check: compare
+    expect: {status: EXACT}
+    why: Both ports declare the same molecular SMILES format and syntax features.
+    conditions: Both ports make the same complete declarations for this profile.
+    decision: Molecular SMILES scalar profile
+    report_finding: Positive baseline
+  - id: BMCS-SMILES-002
+    title: An input may accept more syntax features than the output emits
+    check: compare
+    source_patch: {representation: {syntax_features: [stereochemistry]}}
+    target_patch: {representation: {syntax_features: [isotopes, stereochemistry]}}
+    expect: {status: DIRECT_COMPATIBLE}
+    why: Every optional syntax feature the output may emit is understood by the input.
+    conditions: The source feature set is a subset of the target feature set.
+    decision: Molecular SMILES scalar profile
+    report_finding: Directional syntax capability match
+  - id: BMCS-SMILES-003
+    title: Missing syntax capability information is unknown
+    check: compare
+    source_remove: [representation.syntax_features]
+    expect: {status: UNKNOWN}
+    why: The comparison cannot determine which optional SMILES features the output may emit.
+    conditions: One port omits the required syntax feature declaration.
+    decision: Molecular SMILES scalar profile
+    report_finding: Missing syntax capability
+  - id: BMCS-SMILES-004
+    title: Unsupported stereochemistry is incompatible
+    check: compare
+    source_patch: {representation: {syntax_features: [stereochemistry]}}
+    target_patch: {representation: {syntax_features: []}}
+    expect: {status: INCOMPATIBLE}
+    why: Passing the string could discard stereochemical meaning that the output may encode.
+    conditions: The output may emit stereochemistry and the input does not declare support for it.
+    decision: Molecular SMILES scalar profile
+    report_finding: Unsupported SMILES syntax feature
+  - id: BMCS-SMILES-005
+    title: Unsupported isotopes are incompatible
+    check: compare
+    source_patch: {representation: {syntax_features: [isotopes]}}
+    target_patch: {representation: {syntax_features: []}}
+    expect: {status: INCOMPATIBLE}
+    why: Passing the string could discard isotope information that the output may encode.
+    conditions: The output may emit isotopes and the input does not declare support for them.
+    decision: Molecular SMILES scalar profile
+    report_finding: Unsupported SMILES syntax feature
+  - id: BMCS-SMILES-006
+    title: Unsupported disconnected components are incompatible
+    check: compare
+    source_patch: {representation: {syntax_features: [disconnected-components]}}
+    target_patch: {representation: {syntax_features: []}}
+    expect: {status: INCOMPATIBLE}
+    why: The input cannot safely consume salts or other dot-disconnected components the output may emit.
+    conditions: The output may emit disconnected components and the input does not declare support for them.
+    decision: Molecular SMILES scalar profile
+    report_finding: Unsupported SMILES syntax feature
+  - id: BMCS-SMILES-007
+    title: Canonicalisation labels do not gate this profile
+    check: compare
+    source_patch: {representation: {canonicalization: non-canonical}}
+    target_patch: {representation: {canonicalization: canonical}}
+    expect: {status: DIRECT_COMPATIBLE}
+    why: This connection consumes molecular SMILES and does not require a particular canonical form.
+    conditions: The required molecular SMILES declarations match and only excluded canonicalisation metadata differs.
+    decision: Molecular SMILES scalar profile
+    report_finding: Canonicalisation intentionally outside scope

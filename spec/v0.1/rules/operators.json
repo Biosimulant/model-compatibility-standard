@@ -1,0 +1,25 @@
+{
+  "operators": [
+    "equal",
+    "not-equal",
+    "in",
+    "not-in",
+    "subset",
+    "superset",
+    "range",
+    "pattern",
+    "same-dimension",
+    "unit-convertible",
+    "term-equivalent",
+    "term-subsumes",
+    "labels-equal",
+    "labels-permutation",
+    "mapping-total",
+    "mapping-bijective",
+    "context-compatible",
+    "digest-equal",
+    "representation-equivalent",
+    "namespace-version-compatible"
+  ],
+  "standard": "https://biosimulant.com/standards/model-compatibility/v0.1"
+}

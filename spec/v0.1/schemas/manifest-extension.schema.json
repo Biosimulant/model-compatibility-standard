@@ -1,0 +1,107 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/manifest-extension.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "properties": {
+    "compatibility": {
+      "additionalProperties": false,
+      "properties": {
+        "extensions": {
+          "type": "object"
+        },
+        "profiles": {
+          "items": {
+            "$ref": "profile-reference.schema.json"
+          },
+          "type": "array",
+          "uniqueItems": true
+        },
+        "standard": {
+          "const": "https://biosimulant.com/standards/model-compatibility/v0.1"
+        }
+      },
+      "required": [
+        "standard"
+      ],
+      "type": "object"
+    },
+    "io": {
+      "additionalProperties": true,
+      "properties": {
+        "inputs": {
+          "items": {
+            "additionalProperties": true,
+            "properties": {
+              "accepted_profiles": {
+                "items": {
+                  "additionalProperties": true,
+                  "properties": {
+                    "contract": {
+                      "$ref": "port-contract.schema.json"
+                    }
+                  },
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "contract": {
+                "$ref": "port-contract.schema.json"
+              },
+              "name": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        },
+        "outputs": {
+          "items": {
+            "additionalProperties": true,
+            "properties": {
+              "accepted_profiles": {
+                "items": {
+                  "additionalProperties": true,
+                  "properties": {
+                    "contract": {
+                      "$ref": "port-contract.schema.json"
+                    }
+                  },
+                  "type": "object"
+                },
+                "type": "array"
+              },
+              "contract": {
+                "$ref": "port-contract.schema.json"
+              },
+              "name": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "name"
+            ],
+            "type": "object"
+          },
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "2.0"
+    }
+  },
+  "required": [
+    "schema_version",
+    "compatibility",
+    "io"
+  ],
+  "title": "model.yaml Compatibility Extension",
+  "type": "object"
+}

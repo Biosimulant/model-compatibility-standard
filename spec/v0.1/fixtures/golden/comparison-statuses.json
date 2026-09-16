@@ -1,0 +1,56 @@
+{
+  "cases": [
+    {
+      "name": "exact",
+      "source": {
+        "semantic": {
+          "concept": "concentration"
+        }
+      },
+      "status": "EXACT",
+      "target": {
+        "semantic": {
+          "concept": "concentration"
+        }
+      }
+    },
+    {
+      "name": "missing-contract",
+      "source": null,
+      "status": "UNKNOWN",
+      "target": {
+        "semantic": {
+          "concept": "concentration"
+        }
+      }
+    },
+    {
+      "name": "lossless-unit",
+      "source": {
+        "measurement": {
+          "unit": "nmol/L"
+        }
+      },
+      "status": "LOSSLESS_CONVERSION_AVAILABLE",
+      "target": {
+        "measurement": {
+          "unit": "umol/L"
+        }
+      }
+    },
+    {
+      "name": "context-contradiction",
+      "source": {
+        "biological_context": {
+          "compartment": "extracellular"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "biological_context": {
+          "compartment": "intracellular"
+        }
+      }
+    }
+  ]
+}

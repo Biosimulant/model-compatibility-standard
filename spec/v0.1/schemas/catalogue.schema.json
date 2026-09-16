@@ -1,0 +1,46 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/catalogue.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "bundle_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "counts": {
+      "type": "object"
+    },
+    "fields": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "profiles": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "schema_version": {
+      "const": "0.1"
+    },
+    "standard": {
+      "const": "https://biosimulant.com/standards/model-compatibility/v0.1"
+    },
+    "status": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema_version",
+    "standard",
+    "counts",
+    "fields",
+    "profiles"
+  ],
+  "title": "Profile Catalogue",
+  "type": "object"
+}

@@ -1,0 +1,515 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-structure/v0.1",
+  "$schema": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/profile-definition.schema.json",
+  "allowed": {
+    "representation": {
+      "kind": [
+        "record",
+        "table",
+        "artifact",
+        "file"
+      ]
+    }
+  },
+  "applies_to": [
+    "record",
+    "artifact"
+  ],
+  "comparison_rules": [
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
+      "severity": "error",
+      "source": "/contract/semantic/concept",
+      "target": "/contract/semantic/concept"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "representation-equivalent",
+      "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation",
+      "target": "/contract/representation"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_STRUCTURE_FORMAT_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/structure_format",
+      "target": "/contract/representation/structure_format"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_REPRESENTATION_COORDINATE_SYSTEM_MISMATCH",
+      "severity": "error",
+      "source": "/contract/representation/coordinate_system",
+      "target": "/contract/representation/coordinate_system"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/identifiers/namespace",
+      "target": "/contract/identifiers/namespace"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "namespace-version-compatible",
+      "reason_code": "BMCS_IDENTIFIERS_NAMESPACE_VERSION_MISMATCH",
+      "severity": "error",
+      "source": "/contract/identifiers/namespace_version",
+      "target": "/contract/identifiers/namespace_version"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "context-compatible",
+      "reason_code": "BMCS_BIOLOGICAL_CONTEXT_SPECIES_MISMATCH",
+      "severity": "error",
+      "source": "/contract/biological_context/species",
+      "target": "/contract/biological_context/species"
+    },
+    {
+      "layer": "technical",
+      "missing": "unknown",
+      "operator": "equal",
+      "reason_code": "BMCS_ORIGIN_TYPE_MISMATCH",
+      "severity": "error",
+      "source": "/contract/origin/type",
+      "target": "/contract/origin/type"
+    }
+  ],
+  "compatibility_notes": "Two ports match only when every field the target requires is satisfied. Missing required information returns UNKNOWN. Every conversion or inference must be declared and versioned.",
+  "description": "A three-dimensional structural representation of a declared protein or protein-containing assembly, including the identity, coordinate representation and format needed to interpret the structure.\n",
+  "domain": "proteome",
+  "domain_label": "Proteome and protein structure",
+  "examples": [
+    {
+      "check": "compare",
+      "conditions": "Both ports declare different coordinate systems and no conversion is supplied.",
+      "decision": "V0 protein-structure profile",
+      "expect": {
+        "status": "INCOMPATIBLE"
+      },
+      "id": "BMCS-V0-006",
+      "report_finding": "Contradictory coordinate representation",
+      "source_patch": {
+        "representation": {
+          "coordinate_system": "cartesian-angstrom"
+        }
+      },
+      "target_patch": {
+        "representation": {
+          "coordinate_system": "fractional-unit-cell"
+        }
+      },
+      "title": "Different coordinate systems are incompatible",
+      "why": "Coordinates in different systems cannot be consumed as if their numerical values have the same spatial meaning."
+    },
+    {
+      "check": "compare",
+      "conditions": "The source omits the structure origin required by the target contract.",
+      "decision": "V0 protein-structure profile",
+      "expect": {
+        "status": "UNKNOWN"
+      },
+      "id": "BMCS-V0-007",
+      "report_finding": "Missing structure provenance",
+      "source_remove": [
+        "origin.type"
+      ],
+      "title": "Missing structure origin is unknown",
+      "why": "Experimental, predicted and otherwise derived structures have different provenance and limitations."
+    },
+    {
+      "check": "compare",
+      "conditions": "Both ports make the same complete declarations for this profile.",
+      "decision": "V0 protein-structure profile",
+      "expect": {
+        "status": "EXACT"
+      },
+      "id": "BMCS-V0-009",
+      "report_finding": "Positive baseline",
+      "title": "Identical protein-structure contracts are exact matches",
+      "why": "The same complete structure declaration can connect without conversion or approval."
+    }
+  ],
+  "extends": [],
+  "field_dispositions": {
+    "artifact.format": {
+      "disposition": "recommended"
+    },
+    "artifact.format_version": {
+      "disposition": "recommended"
+    },
+    "artifact.media_type": {
+      "disposition": "recommended"
+    },
+    "artifact.schema_ref": {
+      "disposition": "recommended"
+    },
+    "artifact.schema_sha256": {
+      "disposition": "recommended"
+    },
+    "artifact.sha256": {
+      "disposition": "recommended"
+    },
+    "biological_context.species": {
+      "disposition": "required"
+    },
+    "identifiers.namespace": {
+      "disposition": "required"
+    },
+    "identifiers.namespace_version": {
+      "disposition": "required"
+    },
+    "origin.method": {
+      "disposition": "recommended"
+    },
+    "origin.method_version": {
+      "disposition": "recommended"
+    },
+    "origin.software": {
+      "disposition": "recommended"
+    },
+    "origin.software_version": {
+      "disposition": "recommended"
+    },
+    "origin.source_ref": {
+      "disposition": "recommended"
+    },
+    "origin.source_sha256": {
+      "disposition": "recommended"
+    },
+    "origin.type": {
+      "disposition": "required"
+    },
+    "representation.coordinate_system": {
+      "disposition": "required"
+    },
+    "representation.kind": {
+      "disposition": "required"
+    },
+    "representation.precision": {
+      "disposition": "recommended"
+    },
+    "representation.structure_format": {
+      "disposition": "required"
+    },
+    "semantic.concept": {
+      "disposition": "required"
+    },
+    "semantic.ontology_terms": {
+      "disposition": "recommended"
+    },
+    "semantic.qualifiers": {
+      "disposition": "recommended"
+    },
+    "uncertainty.quality_flags": {
+      "disposition": "recommended"
+    }
+  },
+  "fixed": {
+    "semantic": {
+      "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+    }
+  },
+  "intended_use": "Connecting a model output that provides a three-dimensional protein structure to a model input that consumes the same declared structural representation.\n",
+  "label": "Protein Structure",
+  "limitations": [
+    "It does not establish structural accuracy, biological function or fitness for a downstream claim.",
+    "A predicted structure is not treated as interchangeable with an experimental structure unless the target permits that origin."
+  ],
+  "name": "protein-structure",
+  "profile_id": "proteome/protein-structure@0.1",
+  "requirements": [
+    {
+      "level": "required",
+      "path": "semantic.concept",
+      "schema": {
+        "const": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.kind",
+      "schema": {
+        "enum": [
+          "record",
+          "table",
+          "artifact",
+          "file"
+        ]
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.structure_format",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "representation.coordinate_system",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "identifiers.namespace",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "identifiers.namespace_version",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "biological_context.species",
+      "schema": {
+        "anyOf": [
+          {
+            "const": "any"
+          },
+          {
+            "pattern": "^NCBITaxon:[1-9][0-9]*$"
+          }
+        ],
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "origin.type",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "semantic.ontology_terms",
+      "schema": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "ontology": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "relation": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "uri": {
+              "format": "uri",
+              "type": "string"
+            },
+            "version": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "ontology",
+            "version"
+          ],
+          "type": "object"
+        },
+        "minItems": 1,
+        "type": "array"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "semantic.qualifiers",
+      "schema": {
+        "items": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "minItems": 1,
+        "type": "array",
+        "uniqueItems": true
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "representation.precision",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "origin.method",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "origin.method_version",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "origin.software",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "origin.software_version",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "origin.source_ref",
+      "schema": {
+        "format": "uri",
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "origin.source_sha256",
+      "schema": {
+        "pattern": "^sha256:[0-9a-f]{64}$",
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "artifact.media_type",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "artifact.format",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "artifact.format_version",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "artifact.schema_ref",
+      "schema": {
+        "format": "uri",
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "artifact.schema_sha256",
+      "schema": {
+        "pattern": "^sha256:[0-9a-f]{64}$",
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "artifact.sha256",
+      "schema": {
+        "pattern": "^sha256:[0-9a-f]{64}$",
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "uncertainty.quality_flags",
+      "schema": {
+        "items": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "minItems": 1,
+        "type": "array",
+        "uniqueItems": true
+      }
+    }
+  ],
+  "scientific_claim": "This profile checks whether two model interfaces fit together. It does not show that a model is scientifically valid or clinically safe.",
+  "sources": [
+    {
+      "title": "PDBx/mmCIF Dictionary",
+      "url": "https://mmcif.wwpdb.org/"
+    },
+    {
+      "title": "PDB file format documentation",
+      "url": "https://www.wwpdb.org/documentation/file-format"
+    },
+    {
+      "title": "NCBI Taxonomy",
+      "url": "https://www.ncbi.nlm.nih.gov/taxonomy"
+    }
+  ],
+  "status": "active",
+  "transformation_policy": {
+    "inference": "approval",
+    "lossless": "allow",
+    "lossy": "approval"
+  },
+  "version": "0.1.0"
+}

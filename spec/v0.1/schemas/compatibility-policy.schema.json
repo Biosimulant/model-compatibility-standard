@@ -1,0 +1,70 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/compatibility-policy.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "conditional": {
+      "enum": [
+        "ALLOW",
+        "APPROVAL_REQUIRED",
+        "BLOCK"
+      ]
+    },
+    "cost": {
+      "type": "object"
+    },
+    "data_boundary": {
+      "type": "object"
+    },
+    "extensions": {
+      "type": "object"
+    },
+    "inference": {
+      "enum": [
+        "ALLOW",
+        "APPROVAL_REQUIRED",
+        "BLOCK"
+      ]
+    },
+    "license": {
+      "type": "object"
+    },
+    "lossless": {
+      "enum": [
+        "ALLOW",
+        "APPROVAL_REQUIRED",
+        "BLOCK"
+      ]
+    },
+    "lossy": {
+      "enum": [
+        "ALLOW",
+        "APPROVAL_REQUIRED",
+        "BLOCK"
+      ]
+    },
+    "schema_version": {
+      "const": "0.1"
+    },
+    "security": {
+      "type": "object"
+    },
+    "unknown": {
+      "enum": [
+        "ALLOW",
+        "APPROVAL_REQUIRED",
+        "BLOCK"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "unknown",
+    "conditional",
+    "lossless",
+    "lossy",
+    "inference"
+  ],
+  "title": "Compatibility Policy",
+  "type": "object"
+}

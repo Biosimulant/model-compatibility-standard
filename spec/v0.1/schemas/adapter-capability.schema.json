@@ -1,0 +1,89 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/adapter-capability.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "evidence": {
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "execution_cost": {
+      "minimum": 0,
+      "type": "number"
+    },
+    "information_loss": {
+      "enum": [
+        "none",
+        "bounded",
+        "lossy"
+      ]
+    },
+    "limitations": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "loss_score": {
+      "minimum": 0,
+      "type": "number"
+    },
+    "preconditions": {
+      "items": {
+        "$ref": "rule.schema.json"
+      },
+      "type": "array"
+    },
+    "ref": {
+      "format": "uri",
+      "type": "string"
+    },
+    "release": {
+      "type": "object"
+    },
+    "schema_version": {
+      "const": "0.1"
+    },
+    "sha256": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "source": {
+      "type": "object"
+    },
+    "state": {
+      "enum": [
+        "reviewed",
+        "revoked"
+      ]
+    },
+    "target": {
+      "type": "object"
+    },
+    "transformation_class": {
+      "enum": [
+        "representation",
+        "unit",
+        "identifier",
+        "normalization",
+        "projection",
+        "aggregation"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "ref",
+    "sha256",
+    "source",
+    "target",
+    "state",
+    "transformation_class",
+    "information_loss",
+    "release"
+  ],
+  "title": "Adapter Capability",
+  "type": "object"
+}

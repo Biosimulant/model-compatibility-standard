@@ -1,0 +1,47 @@
+{
+  "count": 3,
+  "note": "A term identifies what a port means and does not move when the profile version does. external_terms is empty when the profile does not declare an equivalent maintained external term at the same granularity.",
+  "schema_version": "0.1",
+  "standard": "https://biosimulant.com/standards/model-compatibility/v0.1",
+  "terms": [
+    {
+      "definition": "One molecular structure represented as a SMILES string, with the optional SMILES syntax features that the producing port may emit and the receiving port can interpret without discarding their meaning.\n",
+      "domain": "chemical",
+      "domain_label": "Chemical identity and representation",
+      "external_terms": [],
+      "id": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles",
+      "label": "Molecular SMILES",
+      "minted_in": "0.1.0",
+      "name": "molecular-smiles",
+      "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/molecular-smiles/v0.1",
+      "scientific_claim": "This profile checks whether two model interfaces fit together. It does not show that a model is scientifically valid or clinically safe.",
+      "term_version": "1.0.0"
+    },
+    {
+      "definition": "An amino-acid residue sequence representing a declared protein or polypeptide, with the identifier namespace, namespace version and organism context needed to interpret it.\n",
+      "domain": "proteome",
+      "domain_label": "Proteome and protein structure",
+      "external_terms": [],
+      "id": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence",
+      "label": "Protein Sequence",
+      "minted_in": "0.1.0",
+      "name": "protein-sequence",
+      "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-sequence/v0.1",
+      "scientific_claim": "This profile checks whether two model interfaces fit together. It does not show that a model is scientifically valid or clinically safe.",
+      "term_version": "1.0.0"
+    },
+    {
+      "definition": "A three-dimensional structural representation of a declared protein or protein-containing assembly, including the identity, coordinate representation and format needed to interpret the structure.\n",
+      "domain": "proteome",
+      "domain_label": "Proteome and protein structure",
+      "external_terms": [],
+      "id": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure",
+      "label": "Protein Structure",
+      "minted_in": "0.1.0",
+      "name": "protein-structure",
+      "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-structure/v0.1",
+      "scientific_claim": "This profile checks whether two model interfaces fit together. It does not show that a model is scientifically valid or clinically safe.",
+      "term_version": "1.0.0"
+    }
+  ]
+}

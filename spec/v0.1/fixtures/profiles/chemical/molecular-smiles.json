@@ -1,0 +1,526 @@
+{
+  "cases": [
+    {
+      "contract": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "name": "positive",
+      "valid": true
+    },
+    {
+      "name": "comparison-direct",
+      "source": {
+        "origin": {
+          "type": "declared"
+        },
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "status": "DIRECT_COMPATIBLE",
+      "target": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      }
+    },
+    {
+      "contract": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {}
+      },
+      "field": "semantic.concept",
+      "name": "negative-required-missing-semantic-concept",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles-different"
+        }
+      },
+      "field": "semantic.concept",
+      "name": "negative-value-invalid-semantic-concept",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-incompatible-semantic-concept",
+      "reason_code": "BMCS_SEMANTIC_CONCEPT_MISMATCH",
+      "source": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles-different"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-semantic-concept",
+      "source": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {}
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      }
+    },
+    {
+      "field": "semantic.concept",
+      "name": "comparison-unknown-target-semantic-concept",
+      "source": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {}
+      }
+    },
+    {
+      "contract": {
+        "representation": {
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-required-missing-representation-kind",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "representation": {
+          "kind": "not-an-allowed-value",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "field": "representation.kind",
+      "name": "negative-value-invalid-representation-kind",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-incompatible-representation-kind",
+      "reason_code": "BMCS_REPRESENTATION_KIND_MISMATCH",
+      "source": {
+        "representation": {
+          "kind": "scalar-different",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-representation-kind",
+      "source": {
+        "representation": {
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      }
+    },
+    {
+      "field": "representation.kind",
+      "name": "comparison-unknown-target-representation-kind",
+      "source": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "representation": {
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      }
+    },
+    {
+      "contract": {
+        "representation": {
+          "kind": "scalar",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "field": "representation.structure_format",
+      "name": "negative-required-missing-representation-structure-format",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles-different",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "field": "representation.structure_format",
+      "name": "negative-value-invalid-representation-structure-format",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.structure_format",
+      "name": "comparison-incompatible-representation-structure-format",
+      "reason_code": "BMCS_REPRESENTATION_STRUCTURE_FORMAT_MISMATCH",
+      "source": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles-different",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      }
+    },
+    {
+      "field": "representation.structure_format",
+      "name": "comparison-unknown-representation-structure-format",
+      "source": {
+        "representation": {
+          "kind": "scalar",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      }
+    },
+    {
+      "field": "representation.structure_format",
+      "name": "comparison-unknown-target-representation-structure-format",
+      "source": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "representation": {
+          "kind": "scalar",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      }
+    },
+    {
+      "contract": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "field": "representation.syntax_features",
+      "name": "negative-required-missing-representation-syntax-features",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": "not-an-array"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "field": "representation.syntax_features",
+      "name": "negative-value-invalid-representation-syntax-features",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
+      "field": "representation.syntax_features",
+      "name": "comparison-incompatible-representation-syntax-features",
+      "reason_code": "BMCS_REPRESENTATION_SYNTAX_FEATURES_MISMATCH",
+      "source": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes",
+            "different"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "status": "INCOMPATIBLE",
+      "target": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      }
+    },
+    {
+      "field": "representation.syntax_features",
+      "name": "comparison-unknown-representation-syntax-features",
+      "source": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      }
+    },
+    {
+      "field": "representation.syntax_features",
+      "name": "comparison-unknown-target-representation-syntax-features",
+      "source": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles",
+          "syntax_features": [
+            "atom-classes"
+          ]
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      },
+      "status": "UNKNOWN",
+      "target": {
+        "representation": {
+          "kind": "scalar",
+          "structure_format": "smiles"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/molecular-smiles"
+        }
+      }
+    }
+  ],
+  "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/molecular-smiles/v0.1"
+}

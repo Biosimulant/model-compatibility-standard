@@ -1,0 +1,499 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/port-contract.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "artifact": {
+      "additionalProperties": false,
+      "properties": {
+        "format": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "format_version": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "media_type": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "schema_ref": {
+          "format": "uri",
+          "type": "string"
+        },
+        "schema_sha256": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "sha256": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "biological_context": {
+      "additionalProperties": false,
+      "properties": {
+        "compartment": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "species": {
+          "anyOf": [
+            {
+              "const": "any"
+            },
+            {
+              "pattern": "^NCBITaxon:[1-9][0-9]*$"
+            }
+          ],
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "constraints": {
+      "items": {
+        "$ref": "rule.schema.json"
+      },
+      "type": "array"
+    },
+    "dimensions": {
+      "additionalProperties": false,
+      "properties": {
+        "axes": {
+          "items": {
+            "anyOf": [
+              {
+                "minLength": 1,
+                "type": "string"
+              },
+              {
+                "additionalProperties": false,
+                "properties": {
+                  "coordinates_ref": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "dynamic": {
+                    "type": "boolean"
+                  },
+                  "labels_ref": {
+                    "format": "uri",
+                    "type": "string"
+                  },
+                  "labels_sha256": {
+                    "pattern": "^sha256:[0-9a-f]{64}$",
+                    "type": "string"
+                  },
+                  "meaning": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "name": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "ordering": {
+                    "minLength": 1,
+                    "type": "string"
+                  },
+                  "size": {
+                    "minimum": 0,
+                    "type": "integer"
+                  },
+                  "unit": {
+                    "minLength": 1,
+                    "type": "string"
+                  }
+                },
+                "required": [
+                  "name"
+                ],
+                "type": "object"
+              }
+            ]
+          },
+          "minItems": 1,
+          "type": "array"
+        }
+      },
+      "type": "object"
+    },
+    "extensions": {
+      "propertyNames": {
+        "pattern": "^[a-z][a-z0-9.-]+:[A-Za-z0-9._-]+$"
+      },
+      "type": "object"
+    },
+    "identifiers": {
+      "additionalProperties": false,
+      "properties": {
+        "mapping_refs": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "cardinality": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "coverage": {
+                "maximum": 1,
+                "minimum": 0,
+                "type": "number"
+              },
+              "license": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "ref": {
+                "format": "uri",
+                "type": "string"
+              },
+              "release": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "sha256": {
+                "pattern": "^sha256:[0-9a-f]{64}$",
+                "type": "string"
+              },
+              "source_namespace": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "target_namespace": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "ref",
+              "sha256",
+              "source_namespace",
+              "target_namespace",
+              "release"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "namespace": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "namespace_version": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "structure_hash": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "lifecycle": {
+      "additionalProperties": false,
+      "properties": {
+        "temporal_meaning": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "time_unit": {
+          "maxLength": 128,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "measurement": {
+      "additionalProperties": false,
+      "properties": {
+        "normalization": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "quantity": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "scale": {
+          "enum": [
+            "nominal",
+            "ordinal",
+            "interval",
+            "ratio",
+            "proportion",
+            "probability",
+            "count"
+          ]
+        },
+        "transform": {
+          "enum": [
+            "identity",
+            "log2",
+            "log10",
+            "ln",
+            "logit"
+          ]
+        },
+        "unit": {
+          "maxLength": 128,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "origin": {
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "method_version": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "software": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "software_version": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "source_ref": {
+          "format": "uri",
+          "type": "string"
+        },
+        "source_sha256": {
+          "pattern": "^sha256:[0-9a-f]{64}$",
+          "type": "string"
+        },
+        "type": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "profile_refs": {
+      "items": {
+        "format": "uri",
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "ref": {
+      "format": "uri",
+      "type": "string"
+    },
+    "representation": {
+      "additionalProperties": false,
+      "properties": {
+        "alphabet": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "canonicalization": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "coordinate_system": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "encoding": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "formal_charge": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "isotope_state": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "kind": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "normalization_tool": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "normalization_version": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "precision": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "protonation_state": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "stereochemistry": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "structure_format": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "syntax_features": {
+          "items": {
+            "enum": [
+              "atom-classes",
+              "disconnected-components",
+              "isotopes",
+              "stereochemistry"
+            ]
+          },
+          "maxItems": 4,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "tautomer_state": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "semantic": {
+      "additionalProperties": false,
+      "properties": {
+        "concept": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "intended_use": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "ontology_snapshot_ref": {
+          "format": "uri",
+          "type": "string"
+        },
+        "ontology_snapshot_sha256": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        },
+        "ontology_terms": {
+          "items": {
+            "additionalProperties": false,
+            "properties": {
+              "label": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "ontology": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "relation": {
+                "minLength": 1,
+                "type": "string"
+              },
+              "uri": {
+                "format": "uri",
+                "type": "string"
+              },
+              "version": {
+                "minLength": 1,
+                "type": "string"
+              }
+            },
+            "required": [
+              "uri",
+              "ontology",
+              "version"
+            ],
+            "type": "object"
+          },
+          "minItems": 1,
+          "type": "array"
+        },
+        "qualifiers": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        },
+        "subject": {
+          "maxLength": 4096,
+          "minLength": 1,
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "sha256": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    },
+    "uncertainty": {
+      "additionalProperties": false,
+      "properties": {
+        "quality_flags": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "type": "array",
+          "uniqueItems": true
+        }
+      },
+      "type": "object"
+    }
+  },
+  "title": "Biosimulant Port Contract",
+  "type": "object"
+}

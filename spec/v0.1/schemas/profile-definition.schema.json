@@ -1,0 +1,241 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/profile-definition.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "$id": {
+      "format": "uri",
+      "type": "string"
+    },
+    "$schema": {
+      "format": "uri",
+      "type": "string"
+    },
+    "allowed": {
+      "type": "object"
+    },
+    "applies_to": {
+      "items": {
+        "enum": [
+          "scalar",
+          "array",
+          "record",
+          "event",
+          "artifact"
+        ]
+      },
+      "minItems": 1,
+      "type": "array",
+      "uniqueItems": true
+    },
+    "comparison_rules": {
+      "items": {
+        "$ref": "rule.schema.json"
+      },
+      "type": "array"
+    },
+    "compatibility_notes": {
+      "type": "string"
+    },
+    "description": {
+      "minLength": 20,
+      "type": "string"
+    },
+    "domain": {
+      "type": "string"
+    },
+    "domain_label": {
+      "type": "string"
+    },
+    "examples": {
+      "items": {
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "extends": {
+      "items": {
+        "format": "uri",
+        "type": "string"
+      },
+      "type": "array",
+      "uniqueItems": true
+    },
+    "field_dispositions": {
+      "additionalProperties": {
+        "additionalProperties": false,
+        "properties": {
+          "disposition": {
+            "enum": [
+              "conditional",
+              "excluded",
+              "recommended",
+              "required"
+            ]
+          },
+          "note": {
+            "type": "string"
+          },
+          "when": {
+            "type": [
+              "string",
+              "object"
+            ]
+          }
+        },
+        "required": [
+          "disposition"
+        ],
+        "type": "object"
+      },
+      "minProperties": 1,
+      "type": "object"
+    },
+    "fixed": {
+      "type": "object"
+    },
+    "intended_use": {
+      "minLength": 20,
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 10,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "name": {
+      "type": "string"
+    },
+    "profile_id": {
+      "pattern": "^[a-z0-9-]+/[a-z0-9-]+@0\\.1$",
+      "type": "string"
+    },
+    "requirements": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "level": {
+            "enum": [
+              "required",
+              "conditional",
+              "recommended",
+              "optional"
+            ]
+          },
+          "path": {
+            "pattern": "^[a-z]",
+            "type": "string"
+          },
+          "schema": {
+            "type": "object"
+          },
+          "when": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "path",
+          "level"
+        ],
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "scientific_claim": {
+      "minLength": 20,
+      "type": "string"
+    },
+    "sources": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "note": {
+            "type": "string"
+          },
+          "title": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "url": {
+            "format": "uri",
+            "type": "string"
+          }
+        },
+        "required": [
+          "title",
+          "url"
+        ],
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
+    "status": {
+      "enum": [
+        "active",
+        "deprecated"
+      ]
+    },
+    "transformation_policy": {
+      "additionalProperties": false,
+      "properties": {
+        "inference": {
+          "enum": [
+            "approval",
+            "block"
+          ]
+        },
+        "lossless": {
+          "enum": [
+            "allow",
+            "block"
+          ]
+        },
+        "lossy": {
+          "enum": [
+            "approval",
+            "block"
+          ]
+        }
+      },
+      "required": [
+        "lossless",
+        "lossy",
+        "inference"
+      ],
+      "type": "object"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "$id",
+    "profile_id",
+    "version",
+    "domain",
+    "name",
+    "label",
+    "description",
+    "status",
+    "applies_to",
+    "intended_use",
+    "limitations",
+    "sources",
+    "field_dispositions",
+    "requirements",
+    "comparison_rules",
+    "examples",
+    "transformation_policy",
+    "scientific_claim"
+  ],
+  "title": "Compatibility Profile Definition",
+  "type": "object"
+}

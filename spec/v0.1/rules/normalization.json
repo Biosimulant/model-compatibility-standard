@@ -1,0 +1,12 @@
+{
+  "canonicalization": "RFC8785",
+  "set_like_paths": [
+    "/contract/profile_refs",
+    "/contract/semantic/qualifiers",
+    "/contract/semantic/ontology_terms",
+    "/contract/identifiers/mapping_refs",
+    "/contract/representation/syntax_features",
+    "/contract/uncertainty/quality_flags"
+  ],
+  "standard": "https://biosimulant.com/standards/model-compatibility/v0.1"
+}

@@ -1,0 +1,25 @@
+{
+  "$id": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/profile-reference.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "ref": {
+      "format": "uri",
+      "type": "string"
+    },
+    "required": {
+      "default": true,
+      "type": "boolean"
+    },
+    "sha256": {
+      "pattern": "^sha256:[0-9a-f]{64}$",
+      "type": "string"
+    }
+  },
+  "required": [
+    "ref",
+    "sha256"
+  ],
+  "title": "Profile Reference",
+  "type": "object"
+}
