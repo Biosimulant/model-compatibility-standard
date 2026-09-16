@@ -5,6 +5,7 @@
     "/contract/semantic/qualifiers",
     "/contract/biological_context/disease",
     "/contract/biological_context/intervention",
+    "/contract/biological_context/taxa",
     "/contract/security/data_use"
   ],
   "standard": "https://biosimulant.com/standards/model-compatibility/v0.1"

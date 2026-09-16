@@ -13,6 +13,7 @@
     "biological_context.intervention[].schedule",
     "biological_context.sex",
     "biological_context.strain",
+    "biological_context.taxa",
     "biological_context.tissue",
     "dimensions.dose_axis",
     "dimensions.time_axis",

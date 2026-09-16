@@ -18,7 +18,7 @@ change that implements it.
 | [D2](D2-optional-field-comparison.md) | Are fields both ports declare but the profile does not require compared? | SCI-001, 002, 003, 014, 015 | Decided, implemented |
 | [D3](D3-concept-identity.md) | What carries a port's scientific meaning? | S1 | Decided in part: terms minted and published; external terms per profile |
 | [D4](D4-context-vocabulary.md) | Should subject and biological context be controlled terms? | S2 | Decided in part: subject demoted; subsumption needs snapshots |
-| [D5](D5-species-and-organisms.md) | What does a species field mean, and what is "any"? | SCI-010, 109 | Decided in part: wildcard fixed; subsumption needs snapshots |
+| [D5](D5-species-and-organisms.md) | What does a species field mean, and what is "any"? | SCI-010, 109 | Decided in part: wildcard fixed and role-typed taxa added; subsumption needs snapshots |
 | [D6](D6-representation-equivalence.md) | When is a re-encoding lossless? | SCI-104, 110 | Decided in part: operator implemented; narrowing needs review |
 | [D7](D7-identifier-mapping.md) | When is an identifier mapping lossless? | SCI-002, 014 | Decided in part: mapping loss and release transitions implemented; publishing the mappings needs an owner |
 | [D8](D8-scale-and-transform.md) | How are measurement level, value domain and transform separated? | SCI-013 | Decided, implemented |

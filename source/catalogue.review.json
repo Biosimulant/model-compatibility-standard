@@ -51,7 +51,7 @@
   },
   "counts": {
     "profiles": 650,
-    "item_definitions": 268,
+    "item_definitions": 271,
     "item_packs": 30
   },
   "item_definitions": [
@@ -330,6 +330,27 @@
     },
     {
       "path": "biological_context.substrate",
+      "family": "biological_context",
+      "value_type": "profile-defined JSON value",
+      "requirement": "profile-dependent",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
+    },
+    {
+      "path": "biological_context.taxa",
+      "family": "biological_context",
+      "value_type": "profile-defined JSON value",
+      "requirement": "profile-dependent",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
+    },
+    {
+      "path": "biological_context.taxa[].role",
+      "family": "biological_context",
+      "value_type": "profile-defined JSON value",
+      "requirement": "profile-dependent",
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it."
+    },
+    {
+      "path": "biological_context.taxa[].taxon",
       "family": "biological_context",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -1982,7 +2003,8 @@
         "biological_context.intervention",
         "biological_context.assay",
         "biological_context.cohort",
-        "biological_context.compartment"
+        "biological_context.compartment",
+        "biological_context.taxa"
       ]
     },
     {

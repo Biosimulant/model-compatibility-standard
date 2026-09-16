@@ -626,6 +626,82 @@
       "comparison_operator": "context-compatible",
       "family": "biological_context",
       "json_schema": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "role": {
+              "enum": [
+                "host",
+                "pathogen",
+                "community_member",
+                "donor"
+              ]
+            },
+            "strain": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "taxon": {
+              "pattern": "^NCBITaxon:[1-9][0-9]*$",
+              "type": "string"
+            }
+          },
+          "required": [
+            "taxon",
+            "role"
+          ],
+          "type": "object"
+        },
+        "minItems": 1,
+        "type": "array"
+      },
+      "missing_behavior": "unknown",
+      "ordered": false,
+      "path": "biological_context.taxa",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "enum": [
+          "host",
+          "pathogen",
+          "community_member",
+          "donor"
+        ]
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.taxa[].role",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
+        "pattern": "^NCBITaxon:[1-9][0-9]*$",
+        "type": "string"
+      },
+      "missing_behavior": "unknown",
+      "ordered": true,
+      "path": "biological_context.taxa[].taxon",
+      "requirement": "profile-dependent",
+      "value_type": "JSON value constrained by json_schema"
+    },
+    {
+      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
+      "comparison_operator": "context-compatible",
+      "family": "biological_context",
+      "json_schema": {
         "maxLength": 4096,
         "minLength": 1,
         "type": "string"

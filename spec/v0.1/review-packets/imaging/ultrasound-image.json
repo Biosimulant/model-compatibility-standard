@@ -21,6 +21,7 @@
     "biological_context.intervention",
     "biological_context.sex",
     "biological_context.strain",
+    "biological_context.taxa",
     "biological_context.tissue",
     "dimensions.axes[].coordinates_ref",
     "dimensions.axes[].dynamic",

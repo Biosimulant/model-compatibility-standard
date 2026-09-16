@@ -188,7 +188,7 @@ NUMBER_LEAVES = {
     "absolute_tolerance", "confluence", "oxygen",
 }
 ARRAY_LEAVES = {
-    "axes", "labels", "qualifiers", "disease", "intervention", "data_use",
+    "axes", "labels", "qualifiers", "disease", "intervention", "data_use", "taxa",
     "mapping_refs", "ontology_terms", "quality_flags", "parameters",
     "transformation_chain", "evidence_refs", "validation_results",
 }
@@ -198,6 +198,7 @@ SET_LIKE_PATHS = [
     "/contract/semantic/qualifiers",
     "/contract/biological_context/disease",
     "/contract/biological_context/intervention",
+    "/contract/biological_context/taxa",
     "/contract/security/data_use",
 ]
 
@@ -483,6 +484,25 @@ def item_json_schema(path: str) -> dict[str, Any]:
                     ]
                 },
             }
+        if leaf == "taxa":
+            # Decision D5. One species field cannot describe a host and its pathogen, or the members
+            # of a community, so a port declares the organisms involved and what each one is to the
+            # measurement. Subsumption between them still needs a pinned taxonomy snapshot.
+            return {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "type": "object",
+                    "required": ["taxon", "role"],
+                    "properties": {
+                        "taxon": {"type": "string", "pattern": "^NCBITaxon:[1-9][0-9]*$"},
+                        "role": {"enum": ["host", "pathogen", "community_member", "donor"]},
+                        "label": {"type": "string", "minLength": 1},
+                        "strain": {"type": "string", "minLength": 1},
+                    },
+                    "additionalProperties": False,
+                },
+            }
         if leaf == "ontology_terms":
             return {
                 "type": "array",
@@ -533,6 +553,10 @@ def item_json_schema(path: str) -> dict[str, Any]:
         return {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
     if leaf.endswith("_ref") or leaf in {"ref", "url", "uri"}:
         return {"type": "string", "format": "uri"}
+    if path == "biological_context.taxa[].taxon":
+        return {"type": "string", "pattern": "^NCBITaxon:[1-9][0-9]*$"}
+    if path == "biological_context.taxa[].role":
+        return {"enum": ["host", "pathogen", "community_member", "donor"]}
     if leaf == "species":
         return {
             "type": "string",
@@ -758,6 +782,8 @@ def example_value(path: str, profile: dict[str, Any] | None = None) -> Any:
     leaf = path.replace("[]", "").split(".")[-1]
     if leaf == "axes" and profile is not None:
         return axis_entries(profile)
+    if leaf == "taxa" and profile is not None:
+        return [{"taxon": example_species(profile), "role": "host"}]
     if leaf == "intervention":
         # An intervention is a structure, not a label: the catalogue defines an agent, dose, route,
         # duration and schedule for it. A list of bare strings has nowhere to put them (D9).
@@ -1609,9 +1635,9 @@ def build(root: Path) -> None:
     profiles = source["profiles"]
     items = source["item_definitions"]
     packs = source["item_packs"]
-    if (len(profiles), len(items), len(packs)) != (650, 268, 30):
+    if (len(profiles), len(items), len(packs)) != (650, 271, 30):
         raise SystemExit(
-            "source/catalogue.review.json must have 650 profiles, 268 items and 30 packs; "
+            "source/catalogue.review.json must have 650 profiles, 271 items and 30 packs; "
             f"found {len(profiles)}, {len(items)} and {len(packs)}"
         )
     reviews = load_profile_reviews(profiles)

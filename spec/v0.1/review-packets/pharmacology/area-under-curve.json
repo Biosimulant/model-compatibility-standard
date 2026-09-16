@@ -15,6 +15,7 @@
     "biological_context.intervention[].schedule",
     "biological_context.sex",
     "biological_context.strain",
+    "biological_context.taxa",
     "biological_context.tissue",
     "dimensions.axes",
     "dimensions.axes[].coordinates_ref",

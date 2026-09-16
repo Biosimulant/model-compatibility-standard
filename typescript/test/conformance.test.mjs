@@ -8,7 +8,7 @@ import { Bundle, buildCompatibilityLock, canonicalJson, compareContracts, digest
 test("bundle exposes all catalogue entries", () => {
   const bundle = getBundle();
   assert.equal(bundle.catalogue.counts.profiles, 650);
-  assert.equal(bundle.catalogue.counts.item_definitions, 268);
+  assert.equal(bundle.catalogue.counts.item_definitions, 271);
   assert.equal(bundle.catalogue.counts.item_packs, 30);
   bundle.verifyIntegrity();
 });

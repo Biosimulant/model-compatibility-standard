@@ -9,7 +9,7 @@ def test_catalogue_counts_and_all_profiles_load():
     bundle = get_bundle()
     assert bundle.catalogue["counts"] == {
         "profiles": 650,
-        "item_definitions": 268,
+        "item_definitions": 271,
         "item_packs": 30,
     }
     profiles = list(bundle.profiles())
@@ -90,3 +90,22 @@ def test_term_registry_is_published_and_version_independent():
     assert all(term["label"] and term["definition"] for term in registry["terms"])
     # External terms are an honest absence until a reviewer decides per profile (erratum E3).
     assert all(term["external_terms"] == [] for term in registry["terms"])
+
+
+def test_role_typed_taxa_vocabulary_is_published():
+    from biosimulant_model_compatibility_standard import get_bundle
+
+    bundle = get_bundle()
+    items = {item["path"]: item for item in bundle.read_json("catalogue/items.json")["items"]}
+    member = items["biological_context.taxa"]["json_schema"]["items"]
+    # A single species field cannot describe a host and its pathogen, or the members of a community,
+    # so a port declares each organism and what it is to the measurement (decision D5). No profile
+    # requires this yet, so nothing else pins the vocabulary.
+    assert member["required"] == ["taxon", "role"]
+    assert member["properties"]["role"]["enum"] == ["host", "pathogen", "community_member", "donor"]
+    assert member["properties"]["taxon"]["pattern"] == "^NCBITaxon:[1-9][0-9]*$"
+    assert items["biological_context.taxa[].role"]["json_schema"] == member["properties"]["role"]
+    assert items["biological_context.taxa[].taxon"]["json_schema"] == member["properties"]["taxon"]
+    # The order organisms are listed in carries no meaning.
+    set_paths = bundle.read_json("rules/normalization.json")["set_like_paths"]
+    assert "/contract/biological_context/taxa" in set_paths

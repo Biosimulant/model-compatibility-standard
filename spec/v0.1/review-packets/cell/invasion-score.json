@@ -16,6 +16,7 @@
     "biological_context.sex",
     "biological_context.strain",
     "biological_context.substrate",
+    "biological_context.taxa",
     "biological_context.tissue",
     "lifecycle.causality",
     "lifecycle.consumption",

@@ -49,7 +49,8 @@
         "biological_context.intervention",
         "biological_context.assay",
         "biological_context.cohort",
-        "biological_context.compartment"
+        "biological_context.compartment",
+        "biological_context.taxa"
       ]
     },
     {

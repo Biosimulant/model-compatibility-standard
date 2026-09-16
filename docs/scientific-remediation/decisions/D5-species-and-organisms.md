@@ -73,6 +73,18 @@ lists were reported as a contradiction while Python called them a match. Both en
 value, and `BMCS-SCI-109` guards it. The defect reached only the three pharmacology profiles that
 declare an intervention; the other eight context fields are strings and were never affected.
 
-**Still open:** taxonomic subsumption against a pinned NCBI Taxonomy snapshot, and the role-typed
-`biological_context.taxa[]` item for host-and-pathogen ports. Both need the snapshot infrastructure
-that D3, D4 and D7 also depend on.
+**The role-typed taxa item now exists.** `biological_context.taxa[]` takes a `taxon` and a `role`
+— `host`, `pathogen`, `community_member` or `donor` — with an optional label and strain. A single
+`species` field could not describe a host and its pathogen, or the members of a community, so a
+virology port had no way to say "human host, SARS-CoV-2 pathogen" and an ecology port had to pick
+one organism and drop the rest. The item is set-like, because the order organisms are listed in
+carries no meaning.
+
+No profile requires it. Which ports need role-typed taxa, and which roles each one needs, is a
+judgement about that profile's science and belongs to the domain review; what changed is that the
+vocabulary to express it now exists.
+
+**Still open:** taxonomic subsumption, so that a strain satisfies a species-level requirement. That
+needs a pinned NCBI Taxonomy snapshot, and the ownership and licensing of the snapshots is the
+question D3, D4 and D7 are all waiting on too. The snapshot *format* is now published as
+`ontology-snapshot.schema.json`; what is missing is who produces and pins the content.
