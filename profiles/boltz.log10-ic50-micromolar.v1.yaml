@@ -1,0 +1,27 @@
+schema_version: "1"
+
+profile:
+  id: boltz.log10-ic50-micromolar
+  version: "1"
+  title: Boltz log10 IC50 in micromolar
+
+definition: >
+  The Boltz affinity model's affinity_pred_value output: log10(IC50) where IC50
+  is expressed in micromolar. Lower values imply stronger predicted affinity.
+
+representations:
+  - signal_type: scalar
+    dtypes: [float32, float64]
+    unit: "1"
+
+checker: finite_number
+context_fields: []
+
+limitations:
+  - This value is not pIC50.
+  - It is a model prediction, not an experimentally measured IC50.
+  - It is not compatible with another concentration basis or logarithmic convention without an explicit adapter.
+
+sources:
+  - title: Boltz prediction documentation
+    url: https://github.com/jwohlwend/boltz/blob/main/docs/prediction.md

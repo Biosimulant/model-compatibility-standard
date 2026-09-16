@@ -1,0 +1,5 @@
+schema_version: "1"
+
+standard:
+  id: biosimulant.model-compatibility
+  version: "0"

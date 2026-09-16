@@ -1,50 +1,106 @@
-# Model compatibility
+# Biosimulant model compatibility standard
 
-This repository held an unreleased prototype for a standalone Biosimulant
-compatibility standard. The prototype has been retired before launch.
+This repository defines the small, versioned profiles that Biosimulant models
+use to say what their ports mean. A profile covers one scientific value or
+artifact: for example, an amino-acid sequence, a molecular SMILES string, or a
+specific Boltz affinity output.
 
-The useful part now lives in the `biosimulant` Python runtime, where it can check
-the model ports and the values that actually cross a wire. We removed the profile
-catalogue, generated schemas, rule language, lock files, TypeScript mirror and
-release machinery because none had an external adopter and all duplicated the
-runtime's job.
+The runtime uses a profile to check two things:
 
-## Where to work now
+- whether connected ports describe the same information in the same form; and
+- whether a live value satisfies the profile's basic safety checks.
 
-- Runtime code: [`biosim.compatibility`](https://github.com/Biosimulant/biosimulant/blob/main/src/biosim/compatibility.py)
-- Model builder guide: [Model compatibility](https://docs.biosimulant.com/standards/model-compatibility)
-- Manifest reference: [`model.yaml`](https://docs.biosimulant.com/references/model-manifest)
+It does not judge model quality, infer missing scientific context, convert
+units, or approve a result. Model evidence, provenance, limitations and fitness
+for use remain separate responsibilities.
 
-The current design is intentionally small. A port uses the existing
-`SignalSpec` fields for its shape, format and unit, plus this optional semantic
-contract:
+## Standard, profile and model mapping
+
+`standard.yaml` identifies the stable profile format. Each file in `profiles/`
+defines one independently versioned profile. A model maps one of its ports to a
+profile in `model.yaml`.
 
 ```yaml
-contract:
-  type: chemical.smiles
-  species: any
+compatibility:
+  standard: biosimulant.model-compatibility
+  version: "0"
+
+io:
+  inputs:
+    - name: protein_sequence
+      signal_type: scalar
+      dtype: str
+      format: sequence
+      contract:
+        profile: protein.sequence/v1
+        species: any
 ```
 
-Only `type` is required when a contract is present. `species` and
-`identifier_namespace` are included only when they are meaningful for that port.
+The model manifest owns the mapping. Python `SignalSpec` declarations continue
+to own the executable port structure. Biosimulant checks that the two agree.
 
-The runtime returns one of three outcomes: `ok`, `warning`, or `blocked`.
-Structural and semantic checks run when models are connected. Type-specific
-checks run again on the values used during a run.
+## Profiles included in 0.1.0
 
-## Adding a new kind of data
+- `protein.sequence/v1`
+- `chemical.smiles/v1`
+- `protein.multiple-sequence-alignment/v1`
+- `protein-ligand.complex-structure-mmcif/v1`
+- `boltz.binding-probability/v1`
+- `boltz.log10-ic50-micromolar/v1`
 
-Do not add a catalogue entry here. First try one of the types already available:
+Inspect them with the Biosimulant CLI:
 
 ```bash
-biosimulant compatibility types
+biosimulant compatibility profiles
+biosimulant compatibility show protein.sequence/v1
 ```
 
-If none describes the data, register a small namespaced Python checker in the
-model package and test it against real input and output examples. If the check
-is broadly useful, propose it to `biosim` with its tests and model-builder
-documentation. The [extension guide](https://docs.biosimulant.com/standards/model-compatibility/add-a-type)
-contains the complete workflow.
+Validate a model or compare two ports:
 
-This repository remains available as the decision record and to avoid breaking
-old links. It no longer publishes a package or specification.
+```bash
+biosimulant compatibility validate ./model.yaml
+biosimulant compatibility compare \
+  ./producer/model.yaml#outputs.value \
+  ./consumer/model.yaml#inputs.value
+```
+
+The runtime returns `ok`, `warning`, or `blocked`. It blocks unknown profiles,
+one-sided profile declarations, different profile versions, incompatible port
+representations, missing required context and invalid live values. Version 0
+does not perform automatic conversion.
+
+## Adding support to a model
+
+First inventory the model's scientific inputs and outputs. Leave operational
+ports such as run configuration and logs unprofiled. Reuse an existing profile
+only when its definition and limitations really describe the port. Add the
+top-level standard declaration, map each relevant port, then validate the
+manifest and test both accepted and rejected values.
+
+When no profile is accurate, propose one instead of stretching an existing
+definition. The complete pull-request and email routes are in
+[CONTRIBUTING.md](CONTRIBUTING.md).
+
+Released profile files are immutable. A scientific or representation change
+creates a new profile version; unrelated new profiles do not change existing
+references.
+
+## Python package
+
+The package supplies validated catalogue data and deterministic digests. It
+does not compare ports or execute checkers.
+
+```python
+from biosimulant_model_compatibility_standard import get_profile, profile_digest
+
+profile = get_profile("chemical.smiles/v1")
+digest = profile_digest("chemical.smiles/v1")
+```
+
+Run the repository checks with:
+
+```bash
+python -m pip install -e '.[test]'
+pytest
+python -m build
+```

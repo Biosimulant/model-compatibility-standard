@@ -1,0 +1,26 @@
+schema_version: "1"
+
+profile:
+  id: protein.multiple-sequence-alignment
+  version: "1"
+  title: Protein multiple-sequence alignment in A3M format
+
+definition: >
+  A protein multiple-sequence alignment stored in A3M form and supplied as a file.
+
+representations:
+  - signal_type: scalar
+    dtypes: [str]
+    value_type: file
+    formats: [a3m]
+
+checker: a3m_file
+context_fields: [species, identifier_namespace]
+
+limitations:
+  - Passing the checker does not establish alignment quality or evolutionary appropriateness.
+  - Agreement between the alignment query and a separate protein input remains the model wrapper's responsibility.
+
+sources:
+  - title: HH-suite A3M alignment format
+    url: https://github.com/soedinglab/hh-suite/wiki#the-a3m-format

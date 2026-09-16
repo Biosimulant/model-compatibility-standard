@@ -1,0 +1,27 @@
+schema_version: "1"
+
+profile:
+  id: chemical.smiles
+  version: "1"
+  title: Molecular SMILES
+
+definition: >
+  One molecule represented as a SMILES string.
+
+representations:
+  - signal_type: scalar
+    dtypes: [str]
+    formats: [smiles]
+
+checker: molecular_smiles
+context_fields: [identifier_namespace]
+
+limitations:
+  - This profile does not establish tautomer, salt, protonation or canonicalization equivalence.
+  - It does not establish that two valid strings identify the same molecule.
+  - It accepts one molecule value and excludes reaction SMILES.
+  - A compatible string is not evidence that the intended molecule was supplied.
+
+sources:
+  - title: OpenSMILES specification
+    url: http://opensmiles.org/opensmiles.html

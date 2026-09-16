@@ -1,0 +1,26 @@
+schema_version: "1"
+
+profile:
+  id: protein-ligand.complex-structure-mmcif
+  version: "1"
+  title: Predicted protein-ligand complex structure in mmCIF format
+
+definition: >
+  A predicted three-dimensional protein-ligand complex represented as an mmCIF file.
+
+representations:
+  - signal_type: scalar
+    dtypes: [str]
+    value_type: file
+    formats: [mmcif]
+
+checker: mmcif_file
+context_fields: []
+
+limitations:
+  - Passing the checker does not establish structural accuracy or biological relevance.
+  - Predicted and experimentally determined structures are not interchangeable under this profile.
+
+sources:
+  - title: PDBx/mmCIF dictionary and user guide
+    url: https://mmcif.wwpdb.org/

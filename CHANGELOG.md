@@ -1,13 +1,8 @@
 # Changelog
 
-## Unreleased reset
+## 0.1.0 - 2026-09-16
 
-- Retired the unreleased standalone compatibility specification.
-- Removed the profile catalogue, generated schemas and bundles, dual-language
-  implementations, generators, locks, plans and release process.
-- Moved compatibility checks into the `biosimulant` Python runtime so checks run
-  on real ports and values.
-- Replaced profiles with small port facts and registered Python checkers.
-
-No public standard version was released, so there is no migration guarantee for
-the removed prototype.
+- Defined the stable version 0 profile format.
+- Added six profiles driven by the Boltz affinity workflow.
+- Added strict YAML loading and deterministic profile and catalogue digests.
+- Documented model mapping and profile contribution workflows.

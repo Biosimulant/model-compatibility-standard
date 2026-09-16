@@ -1,0 +1,26 @@
+schema_version: "1"
+
+profile:
+  id: protein.sequence
+  version: "1"
+  title: Protein amino-acid sequence
+
+definition: >
+  One protein sequence represented as amino-acid residue symbols.
+
+representations:
+  - signal_type: scalar
+    dtypes: [str]
+    formats: [sequence]
+
+checker: protein_sequence
+context_fields: [species, identifier_namespace]
+
+limitations:
+  - Passing the checker does not establish that the sequence is biologically correct.
+  - Protein identity is not established unless an identifier namespace is declared.
+  - This profile does not translate nucleotide sequences.
+
+sources:
+  - title: IUPAC-IUB recommendations on amino-acid nomenclature
+    url: https://iupac.qmul.ac.uk/AminoAcid/

@@ -1,0 +1,27 @@
+schema_version: "1"
+
+profile:
+  id: boltz.binding-probability
+  version: "1"
+  title: Boltz protein-ligand binding probability
+
+definition: >
+  The Boltz affinity model's affinity_probability_binary output: its reported
+  probability that the specified ligand binds the specified protein target.
+
+representations:
+  - signal_type: scalar
+    dtypes: [float32, float64]
+    unit: "1"
+
+checker: probability
+context_fields: []
+
+limitations:
+  - This is a model prediction, not experimental evidence.
+  - It must not be interpreted as a clinical probability.
+  - Other model families must not claim this profile unless their output has the same reviewed meaning.
+
+sources:
+  - title: Boltz prediction documentation
+    url: https://github.com/jwohlwend/boltz/blob/main/docs/prediction.md
