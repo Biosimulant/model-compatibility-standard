@@ -1,53 +1,20 @@
 # Contributing
 
-Keep changes small and tied to a real model connection or a specific defect.
-Do not generate speculative catalogues.
+Compatibility changes are made in the
+[`Biosimulant/biosimulant`](https://github.com/Biosimulant/biosimulant) repository, not in
+this retired prototype.
 
-## Add or change a profile
+A proposed built-in type should include:
 
-Edit one source file:
+- a real producer-to-consumer model connection;
+- the small port declarations used by both models;
+- a Python checker that inspects a real example value where possible;
+- tests for an accepted value, a warning, and a blocked value; and
+- a short addition to the model-builder guide.
 
-```text
-source/profiles/<domain>/<profile-name>.yaml
-```
+Model-specific checks do not need to become built-ins. Use a namespaced type and
+register the checker from the model package. This lets a model ship safely while
+the shared runtime remains small.
 
-It contains the profile's meaning, intended use, limitations, sources, complete
-field decisions and scientific examples. Reuse fields from
-`source/fields.yaml`; add a shared field only when the required concept is
-genuinely missing.
-
-Then regenerate the bundle:
-
-```bash
-.venv/bin/python scripts/build_standard.py
-.venv/bin/python scripts/build_standard.py --check
-```
-
-Commit the source and generated files together. Do not edit `spec/v0.1/` by
-hand. Published profile versions are immutable; a substantive change creates a
-new version.
-
-See [Proposing a profile](PROPOSING_A_PROFILE.md) for the email and pull-request
-workflow.
-
-## Change comparison behaviour
-
-A new operator must be implemented and tested in both Python and TypeScript.
-Both implementations must give the same result for the generated fixtures. Put
-scientific assumptions in the profile, with sources and examples, rather than
-hiding them in implementation code.
-
-## Before opening a pull request
-
-```bash
-.venv/bin/python scripts/build_standard.py --check
-.venv/bin/pytest
-PATH="$PWD/.venv/bin:$PATH" npm test
-```
-
-Explain the model connection or defect, evidence, generated files and any
-question that still needs resolution. The pull request is the review record;
-merge into `main` accepts the change.
-
-Supported automation belongs in `scripts/`. Put disposable migration or
-inspection code in the ignored `.scratch/` directory and delete it when done.
+See the [extension guide](https://docs.biosimulant.com/standards/model-compatibility/add-a-type)
+for code and pull-request instructions.

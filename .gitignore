@@ -1,9 +1,7 @@
 .DS_Store
-.pytest_cache/
-__pycache__/
-*.egg-info/
 .venv/
 node_modules/
-typescript/src/browser-data.json
-coverage/
 .scratch/
+__pycache__/
+*.pyc
+typescript/src/browser-data.json

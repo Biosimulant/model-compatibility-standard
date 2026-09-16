@@ -1,13 +1,13 @@
 # Changelog
 
-## 0.0.1 — initial catalogue
+## Unreleased reset
 
-- Published the first three compatibility profiles: Protein Sequence, Protein
-  Structure and Molecular SMILES.
-- Added Python and TypeScript validation, comparison, normalisation, locks and
-  deterministic resolution against the same generated standard bundle.
-- Added profile authoring from one YAML file, complete field dispositions,
-  worked scientific outcomes and authoritative sources.
-- Made pull requests and merge to `main` the acceptance record for a profile.
-- Added plain-language instructions for proposing a profile by email or pull
-  request.
+- Retired the unreleased standalone compatibility specification.
+- Removed the profile catalogue, generated schemas and bundles, dual-language
+  implementations, generators, locks, plans and release process.
+- Moved compatibility checks into the `biosimulant` Python runtime so checks run
+  on real ports and values.
+- Replaced profiles with small port facts and registered Python checkers.
+
+No public standard version was released, so there is no migration guarantee for
+the removed prototype.
