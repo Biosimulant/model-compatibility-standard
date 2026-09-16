@@ -3,16 +3,20 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "additionalProperties": false,
   "properties": {
-    "candidate_recommended_items": {
+    "domain": {
+      "minLength": 1,
+      "type": "string"
+    },
+    "field_dispositions": {
+      "minProperties": 1,
+      "type": "object"
+    },
+    "fields_under_review": {
       "items": {
         "type": "string"
       },
       "type": "array",
       "uniqueItems": true
-    },
-    "domain": {
-      "minLength": 1,
-      "type": "string"
     },
     "fixture_groups": {
       "type": "object"
@@ -88,6 +92,13 @@
       "type": "array",
       "uniqueItems": true
     },
+    "scientific_examples": {
+      "items": {
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
     "stage": {
       "minLength": 1,
       "type": "string"
@@ -106,9 +117,11 @@
     "technical_pre_review",
     "proposed_fixed_values",
     "proposed_allowed_values",
+    "field_dispositions",
+    "fields_under_review",
     "proposed_requirements",
     "proposed_comparison_rules",
-    "candidate_recommended_items",
+    "scientific_examples",
     "questions_for_reviewers",
     "internal_quality_errors",
     "required_external_approvals",

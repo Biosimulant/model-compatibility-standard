@@ -3,14 +3,13 @@
   "$schema": "https://biosimulant.com/standards/model-compatibility/v0.1/schemas/catalogue.schema.json",
   "bundle_sha256": null,
   "counts": {
-    "item_definitions": 69,
-    "item_packs": 3,
+    "fields": 69,
     "profiles": 3
   },
-  "item_definitions": [
+  "fields": [
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "artifact",
       "json_schema": {
         "maxLength": 4096,
@@ -24,8 +23,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "artifact",
       "json_schema": {
         "maxLength": 4096,
@@ -39,8 +38,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "artifact",
       "json_schema": {
         "maxLength": 4096,
@@ -54,8 +53,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "artifact",
       "json_schema": {
         "format": "uri",
@@ -68,8 +67,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "artifact",
       "json_schema": {
         "pattern": "^sha256:[0-9a-f]{64}$",
@@ -82,8 +81,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "digest-equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "artifact",
       "json_schema": {
         "pattern": "^sha256:[0-9a-f]{64}$",
@@ -96,8 +95,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "biological_context",
       "json_schema": {
         "maxLength": 4096,
@@ -111,8 +110,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "context-compatible",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "biological_context",
       "json_schema": {
         "anyOf": [
@@ -132,8 +131,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "labels-equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "dimensions",
       "json_schema": {
         "items": {
@@ -198,8 +197,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "dimensions",
       "json_schema": {
         "format": "uri",
@@ -212,8 +211,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "dimensions",
       "json_schema": {
         "pattern": "^sha256:[0-9a-f]{64}$",
@@ -226,8 +225,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "dimensions",
       "json_schema": {
         "minLength": 1,
@@ -240,8 +239,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "dimensions",
       "json_schema": {
         "minLength": 1,
@@ -254,8 +253,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "dimensions",
       "json_schema": {
         "minLength": 1,
@@ -268,8 +267,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "dimensions",
       "json_schema": {
         "minimum": 0,
@@ -282,8 +281,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "unit-convertible",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "dimensions",
       "json_schema": {
         "minLength": 1,
@@ -296,8 +295,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "identifiers",
       "json_schema": {
         "items": {
@@ -356,8 +355,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "identifiers",
       "json_schema": {
         "minLength": 1,
@@ -370,8 +369,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "mapping-total",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "identifiers",
       "json_schema": {
         "maximum": 1,
@@ -385,8 +384,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "identifiers",
       "json_schema": {
         "minLength": 1,
@@ -399,8 +398,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "identifiers",
       "json_schema": {
         "format": "uri",
@@ -413,8 +412,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "identifiers",
       "json_schema": {
         "minLength": 1,
@@ -427,8 +426,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "identifiers",
       "json_schema": {
         "pattern": "^sha256:[0-9a-f]{64}$",
@@ -441,8 +440,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "identifiers",
       "json_schema": {
         "minLength": 1,
@@ -455,8 +454,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "identifiers",
       "json_schema": {
         "minLength": 1,
@@ -469,8 +468,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "identifiers",
       "json_schema": {
         "maxLength": 4096,
@@ -484,8 +483,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "namespace-version-compatible",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "identifiers",
       "json_schema": {
         "maxLength": 4096,
@@ -499,8 +498,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "identifiers",
       "json_schema": {
         "maxLength": 4096,
@@ -514,8 +513,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "lifecycle",
       "json_schema": {
         "maxLength": 4096,
@@ -529,8 +528,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "lifecycle",
       "json_schema": {
         "maxLength": 128,
@@ -544,8 +543,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "measurement",
       "json_schema": {
         "maxLength": 4096,
@@ -559,8 +558,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "measurement",
       "json_schema": {
         "maxLength": 4096,
@@ -574,8 +573,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "measurement",
       "json_schema": {
         "enum": [
@@ -595,8 +594,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked when the profile requires it or both contracts include it. A log2 and a log10 value of the same quantity are different numbers.",
       "comparison_operator": "equal",
+      "description": "Checked when the profile requires it or both contracts include it. A log2 and a log10 value of the same quantity are different numbers.",
       "family": "measurement",
       "json_schema": {
         "enum": [
@@ -614,8 +613,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "unit-convertible",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "measurement",
       "json_schema": {
         "maxLength": 128,
@@ -629,8 +628,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "origin",
       "json_schema": {
         "maxLength": 4096,
@@ -644,8 +643,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "origin",
       "json_schema": {
         "maxLength": 4096,
@@ -659,8 +658,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "origin",
       "json_schema": {
         "maxLength": 4096,
@@ -674,8 +673,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "origin",
       "json_schema": {
         "maxLength": 4096,
@@ -689,8 +688,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "origin",
       "json_schema": {
         "format": "uri",
@@ -703,8 +702,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "origin",
       "json_schema": {
         "pattern": "^sha256:[0-9a-f]{64}$",
@@ -717,8 +716,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "origin",
       "json_schema": {
         "maxLength": 4096,
@@ -732,8 +731,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "representation",
       "json_schema": {
         "maxLength": 4096,
@@ -747,8 +746,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "representation",
       "json_schema": {
         "maxLength": 4096,
@@ -762,8 +761,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "representation",
       "json_schema": {
         "maxLength": 4096,
@@ -777,8 +776,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "representation",
       "json_schema": {
         "maxLength": 4096,
@@ -792,8 +791,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "representation",
       "json_schema": {
         "maxLength": 4096,
@@ -807,8 +806,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "representation",
       "json_schema": {
         "maxLength": 4096,
@@ -822,8 +821,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "representation",
       "json_schema": {
         "maxLength": 4096,
@@ -837,8 +836,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "representation",
       "json_schema": {
         "maxLength": 4096,
@@ -852,8 +851,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "representation",
       "json_schema": {
         "maxLength": 4096,
@@ -867,8 +866,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "representation",
       "json_schema": {
         "maxLength": 4096,
@@ -882,8 +881,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "representation",
       "json_schema": {
         "maxLength": 4096,
@@ -897,8 +896,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "representation",
       "json_schema": {
         "maxLength": 4096,
@@ -912,8 +911,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "representation",
       "json_schema": {
         "maxLength": 4096,
@@ -927,8 +926,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "representation",
       "json_schema": {
         "maxLength": 4096,
@@ -942,8 +941,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "semantic",
       "json_schema": {
         "maxLength": 4096,
@@ -957,8 +956,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "semantic",
       "json_schema": {
         "maxLength": 4096,
@@ -972,8 +971,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "semantic",
       "json_schema": {
         "format": "uri",
@@ -986,8 +985,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "semantic",
       "json_schema": {
         "maxLength": 4096,
@@ -1001,8 +1000,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "semantic",
       "json_schema": {
         "items": {
@@ -1046,8 +1045,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "semantic",
       "json_schema": {
         "minLength": 1,
@@ -1060,8 +1059,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "semantic",
       "json_schema": {
         "minLength": 1,
@@ -1074,8 +1073,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "semantic",
       "json_schema": {
         "minLength": 1,
@@ -1088,8 +1087,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "semantic",
       "json_schema": {
         "format": "uri",
@@ -1102,8 +1101,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "semantic",
       "json_schema": {
         "minLength": 1,
@@ -1116,8 +1115,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "term-equivalent",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "semantic",
       "json_schema": {
         "items": {
@@ -1135,8 +1134,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "semantic",
       "json_schema": {
         "maxLength": 4096,
@@ -1150,8 +1149,8 @@
       "value_type": "JSON value constrained by json_schema"
     },
     {
-      "comparison_effect": "Checked only when the profile requires it or both contracts include it.",
       "comparison_operator": "equal",
+      "description": "Checked only when the profile requires it or both contracts include it.",
       "family": "uncertainty",
       "json_schema": {
         "items": {
@@ -1169,79 +1168,6 @@
       "value_type": "JSON value constrained by json_schema"
     }
   ],
-  "item_packs": [
-    {
-      "description": "Fields needed to exchange an amino-acid sequence with explicit identity, encoding, organism context and source provenance.",
-      "id": "protein-sequence",
-      "items": [
-        "semantic.concept",
-        "representation.kind",
-        "representation.alphabet",
-        "representation.encoding",
-        "identifiers.namespace",
-        "identifiers.namespace_version",
-        "biological_context.species",
-        "semantic.ontology_terms",
-        "semantic.qualifiers",
-        "origin.source_ref",
-        "origin.source_sha256",
-        "uncertainty.quality_flags"
-      ]
-    },
-    {
-      "description": "Fields needed to exchange a protein structure with explicit identity, coordinate representation, format, organism context and provenance.",
-      "id": "protein-structure",
-      "items": [
-        "semantic.concept",
-        "representation.kind",
-        "representation.structure_format",
-        "representation.coordinate_system",
-        "identifiers.namespace",
-        "identifiers.namespace_version",
-        "biological_context.species",
-        "origin.type",
-        "semantic.ontology_terms",
-        "semantic.qualifiers",
-        "representation.precision",
-        "origin.method",
-        "origin.method_version",
-        "origin.software",
-        "origin.software_version",
-        "origin.source_ref",
-        "origin.source_sha256",
-        "artifact.media_type",
-        "artifact.format",
-        "artifact.format_version",
-        "artifact.schema_ref",
-        "artifact.schema_sha256",
-        "artifact.sha256",
-        "uncertainty.quality_flags"
-      ]
-    },
-    {
-      "description": "Fields needed to exchange a canonical SMILES string with explicit canonicalisation, chemical-state choices and software provenance.",
-      "id": "canonical-smiles",
-      "items": [
-        "semantic.concept",
-        "representation.kind",
-        "representation.canonicalization",
-        "representation.normalization_tool",
-        "representation.normalization_version",
-        "semantic.ontology_terms",
-        "semantic.qualifiers",
-        "identifiers.structure_hash",
-        "representation.stereochemistry",
-        "representation.protonation_state",
-        "representation.tautomer_state",
-        "representation.formal_charge",
-        "representation.isotope_state",
-        "origin.software",
-        "origin.software_version",
-        "origin.source_ref",
-        "origin.source_sha256"
-      ]
-    }
-  ],
   "profiles": [
     {
       "applies_to": [
@@ -1249,45 +1175,19 @@
         "record",
         "artifact"
       ],
-      "description": "An amino-acid residue sequence representing a declared protein or polypeptide, with the identifier namespace, namespace version and organism context needed to interpret it.",
-      "domain": "proteome",
-      "domain_label": "Proteome and protein structure",
-      "id": "proteome/protein-sequence@0.1",
-      "item_packs": [
-        "protein-sequence"
-      ],
-      "label": "Protein Sequence",
-      "name": "protein-sequence",
-      "recommended_item_count": 5,
-      "ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-sequence/v0.1",
+      "description": "A SMILES representation designated canonical by a declared canonicalization method, software implementation and version for a specified chemical structure.\n",
+      "domain": "chemical",
+      "domain_label": "Chemical identity and representation",
+      "fields_under_review_count": 12,
+      "id": "chemical/canonical-smiles@0.1",
+      "intended_use": "Connecting a model output that provides canonical SMILES to a model input that expects the same declared canonicalization method and software version.\n",
+      "label": "Canonical SMILES",
+      "name": "canonical-smiles",
+      "ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/canonical-smiles/v0.1",
       "release_eligible": false,
-      "required_item_count": 7,
+      "required_field_count": 5,
       "review_status": "draft",
-      "sha256": "sha256:5000e512dc105f96c4ad4da65dc1305011522682f555b88a35213e8d20a5a179",
-      "stage": "V0_PILOT",
-      "technical_pre_review": "ready-for-external-review",
-      "version": "0.1.0"
-    },
-    {
-      "applies_to": [
-        "record",
-        "artifact"
-      ],
-      "description": "A three-dimensional structural representation of a declared protein or protein-containing assembly, including the identity, coordinate representation and format needed to interpret the structure.",
-      "domain": "proteome",
-      "domain_label": "Proteome and protein structure",
-      "id": "proteome/protein-structure@0.1",
-      "item_packs": [
-        "protein-structure"
-      ],
-      "label": "Protein Structure",
-      "name": "protein-structure",
-      "recommended_item_count": 16,
-      "ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-structure/v0.1",
-      "release_eligible": false,
-      "required_item_count": 8,
-      "review_status": "draft",
-      "sha256": "sha256:c5eb0991efa9754488ccb330a34abb429a3c0685418949f90e627a03f1872ba9",
+      "sha256": "sha256:23b027272cfbf6707b411535ec9404e9e6e6eceb4d52fb0c2066856ec120fe43",
       "stage": "V0_PILOT",
       "technical_pre_review": "ready-for-external-review",
       "version": "0.1.0"
@@ -1298,21 +1198,41 @@
         "record",
         "artifact"
       ],
-      "description": "A SMILES representation designated canonical by a declared canonicalization method, software implementation and version for a specified chemical structure.",
-      "domain": "chemical",
-      "domain_label": "Chemical identity and representation",
-      "id": "chemical/canonical-smiles@0.1",
-      "item_packs": [
-        "canonical-smiles"
-      ],
-      "label": "Canonical SMILES",
-      "name": "canonical-smiles",
-      "recommended_item_count": 12,
-      "ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/canonical-smiles/v0.1",
+      "description": "An amino-acid residue sequence representing a declared protein or polypeptide, with the identifier namespace, namespace version and organism context needed to interpret it.\n",
+      "domain": "proteome",
+      "domain_label": "Proteome and protein structure",
+      "fields_under_review_count": 5,
+      "id": "proteome/protein-sequence@0.1",
+      "intended_use": "Connecting a model output that provides an amino-acid sequence to a model input that consumes a protein or polypeptide sequence.\n",
+      "label": "Protein Sequence",
+      "name": "protein-sequence",
+      "ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-sequence/v0.1",
       "release_eligible": false,
-      "required_item_count": 5,
+      "required_field_count": 7,
       "review_status": "draft",
-      "sha256": "sha256:9e248a7712a0844b29c63b1a69af975aa46ea7a4d578bdb92564aaaa92133061",
+      "sha256": "sha256:9a5e2cb22fb179f166cbe06f06df358716799277e7c2f6d2be335a09be35064a",
+      "stage": "V0_PILOT",
+      "technical_pre_review": "ready-for-external-review",
+      "version": "0.1.0"
+    },
+    {
+      "applies_to": [
+        "record",
+        "artifact"
+      ],
+      "description": "A three-dimensional structural representation of a declared protein or protein-containing assembly, including the identity, coordinate representation and format needed to interpret the structure.\n",
+      "domain": "proteome",
+      "domain_label": "Proteome and protein structure",
+      "fields_under_review_count": 16,
+      "id": "proteome/protein-structure@0.1",
+      "intended_use": "Connecting a model output that provides a three-dimensional protein structure to a model input that consumes the same declared structural representation.\n",
+      "label": "Protein Structure",
+      "name": "protein-structure",
+      "ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-structure/v0.1",
+      "release_eligible": false,
+      "required_field_count": 8,
+      "review_status": "draft",
+      "sha256": "sha256:20f349af699436ced7573005022c28249cc81ea5c80fff5dbec84cebb2565b82",
       "stage": "V0_PILOT",
       "technical_pre_review": "ready-for-external-review",
       "version": "0.1.0"

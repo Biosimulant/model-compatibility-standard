@@ -8,7 +8,7 @@ import test from "node:test";
 import { compareContracts, normalizeContract, resolveContracts, validateContract } from "../dist/index.js";
 
 const ROOT = fileURLToPath(new URL("../../", import.meta.url));
-const SUITE = JSON.parse(readFileSync(join(ROOT, "scientific-checks", "v0.1", "cases.json"), "utf8"));
+const SUITE = JSON.parse(readFileSync(join(ROOT, "spec", "v0.1", "fixtures", "scientific.json"), "utf8"));
 const FIXTURES = join(ROOT, "spec", "v0.1", "fixtures", "profiles");
 const NOT_A_MATCH = "is not scientifically acceptable here";
 

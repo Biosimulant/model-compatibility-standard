@@ -1,5 +1,80 @@
 {
-  "candidate_recommended_items": [
+  "domain": "proteome",
+  "field_dispositions": {
+    "artifact.format": {
+      "disposition": "under-review"
+    },
+    "artifact.format_version": {
+      "disposition": "under-review"
+    },
+    "artifact.media_type": {
+      "disposition": "under-review"
+    },
+    "artifact.schema_ref": {
+      "disposition": "under-review"
+    },
+    "artifact.schema_sha256": {
+      "disposition": "under-review"
+    },
+    "artifact.sha256": {
+      "disposition": "under-review"
+    },
+    "biological_context.species": {
+      "disposition": "required"
+    },
+    "identifiers.namespace": {
+      "disposition": "required"
+    },
+    "identifiers.namespace_version": {
+      "disposition": "required"
+    },
+    "origin.method": {
+      "disposition": "under-review"
+    },
+    "origin.method_version": {
+      "disposition": "under-review"
+    },
+    "origin.software": {
+      "disposition": "under-review"
+    },
+    "origin.software_version": {
+      "disposition": "under-review"
+    },
+    "origin.source_ref": {
+      "disposition": "under-review"
+    },
+    "origin.source_sha256": {
+      "disposition": "under-review"
+    },
+    "origin.type": {
+      "disposition": "required"
+    },
+    "representation.coordinate_system": {
+      "disposition": "required"
+    },
+    "representation.kind": {
+      "disposition": "required"
+    },
+    "representation.precision": {
+      "disposition": "under-review"
+    },
+    "representation.structure_format": {
+      "disposition": "required"
+    },
+    "semantic.concept": {
+      "disposition": "required"
+    },
+    "semantic.ontology_terms": {
+      "disposition": "under-review"
+    },
+    "semantic.qualifiers": {
+      "disposition": "under-review"
+    },
+    "uncertainty.quality_flags": {
+      "disposition": "under-review"
+    }
+  },
+  "fields_under_review": [
     "artifact.format",
     "artifact.format_version",
     "artifact.media_type",
@@ -17,7 +92,6 @@
     "semantic.qualifiers",
     "uncertainty.quality_flags"
   ],
-  "domain": "proteome",
   "fixture_groups": {
     "direct": [
       "comparison-direct"
@@ -125,7 +199,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-structure@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-structure/v0.1",
-  "profile_sha256": "sha256:c5eb0991efa9754488ccb330a34abb429a3c0685418949f90e627a03f1872ba9",
+  "profile_sha256": "sha256:20f349af699436ced7573005022c28249cc81ea5c80fff5dbec84cebb2565b82",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -313,6 +387,57 @@
     "named domain-qualified scientific reviewer",
     "different named schema and compatibility reviewer",
     "domain owner"
+  ],
+  "scientific_examples": [
+    {
+      "check": "compare",
+      "conditions": "Both ports declare different coordinate systems and no conversion is supplied.",
+      "decision": "V0 protein-structure draft",
+      "expect": {
+        "status": "INCOMPATIBLE"
+      },
+      "id": "BMCS-V0-006",
+      "report_finding": "Contradictory coordinate representation",
+      "source_patch": {
+        "representation": {
+          "coordinate_system": "cartesian-angstrom"
+        }
+      },
+      "target_patch": {
+        "representation": {
+          "coordinate_system": "fractional-unit-cell"
+        }
+      },
+      "title": "Different coordinate systems are incompatible",
+      "why": "Coordinates in different systems cannot be consumed as if their numerical values have the same spatial meaning."
+    },
+    {
+      "check": "compare",
+      "conditions": "The source omits the structure origin required by the target contract.",
+      "decision": "V0 protein-structure draft",
+      "expect": {
+        "status": "UNKNOWN"
+      },
+      "id": "BMCS-V0-007",
+      "report_finding": "Missing structure provenance",
+      "source_remove": [
+        "origin.type"
+      ],
+      "title": "Missing structure origin is unknown",
+      "why": "Experimental, predicted and otherwise derived structures have different provenance and limitations."
+    },
+    {
+      "check": "compare",
+      "conditions": "Both ports make the same complete declarations for this profile.",
+      "decision": "V0 protein-structure draft",
+      "expect": {
+        "status": "EXACT"
+      },
+      "id": "BMCS-V0-009",
+      "report_finding": "Positive baseline",
+      "title": "Identical protein-structure contracts are exact matches",
+      "why": "The same complete structure declaration can connect without conversion or approval."
+    }
   ],
   "stage": "V0_PILOT",
   "technical_pre_review": {

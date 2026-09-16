@@ -64,20 +64,75 @@
       "target": "/contract/representation/normalization_version"
     }
   ],
-  "compatibility_notes": "Two ports match only when every field the target port requires is satisfied. If required information is missing, the result is UNKNOWN. Any conversion between ports must be a declared, versioned transformation.",
-  "description": "A SMILES representation designated canonical by a declared canonicalization method, software implementation and version for a specified chemical structure.",
+  "compatibility_notes": "Two ports match only when every field the target requires is satisfied. Missing required information returns UNKNOWN. Every conversion or inference must be declared and versioned.",
+  "description": "A SMILES representation designated canonical by a declared canonicalization method, software implementation and version for a specified chemical structure.\n",
   "domain": "chemical",
   "domain_label": "Chemical identity and representation",
   "extends": [],
+  "field_dispositions": {
+    "identifiers.structure_hash": {
+      "disposition": "under-review"
+    },
+    "origin.software": {
+      "disposition": "under-review"
+    },
+    "origin.software_version": {
+      "disposition": "under-review"
+    },
+    "origin.source_ref": {
+      "disposition": "under-review"
+    },
+    "origin.source_sha256": {
+      "disposition": "under-review"
+    },
+    "representation.canonicalization": {
+      "disposition": "required"
+    },
+    "representation.formal_charge": {
+      "disposition": "under-review"
+    },
+    "representation.isotope_state": {
+      "disposition": "under-review"
+    },
+    "representation.kind": {
+      "disposition": "required"
+    },
+    "representation.normalization_tool": {
+      "disposition": "required"
+    },
+    "representation.normalization_version": {
+      "disposition": "required"
+    },
+    "representation.protonation_state": {
+      "disposition": "under-review"
+    },
+    "representation.stereochemistry": {
+      "disposition": "under-review"
+    },
+    "representation.tautomer_state": {
+      "disposition": "under-review"
+    },
+    "semantic.concept": {
+      "disposition": "required"
+    },
+    "semantic.ontology_terms": {
+      "disposition": "under-review"
+    },
+    "semantic.qualifiers": {
+      "disposition": "under-review"
+    }
+  },
   "fixed": {
     "semantic": {
       "concept": "https://biosimulant.com/standards/model-compatibility/terms/chemical/canonical-smiles"
     }
   },
-  "item_packs": [
-    "canonical-smiles"
-  ],
+  "intended_use": "Connecting a model output that provides canonical SMILES to a model input that expects the same declared canonicalization method and software version.\n",
   "label": "Canonical SMILES",
+  "limitations": [
+    "It does not establish that two differently normalised strings represent the same chemical entity.",
+    "It does not silently resolve stereochemistry, protonation, tautomer, isotope or charge choices."
+  ],
   "name": "canonical-smiles",
   "profile_id": "chemical/canonical-smiles@0.1",
   "release_eligible": false,
@@ -155,7 +210,7 @@
     "What uses and scientific claims must this profile explicitly exclude?",
     "Which provenance and file-format details are necessary to interpret the data safely, and which are merely useful metadata?"
   ],
-  "scientific_claim": "This profile checks whether two model interfaces fit together. It doesn't show that a model is scientifically valid or clinically safe.",
+  "scientific_claim": "This profile checks whether two model interfaces fit together. It does not show that a model is scientifically valid or clinically safe.",
   "stage": "V0_PILOT",
   "technical_pre_review": {
     "checks": [

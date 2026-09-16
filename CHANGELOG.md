@@ -9,6 +9,14 @@
 
 ## Unreleased
 
+- Simplified profile authoring to one YAML file per profile. Removed the old
+  central catalogue source and field-pack layer; shared fields now live in
+  `source/fields.yaml` and scientific guards live with each profile.
+- Changed scientific review records and quantity-kind declarations to YAML.
+  Generated runtime and publication files remain JSON.
+- Added a complete plain-language email and pull-request route for proposing a
+  profile.
+
 - Added a plain-language repository and generated-bundle map. Removed the
   orphaned hosted-integration note from this repository; hosted MCP behavior is
   documented with the service that implements it.
@@ -40,8 +48,8 @@
 
 - Rewrote the README and the other docs in plain language, and made them match
   what the code actually does, including a list of what isn't implemented yet.
-- Reworded the text inside the spec: profile descriptions, notes and disclaimers,
-  pack descriptions, contract field notes, and reason-code messages. Fixed the
+- Reworded the text inside the spec: profile descriptions, notes, disclaimers,
+  contract field notes and reason-code messages. Fixed the
   casing of 24 profile labels (for example CRISPR, SMILES and InChI). Profile
   names and URLs are unchanged, but every profile sha256 and the bundle digest
   change.

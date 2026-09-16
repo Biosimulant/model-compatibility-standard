@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate spec/v0.1 from source/catalogue.review.json.
+"""Generate spec/v0.1 from the human-authored YAML under source/.
 
 Run with --check to confirm the committed spec/v0.1 is up to date without changing it.
 """
@@ -18,6 +18,8 @@ import tempfile
 from pathlib import Path
 from typing import Any
 
+import yaml
+
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -31,17 +33,49 @@ _units = importlib.util.module_from_spec(_units_spec)
 sys.modules["bmcs_units"] = _units
 _units_spec.loader.exec_module(_units)
 UnitError, parse_unit = _units.UnitError, _units.parse_unit
-SOURCE = ROOT / "source" / "catalogue.review.json"
+FIELDS_SOURCE = ROOT / "source" / "fields.yaml"
+PROFILES_SOURCE = ROOT / "source" / "profiles"
+QUANTITY_KINDS_SOURCE = ROOT / "source" / "quantity-kinds.yaml"
 
 QUANTITY_KINDS: dict[str, Any] = {}
-ITEM_INDEX: dict[str, Any] = {}
+FIELD_INDEX: dict[str, Any] = {}
 UCUM_TABLE: dict[str, Any] = {}
+
+
+class UniqueKeyLoader(yaml.SafeLoader):
+    """Safe YAML loader that rejects duplicate mapping keys."""
+
+
+def _construct_unique_mapping(loader: UniqueKeyLoader, node: yaml.nodes.MappingNode, deep: bool = False) -> dict[str, Any]:
+    mapping: dict[str, Any] = {}
+    for key_node, value_node in node.value:
+        key = loader.construct_object(key_node, deep=deep)
+        if key in mapping:
+            raise ValueError(f"duplicate YAML key: {key}")
+        mapping[key] = loader.construct_object(value_node, deep=deep)
+    return mapping
+
+
+UniqueKeyLoader.add_constructor(
+    yaml.resolver.BaseResolver.DEFAULT_MAPPING_TAG,
+    _construct_unique_mapping,
+)
+
+
+def load_yaml(path: Path) -> dict[str, Any]:
+    try:
+        value = yaml.load(path.read_text(encoding="utf-8"), Loader=UniqueKeyLoader)
+    except (yaml.YAMLError, ValueError) as error:
+        raise SystemExit(f"{path.relative_to(ROOT)}: invalid YAML: {error}") from error
+    if not isinstance(value, dict):
+        raise SystemExit(f"{path.relative_to(ROOT)}: expected one YAML mapping")
+    return value
 
 
 def load_declarations() -> None:
     global QUANTITY_KINDS, UCUM_TABLE
-    QUANTITY_KINDS = json.loads((SOURCE.parent / "quantity-kinds.json").read_text())["kinds"]
-    UCUM_TABLE = json.loads((SOURCE.parent / "vendor" / "ucum" / "ucum-table.json").read_text())
+    QUANTITY_KINDS = load_yaml(QUANTITY_KINDS_SOURCE)["kinds"]
+    UCUM_TABLE = json.loads((ROOT / "source" / "vendor" / "ucum" / "ucum-table.json").read_text())
 
 
 def example_species() -> str:
@@ -125,10 +159,6 @@ REPRESENTATION_KINDS = {
     "artifact": ["artifact", "file"],
 }
 
-ARRAY_LEAVES = {
-    "axes", "qualifiers", "mapping_refs", "ontology_terms", "quality_flags",
-}
-
 SET_LIKE_PATHS = [
     "/contract/profile_refs",
     "/contract/semantic/qualifiers",
@@ -173,6 +203,124 @@ def write_json(root: Path, relative: str, value: Any) -> None:
     path.write_bytes(dump_bytes(value))
 
 
+FIELD_DISPOSITIONS = {"required", "conditional", "recommended", "excluded", "under-review"}
+
+
+def load_fields() -> list[dict[str, Any]]:
+    source = load_yaml(FIELDS_SOURCE)
+    if source.get("schema_version") != "0.1":
+        raise SystemExit("source/fields.yaml: schema_version must be '0.1'")
+    defaults = source.get("defaults") or {}
+    raw_fields = source.get("fields")
+    if not isinstance(raw_fields, list) or not raw_fields:
+        raise SystemExit("source/fields.yaml: fields must be a non-empty list")
+    fields: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for raw in raw_fields:
+        if not isinstance(raw, dict):
+            raise SystemExit("source/fields.yaml: every field must be a mapping")
+        path = raw.get("path")
+        family = raw.get("family")
+        schema = raw.get("schema")
+        comparison = raw.get("comparison", defaults.get("comparison", "equal"))
+        if not isinstance(path, str) or not path or path in seen:
+            raise SystemExit(f"source/fields.yaml: invalid or duplicate field path: {path}")
+        if not isinstance(family, str) or not family:
+            raise SystemExit(f"source/fields.yaml: {path} needs a family")
+        if not isinstance(schema, dict) or not schema:
+            raise SystemExit(f"source/fields.yaml: {path} needs an explicit schema")
+        if comparison not in OPERATORS:
+            raise SystemExit(f"source/fields.yaml: {path} uses unknown comparison operator {comparison}")
+        seen.add(path)
+        fields.append(
+            {
+                "path": path,
+                "family": family,
+                "description": str(raw.get("description", defaults.get("description", ""))),
+                "schema": schema,
+                "comparison": comparison,
+                "ordered": bool(raw.get("ordered", defaults.get("ordered", True))),
+            }
+        )
+    return fields
+
+
+def load_profiles() -> list[dict[str, Any]]:
+    profiles: list[dict[str, Any]] = []
+    seen_ids: set[str] = set()
+    for path in sorted(PROFILES_SOURCE.rglob("*.yaml")):
+        relative = path.relative_to(PROFILES_SOURCE)
+        if len(relative.parts) != 2:
+            raise SystemExit(f"{path.relative_to(ROOT)}: profiles must be source/profiles/<domain>/<name>.yaml")
+        domain, filename = relative.parts
+        name = Path(filename).stem
+        source = load_yaml(path)
+        if source.get("schema_version") != "0.1":
+            raise SystemExit(f"{path.relative_to(ROOT)}: schema_version must be '0.1'")
+        field_source = source.get("fields")
+        if not isinstance(field_source, dict) or not field_source:
+            raise SystemExit(f"{path.relative_to(ROOT)}: fields must be a non-empty mapping")
+        dispositions: dict[str, dict[str, Any]] = {}
+        for field_path, decision in field_source.items():
+            if isinstance(decision, str):
+                decision = {"disposition": decision}
+            if not isinstance(field_path, str) or not isinstance(decision, dict):
+                raise SystemExit(f"{path.relative_to(ROOT)}: every field needs a disposition")
+            disposition = decision.get("disposition")
+            if disposition not in FIELD_DISPOSITIONS:
+                raise SystemExit(
+                    f"{path.relative_to(ROOT)}: {field_path} has invalid disposition {disposition}"
+                )
+            if disposition == "conditional" and not decision.get("when"):
+                raise SystemExit(f"{path.relative_to(ROOT)}: conditional field {field_path} needs 'when'")
+            dispositions[field_path] = dict(decision)
+        unknown = sorted(set(dispositions) - set(FIELD_INDEX))
+        if unknown:
+            raise SystemExit(f"{path.relative_to(ROOT)}: unknown fields: {', '.join(unknown)}")
+        required = [field_path for field_path, decision in dispositions.items() if decision["disposition"] == "required"]
+        if "semantic.concept" not in required:
+            raise SystemExit(f"{path.relative_to(ROOT)}: semantic.concept must be required")
+        examples = source.get("examples")
+        if not isinstance(examples, list) or not examples:
+            raise SystemExit(f"{path.relative_to(ROOT)}: examples must be a non-empty list")
+        profile_id = f"{domain}/{name}@0.1"
+        if profile_id in seen_ids:
+            raise SystemExit(f"{path.relative_to(ROOT)}: duplicate profile {profile_id}")
+        seen_ids.add(profile_id)
+        profiles.append(
+            {
+                "id": profile_id,
+                "ref": f"{STANDARD.rsplit('/', 1)[0]}/profiles/{domain}/{name}/v0.1",
+                "version": "0.1.0",
+                "domain": domain,
+                "domain_label": source.get("domain_label"),
+                "name": name,
+                "label": source.get("label"),
+                "description": source.get("description"),
+                "stage": "V0_PILOT",
+                "review_status": source.get("status", "draft"),
+                "applies_to": source.get("representations"),
+                "field_dispositions": dispositions,
+                "required_items": required,
+                "intended_use": source.get("intended_use"),
+                "limitations": source.get("limitations"),
+                "examples": examples,
+                "compatibility_notes": (
+                    "Two ports match only when every field the target requires is satisfied. "
+                    "Missing required information returns UNKNOWN. Every conversion or inference "
+                    "must be declared and versioned."
+                ),
+                "scientific_claim": (
+                    "This profile checks whether two model interfaces fit together. It does not "
+                    "show that a model is scientifically valid or clinically safe."
+                ),
+            }
+        )
+    if not profiles:
+        raise SystemExit("source/profiles must contain at least one active YAML profile")
+    return profiles
+
+
 def applicable_review_sections(profile: dict[str, Any]) -> set[str]:
     """Return every section a reviewer must include or explicitly exclude."""
 
@@ -182,13 +330,7 @@ def applicable_review_sections(profile: dict[str, Any]) -> set[str]:
 def profile_review_fields(profile: dict[str, Any]) -> list[str]:
     """Return every required or candidate field the reviewer must decide."""
 
-    source = json.loads(SOURCE.read_text())
-    pack_index = {str(pack["id"]): pack for pack in source.get("item_packs", [])}
-    fields = {str(path) for path in profile.get("required_items", [])}
-    for pack_name in profile.get("required_item_packs", []):
-        pack = pack_index.get(str(pack_name), {})
-        fields.update(str(path) for path in pack.get("items", []))
-    return sorted(fields)
+    return sorted(str(path) for path in profile.get("field_dispositions", {}))
 
 
 def review_evidence_errors(profile: dict[str, Any], evidence: dict[str, Any]) -> list[str]:
@@ -367,10 +509,10 @@ def load_profile_reviews(profiles: list[dict[str, Any]]) -> dict[str, dict[str, 
     reviews: dict[str, dict[str, Any]] = {}
     if not REVIEWS.exists():
         return reviews
-    for path in sorted(REVIEWS.rglob("*.json")):
-        if path.name.endswith(".template.json"):
+    for path in sorted(REVIEWS.rglob("*.yaml")):
+        if path.name.endswith(".template.yaml"):
             continue
-        evidence = json.loads(path.read_text())
+        evidence = load_yaml(path)
         profile_id = evidence.get("profile_id") if isinstance(evidence, dict) else None
         if not isinstance(profile_id, str) or profile_id not in profile_index:
             raise SystemExit(f"{path.relative_to(ROOT)}: profile_id is missing or unknown")
@@ -385,148 +527,9 @@ def load_profile_reviews(profiles: list[dict[str, Any]]) -> dict[str, dict[str, 
     return reviews
 
 
-def item_pointer(path: str) -> str:
+def field_pointer(path: str) -> str:
     clean = path.replace("[]", "").strip(".")
     return "/contract/" + "/".join(part for part in clean.split(".") if part)
-
-
-def item_operator(path: str, family: str) -> str:
-    if path.endswith(".unit") or path == "accepted_units":
-        return "unit-convertible"
-    if path.endswith(".axes") or path.endswith(".labels"):
-        return "labels-equal"
-    if "mapping" in path and path.endswith((".coverage", ".total")):
-        return "mapping-total"
-    if family == "biological_context":
-        return "context-compatible"
-    if path == "identifiers.namespace_version":
-        # Two releases of one namespace are not automatically contradictory: identifiers can be
-        # retired or merged between releases, so the comparison needs a pinned transition record.
-        return "namespace-version-compatible"
-    if path in {"semantic.concept", "semantic.subject", "identifiers.namespace"}:
-        return "equal"
-    if family in {"semantic", "identifiers"}:
-        return "term-equivalent"
-    if path.endswith(".sha256") or path.endswith(".digest"):
-        return "digest-equal"
-    return "equal"
-
-
-# Array items whose members are objects with declared properties. A member's schema comes from its
-# parent, never from guessing at the leaf name: "cardinality" means "1:many" here, not a count, and
-# deriving it from the name gave the member an integer schema while the parent said string.
-ARRAY_ITEM_PARENTS = (
-    "identifiers.mapping_refs",
-    "semantic.ontology_terms",
-    "dimensions.axes",
-)
-
-
-def item_json_schema(path: str) -> dict[str, Any]:
-    """Return a useful base type for a catalogue item.
-
-    Profiles can narrow this schema with ``const`` or ``enum``.  The base schema
-    deliberately validates representation, not scientific correctness.
-    """
-
-    for parent_path in ARRAY_ITEM_PARENTS:
-        prefix = f"{parent_path}[]."
-        if not path.startswith(prefix):
-            continue
-        member = path[len(prefix):]
-        items = item_json_schema(parent_path).get("items") or {}
-        for candidate in items.get("anyOf") or [items]:
-            declared = (candidate.get("properties") or {}).get(member)
-            if declared is not None:
-                return dict(declared)
-
-    leaf = path.replace("[]", "").split(".")[-1]
-    if leaf in ARRAY_LEAVES:
-        if leaf == "axes":
-            return {
-                "type": "array",
-                "minItems": 1,
-                "items": {
-                    "anyOf": [
-                        {"type": "string", "minLength": 1},
-                        {
-                            "type": "object",
-                            "required": ["name"],
-                            "properties": {
-                                "name": {"type": "string", "minLength": 1},
-                                "meaning": {"type": "string", "minLength": 1},
-                                "size": {"type": "integer", "minimum": 0},
-                                "unit": {"type": "string", "minLength": 1},
-                                "ordering": {"type": "string", "minLength": 1},
-                                "dynamic": {"type": "boolean"},
-                                "labels_ref": {"type": "string", "format": "uri"},
-                                "labels_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
-                                "coordinates_ref": {"type": "string", "format": "uri"},
-                            },
-                            "additionalProperties": False,
-                        },
-                    ]
-                },
-            }
-        if leaf == "ontology_terms":
-            return {
-                "type": "array",
-                "minItems": 1,
-                "items": {
-                    "type": "object",
-                    "required": ["uri", "ontology", "version"],
-                    "properties": {
-                        "uri": {"type": "string", "format": "uri"},
-                        "ontology": {"type": "string", "minLength": 1},
-                        "version": {"type": "string", "minLength": 1},
-                        "label": {"type": "string", "minLength": 1},
-                        "relation": {"type": "string", "minLength": 1},
-                    },
-                    "additionalProperties": False,
-                },
-            }
-        if leaf == "mapping_refs":
-            return {
-                "type": "array",
-                "minItems": 1,
-                "items": {
-                    "type": "object",
-                    "required": ["ref", "sha256", "source_namespace", "target_namespace", "release"],
-                    "properties": {
-                        "ref": {"type": "string", "format": "uri"},
-                        "sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
-                        "source_namespace": {"type": "string", "minLength": 1},
-                        "target_namespace": {"type": "string", "minLength": 1},
-                        "release": {"type": "string", "minLength": 1},
-                        "coverage": {"type": "number", "minimum": 0, "maximum": 1},
-                        "cardinality": {"type": "string", "minLength": 1},
-                        "license": {"type": "string", "minLength": 1},
-                    },
-                    "additionalProperties": False,
-                },
-            }
-        if leaf in {"qualifiers", "quality_flags"}:
-            return {"type": "array", "minItems": 1, "uniqueItems": True, "items": {"type": "string", "minLength": 1}}
-        return {"type": "array", "minItems": 1}
-    if leaf in {"sha256", "digest", "schema_sha256", "labels_sha256", "source_sha256", "contract_sha256"}:
-        return {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"}
-    if leaf.endswith("_ref") or leaf in {"ref", "url", "uri"}:
-        return {"type": "string", "format": "uri"}
-    if leaf == "species":
-        return {
-            "type": "string",
-            "anyOf": [
-                {"const": "any"},
-                {"pattern": "^NCBITaxon:[1-9][0-9]*$"},
-            ],
-        }
-    if leaf == "scale":
-        return {"enum": ["nominal", "ordinal", "interval", "ratio", "proportion", "probability", "count"]}
-    if leaf == "transform":
-        return {"enum": ["identity", "log2", "log10", "ln", "logit"]}
-    if leaf in {"unit", "time_unit"}:
-        return {"type": "string", "minLength": 1, "maxLength": 128}
-    return {"type": "string", "minLength": 1, "maxLength": 4096}
 
 
 def profile_concept(profile: dict[str, Any]) -> str:
@@ -577,7 +580,7 @@ def policy_layer(path: str) -> bool:
 
 
 def needs_snapshot(path: str) -> bool:
-    return item_operator(path, path.split(".")[0]) in SNAPSHOT_OPERATORS
+    return (FIELD_INDEX.get(path) or {}).get("comparison_operator") in SNAPSHOT_OPERATORS
 
 
 def reason_code_for(path: str) -> str:
@@ -624,7 +627,7 @@ def requirement_schema(profile: dict[str, Any], path: str) -> dict[str, Any]:
     allowed = get_path(profile_allowed(profile), path)
     if isinstance(allowed, list) and allowed:
         return {"enum": allowed}
-    return item_json_schema(path)
+    return dict((FIELD_INDEX.get(path) or {}).get("json_schema") or {})
 
 
 def measurement_unit() -> str:
@@ -693,7 +696,7 @@ def example_value(path: str, profile: dict[str, Any] | None = None) -> Any:
         # An array of pinned mappings, not a label. Each entry is built from the
         # catalogue's own sub-item definitions, so the example cannot drift from their schemas.
         prefix = "identifiers.mapping_refs[]."
-        entry = {sub[len(prefix):]: example_value(sub) for sub in ITEM_INDEX if sub.startswith(prefix)}
+        entry = {sub[len(prefix):]: example_value(sub) for sub in FIELD_INDEX if sub.startswith(prefix)}
         return [entry] if entry else []
     if leaf.endswith("sha256") or leaf in {"digest", "structure_hash"}:
         # A digest item has a pattern to satisfy; "example-sha256" is not a digest.
@@ -718,7 +721,7 @@ def example_value(path: str, profile: dict[str, Any] | None = None) -> Any:
         return "explicit"
     # Inferring a value from the item's schema comes last so explicit scientific examples win over
     # the first member of a generic enum.
-    derived = example_from_schema((ITEM_INDEX.get(path) or {}).get("json_schema"), leaf)
+    derived = example_from_schema((FIELD_INDEX.get(path) or {}).get("json_schema"), leaf)
     if derived is not None:
         return derived
     return f"example-{leaf.replace('_', '-')}"
@@ -901,7 +904,7 @@ def set_path(document: dict[str, Any], path: str, value: Any) -> None:
         current[parts[-1]] = value
 
 
-def review_questions(profile: dict[str, Any], candidate_items: list[str]) -> list[str]:
+def review_questions(profile: dict[str, Any], fields_under_review: list[str]) -> list[str]:
     required = set(profile.get("required_items", []))
     questions = [
         f"Does the proposed concept define {profile['label']} precisely enough for the stated use, without including scientifically different data?",
@@ -917,7 +920,7 @@ def review_questions(profile: dict[str, Any], candidate_items: list[str]) -> lis
         questions.append("Which identifier namespaces and releases are permitted, and when is a pinned mapping required between them?")
     if "biological_context.species" in required:
         questions.append("When must organism identity match exactly, and are any cross-species connections scientifically defensible?")
-    if any(path.startswith("origin.") or path.startswith("artifact.") for path in candidate_items):
+    if any(path.startswith("origin.") or path.startswith("artifact.") for path in fields_under_review):
         questions.append("Which provenance and file-format details are necessary to interpret the data safely, and which are merely useful metadata?")
     return questions
 
@@ -930,7 +933,7 @@ def gating_pointer(path: str) -> str:
     representation object.
     """
 
-    return "/contract/representation" if path == "representation.kind" else item_pointer(path)
+    return "/contract/representation" if path == "representation.kind" else field_pointer(path)
 
 
 def internal_quality_errors(profile: dict[str, Any], definition: dict[str, Any]) -> list[str]:
@@ -975,19 +978,19 @@ def internal_quality_errors(profile: dict[str, Any], definition: dict[str, Any])
     return errors
 
 
-def contract_schema(items: list[dict[str, Any]]) -> dict[str, Any]:
+def contract_schema(fields: list[dict[str, Any]]) -> dict[str, Any]:
     families: dict[str, dict[str, dict[str, Any]]] = {}
-    for item in items:
-        path = str(item["path"])
+    for field in fields:
+        path = str(field["path"])
         if path.startswith(("compatibility.", "profiles[].")) or "." not in path:
             continue
         family, rest = path.replace("[]", "").split(".", 1)
         if family in {"contract", "io", "accepted_profiles"}:
             continue
         key = rest.split(".", 1)[0]
-        # Prefer the schema for the direct family member. A deeper catalogue
-        # item documents part of that member rather than replacing its shape.
-        candidate = item.get("json_schema", {}) if "." not in rest else {"type": "object"}
+        # Prefer the schema for the direct family member. A deeper field
+        # documents part of that member rather than replacing its shape.
+        candidate = field.get("json_schema", {}) if "." not in rest else {"type": "object"}
         current = families.setdefault(family, {}).get(key)
         if current is None or "." not in rest:
             families[family][key] = candidate
@@ -1025,7 +1028,7 @@ def contract_schema(items: list[dict[str, Any]]) -> dict[str, Any]:
     }
 
 
-def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
+def schemas(fields: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     ref = {
         "$schema": "https://json-schema.org/draft/2020-12/schema",
         "$id": f"{STANDARD}/schemas/profile-reference.schema.json",
@@ -1065,7 +1068,8 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
         "type": "object",
         "required": [
             "$id", "profile_id", "version", "domain", "name", "label", "description",
-            "stage", "review", "applies_to", "item_packs", "requirements",
+            "stage", "review", "applies_to", "intended_use", "limitations",
+            "field_dispositions", "requirements",
             "comparison_rules", "transformation_policy", "scientific_claim",
             "technical_pre_review", "review_questions",
         ],
@@ -1121,7 +1125,24 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "extends": {"type": "array", "uniqueItems": True, "items": {"type": "string", "format": "uri"}},
             "fixed": {"type": "object"},
             "allowed": {"type": "object"},
-            "item_packs": {"type": "array", "uniqueItems": True, "items": {"type": "string"}},
+            "intended_use": {"type": "string", "minLength": 20},
+            "limitations": {
+                "type": "array", "minItems": 1, "items": {"type": "string", "minLength": 10}
+            },
+            "field_dispositions": {
+                "type": "object",
+                "minProperties": 1,
+                "additionalProperties": {
+                    "type": "object",
+                    "required": ["disposition"],
+                    "properties": {
+                        "disposition": {"enum": sorted(FIELD_DISPOSITIONS)},
+                        "when": {"type": ["string", "object"]},
+                        "note": {"type": "string"},
+                    },
+                    "additionalProperties": False,
+                },
+            },
             "requirements": {
                 "type": "array",
                 "items": {
@@ -1408,15 +1429,14 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     )
     catalogue = simple(
         "catalogue", "Profile Catalogue",
-        ["schema_version", "standard", "counts", "item_definitions", "item_packs", "profiles"],
+        ["schema_version", "standard", "counts", "fields", "profiles"],
         {
             "schema_version": {"const": "0.1"}, "standard": {"const": STANDARD},
             "status": {"type": "string"}, "bundle_sha256": {"type": ["string", "null"]},
             "counts": {"type": "object"},
             "review_counts": {"type": "object"},
             "technical_pre_review_counts": {"type": "object"},
-            "item_definitions": {"type": "array", "items": {"type": "object"}},
-            "item_packs": {"type": "array", "items": {"type": "object"}},
+            "fields": {"type": "array", "items": {"type": "object"}},
             "profiles": {"type": "array", "items": {"type": "object"}},
         },
     )
@@ -1425,7 +1445,8 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
         [
             "profile_id", "profile_ref", "profile_sha256", "label", "domain", "stage",
             "technical_pre_review", "proposed_fixed_values", "proposed_allowed_values",
-            "proposed_requirements", "proposed_comparison_rules", "candidate_recommended_items",
+            "field_dispositions", "fields_under_review", "proposed_requirements",
+            "proposed_comparison_rules", "scientific_examples",
             "questions_for_reviewers", "internal_quality_errors", "required_external_approvals",
             "fixture_names", "fixture_groups", "non_claim",
         ],
@@ -1439,9 +1460,11 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "technical_pre_review": {"type": "object"},
             "proposed_fixed_values": {"type": "object"},
             "proposed_allowed_values": {"type": "object"},
+            "field_dispositions": {"type": "object", "minProperties": 1},
+            "fields_under_review": {"type": "array", "uniqueItems": True, "items": {"type": "string"}},
             "proposed_requirements": {"type": "array", "minItems": 1, "items": {"type": "object"}},
             "proposed_comparison_rules": {"type": "array", "minItems": 1, "items": {"$ref": "rule.schema.json"}},
-            "candidate_recommended_items": {"type": "array", "uniqueItems": True, "items": {"type": "string"}},
+            "scientific_examples": {"type": "array", "minItems": 1, "items": {"type": "object"}},
             "questions_for_reviewers": {"type": "array", "minItems": 5, "uniqueItems": True, "items": {"type": "string", "minLength": 20}},
             "internal_quality_errors": {"type": "array", "items": {"type": "string"}},
             "required_external_approvals": {"type": "array", "minItems": 3, "uniqueItems": True, "items": {"type": "string"}},
@@ -1465,7 +1488,7 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
     return {
         "profile-reference": ref,
         "rule": rule,
-        "port-contract": contract_schema(items),
+        "port-contract": contract_schema(fields),
         "profile-definition": profile,
         "manifest-extension": manifest_extension,
         "catalogue": catalogue,
@@ -1488,12 +1511,31 @@ def schemas(items: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
 
 def build(root: Path) -> None:
     load_declarations()
-    source = json.loads(SOURCE.read_text())
-    profiles = source["profiles"]
-    items = source["item_definitions"]
-    packs = source["item_packs"]
-    if not profiles:
-        raise SystemExit("source/catalogue.review.json must contain at least one active profile")
+    raw_fields = load_fields()
+    enriched_fields: list[dict[str, Any]] = []
+    field_index: dict[str, dict[str, Any]] = {}
+    for raw in raw_fields:
+        field = {
+            "path": raw["path"],
+            "family": raw["family"],
+            "description": raw["description"],
+            "comparison_operator": raw["comparison"],
+            "missing_behavior": "unknown",
+            "json_schema": raw["schema"],
+            "value_type": "JSON value constrained by json_schema",
+            "ordered": raw["ordered"],
+            "requirement": "profile-dependent",
+        }
+        REASON_CODES.setdefault(
+            reason_code_for(str(field["path"])),
+            f"The value at {field['path']} is incompatible with the target profile.",
+        )
+        enriched_fields.append(field)
+        field_index[str(field["path"])] = field
+    FIELD_INDEX.clear()
+    FIELD_INDEX.update(field_index)
+
+    profiles = load_profiles()
     reviews = load_profile_reviews(profiles)
     for profile in profiles:
         if profile.get("review_status") == "reviewed" and profile["id"] not in reviews:
@@ -1501,28 +1543,9 @@ def build(root: Path) -> None:
                 f"{profile['id']} is marked reviewed but has no complete file under source/reviews"
             )
 
-    enriched_items: list[dict[str, Any]] = []
-    item_index: dict[str, dict[str, Any]] = {}
-    for raw in items:
-        item = dict(raw)
-        item["comparison_operator"] = item_operator(str(item["path"]), str(item["family"]))
-        item["missing_behavior"] = "unknown"
-        item["json_schema"] = item_json_schema(str(item["path"]))
-        item["value_type"] = "JSON value constrained by json_schema"
-        item["ordered"] = item_pointer(str(item["path"])) not in SET_LIKE_PATHS
-        REASON_CODES.setdefault(
-            reason_code_for(str(item["path"])),
-            f"The value at {item['path']} is incompatible with the target profile.",
-        )
-        enriched_items.append(item)
-        item_index[str(item["path"])] = item
-    ITEM_INDEX.clear()
-    ITEM_INDEX.update(item_index)
-
     definitions: list[dict[str, Any]] = []
     summaries: list[dict[str, Any]] = []
     review_packets: list[dict[str, Any]] = []
-    pack_index = {str(pack["id"]): pack for pack in packs}
     for raw in profiles:
         review_evidence = reviews.get(raw["id"])
         release_eligible = review_evidence is not None
@@ -1557,22 +1580,24 @@ def build(root: Path) -> None:
                 "fixture_review": review_evidence["fixture_review"],
             }
         raw = dict(raw, required_items=effective_required_items(raw))
-        requirements = [
-            {"path": path, "level": "required", "schema": requirement_schema(raw, path)}
-            for path in raw["required_items"]
-        ]
-        required_paths = set(raw["required_items"])
-        candidate_paths: set[str] = set()
-        for pack_name in raw["required_item_packs"]:
-            candidate_paths.update(str(path) for path in pack_index[pack_name]["items"])
-        candidate_recommended_items = [
+        requirements: list[dict[str, Any]] = []
+        for path, decision in raw["field_dispositions"].items():
+            disposition = decision["disposition"]
+            if disposition not in {"required", "conditional", "recommended"}:
+                continue
+            requirement = {
+                "path": path,
+                "level": disposition,
+                "schema": requirement_schema(raw, path),
+            }
+            if disposition == "conditional":
+                requirement["when"] = decision["when"]
+            requirements.append(requirement)
+        fields_under_review = sorted(
             path
-            for path in sorted(candidate_paths - required_paths)
-            if path in item_index and item_index[path].get("family") not in {"existing-io", "envelope"}
-        ]
-        # Candidate fields stay in the review packet instead of being duplicated as non-gating
-        # profile requirements. The scientist decides whether each one should become required,
-        # conditional, recommended or excluded.
+            for path, decision in raw["field_dispositions"].items()
+            if decision["disposition"] == "under-review"
+        )
         rules = [
             {
                 # representation.kind is compared by conditional equivalence against the whole
@@ -1580,7 +1605,7 @@ def build(root: Path) -> None:
                 # a re-encoding lossless are declared.
                 "source": gating_pointer(path),
                 "target": gating_pointer(path),
-                "operator": "representation-equivalent" if path == "representation.kind" else item_index.get(path, {}).get("comparison_operator", "equal"),
+                "operator": "representation-equivalent" if path == "representation.kind" else field_index.get(path, {}).get("comparison_operator", "equal"),
                 "missing": "unknown",
                 "severity": "error",
                 "reason_code": reason_code_for(path),
@@ -1594,7 +1619,7 @@ def build(root: Path) -> None:
         for entry in rules:
             # Governance rules are reported separately from technical compatibility.
             entry["layer"] = "policy" if entry["target"].startswith("/contract/security/") else "technical"
-        questions = review_questions(raw, candidate_recommended_items)
+        questions = review_questions(raw, fields_under_review)
         definition = {
             "$schema": f"{STANDARD}/schemas/profile-definition.schema.json",
             "$id": raw["ref"],
@@ -1632,7 +1657,9 @@ def build(root: Path) -> None:
             "extends": [],
             "fixed": profile_fixed(raw),
             "allowed": profile_allowed(raw),
-            "item_packs": raw["required_item_packs"],
+            "intended_use": raw["intended_use"],
+            "limitations": raw["limitations"],
+            "field_dispositions": raw["field_dispositions"],
             "requirements": requirements,
             "comparison_rules": rules,
             "transformation_policy": {"lossless": "allow", "lossy": "approval", "inference": "approval"},
@@ -1655,9 +1682,11 @@ def build(root: Path) -> None:
                 "technical_pre_review": definition["technical_pre_review"],
                 "proposed_fixed_values": definition["fixed"],
                 "proposed_allowed_values": definition["allowed"],
+                "field_dispositions": raw["field_dispositions"],
+                "fields_under_review": fields_under_review,
                 "proposed_requirements": requirements,
-                "candidate_recommended_items": candidate_recommended_items,
                 "proposed_comparison_rules": rules,
+                "scientific_examples": raw["examples"],
                 "questions_for_reviewers": questions,
                 "internal_quality_errors": quality_errors,
                 "required_external_approvals": [
@@ -1676,13 +1705,13 @@ def build(root: Path) -> None:
                 "stage": raw["stage"], "review_status": review["status"],
                 "release_eligible": release_eligible, "applies_to": raw["applies_to"],
                 "technical_pre_review": definition["technical_pre_review"]["status"],
-                "required_item_count": len(raw["required_items"]),
-                "recommended_item_count": len(candidate_recommended_items),
-                "item_packs": raw["required_item_packs"],
+                "required_field_count": len(raw["required_items"]),
+                "fields_under_review_count": len(fields_under_review),
+                "intended_use": raw["intended_use"],
             }
         )
 
-    for name, schema in schemas(enriched_items).items():
+    for name, schema in schemas(enriched_fields).items():
         write_json(root, f"schemas/{name}.schema.json", schema)
 
     write_json(root, "rules/operators.json", {"standard": STANDARD, "operators": OPERATORS})
@@ -1691,8 +1720,7 @@ def build(root: Path) -> None:
     write_json(root, "rules/normalization.json", {"standard": STANDARD, "canonicalization": "RFC8785", "set_like_paths": SET_LIKE_PATHS})
     write_json(root, "rules/units.json", {"standard": STANDARD, **UCUM_TABLE})
     write_json(root, "rules/quantity-kinds.json", {"standard": STANDARD, "id_prefix": f"{STANDARD.rsplit('/', 1)[0]}/quantity-kinds/", "kinds": QUANTITY_KINDS})
-    write_json(root, "catalogue/items.json", {"schema_version": "0.1", "standard": STANDARD, "items": enriched_items})
-    write_json(root, "catalogue/item-packs.json", {"schema_version": "0.1", "standard": STANDARD, "item_packs": packs})
+    write_json(root, "catalogue/fields.json", {"schema_version": "0.1", "standard": STANDARD, "fields": enriched_fields})
     # The concept IRI is minted outside the versioned profile document so its scientific meaning
     # does not change merely because the profile contract receives a new version.
     terms = [
@@ -1750,6 +1778,23 @@ def build(root: Path) -> None:
                 {"name": "lossless-unit", "source": {"measurement": {"unit": "nmol/L"}}, "target": {"measurement": {"unit": "umol/L"}}, "status": "LOSSLESS_CONVERSION_AVAILABLE"},
                 {"name": "context-contradiction", "source": {"biological_context": {"compartment": "extracellular"}}, "target": {"biological_context": {"compartment": "intracellular"}}, "status": "INCOMPATIBLE"},
             ]
+        },
+    )
+    scientific_cases: list[dict[str, Any]] = []
+    for profile in profiles:
+        profile_path = f"{profile['domain']}/{profile['name']}"
+        for example in profile["examples"]:
+            scientific_cases.append({"kind": "guard", "profile": profile_path, **example})
+    write_json(
+        root,
+        "fixtures/scientific.json",
+        {
+            "schema_version": "0.1",
+            "title": "Scientific guards for the active v0 pilot profiles",
+            "purpose": "Language-neutral scientific expectations authored with each active profile.",
+            "profile_ref_prefix": f"{STANDARD.rsplit('/', 1)[0]}/profiles/",
+            "profile_ref_suffix": "/v0.1",
+            "cases": scientific_cases,
         },
     )
 
@@ -1927,7 +1972,7 @@ def build(root: Path) -> None:
         "standard": STANDARD,
         "status": "release-candidate" if ga_ready else "implementation-draft",
         "bundle_sha256": None,
-        "counts": {"profiles": len(summaries), "item_definitions": len(enriched_items), "item_packs": len(packs)},
+        "counts": {"profiles": len(summaries), "fields": len(enriched_fields)},
         "review_counts": {
             "reviewed": reviewed_count,
             "remaining": len(summaries) - reviewed_count,
@@ -1936,8 +1981,7 @@ def build(root: Path) -> None:
             "ready_for_external_review": ready_for_external_review,
             "needs_work": len(summaries) - ready_for_external_review,
         },
-        "item_definitions": enriched_items,
-        "item_packs": packs,
+        "fields": enriched_fields,
         "profiles": summaries,
     }
     write_json(root, "catalogue/catalogue.json", catalogue)
@@ -1964,8 +2008,7 @@ def build(root: Path) -> None:
         "canonicalization": "RFC8785", "files": files,
         "counts": {
             "profiles": len(summaries),
-            "item_definitions": len(enriched_items),
-            "item_packs": len(packs),
+            "fields": len(enriched_fields),
         },
         "ga_ready": ga_ready,
         "ga_blockers": [] if ga_ready else [
@@ -1983,7 +2026,7 @@ def compare_trees(left: Path, right: Path) -> list[str]:
 
 
 def main() -> None:
-    parser = argparse.ArgumentParser(description="Generate spec/v0.1 from source/catalogue.review.json.")
+    parser = argparse.ArgumentParser(description="Generate spec/v0.1 from the YAML files under source/.")
     parser.add_argument(
         "--check",
         action="store_true",

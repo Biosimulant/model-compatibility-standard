@@ -3,6 +3,8 @@ import json
 from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
+import pytest
+import yaml
 
 ROOT = Path(__file__).resolve().parents[2]
 SPEC = importlib.util.spec_from_file_location(
@@ -17,18 +19,35 @@ required_fixture_groups = build_standard.required_fixture_groups
 profile_review_fields = build_standard.profile_review_fields
 
 
+def test_yaml_source_rejects_duplicate_keys():
+    with pytest.raises(ValueError, match="duplicate YAML key"):
+        yaml.load("fields:\n  semantic.concept: required\n  semantic.concept: excluded\n", Loader=build_standard.UniqueKeyLoader)
+
+
 def test_review_template_matches_its_json_schema():
     schema = json.loads((ROOT / "source" / "profile-review.schema.json").read_text())
-    template = json.loads(
-        (ROOT / "source" / "reviews" / "profile-review.template.json").read_text()
+    template = yaml.safe_load(
+        (ROOT / "source" / "reviews" / "profile-review.template.yaml").read_text()
     )
     errors = list(Draft202012Validator(schema, format_checker=FormatChecker()).iter_errors(template))
     assert errors == []
 
 
 def _profile():
-    catalogue = json.loads((ROOT / "source" / "catalogue.review.json").read_text())
-    return catalogue["profiles"][0]
+    build_standard.load_declarations()
+    fields = build_standard.load_fields()
+    build_standard.FIELD_INDEX.clear()
+    build_standard.FIELD_INDEX.update(
+        {
+            field["path"]: {
+                **field,
+                "comparison_operator": field["comparison"],
+                "json_schema": field["schema"],
+            }
+            for field in fields
+        }
+    )
+    return build_standard.load_profiles()[0]
 
 
 def _valid_evidence(profile):

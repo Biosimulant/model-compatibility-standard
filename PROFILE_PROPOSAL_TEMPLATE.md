@@ -59,7 +59,8 @@ Use one disposition for every field the profile may need:
 - `required` — the contract cannot be interpreted safely without it;
 - `conditional` — required under a stated condition;
 - `recommended` — useful, but not a condition of compatibility; or
-- `excluded` — deliberately outside the profile.
+- `excluded` — deliberately outside the profile; or
+- `under-review` — a draft question the scientific reviewer must resolve.
 
 | Contract field or scientific fact | Disposition | Condition, if any | Reason and source |
 |---|---|---|---|

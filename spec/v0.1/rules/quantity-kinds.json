@@ -18,7 +18,7 @@
       "forbidden_unit_properties": [
         "x-ray attenuation"
       ],
-      "label": "Instrument intensity in arbitrary units, comparable only within one normalisation"
+      "label": "Instrument intensity in arbitrary units"
     },
     "association-rate-constant": {
       "canonical_unit": "L/(mol.s)",

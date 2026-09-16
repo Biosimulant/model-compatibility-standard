@@ -1,12 +1,50 @@
 {
-  "candidate_recommended_items": [
+  "domain": "proteome",
+  "field_dispositions": {
+    "biological_context.species": {
+      "disposition": "required"
+    },
+    "identifiers.namespace": {
+      "disposition": "required"
+    },
+    "identifiers.namespace_version": {
+      "disposition": "required"
+    },
+    "origin.source_ref": {
+      "disposition": "under-review"
+    },
+    "origin.source_sha256": {
+      "disposition": "under-review"
+    },
+    "representation.alphabet": {
+      "disposition": "required"
+    },
+    "representation.encoding": {
+      "disposition": "required"
+    },
+    "representation.kind": {
+      "disposition": "required"
+    },
+    "semantic.concept": {
+      "disposition": "required"
+    },
+    "semantic.ontology_terms": {
+      "disposition": "under-review"
+    },
+    "semantic.qualifiers": {
+      "disposition": "under-review"
+    },
+    "uncertainty.quality_flags": {
+      "disposition": "under-review"
+    }
+  },
+  "fields_under_review": [
     "origin.source_ref",
     "origin.source_sha256",
     "semantic.ontology_terms",
     "semantic.qualifiers",
     "uncertainty.quality_flags"
   ],
-  "domain": "proteome",
   "fixture_groups": {
     "direct": [
       "comparison-direct"
@@ -104,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-sequence@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-sequence/v0.1",
-  "profile_sha256": "sha256:5000e512dc105f96c4ad4da65dc1305011522682f555b88a35213e8d20a5a179",
+  "profile_sha256": "sha256:9a5e2cb22fb179f166cbe06f06df358716799277e7c2f6d2be335a09be35064a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -276,6 +314,57 @@
     "named domain-qualified scientific reviewer",
     "different named schema and compatibility reviewer",
     "domain owner"
+  ],
+  "scientific_examples": [
+    {
+      "check": "compare",
+      "conditions": "Both ports make the same complete declarations for this profile.",
+      "decision": "V0 protein-sequence draft",
+      "expect": {
+        "status": "EXACT"
+      },
+      "id": "BMCS-V0-001",
+      "report_finding": "Positive baseline",
+      "title": "Identical protein-sequence contracts are exact matches",
+      "why": "The same complete sequence declaration can connect without conversion or approval."
+    },
+    {
+      "check": "compare",
+      "conditions": "Both ports declare different alphabets and no translation step is supplied.",
+      "decision": "V0 protein-sequence draft",
+      "expect": {
+        "status": "INCOMPATIBLE"
+      },
+      "id": "BMCS-V0-002",
+      "report_finding": "Contradictory sequence representation",
+      "source_patch": {
+        "representation": {
+          "alphabet": "amino-acid"
+        }
+      },
+      "target_patch": {
+        "representation": {
+          "alphabet": "nucleotide"
+        }
+      },
+      "title": "Different sequence alphabets are incompatible",
+      "why": "Amino-acid and nucleotide strings do not have the same biological interpretation."
+    },
+    {
+      "check": "compare",
+      "conditions": "The source omits the encoding required by the target contract.",
+      "decision": "V0 protein-sequence draft",
+      "expect": {
+        "status": "UNKNOWN"
+      },
+      "id": "BMCS-V0-003",
+      "report_finding": "Missing required representation information",
+      "source_remove": [
+        "representation.encoding"
+      ],
+      "title": "Missing sequence encoding is unknown",
+      "why": "The sequence cannot be interpreted reliably when its encoding is not declared."
+    }
   ],
   "stage": "V0_PILOT",
   "technical_pre_review": {

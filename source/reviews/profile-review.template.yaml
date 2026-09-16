@@ -1,0 +1,47 @@
+profile_id: domain/profile-name@0.1
+authors: [Profile author]
+scientific_reviewer: Independent scientific reviewer
+schema_reviewer: Independent schema reviewer
+domain_owner: Domain owner
+reviewed_at: "2026-09-15"
+
+sources:
+  - id: doi:replace-me
+    title: Authoritative source used for this profile
+    kind: primary-publication
+    url: https://doi.org/replace-me
+    version: published version
+    sha256: sha256:0000000000000000000000000000000000000000000000000000000000000000
+
+intended_use: Explain the exact data and model-port use that this profile covers.
+limitations:
+  - Explain an important use, population, assay or scientific claim this profile does not cover.
+
+decisions:
+  structure: {disposition: included, rationale: Explain which structural model.yaml fields are necessary and why they are not duplicated in the contract., field_paths: [signal_type, dtype, shape], source_ids: [doi:replace-me]}
+  semantic: {disposition: included, rationale: Explain why these semantic fields and comparison rules are right for this profile., field_paths: [semantic.concept, semantic.subject], source_ids: [doi:replace-me]}
+  representation: {disposition: included, rationale: Explain which representations are permitted and when a visible transformation is required., field_paths: [representation.kind], source_ids: [doi:replace-me]}
+  dimensions: {disposition: excluded, rationale: Explain why dimension and axis fields are not needed or change this to included., field_paths: [], source_ids: [doi:replace-me]}
+  identifiers: {disposition: excluded, rationale: Explain why identifier namespace and version fields are not needed or include them., field_paths: [], source_ids: [doi:replace-me]}
+  measurement: {disposition: excluded, rationale: Explain why quantity and unit fields are not needed or include them., field_paths: [], source_ids: [doi:replace-me]}
+  biological_context: {disposition: excluded, rationale: Explain why biological context cannot change compatibility or include it., field_paths: [], source_ids: [doi:replace-me]}
+  lifecycle: {disposition: excluded, rationale: Explain why temporal meaning cannot change compatibility or include it., field_paths: [], source_ids: [doi:replace-me]}
+  origin: {disposition: excluded, rationale: Explain why data origin cannot change compatibility or include it., field_paths: [], source_ids: [doi:replace-me]}
+  uncertainty: {disposition: excluded, rationale: Explain why uncertainty cannot change compatibility or include it., field_paths: [], source_ids: [doi:replace-me]}
+  artifact: {disposition: excluded, rationale: Explain why file metadata cannot change compatibility or include it., field_paths: [], source_ids: [doi:replace-me]}
+  constraints: {disposition: excluded, rationale: Explain why no cross-field constraints are needed or list them., field_paths: [], source_ids: [doi:replace-me]}
+
+field_decisions:
+  semantic.concept:
+    disposition: required
+    rationale: Explain why this field disposition is scientifically appropriate.
+    source_ids: [doi:replace-me]
+
+fixture_review:
+  positive: [positive]
+  negative: [negative-required-missing]
+  invalid: [negative-value-invalid]
+  direct: [comparison-direct]
+  incompatible: [comparison-incompatible]
+  unknown: [comparison-unknown]
+  transformations: []

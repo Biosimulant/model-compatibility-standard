@@ -1,71 +1,88 @@
 # Biosimulant Model Compatibility Standard
 
-The standard helps decide whether the output of one model can be used as the
-input of another.
+This standard answers a practical question: can the output of one model be
+used safely as the input of another?
 
-Matching file shapes and data types is not enough. Two ports can both carry a
-string, array or file while disagreeing about the scientific meaning, species,
-identifier system, units, normalisation, coordinate system or provenance. A
-port contract records those details. A profile says which details matter for a
-particular kind of data and how they should be compared.
+A matching file type or array shape is not enough. Two ports may still disagree
+about what the value means, its units, species, identifier system,
+normalisation, coordinate system or provenance. The standard gives each port a
+small contract and uses a compatibility profile to say which parts of that
+contract matter for a particular kind of data.
 
-The result is one of four practical answers:
+A comparison can report:
 
-- the ports can connect directly;
-- a stated conversion or inference step is needed;
-- the ports are incompatible; or
-- there is not enough information to decide.
+- a direct match;
+- a named conversion that does not lose information;
+- a transformation or inference that needs approval;
+- an incompatibility; or
+- `UNKNOWN` when information is missing.
 
-This is an interface check. It does not approve a model, dataset, result,
-clinical use or regulatory claim.
+It does not approve a model, dataset, scientific result, clinical use or
+regulatory claim.
 
 ## Current scope
 
-Version `0.0.1` is a deliberately small incubator. It contains three draft
-profiles:
+This is a deliberately small v0 incubator. It has three draft profiles:
 
 - Protein Sequence
 - Protein Structure
 - Canonical SMILES
 
-None has completed independent scientific review. They are usable for testing
-the format and review process, but should not be presented as approved
-scientific standards.
+None has completed independent scientific review. The profiles are useful for
+testing the format and review process, but are not approved scientific
+standards.
 
-The former 650-profile catalogue was an exploratory prototype and has been
-removed from the active standard. It remains in Git history. New profiles will
-be added only when there is a real model-to-model mapping to support and people
-available to review it.
+The earlier 650-profile prototype has been removed from the active catalogue.
+It remains in Git history. New profiles are added only for real model-to-model
+connections, with examples and reviewers.
 
-If your models exchange data that the catalogue does not cover, you can either
-send the scientific mapping to Biosimulant or add the profile in a pull request.
-The [profile proposal guide](PROPOSING_A_PROFILE.md) gives the email package,
-branch commands, files to change, example requirements and review process. Start
-with the reusable [proposal template](PROFILE_PROPOSAL_TEMPLATE.md).
+## The simple mental model
+
+There are three kinds of human-maintained YAML:
+
+1. One file per profile under `source/profiles/`. This is where almost every
+   profile proposal starts and ends. It contains the meaning, intended use,
+   limitations, every field the scientist should consider, and worked examples.
+2. `source/fields.yaml`. This is the shared vocabulary of contract fields. Edit
+   it only if the proposed profile genuinely needs a field that does not exist.
+3. One completed review record under `source/reviews/` after independent review.
+
+Everything under `spec/v0.1/` is generated JSON for software and review
+packets. Do not edit it by hand. There are no field packs and no second profile
+catalogue to keep in sync.
 
 ## Where to start
 
-You do not need to understand every repository file to use or review the
-standard.
-
-| If you want to… | Open |
+| Goal | Read |
 |---|---|
-| See the active profiles | [`spec/v0.1/catalogue/catalogue.json`](spec/v0.1/catalogue/catalogue.json) |
-| Understand one profile scientifically | Its file under [`spec/v0.1/review-packets/`](spec/v0.1/review-packets/) and [the review guide](PROFILE_REVIEW.md) |
-| Add a profile | [The profile proposal guide](PROPOSING_A_PROFILE.md) |
-| Use a profile in `model.yaml` | [The example below](#what-goes-in-modelyaml) |
-| Work on the implementation | [The contributing guide](CONTRIBUTING.md) |
-| Understand the generated folders | [`spec/README.md`](spec/README.md) |
+| See the three active profiles | [`source/profiles/`](source/profiles/) |
+| Propose a profile by email or pull request | [Proposing a profile](PROPOSING_A_PROFILE.md) |
+| Review a profile scientifically | [Profile review](PROFILE_REVIEW.md) |
+| Understand generated files | [`spec/README.md`](spec/README.md) |
+| Change implementation code | [Contributing](CONTRIBUTING.md) |
 
-`v0.1` in the `spec/` path is the format version of the standard. The package
-currently carrying that format is version `0.0.1`; those version numbers serve
-different purposes.
+## A profile in plain language
+
+A profile is a named agreement for one kind of model data. For example, the
+Protein Sequence profile says that a sequence connection must declare its
+scientific concept, representation, alphabet, encoding, identifier namespace
+and version, and species.
+
+The profile file also shows fields still open for review. A scientist sees the
+whole proposed mapping rather than only the required fields. Each field is
+labelled as one of:
+
+- `required` — the comparison cannot be decided without it;
+- `conditional` — required only in a stated situation;
+- `recommended` — useful but not a compatibility gate;
+- `excluded` — deliberately outside this profile; or
+- `under-review` — the draft has not made the scientific decision yet.
 
 ## What goes in `model.yaml`
 
-Compatibility is optional. A model can import one or more profiles and add a
-contract to the ports it wants to describe. Existing models without a
-`compatibility` block continue to work.
+Compatibility metadata is optional. Existing models without it continue to
+work. A model imports a profile by its versioned reference and digest, then
+adds a contract to the relevant port.
 
 ```yaml
 schema_version: "2.0"
@@ -74,7 +91,7 @@ compatibility:
   standard: https://biosimulant.com/standards/model-compatibility/v0.1
   profiles:
     - ref: https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-sequence/v0.1
-      sha256: sha256:5000e512dc105f96c4ad4da65dc1305011522682f555b88a35213e8d20a5a179
+      sha256: <digest from the installed catalogue>
 
 io:
   inputs:
@@ -86,7 +103,7 @@ io:
         semantic:
           concept: https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence
         representation:
-          kind: scalar
+          kind: record
           alphabet: IUPAC-amino-acid
           encoding: single-letter
         identifiers:
@@ -96,23 +113,20 @@ io:
           species: NCBITaxon:9606
 ```
 
-The profile fixes the scientific concept and requires enough information to
-interpret and compare the sequence. If required information is missing, the
-comparison returns `UNKNOWN`; it does not guess.
+If information required by the target is missing, the comparison returns
+`UNKNOWN`; it does not guess.
 
 ## Use the libraries
 
-The Python and TypeScript packages validate manifests and contracts, compare
-ports, build resolution plans and create compatibility lock files. Packages are
-not published to PyPI or npm yet. Until the first v0 tag is cut, install the
-exact incubator commit:
+The Python and TypeScript packages validate contracts, compare ports and build
+resolution plans and lock files. They are not published to PyPI or npm yet.
+During the incubator phase, install a specific commit rather than a moving
+branch.
 
 ```bash
-pip install "biosimulant-model-compatibility-standard @ git+https://github.com/Biosimulant/model-compatibility-standard@7ed53a619fee78641998226c1ce7c8479259ff8a"
-npm install "https://github.com/Biosimulant/model-compatibility-standard/archive/7ed53a619fee78641998226c1ce7c8479259ff8a.tar.gz"
+pip install "biosimulant-model-compatibility-standard @ git+https://github.com/Biosimulant/model-compatibility-standard@<commit>"
+npm install "https://github.com/Biosimulant/model-compatibility-standard/archive/<commit>.tar.gz"
 ```
-
-The npm build requires Python 3 on `PATH`.
 
 Python:
 
@@ -132,76 +146,41 @@ const report = compareContracts(sourceContract, targetContract);
 console.log(report.status);
 ```
 
-Browser and desktop applications can use the `/browser` entry point for public,
-local validation. Resolution plans, approvals and private data stay on the
-authenticated Biosimulant service.
-
-## Work on the standard
-
-The source of truth is `source/catalogue.review.json`. Files under `spec/v0.1/`
-are generated and must not be edited by hand.
+## Work on the repository
 
 ```bash
 python3 -m venv .venv
 .venv/bin/pip install -e '.[test]'
+npm install
+
+.venv/bin/python scripts/build_standard.py
 .venv/bin/python scripts/build_standard.py --check
 .venv/bin/pytest
-
-npm install
-npm test
+PATH="$PWD/.venv/bin:$PATH" npm test
 ```
+
+The PATH prefix makes the npm build use the virtual environment, including its
+YAML dependency.
 
 ### Repository map
 
-| Path | What belongs there | Edit it? |
+| Path | Purpose | Normally edit? |
 |---|---|---|
-| `source/catalogue.review.json` | Profile definitions, contract fields and field packs | Yes, when adding or changing a profile |
-| `source/reviews/` | Independent scientific and schema review records | Yes, through the review process |
-| `source/quantity-kinds.json` | Reviewed meanings for quantities and their canonical units | Only when changing measurement rules |
-| `source/vendor/ucum/` | The pinned UCUM source and the generated unit table used for reproducible builds | Only when deliberately updating UCUM |
-| `spec/v0.1/` | Generated release files consumed by software and reviewers | No; rebuild it |
-| `python/` and `typescript/src/` | The two reference implementations | Yes, for implementation changes |
-| `typescript/dist/` | Generated npm entry points | No; `npm run build` recreates them |
-| `scientific-checks/` | Small, shared cases that protect reviewed scientific decisions | Yes, after a scientific decision |
-| `scripts/` | The four supported build and cross-language verification scripts | Only for build-system changes |
-| `package.json` and `package-lock.json` | npm package metadata, commands and exact JavaScript dependency versions | Only when the JavaScript package or dependencies change |
-| `pyproject.toml` | Python package metadata and dependencies | Only when the Python package or dependencies change |
+| `source/profiles/<domain>/<name>.yaml` | One complete human-authored profile | Yes, for that profile |
+| `source/fields.yaml` | Shared contract-field definitions | Only for a genuinely new field |
+| `source/quantity-kinds.yaml` | Shared measurement meanings and units | Only for measurement-rule changes |
+| `source/reviews/` | Independent scientific review records | During review |
+| `source/vendor/ucum/` | Pinned UCUM source and generated unit table | Only for a deliberate UCUM update |
+| `spec/v0.1/` | Generated JSON bundle, fixtures and review packets | No; rebuild it |
+| `python/` and `typescript/src/` | Reference implementations | For implementation changes |
+| `typescript/dist/` | Generated JavaScript package files | No; `npm run build` recreates them |
+| `scripts/` | Supported build and verification scripts | Only for build-system changes |
 
-The detailed map of every generated folder, including why the catalogue has
-both a consolidated file and smaller public endpoint files, is in
-[`spec/README.md`](spec/README.md).
+Put disposable investigations in `.scratch/`, which Git ignores. See
+[`scripts/README.md`](scripts/README.md) before adding a script.
 
-One-off scripts and local investigation files belong in `.scratch/`, which Git
-ignores. See [scripts/README.md](scripts/README.md).
-
-For changes, start with [CONTRIBUTING.md](CONTRIBUTING.md). A new profile has a
-separate, evidence-led route in [PROPOSING_A_PROFILE.md](PROPOSING_A_PROFILE.md):
-prepare the complete output-to-input mapping, add it to
-`source/catalogue.review.json`, rebuild the generated profile and fixtures, run
-both implementations' tests, and open a pull request with the real or redacted
-examples. If you do not want to edit the repository, complete
-[PROFILE_PROPOSAL_TEMPLATE.md](PROFILE_PROPOSAL_TEMPLATE.md) and send the
-package by email as described in the guide. The scientific review gate is
-described in [PROFILE_REVIEW.md](PROFILE_REVIEW.md).
-
-### Other repository documents
-
-| Document | Use it for |
-|---|---|
-| [CONTRIBUTING.md](CONTRIBUTING.md) | Making implementation or profile changes |
-| [GOVERNANCE.md](GOVERNANCE.md) | Versioning, review roles and profile status |
-| [RELEASE.md](RELEASE.md) | Cutting and publishing a release |
-| [SECURITY.md](SECURITY.md) | Reporting vulnerabilities and understanding validator limits |
-| [CHANGELOG.md](CHANGELOG.md) | User-visible changes between releases |
-
-## Stable references
-
-Published profiles and bundles are versioned and identified by SHA-256. Lock
-files and plans must use the versioned reference and digest, never a moving
-`latest` reference.
-
-The validators use only the installed bundle. They do not fetch remote schemas
-or execute code from profile rules. Report security issues as described in
-[SECURITY.md](SECURITY.md).
+Published profile versions are immutable and identified by SHA-256. Validators
+use the installed bundle; they do not fetch remote schemas or execute profile
+code.
 
 Apache-2.0 licensed. See [LICENSE](LICENSE).

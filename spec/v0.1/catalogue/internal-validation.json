@@ -8,6 +8,12 @@
   "method_version": "1.0",
   "profiles": [
     {
+      "profile_id": "chemical/canonical-smiles@0.1",
+      "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/canonical-smiles/v0.1",
+      "scientific_signoff_required": true,
+      "status": "ready-for-external-review"
+    },
+    {
       "profile_id": "proteome/protein-sequence@0.1",
       "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-sequence/v0.1",
       "scientific_signoff_required": true,
@@ -16,12 +22,6 @@
     {
       "profile_id": "proteome/protein-structure@0.1",
       "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-structure/v0.1",
-      "scientific_signoff_required": true,
-      "status": "ready-for-external-review"
-    },
-    {
-      "profile_id": "chemical/canonical-smiles@0.1",
-      "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/canonical-smiles/v0.1",
       "scientific_signoff_required": true,
       "status": "ready-for-external-review"
     }

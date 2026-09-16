@@ -1,50 +1,52 @@
 # Contributing
 
-Small, reviewable changes are preferred. Please do not generate a catalogue of
-possible profiles or add a profile without a real model connection behind it.
+Keep changes small and tied to a real model connection or a specific defect.
+Do not generate speculative catalogues.
 
-## Change an existing profile
+## Change or add a profile
 
-Released objects do not change in place. A scientific or technical change to a
-released profile creates a new version.
+The human-authored profile is one YAML file:
 
-Profiles, contract fields and packs are maintained in
-`source/catalogue.review.json`. Files under `spec/v0.1/` are generated. After a
-source change, regenerate the bundle and commit both the source and generated
-files:
-
-```bash
-python3 scripts/build_standard.py
-python3 scripts/build_standard.py --check
+```text
+source/profiles/<domain>/<profile-name>.yaml
 ```
 
-If you are adding a profile, follow [Proposing a profile](PROPOSING_A_PROFILE.md)
-and complete the [proposal template](PROFILE_PROPOSAL_TEMPLATE.md). The guide
-covers both email submission and the exact branch, source, generated-file,
-example and pull-request steps. The process starts with a real output-to-input
-mapping and includes independent scientific review.
+It contains the profile’s meaning, intended use, limitations, field decisions
+and scientific examples. Reuse fields from `source/fields.yaml`; add a shared
+field only when the required concept is genuinely missing.
+
+Then regenerate the JSON bundle:
+
+```bash
+.venv/bin/python scripts/build_standard.py
+.venv/bin/python scripts/build_standard.py --check
+```
+
+Commit the YAML and generated files together. Do not edit `spec/v0.1/` by hand.
+Released profile versions are immutable; a substantive change creates a new
+version.
+
+For the full email and pull-request workflow, see
+[Proposing a profile](PROPOSING_A_PROFILE.md) and the
+[proposal template](PROFILE_PROPOSAL_TEMPLATE.md).
 
 ## Change comparison behaviour
 
-A new comparison operator must be implemented and tested in both Python and
-TypeScript. The two implementations must produce the same result on the shared
-fixtures in `spec/v0.1/fixtures/golden/`.
-
-Do not add scientific assumptions to implementation code to make a test pass.
-Those decisions belong in a reviewed profile or capability.
+A new operator must be implemented and tested in both Python and TypeScript.
+Both implementations must give the same results for the generated fixtures.
+Do not bury a scientific assumption in implementation code; put it in the
+profile and its review evidence.
 
 ## Before opening a pull request
-
-Run:
 
 ```bash
 .venv/bin/python scripts/build_standard.py --check
 .venv/bin/pytest
-npm test
+PATH="$PWD/.venv/bin:$PATH" npm test
 ```
 
-Explain the model connection or defect the change addresses, list the evidence
-used, and call out any question that still needs scientific judgement.
+Explain the model connection or defect, the evidence used, generated files
+changed and any unresolved scientific question.
 
-Supported repository automation belongs in `scripts/`. Put disposable local
-work in the ignored `.scratch/` directory rather than committing it.
+Supported repository automation belongs in `scripts/`. Disposable migration,
+inspection and one-off scripts belong in the ignored `.scratch/` directory.

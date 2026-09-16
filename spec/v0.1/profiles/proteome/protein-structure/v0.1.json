@@ -89,20 +89,96 @@
       "target": "/contract/origin/type"
     }
   ],
-  "compatibility_notes": "Two ports match only when every field the target port requires is satisfied. If required information is missing, the result is UNKNOWN. Any conversion between ports must be a declared, versioned transformation.",
-  "description": "A three-dimensional structural representation of a declared protein or protein-containing assembly, including the identity, coordinate representation and format needed to interpret the structure.",
+  "compatibility_notes": "Two ports match only when every field the target requires is satisfied. Missing required information returns UNKNOWN. Every conversion or inference must be declared and versioned.",
+  "description": "A three-dimensional structural representation of a declared protein or protein-containing assembly, including the identity, coordinate representation and format needed to interpret the structure.\n",
   "domain": "proteome",
   "domain_label": "Proteome and protein structure",
   "extends": [],
+  "field_dispositions": {
+    "artifact.format": {
+      "disposition": "under-review"
+    },
+    "artifact.format_version": {
+      "disposition": "under-review"
+    },
+    "artifact.media_type": {
+      "disposition": "under-review"
+    },
+    "artifact.schema_ref": {
+      "disposition": "under-review"
+    },
+    "artifact.schema_sha256": {
+      "disposition": "under-review"
+    },
+    "artifact.sha256": {
+      "disposition": "under-review"
+    },
+    "biological_context.species": {
+      "disposition": "required"
+    },
+    "identifiers.namespace": {
+      "disposition": "required"
+    },
+    "identifiers.namespace_version": {
+      "disposition": "required"
+    },
+    "origin.method": {
+      "disposition": "under-review"
+    },
+    "origin.method_version": {
+      "disposition": "under-review"
+    },
+    "origin.software": {
+      "disposition": "under-review"
+    },
+    "origin.software_version": {
+      "disposition": "under-review"
+    },
+    "origin.source_ref": {
+      "disposition": "under-review"
+    },
+    "origin.source_sha256": {
+      "disposition": "under-review"
+    },
+    "origin.type": {
+      "disposition": "required"
+    },
+    "representation.coordinate_system": {
+      "disposition": "required"
+    },
+    "representation.kind": {
+      "disposition": "required"
+    },
+    "representation.precision": {
+      "disposition": "under-review"
+    },
+    "representation.structure_format": {
+      "disposition": "required"
+    },
+    "semantic.concept": {
+      "disposition": "required"
+    },
+    "semantic.ontology_terms": {
+      "disposition": "under-review"
+    },
+    "semantic.qualifiers": {
+      "disposition": "under-review"
+    },
+    "uncertainty.quality_flags": {
+      "disposition": "under-review"
+    }
+  },
   "fixed": {
     "semantic": {
       "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-structure"
     }
   },
-  "item_packs": [
-    "protein-structure"
-  ],
+  "intended_use": "Connecting a model output that provides a three-dimensional protein structure to a model input that consumes the same declared structural representation.\n",
   "label": "Protein Structure",
+  "limitations": [
+    "It does not establish structural accuracy, biological function or fitness for a downstream claim.",
+    "A predicted structure is not treated as interchangeable with an experimental structure unless the target permits that origin."
+  ],
   "name": "protein-structure",
   "profile_id": "proteome/protein-structure@0.1",
   "release_eligible": false,
@@ -214,7 +290,7 @@
     "When must organism identity match exactly, and are any cross-species connections scientifically defensible?",
     "Which provenance and file-format details are necessary to interpret the data safely, and which are merely useful metadata?"
   ],
-  "scientific_claim": "This profile checks whether two model interfaces fit together. It doesn't show that a model is scientifically valid or clinically safe.",
+  "scientific_claim": "This profile checks whether two model interfaces fit together. It does not show that a model is scientifically valid or clinically safe.",
   "stage": "V0_PILOT",
   "technical_pre_review": {
     "checks": [

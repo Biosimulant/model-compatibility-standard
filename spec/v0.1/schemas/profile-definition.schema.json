@@ -55,18 +55,54 @@
       "type": "array",
       "uniqueItems": true
     },
+    "field_dispositions": {
+      "additionalProperties": {
+        "additionalProperties": false,
+        "properties": {
+          "disposition": {
+            "enum": [
+              "conditional",
+              "excluded",
+              "recommended",
+              "required",
+              "under-review"
+            ]
+          },
+          "note": {
+            "type": "string"
+          },
+          "when": {
+            "type": [
+              "string",
+              "object"
+            ]
+          }
+        },
+        "required": [
+          "disposition"
+        ],
+        "type": "object"
+      },
+      "minProperties": 1,
+      "type": "object"
+    },
     "fixed": {
       "type": "object"
     },
-    "item_packs": {
-      "items": {
-        "type": "string"
-      },
-      "type": "array",
-      "uniqueItems": true
+    "intended_use": {
+      "minLength": 20,
+      "type": "string"
     },
     "label": {
       "type": "string"
+    },
+    "limitations": {
+      "items": {
+        "minLength": 10,
+        "type": "string"
+      },
+      "minItems": 1,
+      "type": "array"
     },
     "name": {
       "type": "string"
@@ -282,7 +318,9 @@
     "stage",
     "review",
     "applies_to",
-    "item_packs",
+    "intended_use",
+    "limitations",
+    "field_dispositions",
     "requirements",
     "comparison_rules",
     "transformation_policy",

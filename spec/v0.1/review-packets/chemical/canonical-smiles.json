@@ -1,5 +1,59 @@
 {
-  "candidate_recommended_items": [
+  "domain": "chemical",
+  "field_dispositions": {
+    "identifiers.structure_hash": {
+      "disposition": "under-review"
+    },
+    "origin.software": {
+      "disposition": "under-review"
+    },
+    "origin.software_version": {
+      "disposition": "under-review"
+    },
+    "origin.source_ref": {
+      "disposition": "under-review"
+    },
+    "origin.source_sha256": {
+      "disposition": "under-review"
+    },
+    "representation.canonicalization": {
+      "disposition": "required"
+    },
+    "representation.formal_charge": {
+      "disposition": "under-review"
+    },
+    "representation.isotope_state": {
+      "disposition": "under-review"
+    },
+    "representation.kind": {
+      "disposition": "required"
+    },
+    "representation.normalization_tool": {
+      "disposition": "required"
+    },
+    "representation.normalization_version": {
+      "disposition": "required"
+    },
+    "representation.protonation_state": {
+      "disposition": "under-review"
+    },
+    "representation.stereochemistry": {
+      "disposition": "under-review"
+    },
+    "representation.tautomer_state": {
+      "disposition": "under-review"
+    },
+    "semantic.concept": {
+      "disposition": "required"
+    },
+    "semantic.ontology_terms": {
+      "disposition": "under-review"
+    },
+    "semantic.qualifiers": {
+      "disposition": "under-review"
+    }
+  },
+  "fields_under_review": [
     "identifiers.structure_hash",
     "origin.software",
     "origin.software_version",
@@ -13,7 +67,6 @@
     "semantic.ontology_terms",
     "semantic.qualifiers"
   ],
-  "domain": "chemical",
   "fixture_groups": {
     "direct": [
       "comparison-direct"
@@ -91,7 +144,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/canonical-smiles@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/canonical-smiles/v0.1",
-  "profile_sha256": "sha256:9e248a7712a0844b29c63b1a69af975aa46ea7a4d578bdb92564aaaa92133061",
+  "profile_sha256": "sha256:23b027272cfbf6707b411535ec9404e9e6e6eceb4d52fb0c2066856ec120fe43",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -219,6 +272,57 @@
     "named domain-qualified scientific reviewer",
     "different named schema and compatibility reviewer",
     "domain owner"
+  ],
+  "scientific_examples": [
+    {
+      "check": "compare",
+      "conditions": "Both ports declare different methods and no normalising adapter is supplied.",
+      "decision": "V0 canonical-SMILES draft",
+      "expect": {
+        "status": "INCOMPATIBLE"
+      },
+      "id": "BMCS-V0-004",
+      "report_finding": "Contradictory canonicalization provenance",
+      "source_patch": {
+        "representation": {
+          "canonicalization": "method-a"
+        }
+      },
+      "target_patch": {
+        "representation": {
+          "canonicalization": "method-b"
+        }
+      },
+      "title": "Different canonicalization methods are incompatible",
+      "why": "Canonical SMILES is method-dependent, so different declared methods cannot be assumed identical."
+    },
+    {
+      "check": "compare",
+      "conditions": "The source omits the tool version required by the target contract.",
+      "decision": "V0 canonical-SMILES draft",
+      "expect": {
+        "status": "UNKNOWN"
+      },
+      "id": "BMCS-V0-005",
+      "report_finding": "Missing canonicalization provenance",
+      "source_remove": [
+        "representation.normalization_version"
+      ],
+      "title": "Missing canonicalization tool version is unknown",
+      "why": "The same tool can change canonical output between versions."
+    },
+    {
+      "check": "compare",
+      "conditions": "Both ports make the same complete declarations for this profile.",
+      "decision": "V0 canonical-SMILES draft",
+      "expect": {
+        "status": "EXACT"
+      },
+      "id": "BMCS-V0-008",
+      "report_finding": "Positive baseline",
+      "title": "Identical canonical-SMILES contracts are exact matches",
+      "why": "The same complete canonical-SMILES declaration can connect without conversion or approval."
+    }
   ],
   "stage": "V0_PILOT",
   "technical_pre_review": {

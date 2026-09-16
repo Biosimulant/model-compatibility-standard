@@ -1,36 +1,27 @@
-# Proposing a new compatibility profile
+# Proposing a compatibility profile
 
-A profile is a shared agreement about one kind of data passed between model
-ports. It states what information must be declared and how an output is
-compared with an input.
+A profile is a shared agreement about one kind of data passed from a model
+output to a model input. Propose one when two real models need to exchange data
+and the current profiles do not describe that connection.
 
-Propose a profile when two real models need to exchange data and no current
-profile describes that exchange well enough. You can send the proposal to the
-Biosimulant team or open a pull request yourself. Both routes use the same
-[profile proposal template](PROFILE_PROPOSAL_TEMPLATE.md).
+You can send the mapping to Biosimulant or open a pull request. Both routes need
+the same scientific information.
 
 ## What to prepare
 
 Start with one concrete connection:
 
-- the model and output port that produce the data;
-- the model and input port that receive it;
-- a real or faithful redacted example of the output;
-- a real or faithful redacted example of what the input accepts;
-- the workflow and intended use; and
-- why an existing profile cannot describe it.
+- the producing model and output port;
+- the receiving model and input port;
+- a small real, synthetic or redacted example from each side;
+- the intended workflow;
+- every scientific fact needed to interpret and compare the data; and
+- the expected result when facts match, conflict or are missing.
 
-Complete the mapping in the proposal template. For each relevant field, say
-whether it is required, conditional, recommended or deliberately excluded.
-State what should happen when values match, contradict each other or are
-missing.
+Use [the proposal template](PROFILE_PROPOSAL_TEMPLATE.md) to make the mapping
+explicit. Do not send credentials, patient data or confidential datasets.
 
-Do not send credentials, patient data, unpublished confidential data or a large
-dataset. A small synthetic or redacted example is normally enough. If the
-evidence cannot be shared publicly, describe it and tell us how an authorised
-reviewer can obtain access.
-
-## Route A: send the proposal to Biosimulant
+## Route A: send it by email
 
 Email `demi@biosimulant.com` with the subject:
 
@@ -38,35 +29,23 @@ Email `demi@biosimulant.com` with the subject:
 Model compatibility profile proposal: <profile name>
 ```
 
-Attach one folder or zip file named `<profile-name>-proposal` containing:
+Attach:
 
-1. `proposal.md` — a completed copy of
-   [PROFILE_PROPOSAL_TEMPLATE.md](PROFILE_PROPOSAL_TEMPLATE.md). A Word or PDF
-   copy is also acceptable if it keeps the same headings and tables.
-2. `source-contract.yaml` or `source-contract.json` — the smallest realistic
-   description of the producing port.
-3. `target-contract.yaml` or `target-contract.json` — the smallest realistic
-   description of the receiving port.
-4. An `examples/` folder with small, redacted examples covering a direct match,
-   a known contradiction, missing evidence and every permitted conversion or
-   inference. Include the expected result for each example.
-5. Links, DOIs or versioned references for the sources behind the scientific
-   decisions.
+1. A completed `PROFILE_PROPOSAL_TEMPLATE.md`, or a Word/PDF copy with the same
+   information.
+2. A small source-port example in YAML or JSON.
+3. A small target-port example in YAML or JSON.
+4. Examples of a direct match, a known contradiction, missing information, and
+   any conversion or inference the profile permits.
+5. Links, DOIs or versioned references supporting the scientific decisions.
 
-If YAML or JSON is not practical, put the source and target declarations in the
-mapping table in `proposal.md`. The scientific information matters more than
-getting the repository format right at this stage.
-
-The team will check that the case belongs in the standard, agree a profile ID
-with you, create the machine-readable draft and return any scientific questions.
-Sending a proposal is not scientific approval. Independent review still happens
-before the profile can leave draft status.
+If YAML or JSON is unfamiliar, put the source and target declarations in the
+template’s mapping table. The team can translate them into repository format.
+Submission is not approval; independent scientific review still follows.
 
 ## Route B: open a pull request
 
 ### 1. Create a branch
-
-Fork the repository, then create a branch from the active catalogue branch:
 
 ```bash
 git clone https://github.com/<your-account>/model-compatibility-standard.git
@@ -76,10 +55,9 @@ git fetch upstream
 git switch -c profile/<domain>-<profile-name> upstream/scientific-review/v0-catalogue-reset
 ```
 
-The v0 catalogue reset is currently under review. After it is merged, replace
-`upstream/scientific-review/v0-catalogue-reset` with `upstream/main`.
+After the v0 reset is merged, branch from `upstream/main` instead.
 
-Set up the test environment:
+Set up the repository:
 
 ```bash
 python3 -m venv .venv
@@ -87,74 +65,129 @@ python3 -m venv .venv
 npm install
 ```
 
-### 2. Add the profile to the source catalogue
+### 2. Add one profile YAML file
 
-Edit `source/catalogue.review.json`. This is the source of truth.
+Create:
 
-- Reuse an entry in `item_definitions` when it already expresses the required
-  scientific fact. Add a definition only when the vocabulary is genuinely
-  missing one.
-- Add an `item_packs` entry containing every field the reviewer should consider,
-  including candidate fields that may later be excluded.
-- Add one `profiles` entry. Give it a stable domain, name and ID; use version
-  `0.1.0`, stage `V0_PILOT` and review status `draft`.
-- Put fields that are provisionally essential in `required_items`. Do not hide a
-  debatable field by omitting it from both `required_items` and the item pack.
-- Keep the description, compatibility notes and scientific non-claim narrow and
-  specific to the intended use.
+```text
+source/profiles/<domain>/<profile-name>.yaml
+```
 
-Do not edit files under `spec/v0.1/` by hand. Build them from the source:
+The folder and filename become the profile ID, so
+`source/profiles/proteome/protein-sequence.yaml` becomes
+`proteome/protein-sequence@0.1`.
+
+Copy the closest existing profile and replace its content. A minimal source
+file looks like this:
+
+```yaml
+schema_version: "0.1"
+label: Example Measurement
+domain_label: Example domain
+description: >
+  A precise description of the data represented by this profile.
+status: draft
+representations: [scalar, record]
+intended_use: >
+  Connecting an output that produces this measurement to an input that consumes
+  the same declared measurement.
+limitations:
+  - It does not establish that the value or producing model is scientifically valid.
+
+fields:
+  semantic.concept: required
+  representation.kind: required
+  measurement.quantity: required
+  measurement.unit: required
+  biological_context.species: under-review
+  origin.method: under-review
+
+examples:
+  - id: BMCS-EXAMPLE-001
+    title: Identical declarations are an exact match
+    check: compare
+    expect: {status: EXACT}
+    why: No conversion or inference is needed.
+    conditions: Both ports provide the same complete declarations.
+    decision: Example profile draft
+    report_finding: Positive baseline
+```
+
+This one file contains the scientific description, scope, all fields the
+reviewer must consider, and profile-specific examples. Do not create a field
+pack or edit a central profile list.
+
+Every field must have one disposition:
+
+- `required`
+- `conditional` with a `when` statement
+- `recommended`
+- `excluded`
+- `under-review`
+
+Use `under-review` when the draft deliberately leaves the choice to the
+scientist. Do not omit a debatable field simply to make the profile shorter.
+
+### 3. Add a shared field only when necessary
+
+Check `source/fields.yaml`. Reuse an existing path whenever it means the same
+thing. If the profile needs a genuinely new scientific fact, add one field with
+an explicit JSON value schema and comparison rule.
+
+For example:
+
+```yaml
+- path: measurement.sampling_site
+  family: measurement
+  schema: {type: string, minLength: 1}
+  comparison: equal
+```
+
+Do not add a near-duplicate field just to suit one profile. If the meaning is
+not clear enough to share, raise it in the pull request.
+
+### 4. Put scientific examples in the profile file
+
+Each example should state what changes and what outcome is expected:
+
+- `EXACT` or `DIRECT_COMPATIBLE` for a direct match;
+- `LOSSLESS_CONVERSION_AVAILABLE` for a named lossless conversion;
+- an approval-required result for a lossy transformation or inference;
+- `INCOMPATIBLE` for a known contradiction; or
+- `UNKNOWN` when necessary information is missing.
+
+Use `source_patch`, `target_patch`, `source_remove` or `target_remove` to alter
+the generated valid contract. The three current profiles provide working
+examples. These examples are generated into
+`spec/v0.1/fixtures/scientific.json` and run in both implementations.
+
+### 5. Generate the software files
 
 ```bash
 .venv/bin/python scripts/build_standard.py
 ```
 
-The build creates or updates:
+The build creates:
 
-- `spec/v0.1/profiles/<domain>/<profile-name>/v0.1.json` — the profile consumed by
-  implementations;
-- `spec/v0.1/fixtures/profiles/<domain>/<profile-name>.json` — validation and
-  comparison cases; and
-- `spec/v0.1/review-packets/<domain>/<profile-name>.json` — every required and
-  candidate field the scientist must review.
+- `spec/v0.1/profiles/<domain>/<profile-name>/v0.1.json` — the runtime profile;
+- `spec/v0.1/fixtures/profiles/<domain>/<profile-name>.json` — baseline test
+  cases; and
+- `spec/v0.1/review-packets/<domain>/<profile-name>.json` — the complete mapping
+  for the scientist.
 
-Read all three files. If they are wrong, change `source/catalogue.review.json`
-and rebuild. Commit the source change and the generated files together.
+The review packet includes every field from the profile YAML, not only required
+fields. If a generated file is wrong, change the YAML or generator and rebuild.
+Never edit `spec/v0.1/` directly.
 
-### 3. Deal with examples correctly
-
-Include the real or redacted source and target examples in the pull-request
-description or attach them to the pull request. For each example, state the
-expected result and why:
-
-- direct compatibility;
-- a named, lossless conversion;
-- a transformation or inference that needs approval;
-- incompatibility because two declarations contradict each other; or
-- `UNKNOWN` because a necessary declaration is missing.
-
-The generator creates baseline fixtures for every required field. Inspect those
-fixtures; do not edit them directly. If an important scientific rule is not
-covered by the generated cases, add a small shared case to
-`scientific-checks/v0.1/cases.json` and explain it in the pull request. See
-[scientific-checks/README.md](scientific-checks/README.md) for the case format.
-
-Use `UNKNOWN` for missing evidence. Use `INCOMPATIBLE` only for a known
-contradiction. A conversion or inference must be visible and versioned; it must
-not be treated as a direct match.
-
-### 4. Run the checks
+### 6. Run the checks
 
 ```bash
 .venv/bin/python scripts/build_standard.py --check
 .venv/bin/pytest -p no:cacheprovider
-npm test
+PATH="$PWD/.venv/bin:$PATH" npm test
 ```
 
-The generated files must be current, both implementations must agree, and the
-scientific cases must produce their declared outcomes.
-
-### 5. Open the pull request
+### 7. Open the pull request
 
 Use a title such as:
 
@@ -162,78 +195,51 @@ Use a title such as:
 Profile: add <profile name> for <source model> to <target model>
 ```
 
-In the description, include the completed proposal template and list:
+The description should include:
 
 - the source and target models and ports;
-- the intended use and exclusions;
-- links to the example input and output;
-- the full mapping and field decisions;
-- the expected outcomes demonstrated by the examples;
-- the authoritative sources and their versions;
-- files changed by the generator;
-- commands run and their results; and
-- questions that still require scientific judgement.
+- intended use and limitations;
+- the complete field mapping and unresolved decisions;
+- worked examples and their expected outcomes;
+- authoritative sources and versions;
+- generated files changed; and
+- test commands and results.
 
-Keep one pull request to one profile, or to a small set that shares exactly the
-same scientific boundary. It is acceptable for a useful proposal to remain a
-draft while a question is unresolved.
+Keep a pull request to one profile unless a small group shares the same
+scientific boundary. A useful proposal may remain a draft while a scientific
+question is unresolved.
 
-Do not create your own approval record. After the mapping is stable, an
-independent scientist, a different schema reviewer and a domain owner record
-their decisions in `source/reviews/<domain>/<profile-name>.json`, starting from
-`source/reviews/profile-review.template.json`. Passing the tests does not count
-as scientific approval.
+Do not create your own approval record. After the proposal is stable, an
+independent scientist, a different schema reviewer and a domain owner complete
+`source/reviews/<domain>/<profile-name>.yaml` using
+`source/reviews/profile-review.template.yaml`.
 
-## Worked example: Protein Sequence
+## What changes for a typical profile?
 
-Suppose a source model emits a human protein sequence with these declarations:
+Usually only these files:
 
-```yaml
-identifier: P69905
-sequence: MVLSPADKT...
-namespace: UniProtKB
-namespace_version: "2026_03"
-species: NCBITaxon:9606
-alphabet: IUPAC-amino-acid
-encoding: single-letter
-```
+1. `source/profiles/<domain>/<profile-name>.yaml` — written by the contributor.
+2. Files under `spec/v0.1/` — regenerated by the build.
 
-The target accepts a single-letter IUPAC amino-acid sequence for the same
-UniProtKB release and species. The proposal should explain that:
+Sometimes:
 
-- matching declarations are a direct match;
-- a missing namespace version gives `UNKNOWN`, because the identifier cannot be
-  interpreted against a known release;
-- a declared mouse sequence and a target restricted to human are incompatible;
-  and
-- converting a three-letter sequence to a single-letter sequence is a visible
-  transformation, not a direct match.
+3. `source/fields.yaml` — only when a necessary field is genuinely new.
+4. `source/quantity-kinds.yaml` — only for a new or changed measurement kind.
+5. `source/reviews/<domain>/<profile-name>.yaml` — later, when independent
+   review is complete.
 
-In the repository, this becomes:
-
-1. a `protein-sequence` item pack listing all fields the scientist should
-   consider;
-2. a `proteome/protein-sequence@0.1` profile listing the provisional required
-   fields;
-3. generated direct, incompatible, missing and invalid cases in
-   `spec/v0.1/fixtures/profiles/proteome/protein-sequence.json`; and
-4. a generated review packet in
-   `spec/v0.1/review-packets/proteome/protein-sequence.json`.
-
-The example sequence itself is not enough. The profile exists to preserve the
-meaning around the sequence: identity system and release, representation,
-species, provenance and any limitation on its use.
+That is the full authoring path. There is no item pack, central profile entry or
+separate scientific-cases file.
 
 ## Pull request checklist
 
-- [ ] The proposal starts from a real output-to-input connection.
-- [ ] Small source and target examples are included or access is explained.
-- [ ] The complete mapping table is filled in.
-- [ ] Required, conditional, recommended and excluded fields are explicit.
+- [ ] The profile comes from a real output-to-input connection.
+- [ ] Small source and target examples are included.
+- [ ] Intended use and limitations are clear.
+- [ ] Every relevant field has an explicit disposition.
 - [ ] Direct, incompatible and unknown outcomes are demonstrated.
 - [ ] Every permitted conversion or inference is named and visible.
-- [ ] Intended use, exclusions and limitations are clear.
-- [ ] Scientific decisions cite primary or authoritative sources.
-- [ ] Generated files were rebuilt rather than edited by hand.
-- [ ] Python, TypeScript and scientific checks pass.
-- [ ] Independent review roles are recorded or clearly marked as outstanding.
+- [ ] Scientific decisions cite authoritative sources.
+- [ ] Generated files were rebuilt rather than edited.
+- [ ] Python and TypeScript tests pass.
+- [ ] Independent review is recorded or clearly outstanding.

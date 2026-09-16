@@ -1,0 +1,174 @@
+{
+  "cases": [
+    {
+      "check": "compare",
+      "conditions": "Both ports declare different methods and no normalising adapter is supplied.",
+      "decision": "V0 canonical-SMILES draft",
+      "expect": {
+        "status": "INCOMPATIBLE"
+      },
+      "id": "BMCS-V0-004",
+      "kind": "guard",
+      "profile": "chemical/canonical-smiles",
+      "report_finding": "Contradictory canonicalization provenance",
+      "source_patch": {
+        "representation": {
+          "canonicalization": "method-a"
+        }
+      },
+      "target_patch": {
+        "representation": {
+          "canonicalization": "method-b"
+        }
+      },
+      "title": "Different canonicalization methods are incompatible",
+      "why": "Canonical SMILES is method-dependent, so different declared methods cannot be assumed identical."
+    },
+    {
+      "check": "compare",
+      "conditions": "The source omits the tool version required by the target contract.",
+      "decision": "V0 canonical-SMILES draft",
+      "expect": {
+        "status": "UNKNOWN"
+      },
+      "id": "BMCS-V0-005",
+      "kind": "guard",
+      "profile": "chemical/canonical-smiles",
+      "report_finding": "Missing canonicalization provenance",
+      "source_remove": [
+        "representation.normalization_version"
+      ],
+      "title": "Missing canonicalization tool version is unknown",
+      "why": "The same tool can change canonical output between versions."
+    },
+    {
+      "check": "compare",
+      "conditions": "Both ports make the same complete declarations for this profile.",
+      "decision": "V0 canonical-SMILES draft",
+      "expect": {
+        "status": "EXACT"
+      },
+      "id": "BMCS-V0-008",
+      "kind": "guard",
+      "profile": "chemical/canonical-smiles",
+      "report_finding": "Positive baseline",
+      "title": "Identical canonical-SMILES contracts are exact matches",
+      "why": "The same complete canonical-SMILES declaration can connect without conversion or approval."
+    },
+    {
+      "check": "compare",
+      "conditions": "Both ports make the same complete declarations for this profile.",
+      "decision": "V0 protein-sequence draft",
+      "expect": {
+        "status": "EXACT"
+      },
+      "id": "BMCS-V0-001",
+      "kind": "guard",
+      "profile": "proteome/protein-sequence",
+      "report_finding": "Positive baseline",
+      "title": "Identical protein-sequence contracts are exact matches",
+      "why": "The same complete sequence declaration can connect without conversion or approval."
+    },
+    {
+      "check": "compare",
+      "conditions": "Both ports declare different alphabets and no translation step is supplied.",
+      "decision": "V0 protein-sequence draft",
+      "expect": {
+        "status": "INCOMPATIBLE"
+      },
+      "id": "BMCS-V0-002",
+      "kind": "guard",
+      "profile": "proteome/protein-sequence",
+      "report_finding": "Contradictory sequence representation",
+      "source_patch": {
+        "representation": {
+          "alphabet": "amino-acid"
+        }
+      },
+      "target_patch": {
+        "representation": {
+          "alphabet": "nucleotide"
+        }
+      },
+      "title": "Different sequence alphabets are incompatible",
+      "why": "Amino-acid and nucleotide strings do not have the same biological interpretation."
+    },
+    {
+      "check": "compare",
+      "conditions": "The source omits the encoding required by the target contract.",
+      "decision": "V0 protein-sequence draft",
+      "expect": {
+        "status": "UNKNOWN"
+      },
+      "id": "BMCS-V0-003",
+      "kind": "guard",
+      "profile": "proteome/protein-sequence",
+      "report_finding": "Missing required representation information",
+      "source_remove": [
+        "representation.encoding"
+      ],
+      "title": "Missing sequence encoding is unknown",
+      "why": "The sequence cannot be interpreted reliably when its encoding is not declared."
+    },
+    {
+      "check": "compare",
+      "conditions": "Both ports declare different coordinate systems and no conversion is supplied.",
+      "decision": "V0 protein-structure draft",
+      "expect": {
+        "status": "INCOMPATIBLE"
+      },
+      "id": "BMCS-V0-006",
+      "kind": "guard",
+      "profile": "proteome/protein-structure",
+      "report_finding": "Contradictory coordinate representation",
+      "source_patch": {
+        "representation": {
+          "coordinate_system": "cartesian-angstrom"
+        }
+      },
+      "target_patch": {
+        "representation": {
+          "coordinate_system": "fractional-unit-cell"
+        }
+      },
+      "title": "Different coordinate systems are incompatible",
+      "why": "Coordinates in different systems cannot be consumed as if their numerical values have the same spatial meaning."
+    },
+    {
+      "check": "compare",
+      "conditions": "The source omits the structure origin required by the target contract.",
+      "decision": "V0 protein-structure draft",
+      "expect": {
+        "status": "UNKNOWN"
+      },
+      "id": "BMCS-V0-007",
+      "kind": "guard",
+      "profile": "proteome/protein-structure",
+      "report_finding": "Missing structure provenance",
+      "source_remove": [
+        "origin.type"
+      ],
+      "title": "Missing structure origin is unknown",
+      "why": "Experimental, predicted and otherwise derived structures have different provenance and limitations."
+    },
+    {
+      "check": "compare",
+      "conditions": "Both ports make the same complete declarations for this profile.",
+      "decision": "V0 protein-structure draft",
+      "expect": {
+        "status": "EXACT"
+      },
+      "id": "BMCS-V0-009",
+      "kind": "guard",
+      "profile": "proteome/protein-structure",
+      "report_finding": "Positive baseline",
+      "title": "Identical protein-structure contracts are exact matches",
+      "why": "The same complete structure declaration can connect without conversion or approval."
+    }
+  ],
+  "profile_ref_prefix": "https://biosimulant.com/standards/model-compatibility/profiles/",
+  "profile_ref_suffix": "/v0.1",
+  "purpose": "Language-neutral scientific expectations authored with each active profile.",
+  "schema_version": "0.1",
+  "title": "Scientific guards for the active v0 pilot profiles"
+}

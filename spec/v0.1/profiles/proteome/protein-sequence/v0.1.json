@@ -82,20 +82,60 @@
       "target": "/contract/biological_context/species"
     }
   ],
-  "compatibility_notes": "Two ports match only when every field the target port requires is satisfied. If required information is missing, the result is UNKNOWN. Any conversion between ports must be a declared, versioned transformation.",
-  "description": "An amino-acid residue sequence representing a declared protein or polypeptide, with the identifier namespace, namespace version and organism context needed to interpret it.",
+  "compatibility_notes": "Two ports match only when every field the target requires is satisfied. Missing required information returns UNKNOWN. Every conversion or inference must be declared and versioned.",
+  "description": "An amino-acid residue sequence representing a declared protein or polypeptide, with the identifier namespace, namespace version and organism context needed to interpret it.\n",
   "domain": "proteome",
   "domain_label": "Proteome and protein structure",
   "extends": [],
+  "field_dispositions": {
+    "biological_context.species": {
+      "disposition": "required"
+    },
+    "identifiers.namespace": {
+      "disposition": "required"
+    },
+    "identifiers.namespace_version": {
+      "disposition": "required"
+    },
+    "origin.source_ref": {
+      "disposition": "under-review"
+    },
+    "origin.source_sha256": {
+      "disposition": "under-review"
+    },
+    "representation.alphabet": {
+      "disposition": "required"
+    },
+    "representation.encoding": {
+      "disposition": "required"
+    },
+    "representation.kind": {
+      "disposition": "required"
+    },
+    "semantic.concept": {
+      "disposition": "required"
+    },
+    "semantic.ontology_terms": {
+      "disposition": "under-review"
+    },
+    "semantic.qualifiers": {
+      "disposition": "under-review"
+    },
+    "uncertainty.quality_flags": {
+      "disposition": "under-review"
+    }
+  },
   "fixed": {
     "semantic": {
       "concept": "https://biosimulant.com/standards/model-compatibility/terms/proteome/protein-sequence"
     }
   },
-  "item_packs": [
-    "protein-sequence"
-  ],
+  "intended_use": "Connecting a model output that provides an amino-acid sequence to a model input that consumes a protein or polypeptide sequence.\n",
   "label": "Protein Sequence",
+  "limitations": [
+    "It does not cover nucleotide sequences or establish that a sequence is scientifically correct.",
+    "It does not justify cross-species substitution or an undeclared change of sequence encoding."
+  ],
   "name": "protein-sequence",
   "profile_id": "proteome/protein-sequence@0.1",
   "release_eligible": false,
@@ -199,7 +239,7 @@
     "When must organism identity match exactly, and are any cross-species connections scientifically defensible?",
     "Which provenance and file-format details are necessary to interpret the data safely, and which are merely useful metadata?"
   ],
-  "scientific_claim": "This profile checks whether two model interfaces fit together. It doesn't show that a model is scientifically valid or clinically safe.",
+  "scientific_claim": "This profile checks whether two model interfaces fit together. It does not show that a model is scientifically valid or clinically safe.",
   "stage": "V0_PILOT",
   "technical_pre_review": {
     "checks": [

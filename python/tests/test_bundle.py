@@ -9,8 +9,7 @@ def test_catalogue_counts_and_active_profiles_load():
     bundle = get_bundle()
     profiles = list(bundle.profiles())
     assert bundle.catalogue["counts"]["profiles"] == len(profiles)
-    assert bundle.catalogue["counts"]["item_definitions"] > 0
-    assert bundle.catalogue["counts"]["item_packs"] > 0
+    assert bundle.catalogue["counts"]["fields"] > 0
     assert profiles
     assert len({profile["profile_id"] for profile in profiles}) == len(profiles)
     assert all(profile["$id"] in bundle.profile_index for profile in profiles)

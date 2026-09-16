@@ -12,7 +12,7 @@ import pytest
 from biosimulant_model_compatibility_standard import compare_contracts, normalize_contract, resolve_contracts, validate_contract
 
 ROOT = Path(__file__).resolve().parents[2]
-SUITE = json.loads((ROOT / "scientific-checks" / "v0.1" / "cases.json").read_text(encoding="utf-8"))
+SUITE = json.loads((ROOT / "spec" / "v0.1" / "fixtures" / "scientific.json").read_text(encoding="utf-8"))
 FIXTURES = ROOT / "spec" / "v0.1" / "fixtures" / "profiles"
 NOT_A_MATCH = "is not scientifically acceptable here"
 

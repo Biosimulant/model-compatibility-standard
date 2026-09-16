@@ -12,13 +12,7 @@
     "counts": {
       "type": "object"
     },
-    "item_definitions": {
-      "items": {
-        "type": "object"
-      },
-      "type": "array"
-    },
-    "item_packs": {
+    "fields": {
       "items": {
         "type": "object"
       },
@@ -50,8 +44,7 @@
     "schema_version",
     "standard",
     "counts",
-    "item_definitions",
-    "item_packs",
+    "fields",
     "profiles"
   ],
   "title": "Profile Catalogue",

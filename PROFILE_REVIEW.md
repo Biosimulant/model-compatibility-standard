@@ -1,59 +1,84 @@
-# Profile review
+# Scientific review of a profile
 
-Passing tests and passing scientific review are separate things. Tests show the
-validators behave as written. They don't show that a profile is biologically
-right.
+Tests show that the comparison rules run as written. They do not show that the
+rules are scientifically right. That judgement belongs to the reviewers.
 
-A profile can move to `reviewed` only when it has all of the following:
+## What the scientist receives
 
-- Decisions for each part of the contract that applies to it: meaning,
-  representation, identifiers, measurement, biological context, timing, origin,
-  uncertainty and file format.
-- A field-level disposition for every required and candidate field in the
-  profile packet: required, conditional, recommended or excluded.
-- Primary or authoritative sources that back those decisions.
-- A named scientific reviewer who didn't write the profile.
-- A different named schema reviewer who didn't write the profile.
-- Fixtures for a valid contract, a missing required field, a comparison with
-  an invalid value, direct compatibility, a known incompatibility, missing
-  information, and any conversions the profile allows.
-- A clear intended-use statement and at least one important limitation.
-- A check that its rules only use operators listed in
-  `spec/v0.1/rules/operators.json`.
-- A review date, and a domain owner who decides when to deprecate it.
+Each profile has a generated packet at:
 
-Until that evidence exists, the build keeps each profile's recorded review
-status and sets `release_eligible` to `false`. Today that applies to all active
-incubator profiles.
+```text
+spec/v0.1/review-packets/<domain>/<profile-name>.json
+```
 
-## Internal pre-review
+The packet contains the profile’s exact digest, intended mapping, every field
+listed in the source profile, comparison rules, worked scientific examples,
+generated test cases and questions for review.
 
-Every profile has a generated packet under
-`spec/v0.1/review-packets/<domain>/<profile-name>.json`. The packet contains the
-exact profile digest, proposed fixed and allowed values, required and
-recommended fields, comparison rules, fixture names, reviewer questions and
-the remaining approval roles.
+This is the complete mapping for that profile. The scientist does not need to
+review unrelated fields from `source/fields.yaml`.
 
-For the profile being reviewed, the packet is the complete field-level mapping
-proposal: it shows every field currently required and every additional field in
-that profile's v0 item pack. The reviewer should classify each candidate as
-required, conditional, recommended or excluded, and may propose a missing field.
-They are not expected to review unrelated fields from the wider contract
-vocabulary.
+## What the scientist decides
 
-`spec/v0.1/catalogue/internal-validation.json` records the machine-checkable
-result for every active profile. `ready-for-external-review` means that the profile
-is distinct, typed, schema-valid and fixture-backed in both implementations. It
-does not mean that its scientific choices have been approved.
+The scientist checks:
 
-Review evidence is stored as one JSON file per profile under
-`source/reviews/<domain>/<profile-name>.json`. Use
-`source/reviews/profile-review.template.json`. The source schema and build check
-the required names, dates, pinned sources, decisions and fixture review. A
-reviewer must include or explicitly exclude every contract section. This keeps
-domain work separate and avoids treating passing code tests as a scientific
-sign-off.
+- whether the profile describes one clear scientific concept;
+- whether its intended use and limitations are honest and precise;
+- which representations are scientifically interchangeable;
+- the disposition of every proposed field: required, conditional, recommended
+  or excluded;
+- which missing facts should return `UNKNOWN`;
+- which known contradictions should return `INCOMPATIBLE`;
+- whether any conversion or inference is explicit and correctly classified;
+- whether the examples have the right expected outcomes; and
+- whether authoritative, versioned sources support the decisions.
 
-The bundle calculates `ga_ready` from these files. It becomes `true` only when
-every active profile has complete review evidence. Adding a future profile does
-not invalidate previously completed profile reviews.
+Fields marked `under-review` in a draft must receive a final disposition before
+approval.
+
+## What approval means
+
+Approval means that this one profile is a defensible and sufficiently precise
+compatibility contract for its stated use. It does not approve a model,
+dataset, result, clinical application, regulatory claim, consent basis or
+future use.
+
+## Required roles and evidence
+
+A profile can move to `reviewed` only when it has:
+
+- a named scientific reviewer who did not author the profile;
+- a different named schema reviewer who did not author the profile;
+- a named domain owner;
+- a field-level decision for every field in the packet;
+- a decision for every applicable contract area;
+- pinned authoritative sources;
+- confirmed examples and generated fixtures;
+- a clear intended use and at least one limitation; and
+- a review date.
+
+The scientific reviewer judges the science. The schema reviewer checks that
+those decisions are represented consistently. The domain owner accepts ongoing
+stewardship and future retirement decisions.
+
+## Recording the result
+
+Copy:
+
+```text
+source/reviews/profile-review.template.yaml
+```
+
+to:
+
+```text
+source/reviews/<domain>/<profile-name>.yaml
+```
+
+Fill in the names, sources, section decisions, field decisions and reviewed
+fixture names. The build checks the record against
+`source/profile-review.schema.json` and verifies that the reviewers are
+independent and that the packet is covered.
+
+Until a complete record exists, the profile remains `release_eligible: false`.
+All three current v0 profiles are in that state.

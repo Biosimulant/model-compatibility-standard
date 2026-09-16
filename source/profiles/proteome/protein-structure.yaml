@@ -1,0 +1,70 @@
+schema_version: "0.1"
+label: Protein Structure
+domain_label: Proteome and protein structure
+description: >
+  A three-dimensional structural representation of a declared protein or
+  protein-containing assembly, including the identity, coordinate
+  representation and format needed to interpret the structure.
+status: draft
+representations: [record, artifact]
+intended_use: >
+  Connecting a model output that provides a three-dimensional protein structure
+  to a model input that consumes the same declared structural representation.
+limitations:
+  - It does not establish structural accuracy, biological function or fitness for a downstream claim.
+  - A predicted structure is not treated as interchangeable with an experimental structure unless the target permits that origin.
+
+fields:
+  semantic.concept: required
+  representation.kind: required
+  representation.structure_format: required
+  representation.coordinate_system: required
+  identifiers.namespace: required
+  identifiers.namespace_version: required
+  biological_context.species: required
+  origin.type: required
+  semantic.ontology_terms: under-review
+  semantic.qualifiers: under-review
+  representation.precision: under-review
+  origin.method: under-review
+  origin.method_version: under-review
+  origin.software: under-review
+  origin.software_version: under-review
+  origin.source_ref: under-review
+  origin.source_sha256: under-review
+  artifact.media_type: under-review
+  artifact.format: under-review
+  artifact.format_version: under-review
+  artifact.schema_ref: under-review
+  artifact.schema_sha256: under-review
+  artifact.sha256: under-review
+  uncertainty.quality_flags: under-review
+
+examples:
+  - id: BMCS-V0-006
+    title: Different coordinate systems are incompatible
+    check: compare
+    source_patch: {representation: {coordinate_system: cartesian-angstrom}}
+    target_patch: {representation: {coordinate_system: fractional-unit-cell}}
+    expect: {status: INCOMPATIBLE}
+    why: Coordinates in different systems cannot be consumed as if their numerical values have the same spatial meaning.
+    conditions: Both ports declare different coordinate systems and no conversion is supplied.
+    decision: V0 protein-structure draft
+    report_finding: Contradictory coordinate representation
+  - id: BMCS-V0-007
+    title: Missing structure origin is unknown
+    check: compare
+    source_remove: [origin.type]
+    expect: {status: UNKNOWN}
+    why: Experimental, predicted and otherwise derived structures have different provenance and limitations.
+    conditions: The source omits the structure origin required by the target contract.
+    decision: V0 protein-structure draft
+    report_finding: Missing structure provenance
+  - id: BMCS-V0-009
+    title: Identical protein-structure contracts are exact matches
+    check: compare
+    expect: {status: EXACT}
+    why: The same complete structure declaration can connect without conversion or approval.
+    conditions: Both ports make the same complete declarations for this profile.
+    decision: V0 protein-structure draft
+    report_finding: Positive baseline

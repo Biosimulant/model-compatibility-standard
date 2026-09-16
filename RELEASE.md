@@ -12,8 +12,8 @@ it's published, it never changes.
    `source/reviews/`. It must name separate scientific and schema reviewers,
    record section and field-level decisions, cite sources, and confirm the
    required fixtures. Passing fixtures doesn't count as approval.
-5. Run `npm run test:scientific`. Every active scientific guard must pass in
-   Python and TypeScript. See `scientific-checks/README.md`.
+5. Run `npm run test:scientific`. Every profile-authored guard generated into
+   `spec/v0.1/fixtures/scientific.json` must pass in Python and TypeScript.
 6. Set the new version in `package.json`, `package-lock.json`, `pyproject.toml`,
    `python/src/biosimulant_model_compatibility_standard/__init__.py` and the
    `release` field in `scripts/build_standard.py`. Regenerate the spec and add a

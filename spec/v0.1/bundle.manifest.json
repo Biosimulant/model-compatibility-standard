@@ -1,40 +1,34 @@
 {
-  "bundle_sha256": "sha256:6c44dc91689a4d1fc457b4d1483e4b3c5e7a2c06a7a8274982b30cb8b3c2499a",
+  "bundle_sha256": "sha256:8b02b8752ccb6874b78a5e3f96a20ae569160a00d6237b42472ea9682dddb487",
   "canonicalization": "RFC8785",
   "counts": {
-    "item_definitions": 69,
-    "item_packs": 3,
+    "fields": 69,
     "profiles": 3
   },
   "files": [
     {
       "path": "catalogue/catalogue.json",
-      "sha256": "sha256:f4213f7d549cb35915da405d27ea848cb7a08707315603791b490d5046159818",
-      "size_bytes": 43872
+      "sha256": "sha256:7c8e5f289980fc8e742bc4f4762ace504600b71bca618ed3221a4528c983eead",
+      "size_bytes": 41260
+    },
+    {
+      "path": "catalogue/fields.json",
+      "sha256": "sha256:7fcbadf27c5ad616e600c6136bfe29bce81cc61f96614ea7372acbf9cf127ff0",
+      "size_bytes": 37426
     },
     {
       "path": "catalogue/internal-validation.json",
-      "sha256": "sha256:41509fdfc405b71d92c1c6e2a03a554b8287db69e5f5a2df541eddfaff2ecd5f",
+      "sha256": "sha256:eb5704a5a5f540c7dee62fd6a478c7de0499d027fd09bc141b3d62640c79960d",
       "size_bytes": 1212
     },
     {
-      "path": "catalogue/item-packs.json",
-      "sha256": "sha256:465ecbe1f4a17448a4a46f8de73476da7a9338cbfda33b68ef6a8cef62a92ec8",
-      "size_bytes": 2621
-    },
-    {
-      "path": "catalogue/items.json",
-      "sha256": "sha256:1119e272c56a9ea9be834343c136504b8a9844f4ba16c938e598ea817e09b6e4",
-      "size_bytes": 37839
-    },
-    {
       "path": "catalogue/terms.json",
-      "sha256": "sha256:4c68994a022d0205e9397db666201a05c28b70ea2bfd5932e51a1a743e43d91c",
-      "size_bytes": 2878
+      "sha256": "sha256:fc4966e78845e2fd7bfd677932d95d6730f9abc281d9e8ee52f75fa595b97928",
+      "size_bytes": 2887
     },
     {
       "path": "examples/compatible-model.yaml",
-      "sha256": "sha256:d2c4a994d7f1bdd08f604eb6eac391f9788fcf9463a06a3d3c0e44a790a9038d",
+      "sha256": "sha256:50940b3d8b9f4c9017e6f54ad2643b5b98e32da68f71ca2a2c06e9d7cb60634d",
       "size_bytes": 1036
     },
     {
@@ -68,34 +62,39 @@
       "size_bytes": 48622
     },
     {
+      "path": "fixtures/scientific.json",
+      "sha256": "sha256:2abeaf7043652989954e2033e17bffa694f06d44bc14e2e2c725ea902a2db141",
+      "size_bytes": 6243
+    },
+    {
       "path": "profiles/chemical/canonical-smiles/v0.1.json",
-      "sha256": "sha256:8cfc235255ae0615e1d0a2d9c9c8963471708aef5b969c0914f7787b1c041481",
-      "size_bytes": 6223
+      "sha256": "sha256:6a1bc1204ef870487ef76e371e9e4856d7346b6c187eb118fc786a6d6da7a0d8",
+      "size_bytes": 7890
     },
     {
       "path": "profiles/proteome/protein-sequence/v0.1.json",
-      "sha256": "sha256:053fa88ed3637ef71dd0c0455b1951b5c1654a9ead9757068ab56114419fe24b",
-      "size_bytes": 7454
+      "sha256": "sha256:88f844fa5e8dcf611ffd7ab8cb487aea8c9d149bc9c032c1cc86334b6f4c1252",
+      "size_bytes": 8656
     },
     {
       "path": "profiles/proteome/protein-structure/v0.1.json",
-      "sha256": "sha256:1133dad1fec8765e8d43edeee47316fbc2a37462c006d27c22ae9aaf8f669db0",
-      "size_bytes": 7926
+      "sha256": "sha256:dfb949ba0d57c8dcb818a72645905e1db6e27f1bd724eb38ea08b68839b57f44",
+      "size_bytes": 10057
     },
     {
       "path": "review-packets/chemical/canonical-smiles.json",
-      "sha256": "sha256:1b902812c586ac4120b1d2f2b750314da919aa2ef0a690f22a1cc383db05afc5",
-      "size_bytes": 9061
+      "sha256": "sha256:106c83b4c82d837d50b0a167d4e93309e3348112da069847785ad1e49ea0108d",
+      "size_bytes": 12190
     },
     {
       "path": "review-packets/proteome/protein-sequence.json",
-      "sha256": "sha256:a01e5c027b9bc6278752ccbee827681962c61b9bcc0522750483db0a895b31e5",
-      "size_bytes": 10925
+      "sha256": "sha256:19806cbb17715031492080dfcf92f4261fbbc955a3277f9fe7ac9b95154f0582",
+      "size_bytes": 13569
     },
     {
       "path": "review-packets/proteome/protein-structure.json",
-      "sha256": "sha256:57b2a11c26453b7fc0b9e5760a32c6f5ccbd0c097e9be389401d918ab9f9441b",
-      "size_bytes": 12289
+      "sha256": "sha256:8331b5eff3e0fb5bda6c03bc58c0a82f790a9f5a5e38e76f765d66e8d55a70f1",
+      "size_bytes": 15879
     },
     {
       "path": "rules/normalization.json",
@@ -109,8 +108,8 @@
     },
     {
       "path": "rules/quantity-kinds.json",
-      "sha256": "sha256:26c7ef7f4db6ec73dda4e5de13046827ce6fc2c4462800261d70b3297e2b273a",
-      "size_bytes": 5472
+      "sha256": "sha256:650aa2debf57d433034c236265cc3d54d2ab700bbf45da375aea684581f1dbf0",
+      "size_bytes": 5430
     },
     {
       "path": "rules/reason-codes.json",
@@ -134,8 +133,8 @@
     },
     {
       "path": "schemas/catalogue.schema.json",
-      "sha256": "sha256:2e1d18fdd6a371862e71a41dbfe892ccc048c2f93f3b721ab86131a7b7731be4",
-      "size_bytes": 1158
+      "sha256": "sha256:67179ae6af338670b540620c8814a186f217a65b2074b01f3a3711f4b6ddb46e",
+      "size_bytes": 1020
     },
     {
       "path": "schemas/compatibility-finding.schema.json",
@@ -199,8 +198,8 @@
     },
     {
       "path": "schemas/profile-definition.schema.json",
-      "sha256": "sha256:a558332d65d9b854962b64af6ee3269477e1856f6e86fb42daae00d4dbe8b087",
-      "size_bytes": 5764
+      "sha256": "sha256:9810b03e6013fabee3540e869b13cda077588309332fa72709460e0226cae1b5",
+      "size_bytes": 6579
     },
     {
       "path": "schemas/profile-reference.schema.json",
@@ -209,8 +208,8 @@
     },
     {
       "path": "schemas/profile-review-packet.schema.json",
-      "sha256": "sha256:bb37a53583022a01eca28407e1650c99e5c58cabc26238d323f4e4a2242459cc",
-      "size_bytes": 2577
+      "sha256": "sha256:816ba84d0ac165b6096d4b9c4f7d61c78ed3bc8ebeb00e3b9aed8b04896195ca",
+      "size_bytes": 2828
     },
     {
       "path": "schemas/resolution-plan.schema.json",

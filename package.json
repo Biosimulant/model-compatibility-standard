@@ -49,7 +49,7 @@
     "test": "npm run build && node --test typescript/test/*.test.mjs && node scripts/check_cross_language.mjs",
     "test:scientific": "npm run build && python3 -m pytest python/tests/test_scientific_checks.py && node --test typescript/test/scientific-checks.test.mjs",
     "prepack": "npm test",
-    "prepare": "npm run build"
+    "prepare": "npm run build:browser-data && tsc -p typescript/tsconfig.json"
   },
   "dependencies": {
     "ajv": "^8.17.1",

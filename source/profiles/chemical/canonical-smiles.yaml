@@ -1,0 +1,63 @@
+schema_version: "0.1"
+label: Canonical SMILES
+domain_label: Chemical identity and representation
+description: >
+  A SMILES representation designated canonical by a declared canonicalization
+  method, software implementation and version for a specified chemical
+  structure.
+status: draft
+representations: [scalar, record, artifact]
+intended_use: >
+  Connecting a model output that provides canonical SMILES to a model input that
+  expects the same declared canonicalization method and software version.
+limitations:
+  - It does not establish that two differently normalised strings represent the same chemical entity.
+  - It does not silently resolve stereochemistry, protonation, tautomer, isotope or charge choices.
+
+fields:
+  semantic.concept: required
+  representation.kind: required
+  representation.canonicalization: required
+  representation.normalization_tool: required
+  representation.normalization_version: required
+  semantic.ontology_terms: under-review
+  semantic.qualifiers: under-review
+  identifiers.structure_hash: under-review
+  representation.stereochemistry: under-review
+  representation.protonation_state: under-review
+  representation.tautomer_state: under-review
+  representation.formal_charge: under-review
+  representation.isotope_state: under-review
+  origin.software: under-review
+  origin.software_version: under-review
+  origin.source_ref: under-review
+  origin.source_sha256: under-review
+
+examples:
+  - id: BMCS-V0-004
+    title: Different canonicalization methods are incompatible
+    check: compare
+    source_patch: {representation: {canonicalization: method-a}}
+    target_patch: {representation: {canonicalization: method-b}}
+    expect: {status: INCOMPATIBLE}
+    why: Canonical SMILES is method-dependent, so different declared methods cannot be assumed identical.
+    conditions: Both ports declare different methods and no normalising adapter is supplied.
+    decision: V0 canonical-SMILES draft
+    report_finding: Contradictory canonicalization provenance
+  - id: BMCS-V0-005
+    title: Missing canonicalization tool version is unknown
+    check: compare
+    source_remove: [representation.normalization_version]
+    expect: {status: UNKNOWN}
+    why: The same tool can change canonical output between versions.
+    conditions: The source omits the tool version required by the target contract.
+    decision: V0 canonical-SMILES draft
+    report_finding: Missing canonicalization provenance
+  - id: BMCS-V0-008
+    title: Identical canonical-SMILES contracts are exact matches
+    check: compare
+    expect: {status: EXACT}
+    why: The same complete canonical-SMILES declaration can connect without conversion or approval.
+    conditions: Both ports make the same complete declarations for this profile.
+    decision: V0 canonical-SMILES draft
+    report_finding: Positive baseline

@@ -3,10 +3,10 @@
 This directory holds one review record per profile:
 
 ```text
-source/reviews/<domain>/<profile-name>.json
+source/reviews/<domain>/<profile-name>.yaml
 ```
 
-Start from `profile-review.template.json`. The record is checked against
+Start from `profile-review.template.yaml`. The record is checked against
 `../profile-review.schema.json` when the standard is built.
 
 A completed review names the scientific reviewer, a separate schema reviewer
@@ -15,7 +15,7 @@ field-by-field decisions and the examples that were checked. Neither reviewer
 may be a profile author.
 
 The generated review packet under `spec/v0.1/review-packets/` is the mapping the
-scientist reviews. Every required and candidate field in that packet needs a
+scientist reviews. Every field in that packet needs a
 decision: required, conditional, recommended or excluded. The reviewer may also
 identify a field that is missing from the proposal.
 
