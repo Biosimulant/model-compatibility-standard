@@ -37,8 +37,11 @@ removed from the active standard. It remains in Git history. New profiles will
 be added only when there is a real model-to-model mapping to support and people
 available to review it.
 
-See [Proposing a profile](PROPOSING_A_PROFILE.md) if the data exchanged by your
-models is not covered by the current catalogue.
+If your models exchange data that the catalogue does not cover, you can either
+send the scientific mapping to Biosimulant or add the profile in a pull request.
+The [profile proposal guide](PROPOSING_A_PROFILE.md) gives the email package,
+branch commands, files to change, example requirements and review process. Start
+with the reusable [proposal template](PROFILE_PROPOSAL_TEMPLATE.md).
 
 ## What goes in `model.yaml`
 
@@ -142,9 +145,14 @@ One-off scripts and local investigation files belong in `.scratch/`, which Git
 ignores. See [scripts/README.md](scripts/README.md).
 
 For changes, start with [CONTRIBUTING.md](CONTRIBUTING.md). A new profile has a
-separate, evidence-led route in [PROPOSING_A_PROFILE.md](PROPOSING_A_PROFILE.md).
-The scientific review gate is described in
-[PROFILE_REVIEW.md](PROFILE_REVIEW.md).
+separate, evidence-led route in [PROPOSING_A_PROFILE.md](PROPOSING_A_PROFILE.md):
+prepare the complete output-to-input mapping, add it to
+`source/catalogue.review.json`, rebuild the generated profile and fixtures, run
+both implementations' tests, and open a pull request with the real or redacted
+examples. If you do not want to edit the repository, complete
+[PROFILE_PROPOSAL_TEMPLATE.md](PROFILE_PROPOSAL_TEMPLATE.md) and send the
+package by email as described in the guide. The scientific review gate is
+described in [PROFILE_REVIEW.md](PROFILE_REVIEW.md).
 
 ## Stable references
 

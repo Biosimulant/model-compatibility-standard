@@ -18,9 +18,11 @@ python3 scripts/build_standard.py
 python3 scripts/build_standard.py --check
 ```
 
-If you are adding a profile, follow [Proposing a profile](PROPOSING_A_PROFILE.md).
-That process starts with a real output-to-input mapping and includes scientific
-review.
+If you are adding a profile, follow [Proposing a profile](PROPOSING_A_PROFILE.md)
+and complete the [proposal template](PROFILE_PROPOSAL_TEMPLATE.md). The guide
+covers both email submission and the exact branch, source, generated-file,
+example and pull-request steps. The process starts with a real output-to-input
+mapping and includes independent scientific review.
 
 ## Change comparison behaviour
 
