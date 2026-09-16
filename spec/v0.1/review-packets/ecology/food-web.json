@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/food-web@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/food-web/v0.1",
-  "profile_sha256": "sha256:d82de6def6f60a62727dab410a692574a440b202f6fc7d6e5434e7c9e6f3f2bd",
+  "profile_sha256": "sha256:7310e75a40792703aabc75c8de67d02aaf0afb37c4b8ff97b9105786d285e25c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

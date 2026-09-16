@@ -186,7 +186,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/mortality-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/mortality-rate/v0.1",
-  "profile_sha256": "sha256:47dbe4e7c5e10a572bf3273834b2de7665071ddf7cc7f92c61cc3d3231d96c2a",
+  "profile_sha256": "sha256:1697f6c423bf5043e371884f1f7f33324f108ebdd16d6ec86486c2b638c9beb6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -194,6 +194,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -453,6 +454,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

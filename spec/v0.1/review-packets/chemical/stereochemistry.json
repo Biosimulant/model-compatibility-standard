@@ -113,7 +113,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/stereochemistry@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/stereochemistry/v0.1",
-  "profile_sha256": "sha256:568cad51afd89b5adb08c7721c6b4f0b463d9fbdb854cb3ddf43a03f175dddb5",
+  "profile_sha256": "sha256:0d27a029596eb223a7ea2b116ec3cf112a121e9baead65ae71053709f1ef15e6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -121,6 +121,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -332,6 +333,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

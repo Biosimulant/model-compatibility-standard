@@ -163,7 +163,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/divergence-time@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/divergence-time/v0.1",
-  "profile_sha256": "sha256:865baa3ee8296dcc91b0fe7c6fa4c10218b5e40f38fada9f197d91fd1d1baafe",
+  "profile_sha256": "sha256:f556c311d29b9a98102b28be3e3c67bc37ee70a2a32c2b6f492bfdf2c58ed03a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -171,6 +171,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -403,6 +404,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

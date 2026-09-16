@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/colony-formation@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/colony-formation/v0.1",
-  "profile_sha256": "sha256:6532f577d414b4285345c5bcaa87a05a7c3fe0df389c8a3b0fcaa02d33209299",
+  "profile_sha256": "sha256:fa24fecdb8bab3af6d46d7c188a02689f227acc5afa299b4f066c2169fcff53d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -161,7 +161,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/proliferation-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/proliferation-rate/v0.1",
-  "profile_sha256": "sha256:706929f29b0275ccfebf4d2fa7c7671a30a94a59f542601cb557e26e42e72aef",
+  "profile_sha256": "sha256:0cf0f3bfb704815d390a4e6664628e5e438bb8b5e27254de27ae2e59cf77d581",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -169,6 +169,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -401,6 +402,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

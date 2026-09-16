@@ -174,7 +174,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/hormone-concentration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/hormone-concentration/v0.1",
-  "profile_sha256": "sha256:ccdc200d9d8ccd44f05cae7cf27ec42c1b2168ebc9acd38d652d35120d34ce15",
+  "profile_sha256": "sha256:d3acfdbbc9c18ab039fa1df387a79180a2b3bc789dff4612d87cfb0ba660a863",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -182,6 +182,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -414,6 +415,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

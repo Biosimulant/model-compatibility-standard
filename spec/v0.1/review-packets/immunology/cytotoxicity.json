@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/cytotoxicity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/cytotoxicity/v0.1",
-  "profile_sha256": "sha256:3f23ffcb44cf9467340c8f4fb16b381769e6dbc7355ca59adb4023b394d1d731",
+  "profile_sha256": "sha256:8f30115efe802c6f166e1e9178659adb86001b346935d36b22cc79c355f6d2be",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

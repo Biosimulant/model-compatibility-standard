@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/microrna-expression@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/microrna-expression/v0.1",
-  "profile_sha256": "sha256:61391883e42836a87b05d91f09eff1ee5e1a37d4348e00a607745cb80659c673",
+  "profile_sha256": "sha256:629d366d4f34ce0f15065d3acf79df863218f46c126dcd97b69d17fa882662d9",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

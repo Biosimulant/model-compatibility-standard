@@ -152,7 +152,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/isotope-tracer-fraction@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/isotope-tracer-fraction/v0.1",
-  "profile_sha256": "sha256:8139de5592fc099352ca83a7de60c521471910289ead1c2c19609301d676e245",
+  "profile_sha256": "sha256:ac190f7367e2843b668cb080f83abdb14678e300ff48d5fd7664e9ede517c347",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -160,6 +160,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -383,6 +384,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -144,7 +144,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/organism-taxon@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/organism-taxon/v0.1",
-  "profile_sha256": "sha256:5438665d402b6b79faee8f4458193d2fbaa70529d45db2e333ce4b17993fa9cb",
+  "profile_sha256": "sha256:51436d5c497081fe41661faa96cc263f290e066e9222a1509bba924149d3811d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -152,6 +152,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -372,6 +373,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

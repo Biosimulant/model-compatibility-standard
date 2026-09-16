@@ -162,13 +162,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/expression-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/expression-trajectory/v0.1",
-  "profile_sha256": "sha256:805dc876c98fa5c112f7e32bb239a57d4d2056a27733979b08db8837d5c7b8b4",
+  "profile_sha256": "sha256:7c0dad0e36512978482e81492df34dc8b0d78e6fc2dc8af2db18d8a141a2e8d2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -399,6 +400,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

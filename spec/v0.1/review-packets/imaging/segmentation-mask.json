@@ -125,13 +125,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/segmentation-mask@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/segmentation-mask/v0.1",
-  "profile_sha256": "sha256:65dfbafbe7c368a916d70deb61a32c4be5fb2c17052b202eb6bf406c6e78bd5c",
+  "profile_sha256": "sha256:64d5f10f7acc6680dada0b6a1505157cbf0136c795d0efbfc9d3e47f075aa5d0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/morphology-features@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/morphology-features/v0.1",
-  "profile_sha256": "sha256:91d0b7dc954ec94e0673b7b87e21dee8c8691a5f4596cfc08aa0b7e1be79c2e1",
+  "profile_sha256": "sha256:9ef504335526ddbf6c55083e8d4423f26089bd50c94278a2766b1a89ba623bfa",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

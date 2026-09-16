@@ -172,7 +172,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/infection-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/infection-rate/v0.1",
-  "profile_sha256": "sha256:dfddbc85e3c4cd6f315aa58578c9795759cc5c496912be0bea0f6c36aa1b543b",
+  "profile_sha256": "sha256:4f3cbd3b4928ed06691961c198ebc0dac302120d50485d5fb2381e085db1b275",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -180,6 +180,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -412,6 +413,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

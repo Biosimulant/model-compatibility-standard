@@ -167,13 +167,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cardiopulmonary-renal/perfusion-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cardiopulmonary-renal/perfusion-map/v0.1",
-  "profile_sha256": "sha256:a832a5f464021fe28b9fcc8a0cd2429c6f804a63783f213b011bee789ec6ba0f",
+  "profile_sha256": "sha256:2701c0d0e585ad0ccc9571fd7d558aee440ccf98403b9dc866c1b84d0a794052",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -404,6 +405,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

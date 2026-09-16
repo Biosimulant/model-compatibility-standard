@@ -113,7 +113,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/lipophilicity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/lipophilicity/v0.1",
-  "profile_sha256": "sha256:15f0256f696c51d4be3b664c41e76b5532eda9ba59569ed41fe3c8dfbc6ce121",
+  "profile_sha256": "sha256:79a3974ac8e72fceccfc9f62588de6ab3e7e19d22638a5dead777b3e1ea4dd2a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -121,6 +121,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -332,6 +333,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

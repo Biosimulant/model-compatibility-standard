@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/tissue-pattern@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/tissue-pattern/v0.1",
-  "profile_sha256": "sha256:cc7968265dc260a1773b06ca113a39be010d9f9472c7f1e4decafb6032af0254",
+  "profile_sha256": "sha256:74f11f9945bdfd13d3062b0d0f38172111ef4ddb067dbc3fc58ddca4baa8616b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

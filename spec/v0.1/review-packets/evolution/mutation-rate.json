@@ -164,7 +164,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/mutation-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/mutation-rate/v0.1",
-  "profile_sha256": "sha256:97a472b426818c16ae9393f71d16b8e042c9786657bca9140e1156b23e56d355",
+  "profile_sha256": "sha256:279ce84ca4067b195ada714a7c7fd173850614ecda20c91a2e3f1d1652acab1d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -172,6 +172,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -404,6 +405,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

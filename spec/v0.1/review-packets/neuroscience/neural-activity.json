@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/neural-activity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/neural-activity/v0.1",
-  "profile_sha256": "sha256:68a0698537596e481d626da672244cc5d84534ff6412c14c2c4c51f11f89b482",
+  "profile_sha256": "sha256:1a3ba243d46f9795e591df2a61ee37e83c0b733d8f01f8dce50b013bfe543d91",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -136,6 +136,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -356,6 +357,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -130,7 +130,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/sequencing-read@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/sequencing-read/v0.1",
-  "profile_sha256": "sha256:7390ad2073429d2ad26131f86c509280c6b9e635fa68cee4aa0fbc54178f8322",
+  "profile_sha256": "sha256:f1e5d475fa58cf6e289030b4eee35cd8eee754af30413dadc0fd9c49057869d9",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -138,6 +138,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -358,6 +359,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

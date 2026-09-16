@@ -159,7 +159,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/methylation-beta-value@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/methylation-beta-value/v0.1",
-  "profile_sha256": "sha256:7f0916157a76da36481f2d47901156dc864137457df1fc6d3ffea3ced7ba0297",
+  "profile_sha256": "sha256:b1f4b2b2722960d4c3c90ac1dc16702a7550d5194459a38e9cfa9c742d8f0fd3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -167,6 +167,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -390,6 +391,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

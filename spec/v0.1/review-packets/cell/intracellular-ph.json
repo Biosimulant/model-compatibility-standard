@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/intracellular-ph@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/intracellular-ph/v0.1",
-  "profile_sha256": "sha256:2aec858a9030b431e7b6fa06f90593d2f7163d685d516f66747ca55ff4cb1e27",
+  "profile_sha256": "sha256:372c14a6257969d26f647f7d69a4aec9cbed4f22aa7130ecc93ac366d33f4409",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

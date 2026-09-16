@@ -143,7 +143,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/intracellular-metabolite@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/intracellular-metabolite/v0.1",
-  "profile_sha256": "sha256:fef0832da71acf30b1e2f4ff078403ca8cb8521bcdb21909e8aff74dc4c14661",
+  "profile_sha256": "sha256:55c57dad6ffea3a79c7f8541164d6c211ee3e332d13b66509e19e5ffcb7987a7",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,6 +151,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -371,6 +372,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

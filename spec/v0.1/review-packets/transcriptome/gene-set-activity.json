@@ -140,7 +140,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/gene-set-activity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/gene-set-activity/v0.1",
-  "profile_sha256": "sha256:49fa98323d402234a14ee9720b2822a78f87d6808f7a7647f23ad316e767e254",
+  "profile_sha256": "sha256:8fbd08139e29203920cc1e69de4d4c6c0bf4beafa5e9f68343c5dcd286d427ec",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -148,6 +148,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -368,6 +369,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

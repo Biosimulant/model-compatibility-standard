@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/trophic-interaction@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/trophic-interaction/v0.1",
-  "profile_sha256": "sha256:ccbcb8e43a133c8988cae6cef679b32892492a10d10bb66ff8eb8987b9478b25",
+  "profile_sha256": "sha256:ec1ba80ea1cd86eeb557791e0ce64c29661fb2a66abb61ba80b9ce0e77be7506",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

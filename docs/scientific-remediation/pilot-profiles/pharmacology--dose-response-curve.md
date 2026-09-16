@@ -27,15 +27,15 @@ The current profile puts the curve on a `time` axis, which is the substring rule
 | `measurement.quantity`, `measurement.unit`, `measurement.scale` | What the response is: percent of control, absolute readout, or fraction affected. |
 | `measurement.control` | The reference the response is relative to (vehicle, untreated, positive control). A normalised response without its control is uninterpretable. |
 | `measurement.response_direction` | Whether increasing response means inhibition or activation; the sign convention changes the meaning of every point. |
-| `biological_context.intervention.agent` | Which compound. |
-| `biological_context.intervention.duration` | Exposure time: a 24-hour and a 72-hour curve for the same agent are different experiments. |
+| `biological_context.intervention[].agent` | Which compound. |
+| `biological_context.intervention[].duration` | Exposure time: a 24-hour and a 72-hour curve for the same agent are different experiments. |
 | `biological_context.species` | The system exposed. |
 
 **Conditional**
 
 | Field | Condition |
 |---|---|
-| `biological_context.intervention.route`, `intervention.schedule` | Required for in vivo dosing; route changes exposure. |
+| `biological_context.intervention[].route`, `intervention[].schedule` | Required for in vivo dosing; route changes exposure. |
 | `biological_context.cell_line` | Required for in vitro assays (a Cellosaurus identifier). |
 | `biological_context.assay` | Required when the readout method changes the response (viability dye vs ATP luminescence vs imaging). |
 | `origin.fit_method`, `uncertainty.fit_quality` | Required when the port carries fitted parameters rather than observed points. |
@@ -60,8 +60,8 @@ names the method but not the model form.
 | `dimensions.axes[].unit` (dose) | dimensional conversion (D1) | unknown | `mg` to `mg/kg` needs a body mass — a parameterised transformation, not a conversion |
 | `measurement.control` | equal | unknown | Percent-of-vehicle vs percent-of-untreated are different normalisations |
 | `measurement.response_direction` | equal | unknown | Inhibition vs activation INCOMPATIBLE |
-| `intervention.duration` | equal, or declared tolerance | unknown | 24 h vs 72 h INCOMPATIBLE |
-| `intervention.agent` | equal, or pinned mapping | unknown | Different agent INCOMPATIBLE |
+| `intervention[].duration` | equal, or declared tolerance | unknown | 24 h vs 72 h INCOMPATIBLE |
+| `intervention[].agent` | equal, or pinned mapping | unknown | Different agent INCOMPATIBLE |
 
 ## What v0.1 gets wrong here
 

@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/transcription-factor-activity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/transcription-factor-activity/v0.1",
-  "profile_sha256": "sha256:ffc6323db9f8ef80b9188a5c08e6a92ffc0870a9fafdc8195d06faa71991c3e1",
+  "profile_sha256": "sha256:1cb8a2643650599504af324fa09c7ebf9b39ea9b5bf6b3946df5a9a17e070351",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

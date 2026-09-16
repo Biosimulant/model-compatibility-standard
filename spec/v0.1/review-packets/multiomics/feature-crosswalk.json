@@ -131,7 +131,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/feature-crosswalk@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/feature-crosswalk/v0.1",
-  "profile_sha256": "sha256:b0b9f2eecbb8f931188a363d11525d7bfc946fae9d9c6038e73e0073888b9e29",
+  "profile_sha256": "sha256:7caaeafa3e5d201ea2e65f37ad9fc5bc59532788d33edeb49ea62bf247825ce1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -139,6 +139,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -359,6 +360,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

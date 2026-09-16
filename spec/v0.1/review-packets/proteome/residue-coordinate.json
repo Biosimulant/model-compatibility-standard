@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/residue-coordinate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/residue-coordinate/v0.1",
-  "profile_sha256": "sha256:1ab7587639ec28843434c6a899cca9f172704e7ddb7cae04cf12245d0fa7cd33",
+  "profile_sha256": "sha256:eaf443184bdc45fe1329ae0a0e8d24dd5653ef9e5557ab629daec737d8faaf71",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

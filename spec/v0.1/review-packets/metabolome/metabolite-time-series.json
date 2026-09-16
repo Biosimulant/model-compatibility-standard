@@ -212,13 +212,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/metabolite-time-series@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/metabolite-time-series/v0.1",
-  "profile_sha256": "sha256:34952a7027d97407e368846b55be5f201a443e689b7c1a18bc6be8aae3ebcb35",
+  "profile_sha256": "sha256:168cc4f90f4f5296b7bb9f1314e1ec67f4d89c15d7e1ad2c3874dd276c834bfe",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -447,6 +448,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

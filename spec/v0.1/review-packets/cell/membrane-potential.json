@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/membrane-potential@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/membrane-potential/v0.1",
-  "profile_sha256": "sha256:df2974df29375170fe61b87e16e20a2e62eae4215aa3776f96dc5f79248c9d7f",
+  "profile_sha256": "sha256:bdbbab40e5bd84866017164cb64d83110aadcbcad1e3e49c83dfb57691726344",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

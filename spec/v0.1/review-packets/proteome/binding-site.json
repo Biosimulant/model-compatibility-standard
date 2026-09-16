@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/binding-site@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/binding-site/v0.1",
-  "profile_sha256": "sha256:4c0038596c9f90368c7ecc58771ec22749526b144884533eaad530b86cd3dadb",
+  "profile_sha256": "sha256:4a3f2253c6dcd72f83621830c8153782f707b5173412d03c4316c295f642cff0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

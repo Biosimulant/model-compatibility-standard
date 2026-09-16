@@ -188,7 +188,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/gene-set-score@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/gene-set-score/v0.1",
-  "profile_sha256": "sha256:df4b42cc40cc263c8c108b898349f8f29f2436cf32cddfd75d76d088106df421",
+  "profile_sha256": "sha256:48e47ca015a9b0c278e39513a2550e478da2394c36cea6343c94a49591bad5d4",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -196,6 +196,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -428,6 +429,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

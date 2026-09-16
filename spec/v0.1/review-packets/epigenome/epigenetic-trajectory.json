@@ -172,13 +172,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/epigenetic-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/epigenetic-trajectory/v0.1",
-  "profile_sha256": "sha256:ea8300818c3a30988236410d984fa6bd1a027a9215c0f2765f667ec8ebb291f8",
+  "profile_sha256": "sha256:fbf7ddb0d7743fde34c43c9033d1c35e99c7574b6659057b8455bf8737fde79d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -400,6 +401,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

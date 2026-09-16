@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/developmental-timing@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/developmental-timing/v0.1",
-  "profile_sha256": "sha256:8635ab541ee1706a449a9a1c80d7b7d96b34379c2ac19fb43a3a76fc93d67c37",
+  "profile_sha256": "sha256:fab6f1eb3fcccab889600e8131279ce5df3b335365f2d0caf97a78d2c88d482c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

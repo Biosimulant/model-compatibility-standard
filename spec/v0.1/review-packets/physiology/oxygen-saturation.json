@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/oxygen-saturation@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/oxygen-saturation/v0.1",
-  "profile_sha256": "sha256:b95ab0f88447fc882b1aa532bcf03f96af6ab2c0bded7f350b80b441e4d37ac8",
+  "profile_sha256": "sha256:c68a77c5430d3aba158228a6fa830d232b21ae444ec0bd83e6127cd033f31c35",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

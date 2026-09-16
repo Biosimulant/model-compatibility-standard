@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/developmental-anomaly@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/developmental-anomaly/v0.1",
-  "profile_sha256": "sha256:4c088fb44fe9935abe5e614755251c96b688f095c892dcc8cc68383d7be15f0a",
+  "profile_sha256": "sha256:b6cb95cc08787134cea102b306cfaaeda03b95e1b27d2ed87102083c2cf971b0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

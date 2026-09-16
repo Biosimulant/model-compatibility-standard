@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/differential-expression@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/differential-expression/v0.1",
-  "profile_sha256": "sha256:4696bb8e8f1f9deadd3f7f68aa54be269faf8d9a7bf21248a87b7c325f5777a6",
+  "profile_sha256": "sha256:69cdf6e7263c68b0d3d52b49989b12d122c3102c166d8fb822163280cd7c5577",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

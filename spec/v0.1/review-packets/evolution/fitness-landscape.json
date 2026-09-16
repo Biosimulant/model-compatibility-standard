@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/fitness-landscape@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/fitness-landscape/v0.1",
-  "profile_sha256": "sha256:a77bb480ad186c8fd2ef90eb75137dfdf62961ee230323682e8da285c0420fb0",
+  "profile_sha256": "sha256:d62f1da82245c32dbda62b8226d8e037ba19da6f7b0de25e67bb531ad4d343d4",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

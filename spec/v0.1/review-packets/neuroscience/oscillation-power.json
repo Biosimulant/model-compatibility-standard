@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/oscillation-power@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/oscillation-power/v0.1",
-  "profile_sha256": "sha256:7febdd1d9e88a8892161b9765d76f4524c0305b984e4fc0b8cdad90503bbfe2d",
+  "profile_sha256": "sha256:f04fd4938e227a74d9e7e4b860e9aa571ee78ba77aa657172593406670e7ec07",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -136,6 +136,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -356,6 +357,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

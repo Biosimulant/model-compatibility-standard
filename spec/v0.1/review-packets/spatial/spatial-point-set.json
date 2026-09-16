@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/spatial-point-set@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/spatial-point-set/v0.1",
-  "profile_sha256": "sha256:596ca3576f1ea8ac8edb825afb5dd654fb03e0730266d7e78915109f3ae66c1f",
+  "profile_sha256": "sha256:8e9e886460398c0b08aaa763a464cdeedb3831bdd030ebbbe8271bd8913702c2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

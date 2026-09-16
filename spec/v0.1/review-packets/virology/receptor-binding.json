@@ -135,7 +135,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/receptor-binding@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/receptor-binding/v0.1",
-  "profile_sha256": "sha256:9dc1dc83feddd5bb97f3836fddc61daddcbd776e6cc553085f641d3bbd245ad7",
+  "profile_sha256": "sha256:e45c47029b326b0f4ea3bc875ca65ba6e1c962dc855c454c4f10d83971f5a6fc",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -143,6 +143,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -363,6 +364,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

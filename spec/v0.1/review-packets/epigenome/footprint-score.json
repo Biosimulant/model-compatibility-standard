@@ -170,7 +170,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/footprint-score@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/footprint-score/v0.1",
-  "profile_sha256": "sha256:bf718ef9442d36b521d22e6df81dae75404e783361c3e506d03fd6f50ca16e45",
+  "profile_sha256": "sha256:12c8b16b81da06c9c9af12c4c59808a9fdd5bc333c4229282dde65230862348e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -178,6 +178,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -419,6 +420,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

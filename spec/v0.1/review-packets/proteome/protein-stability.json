@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-stability@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-stability/v0.1",
-  "profile_sha256": "sha256:f0ba67ecacfb8dd371abd2eaf237491406822509f6699d3accef559ebbd35a48",
+  "profile_sha256": "sha256:6cb4d259b7215cb19180c94d7306e86bc4a82da662cda8e6c22d86d2474527a8",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

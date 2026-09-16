@@ -126,13 +126,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/community-composition@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/community-composition/v0.1",
-  "profile_sha256": "sha256:91bea705f7167efe8c4017d5f1942ef5b594e98530a3cc3679e315aeab73b49e",
+  "profile_sha256": "sha256:3ca1fc3daaed892c45243a4d338589b62bce1cea0e9266d95aa40bd152d1fa44",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

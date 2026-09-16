@@ -165,13 +165,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/displacement-field@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/displacement-field/v0.1",
-  "profile_sha256": "sha256:4ae718157a9539b5ffdf9d6af2156fb7d203fef3726eb9cafdba33041b9359a8",
+  "profile_sha256": "sha256:80d821d908203c4226ee5d0654e387916ed1aff799694e9efc1c39a8f192a6d0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -411,6 +412,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

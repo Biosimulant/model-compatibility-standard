@@ -196,13 +196,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/taxonomic-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/taxonomic-abundance/v0.1",
-  "profile_sha256": "sha256:da2977b539fe792f1552f3b37455b06011fa290d5b0e7b24af416ba19a5e51d9",
+  "profile_sha256": "sha256:d2caaf76253fbce8d4318ec6ee877c8ccb1e6e43f06cb60633a18506a024412c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -445,6 +446,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

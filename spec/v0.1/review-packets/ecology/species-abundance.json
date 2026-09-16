@@ -162,13 +162,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/species-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/species-abundance/v0.1",
-  "profile_sha256": "sha256:d552dc256ae6e32dd79f9b78a6ef71a924c8d137cde1f6e7dd0709721c276e12",
+  "profile_sha256": "sha256:7fe31740b2622f20b3b1a3a7ca111da4d9e72ff78a79050a616a0e3c88f8ada5",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -393,6 +394,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

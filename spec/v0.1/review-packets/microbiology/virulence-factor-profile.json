@@ -124,13 +124,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/virulence-factor-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/virulence-factor-profile/v0.1",
-  "profile_sha256": "sha256:69e53b349413632e8258249bd021604bdede46e16086f0578295c7b45dd695b1",
+  "profile_sha256": "sha256:52eef4cd14c3f60c3e2049663bf09d02e716915b51cadc9e3b756771c6f4fc67",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

@@ -124,13 +124,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/metatranscriptomic-counts@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/metatranscriptomic-counts/v0.1",
-  "profile_sha256": "sha256:01dfe59e4d8a1ad0c41f526b24767d602f39aba8aa84010147b89345cab61898",
+  "profile_sha256": "sha256:bf1e1bde0d05de27e292a0dbee36882e2def544fefb6a621d4f102d69fd7b17b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

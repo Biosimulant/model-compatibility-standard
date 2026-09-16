@@ -152,7 +152,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/mass-spectral-peak@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/mass-spectral-peak/v0.1",
-  "profile_sha256": "sha256:f5cea16763397fe6ae71e72c87c4fee75733d249795db8b9b172bd077152ab45",
+  "profile_sha256": "sha256:37b8772c143cf4f14ab07811c2ee0cac7da5e307ffc9b3b1c393e2ca1953f651",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -160,6 +160,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -383,6 +384,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

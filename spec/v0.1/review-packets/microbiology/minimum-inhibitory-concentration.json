@@ -163,7 +163,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/minimum-inhibitory-concentration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/minimum-inhibitory-concentration/v0.1",
-  "profile_sha256": "sha256:1172ae78e18bd7390734b7c06aea0ca828a981bb1bbacbab0a6050f5320930c1",
+  "profile_sha256": "sha256:79ea3c0cdf55d1a50e1a3faf9f62c90084eb63ca00929d2913cef84153711e8b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -171,6 +171,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -403,6 +404,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

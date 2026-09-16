@@ -124,13 +124,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/monosaccharide-composition@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/monosaccharide-composition/v0.1",
-  "profile_sha256": "sha256:1a735bb3123be2b1b02a35ccfec4d53653c9c5ec597ead35b381b1e544f81c2f",
+  "profile_sha256": "sha256:b634dcd665192982af338a14bfdfde6e2561a34ea162edbc1a3005ecfec0b929",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

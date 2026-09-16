@@ -389,7 +389,7 @@
       },
       "missing_behavior": "unknown",
       "ordered": true,
-      "path": "biological_context.intervention.agent",
+      "path": "biological_context.intervention[].agent",
       "requirement": "profile-dependent",
       "value_type": "JSON value constrained by json_schema"
     },
@@ -404,7 +404,7 @@
       },
       "missing_behavior": "unknown",
       "ordered": true,
-      "path": "biological_context.intervention.dose",
+      "path": "biological_context.intervention[].dose",
       "requirement": "profile-dependent",
       "value_type": "JSON value constrained by json_schema"
     },
@@ -419,7 +419,7 @@
       },
       "missing_behavior": "unknown",
       "ordered": true,
-      "path": "biological_context.intervention.duration",
+      "path": "biological_context.intervention[].duration",
       "requirement": "profile-dependent",
       "value_type": "JSON value constrained by json_schema"
     },
@@ -434,7 +434,7 @@
       },
       "missing_behavior": "unknown",
       "ordered": true,
-      "path": "biological_context.intervention.route",
+      "path": "biological_context.intervention[].route",
       "requirement": "profile-dependent",
       "value_type": "JSON value constrained by json_schema"
     },
@@ -449,7 +449,7 @@
       },
       "missing_behavior": "unknown",
       "ordered": true,
-      "path": "biological_context.intervention.schedule",
+      "path": "biological_context.intervention[].schedule",
       "requirement": "profile-dependent",
       "value_type": "JSON value constrained by json_schema"
     },

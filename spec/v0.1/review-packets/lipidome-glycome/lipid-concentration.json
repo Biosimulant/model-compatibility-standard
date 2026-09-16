@@ -181,7 +181,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/lipid-concentration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/lipid-concentration/v0.1",
-  "profile_sha256": "sha256:5885817ef9e57835c2c23ee105aade977f2a05f5a29c0d15c2295db4d7f5cc0c",
+  "profile_sha256": "sha256:7f84d9546fdc1858cf1e5cb5a52e52663c32e1f0a998f954709972d0553e7d11",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -189,6 +189,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -412,6 +413,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

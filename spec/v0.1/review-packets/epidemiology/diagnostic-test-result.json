@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/diagnostic-test-result@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/diagnostic-test-result/v0.1",
-  "profile_sha256": "sha256:c2d6cfab960655fb9aac83e2d065dc4849aad994ea92c071233ff33f511113bb",
+  "profile_sha256": "sha256:d028063b57943a4bc8922195a7f9fa03184d2f1ec09d42a32ee3a67d99b59882",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,6 +149,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -387,6 +388,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

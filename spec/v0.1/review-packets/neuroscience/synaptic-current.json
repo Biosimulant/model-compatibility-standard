@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/synaptic-current@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/synaptic-current/v0.1",
-  "profile_sha256": "sha256:66768f030a94cbb3334f164408c555414f38fb4b72df5ea70fd6bd2c66108747",
+  "profile_sha256": "sha256:7c3749c72ca58da32072fe8e32b650aa10c5cb096626e2417c3672c34154bb11",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -136,6 +136,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -356,6 +357,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

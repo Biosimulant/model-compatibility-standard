@@ -165,7 +165,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/metabolic-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/metabolic-rate/v0.1",
-  "profile_sha256": "sha256:49f43c0e135a0b7e473725884d8f7bac2d9e32efa023b9e2065256853b42c4f2",
+  "profile_sha256": "sha256:01521eae02d55789b26d9ad71e5b3661efe5847dda07ff71fb4548b22dcdd3c8",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -173,6 +173,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -405,6 +406,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

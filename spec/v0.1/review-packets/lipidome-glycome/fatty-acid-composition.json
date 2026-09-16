@@ -124,13 +124,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/fatty-acid-composition@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/fatty-acid-composition/v0.1",
-  "profile_sha256": "sha256:ee7aa227376564954a67e9960a801cfe491f1fccd2dea20a5ba11a62f6b3cf13",
+  "profile_sha256": "sha256:c56e17fd51b3eb3758cc0b494eae39d9c50bbb548c41bc90071abf8376b20f17",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

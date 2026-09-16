@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/proteoform@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/proteoform/v0.1",
-  "profile_sha256": "sha256:cc1fa6a231c392ace16672433cce771e1e9eeb0cabfcb3163506d6f0d849cffb",
+  "profile_sha256": "sha256:9784b169c9e457b1b3474f948f246f17afc59e0f320aec8f0596405e79ee0f7e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

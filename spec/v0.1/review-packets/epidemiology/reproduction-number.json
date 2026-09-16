@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/reproduction-number@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/reproduction-number/v0.1",
-  "profile_sha256": "sha256:1501610423015edf9db0972f7a0801443197b6693388708e644d785e6eb73fd9",
+  "profile_sha256": "sha256:a6e1c2a9f323be549fe09be3cae8c962cc6f912dde83f6d64def9ce8212f7b09",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,6 +149,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -387,6 +388,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

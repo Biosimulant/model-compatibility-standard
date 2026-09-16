@@ -758,8 +758,12 @@
       "source_patch": {
         "biological_context": {
           "intervention": [
-            "compound-a",
-            "vehicle"
+            {
+              "agent": "compound-a"
+            },
+            {
+              "agent": "vehicle"
+            }
           ]
         },
         "origin": {
@@ -769,8 +773,12 @@
       "target_patch": {
         "biological_context": {
           "intervention": [
-            "compound-a",
-            "vehicle"
+            {
+              "agent": "compound-a"
+            },
+            {
+              "agent": "vehicle"
+            }
           ]
         }
       },
@@ -778,7 +786,7 @@
         "status": "DIRECT_COMPATIBLE"
       },
       "why": "Every biological_context item is compared with the shared context-compatible operator, and biological_context.intervention is the one context field whose value is an array rather than a string. TypeScript compared the two sides with ===, which for an array asks whether they are the same object, so two identical intervention lists were reported as a contradiction while Python, using value equality, called them a match. The two engines must give the same answer, and declaring the same interventions on both sides is not a contradiction.",
-      "conditions": "The source declares an origin the target omits, so the two contracts are not byte-identical and the comparison rules are actually evaluated; identical contracts short-circuit to EXACT and would never exercise the operator.",
+      "conditions": "The source declares an origin the target omits, so the two contracts are not byte-identical and the comparison rules are actually evaluated; identical contracts short-circuit to EXACT and would never exercise the operator. The interventions are structures, matching what the profile now requires of them.",
       "decision": "D5",
       "report_finding": "none: found in Phase 1 by the cross-language conformance test, not in the pre-review",
       "fixed_by": "D5",
@@ -939,6 +947,42 @@
       "fixed_at": "2026-09-15",
       "sources": [
         "duo-2021"
+      ]
+    },
+    {
+      "id": "BMCS-SCI-114",
+      "kind": "guard",
+      "check": "compare",
+      "title": "A sparse matrix is a re-encoding of a dense one, and is expressible at all",
+      "profile": "transcriptome/single-cell-expression-matrix",
+      "source_patch": {
+        "representation": {
+          "kind": "matrix",
+          "implicit_entry": "observed_zero",
+          "ordering": "explicit",
+          "sparsity": "sparse"
+        }
+      },
+      "target_patch": {
+        "representation": {
+          "kind": "sparse_matrix",
+          "implicit_entry": "observed_zero",
+          "ordering": "explicit",
+          "sparsity": "sparse"
+        }
+      },
+      "expect": {
+        "status": "LOSSLESS_CONVERSION_AVAILABLE"
+      },
+      "why": "The kind vocabulary had sparse_vector and no sparse counterpart for a matrix, so the most common storage form in single-cell data could not be declared at all. A port storing a sparse matrix had to call it something it was not. With the kind available, the same conditional equivalence applies as for vectors: the two encodings hold the same values when both sides declare, and agree on, what an absent entry means, the ordering and the sparsity.",
+      "conditions": "The two contracts differ only in representation.kind. Undeclared enabling fields stay undecidable, which BMCS-SCI-104 pins for the vector case.",
+      "decision": "D6",
+      "report_finding": "S11",
+      "fixed_by": "D6",
+      "fixed_at": "2026-09-16",
+      "sources": [
+        "svensson-2020-zeros",
+        "edam-2013"
       ]
     }
   ]

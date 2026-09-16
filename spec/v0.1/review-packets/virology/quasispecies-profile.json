@@ -135,13 +135,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/quasispecies-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/quasispecies-profile/v0.1",
-  "profile_sha256": "sha256:5dd589c16d0b0fc671193c98b867f9d0321090d9eaf3a316dbdc59a5affd0e60",
+  "profile_sha256": "sha256:19af7c9cd500eb06a4fee188c9eb23037616372f53b5f67e8ff5ce0088660e63",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -363,6 +364,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

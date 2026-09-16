@@ -158,13 +158,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/small-rna-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/small-rna-abundance/v0.1",
-  "profile_sha256": "sha256:1211f5498b911f4ed548f54353338ffd2fcf0107a74a992b00865ca34cd6fc13",
+  "profile_sha256": "sha256:59ffd3cbb1a605a81db56eb1d0e32f56e6e1f5410eb4e7909f8167af7a27af02",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -389,6 +390,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/exchange-flux@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/exchange-flux/v0.1",
-  "profile_sha256": "sha256:11e0e0c85c5274f804d3a284cc5ff863faac48eaa9e0367e09538a5bc6c800d0",
+  "profile_sha256": "sha256:414ab2f35fd66b56a415dc764241d2ef1ea7da1c53280c4612dda0f831587c46",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

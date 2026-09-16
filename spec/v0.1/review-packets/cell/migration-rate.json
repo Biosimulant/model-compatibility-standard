@@ -154,7 +154,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/migration-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/migration-rate/v0.1",
-  "profile_sha256": "sha256:b3357c74c7d32447e00a9e63c36413a8d1759fe55065e9681aba04dd26c533a3",
+  "profile_sha256": "sha256:360b13f56b4712c4633a5e754b9a6f710fa6e496712c1f61087f6fd6484944b2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -162,6 +162,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -385,6 +386,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

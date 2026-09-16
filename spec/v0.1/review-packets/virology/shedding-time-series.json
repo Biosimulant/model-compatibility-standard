@@ -204,13 +204,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/shedding-time-series@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/shedding-time-series/v0.1",
-  "profile_sha256": "sha256:561e9c1cd9d2c1de5c199e32aaebb6ad6a04fc83c6ec2f99ae2b1914371f9bd2",
+  "profile_sha256": "sha256:a62660fe9865fded88521d05813d89289adde8e78e12f8e1d0e5df2ea70a065d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -439,6 +440,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

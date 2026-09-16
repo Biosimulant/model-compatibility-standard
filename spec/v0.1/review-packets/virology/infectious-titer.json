@@ -180,7 +180,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/infectious-titer@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/infectious-titer/v0.1",
-  "profile_sha256": "sha256:1cfe5d7553b7b9d3ec36c6a7d633b8ec73d20eb517c9e414207f9db636a10770",
+  "profile_sha256": "sha256:3b5feab0d7ec6dfb48e12d69fe3e2d2380748a3236f6c40c4d442243ad7e3c77",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -188,6 +188,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -429,6 +430,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

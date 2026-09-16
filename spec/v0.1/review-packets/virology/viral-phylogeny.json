@@ -135,7 +135,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/viral-phylogeny@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/viral-phylogeny/v0.1",
-  "profile_sha256": "sha256:bf0a197e13d36eaaabd9c176034b9d927a93a6c46356f3af8c0427af474e79fd",
+  "profile_sha256": "sha256:2b10f525ddf9570d1aa28d031fff39a6e79cff2160add5fda2426b0ad10601e3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -143,6 +143,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -363,6 +364,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

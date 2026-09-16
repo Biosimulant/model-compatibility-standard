@@ -165,7 +165,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/cognitive-score@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/cognitive-score/v0.1",
-  "profile_sha256": "sha256:953a94f3f95fe6ecce17d91d17bef71c57b210d87d358ac8cd850d5bfb9dbd34",
+  "profile_sha256": "sha256:887321687063a60b356fe4fc5d9b9b8bc866f468301c08e7ae18dd73a9a9866c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -173,6 +173,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -405,6 +406,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

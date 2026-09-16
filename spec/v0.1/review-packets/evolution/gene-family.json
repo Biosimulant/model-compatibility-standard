@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/gene-family@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/gene-family/v0.1",
-  "profile_sha256": "sha256:58f35e3637ac93398def5945fbcfed11fc1d352cfee8122c4aba06ce7843d670",
+  "profile_sha256": "sha256:2bc91c6442bd486acae1d52131db70a559df23b4299377f52c6abf9b3cbf43a0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

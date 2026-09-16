@@ -161,7 +161,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/microbial-growth-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/microbial-growth-rate/v0.1",
-  "profile_sha256": "sha256:4a2fb5d889c4def7206ad884d2989664d9d38899785487af2ee663e2612103db",
+  "profile_sha256": "sha256:0c3c2e80f96b6d4f777019628fa6c1fdcc3b5ae6a83fdaeca48c64f4fd7d67e4",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -169,6 +169,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -401,6 +402,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

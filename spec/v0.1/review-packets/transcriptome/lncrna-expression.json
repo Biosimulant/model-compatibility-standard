@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/lncrna-expression@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/lncrna-expression/v0.1",
-  "profile_sha256": "sha256:05b564c0b6122fad351e823bd1c320f098feda36c850efff0de0fadfa49600f2",
+  "profile_sha256": "sha256:ea6e74b50b33a3032620faf52fa762f449bf79d73d47f94659f753fc89c934c7",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

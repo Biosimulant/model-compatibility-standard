@@ -4,7 +4,9 @@
       "contract": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -28,7 +30,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -51,7 +55,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -72,7 +78,9 @@
       "contract": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -95,7 +103,9 @@
       "contract": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -123,7 +133,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -143,7 +155,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -166,7 +180,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -184,7 +200,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -207,7 +225,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -227,7 +247,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -246,7 +268,9 @@
       "contract": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -269,7 +293,9 @@
       "contract": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -297,7 +323,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -317,7 +345,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -340,7 +370,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -358,7 +390,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -381,7 +415,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -401,7 +437,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -420,7 +458,9 @@
       "contract": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -444,7 +484,9 @@
       "contract": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -472,7 +514,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -492,7 +536,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -515,7 +561,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -534,7 +582,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -557,7 +607,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -577,7 +629,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -597,7 +651,9 @@
       "contract": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -621,7 +677,9 @@
       "contract": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -649,7 +707,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -669,7 +729,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -692,7 +754,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -711,7 +775,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -734,7 +800,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -754,7 +822,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -774,7 +844,9 @@
       "contract": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -798,7 +870,9 @@
       "contract": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -826,7 +900,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -846,7 +922,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -869,7 +947,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -888,7 +968,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -911,7 +993,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -931,7 +1015,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -951,7 +1037,9 @@
       "contract": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ]
         },
         "measurement": {
@@ -975,7 +1063,9 @@
       "contract": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": 7
         },
@@ -1003,7 +1093,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:10090"
         },
@@ -1023,7 +1115,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -1046,7 +1140,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ]
         },
         "measurement": {
@@ -1065,7 +1161,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -1088,7 +1186,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -1108,7 +1208,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ]
         },
         "measurement": {
@@ -1176,7 +1278,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention",
+            {
+              "agent": "example-agent"
+            },
             "different"
           ],
           "species": "NCBITaxon:9606"
@@ -1197,7 +1301,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -1237,7 +1343,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -1260,7 +1368,9 @@
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -1295,11 +1405,65 @@
       }
     },
     {
+      "contract": {
+        "biological_context": {
+          "intervention": [
+            {}
+          ],
+          "species": "NCBITaxon:9606"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
+          "scale": "nominal",
+          "unit": "mg"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/pharmacology/compound-dose"
+        }
+      },
+      "field": "biological_context.intervention[].agent",
+      "name": "negative-required-missing-biological-context-intervention-agent",
+      "reason_code": "BMCS_REQUIRED_MISSING",
+      "valid": false
+    },
+    {
+      "contract": {
+        "biological_context": {
+          "intervention": [
+            {
+              "agent": 7
+            }
+          ],
+          "species": "NCBITaxon:9606"
+        },
+        "measurement": {
+          "quantity": "https://biosimulant.com/standards/model-compatibility/quantity-kinds/dose-mass",
+          "scale": "nominal",
+          "unit": "mg"
+        },
+        "representation": {
+          "kind": "scalar"
+        },
+        "semantic": {
+          "concept": "https://biosimulant.com/standards/model-compatibility/terms/pharmacology/compound-dose"
+        }
+      },
+      "field": "biological_context.intervention[].agent",
+      "name": "negative-value-invalid-biological-context-intervention-agent",
+      "reason_code": "BMCS_PROFILE_VALUE_INVALID",
+      "valid": false
+    },
+    {
       "name": "comparison-lossless-unit-conversion",
       "source": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },
@@ -1319,7 +1483,9 @@
       "target": {
         "biological_context": {
           "intervention": [
-            "example-intervention"
+            {
+              "agent": "example-agent"
+            }
           ],
           "species": "NCBITaxon:9606"
         },

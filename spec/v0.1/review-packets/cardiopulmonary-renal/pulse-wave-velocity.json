@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cardiopulmonary-renal/pulse-wave-velocity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cardiopulmonary-renal/pulse-wave-velocity/v0.1",
-  "profile_sha256": "sha256:f8b8e022f1a7f5a14151139885137e33febfc9577ef0763629991f3aff807612",
+  "profile_sha256": "sha256:b8fe21ceed0890a34cec232c4e7ed8926cf6fb5a4b1023097ae265aae8ef9058",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

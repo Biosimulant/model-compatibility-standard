@@ -72,7 +72,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "core/checkpoint-artifact@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/core/checkpoint-artifact/v0.1",
-  "profile_sha256": "sha256:54253091ffe7ebd02a999b4c6850ae45ae2f6dc6956012269c86d68bd702d172",
+  "profile_sha256": "sha256:d03fb7654b1704c1f68407cdf2907825a25b695607d171e0a1520705030b3dac",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -80,6 +80,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -291,6 +292,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

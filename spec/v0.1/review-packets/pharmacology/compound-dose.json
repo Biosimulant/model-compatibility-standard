@@ -7,11 +7,10 @@
     "biological_context.cohort",
     "biological_context.compartment",
     "biological_context.disease",
-    "biological_context.intervention.agent",
-    "biological_context.intervention.dose",
-    "biological_context.intervention.duration",
-    "biological_context.intervention.route",
-    "biological_context.intervention.schedule",
+    "biological_context.intervention[].dose",
+    "biological_context.intervention[].duration",
+    "biological_context.intervention[].route",
+    "biological_context.intervention[].schedule",
     "biological_context.sex",
     "biological_context.strain",
     "biological_context.tissue",
@@ -88,7 +87,8 @@
       "negative-value-invalid-measurement-unit",
       "negative-value-invalid-measurement-scale",
       "negative-value-invalid-biological-context-species",
-      "negative-value-invalid-biological-context-intervention"
+      "negative-value-invalid-biological-context-intervention",
+      "negative-value-invalid-biological-context-intervention-agent"
     ],
     "negative": [
       "negative-required-missing-semantic-concept",
@@ -97,7 +97,8 @@
       "negative-required-missing-measurement-unit",
       "negative-required-missing-measurement-scale",
       "negative-required-missing-biological-context-species",
-      "negative-required-missing-biological-context-intervention"
+      "negative-required-missing-biological-context-intervention",
+      "negative-required-missing-biological-context-intervention-agent"
     ],
     "policy": [],
     "positive": [
@@ -161,6 +162,8 @@
     "comparison-incompatible-biological-context-intervention",
     "comparison-unknown-biological-context-intervention",
     "comparison-unknown-target-biological-context-intervention",
+    "negative-required-missing-biological-context-intervention-agent",
+    "negative-value-invalid-biological-context-intervention-agent",
     "comparison-lossless-unit-conversion"
   ],
   "internal_quality_errors": [],
@@ -168,7 +171,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/compound-dose@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/compound-dose/v0.1",
-  "profile_sha256": "sha256:366c4556142f4c70f888350afa9f9cdbaa8bd11beab149a342d08973d667b4b4",
+  "profile_sha256": "sha256:e5f4f1b80a18041c6ca19b1f28a6a2e5aeae1e5373d7220a35b0b4086f613849",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -176,6 +179,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -408,6 +412,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",
@@ -478,6 +483,15 @@
         },
         "minItems": 1,
         "type": "array"
+      }
+    },
+    {
+      "level": "required",
+      "path": "biological_context.intervention[].agent",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
       }
     }
   ],

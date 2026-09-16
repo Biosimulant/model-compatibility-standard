@@ -216,13 +216,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/single-cell-expression-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/single-cell-expression-matrix/v0.1",
-  "profile_sha256": "sha256:18da807b32213ef0b699681716e1aaf3ef485c67865e8406de57d7ee580161d1",
+  "profile_sha256": "sha256:fbaa9ec9d387a22dd089910d44600315c37811939163f32404ea19a03121a7cc",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -471,6 +472,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

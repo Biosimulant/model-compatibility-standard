@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/epidemiological-forecast@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/epidemiological-forecast/v0.1",
-  "profile_sha256": "sha256:be56f9faf40ff0d3dca6535d2d0a25fae1fcb8cb12dcc0739ba2b12d51afb6d0",
+  "profile_sha256": "sha256:25a442ca168ec85f7288187385108e7ed2b27752a99a43a981081d3976602c51",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,6 +149,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -387,6 +388,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -180,7 +180,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/pathway-metabolite-score@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/pathway-metabolite-score/v0.1",
-  "profile_sha256": "sha256:afce8ce0d7f60013946ee4772a0f6476b381f57dd1d5da7338be5f4b0cc9b02d",
+  "profile_sha256": "sha256:2adfe89bd5997d862ac80ac28bce1ae791bba33649ebbe708c5f65d3f697b706",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -188,6 +188,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -420,6 +421,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -173,7 +173,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/metabolite-production-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/metabolite-production-rate/v0.1",
-  "profile_sha256": "sha256:fbac8fc61ddd1c2b7d413eec7e0ee3047c5094b7486e832cd59b094bf94a4b30",
+  "profile_sha256": "sha256:36f3b43e37803eedfc3d965fe6bb99fa89ba1c7033a0a10e01c748887bae44c0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -181,6 +181,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -404,6 +405,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

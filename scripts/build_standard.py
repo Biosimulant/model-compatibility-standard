@@ -140,7 +140,9 @@ REASON_CODES = {
 
 REPRESENTATION_KINDS = {
     "scalar": ["scalar"],
-    "array": ["dense_vector", "sparse_vector", "matrix", "tensor", "array"],
+    # A sparse matrix was not expressible at all: the vocabulary had sparse_vector and no sparse
+    # counterpart for a matrix, which is the common case in single-cell data (decision D6).
+    "array": ["dense_vector", "sparse_vector", "matrix", "sparse_matrix", "tensor", "array"],
     "record": ["record", "table"],
     "event": ["event"],
     "artifact": ["artifact", "file"],
@@ -756,7 +758,11 @@ def example_value(path: str, profile: dict[str, Any] | None = None) -> Any:
     leaf = path.replace("[]", "").split(".")[-1]
     if leaf == "axes" and profile is not None:
         return axis_entries(profile)
-    if leaf in {"axes", "labels", "qualifiers", "disease", "intervention", "data_use"}:
+    if leaf == "intervention":
+        # An intervention is a structure, not a label: the catalogue defines an agent, dose, route,
+        # duration and schedule for it. A list of bare strings has nowhere to put them (D9).
+        return [{"agent": "example-agent"}]
+    if leaf in {"axes", "labels", "qualifiers", "disease", "data_use"}:
         return [f"example-{leaf}"]
     if leaf in BOOLEAN_LEAVES:
         return True
@@ -936,6 +942,10 @@ def effective_required_items(profile: dict[str, Any]) -> list[str]:
     for extra in list(declaration.get("requires", [])) + list(structure.get("requires", [])):
         if extra not in required:
             required.append(extra)
+    if "biological_context.intervention" in required and "biological_context.intervention[].agent" not in required:
+        # An intervention that does not say what was administered cannot be read, the same way an
+        # unnamed axis cannot. Which of dose, route, duration and schedule matter is per profile.
+        required.append("biological_context.intervention[].agent")
     if "dimensions.axes" in required and isinstance(structure.get("axes"), list) and "dimensions.axes[].name" not in required:
         # An axis that does not say what it is cannot be read or compared. That is structural rather
         # than a domain judgement, so it holds wherever a profile declares its axes (decision D9).

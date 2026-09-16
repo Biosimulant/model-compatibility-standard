@@ -130,7 +130,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/allele-frequency@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/allele-frequency/v0.1",
-  "profile_sha256": "sha256:dc39fb1fc48d022d8a0ddd18806d033824488931cfeff46934dc2da86debddc1",
+  "profile_sha256": "sha256:bb4548d8ebd2412f2509da262c4cf5a33830ed21e06ba56ffe8b8685065cd4a3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -138,6 +138,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -358,6 +359,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

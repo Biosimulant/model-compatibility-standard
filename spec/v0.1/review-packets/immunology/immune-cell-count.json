@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/immune-cell-count@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/immune-cell-count/v0.1",
-  "profile_sha256": "sha256:4ef017f932996f3a09e8a6e77750bb728572b5176d8ecb2c0da86e124eb01562",
+  "profile_sha256": "sha256:8abf73f19891bd382cbf387372e0cce5b2c87b499065943136bd50d062208f5b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

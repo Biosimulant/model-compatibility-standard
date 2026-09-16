@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/differentiation-potential@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/differentiation-potential/v0.1",
-  "profile_sha256": "sha256:43ef8de7970c8ab742af2e66e7eff6e837ee8b486e91f6be232e5c304dd0a2a9",
+  "profile_sha256": "sha256:5ebfd157583ad60825e57aaccb103731305286e95a81000765684dbfcd61a1b5",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

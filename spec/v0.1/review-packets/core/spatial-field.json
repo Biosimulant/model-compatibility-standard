@@ -113,13 +113,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "core/spatial-field@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/core/spatial-field/v0.1",
-  "profile_sha256": "sha256:1eef9e6dfa76da7c6c084174bb294b11632917bf756ae260271ade3e59f6bd6b",
+  "profile_sha256": "sha256:5a4d96d6a504466463b4997f543d7e3b8b1bb8b203354cbbac27b26ba7134e05",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -341,6 +342,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

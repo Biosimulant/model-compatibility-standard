@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/immunity-level@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/immunity-level/v0.1",
-  "profile_sha256": "sha256:5f966f687a52a1487be93fd64ae80994ee2b48cdde0356d1cb54f738e2018c45",
+  "profile_sha256": "sha256:55bb1d8d5fe5c827ff4bd2065990c18e1c0c6639e37ddaadf3e1e9c270a1a740",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,6 +149,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -387,6 +388,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

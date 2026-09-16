@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/epigenetic-clock@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/epigenetic-clock/v0.1",
-  "profile_sha256": "sha256:c843d5a83b66a4d50ad55abba0845514d09faf843b32632765aec5f0d8d51469",
+  "profile_sha256": "sha256:4409b094f38b3ab4e64138cdc3563e2fad5f8b3cec65a4eb8e6a10d296ef3a3b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,6 +149,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -369,6 +370,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

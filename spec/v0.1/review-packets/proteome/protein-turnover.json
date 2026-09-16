@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-turnover@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-turnover/v0.1",
-  "profile_sha256": "sha256:fd841d992b340c7b89cb4911d765f6692e557cb80fcba52df17cf3b0f82560b4",
+  "profile_sha256": "sha256:a722a41a645d2ee510db63870d1d2d556e8f37fa12d5cc9bdeac33d33e993f3d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

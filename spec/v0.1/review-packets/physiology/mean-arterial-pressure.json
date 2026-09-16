@@ -165,7 +165,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/mean-arterial-pressure@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/mean-arterial-pressure/v0.1",
-  "profile_sha256": "sha256:cc878926d11d8294fbc8db8fb27b130879bcd5585c437af846db51f88fad5166",
+  "profile_sha256": "sha256:303941268c2f9a2663cf847ef574d9c7aa5646d971fe9bcce0c9e01d807b6dfb",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -173,6 +173,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -405,6 +406,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

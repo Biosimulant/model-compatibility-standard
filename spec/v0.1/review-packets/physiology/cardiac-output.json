@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/cardiac-output@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/cardiac-output/v0.1",
-  "profile_sha256": "sha256:80f030051e1cb76b14d33071d390a2a1ce3e23eb494e99972859147de3b39844",
+  "profile_sha256": "sha256:72f187f461bce258f422a4dafe2dfc1abafdb4ce6a28f3e0d85a8f5be3f1f6bf",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

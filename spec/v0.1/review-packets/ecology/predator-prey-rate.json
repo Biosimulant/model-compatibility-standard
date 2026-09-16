@@ -162,7 +162,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/predator-prey-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/predator-prey-rate/v0.1",
-  "profile_sha256": "sha256:3176b9f7cd00d21fb28b294b229a4511549c919ba39d9316c3fd24a11dbf3fdf",
+  "profile_sha256": "sha256:d43a84654e071b74183a093fb5089ba1a313f6904de3f97103ea827e0f3793ae",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -170,6 +170,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -402,6 +403,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

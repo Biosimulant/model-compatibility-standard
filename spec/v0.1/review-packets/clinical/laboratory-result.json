@@ -148,7 +148,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "clinical/laboratory-result@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/clinical/laboratory-result/v0.1",
-  "profile_sha256": "sha256:adebca08a957be19f62b416f261e55f36637926f034cf0a2895883fd5aaa3670",
+  "profile_sha256": "sha256:479d94850f588f67902ef7630318ce7f2770d696ccfae23857b735ea13c4ce25",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -156,6 +156,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -394,6 +395,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

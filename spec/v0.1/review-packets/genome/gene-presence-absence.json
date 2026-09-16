@@ -148,7 +148,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/gene-presence-absence@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/gene-presence-absence/v0.1",
-  "profile_sha256": "sha256:42a98a68e1fbfc1babc58707c5391f2461de6a7bda70885e050f2562374b7974",
+  "profile_sha256": "sha256:aa710c909b43f16db4a72886e717fe7632011ba1fd476f635bc68c275363a0c5",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -156,6 +156,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -376,6 +377,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

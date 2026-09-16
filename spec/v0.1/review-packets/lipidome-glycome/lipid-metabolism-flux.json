@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/lipid-metabolism-flux@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/lipid-metabolism-flux/v0.1",
-  "profile_sha256": "sha256:1bc9f6351041c3e78ed83ab1ebefef3c1ab807ef9b9599ac1d654fe1a3b83239",
+  "profile_sha256": "sha256:b78758aa01935f9d77fb01be2e487990d0df43f061380ede943f2d8e76c5516f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

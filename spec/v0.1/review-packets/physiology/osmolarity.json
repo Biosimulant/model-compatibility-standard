@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/osmolarity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/osmolarity/v0.1",
-  "profile_sha256": "sha256:2bf14502b25430f42638fe96c0353922e83b1e87f938c0fbd73d2f796768bab5",
+  "profile_sha256": "sha256:7df53ec510ffa981b4fb26455d6f7cc6958459d0d6d12c83abb56c515209da0d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

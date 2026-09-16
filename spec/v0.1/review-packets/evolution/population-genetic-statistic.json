@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/population-genetic-statistic@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/population-genetic-statistic/v0.1",
-  "profile_sha256": "sha256:8e96145d3f20574064ba2eeee0f22bda3a805f2e47cfb9ea647e27a73f030658",
+  "profile_sha256": "sha256:c7d586e8aebfd22d11103feb852b5782b0ea5de4eee2c9ad439d5c2b68d9a6ce",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

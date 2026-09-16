@@ -190,13 +190,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/distance-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/distance-matrix/v0.1",
-  "profile_sha256": "sha256:0c1ed18f7b49130ce5f857353d9e18e8b79a0f6d15388de5dc27122e3a5723ef",
+  "profile_sha256": "sha256:bbb4b557673af9098c2cebabb550274249c67be9e8898b9da53a51157cf145e2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -430,6 +431,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/age-equivalent@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/age-equivalent/v0.1",
-  "profile_sha256": "sha256:40793136d5a899328dab37aad4b57f121729ca966b4ddade95e8fb819097af40",
+  "profile_sha256": "sha256:d5a8ec926c117fc04f2b108d6f3b52cdfa4796c6a8cb784354d459ed56ed4c28",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

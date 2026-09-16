@@ -152,7 +152,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/molecular-weight@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/molecular-weight/v0.1",
-  "profile_sha256": "sha256:088ae16a093af919834b88b3f8f851ec1141b3bf44bd5a4195623feb89a001e8",
+  "profile_sha256": "sha256:16f91834a262f048efc21098e97df50ab79e7681c95e0fb4b1601b0124779795",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -160,6 +160,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -383,6 +384,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

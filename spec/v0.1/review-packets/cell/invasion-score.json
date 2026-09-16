@@ -160,7 +160,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/invasion-score@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/invasion-score/v0.1",
-  "profile_sha256": "sha256:8ba3ef3fe63c5636e9e8753bf4fe0e66f3454fc2575a8d169bd0ed9a43445361",
+  "profile_sha256": "sha256:1a0aa72bccf86d06b7cc5524982d313368d269d9cf1654f655b788bf3e7a9f76",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -168,6 +168,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -400,6 +401,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

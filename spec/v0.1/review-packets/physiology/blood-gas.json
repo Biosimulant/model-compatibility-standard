@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/blood-gas@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/blood-gas/v0.1",
-  "profile_sha256": "sha256:882c176c40753ab5779b9b99c817972797a5c541ce95a676e2b5d951514a343b",
+  "profile_sha256": "sha256:ba0abac9ce6c37597e0b8b5cc4d1c89d4bfe6522ec96217b175261910116f8f2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

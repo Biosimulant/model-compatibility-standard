@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-fold-change@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-fold-change/v0.1",
-  "profile_sha256": "sha256:e752ca8c955b4741084dc3ff15233ccdaac17ee1cd3a28cced94b2e8ad949a99",
+  "profile_sha256": "sha256:8ccc948cd34ae388edf7640a1e169f0a8120b5b45b65073305b88e17b58cf64f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

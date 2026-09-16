@@ -156,13 +156,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/lineage-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/lineage-trajectory/v0.1",
-  "profile_sha256": "sha256:a5f83f7db3a349668638f5d22e2779554c2eae18296098a45133bab59b4b4325",
+  "profile_sha256": "sha256:5e9ea3572fdbf961c21e80887b45efa87c7afa43ae3156da170d3d0d205a04d2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -384,6 +385,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

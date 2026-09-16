@@ -130,7 +130,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/guide-rna@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/guide-rna/v0.1",
-  "profile_sha256": "sha256:156a681db4b9b43fba6b9488c36b1c7a78a0280a6b6599e45ff4e5fa89e379e8",
+  "profile_sha256": "sha256:45fe3abc5ffd1080569df2b561a4c9329856b1ee9659190908c449181da9c536",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -138,6 +138,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -358,6 +359,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

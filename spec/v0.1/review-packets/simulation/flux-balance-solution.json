@@ -113,7 +113,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "simulation/flux-balance-solution@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/simulation/flux-balance-solution/v0.1",
-  "profile_sha256": "sha256:5239ff11b0a8e77322463ff8650495063fac91ecc6b1481c0c981117d972e0a3",
+  "profile_sha256": "sha256:15a9e00a1330af2fe052b294fed6712f0674b1a9c1ddff16cf5948f5e780a382",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -121,6 +121,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -332,6 +333,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

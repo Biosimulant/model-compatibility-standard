@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/ecosystem-flux@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/ecosystem-flux/v0.1",
-  "profile_sha256": "sha256:3e109295b48eadafa2864927ff4194b25ab787542f721c9a40c57db272bd6a39",
+  "profile_sha256": "sha256:a4c0f0205f87937b727cb71a3eb9a3f65e2275fd7125fe8d2a96dd71297d340f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

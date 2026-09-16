@@ -188,13 +188,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/connectivity-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/connectivity-matrix/v0.1",
-  "profile_sha256": "sha256:8688dc215654551827e748726bf481f65f126af4288da0ca861980fa59c757d7",
+  "profile_sha256": "sha256:7bac80c1978c5dbd6363b4bbc9deabc11fbc3fbdf4d7133c40653e7bd779b1e6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -443,6 +444,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

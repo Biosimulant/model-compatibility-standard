@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/spatial-gradient@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/spatial-gradient/v0.1",
-  "profile_sha256": "sha256:ed96d05f6a4dfb91081452bb94d702791488c6b716d6ac5cf09e00f948123d34",
+  "profile_sha256": "sha256:695bfc1eab62a55cb4722e52bb4847a340e05e28d994d61cf6eab267f3b5b454",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

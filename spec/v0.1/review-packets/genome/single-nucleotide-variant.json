@@ -148,7 +148,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/single-nucleotide-variant@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/single-nucleotide-variant/v0.1",
-  "profile_sha256": "sha256:585988a20ee6936770a9c87645d97afab057bf9ac831b6c6c3e64e23e64a96a7",
+  "profile_sha256": "sha256:485c77e4a75671f64e3511f64d1ee8377c3b281234ad9667cf8da0541615e7be",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -156,6 +156,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -376,6 +377,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

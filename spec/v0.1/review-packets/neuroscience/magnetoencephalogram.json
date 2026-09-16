@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/magnetoencephalogram@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/magnetoencephalogram/v0.1",
-  "profile_sha256": "sha256:dfb460893e54a77a6f772615e6a9cdc46373cf18d8032ceeaed692abc777252a",
+  "profile_sha256": "sha256:774329cf8697a0b53141f14379a5bf7e9f192f2916497bb5eb217ca7ae35d352",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -136,6 +136,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -356,6 +357,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

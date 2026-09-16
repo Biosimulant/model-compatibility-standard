@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/secondary-structure@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/secondary-structure/v0.1",
-  "profile_sha256": "sha256:971261885f56f4088cb7aac7f8c58bdb74b434be48a375145129471d5bae605e",
+  "profile_sha256": "sha256:eaefa26ca6f6bc2e5e59ccea58b0f555128c914448bf0d822b6ee5e3f992e36d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

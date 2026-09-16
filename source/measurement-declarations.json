@@ -6,7 +6,7 @@
     "unit": "The UCUM unit the profile's positive example declares. null means the port declares its own unit and the profile fixes only the kind.",
     "scale": "nominal, ordinal, interval, ratio, proportion or count. A proportion is a part of a declared whole, which is not the same claim as a probability (decision D8).",
     "transform": "Applied transform, with its base explicit. Absent means none.",
-    "requires": "Extra items this profile must require, beyond the unit, scale and quantity. Sub-paths of an array item (biological_context.intervention.route and the like) cannot be required on their own: the parent is a list, so a sub-path requirement would overwrite it. Requiring the intervention itself is the closest the v0.1 item model allows.",
+    "requires": "Extra items this profile must require, beyond the unit, scale and quantity. Sub-paths of an array item are written with [] (biological_context.intervention[].route and the like) and are checked once per member.",
     "drop_measurement": "The profile should carry no measurement at all: the value is not a quantity."
   },
   "profiles": {

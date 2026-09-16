@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/pathway-activity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/pathway-activity/v0.1",
-  "profile_sha256": "sha256:3c439b24c9633006b14e21a468cf7427d0b5ac3b014431ba9b8ca1b9af2b8647",
+  "profile_sha256": "sha256:9fff8f8e0e7217bd8264c170d401a2f7d51f9ea668383c4567c658f156cf5152",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/liver-function-marker@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/liver-function-marker/v0.1",
-  "profile_sha256": "sha256:be54c11794ef5d382ddd69a0eada27ebf521550a12475519b05b2a27cb8a79d4",
+  "profile_sha256": "sha256:ef1ff29ae0b73d34ede2af8da84bb3c804a9d1612cbeb64cdc6ea8f602a6dea2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

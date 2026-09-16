@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/glycoprotein-site@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/glycoprotein-site/v0.1",
-  "profile_sha256": "sha256:1ee14eac5159b6d3e6034c3a88b3eee7591526e54e18b4720b2ea8d7e110279e",
+  "profile_sha256": "sha256:32428e0b464839eb35670f65a5b6e209fbca137596b47e7b401e95d5ad9ae45b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

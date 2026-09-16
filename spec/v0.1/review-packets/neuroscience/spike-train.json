@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/spike-train@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/spike-train/v0.1",
-  "profile_sha256": "sha256:263cafeee3f51afb71b23f70c5f0ceeef9ef5aed08ff7b17f7e417dd5b6124fe",
+  "profile_sha256": "sha256:99adf00748e35477c663635e975294c7fb125c41114dccae435c677d04992a86",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -136,6 +136,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -356,6 +357,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

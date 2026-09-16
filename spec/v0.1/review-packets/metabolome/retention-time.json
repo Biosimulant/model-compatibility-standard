@@ -162,7 +162,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/retention-time@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/retention-time/v0.1",
-  "profile_sha256": "sha256:aad2b85a7f592f523b8f115299af07486345f9d0120afe6480ddb00888d8a786",
+  "profile_sha256": "sha256:73508e9c693801ede7a485241be8e69898517855d27ac2beca4b905db4e45567",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -170,6 +170,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -402,6 +403,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

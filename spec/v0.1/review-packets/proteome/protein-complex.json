@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-complex@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-complex/v0.1",
-  "profile_sha256": "sha256:cef1fd339d8d94cfe856cb0da310fdac37622e679532f2e443bb76f4c1af17ce",
+  "profile_sha256": "sha256:a7923ddc851c3409d8b9efe9bec37c5dd046cad9ac934cce5232738c5faac6f7",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

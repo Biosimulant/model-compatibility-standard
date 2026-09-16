@@ -135,7 +135,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/multiplicity-of-infection@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/multiplicity-of-infection/v0.1",
-  "profile_sha256": "sha256:0a268d5315be3e75429f63b8c6406dcabc1448f9e98a9a93b02f8031ffb32d4d",
+  "profile_sha256": "sha256:22eaecbf2e0ac5e17d35f3c4915eeea3917f40e3dc80853e76a2e68722f735ab",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -143,6 +143,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -363,6 +364,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

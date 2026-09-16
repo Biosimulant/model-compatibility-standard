@@ -154,7 +154,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/biofilm-biomass@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/biofilm-biomass/v0.1",
-  "profile_sha256": "sha256:d4be972b16e40e53df0acb99df88b0f0c56554fc177d826f2a555dd5da2dadca",
+  "profile_sha256": "sha256:916b11f971f3664a0f421939e531c8e92e4c7a57fa8ed658cdd50b93184de5c0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -162,6 +162,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -385,6 +386,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

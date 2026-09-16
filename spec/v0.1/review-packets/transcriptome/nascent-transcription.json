@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/nascent-transcription@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/nascent-transcription/v0.1",
-  "profile_sha256": "sha256:0ae56ef5e66f30637791197274d702afd46c85eef0387e9712141257fac06bfd",
+  "profile_sha256": "sha256:8eb1fb16cd3217504b4c986d698cb04553ff9d06e319dbd5c4e3413f9622af16",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/substitution-model@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/substitution-model/v0.1",
-  "profile_sha256": "sha256:e37dc7c4efd7514145c8758da5cf0a17b259ab798f5048f4c6cfe4f5f0777ac8",
+  "profile_sha256": "sha256:310c3cc885fa031f53d7007e86ad577fe10885f2c1bc1c5702f0e07259fdddaf",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -162,13 +162,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/spatial-transcriptomics-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/spatial-transcriptomics-matrix/v0.1",
-  "profile_sha256": "sha256:9eb7226a10896cc26d6ba491970a056020b09f394b8cfc8ce8c351be3ee7fd64",
+  "profile_sha256": "sha256:ba530c6eda209555be273e1ccbdc169d68b519432828aa44343eceab81d5414b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -399,6 +400,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

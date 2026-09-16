@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/epitope@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/epitope/v0.1",
-  "profile_sha256": "sha256:fb4cfd71904dd0bc67cac59d0423faa014c7996757ad5f1b846ed728ef0a76bf",
+  "profile_sha256": "sha256:2a61a25208d4836e684afd913a52a8bb93592b1b63d78b5ec357a51eb99fc1c0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

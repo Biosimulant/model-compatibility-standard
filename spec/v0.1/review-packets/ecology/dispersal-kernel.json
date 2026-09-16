@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/dispersal-kernel@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/dispersal-kernel/v0.1",
-  "profile_sha256": "sha256:7e16883b527cb48a2caa4a0142021436fcb6fbfc9f16ced4f67305cc31b8948a",
+  "profile_sha256": "sha256:8c4ae8703a15a9f4cb5ba008f5b82ca87411d752ad4b6236c9f36278f8ac4aae",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

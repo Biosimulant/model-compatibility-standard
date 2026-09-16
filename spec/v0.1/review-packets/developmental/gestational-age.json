@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/gestational-age@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/gestational-age/v0.1",
-  "profile_sha256": "sha256:9b9a3e429fd5083b3f4f3331b7f35387f4e889ade326191b6c4ae361db94e2b9",
+  "profile_sha256": "sha256:c84babf115e8d3bf0c4c5e7a5fff67e76e319b9f164d7e71a7dd87f9ba360584",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

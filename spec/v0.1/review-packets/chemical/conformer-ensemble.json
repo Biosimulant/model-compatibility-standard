@@ -113,7 +113,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/conformer-ensemble@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/conformer-ensemble/v0.1",
-  "profile_sha256": "sha256:46eb7b513f349b8462f6d9cd06880ec155245a7ae13d87ab8dbfd06e9a12ef5b",
+  "profile_sha256": "sha256:bcad6f39d025890b2629d8082110be03e061b33c403b52a0d48f94279ca5731d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -121,6 +121,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -332,6 +333,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

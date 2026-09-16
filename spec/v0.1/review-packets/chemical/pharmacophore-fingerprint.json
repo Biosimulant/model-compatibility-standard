@@ -113,7 +113,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/pharmacophore-fingerprint@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/pharmacophore-fingerprint/v0.1",
-  "profile_sha256": "sha256:f06a14de689f209f94c9d8945c594c0636f65f54fa3ba0fa9b4bef14596a6f55",
+  "profile_sha256": "sha256:5e8c046252efd53d5fe76d77b7e6e6d437276766ad974c1f0fd297b2b4172609",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -121,6 +121,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -332,6 +333,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

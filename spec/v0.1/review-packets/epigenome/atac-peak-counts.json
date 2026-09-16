@@ -123,13 +123,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/atac-peak-counts@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/atac-peak-counts/v0.1",
-  "profile_sha256": "sha256:8a4a41aace325b80e596f0940b44ab68953da03a479ad36b9630883d14cc77d2",
+  "profile_sha256": "sha256:d7189652659413de25607d8d77e351d7be10750c220e569e253422a9105162da",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -351,6 +352,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

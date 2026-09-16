@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/orthology-relation@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/orthology-relation/v0.1",
-  "profile_sha256": "sha256:217895ff9d18ecad56fc512accdfc64c54bb8b6d4b8a557d0b4ed9b729f1d968",
+  "profile_sha256": "sha256:71c3deb891fff308acc5f6edcb953f862ef1b6157bb142a269d099dbe2155ede",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

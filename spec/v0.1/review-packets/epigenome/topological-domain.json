@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/topological-domain@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/topological-domain/v0.1",
-  "profile_sha256": "sha256:8bf8ac84c30a1be714964a6d0dba7fb8acb3c7309b5e9e96244da861fd6f2056",
+  "profile_sha256": "sha256:2adfd317191767295345887a5d88c8a5b1fbbfc8f5128ba9f86bb5682358ffa6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -131,6 +131,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -351,6 +352,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

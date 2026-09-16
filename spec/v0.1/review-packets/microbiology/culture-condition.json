@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/culture-condition@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/culture-condition/v0.1",
-  "profile_sha256": "sha256:c50c180ce65954164d37dcb1998f8f8a433c12f20eff33274c4a544a047b4287",
+  "profile_sha256": "sha256:ee3fa0fe23c20f4d56b6bd75e4dbf2e55029de58f03608d7c72eb7e6156e510f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

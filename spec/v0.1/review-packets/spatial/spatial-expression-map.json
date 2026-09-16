@@ -166,13 +166,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/spatial-expression-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/spatial-expression-map/v0.1",
-  "profile_sha256": "sha256:5098b86ec046f8571ae075e7765e9a0b91a987c33860e20208dddd33e5975dda",
+  "profile_sha256": "sha256:c1418a7446632679a87297e00b7c8a99f78f0df7307d7654d624ab16b3224421",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -412,6 +413,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

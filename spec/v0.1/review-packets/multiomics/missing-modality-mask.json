@@ -131,13 +131,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/missing-modality-mask@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/missing-modality-mask/v0.1",
-  "profile_sha256": "sha256:5190a7901c868d4bb3dddd12bab6efbfd7a25274635e106f2f1629ab527fbb9b",
+  "profile_sha256": "sha256:3ced2965771c457c9ebc03df29586b37326a96055cd94efc12ac9a5a88fc7f95",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -359,6 +360,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

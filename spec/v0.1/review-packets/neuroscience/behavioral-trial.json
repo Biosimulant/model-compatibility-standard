@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/behavioral-trial@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/behavioral-trial/v0.1",
-  "profile_sha256": "sha256:53408c0c03ca3648fec4567f6efa6aea20f316fe2572bf329f00b2d3b5e15884",
+  "profile_sha256": "sha256:0a8e482373e8c0c5f37bf559fb7cfc00dfbbfee64e86b5f25aeb15859f3d70d4",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -136,6 +136,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -356,6 +357,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

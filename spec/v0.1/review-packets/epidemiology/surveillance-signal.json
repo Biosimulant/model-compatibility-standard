@@ -141,13 +141,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/surveillance-signal@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/surveillance-signal/v0.1",
-  "profile_sha256": "sha256:cdee916cb83e0b64ac7010bb54447ba93458299169871f05ce7babd12fa8a1c2",
+  "profile_sha256": "sha256:0029f747873044a14e870378520cfa1b34edbb797f0a64c52ee590a2fe537dd8",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -387,6 +388,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

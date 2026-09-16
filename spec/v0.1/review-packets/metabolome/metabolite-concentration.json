@@ -191,7 +191,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/metabolite-concentration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/metabolite-concentration/v0.1",
-  "profile_sha256": "sha256:5dbcd7f8ca418c03bd6bc6206706e7440d7524c0c3906a06312dc301638bfd05",
+  "profile_sha256": "sha256:798df7c32895be0b69cd837cc831191fa3366a7b75d5fa5f882077e1c5e1a5ba",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -199,6 +199,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -431,6 +432,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

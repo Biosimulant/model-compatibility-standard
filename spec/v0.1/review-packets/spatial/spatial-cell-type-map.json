@@ -166,13 +166,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/spatial-cell-type-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/spatial-cell-type-map/v0.1",
-  "profile_sha256": "sha256:8125b79400bd2c3e47f21e3107ac37f08739839c73274d09f99c8e3aa71a976f",
+  "profile_sha256": "sha256:c7d7dcea9a3135fbee46f3d8fa202e9317db8d33de80bb4e32c2453b7e0ad054",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -412,6 +413,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

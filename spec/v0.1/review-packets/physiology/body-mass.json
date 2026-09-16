@@ -155,7 +155,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/body-mass@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/body-mass/v0.1",
-  "profile_sha256": "sha256:cb7d066d880ffb4f12e359a45028152bad10e5f48dda3db5fe46d75f068ab67d",
+  "profile_sha256": "sha256:addbabc6351bd4e7f80313e3e1360c7f4a31a29f8886f03585d615e2f05f643f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -163,6 +163,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -386,6 +387,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

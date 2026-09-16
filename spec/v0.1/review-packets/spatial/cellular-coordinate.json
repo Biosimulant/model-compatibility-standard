@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/cellular-coordinate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/cellular-coordinate/v0.1",
-  "profile_sha256": "sha256:631dc401fca0c56765f2b8dbd27d2e5006290c728cd75f1b669c7b6350fea8de",
+  "profile_sha256": "sha256:fa6a60365f43901e388d184ab51859db3dc1ed3e241adea3bd299dd5833f3a81",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -113,7 +113,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/path-fingerprint@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/path-fingerprint/v0.1",
-  "profile_sha256": "sha256:36bb564fe79cea040572ba5d3d8c2fbca738855e61aa64173b769a11559fa38d",
+  "profile_sha256": "sha256:2c570fedf4163e1fd95bf6c5d1732080e933ec8ad161637c939164e94b392296",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -121,6 +121,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -332,6 +333,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

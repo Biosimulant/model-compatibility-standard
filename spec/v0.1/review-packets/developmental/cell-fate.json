@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/cell-fate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/cell-fate/v0.1",
-  "profile_sha256": "sha256:c98d59a3771d71529ed2bda34e66dca24af06feb33c9575acde5713666805228",
+  "profile_sha256": "sha256:bae2ad5a5a7f3ddf469d2bbfcbad079d6e69d6dbbad7466ede8c58ec224653ba",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

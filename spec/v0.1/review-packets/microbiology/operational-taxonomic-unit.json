@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/operational-taxonomic-unit@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/operational-taxonomic-unit/v0.1",
-  "profile_sha256": "sha256:c6a1bba7080960f6364d6aa4d15419c6d280cab77d0a569af9781f8d394ae549",
+  "profile_sha256": "sha256:341f9bcbfdbd22fb1aa3af266c2a56253bf095a5798d6e3e587c953ed411a098",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

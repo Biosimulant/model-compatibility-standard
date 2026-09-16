@@ -123,13 +123,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/cpg-methylation-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/cpg-methylation-profile/v0.1",
-  "profile_sha256": "sha256:cfe83cce0db81b26c4a0b4fa239ead21fa29489ac7cf22fe6e1f06653af60f2f",
+  "profile_sha256": "sha256:6f56b28333ee2ede85ceb01a8c78fcebeb378055557db4eab18fba42a73d156e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -351,6 +352,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

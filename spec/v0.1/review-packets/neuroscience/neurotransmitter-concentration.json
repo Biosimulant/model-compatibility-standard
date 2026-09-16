@@ -167,7 +167,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/neurotransmitter-concentration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/neurotransmitter-concentration/v0.1",
-  "profile_sha256": "sha256:d3d87bd821ef708068e3ff5cc790864ace5efd38280b2f08801cebf1fab0e103",
+  "profile_sha256": "sha256:465a077c43d6ab4587c20b2bf3e43c0c6a116d8433ca7a9b8fe25291c2a2de07",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -175,6 +175,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -398,6 +399,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

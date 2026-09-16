@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/membrane-voltage@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/membrane-voltage/v0.1",
-  "profile_sha256": "sha256:053dee9116b4995b6f755ea8f1aeec6206766590c24001cd2a26a0f2ac987e55",
+  "profile_sha256": "sha256:694924d6419c1cffbaa99194f64a1229ed8e92b581802d8e57aa76013f0d8bfa",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -136,6 +136,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -356,6 +357,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

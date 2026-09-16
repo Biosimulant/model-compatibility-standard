@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/population-density@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/population-density/v0.1",
-  "profile_sha256": "sha256:066e1d17b83b769613cbcfcadbae808194a999363f83032ec03378c9aa1a0d21",
+  "profile_sha256": "sha256:bc1dd966e34226f248fd33a893c63300a7b0b34caec53a0b2f9254562fa91ace",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

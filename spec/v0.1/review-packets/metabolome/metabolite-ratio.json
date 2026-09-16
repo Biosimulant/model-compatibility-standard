@@ -143,7 +143,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/metabolite-ratio@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/metabolite-ratio/v0.1",
-  "profile_sha256": "sha256:56355c3f5f092d1abc16a4f998ec4951e4b9463c52d9e92ef77401df7fae4fdd",
+  "profile_sha256": "sha256:2b77d7126d21352779501ed1dca4bbc39454796f57aa72fa2ef10b06677cb2b1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,6 +151,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -371,6 +372,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

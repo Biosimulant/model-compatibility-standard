@@ -198,13 +198,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/gene-protein-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/gene-protein-map/v0.1",
-  "profile_sha256": "sha256:95c61c41e6d10a7ed1c3fc4bd476d887d14d6fe22188331a70d0c5ad06785132",
+  "profile_sha256": "sha256:d3660d97e3bc9d6da380b72c3f4346937f97da59c62d2826729570fe99d123f7",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -444,6 +445,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

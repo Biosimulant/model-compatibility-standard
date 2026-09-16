@@ -162,7 +162,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/death-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/death-rate/v0.1",
-  "profile_sha256": "sha256:f34db1b76a738f30ba9bd34f81b2e1b206422b19a65e85758228d85da17a5c6c",
+  "profile_sha256": "sha256:af1aff74a8e23983805b32f63bcd9c85838ba1c41c4c3606a85b5c1391ba046c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -170,6 +170,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -402,6 +403,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

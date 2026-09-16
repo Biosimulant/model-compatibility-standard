@@ -113,7 +113,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/circular-fingerprint@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/circular-fingerprint/v0.1",
-  "profile_sha256": "sha256:2c19a60642dd9d786ed574c5cb59d63a64f1994df1858fb3ffc800bb68d00a97",
+  "profile_sha256": "sha256:94b2ee786579e9fcb6da80f1d3599ff0aeb8f6dc5c79278f6d776b26deb84fcb",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -121,6 +121,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -332,6 +333,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/lineage-probability@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/lineage-probability/v0.1",
-  "profile_sha256": "sha256:03edf178c10f49f37764dc5f8670781331248280969bd125d75c126e4c497a5f",
+  "profile_sha256": "sha256:95f55d3a540a18d0a5f4165eedd1b78504843ebedd0387f4599e2a804b81e1ec",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

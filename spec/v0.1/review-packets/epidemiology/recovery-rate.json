@@ -177,7 +177,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/recovery-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/recovery-rate/v0.1",
-  "profile_sha256": "sha256:80d192e01c89cdd7c9bff12eb9becb4689b1cb5194ef7134c9c8f53ddea7a4b4",
+  "profile_sha256": "sha256:17e39d95824d00aae3feb9e85dbffd1c933dbb9c9b5cd4c056465232fe8941dc",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -185,6 +185,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -435,6 +436,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

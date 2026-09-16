@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/enzyme-activity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/enzyme-activity/v0.1",
-  "profile_sha256": "sha256:03e46c6b5d9f4d8cd12af84d1b00e38f0111aa2f0fbfc64ffb7cccaca793b254",
+  "profile_sha256": "sha256:59e9be272fd1afefd52eee215f6f4ccb677ab0490d0cf218aadd343ba2c29573",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

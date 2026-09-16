@@ -113,7 +113,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/molecular-formula@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/molecular-formula/v0.1",
-  "profile_sha256": "sha256:2c12491798b431939c40300705871a9b7b6a64591846128b0d0c6cda5bf33860",
+  "profile_sha256": "sha256:6531016a62b9bc9939a5eacc2f0fe240815bb57f7b0b1a1526d1e0c06e4eaa79",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -121,6 +121,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -332,6 +333,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

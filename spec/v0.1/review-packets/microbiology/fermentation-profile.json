@@ -124,13 +124,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/fermentation-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/fermentation-profile/v0.1",
-  "profile_sha256": "sha256:ad4e7b26fa00e6b80cb1631dfcd0506d907ef465d3e55dfad4b8ff0fd35cd8f5",
+  "profile_sha256": "sha256:baf4c5adee6485b952f4a3a7d54f7595b025d35fd3ac535bff24868b0acefcfc",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

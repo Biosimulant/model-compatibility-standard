@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/vaccine-response@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/vaccine-response/v0.1",
-  "profile_sha256": "sha256:7b8c70e8fe3ad7580773547a5173660889e155df2b664c70d794a6516cdfa344",
+  "profile_sha256": "sha256:8877e84b26786acec3d4f2a9b9a0cfce9f73351a008ddc6c5505232c1b7a919f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

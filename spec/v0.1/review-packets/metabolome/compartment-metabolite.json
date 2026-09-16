@@ -143,7 +143,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/compartment-metabolite@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/compartment-metabolite/v0.1",
-  "profile_sha256": "sha256:83ab4abaf979f8fe13d63394c5d118b607949b65191250f0dc100d06c28d079c",
+  "profile_sha256": "sha256:dc773d00688ce8a872979d9be8a0da153b918cd5084566c39758dcfb7f3a102e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -151,6 +151,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -371,6 +372,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -103,6 +103,10 @@ member requirement overwrite the parent's reviewed names with a generic `example
 contract builder sets a value for every required path. A member requirement now fills only a field
 the parent left empty.
 
-`biological_context.intervention.*` is still folded into its parent item. The machinery above would
-carry it, but the catalogue defines no `biological_context.intervention[].*` items to require;
-adding them is catalogue work, not generator work.
+`biological_context.intervention` is addressable too. The catalogue already defined an agent, a
+dose, a duration, a route and a schedule for it, written with dots against a parent that is a list,
+which made every one of them unusable for the same reason. They are now `intervention[].agent` and
+so on, an intervention is published as the structure those items describe rather than as a bare
+label, and a profile that requires an intervention requires each one to name its agent: an
+intervention that does not say what was administered cannot be read. Which of dose, route, duration
+and schedule matter is a judgement for each profile, and stays with the domain review.

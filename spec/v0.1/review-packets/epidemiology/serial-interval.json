@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/serial-interval@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/serial-interval/v0.1",
-  "profile_sha256": "sha256:bb5a61cc07af5fafa4ca254364e78472a7bea62c0b72abe35d2412ad121de5dd",
+  "profile_sha256": "sha256:a1544506d5079ec52957507c5e42a53413ab0d7770bcc644bcf15b3031eaa770",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,6 +149,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -387,6 +388,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

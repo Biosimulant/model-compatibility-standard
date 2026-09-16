@@ -195,13 +195,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/climate-time-series@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/climate-time-series/v0.1",
-  "profile_sha256": "sha256:403dc91498cda984e926e322f1cf957b5263048488992afaa12286793a4a071b",
+  "profile_sha256": "sha256:4e6481c3fb88461566fb0285ef29e920f45a29d1943db5152231bab709d880a5",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -430,6 +431,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

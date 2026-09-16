@@ -189,13 +189,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/concentration-field@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/concentration-field/v0.1",
-  "profile_sha256": "sha256:581867ef77cff5b3b0aaf8d06e938c4f4832033d9992c7d6edb89866a10e2b45",
+  "profile_sha256": "sha256:abcf181b811734921f231ff88c834da669214526f2703dbf29e1bb4dc2965cd7",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -429,6 +430,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

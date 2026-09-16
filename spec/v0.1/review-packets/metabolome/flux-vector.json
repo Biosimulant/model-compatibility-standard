@@ -176,13 +176,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/flux-vector@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/flux-vector/v0.1",
-  "profile_sha256": "sha256:a62efab721a983bc76cc5d017130e1c360c1fb9743ba0d97d933a3e86b7b93f1",
+  "profile_sha256": "sha256:72d9529fc79bce598176b0835b2ce1e8a46ad2135a7dad5b80bad4b268bbe1fb",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -413,6 +414,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

@@ -179,13 +179,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/metabolite-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/metabolite-abundance/v0.1",
-  "profile_sha256": "sha256:0d43702d9136033bf9c7f3101a57baab0990c529c19346e3061083ab37a3f7f7",
+  "profile_sha256": "sha256:6257c84c43045eb540c862bec29598502a4e435f6306bf755a741bf76900fc5f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -410,6 +411,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

@@ -166,13 +166,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/ultrasound-image@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/ultrasound-image/v0.1",
-  "profile_sha256": "sha256:e522442fd5b6a829e5e4669bdbd0343b69001e531d914342d6c877f94e5099d2",
+  "profile_sha256": "sha256:ab36dee02c056057005ab814f4a1f844ab0bffb02e5db472705d6c30f7a112f3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -403,6 +404,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

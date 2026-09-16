@@ -131,7 +131,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/cross-modal-alignment@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/cross-modal-alignment/v0.1",
-  "profile_sha256": "sha256:7dbb27403ecfe264559250d8d66fc9872cd313bad8276f28145c73c89bafcacf",
+  "profile_sha256": "sha256:519b5fa491402689144a2d6eb0757aec8aafab43131e75092694124fa518b9b6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -139,6 +139,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -359,6 +360,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

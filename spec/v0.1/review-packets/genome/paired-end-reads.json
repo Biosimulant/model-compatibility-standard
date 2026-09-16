@@ -130,7 +130,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/paired-end-reads@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/paired-end-reads/v0.1",
-  "profile_sha256": "sha256:18559cadd807823dfaed002833dce64b8d982c64418c02339c07c9f609788627",
+  "profile_sha256": "sha256:445dfea8b62ff1c7c4ff37247727d6435793f20201652e056d126af280085bb6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -138,6 +138,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -358,6 +359,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

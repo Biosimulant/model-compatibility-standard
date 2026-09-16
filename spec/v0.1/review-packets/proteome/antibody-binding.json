@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/antibody-binding@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/antibody-binding/v0.1",
-  "profile_sha256": "sha256:63682719116ba17cc8d59c4e883ea6ffed3b30238d9ce1c5138baec768d1ce0f",
+  "profile_sha256": "sha256:b8c9a1853013b4f22cc168bd7590400d0d97e42252fbff9fa5076124db7d7602",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

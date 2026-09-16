@@ -123,13 +123,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/histone-modification-signal@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/histone-modification-signal/v0.1",
-  "profile_sha256": "sha256:72238777df05e039e4eb4f6375617ce468cac57133a25f9b8c94590f39a4ba65",
+  "profile_sha256": "sha256:315061d89221ff41a468bbd75e348183d9ffe1b3ccbaa014d0ef9b2e98edc33d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -351,6 +352,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

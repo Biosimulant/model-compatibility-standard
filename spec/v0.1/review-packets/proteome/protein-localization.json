@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-localization@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-localization/v0.1",
-  "profile_sha256": "sha256:4959c449ff940cf99c80bfba71612f594b515b0586432b87e5bf8c0f910b84f7",
+  "profile_sha256": "sha256:59d9a34a8bb75b9d7eb8097861a98dce199cda3ef99eb1740cbd4c40b7615a8b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

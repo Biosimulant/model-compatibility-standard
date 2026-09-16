@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/electroencephalogram@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/electroencephalogram/v0.1",
-  "profile_sha256": "sha256:4a5d64ead72c9acecfd24fac6dad67037dbde435d206a6e2e9479c6be1103053",
+  "profile_sha256": "sha256:0c43d188d8dc9f15ff08732bb6dba204a22a2da02d562a784e56cd94100aab18",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -136,6 +136,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -356,6 +357,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

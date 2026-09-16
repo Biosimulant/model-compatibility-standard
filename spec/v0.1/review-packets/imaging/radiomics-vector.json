@@ -177,13 +177,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/radiomics-vector@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/radiomics-vector/v0.1",
-  "profile_sha256": "sha256:71544c1c34a06655a0facea0b1e0887cb3d1812fccc9ab69bc36e82e5451f7b9",
+  "profile_sha256": "sha256:05ba13b459ab0a098e9949c570342e70561e41daacf5d317d72be90f838f24a6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -423,6 +424,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

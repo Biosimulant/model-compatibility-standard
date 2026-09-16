@@ -160,13 +160,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/neural-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/neural-trajectory/v0.1",
-  "profile_sha256": "sha256:78661f67dd375a9fe3aefdcb803d74bc91bb0903f45490ff7914b6c11dee3eb0",
+  "profile_sha256": "sha256:9229a91caca810e2511f8aa05548c38e984d772c27bc6c431bbb2784b36f2759",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -388,6 +389,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

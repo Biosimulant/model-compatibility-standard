@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/activation-marker@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/activation-marker/v0.1",
-  "profile_sha256": "sha256:4cb95ad06764267bfc7cb53c140e0482495ea7f30e37bab02cd56dfed8ba103e",
+  "profile_sha256": "sha256:dc7d9943291144b40ea04c269defe7c837e4f056bbc36aaa87ad010494aa5b10",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

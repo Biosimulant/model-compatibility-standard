@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/effective-population-size@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/effective-population-size/v0.1",
-  "profile_sha256": "sha256:b414b1423343b435e8a9f7c935458cc76d91f3177f80912396c1f31dbc8cd5a2",
+  "profile_sha256": "sha256:4757f206aa40f25ffbd3439f42174a910c6c75293b7a2ea33b2d1b84551c6298",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

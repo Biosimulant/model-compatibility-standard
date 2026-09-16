@@ -142,13 +142,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/lipid-class-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/lipid-class-profile/v0.1",
-  "profile_sha256": "sha256:02097733830f120f640ee5a6520a69164196888e51b7e9d53a7067c8573e0c8d",
+  "profile_sha256": "sha256:e750ad38ea619e001ea89f331dbb27a70881791698fe1e34e1772dcdff23bd41",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

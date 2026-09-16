@@ -171,7 +171,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/integrated-embedding@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/integrated-embedding/v0.1",
-  "profile_sha256": "sha256:20fd44f814bb4eb0f34c1a675dfe6e811f2ba32e99f3acab016e89b59f732b0e",
+  "profile_sha256": "sha256:dee6976663e10aba5736e9dc3e991604f90c769ac25a2383ff0b05c3edaaf6a4",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -179,6 +179,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -411,6 +412,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

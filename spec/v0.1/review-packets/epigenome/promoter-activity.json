@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/promoter-activity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/promoter-activity/v0.1",
-  "profile_sha256": "sha256:c0279cf66ef877e2abbf28a45d20ab0a56713ceab7bd491ced0229ab52ccba28",
+  "profile_sha256": "sha256:b80c99492b0209a8b5ff7f985940efba826fa33bfe93a98f96e81f18d90de176",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -131,6 +131,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -351,6 +352,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -166,13 +166,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/brightfield-image@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/brightfield-image/v0.1",
-  "profile_sha256": "sha256:638da4641bc73194b50d307d61baba6c3478d55d5ad038b261abb943355c03b6",
+  "profile_sha256": "sha256:86c1efc41d44026e6ffc50714c355bff8479edbe847dc7e15da371d796d61d8f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -403,6 +404,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

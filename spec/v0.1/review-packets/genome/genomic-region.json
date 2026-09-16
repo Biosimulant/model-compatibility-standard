@@ -130,7 +130,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/genomic-region@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/genomic-region/v0.1",
-  "profile_sha256": "sha256:90378264fb7a28caf82a6b7f52ae4badee9b72ad2afde489927c8e6029adbead",
+  "profile_sha256": "sha256:0ce542cd1e4908942cf936c44c512164130879b7315f49b9cd7c866cec7c42ab",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -138,6 +138,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -358,6 +359,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

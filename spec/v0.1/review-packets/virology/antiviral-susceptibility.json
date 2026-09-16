@@ -135,7 +135,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/antiviral-susceptibility@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/antiviral-susceptibility/v0.1",
-  "profile_sha256": "sha256:47d63528be93c09e8e6f0738621fd18e60daafd5072cc3a92da305eab99b43b8",
+  "profile_sha256": "sha256:c3d8e00bb26344992cc56b546d5bba86a0ea0ebf76561d5f6a7973d8849383c3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -143,6 +143,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -363,6 +364,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

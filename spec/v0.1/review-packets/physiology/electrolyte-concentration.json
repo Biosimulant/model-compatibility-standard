@@ -164,7 +164,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/electrolyte-concentration@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/electrolyte-concentration/v0.1",
-  "profile_sha256": "sha256:f3e0eedda4be8887145b9f41e826ce5357fa7bdb4615c58328d989acdb105e97",
+  "profile_sha256": "sha256:3a6f37e2aa159c3cf8d128feb7ef1796fb34ed4d317d70f9caac6f0301174977",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -172,6 +172,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -395,6 +396,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

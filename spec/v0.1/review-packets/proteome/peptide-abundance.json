@@ -169,13 +169,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/peptide-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/peptide-abundance/v0.1",
-  "profile_sha256": "sha256:c05658a4063f1631b7a9eed6b09dea2ba5568ba2a7279700f92db8196beb115f",
+  "profile_sha256": "sha256:e6c6c5e6809e0469d6e2b129cc812bb47822c12dc2f26da6af42e918696467bc",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -409,6 +410,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

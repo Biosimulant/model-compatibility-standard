@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/host-microbe-interaction@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/host-microbe-interaction/v0.1",
-  "profile_sha256": "sha256:48569f7e116d65657e3f9cf2444bd16b016d78f3f762443842f0ae55fc3e83b5",
+  "profile_sha256": "sha256:54d05d5fa8656982b0def7c33085a039d11f02884d49361ffa9ca144806f8e57",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

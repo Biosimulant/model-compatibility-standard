@@ -131,7 +131,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/chemical-structure@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/chemical-structure/v0.1",
-  "profile_sha256": "sha256:ec138e034fa381b02f7fcea7b001d44c526b1aa6683fb9ca43986cad00ea5c59",
+  "profile_sha256": "sha256:41831cd3517208ad56e0942bb4d424c54a7b3aa83112029b3b0cbcfc8d7d2bca",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -139,6 +139,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cardiopulmonary-renal/oxygen-consumption@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cardiopulmonary-renal/oxygen-consumption/v0.1",
-  "profile_sha256": "sha256:5f54bd78a7d794f34506162616fc7a03ca6998d000f04fbcfa48e7ee275ae631",
+  "profile_sha256": "sha256:7405360f4053eaaf908890de307c8fd0fc5856b02a1bfb1bdafbfb72a76a479b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

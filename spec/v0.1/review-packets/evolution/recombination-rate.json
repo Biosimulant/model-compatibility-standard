@@ -164,7 +164,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/recombination-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/recombination-rate/v0.1",
-  "profile_sha256": "sha256:c8e19a27095ce0146dbea465cb9e288b3cf1ce6093745db4ea9b22ba152537f9",
+  "profile_sha256": "sha256:9d41d982fda07fc0a304ff40086266f9077e618934091cb19eb133e77c174107",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -172,6 +172,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -404,6 +405,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

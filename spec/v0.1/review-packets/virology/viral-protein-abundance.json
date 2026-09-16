@@ -189,13 +189,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/viral-protein-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/viral-protein-abundance/v0.1",
-  "profile_sha256": "sha256:510268256ceacb1a304ba3f217c928dd6e58e473cd7be5f3352698848b9653a4",
+  "profile_sha256": "sha256:614d40417d56d3c8070228e6a6784e521f9389f06591b5a5e0ae52d7b8f345b4",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -420,6 +421,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

@@ -163,7 +163,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/evolutionary-distance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/evolutionary-distance/v0.1",
-  "profile_sha256": "sha256:fcbe0cdf47fffb54a0791056c093f6a97201deacea1b81fc894e41e3fe569f28",
+  "profile_sha256": "sha256:2ddbddc208f4ae0ad9f802243ee260d1fb244152ada6bb3391679d3f23ada8e0",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -171,6 +171,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -403,6 +404,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/repertoire-frequency@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/repertoire-frequency/v0.1",
-  "profile_sha256": "sha256:85e14652cb0f7be622b58e5cebe13debfc6d1e2833307054d43f7bb8e7ce4344",
+  "profile_sha256": "sha256:dd4e7f3145c2cbacd52e6b0860bcecf997153d9c3c9edd2c01035945754f3b31",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

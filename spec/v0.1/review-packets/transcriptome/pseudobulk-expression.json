@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/pseudobulk-expression@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/pseudobulk-expression/v0.1",
-  "profile_sha256": "sha256:1916a066894b1000fcfd052ff4d9b4adf63d4b5ec91a166a73414d71a70f7e3a",
+  "profile_sha256": "sha256:8fc25aa144f012f73d696795049f7b1522aaa56f6f23255dfe160a55bcdaf296",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

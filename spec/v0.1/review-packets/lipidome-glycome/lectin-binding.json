@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/lectin-binding@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/lectin-binding/v0.1",
-  "profile_sha256": "sha256:dd8c276970556b7b17138bd10247d06b2e02ff822e4a7de8ed87ed6ac86365a1",
+  "profile_sha256": "sha256:60e963324a28aa48e9da875a7ff3aff142c117bb650c86e24b01810c9b623f4a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

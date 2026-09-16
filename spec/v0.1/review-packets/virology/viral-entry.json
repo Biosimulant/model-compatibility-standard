@@ -135,7 +135,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/viral-entry@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/viral-entry/v0.1",
-  "profile_sha256": "sha256:d32229e5d4b8475d06f6e0a1f2830cfb6104549881346eb53c9998270587fd20",
+  "profile_sha256": "sha256:726ccda2134b7d488b7f65b1ac177920c789164d60262dabcb0e107cf6bb23fc",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -143,6 +143,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -363,6 +364,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

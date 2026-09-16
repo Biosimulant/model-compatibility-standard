@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/case-fatality-ratio@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/case-fatality-ratio/v0.1",
-  "profile_sha256": "sha256:4378f1d4d9a038cd3be901a7f361a61d754af10cdea67abdaf269c6e6191bf7a",
+  "profile_sha256": "sha256:99d48d97af639d0c1880fa0796c9750d5d6f12ef2924a3cde390d5ad52e95812",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,6 +149,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -387,6 +388,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

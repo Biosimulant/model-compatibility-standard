@@ -159,7 +159,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/immune-cell-fraction@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/immune-cell-fraction/v0.1",
-  "profile_sha256": "sha256:b51a8c777356b8b6f848d76c2199bd3cea4979419cd69058248ca9d5fd4378b1",
+  "profile_sha256": "sha256:68dc1e13921eb53ef24010edb539e4e1f2a0e172175c641f478f70ee1175744e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -167,6 +167,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -399,6 +400,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

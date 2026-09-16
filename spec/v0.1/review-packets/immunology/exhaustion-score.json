@@ -159,7 +159,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/exhaustion-score@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/exhaustion-score/v0.1",
-  "profile_sha256": "sha256:cb2edc95a04eff005caa94fc2707d5bd53071828f21753a0531291b64f3342d4",
+  "profile_sha256": "sha256:4bf3c413f637e2ebd4ec20f2d08af7e438ad1a4af956ac00acf4c95ed15360f3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -167,6 +167,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -399,6 +400,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

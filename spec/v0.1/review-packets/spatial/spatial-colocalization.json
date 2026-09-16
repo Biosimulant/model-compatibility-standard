@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/spatial-colocalization@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/spatial-colocalization/v0.1",
-  "profile_sha256": "sha256:1aa05f672f56738589100ed4945b02a89cda434baa2b8eec86c97cacd2eb4c1a",
+  "profile_sha256": "sha256:ff914262a3a4bbf68d8d2951303f2bbaec5e9d05cf575d64ff49abda51d36f82",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/spatial-epigenome@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/spatial-epigenome/v0.1",
-  "profile_sha256": "sha256:b169350930cd48d5509804aa3ea89849ed0ee11959709cb52d0de1bb53439de0",
+  "profile_sha256": "sha256:404720700d1c3c76c741214f0536097489c9a9556c91d2ec8f45f4c74f1c5064",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -131,6 +131,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -351,6 +352,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

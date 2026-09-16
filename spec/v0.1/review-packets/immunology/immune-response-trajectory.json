@@ -154,13 +154,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/immune-response-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/immune-response-trajectory/v0.1",
-  "profile_sha256": "sha256:ba00462e1f3611388546cf24d12271da5958059e936595ba7b5e5220ef6a53e8",
+  "profile_sha256": "sha256:996bc86d60f80b943db333d4c2e36f1e77f509f9948c4683df4547ac2c003e67",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -382,6 +383,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

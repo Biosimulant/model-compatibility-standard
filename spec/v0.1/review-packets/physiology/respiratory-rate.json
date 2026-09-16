@@ -152,7 +152,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/respiratory-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/respiratory-rate/v0.1",
-  "profile_sha256": "sha256:089ed712fe98d19f5484cf78f156ffd97fd4744f9057c08d6f3fcc9823e1aa99",
+  "profile_sha256": "sha256:14344475e7456f59a85b4659c702046effd8d9ab789fb0ed52232e515636b511",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -160,6 +160,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -383,6 +384,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

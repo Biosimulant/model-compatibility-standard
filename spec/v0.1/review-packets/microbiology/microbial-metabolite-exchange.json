@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/microbial-metabolite-exchange@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/microbial-metabolite-exchange/v0.1",
-  "profile_sha256": "sha256:646bd8ba12546128f606e91e9b31b110ada50c0b4658b9a1be00fec77aa6bc24",
+  "profile_sha256": "sha256:7d02e4739585387ec41dc1fadf5acf4b1a9865a7f7fbe4e50a7354452dcf8326",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

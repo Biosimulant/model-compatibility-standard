@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/microbial-gene-content@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/microbial-gene-content/v0.1",
-  "profile_sha256": "sha256:09c9b8a0f2a55547864b745a24568948253add3d96d75a17a872bebc93f52a66",
+  "profile_sha256": "sha256:ce18fe1ad3eb8cb9821036d0cc393d98d0aea1e8947d80193a468b1e748eeecc",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

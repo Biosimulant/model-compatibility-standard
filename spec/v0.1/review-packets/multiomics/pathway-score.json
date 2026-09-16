@@ -170,7 +170,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "multiomics/pathway-score@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/multiomics/pathway-score/v0.1",
-  "profile_sha256": "sha256:12bea878d2e9efdb1dcc17ff99b8c2165506e16714e19bd4c8750e855d9877c9",
+  "profile_sha256": "sha256:cc7adadfa70facdd77dfc6cd3a0a247179f18b492ef27ec7d0f7dbb7d1f007fc",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -178,6 +178,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -410,6 +411,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

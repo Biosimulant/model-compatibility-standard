@@ -253,7 +253,9 @@ def _evaluate(
             return True, None
         if not isinstance(source_kind, str) or not isinstance(target_kind, str):
             return False, "invalid"
-        if sorted([source_kind, target_kind]) != ["dense_vector", "sparse_vector"]:
+        # A dense and a sparse encoding of the same thing are re-encodings of each other. Any other
+        # pair of kinds is a different structure, not a different encoding.
+        if sorted([source_kind, target_kind]) not in (["dense_vector", "sparse_vector"], ["matrix", "sparse_matrix"]):
             return False, None
 
         def enabling(side: dict[str, Any]) -> list[Any]:

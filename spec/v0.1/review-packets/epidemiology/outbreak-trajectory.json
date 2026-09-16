@@ -182,13 +182,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/outbreak-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/outbreak-trajectory/v0.1",
-  "profile_sha256": "sha256:ce8ca0b67570eac7249aab381051983beb461de5a32120436bcc02a75cac6c6b",
+  "profile_sha256": "sha256:aa45d02e81eed33ed5e77b2273d1a029d525bfbee85dc1b3357e1a7c050d8ce2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -437,6 +438,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

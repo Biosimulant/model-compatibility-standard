@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/nutrient-cycle@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/nutrient-cycle/v0.1",
-  "profile_sha256": "sha256:df9dd6eb0dc3486704b61896e2f8a61d8d2b6631477dbc36f38d6c3be7e24cc4",
+  "profile_sha256": "sha256:61a575437e64887f934030fb3807e42db3cfc776bc1bc5e06c62db25f9feb039",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

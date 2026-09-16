@@ -226,13 +226,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/pet-volume@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/pet-volume/v0.1",
-  "profile_sha256": "sha256:5068262d50eb12eca3fd28ac4c221d500e563606bb4a0dcc878b019c5ceee0b6",
+  "profile_sha256": "sha256:1ebe8588b2af6bc919ae926c1318e2537ef514b1e43f1a4a00a23c9bec054960",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -493,6 +494,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

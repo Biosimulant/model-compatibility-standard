@@ -7,11 +7,10 @@
     "biological_context.cohort",
     "biological_context.compartment",
     "biological_context.disease",
-    "biological_context.intervention.agent",
-    "biological_context.intervention.dose",
-    "biological_context.intervention.duration",
-    "biological_context.intervention.route",
-    "biological_context.intervention.schedule",
+    "biological_context.intervention[].dose",
+    "biological_context.intervention[].duration",
+    "biological_context.intervention[].route",
+    "biological_context.intervention[].schedule",
     "biological_context.sex",
     "biological_context.strain",
     "biological_context.tissue",
@@ -104,6 +103,7 @@
       "negative-value-invalid-measurement-response-direction",
       "negative-value-invalid-biological-context-intervention",
       "negative-value-invalid-dimensions-dose-axis",
+      "negative-value-invalid-biological-context-intervention-agent",
       "negative-value-invalid-dimensions-axes-name"
     ],
     "negative": [
@@ -119,6 +119,7 @@
       "negative-required-missing-measurement-response-direction",
       "negative-required-missing-biological-context-intervention",
       "negative-required-missing-dimensions-dose-axis",
+      "negative-required-missing-biological-context-intervention-agent",
       "negative-required-missing-dimensions-axes-name"
     ],
     "policy": [],
@@ -216,6 +217,8 @@
     "comparison-incompatible-dimensions-dose-axis",
     "comparison-unknown-dimensions-dose-axis",
     "comparison-unknown-target-dimensions-dose-axis",
+    "negative-required-missing-biological-context-intervention-agent",
+    "negative-value-invalid-biological-context-intervention-agent",
     "negative-required-missing-dimensions-axes-name",
     "negative-value-invalid-dimensions-axes-name"
   ],
@@ -224,13 +227,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "pharmacology/dose-response-curve@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/pharmacology/dose-response-curve/v0.1",
-  "profile_sha256": "sha256:865f53c44be6fdafba2ff15166ed6ac5d2de34a821b6e58017d8f8cac82bf740",
+  "profile_sha256": "sha256:e2c124786be60e0b00088c4604ef409ec8d9e2f629965a0c41ce85fdcdfaedec",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -491,6 +495,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",
@@ -655,6 +660,15 @@
     {
       "level": "required",
       "path": "dimensions.dose_axis",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "biological_context.intervention[].agent",
       "schema": {
         "maxLength": 4096,
         "minLength": 1,

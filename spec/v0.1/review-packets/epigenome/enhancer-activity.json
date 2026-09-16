@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/enhancer-activity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/enhancer-activity/v0.1",
-  "profile_sha256": "sha256:c525bdef360f199a5fdf878e92d98ef3fe1a48b99c4b0470ab01f67fef3897cb",
+  "profile_sha256": "sha256:8b9976e5f3283448feae87cf423b4bbfd6b0e307f58b9c84a6ad32806adf0317",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -131,6 +131,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -351,6 +352,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

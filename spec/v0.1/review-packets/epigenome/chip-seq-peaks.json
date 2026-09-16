@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/chip-seq-peaks@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/chip-seq-peaks/v0.1",
-  "profile_sha256": "sha256:77f846efd0c58e2f23083ff636d016f4ebdcabb0b10d63e4d72b6ea078843686",
+  "profile_sha256": "sha256:b73278f495ac111a18bd4f5eaba3be3c5090ae304e17773ce2f0f78784f934c3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -131,6 +131,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -351,6 +352,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

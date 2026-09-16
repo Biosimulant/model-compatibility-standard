@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/protein-interaction-edge@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-interaction-edge/v0.1",
-  "profile_sha256": "sha256:45dc4c0614de0d333cf9478b9013bba89dd153899e5428e1cb6d3b56b587448f",
+  "profile_sha256": "sha256:89415be9a64f39caefd5c17be7dcca4b95e40d382c2ca171281936a0ccf9ed41",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

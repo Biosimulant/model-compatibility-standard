@@ -206,13 +206,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cardiopulmonary-renal/pressure-waveform@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cardiopulmonary-renal/pressure-waveform/v0.1",
-  "profile_sha256": "sha256:53d1d2748230e565017e818c5d174477ca41029942f494ff368b0f1c73c99ca6",
+  "profile_sha256": "sha256:b9cbaf6f5db586a673174b3ae6dfe11f4f4bbbfe3d730634389716ef11afe623",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -446,6 +447,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

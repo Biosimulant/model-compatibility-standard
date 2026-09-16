@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/rna-structure@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/rna-structure/v0.1",
-  "profile_sha256": "sha256:8566f4f2898d58303256238c0d70eb199520ea5ad4e18eda3083db5cc561a805",
+  "profile_sha256": "sha256:30298262584b9e5e93165bd925621e57dd135098d1b381aa68af8c4fe6ba5a9a",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

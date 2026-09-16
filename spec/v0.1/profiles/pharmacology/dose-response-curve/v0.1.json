@@ -7,6 +7,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -292,6 +293,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",
@@ -456,6 +458,15 @@
     {
       "level": "required",
       "path": "dimensions.dose_axis",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "required",
+      "path": "biological_context.intervention[].agent",
       "schema": {
         "maxLength": 4096,
         "minLength": 1,

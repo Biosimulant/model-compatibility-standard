@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/evenness@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/evenness/v0.1",
-  "profile_sha256": "sha256:2b1d67df94369c303bb5630bd33287e2f8f1c7c275c3342d1c57680561506856",
+  "profile_sha256": "sha256:2384e65dd8a45e47c23adbda19df758971149d41a02fff05e411af3d4c73fff8",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

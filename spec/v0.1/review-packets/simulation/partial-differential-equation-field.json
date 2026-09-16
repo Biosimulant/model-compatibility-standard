@@ -153,13 +153,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "simulation/partial-differential-equation-field@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/simulation/partial-differential-equation-field/v0.1",
-  "profile_sha256": "sha256:d4f3234ce6c64e5710d5282d48729a35c1e85df9b4ddf2268592a3c579eda106",
+  "profile_sha256": "sha256:ab7ecded7baee66a98732820f8fe8401c574d9b6ed0d9f33acc28fadbfcaa88d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -390,6 +391,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

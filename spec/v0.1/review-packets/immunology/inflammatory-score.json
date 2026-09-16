@@ -159,7 +159,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/inflammatory-score@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/inflammatory-score/v0.1",
-  "profile_sha256": "sha256:6f7ee96c5cfeae124a4493c1f63cbaf26d75520ddb5180752781703bae971022",
+  "profile_sha256": "sha256:cb0dad6f050a02d2c75ee0cfada518403e7906170d7edc0213d66f1fe6724d24",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -167,6 +167,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -399,6 +400,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

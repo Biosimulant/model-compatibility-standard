@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/lipoprotein-particle@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/lipoprotein-particle/v0.1",
-  "profile_sha256": "sha256:e7cc7ffc5aeb02fb59456ca9e0feadd17162e4fc721af4a078200a22f7250fcb",
+  "profile_sha256": "sha256:840effd06614123145ac241d999d8f16340c9563229c868f68d51abaa67a51b5",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

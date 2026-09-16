@@ -124,13 +124,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/sterol-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/sterol-profile/v0.1",
-  "profile_sha256": "sha256:4f0a0ad2f0bdcb85940db4ea6adb005dd4421a99277a1ab04105d6e7aa8dc775",
+  "profile_sha256": "sha256:c19e038e5fb1aacde159ac50273ed7d1ceaa5435480cc3a34e3a9f9526fb607e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

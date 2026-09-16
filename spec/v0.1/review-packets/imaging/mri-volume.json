@@ -223,13 +223,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/mri-volume@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/mri-volume/v0.1",
-  "profile_sha256": "sha256:8b253b4cd314d3d8b7c42c406e4c1d8daa8339f11140be60606d3217e13d5b77",
+  "profile_sha256": "sha256:98dbd869cef105d93c8857167e0b3abb74788468686f3abcf07da4a239973460",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -490,6 +491,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

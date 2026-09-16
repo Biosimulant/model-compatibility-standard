@@ -113,7 +113,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "simulation/solver-tolerance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/simulation/solver-tolerance/v0.1",
-  "profile_sha256": "sha256:beb99a2547582d88ed6a76a9ca700aa4d3ef5d20d320339244f6045d9330b974",
+  "profile_sha256": "sha256:284d090a10128fc54e85532987404de49b99fb6e777a3961179650e56979df32",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -121,6 +121,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -332,6 +333,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

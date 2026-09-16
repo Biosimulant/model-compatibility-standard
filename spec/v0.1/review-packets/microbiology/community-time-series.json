@@ -203,13 +203,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/community-time-series@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/community-time-series/v0.1",
-  "profile_sha256": "sha256:4660b424754faeec35fb7c6f54866472c14971070fdae424d4e0a478feba8757",
+  "profile_sha256": "sha256:b589cf5906ae8f30f91a2f5b67d0c6344170b3b54faab14a2fcb3ca07d390eb2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -447,6 +448,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

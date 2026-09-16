@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/fluid-balance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/fluid-balance/v0.1",
-  "profile_sha256": "sha256:4e875a12d764225d7706f5ad4e02b7e7b90c3f80a1c11f2d2f102123e1130b2c",
+  "profile_sha256": "sha256:f8cb425b20c9e0f4c68aeb67b62156c7bdeb5fbee8c0f2d049d8f046b86aa1c9",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

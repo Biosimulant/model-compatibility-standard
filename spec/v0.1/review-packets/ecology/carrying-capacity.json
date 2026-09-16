@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/carrying-capacity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/carrying-capacity/v0.1",
-  "profile_sha256": "sha256:6f0c449f3cf97faccd1f11e2ac2451ee10ed8e5d9115d0d5f0f98f82b456e734",
+  "profile_sha256": "sha256:33cbdc53fb15c6286d14151e60f789d5893e11eba2904e0d9406266c0ee0b12f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

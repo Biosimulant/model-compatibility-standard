@@ -165,7 +165,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/glomerular-filtration-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/glomerular-filtration-rate/v0.1",
-  "profile_sha256": "sha256:efafd08ee521ac13a0251ebdc61cf4e8e6417bf9741a67d58886386b696d0583",
+  "profile_sha256": "sha256:ff5bf7ed5e8343a171831468748727f695ee21e06ed973200b227c94f412d978",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -173,6 +173,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -405,6 +406,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

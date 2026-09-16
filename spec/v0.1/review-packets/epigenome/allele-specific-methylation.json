@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/allele-specific-methylation@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/allele-specific-methylation/v0.1",
-  "profile_sha256": "sha256:b0325d7a27e66044991afa8ae223cf22ce55cecc3841d4c14e6a3e45385f27ef",
+  "profile_sha256": "sha256:ed79ca79048a46e9048049498a4dbd59399bd2f0603665edd40af9a4ac3b3777",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -131,6 +131,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -351,6 +352,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

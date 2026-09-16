@@ -187,13 +187,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "proteome/phosphoprotein-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/proteome/phosphoprotein-abundance/v0.1",
-  "profile_sha256": "sha256:0491dc6b16038a5c1391a4716e0cc3bb41466822c8f09646ad1f62de14821735",
+  "profile_sha256": "sha256:131cf0ee3eda51d89ed6e734234a0b35ae7d54f1353afb0f934deaa8f8b19457",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -427,6 +428,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

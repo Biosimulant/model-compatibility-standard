@@ -723,7 +723,10 @@ function compareValue(rule: JsonObject, source: JsonValue, target: JsonValue, bu
     if (sourceKind === targetKind) return [true, undefined];
     if (typeof sourceKind !== "string" || typeof targetKind !== "string") return [false, "invalid"];
     const pair = [sourceKind, targetKind].sort().join("|");
-    if (pair !== ["dense_vector", "sparse_vector"].join("|")) return [false, undefined];
+    // A dense and a sparse encoding of the same thing are re-encodings of each other. Any other
+    // pair of kinds is a different structure, not a different encoding.
+    const reEncodings = [["dense_vector", "sparse_vector"], ["matrix", "sparse_matrix"]].map((entry) => [...entry].sort().join("|"));
+    if (!reEncodings.includes(pair)) return [false, undefined];
     const enabling = (side: JsonObject) => [side.implicit_entry, side.ordering, side.sparsity];
     const sourceFields = enabling(left), targetFields = enabling(right);
     if (sourceFields.some((value) => value === undefined) || targetFields.some((value) => value === undefined)) return [false, "evidence"];

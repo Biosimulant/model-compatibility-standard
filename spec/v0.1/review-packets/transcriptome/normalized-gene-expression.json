@@ -140,7 +140,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/normalized-gene-expression@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/normalized-gene-expression/v0.1",
-  "profile_sha256": "sha256:713f68b1dcf9616901467bc7343d78669b570a52f5cfa46e0c3bb020d681022d",
+  "profile_sha256": "sha256:88863c934b0339a98ff16b64f56efe860b3c8d6f3275218b9ee312e55cfc335d",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -148,6 +148,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -368,6 +369,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

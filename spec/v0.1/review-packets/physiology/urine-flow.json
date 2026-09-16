@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/urine-flow@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/urine-flow/v0.1",
-  "profile_sha256": "sha256:380c64f7b54f668479d03efcde9f2e90b49d351e0f0bc9cd654b0467d9e3ffcf",
+  "profile_sha256": "sha256:997348d6b212e557049a48ad16828f8408309790e7a4a42929a0118359849d4b",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

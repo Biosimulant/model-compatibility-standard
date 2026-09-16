@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/atp-level@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/atp-level/v0.1",
-  "profile_sha256": "sha256:d2fd4a8867129bc145fefb703c21e8cd9e5b41b061af3a98b64776b7117edc69",
+  "profile_sha256": "sha256:007cf170c6170101bad6ccdba21db793dfc780eb48aa07ae8169d9b8ae267ee1",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

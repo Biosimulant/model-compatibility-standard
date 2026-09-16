@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/sensory-stimulus@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/sensory-stimulus/v0.1",
-  "profile_sha256": "sha256:700881312c2f9d608436e98b37fef488256fd7dc97041511f354861ab220ce30",
+  "profile_sha256": "sha256:837d3f3e617546a67249e5e623187751333e715bf8bb5092c4066185fec2c0c6",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -136,6 +136,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -356,6 +357,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

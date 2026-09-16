@@ -172,7 +172,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/immune-escape-score@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/immune-escape-score/v0.1",
-  "profile_sha256": "sha256:6a8c8a4d4fa860ada6ae1f06f1669ac757fdc0575746a5f5e5805142d07bde36",
+  "profile_sha256": "sha256:a4a5ad7ad1392cad4f81abdae8c6249c923ba3309eef2fcf3634b12fbcabc810",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -180,6 +180,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -412,6 +413,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

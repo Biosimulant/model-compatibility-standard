@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/antimicrobial-susceptibility@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/antimicrobial-susceptibility/v0.1",
-  "profile_sha256": "sha256:18e3a7d9b82dbb5b4b83fe37ae2229b6208ee0341edff6375e0f76b4740b4d2b",
+  "profile_sha256": "sha256:7c0e12c46360805a3d65a0d498d22c46e6598748b5121371f942abe12902bdbc",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

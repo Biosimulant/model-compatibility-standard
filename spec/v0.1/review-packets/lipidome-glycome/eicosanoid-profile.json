@@ -124,13 +124,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/eicosanoid-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/eicosanoid-profile/v0.1",
-  "profile_sha256": "sha256:3fff1421c6dde640ba6cc7f806b420eeb014578cb106e6b8f740ee6328e38cda",
+  "profile_sha256": "sha256:331e90949850363f6ecda0b2f5d35ab3eb8a113b4ae2c4452120c193e69c59f9",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

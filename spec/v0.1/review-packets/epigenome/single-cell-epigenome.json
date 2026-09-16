@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/single-cell-epigenome@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/single-cell-epigenome/v0.1",
-  "profile_sha256": "sha256:548d3d388d6611893eaef29d568f34eedc0752a4c8dd4c462208ecda36c9ef90",
+  "profile_sha256": "sha256:12ed1fd69a329dddcf5be1cf3158ca080576579ab074ee883109c8248e7edf7c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -131,6 +131,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -351,6 +352,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

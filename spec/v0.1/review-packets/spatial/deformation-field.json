@@ -165,13 +165,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "spatial/deformation-field@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/spatial/deformation-field/v0.1",
-  "profile_sha256": "sha256:e3475159e0a1ac9cddc7b512186b039e010e138e7bedbb755c29566e79149009",
+  "profile_sha256": "sha256:df19b9b7c1d7e909173a10a69d0d95e21f7077928c73f48516713dc92ea08c05",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -411,6 +412,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

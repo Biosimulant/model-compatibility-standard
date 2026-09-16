@@ -142,13 +142,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/resistance-gene-profile@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/resistance-gene-profile/v0.1",
-  "profile_sha256": "sha256:31103d52cb571fd6beaa119557f42628790491ada33dde492b998814fa6d2761",
+  "profile_sha256": "sha256:39cac543be2b63a92e8e820a755b98865c95db7af7d0c6ab1c6a924b1c24e56c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

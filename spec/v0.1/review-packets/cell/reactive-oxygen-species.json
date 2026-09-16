@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cell/reactive-oxygen-species@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cell/reactive-oxygen-species/v0.1",
-  "profile_sha256": "sha256:c7065539af7a99d4cd930970f3c96d1772bf295f1d198f63be15cb4fa1a6894c",
+  "profile_sha256": "sha256:319d659c499f3177e8e33cb9cfc6c997855b55b0967775a4d427e0b2054e1e56",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

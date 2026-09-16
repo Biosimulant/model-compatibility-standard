@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/blood-glucose@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/blood-glucose/v0.1",
-  "profile_sha256": "sha256:55fe2608a8eb329b5e509fdb3334e9eccf0b54c80d5d835913639f1f6cf4a5de",
+  "profile_sha256": "sha256:e7e50ee6fba92ff9a70d78f647e19d30e32351677cb404bec4a48a0991dc9771",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

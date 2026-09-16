@@ -94,6 +94,11 @@ conformance suite. `BMCS-SCI-110` is hand-written instead, which is the honest h
 inputs are supplied by the case. Making those fields required for sparse-capable ports is per-profile
 work for domain review.
 
-**Sub-question 3 stays open.** A `sparse_matrix` kind is not added. The vocabulary genuinely lacks
-it, but adding a kind while being unable to narrow 510 profiles widens what they accept, and
-widening is the unsafe direction.
+**Sub-question 3 is answered: `sparse_matrix` exists.** The vocabulary had `sparse_vector` and no
+sparse counterpart for a matrix, so the most common storage form in single-cell data could not be
+declared at all and a port holding one had to call it something it was not. That is a worse failure
+than the widening it causes, and the widening is bounded: the same conditional equivalence governs
+`matrix` against `sparse_matrix` as governs the vector pair, so the new kind cannot silently match
+anything. 510 profiles can now express it, and `BMCS-SCI-114` pins the behaviour.
+
+Narrowing those 510 sets remains review work, and adding this kind does not change that.

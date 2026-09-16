@@ -148,7 +148,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "genome/genomic-variant@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/genome/genomic-variant/v0.1",
-  "profile_sha256": "sha256:c7d05750cc602dd857b017cb34d84b072f6d72bc67f614e1c5e0b5b3b498e17e",
+  "profile_sha256": "sha256:f71e0abdce0a9552da364a91fde96aced1838f8be29b8544dde4c2f8656d5e54",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -156,6 +156,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -376,6 +377,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

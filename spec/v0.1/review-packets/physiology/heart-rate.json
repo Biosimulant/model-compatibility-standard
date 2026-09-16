@@ -152,7 +152,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/heart-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/heart-rate/v0.1",
-  "profile_sha256": "sha256:d5235a0da6aebaba5d983e99484a1fc812c5ac1d9ae9b004f61992b63f0415d7",
+  "profile_sha256": "sha256:c1fd4e9d82b456707c25605431a197c4cdcca81b74cebfb5d77e60c0049ed929",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -160,6 +160,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -383,6 +384,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

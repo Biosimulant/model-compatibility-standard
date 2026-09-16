@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/energy-charge@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/energy-charge/v0.1",
-  "profile_sha256": "sha256:a10f8173367ad3ac8e6decd4a4e8b10e0bf68ef9ab7c1693fec9ab0f31ff2b99",
+  "profile_sha256": "sha256:f9292245ec61208230ffa9201f6bebef7a9e58739fa50877e20c67a24ee77a65",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

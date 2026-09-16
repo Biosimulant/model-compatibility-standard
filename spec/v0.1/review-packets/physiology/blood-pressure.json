@@ -164,7 +164,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/blood-pressure@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/blood-pressure/v0.1",
-  "profile_sha256": "sha256:cb5bd5148109f3d663696195f5def067bfc4ad774a481f9db29f8596afb8b7fc",
+  "profile_sha256": "sha256:123c643f83335fe6bffa7a18c856c41832c20104544a4bce3d34750d1baa05b3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -172,6 +172,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -404,6 +405,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

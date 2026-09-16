@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/paralogy-relation@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/paralogy-relation/v0.1",
-  "profile_sha256": "sha256:801fc9448bd443b514a5d10889740e8f59f9d98810dd8d64d6ba882605c31899",
+  "profile_sha256": "sha256:6313641cc881463619f65c09b710aebfd554a5bb28a5265b532a624347369bfd",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

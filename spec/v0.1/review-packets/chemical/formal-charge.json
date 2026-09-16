@@ -113,7 +113,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/formal-charge@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/formal-charge/v0.1",
-  "profile_sha256": "sha256:2b5f72b988a086605065cf1a7c463a1185ce1336f2758509694c28cbfcbdbac5",
+  "profile_sha256": "sha256:c9c0768d62d4eddc6163a2e502d722b4a82ab0b2f2827b1d8e0f59e19eb9d739",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -121,6 +121,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -332,6 +333,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

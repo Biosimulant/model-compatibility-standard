@@ -142,7 +142,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/lipid-droplet-content@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/lipid-droplet-content/v0.1",
-  "profile_sha256": "sha256:e9f9a95b21cb651dc861fb811aa322a08a86309b2fd6bdf67436a9833b2aad6c",
+  "profile_sha256": "sha256:cb2403443c44ef06a4345cddec90e8532f70a2b00398dc6f5f4a8127e8867c62",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -150,6 +150,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -370,6 +371,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "immunology/mhc-allele@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/immunology/mhc-allele/v0.1",
-  "profile_sha256": "sha256:fed6fde0fcf8962e4e671f77d5649db4cbea882302fdad9f9ecb92a374034da1",
+  "profile_sha256": "sha256:055e12f900df846c5986cb5c0858385415d31628a921638f1de33f7f9f3f2c4f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

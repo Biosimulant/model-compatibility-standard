@@ -145,7 +145,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/branching-morphogenesis@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/branching-morphogenesis/v0.1",
-  "profile_sha256": "sha256:fea6ca4f84c0656208e725d8e28193047d8203ecf410ef9cf8f3b6ef3cf2831e",
+  "profile_sha256": "sha256:0ac60619f06545841b146b9b7d1a43d230f9f1bc0247ccaa9a54ec8bc11b2945",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -153,6 +153,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -373,6 +374,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

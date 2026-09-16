@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/birth-outcome@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/birth-outcome/v0.1",
-  "profile_sha256": "sha256:a09a7b1d8c3461375c4f28f1519d0d2e3f7780b60fee927e38e0f19b0ea05c72",
+  "profile_sha256": "sha256:71e3655457066eae727d99378ff472af29313cacb26a3c288282f75d4e199c26",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

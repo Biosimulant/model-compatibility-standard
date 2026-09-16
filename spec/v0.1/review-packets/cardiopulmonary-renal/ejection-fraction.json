@@ -153,7 +153,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "cardiopulmonary-renal/ejection-fraction@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/cardiopulmonary-renal/ejection-fraction/v0.1",
-  "profile_sha256": "sha256:ef6665c98e45920af044fb6e66303bf274d4830ccb8ec0c407ebeb9e75486957",
+  "profile_sha256": "sha256:007b93d6892bd8d801c1acc41e9ced1ba45914b8c93b6eb901ac91154944493e",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -161,6 +161,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -384,6 +385,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -165,7 +165,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/synaptic-weight@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/synaptic-weight/v0.1",
-  "profile_sha256": "sha256:ba97b599896ddaa15494dbb109e40dc2a50d5f053a61af9a0280fbcbc933ca2e",
+  "profile_sha256": "sha256:1f46a3dbadb05ed3fd3159af66f2e160b418e185916ffde19711c71a6c39fac4",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -173,6 +173,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -405,6 +406,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

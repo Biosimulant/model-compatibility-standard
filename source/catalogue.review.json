@@ -224,35 +224,35 @@
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "biological_context.intervention.agent",
+      "path": "biological_context.intervention[].agent",
       "family": "biological_context",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "biological_context.intervention.dose",
+      "path": "biological_context.intervention[].dose",
       "family": "biological_context",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "biological_context.intervention.duration",
+      "path": "biological_context.intervention[].duration",
       "family": "biological_context",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "biological_context.intervention.route",
+      "path": "biological_context.intervention[].route",
       "family": "biological_context",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
       "comparison_effect": "Checked only when the profile requires it or both contracts include it."
     },
     {
-      "path": "biological_context.intervention.schedule",
+      "path": "biological_context.intervention[].schedule",
       "family": "biological_context",
       "value_type": "profile-defined JSON value",
       "requirement": "profile-dependent",
@@ -2038,10 +2038,10 @@
       "id": "dose-response",
       "description": "Dose-response data: the intervention, dose axis, endpoint, response direction, and fitted curve.",
       "items": [
-        "biological_context.intervention.agent",
-        "biological_context.intervention.dose",
-        "biological_context.intervention.route",
-        "biological_context.intervention.duration",
+        "biological_context.intervention[].agent",
+        "biological_context.intervention[].dose",
+        "biological_context.intervention[].route",
+        "biological_context.intervention[].duration",
         "semantic.endpoint",
         "measurement.baseline",
         "measurement.response_direction",
@@ -2179,8 +2179,8 @@
       "description": "Pharmacokinetics: exposure, sampling times, compartments, and PK parameter definitions.",
       "items": [
         "biological_context.compartment",
-        "biological_context.intervention.route",
-        "biological_context.intervention.schedule",
+        "biological_context.intervention[].route",
+        "biological_context.intervention[].schedule",
         "lifecycle.sampling",
         "measurement.quantity",
         "measurement.unit",

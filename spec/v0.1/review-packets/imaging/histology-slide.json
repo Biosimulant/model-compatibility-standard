@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "imaging/histology-slide@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/imaging/histology-slide/v0.1",
-  "profile_sha256": "sha256:9486c9fdafe8b6fb9c7c27d8d44af189c2f3ea8ea025a2ff3447e1c54b184fb5",
+  "profile_sha256": "sha256:37ea6ddfb67b21b6da16175bd1363818e1a4ef6e24dc805e4ae8882b340fed83",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

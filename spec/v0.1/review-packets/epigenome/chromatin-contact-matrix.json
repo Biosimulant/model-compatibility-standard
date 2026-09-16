@@ -163,13 +163,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/chromatin-contact-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/chromatin-contact-matrix/v0.1",
-  "profile_sha256": "sha256:63b58d52b8d4d9bbeb045988e0d1bf416946288f7b0314e06b5fd2c53ffcee55",
+  "profile_sha256": "sha256:125e85757c75a7329631c624121b8733a93d3921e489db80541d8896c54e5d10",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -391,6 +392,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

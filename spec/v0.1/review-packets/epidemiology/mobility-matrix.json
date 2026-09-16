@@ -182,13 +182,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/mobility-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/mobility-matrix/v0.1",
-  "profile_sha256": "sha256:b3d2c38e2d4271c5630aaaba0f6cfca20e9af8ccfd333b5212b6254e84faa2d9",
+  "profile_sha256": "sha256:3d921544d89f3e8ba6226b58409f7b581fe289939d4ecee9b512358fd2f9ee52",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -437,6 +438,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

@@ -194,13 +194,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/physiological-time-series@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/physiological-time-series/v0.1",
-  "profile_sha256": "sha256:315d6f5b05a0a57da17640482d2fdd9d63bd6829150be56f9a6c6d578d1126ec",
+  "profile_sha256": "sha256:613c6a26ec901df667df7fede3d65ec302a5af98752859548f3ec35503e75991",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -429,6 +430,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

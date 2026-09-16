@@ -152,7 +152,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/exact-mass@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/exact-mass/v0.1",
-  "profile_sha256": "sha256:2c2bc80e0a120aafbe1e6553c26f8a43dad3d3cebe755ecd4acb31e41bdb3b43",
+  "profile_sha256": "sha256:1d50c335d71ead3f148be22fc71460bf74da31ae4db8c7511523a720c1085d3f",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -160,6 +160,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -383,6 +384,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

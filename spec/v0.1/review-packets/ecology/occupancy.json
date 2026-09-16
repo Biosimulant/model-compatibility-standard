@@ -126,7 +126,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "ecology/occupancy@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/ecology/occupancy/v0.1",
-  "profile_sha256": "sha256:8a7970e053b7841215aeb4b1b419cff1754b62ae16c9757f6fab43c5ae123538",
+  "profile_sha256": "sha256:0eca0e1437fb8bab3a06df34f92782e3c449a5850dcf82941ad1c9e992d08262",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -134,6 +134,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -354,6 +355,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

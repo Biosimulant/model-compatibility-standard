@@ -148,7 +148,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "clinical/vital-sign@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/clinical/vital-sign/v0.1",
-  "profile_sha256": "sha256:56fecc3b7e63fe869cf45f6cfc780de020ca46bc88cc7911b2239e27d20d62cb",
+  "profile_sha256": "sha256:5a4a5b2328369afeb4bc45c3bbe69eb3affd254dc55620fbffc0d9226efe89cb",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -156,6 +156,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -394,6 +395,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

@@ -166,13 +166,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "developmental/spatial-lineage-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/developmental/spatial-lineage-map/v0.1",
-  "profile_sha256": "sha256:bf0005e4012d5ec9a203627af195e2eba6012bcbae319f81059766f7ad6e5334",
+  "profile_sha256": "sha256:8dc840d032a50313e54ea96ab35e746ff700c78c74ea5f29551f34c87564f0f4",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -403,6 +404,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

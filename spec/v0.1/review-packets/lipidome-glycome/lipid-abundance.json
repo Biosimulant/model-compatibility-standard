@@ -178,13 +178,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "lipidome-glycome/lipid-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/lipidome-glycome/lipid-abundance/v0.1",
-  "profile_sha256": "sha256:df9c84f9fb84835253c579e17963ea228bdbb399541a7125afba8c8591d8b303",
+  "profile_sha256": "sha256:31f064d90d807c4f095f9035ba23103de151cb3365933ff488beb07968878da9",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -409,6 +410,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

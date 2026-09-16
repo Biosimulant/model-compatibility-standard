@@ -125,7 +125,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "physiology/vascular-resistance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/physiology/vascular-resistance/v0.1",
-  "profile_sha256": "sha256:1662f08d678a43a5bdbbf2dada851e50aa5b73485e65018aec79a8b06d5b7978",
+  "profile_sha256": "sha256:9d1ef6e8140c2926c9d985903d7dded6a3536e3144c73558616ca8e4e0daa9c9",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -133,6 +133,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -353,6 +354,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

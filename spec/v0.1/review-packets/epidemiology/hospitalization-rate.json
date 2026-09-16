@@ -186,7 +186,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/hospitalization-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/hospitalization-rate/v0.1",
-  "profile_sha256": "sha256:aefaff119698cb8b617d6a8804c70b2264b0ce77a8ea4abe781a79e16654312c",
+  "profile_sha256": "sha256:8558df0c82ad6b20a8f0c99b447c75a80fb757af6da6f62eb6600a3c7759c866",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -194,6 +194,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -453,6 +454,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

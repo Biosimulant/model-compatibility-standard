@@ -141,7 +141,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epidemiology/prevalence@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epidemiology/prevalence/v0.1",
-  "profile_sha256": "sha256:2e81a4f3466e17aeab98b4295b89232f9d992cf51dfab411a6619432004ac4e5",
+  "profile_sha256": "sha256:5e034169afd920d14fa7437b52a9af5640046a9819b9e6d321aa7eeeed6b1f7c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -149,6 +149,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -387,6 +388,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

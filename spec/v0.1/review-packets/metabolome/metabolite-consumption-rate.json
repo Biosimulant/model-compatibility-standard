@@ -173,7 +173,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/metabolite-consumption-rate@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/metabolite-consumption-rate/v0.1",
-  "profile_sha256": "sha256:e7488821d7175466b878c67f2b6a27f1f9ea4ab07b4e14f83e9e8b7b86012d40",
+  "profile_sha256": "sha256:9ff7e7916df537d02f0b952995c8e48fc083a6076b1f7f2404beee790f46d027",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -181,6 +181,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -404,6 +405,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

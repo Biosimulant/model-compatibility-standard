@@ -156,13 +156,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "evolution/allele-frequency-trajectory@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/evolution/allele-frequency-trajectory/v0.1",
-  "profile_sha256": "sha256:e5144097d7c94056452d5d2463047115a82f4a660b331f7a810df689f24e59de",
+  "profile_sha256": "sha256:5433b9bd11a899f958af24737afa5eda3a4c443e7c4665300ddb045ef081b7cf",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -384,6 +385,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

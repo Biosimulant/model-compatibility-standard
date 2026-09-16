@@ -122,7 +122,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "transcriptome/transcript-isoform-usage@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/transcriptome/transcript-isoform-usage/v0.1",
-  "profile_sha256": "sha256:54d06841b48b778d327dc104f2597905741b271a45540f6fb41da5af13eac459",
+  "profile_sha256": "sha256:535b54312a74d3c9fbfd0eb68f8ad47c7bc659ace8954afd0fe9179d2a436a2c",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -130,6 +130,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -350,6 +351,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

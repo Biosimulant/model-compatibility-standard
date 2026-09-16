@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/colony-forming-units@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/colony-forming-units/v0.1",
-  "profile_sha256": "sha256:5562e4e669b8c13c7f128053f9e65fd03378fd6ec3a92d516867183dcf7028c1",
+  "profile_sha256": "sha256:9f8fda2755073827c6d7377d21df73c77fd30cbdbfef0ebb2d04a2a24eb4aef5",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

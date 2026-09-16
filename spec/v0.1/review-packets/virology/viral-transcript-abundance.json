@@ -171,13 +171,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "virology/viral-transcript-abundance@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/virology/viral-transcript-abundance/v0.1",
-  "profile_sha256": "sha256:14b35296b52ece59854b1030f1668d2678584706be2048ea6a16197efcda6f97",
+  "profile_sha256": "sha256:53983356ffae2a390cc2a6553869b572b61ee23e62983d26da0a67dd5101a960",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -402,6 +403,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

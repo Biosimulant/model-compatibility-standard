@@ -176,13 +176,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "metabolome/untargeted-metabolomics-matrix@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/metabolome/untargeted-metabolomics-matrix/v0.1",
-  "profile_sha256": "sha256:7253a8ddfd5bc5c811eaede8d9fe60bbe2ad3b9a13ee082e1633ccd158453d84",
+  "profile_sha256": "sha256:30cd3a0090fa41b1f6385173d1981d078eda64cd796a7cd25fcf34d77c6301c2",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -413,6 +414,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

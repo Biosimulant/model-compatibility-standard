@@ -124,7 +124,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "microbiology/beta-diversity@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/microbiology/beta-diversity/v0.1",
-  "profile_sha256": "sha256:39192a84038fa3a709e446c7502b618f22d973d9dde23d3ec957835bc52d3360",
+  "profile_sha256": "sha256:9388061379f7f33e472aac6861ad1df3a6d744dcd7cc42b21240a748de0151f3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -132,6 +132,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -352,6 +353,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

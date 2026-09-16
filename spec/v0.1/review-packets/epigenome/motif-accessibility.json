@@ -123,7 +123,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/motif-accessibility@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/motif-accessibility/v0.1",
-  "profile_sha256": "sha256:fc4e3588fed674b5757aa218d22aee85dfa26cd6a80f8becda350ba96c512c44",
+  "profile_sha256": "sha256:db8afb23fd085693d2bfcc149a091ec3b357b15ef80bd0a7c5cd4f340b7852df",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -131,6 +131,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -351,6 +352,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

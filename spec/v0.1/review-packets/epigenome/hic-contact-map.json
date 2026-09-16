@@ -172,13 +172,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "epigenome/hic-contact-map@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/epigenome/hic-contact-map/v0.1",
-  "profile_sha256": "sha256:e9c96eaf374a67ccf9c096d92618c6949eb24ab29902ea01a5f7ffa0db773245",
+  "profile_sha256": "sha256:20a5ed0530c094c7b9c6cbfaa48dc03efb0bfe8a3996b4148909645ec1a9d290",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -400,6 +401,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",

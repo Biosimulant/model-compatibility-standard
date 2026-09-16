@@ -113,7 +113,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "chemical/solubility@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/chemical/solubility/v0.1",
-  "profile_sha256": "sha256:48769d6ead8ece5a0e9dc70a914cf6fdb263d3935188dbd95cefce26eeb52474",
+  "profile_sha256": "sha256:8ef94628c78d682089bc8891a1c45e2c71c013b170dfff933775a61de035e746",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -121,6 +121,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -332,6 +333,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

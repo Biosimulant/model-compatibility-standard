@@ -128,7 +128,7 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/brain-region@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/brain-region/v0.1",
-  "profile_sha256": "sha256:85b5b961f073a343eaec08905bbbc33dcdf5a4fa5179b7cdab134858e6b849ee",
+  "profile_sha256": "sha256:5821df001e7128d811a20048c7ba6c120652457c19c236371e02853b9730afc3",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
@@ -136,6 +136,7 @@
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "record",
@@ -356,6 +357,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "record",

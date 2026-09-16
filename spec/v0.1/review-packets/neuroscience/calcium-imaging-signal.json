@@ -128,13 +128,14 @@
   "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
   "profile_id": "neuroscience/calcium-imaging-signal@0.1",
   "profile_ref": "https://biosimulant.com/standards/model-compatibility/profiles/neuroscience/calcium-imaging-signal/v0.1",
-  "profile_sha256": "sha256:5e93bb223015d8313b0367ce9ef16e57eed172cd89020f853ca1684f13501092",
+  "profile_sha256": "sha256:b04ee2c9ce2aed6bf3f0e5782c1463f9449d45d1b965c78763e9c97c5e784163",
   "proposed_allowed_values": {
     "representation": {
       "kind": [
         "dense_vector",
         "sparse_vector",
         "matrix",
+        "sparse_matrix",
         "tensor",
         "array",
         "artifact",
@@ -356,6 +357,7 @@
           "dense_vector",
           "sparse_vector",
           "matrix",
+          "sparse_matrix",
           "tensor",
           "array",
           "artifact",
