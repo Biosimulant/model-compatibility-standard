@@ -13,28 +13,12 @@ def test_catalogue_counts_and_active_profiles_load():
     assert profiles
     assert len({profile["profile_id"] for profile in profiles}) == len(profiles)
     assert all(profile["$id"] in bundle.profile_index for profile in profiles)
-    reviewed = sum(profile["release_eligible"] for profile in profiles)
-    remaining = len(profiles) - reviewed
-    assert bundle.catalogue["review_counts"] == {
-        "reviewed": reviewed,
-        "remaining": remaining,
-    }
-    ready = sum(
-        profile["technical_pre_review"]["status"] == "ready-for-external-review"
-        for profile in profiles
-    )
-    assert bundle.catalogue["technical_pre_review_counts"] == {
-        "ready_for_external_review": ready,
-        "needs_work": len(profiles) - ready,
-    }
-    assert bundle.manifest["ga_ready"] is (remaining == 0)
-    expected_blockers = [] if remaining == 0 else [
-        f"{remaining} profiles still need complete, independent scientific and schema review evidence."
-    ]
-    assert bundle.manifest["ga_blockers"] == expected_blockers
+    assert all(profile["status"] in {"active", "deprecated"} for profile in profiles)
+    assert all(profile["sources"] for profile in profiles)
+    assert all(profile["examples"] for profile in profiles)
 
 
-def test_every_profile_has_a_distinct_typed_review_packet():
+def test_every_profile_is_a_complete_distinct_contract():
     bundle = get_bundle()
     concepts = set()
     for profile in bundle.profiles():
@@ -43,22 +27,16 @@ def test_every_profile_has_a_distinct_typed_review_packet():
         assert concept not in concepts
         concepts.add(concept)
         assert profile["allowed"]["representation"]["kind"]
-        assert profile["review_questions"]
+        assert {decision["disposition"] for decision in profile["field_dispositions"].values()} <= {
+            "required", "conditional", "recommended", "excluded"
+        }
+        assert all(source["title"] and source["url"] for source in profile["sources"])
         for requirement in profile["requirements"]:
             assert requirement["schema"]
             assert requirement["schema"].get("type") != [
                 "string", "number", "integer", "boolean", "array", "object", "null"
             ]
-        packet = bundle.read_json(
-            f"review-packets/{profile['domain']}/{profile['name']}.json"
-        )
-        assert validate_object(packet, "profile-review-packet.schema.json", bundle=bundle) == []
-        assert packet["profile_sha256"] == bundle.profile_index[profile["$id"]]["sha256"]
-        assert packet["internal_quality_errors"] == []
-        assert packet["technical_pre_review"]["scientific_signoff_required"] is True
     assert len(concepts) == bundle.catalogue["counts"]["profiles"]
-    internal = bundle.read_json("catalogue/internal-validation.json")
-    assert validate_object(internal, "internal-validation.schema.json", bundle=bundle) == []
 
 
 def test_manifest_lists_every_generated_file_with_digest():
@@ -93,5 +71,5 @@ def test_term_registry_is_published_and_version_independent():
     # v0.1 port as incompatible even where the meaning is unchanged.
     assert [term for term in ids if "/v0." in term] == []
     assert all(term["label"] and term["definition"] for term in registry["terms"])
-    # External terms remain empty until a reviewer decides whether an exact maintained term exists.
+    # External terms remain empty until an exact maintained term is adopted in a profile change.
     assert all(term["external_terms"] == [] for term in registry["terms"])

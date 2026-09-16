@@ -13,7 +13,7 @@ from biosimulant_model_compatibility_standard import (
 )
 
 
-def test_full_external_review_fixture_set_for_every_profile():
+def test_generated_fixture_set_for_every_profile():
     bundle = get_bundle()
     fixture_root = Path(bundle.root) / "fixtures" / "profiles"
     files = sorted(fixture_root.rglob("*.json"))

@@ -4,7 +4,7 @@ compatibility:
   standard: https://biosimulant.com/standards/model-compatibility/v0.1
   profiles:
     - ref: https://biosimulant.com/standards/model-compatibility/profiles/proteome/protein-sequence/v0.1
-      sha256: sha256:9a5e2cb22fb179f166cbe06f06df358716799277e7c2f6d2be335a09be35064a
+      sha256: sha256:4a8ab86a964ce7364854dc2d854454f8e77769a6a8547b931dd5642636cfd3bb
 biosim:
   entrypoint: src.model:Model
   communication_step: 1.0

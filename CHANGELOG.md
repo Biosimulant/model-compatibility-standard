@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.0.2 — pull-request governance
+
+- Made the pull request and merge to `main` the profile acceptance record.
+- Reduced profile lifecycle states to `active` and `deprecated`.
+- Removed named reviewer fields, separate review records, review packets,
+  release-eligibility calculations and GA review gates.
+- Kept the complete field mapping, scientific sources, examples, intended use
+  and limitations in each profile.
+- Published Protein Sequence, Protein Structure and Canonical SMILES as the
+  active v0 catalogue.
+
 ## 0.0.1 — active catalogue reset
 
 - Retired the generated 650-profile prototype from the active catalogue while preserving it in Git history and the scientific-remediation record.
@@ -12,8 +23,8 @@
 - Simplified profile authoring to one YAML file per profile. Removed the old
   central catalogue source and field-pack layer; shared fields now live in
   `source/fields.yaml` and scientific guards live with each profile.
-- Changed scientific review records and quantity-kind declarations to YAML.
-  Generated runtime and publication files remain JSON.
+- Changed profile and quantity-kind declarations to YAML. Generated runtime
+  and publication files remain JSON.
 - Added a complete plain-language email and pull-request route for proposing a
   profile.
 
@@ -21,9 +32,6 @@
   orphaned hosted-integration note from this repository; hosted MCP behavior is
   documented with the service that implements it.
 
-- Added a machine-checked scientific review record for each profile. The build
-  now calculates `release_eligible` and `ga_ready` from complete review evidence
-  instead of hard-coding them. No profile was marked reviewed by this change.
 - Added a browser-safe TypeScript entry point with the full public schema and
   profile bundle for offline manifest and contract validation.
 - Added browser-entry conformance tests and an explicit package export.

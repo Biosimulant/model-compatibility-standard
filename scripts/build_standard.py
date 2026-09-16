@@ -7,7 +7,6 @@ Run with --check to confirm the committed spec/v0.1 is up to date without changi
 from __future__ import annotations
 
 import argparse
-from datetime import date
 import hashlib
 import importlib.util
 import json
@@ -82,10 +81,9 @@ def example_species() -> str:
     """Return a schema-valid example, not a profile-level scientific assertion."""
 
     return "NCBITaxon:9606"
-REVIEWS = ROOT / "source" / "reviews"
 OUTPUT = ROOT / "spec" / "v0.1"
 STANDARD = "https://biosimulant.com/standards/model-compatibility/v0.1"
-RELEASE = "0.0.1"
+RELEASE = "0.0.2"
 JSON_TYPES = ["string", "number", "integer", "boolean", "array", "object", "null"]
 
 STATUSES = [
@@ -136,7 +134,6 @@ REASON_CODES = {
     "BMCS_PROFILE_UNRESOLVED": "The profile isn't in the installed bundle.",
     "BMCS_DIGEST_MISMATCH": "The content doesn't match its declared sha256.",
     "BMCS_REFERENCE_CYCLE": "Profiles or contracts extend each other in a loop.",
-    "BMCS_PROFILE_NOT_REVIEWED": "The profile hasn't finished scientific review.",
     "BMCS_SCHEMA_INVALID": "The document doesn't match its JSON Schema.",
     "BMCS_PROFILE_VALUE_INVALID": "A value doesn't meet a profile requirement.",
     "BMCS_PROFILE_NOT_IMPORTED": "A port uses a profile that isn't listed in compatibility.profiles.",
@@ -167,22 +164,6 @@ SET_LIKE_PATHS = [
     "/contract/uncertainty/quality_flags",
 ]
 
-REVIEW_SECTIONS = {
-    "structure",
-    "semantic",
-    "representation",
-    "dimensions",
-    "identifiers",
-    "measurement",
-    "biological_context",
-    "lifecycle",
-    "origin",
-    "uncertainty",
-    "artifact",
-    "constraints",
-}
-
-
 def dump_bytes(value: Any) -> bytes:
     return (json.dumps(value, indent=2, ensure_ascii=False, sort_keys=True) + "\n").encode()
 
@@ -203,7 +184,7 @@ def write_json(root: Path, relative: str, value: Any) -> None:
     path.write_bytes(dump_bytes(value))
 
 
-FIELD_DISPOSITIONS = {"required", "conditional", "recommended", "excluded", "under-review"}
+FIELD_DISPOSITIONS = {"required", "conditional", "recommended", "excluded"}
 
 
 def load_fields() -> list[dict[str, Any]]:
@@ -283,6 +264,31 @@ def load_profiles() -> list[dict[str, Any]]:
         examples = source.get("examples")
         if not isinstance(examples, list) or not examples:
             raise SystemExit(f"{path.relative_to(ROOT)}: examples must be a non-empty list")
+        status = source.get("status")
+        if status not in {"active", "deprecated"}:
+            raise SystemExit(
+                f"{path.relative_to(ROOT)}: status must be active or deprecated"
+            )
+        sources = source.get("sources")
+        if not isinstance(sources, list) or not sources:
+            raise SystemExit(
+                f"{path.relative_to(ROOT)}: sources must contain at least one source"
+            )
+        for index, reference in enumerate(sources):
+            if not isinstance(reference, dict):
+                raise SystemExit(
+                    f"{path.relative_to(ROOT)}: sources[{index}] must be a mapping"
+                )
+            if not isinstance(reference.get("title"), str) or not reference["title"].strip():
+                raise SystemExit(
+                    f"{path.relative_to(ROOT)}: sources[{index}].title is required"
+                )
+            if not isinstance(reference.get("url"), str) or not reference["url"].startswith(
+                ("https://", "http://")
+            ):
+                raise SystemExit(
+                    f"{path.relative_to(ROOT)}: sources[{index}].url must be an HTTP(S) URL"
+                )
         profile_id = f"{domain}/{name}@0.1"
         if profile_id in seen_ids:
             raise SystemExit(f"{path.relative_to(ROOT)}: duplicate profile {profile_id}")
@@ -297,13 +303,13 @@ def load_profiles() -> list[dict[str, Any]]:
                 "name": name,
                 "label": source.get("label"),
                 "description": source.get("description"),
-                "stage": "V0_PILOT",
-                "review_status": source.get("status", "draft"),
+                "status": status,
                 "applies_to": source.get("representations"),
                 "field_dispositions": dispositions,
                 "required_items": required,
                 "intended_use": source.get("intended_use"),
                 "limitations": source.get("limitations"),
+                "sources": sources,
                 "examples": examples,
                 "compatibility_notes": (
                     "Two ports match only when every field the target requires is satisfied. "
@@ -319,212 +325,6 @@ def load_profiles() -> list[dict[str, Any]]:
     if not profiles:
         raise SystemExit("source/profiles must contain at least one active YAML profile")
     return profiles
-
-
-def applicable_review_sections(profile: dict[str, Any]) -> set[str]:
-    """Return every section a reviewer must include or explicitly exclude."""
-
-    return set(REVIEW_SECTIONS)
-
-
-def profile_review_fields(profile: dict[str, Any]) -> list[str]:
-    """Return every required or candidate field the reviewer must decide."""
-
-    return sorted(str(path) for path in profile.get("field_dispositions", {}))
-
-
-def review_evidence_errors(profile: dict[str, Any], evidence: dict[str, Any]) -> list[str]:
-    """Check the human evidence needed before a profile can be released as reviewed."""
-
-    errors: list[str] = []
-    if evidence.get("profile_id") != profile.get("id"):
-        errors.append("profile_id must match the catalogue profile")
-
-    authors = evidence.get("authors")
-    if not isinstance(authors, list) or not authors or not all(isinstance(v, str) and v.strip() for v in authors):
-        errors.append("authors must contain at least one name")
-        authors = []
-    scientific_reviewer = evidence.get("scientific_reviewer")
-    schema_reviewer = evidence.get("schema_reviewer")
-    for key, value in (
-        ("scientific_reviewer", scientific_reviewer),
-        ("schema_reviewer", schema_reviewer),
-        ("domain_owner", evidence.get("domain_owner")),
-    ):
-        if not isinstance(value, str) or not value.strip():
-            errors.append(f"{key} must name a person")
-    author_names = {str(value).strip().casefold() for value in authors}
-    if isinstance(scientific_reviewer, str) and scientific_reviewer.strip().casefold() in author_names:
-        errors.append("scientific_reviewer must not be one of the profile authors")
-    if isinstance(schema_reviewer, str) and schema_reviewer.strip().casefold() in author_names:
-        errors.append("schema_reviewer must not be one of the profile authors")
-    if (
-        isinstance(scientific_reviewer, str)
-        and isinstance(schema_reviewer, str)
-        and scientific_reviewer.strip().casefold() == schema_reviewer.strip().casefold()
-    ):
-        errors.append("scientific_reviewer and schema_reviewer must be different people")
-
-    reviewed_at = evidence.get("reviewed_at")
-    try:
-        date.fromisoformat(reviewed_at) if isinstance(reviewed_at, str) else None
-        if not isinstance(reviewed_at, str):
-            raise ValueError
-    except ValueError:
-        errors.append("reviewed_at must be an ISO date")
-
-    intended_use = evidence.get("intended_use")
-    if not isinstance(intended_use, str) or len(intended_use.strip()) < 20:
-        errors.append("intended_use must explain the profile's intended use")
-    limitations = evidence.get("limitations")
-    if not isinstance(limitations, list) or not limitations or not all(
-        isinstance(value, str) and len(value.strip()) >= 10 for value in limitations
-    ):
-        errors.append("limitations must contain at least one clear limitation")
-
-    sources = evidence.get("sources")
-    source_ids: set[str] = set()
-    if not isinstance(sources, list) or not sources:
-        errors.append("sources must contain at least one authoritative source")
-    else:
-        for index, source in enumerate(sources):
-            if not isinstance(source, dict):
-                errors.append(f"sources[{index}] must be an object")
-                continue
-            for field in ("id", "title", "kind", "url"):
-                value = source.get(field)
-                if not isinstance(value, str) or not value.strip():
-                    errors.append(f"sources[{index}].{field} is required")
-            version = source.get("version")
-            if not isinstance(version, str) or not version.strip():
-                errors.append(f"sources[{index}].version is required")
-            source_digest = source.get("sha256")
-            if not isinstance(source_digest, str) or not re.fullmatch(r"sha256:[0-9a-f]{64}", source_digest):
-                errors.append(f"sources[{index}].sha256 must pin the reviewed source")
-            source_id = source.get("id")
-            if isinstance(source_id, str):
-                if source_id in source_ids:
-                    errors.append(f"source id is repeated: {source_id}")
-                source_ids.add(source_id)
-
-    decisions = evidence.get("decisions")
-    if not isinstance(decisions, dict):
-        errors.append("decisions must record each applicable contract section")
-        decisions = {}
-    missing_sections = sorted(applicable_review_sections(profile) - set(decisions))
-    if missing_sections:
-        errors.append("decisions are missing: " + ", ".join(missing_sections))
-    for section, decision in decisions.items():
-        if section not in REVIEW_SECTIONS:
-            errors.append(f"unknown review section: {section}")
-            continue
-        if not isinstance(decision, dict):
-            errors.append(f"decisions.{section} must be an object")
-            continue
-        rationale = decision.get("rationale")
-        if not isinstance(rationale, str) or len(rationale.strip()) < 20:
-            errors.append(f"decisions.{section}.rationale is too short")
-        disposition = decision.get("disposition")
-        if disposition not in {"included", "conditional", "excluded"}:
-            errors.append(f"decisions.{section}.disposition is invalid")
-        field_paths = decision.get("field_paths")
-        if not isinstance(field_paths, list) or not all(
-            isinstance(value, str) and value.strip() for value in field_paths
-        ):
-            errors.append(f"decisions.{section}.field_paths must be an array of field paths")
-        elif disposition in {"included", "conditional"} and not field_paths:
-            errors.append(f"decisions.{section}.field_paths cannot be empty when the section is {disposition}")
-        references = decision.get("source_ids")
-        if not isinstance(references, list) or not references:
-            errors.append(f"decisions.{section}.source_ids must cite at least one source")
-        elif any(ref not in source_ids for ref in references):
-            errors.append(f"decisions.{section}.source_ids contains an unknown source")
-
-    field_decisions = evidence.get("field_decisions")
-    expected_fields = set(profile_review_fields(profile))
-    if not isinstance(field_decisions, dict):
-        errors.append("field_decisions must classify every required and candidate field")
-        field_decisions = {}
-    missing_fields = sorted(expected_fields - set(field_decisions))
-    if missing_fields:
-        errors.append("field_decisions are missing: " + ", ".join(missing_fields))
-    unexpected_fields = sorted(set(field_decisions) - expected_fields)
-    if unexpected_fields:
-        errors.append(
-            "field_decisions contain fields outside the profile packet: "
-            + ", ".join(unexpected_fields)
-        )
-    required_fields = {str(path) for path in profile.get("required_items", [])}
-    for path, decision in field_decisions.items():
-        if not isinstance(decision, dict):
-            errors.append(f"field_decisions.{path} must be an object")
-            continue
-        disposition = decision.get("disposition")
-        if disposition not in {"required", "conditional", "recommended", "excluded"}:
-            errors.append(f"field_decisions.{path}.disposition is invalid")
-        if path in required_fields and disposition != "required":
-            errors.append(f"field_decisions.{path} must remain required or the profile must be revised")
-        rationale = decision.get("rationale")
-        if not isinstance(rationale, str) or len(rationale.strip()) < 20:
-            errors.append(f"field_decisions.{path}.rationale is too short")
-        references = decision.get("source_ids")
-        if not isinstance(references, list) or not references:
-            errors.append(f"field_decisions.{path}.source_ids must cite at least one source")
-        elif any(ref not in source_ids for ref in references):
-            errors.append(f"field_decisions.{path}.source_ids contains an unknown source")
-
-    fixture_review = evidence.get("fixture_review")
-    if not isinstance(fixture_review, dict):
-        errors.append("fixture_review is required")
-    else:
-        for group in ("positive", "negative", "invalid", "direct", "incompatible", "unknown"):
-            cases = fixture_review.get(group)
-            if not isinstance(cases, list) or not cases or not all(
-                isinstance(value, str) and value.strip() for value in cases
-            ):
-                errors.append(f"fixture_review.{group} must name at least one checked fixture")
-        transformations = fixture_review.get("transformations")
-        if not isinstance(transformations, list) or not all(
-            isinstance(value, str) and value.strip() for value in transformations
-        ):
-            errors.append("fixture_review.transformations must be an array")
-        expected_groups = required_fixture_groups(profile)
-        for group, expected_names in expected_groups.items():
-            declared = fixture_review.get(group)
-            if not isinstance(declared, list):
-                continue
-            missing_names = sorted(set(expected_names) - set(declared))
-            if missing_names:
-                errors.append(
-                    f"fixture_review.{group} is missing required cases: "
-                    + ", ".join(missing_names)
-                )
-    return errors
-
-
-def load_profile_reviews(profiles: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
-    """Load complete review records. Draft notes do not change release state."""
-
-    profile_index = {str(profile["id"]): profile for profile in profiles}
-    reviews: dict[str, dict[str, Any]] = {}
-    if not REVIEWS.exists():
-        return reviews
-    for path in sorted(REVIEWS.rglob("*.yaml")):
-        if path.name.endswith(".template.yaml"):
-            continue
-        evidence = load_yaml(path)
-        profile_id = evidence.get("profile_id") if isinstance(evidence, dict) else None
-        if not isinstance(profile_id, str) or profile_id not in profile_index:
-            raise SystemExit(f"{path.relative_to(ROOT)}: profile_id is missing or unknown")
-        if profile_id in reviews:
-            raise SystemExit(f"{path.relative_to(ROOT)}: duplicate review for {profile_id}")
-        errors = review_evidence_errors(profile_index[profile_id], evidence)
-        if errors:
-            raise SystemExit(
-                f"{path.relative_to(ROOT)} is not complete:\n- " + "\n- ".join(errors)
-            )
-        reviews[profile_id] = evidence
-    return reviews
 
 
 def field_pointer(path: str) -> str:
@@ -843,43 +643,6 @@ def effective_required_items(profile: dict[str, Any]) -> list[str]:
     return list(dict.fromkeys(str(path) for path in profile.get("required_items", [])))
 
 
-def required_fixture_groups(profile: dict[str, Any]) -> dict[str, list[str]]:
-    slugs = [fixture_slug(path) for path in effective_required_items(profile)]
-    # A policy path never decides the technical status, so absent or differing governance terms are
-    # reported as policy findings rather than as UNKNOWN.
-    technical_slugs = [
-        fixture_slug(path) for path in effective_required_items(profile)
-        if not policy_layer(path) and "[]" not in path
-    ]
-    policy_slugs = [fixture_slug(path) for path in effective_required_items(profile) if policy_layer(path)]
-    groups = {
-        "positive": ["positive"],
-        "negative": [f"negative-required-missing-{slug}" for slug in slugs],
-        "invalid": [f"negative-value-invalid-{slug}" for slug in slugs],
-        "direct": ["comparison-direct"],
-        "incompatible": [
-            f"comparison-incompatible-{fixture_slug(path)}"
-            for path in effective_required_items(profile)
-            if not needs_snapshot(path) and not policy_layer(path) and "[]" not in path
-        ],
-        "unknown": [f"comparison-unknown-{slug}" for slug in technical_slugs],
-        "policy": [f"comparison-policy-{slug}" for slug in policy_slugs],
-        "transformations": [],
-    }
-    groups["unknown"].extend(f"comparison-unknown-target-{slug}" for slug in technical_slugs)
-    groups["policy"].extend(f"comparison-policy-missing-{slug}" for slug in policy_slugs)
-    groups["policy"].extend(f"comparison-policy-missing-target-{slug}" for slug in policy_slugs)
-    groups["unknown"].extend(
-        f"comparison-unknown-no-snapshot-{fixture_slug(path)}"
-        for path in effective_required_items(profile)
-        if needs_snapshot(path)
-    )
-    unit = measurement_unit() if "measurement.unit" in effective_required_items(profile) else None
-    if unit and convertible_unit(unit):
-        groups["transformations"].append("comparison-lossless-unit-conversion")
-    return groups
-
-
 def set_path(document: dict[str, Any], path: str, value: Any) -> None:
     if "[]" in path:
         # Writing through "[]" writes into every member of the array. Stripping the marker instead
@@ -904,27 +667,6 @@ def set_path(document: dict[str, Any], path: str, value: Any) -> None:
         current[parts[-1]] = value
 
 
-def review_questions(profile: dict[str, Any], fields_under_review: list[str]) -> list[str]:
-    required = set(profile.get("required_items", []))
-    questions = [
-        f"Does the proposed concept define {profile['label']} precisely enough for the stated use, without including scientifically different data?",
-        "Are the proposed required fields sufficient, and is each field correctly classified as required rather than conditional or optional?",
-        "For every candidate field listed in this packet, should it be required, conditional, recommended or excluded for this profile?",
-        "Are the allowed representations scientifically interchangeable, or does any pair require an explicit, versioned transformation?",
-        "Which authoritative standards, ontologies, databases or primary publications support each required field and comparison rule?",
-        "Which missing value must return UNKNOWN, and which known contradiction must return INCOMPATIBLE?",
-        "Do the worked fixtures cover the important direct matches, contradictions, missing information and permitted transformations?",
-        "What uses and scientific claims must this profile explicitly exclude?",
-    ]
-    if "identifiers.namespace" in required:
-        questions.append("Which identifier namespaces and releases are permitted, and when is a pinned mapping required between them?")
-    if "biological_context.species" in required:
-        questions.append("When must organism identity match exactly, and are any cross-species connections scientifically defensible?")
-    if any(path.startswith("origin.") or path.startswith("artifact.") for path in fields_under_review):
-        questions.append("Which provenance and file-format details are necessary to interpret the data safely, and which are merely useful metadata?")
-    return questions
-
-
 def gating_pointer(path: str) -> str:
     """Where the gating rule for a required field points.
 
@@ -938,8 +680,8 @@ def gating_pointer(path: str) -> str:
 
 def internal_quality_errors(profile: dict[str, Any], definition: dict[str, Any]) -> list[str]:
     errors: list[str] = []
-    if definition.get("stage") not in {"V0_PILOT", "STABLE", "DEPRECATED"}:
-        errors.append("stage is outside the published profile-stage vocabulary")
+    if definition.get("status") not in {"active", "deprecated"}:
+        errors.append("status is outside the published profile lifecycle")
     requirements = definition.get("requirements", [])
     paths = [item.get("path") for item in requirements]
     if len(paths) != len(set(paths)):
@@ -973,8 +715,10 @@ def internal_quality_errors(profile: dict[str, Any], definition: dict[str, Any])
         declared_type = schema.get("type")
         if declared_type == "null" or (isinstance(declared_type, list) and "null" in declared_type):
             errors.append(f"{requirement.get('path')} allows null even though it is required")
-    if not definition.get("review_questions"):
-        errors.append("external review questions are missing")
+    if not definition.get("sources"):
+        errors.append("at least one source is required")
+    if not definition.get("examples"):
+        errors.append("at least one worked example is required")
     return errors
 
 
@@ -1068,10 +812,9 @@ def schemas(fields: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
         "type": "object",
         "required": [
             "$id", "profile_id", "version", "domain", "name", "label", "description",
-            "stage", "review", "applies_to", "intended_use", "limitations",
-            "field_dispositions", "requirements",
-            "comparison_rules", "transformation_policy", "scientific_claim",
-            "technical_pre_review", "review_questions",
+            "status", "applies_to", "intended_use", "limitations", "sources",
+            "field_dispositions", "requirements", "comparison_rules", "examples",
+            "transformation_policy", "scientific_claim",
         ],
         "properties": {
             "$schema": {"type": "string", "format": "uri"},
@@ -1083,44 +826,7 @@ def schemas(fields: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "name": {"type": "string"},
             "label": {"type": "string"},
             "description": {"type": "string", "minLength": 20},
-            "stage": {"enum": ["V0_PILOT", "STABLE", "DEPRECATED"]},
-            "review": {
-                "type": "object",
-                "required": ["status", "sources"],
-                "properties": {
-                    "status": {"enum": ["candidate", "draft", "reviewed", "deprecated", "revoked"]},
-                    "reviewer": {"type": ["string", "null"]},
-                    "schema_reviewer": {"type": ["string", "null"]},
-                    "domain_owner": {"type": ["string", "null"]},
-                    "authors": {"type": "array", "items": {"type": "string"}},
-                    "reviewed_at": {"type": ["string", "null"], "format": "date"},
-                    "sources": {"type": "array", "items": {"type": "object"}},
-                    "intended_use": {"type": ["string", "null"]},
-                    "limitations": {"type": "array", "items": {"type": "string"}},
-                    "decisions": {"type": "object"},
-                    "field_decisions": {"type": "object"},
-                    "fixture_review": {"type": "object"},
-                },
-                "additionalProperties": False,
-            },
-            "release_eligible": {"type": "boolean"},
-            "technical_pre_review": {
-                "type": "object",
-                "required": ["status", "method_version", "checks", "scientific_signoff_required"],
-                "properties": {
-                    "status": {"enum": ["ready-for-external-review", "needs-work"]},
-                    "method_version": {"const": "1.0"},
-                    "checks": {"type": "array", "minItems": 1, "uniqueItems": True, "items": {"type": "string"}},
-                    "scientific_signoff_required": {"const": True},
-                },
-                "additionalProperties": False,
-            },
-            "review_questions": {
-                "type": "array",
-                "minItems": 5,
-                "uniqueItems": True,
-                "items": {"type": "string", "minLength": 20},
-            },
+            "status": {"enum": ["active", "deprecated"]},
             "applies_to": {"type": "array", "minItems": 1, "uniqueItems": True, "items": {"enum": ["scalar", "array", "record", "event", "artifact"]}},
             "extends": {"type": "array", "uniqueItems": True, "items": {"type": "string", "format": "uri"}},
             "fixed": {"type": "object"},
@@ -1128,6 +834,20 @@ def schemas(fields: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "intended_use": {"type": "string", "minLength": 20},
             "limitations": {
                 "type": "array", "minItems": 1, "items": {"type": "string", "minLength": 10}
+            },
+            "sources": {
+                "type": "array",
+                "minItems": 1,
+                "items": {
+                    "type": "object",
+                    "required": ["title", "url"],
+                    "properties": {
+                        "title": {"type": "string", "minLength": 1},
+                        "url": {"type": "string", "format": "uri"},
+                        "note": {"type": "string"},
+                    },
+                    "additionalProperties": False,
+                },
             },
             "field_dispositions": {
                 "type": "object",
@@ -1158,6 +878,7 @@ def schemas(fields: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
                 },
             },
             "comparison_rules": {"type": "array", "items": {"$ref": "rule.schema.json"}},
+            "examples": {"type": "array", "minItems": 1, "items": {"type": "object"}},
             "transformation_policy": {
                 "type": "object",
                 "required": ["lossless", "lossy", "inference"],
@@ -1434,54 +1155,7 @@ def schemas(fields: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
             "schema_version": {"const": "0.1"}, "standard": {"const": STANDARD},
             "status": {"type": "string"}, "bundle_sha256": {"type": ["string", "null"]},
             "counts": {"type": "object"},
-            "review_counts": {"type": "object"},
-            "technical_pre_review_counts": {"type": "object"},
             "fields": {"type": "array", "items": {"type": "object"}},
-            "profiles": {"type": "array", "items": {"type": "object"}},
-        },
-    )
-    review_packet = simple(
-        "profile-review-packet", "Profile External Review Packet",
-        [
-            "profile_id", "profile_ref", "profile_sha256", "label", "domain", "stage",
-            "technical_pre_review", "proposed_fixed_values", "proposed_allowed_values",
-            "field_dispositions", "fields_under_review", "proposed_requirements",
-            "proposed_comparison_rules", "scientific_examples",
-            "questions_for_reviewers", "internal_quality_errors", "required_external_approvals",
-            "fixture_names", "fixture_groups", "non_claim",
-        ],
-        {
-            "profile_id": {"type": "string", "pattern": "^[a-z0-9-]+/[a-z0-9-]+@0\\.1$"},
-            "profile_ref": {"type": "string", "format": "uri"},
-            "profile_sha256": {"type": "string", "pattern": "^sha256:[0-9a-f]{64}$"},
-            "label": {"type": "string", "minLength": 1},
-            "domain": {"type": "string", "minLength": 1},
-            "stage": {"type": "string", "minLength": 1},
-            "technical_pre_review": {"type": "object"},
-            "proposed_fixed_values": {"type": "object"},
-            "proposed_allowed_values": {"type": "object"},
-            "field_dispositions": {"type": "object", "minProperties": 1},
-            "fields_under_review": {"type": "array", "uniqueItems": True, "items": {"type": "string"}},
-            "proposed_requirements": {"type": "array", "minItems": 1, "items": {"type": "object"}},
-            "proposed_comparison_rules": {"type": "array", "minItems": 1, "items": {"$ref": "rule.schema.json"}},
-            "scientific_examples": {"type": "array", "minItems": 1, "items": {"type": "object"}},
-            "questions_for_reviewers": {"type": "array", "minItems": 5, "uniqueItems": True, "items": {"type": "string", "minLength": 20}},
-            "internal_quality_errors": {"type": "array", "items": {"type": "string"}},
-            "required_external_approvals": {"type": "array", "minItems": 3, "uniqueItems": True, "items": {"type": "string"}},
-            "fixture_names": {"type": "array", "minItems": 6, "uniqueItems": True, "items": {"type": "string"}},
-            "fixture_groups": {"type": "object"},
-            "non_claim": {"type": "string", "minLength": 20},
-        },
-    )
-    internal_validation = simple(
-        "internal-validation", "Profile Internal Validation Summary",
-        ["schema_version", "standard", "method_version", "scope", "counts", "profiles"],
-        {
-            "schema_version": {"const": "0.1"},
-            "standard": {"const": STANDARD},
-            "method_version": {"const": "1.0"},
-            "scope": {"type": "string", "minLength": 20},
-            "counts": {"type": "object"},
             "profiles": {"type": "array", "items": {"type": "object"}},
         },
     )
@@ -1504,8 +1178,6 @@ def schemas(fields: list[dict[str, Any]]) -> dict[str, dict[str, Any]]:
         "signal-envelope": envelope,
         "compatibility-lock": lock,
         "conformance-manifest": conformance,
-        "profile-review-packet": review_packet,
-        "internal-validation": internal_validation,
     }
 
 
@@ -1536,49 +1208,9 @@ def build(root: Path) -> None:
     FIELD_INDEX.update(field_index)
 
     profiles = load_profiles()
-    reviews = load_profile_reviews(profiles)
-    for profile in profiles:
-        if profile.get("review_status") == "reviewed" and profile["id"] not in reviews:
-            raise SystemExit(
-                f"{profile['id']} is marked reviewed but has no complete file under source/reviews"
-            )
-
     definitions: list[dict[str, Any]] = []
     summaries: list[dict[str, Any]] = []
-    review_packets: list[dict[str, Any]] = []
     for raw in profiles:
-        review_evidence = reviews.get(raw["id"])
-        release_eligible = review_evidence is not None
-        if review_evidence is None:
-            review = {
-                "status": raw["review_status"],
-                "reviewer": None,
-                "schema_reviewer": None,
-                "domain_owner": None,
-                "authors": [],
-                "reviewed_at": None,
-                "sources": [],
-                "intended_use": None,
-                "limitations": [],
-                "decisions": {},
-                "field_decisions": {},
-                "fixture_review": {},
-            }
-        else:
-            review = {
-                "status": "reviewed",
-                "reviewer": review_evidence["scientific_reviewer"],
-                "schema_reviewer": review_evidence["schema_reviewer"],
-                "domain_owner": review_evidence["domain_owner"],
-                "authors": review_evidence["authors"],
-                "reviewed_at": review_evidence["reviewed_at"],
-                "sources": review_evidence["sources"],
-                "intended_use": review_evidence["intended_use"],
-                "limitations": review_evidence["limitations"],
-                "decisions": review_evidence["decisions"],
-                "field_decisions": review_evidence["field_decisions"],
-                "fixture_review": review_evidence["fixture_review"],
-            }
         raw = dict(raw, required_items=effective_required_items(raw))
         requirements: list[dict[str, Any]] = []
         for path, decision in raw["field_dispositions"].items():
@@ -1593,11 +1225,6 @@ def build(root: Path) -> None:
             if disposition == "conditional":
                 requirement["when"] = decision["when"]
             requirements.append(requirement)
-        fields_under_review = sorted(
-            path
-            for path, decision in raw["field_dispositions"].items()
-            if decision["disposition"] == "under-review"
-        )
         rules = [
             {
                 # representation.kind is compared by conditional equivalence against the whole
@@ -1619,7 +1246,6 @@ def build(root: Path) -> None:
         for entry in rules:
             # Governance rules are reported separately from technical compatibility.
             entry["layer"] = "policy" if entry["target"].startswith("/contract/security/") else "technical"
-        questions = review_questions(raw, fields_under_review)
         definition = {
             "$schema": f"{STANDARD}/schemas/profile-definition.schema.json",
             "$id": raw["ref"],
@@ -1630,83 +1256,37 @@ def build(root: Path) -> None:
             "name": raw["name"],
             "label": raw["label"],
             "description": raw["description"],
-            "stage": raw["stage"],
-            "review": review,
-            "release_eligible": release_eligible,
-            "technical_pre_review": {
-                "status": "ready-for-external-review",
-                "method_version": "1.0",
-                "checks": [
-                    "profile-definition-schema",
-                    "typed-required-values",
-                    "profile-specific-concept",
-                    "representation-applicability",
-                    "stable-field-level-reason-codes",
-                    "positive-fixture",
-                    "missing-required-fixture",
-                    "invalid-value-fixture",
-                    "direct-compatible-fixture",
-                    "incompatible-fixture",
-                    "unknown-fixture",
-                    "python-typescript-parity",
-                ],
-                "scientific_signoff_required": True,
-            },
-            "review_questions": questions,
+            "status": raw["status"],
             "applies_to": raw["applies_to"],
             "extends": [],
             "fixed": profile_fixed(raw),
             "allowed": profile_allowed(raw),
             "intended_use": raw["intended_use"],
             "limitations": raw["limitations"],
+            "sources": raw["sources"],
             "field_dispositions": raw["field_dispositions"],
             "requirements": requirements,
             "comparison_rules": rules,
+            "examples": raw["examples"],
             "transformation_policy": {"lossless": "allow", "lossy": "approval", "inference": "approval"},
             "compatibility_notes": raw["compatibility_notes"],
             "scientific_claim": raw["scientific_claim"],
         }
         quality_errors = internal_quality_errors(raw, definition)
         if quality_errors:
-            definition["technical_pre_review"]["status"] = "needs-work"
+            raise SystemExit(
+                f"{raw['id']} failed generated-profile checks:\n- "
+                + "\n- ".join(quality_errors)
+            )
         definition_digest = digest(definition)
         definitions.append(definition)
-        review_packets.append(
-            {
-                "profile_id": raw["id"],
-                "profile_ref": raw["ref"],
-                "profile_sha256": definition_digest,
-                "label": raw["label"],
-                "domain": raw["domain"],
-                "stage": raw["stage"],
-                "technical_pre_review": definition["technical_pre_review"],
-                "proposed_fixed_values": definition["fixed"],
-                "proposed_allowed_values": definition["allowed"],
-                "field_dispositions": raw["field_dispositions"],
-                "fields_under_review": fields_under_review,
-                "proposed_requirements": requirements,
-                "proposed_comparison_rules": rules,
-                "scientific_examples": raw["examples"],
-                "questions_for_reviewers": questions,
-                "internal_quality_errors": quality_errors,
-                "required_external_approvals": [
-                    "named domain-qualified scientific reviewer",
-                    "different named schema and compatibility reviewer",
-                    "domain owner",
-                ],
-                "non_claim": "Technical pre-review does not establish scientific validity, clinical safety or regulatory suitability.",
-            }
-        )
         summaries.append(
             {
                 "id": raw["id"], "ref": raw["ref"], "sha256": definition_digest,
                 "version": raw["version"], "domain": raw["domain"], "domain_label": raw["domain_label"],
                 "name": raw["name"], "label": raw["label"], "description": raw["description"],
-                "stage": raw["stage"], "review_status": review["status"],
-                "release_eligible": release_eligible, "applies_to": raw["applies_to"],
-                "technical_pre_review": definition["technical_pre_review"]["status"],
+                "status": raw["status"], "applies_to": raw["applies_to"],
                 "required_field_count": len(raw["required_items"]),
-                "fields_under_review_count": len(fields_under_review),
                 "intended_use": raw["intended_use"],
             }
         )
@@ -1747,8 +1327,8 @@ def build(root: Path) -> None:
             "standard": STANDARD,
             "note": (
                 "A term identifies what a port means and does not move when the profile version does. "
-                "external_terms is empty until a reviewer decides, per profile, whether a maintained "
-                "external term exists at the right granularity."
+                "external_terms is empty when the profile does not declare an equivalent maintained "
+                "external term at the same granularity."
             ),
             "count": len(terms),
             "terms": terms,
@@ -1799,7 +1379,6 @@ def build(root: Path) -> None:
     )
 
     source_profiles_by_ref = {profile["ref"]: profile for profile in profiles}
-    packets_by_ref = {packet["profile_ref"]: packet for packet in review_packets}
     for definition in definitions:
         source_profile = source_profiles_by_ref[definition["$id"]]
         write_json(root, f"profiles/{definition['domain']}/{definition['name']}/v0.1.json", definition)
@@ -1809,7 +1388,7 @@ def build(root: Path) -> None:
                 continue
             path = requirement["path"]
             if "[]" in path:
-                # The parent item builds the array from its reviewed declaration, so a member
+                # The parent item builds the array from its profile declaration, so a member
                 # requirement must not write a generic example over it: that is the same clobbering
                 # Only fill a field the parent left empty.
                 declared = get_path(valid_contract, path)
@@ -1924,63 +1503,14 @@ def build(root: Path) -> None:
                 "cases": cases,
             },
         )
-        packet = packets_by_ref[definition["$id"]]
-        packet["fixture_names"] = [case["name"] for case in cases]
-        packet["fixture_groups"] = required_fixture_groups(source_profile)
-        write_json(
-            root,
-            f"review-packets/{definition['domain']}/{definition['name']}.json",
-            packet,
-        )
-
-    reviewed_count = sum(1 for summary in summaries if summary["release_eligible"])
-    ready_for_external_review = sum(
-        1 for definition in definitions
-        if definition["technical_pre_review"]["status"] == "ready-for-external-review"
-    )
-    write_json(
-        root,
-        "catalogue/internal-validation.json",
-        {
-            "schema_version": "0.1",
-            "standard": STANDARD,
-            "method_version": "1.0",
-            "scope": "Technical and schema pre-review only; independent scientific approval remains required.",
-            "counts": {
-                "profiles": len(definitions),
-                "ready_for_external_review": ready_for_external_review,
-                "needs_work": len(definitions) - ready_for_external_review,
-                "independently_scientifically_reviewed": reviewed_count,
-            },
-            "profiles": [
-                {
-                    "profile_id": definition["profile_id"],
-                    "profile_ref": definition["$id"],
-                    "status": definition["technical_pre_review"]["status"],
-                    "scientific_signoff_required": True,
-                }
-                for definition in definitions
-            ],
-        },
-    )
-
-    ga_ready = reviewed_count == len(summaries)
     catalogue = {
         "$schema": f"{STANDARD}/schemas/catalogue.schema.json",
         "$id": f"{STANDARD}/catalogue.json",
         "schema_version": "0.1",
         "standard": STANDARD,
-        "status": "release-candidate" if ga_ready else "implementation-draft",
+        "status": "active",
         "bundle_sha256": None,
         "counts": {"profiles": len(summaries), "fields": len(enriched_fields)},
-        "review_counts": {
-            "reviewed": reviewed_count,
-            "remaining": len(summaries) - reviewed_count,
-        },
-        "technical_pre_review_counts": {
-            "ready_for_external_review": ready_for_external_review,
-            "needs_work": len(summaries) - ready_for_external_review,
-        },
         "fields": enriched_fields,
         "profiles": summaries,
     }
@@ -2002,7 +1532,6 @@ def build(root: Path) -> None:
         if path.is_file() and path.name != "bundle.manifest.json":
             data = path.read_bytes()
             files.append({"path": path.relative_to(root).as_posix(), "sha256": "sha256:" + hashlib.sha256(data).hexdigest(), "size_bytes": len(data)})
-    remaining_reviews = len(summaries) - reviewed_count
     manifest_without_digest = {
         "schema_version": "0.1", "standard": STANDARD, "release": RELEASE,
         "canonicalization": "RFC8785", "files": files,
@@ -2010,10 +1539,6 @@ def build(root: Path) -> None:
             "profiles": len(summaries),
             "fields": len(enriched_fields),
         },
-        "ga_ready": ga_ready,
-        "ga_blockers": [] if ga_ready else [
-            f"{remaining_reviews} profiles still need complete, independent scientific and schema review evidence."
-        ],
     }
     bundle_digest = digest(manifest_without_digest)
     write_json(root, "bundle.manifest.json", {**manifest_without_digest, "bundle_sha256": bundle_digest})

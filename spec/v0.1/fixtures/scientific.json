@@ -3,7 +3,7 @@
     {
       "check": "compare",
       "conditions": "Both ports declare different methods and no normalising adapter is supplied.",
-      "decision": "V0 canonical-SMILES draft",
+      "decision": "V0 canonical-SMILES profile",
       "expect": {
         "status": "INCOMPATIBLE"
       },
@@ -27,7 +27,7 @@
     {
       "check": "compare",
       "conditions": "The source omits the tool version required by the target contract.",
-      "decision": "V0 canonical-SMILES draft",
+      "decision": "V0 canonical-SMILES profile",
       "expect": {
         "status": "UNKNOWN"
       },
@@ -44,7 +44,7 @@
     {
       "check": "compare",
       "conditions": "Both ports make the same complete declarations for this profile.",
-      "decision": "V0 canonical-SMILES draft",
+      "decision": "V0 canonical-SMILES profile",
       "expect": {
         "status": "EXACT"
       },
@@ -58,7 +58,7 @@
     {
       "check": "compare",
       "conditions": "Both ports make the same complete declarations for this profile.",
-      "decision": "V0 protein-sequence draft",
+      "decision": "V0 protein-sequence profile",
       "expect": {
         "status": "EXACT"
       },
@@ -72,7 +72,7 @@
     {
       "check": "compare",
       "conditions": "Both ports declare different alphabets and no translation step is supplied.",
-      "decision": "V0 protein-sequence draft",
+      "decision": "V0 protein-sequence profile",
       "expect": {
         "status": "INCOMPATIBLE"
       },
@@ -96,7 +96,7 @@
     {
       "check": "compare",
       "conditions": "The source omits the encoding required by the target contract.",
-      "decision": "V0 protein-sequence draft",
+      "decision": "V0 protein-sequence profile",
       "expect": {
         "status": "UNKNOWN"
       },
@@ -113,7 +113,7 @@
     {
       "check": "compare",
       "conditions": "Both ports declare different coordinate systems and no conversion is supplied.",
-      "decision": "V0 protein-structure draft",
+      "decision": "V0 protein-structure profile",
       "expect": {
         "status": "INCOMPATIBLE"
       },
@@ -137,7 +137,7 @@
     {
       "check": "compare",
       "conditions": "The source omits the structure origin required by the target contract.",
-      "decision": "V0 protein-structure draft",
+      "decision": "V0 protein-structure profile",
       "expect": {
         "status": "UNKNOWN"
       },
@@ -154,7 +154,7 @@
     {
       "check": "compare",
       "conditions": "Both ports make the same complete declarations for this profile.",
-      "decision": "V0 protein-structure draft",
+      "decision": "V0 protein-structure profile",
       "expect": {
         "status": "EXACT"
       },

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "biosimulant-model-compatibility-standard"
-version = "0.0.1"
+version = "0.0.2"
 description = "Schemas, profiles, and Python/TypeScript reference validators for the Biosimulant Model Compatibility Standard"
 readme = "README.md"
 requires-python = ">=3.10"

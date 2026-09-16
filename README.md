@@ -1,88 +1,80 @@
 # Biosimulant Model Compatibility Standard
 
-This standard answers a practical question: can the output of one model be
-used safely as the input of another?
+This standard answers one question: can the output of one model be used as the
+input of another?
 
-A matching file type or array shape is not enough. Two ports may still disagree
-about what the value means, its units, species, identifier system,
-normalisation, coordinate system or provenance. The standard gives each port a
-small contract and uses a compatibility profile to say which parts of that
-contract matter for a particular kind of data.
+Matching file types or array shapes is not enough. Two ports can still disagree
+about scientific meaning, units, species, identifiers, normalisation,
+coordinates or provenance. A port contract states those facts. A profile says
+which facts matter for one kind of data and how to compare them.
 
-A comparison can report:
-
-- a direct match;
-- a named conversion that does not lose information;
-- a transformation or inference that needs approval;
-- an incompatibility; or
-- `UNKNOWN` when information is missing.
-
-It does not approve a model, dataset, scientific result, clinical use or
-regulatory claim.
+A comparison can report a direct match, an available lossless conversion, a
+transformation or inference that needs approval, an incompatibility, or
+`UNKNOWN` when required information is missing. It does not approve a model,
+dataset, scientific result, clinical use or regulatory claim.
 
 ## Current scope
 
-This is a deliberately small v0 incubator. It has three draft profiles:
+The v0 catalogue is intentionally small:
 
 - Protein Sequence
 - Protein Structure
 - Canonical SMILES
 
-None has completed independent scientific review. The profiles are useful for
-testing the format and review process, but are not approved scientific
-standards.
+The earlier 650-profile prototype was removed from the active catalogue and
+remains available in Git history. New profiles are added only when they support
+a real model-to-model connection.
 
-The earlier 650-profile prototype has been removed from the active catalogue.
-It remains in Git history. New profiles are added only for real model-to-model
-connections, with examples and reviewers.
+## The files people edit
 
-## The simple mental model
+Most profile changes touch one human-written file:
 
-There are three kinds of human-maintained YAML:
+```text
+source/profiles/<domain>/<profile-name>.yaml
+```
 
-1. One file per profile under `source/profiles/`. This is where almost every
-   profile proposal starts and ends. It contains the meaning, intended use,
-   limitations, every field the scientist should consider, and worked examples.
-2. `source/fields.yaml`. This is the shared vocabulary of contract fields. Edit
-   it only if the proposed profile genuinely needs a field that does not exist.
-3. One completed review record under `source/reviews/` after independent review.
+That file contains the profile's definition, intended use, limitations,
+sources, complete field mapping and worked examples. Edit
+`source/fields.yaml` only when a necessary shared field does not already exist.
+Edit `source/quantity-kinds.yaml` only for a new or changed measurement kind.
 
-Everything under `spec/v0.1/` is generated JSON for software and review
-packets. Do not edit it by hand. There are no field packs and no second profile
-catalogue to keep in sync.
+Everything under `spec/v0.1/` is generated JSON for software. Do not edit it by
+hand.
 
-## Where to start
-
-| Goal | Read |
+| Need | Start here |
 |---|---|
-| See the three active profiles | [`source/profiles/`](source/profiles/) |
-| Propose a profile by email or pull request | [Proposing a profile](PROPOSING_A_PROFILE.md) |
-| Review a profile scientifically | [Profile review](PROFILE_REVIEW.md) |
-| Understand generated files | [`spec/README.md`](spec/README.md) |
-| Change implementation code | [Contributing](CONTRIBUTING.md) |
+| Read or change a profile | [`source/profiles/`](source/profiles/) |
+| Submit a profile by email or pull request | [Proposing a profile](PROPOSING_A_PROFILE.md) |
+| Understand the generated bundle | [`spec/README.md`](spec/README.md) |
+| Change code | [Contributing](CONTRIBUTING.md) |
 
-## A profile in plain language
+## Field decisions
 
-A profile is a named agreement for one kind of model data. For example, the
-Protein Sequence profile says that a sequence connection must declare its
-scientific concept, representation, alphabet, encoding, identifier namespace
-and version, and species.
+Every field considered by a profile has one decision:
 
-The profile file also shows fields still open for review. A scientist sees the
-whole proposed mapping rather than only the required fields. Each field is
-labelled as one of:
+- `required`: the comparison cannot be decided without it;
+- `conditional`: required only under a stated condition;
+- `recommended`: useful context, but not a compatibility gate; or
+- `excluded`: deliberately outside this profile.
 
-- `required` — the comparison cannot be decided without it;
-- `conditional` — required only in a stated situation;
-- `recommended` — useful but not a compatibility gate;
-- `excluded` — deliberately outside this profile; or
-- `under-review` — the draft has not made the scientific decision yet.
+This complete mapping stays in the profile. There is no separate review packet
+or approval record to keep in sync.
 
-## What goes in `model.yaml`
+## How a profile becomes active
 
-Compatibility metadata is optional. Existing models without it continue to
-work. A model imports a profile by its versioned reference and digest, then
-adds a contract to the relevant port.
+The pull request is the review record. Discussion, requested changes, evidence
+and approvals remain visible there. A profile merged into `main` is accepted
+for the stated use and is published with `status: active`. A profile that
+should remain available for old locks but not new work is `deprecated`.
+
+Extra scientific or technical review can be requested in the pull request when
+the change warrants it. The standard does not require named reviewer fields,
+separate sign-off files or a permanent domain owner.
+
+## Use a profile in `model.yaml`
+
+Compatibility metadata is optional. A model imports a profile by its versioned
+reference and digest, then adds a contract to the relevant port.
 
 ```yaml
 schema_version: "2.0"
@@ -113,15 +105,13 @@ io:
           species: NCBITaxon:9606
 ```
 
-If information required by the target is missing, the comparison returns
-`UNKNOWN`; it does not guess.
+If information required by the target is missing, the result is `UNKNOWN`; the
+comparison does not guess.
 
-## Use the libraries
+## Install from a pinned commit
 
-The Python and TypeScript packages validate contracts, compare ports and build
-resolution plans and lock files. They are not published to PyPI or npm yet.
-During the incubator phase, install a specific commit rather than a moving
-branch.
+The packages are not yet published to PyPI or npm. During v0, install an exact
+commit:
 
 ```bash
 pip install "biosimulant-model-compatibility-standard @ git+https://github.com/Biosimulant/model-compatibility-standard@<commit>"
@@ -159,28 +149,18 @@ npm install
 PATH="$PWD/.venv/bin:$PATH" npm test
 ```
 
-The PATH prefix makes the npm build use the virtual environment, including its
-YAML dependency.
-
-### Repository map
-
 | Path | Purpose | Normally edit? |
 |---|---|---|
-| `source/profiles/<domain>/<name>.yaml` | One complete human-authored profile | Yes, for that profile |
-| `source/fields.yaml` | Shared contract-field definitions | Only for a genuinely new field |
-| `source/quantity-kinds.yaml` | Shared measurement meanings and units | Only for measurement-rule changes |
-| `source/reviews/` | Independent scientific review records | During review |
-| `source/vendor/ucum/` | Pinned UCUM source and generated unit table | Only for a deliberate UCUM update |
-| `spec/v0.1/` | Generated JSON bundle, fixtures and review packets | No; rebuild it |
-| `python/` and `typescript/src/` | Reference implementations | For implementation changes |
-| `typescript/dist/` | Generated JavaScript package files | No; `npm run build` recreates them |
-| `scripts/` | Supported build and verification scripts | Only for build-system changes |
+| `source/profiles/<domain>/<name>.yaml` | Complete source for one profile | Yes |
+| `source/fields.yaml` | Shared contract-field definitions | Only for a new field |
+| `source/quantity-kinds.yaml` | Shared measurement meanings and units | Only when needed |
+| `source/vendor/ucum/` | Pinned UCUM source and generated unit table | Only for a UCUM update |
+| `spec/v0.1/` | Generated schemas, profiles, rules and fixtures | No |
+| `python/`, `typescript/src/` | Reference implementations | For code changes |
+| `typescript/dist/` | Generated JavaScript package | No |
+| `scripts/` | Supported build and verification scripts | For build changes |
 
-Put disposable investigations in `.scratch/`, which Git ignores. See
-[`scripts/README.md`](scripts/README.md) before adding a script.
-
-Published profile versions are immutable and identified by SHA-256. Validators
-use the installed bundle; they do not fetch remote schemas or execute profile
-code.
+Put disposable work in the ignored `.scratch/` directory and remove it when
+finished. Published versions are immutable and identified by SHA-256.
 
 Apache-2.0 licensed. See [LICENSE](LICENSE).

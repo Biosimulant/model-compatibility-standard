@@ -1,5 +1,5 @@
 {
-  "bundle_sha256": "sha256:8b02b8752ccb6874b78a5e3f96a20ae569160a00d6237b42472ea9682dddb487",
+  "bundle_sha256": "sha256:4fbc90d20eef5ade6011c3c517c1ffee87e49a8c83e4699018cb0eddd13ea265",
   "canonicalization": "RFC8785",
   "counts": {
     "fields": 69,
@@ -8,8 +8,8 @@
   "files": [
     {
       "path": "catalogue/catalogue.json",
-      "sha256": "sha256:7c8e5f289980fc8e742bc4f4762ace504600b71bca618ed3221a4528c983eead",
-      "size_bytes": 41260
+      "sha256": "sha256:a7010cf40f6949d69ba02341c7eccbd92671e0303d1adf7f1bab54a7b14b0687",
+      "size_bytes": 40595
     },
     {
       "path": "catalogue/fields.json",
@@ -17,18 +17,13 @@
       "size_bytes": 37426
     },
     {
-      "path": "catalogue/internal-validation.json",
-      "sha256": "sha256:eb5704a5a5f540c7dee62fd6a478c7de0499d027fd09bc141b3d62640c79960d",
-      "size_bytes": 1212
-    },
-    {
       "path": "catalogue/terms.json",
-      "sha256": "sha256:fc4966e78845e2fd7bfd677932d95d6730f9abc281d9e8ee52f75fa595b97928",
-      "size_bytes": 2887
+      "sha256": "sha256:3d603c2ae0e4d86d47607a72392cdf9b83dab99ee0223ea201be98bc890f967b",
+      "size_bytes": 2878
     },
     {
       "path": "examples/compatible-model.yaml",
-      "sha256": "sha256:50940b3d8b9f4c9017e6f54ad2643b5b98e32da68f71ca2a2c06e9d7cb60634d",
+      "sha256": "sha256:3ff46eda5efa94570ff94ec053324c3df254f4d398e5232154f297ec7e665ed5",
       "size_bytes": 1036
     },
     {
@@ -63,38 +58,23 @@
     },
     {
       "path": "fixtures/scientific.json",
-      "sha256": "sha256:2abeaf7043652989954e2033e17bffa694f06d44bc14e2e2c725ea902a2db141",
-      "size_bytes": 6243
+      "sha256": "sha256:4ab64cb27ef0cfedd2a530a76fc6f20feeccffcb0cd2432f9279b0c10a33fdfd",
+      "size_bytes": 6261
     },
     {
       "path": "profiles/chemical/canonical-smiles/v0.1.json",
-      "sha256": "sha256:6a1bc1204ef870487ef76e371e9e4856d7346b6c187eb118fc786a6d6da7a0d8",
-      "size_bytes": 7890
+      "sha256": "sha256:ea15af8fb28768f89c472137aa470d22d887527d2eaeb2568c6bc0118187874d",
+      "size_bytes": 9404
     },
     {
       "path": "profiles/proteome/protein-sequence/v0.1.json",
-      "sha256": "sha256:88f844fa5e8dcf611ffd7ab8cb487aea8c9d149bc9c032c1cc86334b6f4c1252",
-      "size_bytes": 8656
+      "sha256": "sha256:4556e323c0e2ee989fb0b37654799f7e237d0f8801445d30c5b98c9836cc2de9",
+      "size_bytes": 10232
     },
     {
       "path": "profiles/proteome/protein-structure/v0.1.json",
-      "sha256": "sha256:dfb949ba0d57c8dcb818a72645905e1db6e27f1bd724eb38ea08b68839b57f44",
-      "size_bytes": 10057
-    },
-    {
-      "path": "review-packets/chemical/canonical-smiles.json",
-      "sha256": "sha256:106c83b4c82d837d50b0a167d4e93309e3348112da069847785ad1e49ea0108d",
-      "size_bytes": 12190
-    },
-    {
-      "path": "review-packets/proteome/protein-sequence.json",
-      "sha256": "sha256:19806cbb17715031492080dfcf92f4261fbbc955a3277f9fe7ac9b95154f0582",
-      "size_bytes": 13569
-    },
-    {
-      "path": "review-packets/proteome/protein-structure.json",
-      "sha256": "sha256:8331b5eff3e0fb5bda6c03bc58c0a82f790a9f5a5e38e76f765d66e8d55a70f1",
-      "size_bytes": 15879
+      "sha256": "sha256:5a43aa79697ab0113c81de2eeccd1d358e6f83e58fa3c83553615581b5d1878d",
+      "size_bytes": 13642
     },
     {
       "path": "rules/normalization.json",
@@ -113,8 +93,8 @@
     },
     {
       "path": "rules/reason-codes.json",
-      "sha256": "sha256:86421c0635ce850b5b24a407db78bcc2b936c410af16d04644f89ea3d8b610fa",
-      "size_bytes": 11182
+      "sha256": "sha256:60219646f46d3c711384b7b09268233013f3b6af29ea14bad5fbd99a62d7e985",
+      "size_bytes": 11099
     },
     {
       "path": "rules/statuses.json",
@@ -133,8 +113,8 @@
     },
     {
       "path": "schemas/catalogue.schema.json",
-      "sha256": "sha256:67179ae6af338670b540620c8814a186f217a65b2074b01f3a3711f4b6ddb46e",
-      "size_bytes": 1020
+      "sha256": "sha256:c7fd5b3c31b05c1853c2b3d81a4240ac673399d1cd17425268533580c01a85ca",
+      "size_bytes": 900
     },
     {
       "path": "schemas/compatibility-finding.schema.json",
@@ -167,11 +147,6 @@
       "size_bytes": 1566
     },
     {
-      "path": "schemas/internal-validation.schema.json",
-      "sha256": "sha256:fb8c1a8559ed98488511937e10ce3c6e1ae69a4889438530e5f294d63a7534d8",
-      "size_bytes": 840
-    },
-    {
       "path": "schemas/manifest-extension.schema.json",
       "sha256": "sha256:73efb6c42cf5aa939df6707935b8976d810a04ed6e4116a2b20a3a043ec9381f",
       "size_bytes": 2756
@@ -198,18 +173,13 @@
     },
     {
       "path": "schemas/profile-definition.schema.json",
-      "sha256": "sha256:9810b03e6013fabee3540e869b13cda077588309332fa72709460e0226cae1b5",
-      "size_bytes": 6579
+      "sha256": "sha256:bccb0ce411a4c34954b0d13ccd6e7137c0114e01575c5973d9834db2507cda01",
+      "size_bytes": 4684
     },
     {
       "path": "schemas/profile-reference.schema.json",
       "sha256": "sha256:08e274969e1af9232b90475858d0d81aaa9c45fde324d9f858085113f99ffd11",
       "size_bytes": 551
-    },
-    {
-      "path": "schemas/profile-review-packet.schema.json",
-      "sha256": "sha256:816ba84d0ac165b6096d4b9c4f7d61c78ed3bc8ebeb00e3b9aed8b04896195ca",
-      "size_bytes": 2828
     },
     {
       "path": "schemas/resolution-plan.schema.json",
@@ -227,11 +197,7 @@
       "size_bytes": 864
     }
   ],
-  "ga_blockers": [
-    "3 profiles still need complete, independent scientific and schema review evidence."
-  ],
-  "ga_ready": false,
-  "release": "0.0.1",
+  "release": "0.0.2",
   "schema_version": "0.1",
   "standard": "https://biosimulant.com/standards/model-compatibility/v0.1"
 }

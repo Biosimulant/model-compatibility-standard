@@ -3,39 +3,39 @@
 Keep changes small and tied to a real model connection or a specific defect.
 Do not generate speculative catalogues.
 
-## Change or add a profile
+## Add or change a profile
 
-The human-authored profile is one YAML file:
+Edit one source file:
 
 ```text
 source/profiles/<domain>/<profile-name>.yaml
 ```
 
-It contains the profile’s meaning, intended use, limitations, field decisions
-and scientific examples. Reuse fields from `source/fields.yaml`; add a shared
-field only when the required concept is genuinely missing.
+It contains the profile's meaning, intended use, limitations, sources, complete
+field decisions and scientific examples. Reuse fields from
+`source/fields.yaml`; add a shared field only when the required concept is
+genuinely missing.
 
-Then regenerate the JSON bundle:
+Then regenerate the bundle:
 
 ```bash
 .venv/bin/python scripts/build_standard.py
 .venv/bin/python scripts/build_standard.py --check
 ```
 
-Commit the YAML and generated files together. Do not edit `spec/v0.1/` by hand.
-Released profile versions are immutable; a substantive change creates a new
-version.
+Commit the source and generated files together. Do not edit `spec/v0.1/` by
+hand. Published profile versions are immutable; a substantive change creates a
+new version.
 
-For the full email and pull-request workflow, see
-[Proposing a profile](PROPOSING_A_PROFILE.md) and the
-[proposal template](PROFILE_PROPOSAL_TEMPLATE.md).
+See [Proposing a profile](PROPOSING_A_PROFILE.md) for the email and pull-request
+workflow.
 
 ## Change comparison behaviour
 
 A new operator must be implemented and tested in both Python and TypeScript.
-Both implementations must give the same results for the generated fixtures.
-Do not bury a scientific assumption in implementation code; put it in the
-profile and its review evidence.
+Both implementations must give the same result for the generated fixtures. Put
+scientific assumptions in the profile, with sources and examples, rather than
+hiding them in implementation code.
 
 ## Before opening a pull request
 
@@ -45,8 +45,9 @@ profile and its review evidence.
 PATH="$PWD/.venv/bin:$PATH" npm test
 ```
 
-Explain the model connection or defect, the evidence used, generated files
-changed and any unresolved scientific question.
+Explain the model connection or defect, evidence, generated files and any
+question that still needs resolution. The pull request is the review record;
+merge into `main` accepts the change.
 
-Supported repository automation belongs in `scripts/`. Disposable migration,
-inspection and one-off scripts belong in the ignored `.scratch/` directory.
+Supported automation belongs in `scripts/`. Put disposable migration or
+inspection code in the ignored `.scratch/` directory and delete it when done.

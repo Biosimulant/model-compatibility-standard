@@ -5,7 +5,7 @@ description: >
   An amino-acid residue sequence representing a declared protein or
   polypeptide, with the identifier namespace, namespace version and organism
   context needed to interpret it.
-status: draft
+status: active
 representations: [scalar, record, artifact]
 intended_use: >
   Connecting a model output that provides an amino-acid sequence to a model
@@ -13,6 +13,13 @@ intended_use: >
 limitations:
   - It does not cover nucleotide sequences or establish that a sequence is scientifically correct.
   - It does not justify cross-species substitution or an undeclared change of sequence encoding.
+sources:
+  - title: IUPAC-IUB nomenclature for amino-acid sequences
+    url: https://iupac.qmul.ac.uk/AminoAcid/A2021.html
+  - title: UniProtKB
+    url: https://www.uniprot.org/help/uniprotkb
+  - title: NCBI Taxonomy
+    url: https://www.ncbi.nlm.nih.gov/taxonomy
 
 fields:
   semantic.concept: required
@@ -22,11 +29,11 @@ fields:
   identifiers.namespace: required
   identifiers.namespace_version: required
   biological_context.species: required
-  semantic.ontology_terms: under-review
-  semantic.qualifiers: under-review
-  origin.source_ref: under-review
-  origin.source_sha256: under-review
-  uncertainty.quality_flags: under-review
+  semantic.ontology_terms: recommended
+  semantic.qualifiers: recommended
+  origin.source_ref: recommended
+  origin.source_sha256: recommended
+  uncertainty.quality_flags: recommended
 
 examples:
   - id: BMCS-V0-001
@@ -35,7 +42,7 @@ examples:
     expect: {status: EXACT}
     why: The same complete sequence declaration can connect without conversion or approval.
     conditions: Both ports make the same complete declarations for this profile.
-    decision: V0 protein-sequence draft
+    decision: V0 protein-sequence profile
     report_finding: Positive baseline
   - id: BMCS-V0-002
     title: Different sequence alphabets are incompatible
@@ -45,7 +52,7 @@ examples:
     expect: {status: INCOMPATIBLE}
     why: Amino-acid and nucleotide strings do not have the same biological interpretation.
     conditions: Both ports declare different alphabets and no translation step is supplied.
-    decision: V0 protein-sequence draft
+    decision: V0 protein-sequence profile
     report_finding: Contradictory sequence representation
   - id: BMCS-V0-003
     title: Missing sequence encoding is unknown
@@ -54,5 +61,5 @@ examples:
     expect: {status: UNKNOWN}
     why: The sequence cannot be interpreted reliably when its encoding is not declared.
     conditions: The source omits the encoding required by the target contract.
-    decision: V0 protein-sequence draft
+    decision: V0 protein-sequence profile
     report_finding: Missing required representation information

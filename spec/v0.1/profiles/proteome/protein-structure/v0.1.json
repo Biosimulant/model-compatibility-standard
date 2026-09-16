@@ -93,25 +93,76 @@
   "description": "A three-dimensional structural representation of a declared protein or protein-containing assembly, including the identity, coordinate representation and format needed to interpret the structure.\n",
   "domain": "proteome",
   "domain_label": "Proteome and protein structure",
+  "examples": [
+    {
+      "check": "compare",
+      "conditions": "Both ports declare different coordinate systems and no conversion is supplied.",
+      "decision": "V0 protein-structure profile",
+      "expect": {
+        "status": "INCOMPATIBLE"
+      },
+      "id": "BMCS-V0-006",
+      "report_finding": "Contradictory coordinate representation",
+      "source_patch": {
+        "representation": {
+          "coordinate_system": "cartesian-angstrom"
+        }
+      },
+      "target_patch": {
+        "representation": {
+          "coordinate_system": "fractional-unit-cell"
+        }
+      },
+      "title": "Different coordinate systems are incompatible",
+      "why": "Coordinates in different systems cannot be consumed as if their numerical values have the same spatial meaning."
+    },
+    {
+      "check": "compare",
+      "conditions": "The source omits the structure origin required by the target contract.",
+      "decision": "V0 protein-structure profile",
+      "expect": {
+        "status": "UNKNOWN"
+      },
+      "id": "BMCS-V0-007",
+      "report_finding": "Missing structure provenance",
+      "source_remove": [
+        "origin.type"
+      ],
+      "title": "Missing structure origin is unknown",
+      "why": "Experimental, predicted and otherwise derived structures have different provenance and limitations."
+    },
+    {
+      "check": "compare",
+      "conditions": "Both ports make the same complete declarations for this profile.",
+      "decision": "V0 protein-structure profile",
+      "expect": {
+        "status": "EXACT"
+      },
+      "id": "BMCS-V0-009",
+      "report_finding": "Positive baseline",
+      "title": "Identical protein-structure contracts are exact matches",
+      "why": "The same complete structure declaration can connect without conversion or approval."
+    }
+  ],
   "extends": [],
   "field_dispositions": {
     "artifact.format": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "artifact.format_version": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "artifact.media_type": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "artifact.schema_ref": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "artifact.schema_sha256": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "artifact.sha256": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "biological_context.species": {
       "disposition": "required"
@@ -123,22 +174,22 @@
       "disposition": "required"
     },
     "origin.method": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "origin.method_version": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "origin.software": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "origin.software_version": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "origin.source_ref": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "origin.source_sha256": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "origin.type": {
       "disposition": "required"
@@ -150,7 +201,7 @@
       "disposition": "required"
     },
     "representation.precision": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "representation.structure_format": {
       "disposition": "required"
@@ -159,13 +210,13 @@
       "disposition": "required"
     },
     "semantic.ontology_terms": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "semantic.qualifiers": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     },
     "uncertainty.quality_flags": {
-      "disposition": "under-review"
+      "disposition": "recommended"
     }
   },
   "fixed": {
@@ -181,7 +232,6 @@
   ],
   "name": "protein-structure",
   "profile_id": "proteome/protein-structure@0.1",
-  "release_eligible": false,
   "requirements": [
     {
       "level": "required",
@@ -261,56 +311,201 @@
         "minLength": 1,
         "type": "string"
       }
+    },
+    {
+      "level": "recommended",
+      "path": "semantic.ontology_terms",
+      "schema": {
+        "items": {
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "ontology": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "relation": {
+              "minLength": 1,
+              "type": "string"
+            },
+            "uri": {
+              "format": "uri",
+              "type": "string"
+            },
+            "version": {
+              "minLength": 1,
+              "type": "string"
+            }
+          },
+          "required": [
+            "uri",
+            "ontology",
+            "version"
+          ],
+          "type": "object"
+        },
+        "minItems": 1,
+        "type": "array"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "semantic.qualifiers",
+      "schema": {
+        "items": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "minItems": 1,
+        "type": "array",
+        "uniqueItems": true
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "representation.precision",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "origin.method",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "origin.method_version",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "origin.software",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "origin.software_version",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "origin.source_ref",
+      "schema": {
+        "format": "uri",
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "origin.source_sha256",
+      "schema": {
+        "pattern": "^sha256:[0-9a-f]{64}$",
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "artifact.media_type",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "artifact.format",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "artifact.format_version",
+      "schema": {
+        "maxLength": 4096,
+        "minLength": 1,
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "artifact.schema_ref",
+      "schema": {
+        "format": "uri",
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "artifact.schema_sha256",
+      "schema": {
+        "pattern": "^sha256:[0-9a-f]{64}$",
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "artifact.sha256",
+      "schema": {
+        "pattern": "^sha256:[0-9a-f]{64}$",
+        "type": "string"
+      }
+    },
+    {
+      "level": "recommended",
+      "path": "uncertainty.quality_flags",
+      "schema": {
+        "items": {
+          "minLength": 1,
+          "type": "string"
+        },
+        "minItems": 1,
+        "type": "array",
+        "uniqueItems": true
+      }
     }
   ],
-  "review": {
-    "authors": [],
-    "decisions": {},
-    "domain_owner": null,
-    "field_decisions": {},
-    "fixture_review": {},
-    "intended_use": null,
-    "limitations": [],
-    "reviewed_at": null,
-    "reviewer": null,
-    "schema_reviewer": null,
-    "sources": [],
-    "status": "draft"
-  },
-  "review_questions": [
-    "Does the proposed concept define Protein Structure precisely enough for the stated use, without including scientifically different data?",
-    "Are the proposed required fields sufficient, and is each field correctly classified as required rather than conditional or optional?",
-    "For every candidate field listed in this packet, should it be required, conditional, recommended or excluded for this profile?",
-    "Are the allowed representations scientifically interchangeable, or does any pair require an explicit, versioned transformation?",
-    "Which authoritative standards, ontologies, databases or primary publications support each required field and comparison rule?",
-    "Which missing value must return UNKNOWN, and which known contradiction must return INCOMPATIBLE?",
-    "Do the worked fixtures cover the important direct matches, contradictions, missing information and permitted transformations?",
-    "What uses and scientific claims must this profile explicitly exclude?",
-    "Which identifier namespaces and releases are permitted, and when is a pinned mapping required between them?",
-    "When must organism identity match exactly, and are any cross-species connections scientifically defensible?",
-    "Which provenance and file-format details are necessary to interpret the data safely, and which are merely useful metadata?"
-  ],
   "scientific_claim": "This profile checks whether two model interfaces fit together. It does not show that a model is scientifically valid or clinically safe.",
-  "stage": "V0_PILOT",
-  "technical_pre_review": {
-    "checks": [
-      "profile-definition-schema",
-      "typed-required-values",
-      "profile-specific-concept",
-      "representation-applicability",
-      "stable-field-level-reason-codes",
-      "positive-fixture",
-      "missing-required-fixture",
-      "invalid-value-fixture",
-      "direct-compatible-fixture",
-      "incompatible-fixture",
-      "unknown-fixture",
-      "python-typescript-parity"
-    ],
-    "method_version": "1.0",
-    "scientific_signoff_required": true,
-    "status": "ready-for-external-review"
-  },
+  "sources": [
+    {
+      "title": "PDBx/mmCIF Dictionary",
+      "url": "https://mmcif.wwpdb.org/"
+    },
+    {
+      "title": "PDB file format documentation",
+      "url": "https://www.wwpdb.org/documentation/file-format"
+    },
+    {
+      "title": "NCBI Taxonomy",
+      "url": "https://www.ncbi.nlm.nih.gov/taxonomy"
+    }
+  ],
+  "status": "active",
   "transformation_policy": {
     "inference": "approval",
     "lossless": "allow",

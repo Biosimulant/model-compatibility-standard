@@ -17,7 +17,7 @@ test("bundle exposes all catalogue entries", () => {
   bundle.verifyIntegrity();
 });
 
-test("the full external-review fixture set passes for every profile", () => {
+test("the generated fixture set passes for every profile", () => {
   const bundle = getBundle();
   for (const summary of bundle.catalogue.profiles) {
     const fixture = bundle.readJson(`fixtures/profiles/${summary.domain}/${summary.name}.json`);
@@ -256,7 +256,7 @@ test("the term registry is published and version independent", () => {
   // v0.1 port as incompatible even where the meaning is unchanged.
   assert.deepEqual(ids.filter((id) => id.includes("/v0.")), []);
   assert.ok(registry.terms.every((term) => term.label && term.definition));
-  // External terms remain empty until a reviewer decides whether an exact maintained term exists.
+  // External terms remain empty until an exact maintained term is adopted in a profile change.
   assert.ok(registry.terms.every((term) => Array.isArray(term.external_terms) && term.external_terms.length === 0));
 });
 

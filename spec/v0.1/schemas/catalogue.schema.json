@@ -24,9 +24,6 @@
       },
       "type": "array"
     },
-    "review_counts": {
-      "type": "object"
-    },
     "schema_version": {
       "const": "0.1"
     },
@@ -35,9 +32,6 @@
     },
     "status": {
       "type": "string"
-    },
-    "technical_pre_review_counts": {
-      "type": "object"
     }
   },
   "required": [

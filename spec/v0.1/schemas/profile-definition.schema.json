@@ -47,6 +47,13 @@
     "domain_label": {
       "type": "string"
     },
+    "examples": {
+      "items": {
+        "type": "object"
+      },
+      "minItems": 1,
+      "type": "array"
+    },
     "extends": {
       "items": {
         "format": "uri",
@@ -64,8 +71,7 @@
               "conditional",
               "excluded",
               "recommended",
-              "required",
-              "under-review"
+              "required"
             ]
           },
           "note": {
@@ -111,9 +117,6 @@
       "pattern": "^[a-z0-9-]+/[a-z0-9-]+@0\\.1$",
       "type": "string"
     },
-    "release_eligible": {
-      "type": "boolean"
-    },
     "requirements": {
       "items": {
         "additionalProperties": false,
@@ -145,134 +148,40 @@
       },
       "type": "array"
     },
-    "review": {
-      "additionalProperties": false,
-      "properties": {
-        "authors": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "decisions": {
-          "type": "object"
-        },
-        "domain_owner": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "field_decisions": {
-          "type": "object"
-        },
-        "fixture_review": {
-          "type": "object"
-        },
-        "intended_use": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "limitations": {
-          "items": {
-            "type": "string"
-          },
-          "type": "array"
-        },
-        "reviewed_at": {
-          "format": "date",
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "reviewer": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "schema_reviewer": {
-          "type": [
-            "string",
-            "null"
-          ]
-        },
-        "sources": {
-          "items": {
-            "type": "object"
-          },
-          "type": "array"
-        },
-        "status": {
-          "enum": [
-            "candidate",
-            "draft",
-            "reviewed",
-            "deprecated",
-            "revoked"
-          ]
-        }
-      },
-      "required": [
-        "status",
-        "sources"
-      ],
-      "type": "object"
-    },
-    "review_questions": {
-      "items": {
-        "minLength": 20,
-        "type": "string"
-      },
-      "minItems": 5,
-      "type": "array",
-      "uniqueItems": true
-    },
     "scientific_claim": {
       "minLength": 20,
       "type": "string"
     },
-    "stage": {
-      "enum": [
-        "V0_PILOT",
-        "STABLE",
-        "DEPRECATED"
-      ]
-    },
-    "technical_pre_review": {
-      "additionalProperties": false,
-      "properties": {
-        "checks": {
-          "items": {
+    "sources": {
+      "items": {
+        "additionalProperties": false,
+        "properties": {
+          "note": {
             "type": "string"
           },
-          "minItems": 1,
-          "type": "array",
-          "uniqueItems": true
+          "title": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "url": {
+            "format": "uri",
+            "type": "string"
+          }
         },
-        "method_version": {
-          "const": "1.0"
-        },
-        "scientific_signoff_required": {
-          "const": true
-        },
-        "status": {
-          "enum": [
-            "ready-for-external-review",
-            "needs-work"
-          ]
-        }
+        "required": [
+          "title",
+          "url"
+        ],
+        "type": "object"
       },
-      "required": [
-        "status",
-        "method_version",
-        "checks",
-        "scientific_signoff_required"
-      ],
-      "type": "object"
+      "minItems": 1,
+      "type": "array"
+    },
+    "status": {
+      "enum": [
+        "active",
+        "deprecated"
+      ]
     },
     "transformation_policy": {
       "additionalProperties": false,
@@ -315,18 +224,17 @@
     "name",
     "label",
     "description",
-    "stage",
-    "review",
+    "status",
     "applies_to",
     "intended_use",
     "limitations",
+    "sources",
     "field_dispositions",
     "requirements",
     "comparison_rules",
+    "examples",
     "transformation_policy",
-    "scientific_claim",
-    "technical_pre_review",
-    "review_questions"
+    "scientific_claim"
   ],
   "title": "Compatibility Profile Definition",
   "type": "object"

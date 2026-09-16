@@ -1,6 +1,6 @@
 {
   "count": 3,
-  "note": "A term identifies what a port means and does not move when the profile version does. external_terms is empty until a reviewer decides, per profile, whether a maintained external term exists at the right granularity.",
+  "note": "A term identifies what a port means and does not move when the profile version does. external_terms is empty when the profile does not declare an equivalent maintained external term at the same granularity.",
   "schema_version": "0.1",
   "standard": "https://biosimulant.com/standards/model-compatibility/v0.1",
   "terms": [

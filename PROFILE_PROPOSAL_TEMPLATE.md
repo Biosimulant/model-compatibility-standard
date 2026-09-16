@@ -1,46 +1,31 @@
 # Compatibility profile proposal
 
-Copy this file to `proposal.md` and replace the prompts. Keep the proposal to
-one real output-to-input connection. If a question is unresolved, say so rather
-than guessing.
+Complete this for one real model output-to-input connection. If something is
+unknown, say so rather than guessing.
 
-## Proposal details
+## Proposal
 
-- **Proposed profile name:**
-- **Scientific domain:**
-- **Proposer:**
-- **Organisation:**
-- **Contact:**
-- **Proposed domain owner, if known:**
+- Proposed profile name:
+- Scientific domain:
+- Proposer and organisation:
+- Contact:
 
-## The connection
+## Connection
 
-- **Source model and version:**
-- **Source output port:**
-- **Target model and version:**
-- **Target input port:**
-- **Workflow and intended use:**
-- **Why no current profile fits:**
+- Source model, version and output port:
+- Target model, version and input port:
+- Workflow and intended use:
+- Why no current profile fits:
 
-## Representative examples
-
-Link or attach a small, real or faithful redacted source output and target
-input. Do not include credentials, patient data or confidential material.
-
-- **Source example:**
-- **Target example:**
-- **Expected compatibility result:**
-- **Reason for that result:**
-
-Add further examples for a known contradiction, missing information and each
-permitted conversion or inference.
+Attach or link small real, synthetic or redacted source and target examples.
+Do not include credentials, patient data or confidential material.
 
 ## Complete mapping
 
-Write `not relevant` only when the area cannot change scientific interpretation
-or compatibility.
+Write `not relevant` only when an area cannot change the scientific
+interpretation or compatibility result.
 
-| Area | What the source produces | What the target accepts | Expected comparison |
+| Area | Source produces | Target accepts | Expected comparison |
 |---|---|---|---|
 | Scientific meaning |  |  |  |
 | Representation or file format |  |  |  |
@@ -54,15 +39,10 @@ or compatibility.
 
 ## Field decisions
 
-Use one disposition for every field the profile may need:
+Use `required`, `conditional`, `recommended` or `excluded` for every relevant
+field.
 
-- `required` — the contract cannot be interpreted safely without it;
-- `conditional` — required under a stated condition;
-- `recommended` — useful, but not a condition of compatibility; or
-- `excluded` — deliberately outside the profile; or
-- `under-review` — a draft question the scientific reviewer must resolve.
-
-| Contract field or scientific fact | Disposition | Condition, if any | Reason and source |
+| Contract field or scientific fact | Decision | Condition, if any | Reason and source |
 |---|---|---|---|
 |  |  |  |  |
 
@@ -75,33 +55,22 @@ Use one disposition for every field the profile may need:
 | Necessary declaration missing |  |  |
 | Conversion or inference, if allowed |  |  |
 
-Use `UNKNOWN` when evidence is missing and `INCOMPATIBLE` only when declarations
-are known to contradict each other. Name and version every permitted conversion
-or inference.
+Use `UNKNOWN` when evidence is missing and `INCOMPATIBLE` when known
+declarations contradict. Name and version every permitted conversion or
+inference.
 
-## Scientific boundary
+## Boundary and evidence
 
-- **Included use:**
-- **Similar data that are out of scope:**
-- **Important limitations:**
-- **Claims this profile must not be used to make:**
+- Included use:
+- Similar data outside scope:
+- Important limitations:
+- Claims this profile must not be used to make:
+- Questions to resolve before acceptance:
 
-## Sources
+| Citation or title | DOI or URL | Version or date | Decision supported |
+|---|---|---|---|
+|  |  |  |  |
 
-For each scientific decision, give a primary or authoritative source and the
-version or access date used.
-
-| ID | Citation or title | DOI or URL | Version or date | Decision supported |
-|---|---|---|---|---|
-| S1 |  |  |  |  |
-
-## Review information
-
-- **Suggested independent scientific reviewer, if known:**
-- **Suggested schema reviewer, if known:**
-- **Conflicts of interest or relevant relationships:**
-- **Questions that still need a decision:**
-
-Submitting this template proposes a profile. It does not approve the profile.
-The author must not complete the independent approval record on behalf of a
-reviewer.
+Submitting this template proposes a profile. If it is accepted and merged into
+`main`, the pull request becomes the review record and the profile becomes
+active for its stated use.
