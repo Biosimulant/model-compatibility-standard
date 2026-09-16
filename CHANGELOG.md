@@ -9,6 +9,10 @@
 
 ## Unreleased
 
+- Added a plain-language repository and generated-bundle map. Removed the
+  orphaned hosted-integration note from this repository; hosted MCP behavior is
+  documented with the service that implements it.
+
 - Added a machine-checked scientific review record for each profile. The build
   now calculates `release_eligible` and `ga_ready` from complete review evidence
   instead of hard-coding them. No profile was marked reviewed by this change.

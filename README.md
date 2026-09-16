@@ -43,6 +43,24 @@ The [profile proposal guide](PROPOSING_A_PROFILE.md) gives the email package,
 branch commands, files to change, example requirements and review process. Start
 with the reusable [proposal template](PROFILE_PROPOSAL_TEMPLATE.md).
 
+## Where to start
+
+You do not need to understand every repository file to use or review the
+standard.
+
+| If you want to… | Open |
+|---|---|
+| See the active profiles | [`spec/v0.1/catalogue/catalogue.json`](spec/v0.1/catalogue/catalogue.json) |
+| Understand one profile scientifically | Its file under [`spec/v0.1/review-packets/`](spec/v0.1/review-packets/) and [the review guide](PROFILE_REVIEW.md) |
+| Add a profile | [The profile proposal guide](PROPOSING_A_PROFILE.md) |
+| Use a profile in `model.yaml` | [The example below](#what-goes-in-modelyaml) |
+| Work on the implementation | [The contributing guide](CONTRIBUTING.md) |
+| Understand the generated folders | [`spec/README.md`](spec/README.md) |
+
+`v0.1` in the `spec/` path is the format version of the standard. The package
+currently carrying that format is version `0.0.1`; those version numbers serve
+different purposes.
+
 ## What goes in `model.yaml`
 
 Compatibility is optional. A model can import one or more profiles and add a
@@ -133,13 +151,25 @@ npm install
 npm test
 ```
 
-The repository is organised as follows:
+### Repository map
 
-- `source/` — profile source and independent review records
-- `spec/v0.1/` — generated schemas, profiles, rules, fixtures and review packets
-- `python/` and `typescript/` — reference implementations and tests
-- `scientific-checks/` — shared cases for scientifically important outcomes
-- `scripts/` — supported build and verification scripts
+| Path | What belongs there | Edit it? |
+|---|---|---|
+| `source/catalogue.review.json` | Profile definitions, contract fields and field packs | Yes, when adding or changing a profile |
+| `source/reviews/` | Independent scientific and schema review records | Yes, through the review process |
+| `source/quantity-kinds.json` | Reviewed meanings for quantities and their canonical units | Only when changing measurement rules |
+| `source/vendor/ucum/` | The pinned UCUM source and the generated unit table used for reproducible builds | Only when deliberately updating UCUM |
+| `spec/v0.1/` | Generated release files consumed by software and reviewers | No; rebuild it |
+| `python/` and `typescript/src/` | The two reference implementations | Yes, for implementation changes |
+| `typescript/dist/` | Generated npm entry points | No; `npm run build` recreates them |
+| `scientific-checks/` | Small, shared cases that protect reviewed scientific decisions | Yes, after a scientific decision |
+| `scripts/` | The four supported build and cross-language verification scripts | Only for build-system changes |
+| `package.json` and `package-lock.json` | npm package metadata, commands and exact JavaScript dependency versions | Only when the JavaScript package or dependencies change |
+| `pyproject.toml` | Python package metadata and dependencies | Only when the Python package or dependencies change |
+
+The detailed map of every generated folder, including why the catalogue has
+both a consolidated file and smaller public endpoint files, is in
+[`spec/README.md`](spec/README.md).
 
 One-off scripts and local investigation files belong in `.scratch/`, which Git
 ignores. See [scripts/README.md](scripts/README.md).
@@ -153,6 +183,16 @@ examples. If you do not want to edit the repository, complete
 [PROFILE_PROPOSAL_TEMPLATE.md](PROFILE_PROPOSAL_TEMPLATE.md) and send the
 package by email as described in the guide. The scientific review gate is
 described in [PROFILE_REVIEW.md](PROFILE_REVIEW.md).
+
+### Other repository documents
+
+| Document | Use it for |
+|---|---|
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Making implementation or profile changes |
+| [GOVERNANCE.md](GOVERNANCE.md) | Versioning, review roles and profile status |
+| [RELEASE.md](RELEASE.md) | Cutting and publishing a release |
+| [SECURITY.md](SECURITY.md) | Reporting vulnerabilities and understanding validator limits |
+| [CHANGELOG.md](CHANGELOG.md) | User-visible changes between releases |
 
 ## Stable references
 
