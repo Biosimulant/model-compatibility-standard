@@ -78,6 +78,11 @@ compatibility. A consumer may intentionally declare a model-family profile
 such as `boltz.binding-probability/v1` even when the consumer is not a Boltz
 model. The name describes the value being accepted, not who may consume it.
 
+From Biosimulant 0.0.34, every Lab run records the outcome for each connection
+(`verified`, `partial`, `structural` or `blocked`), the value checks on each
+profiled port, and any violations in a `compatibility` section of its results.
+See [the run record](https://docs.biosimulant.com/standards/model-compatibility#the-run-record).
+
 ## Adding support to a model
 
 First inventory the model's scientific inputs and outputs. Leave operational
