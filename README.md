@@ -64,10 +64,19 @@ biosimulant compatibility compare \
   ./consumer/model.yaml#inputs.value
 ```
 
-The runtime returns `ok`, `warning`, or `blocked`. It blocks unknown profiles,
-one-sided profile declarations, different profile versions, incompatible port
-representations, missing required context and invalid live values. Version 0
-does not perform automatic conversion.
+The runtime returns `ok`, `warning`, or `blocked`. Profiles are optional on each
+port. When only one connected port declares a profile, a structurally valid
+connection is allowed with a `PROFILE_PARTIAL` warning: the declared profile
+still checks live values, but scientific compatibility is not verified. When
+both ports declare profiles, different references, incompatible
+representations, missing required context and invalid live values block the
+connection. Version 0 does not perform automatic conversion.
+
+This is a two-sided opt-in guarantee. An unprofiled model can integrate with a
+profiled model, but only two matching declarations establish profile-verified
+compatibility. A consumer may intentionally declare a model-family profile
+such as `boltz.binding-probability/v1` even when the consumer is not a Boltz
+model. The name describes the value being accepted, not who may consume it.
 
 ## Adding support to a model
 
