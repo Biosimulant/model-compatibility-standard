@@ -5,14 +5,11 @@ use to say what their ports mean. A profile covers one scientific value or
 artifact: for example, an amino-acid sequence, a molecular SMILES string, or a
 specific Boltz affinity output.
 
-The runtime uses a profile to check two things:
-
-- whether connected ports describe the same information in the same form; and
-- whether a live value satisfies the profile's basic safety checks.
-
-It does not judge model quality, infer missing scientific context, convert
-units, or approve a result. Model evidence, provenance, limitations and fitness
-for use remain separate responsibilities.
+Biosimulant 0.0.38+ treats these published definitions as historical descriptive metadata.
+It does not run their biological payload checkers or grade connections by species or
+profile meaning. Structural port checks (types, shapes, formats and declared units)
+remain in the runtime independently of this optional catalogue. Existing profile bytes,
+versions and digests are retained for reproducibility and historical signed records.
 
 ## Standard, profile and model mapping
 
@@ -64,36 +61,11 @@ biosimulant compatibility compare \
   ./consumer/model.yaml#inputs.value
 ```
 
-The runtime returns `ok`, `warning`, or `blocked`. Profiles are optional on each
-port. When only one connected port declares a profile, a structurally valid
-connection is allowed with a `PROFILE_PARTIAL` warning: the declared profile
-still checks live values, but scientific compatibility is not verified. When
-both ports declare profiles, different references, incompatible
-representations, missing required context and invalid live values block the
-connection. Version 0 does not perform automatic conversion.
-
-This is a two-sided opt-in guarantee. An unprofiled model can integrate with a
-profiled model, but only two matching declarations establish profile-verified
-compatibility. A consumer may intentionally declare a model-family profile
-such as `boltz.binding-probability/v1` even when the consumer is not a Boltz
-model. The name describes the value being accepted, not who may consume it.
-
-From Biosimulant 0.0.34, every Lab run records the outcome for each connection
-(`verified`, `partial`, `structural` or `blocked`), the value checks on each
-profiled port, and any violations in a `compatibility` section of its results.
-See [the run record](https://docs.biosimulant.com/standards/model-compatibility#the-run-record).
+Current runtime checks are structural only. Semantic profile names, species and payload checker declarations are descriptive metadata. Existing definitions and digests remain readable, including references the runtime does not recognize. A signal's declared type, shape, format and unit still must fit the receiving port.
 
 ## Adding support to a model
 
-First inventory the model's scientific inputs and outputs. Leave operational
-ports such as run configuration and logs unprofiled. Reuse an existing profile
-only when its definition and limitations really describe the port. Add the
-top-level standard declaration, map each relevant port, then validate the
-manifest and test both accepted and rejected values.
-
-When no profile is accurate, propose one instead of stretching an existing
-definition. The complete pull-request and email routes are in
-[CONTRIBUTING.md](CONTRIBUTING.md).
+Existing models may retain profile mappings as descriptive metadata. New interfaces need typed ports, shapes, formats and declared units; they do not need a scientific profile or catalogue proposal to run. [CONTRIBUTING.md](CONTRIBUTING.md) describes maintenance of the historical catalogue.
 
 Released profile files are immutable. A scientific or representation change
 creates a new profile version; unrelated new profiles do not change existing
